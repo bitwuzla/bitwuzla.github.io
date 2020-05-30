@@ -1,7 +1,3 @@
-## News
-
-- Bitwuzla participating at [SMT-COMP 2020](https://smt-comp.github.io/2020)
-
 # About Bitwuzla
 
 Bitwuzla is a Satisfiability Modulo Theories (SMT) solver for the theories of
@@ -17,3 +13,9 @@ can be translated as "someone who tinkers with bits".
 - '**z**' as 'ts' in 'tsunami',
 - '**l**' just an 'l',
 - '**a**' as 'u' in 'cut'
+
+# News
+
+- Bitwuzla participating at [SMT-COMP 2020](https://smt-comp.github.io/2020) ([submitted binary](https://www.starexec.org/starexec/secure/details/solver.jsp?id=28818))
+
+
