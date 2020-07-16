@@ -43,9 +43,9 @@
 
   - **Competition-Wide Awards:**
     - Biggest Lead
-       - **3<sup>nd</sup>** place (bronze) in the [Incremental Track](https://smt-comp.github.io/2020/results/biggest-lead-incremental)
-       - **3<sup>nd</sup>** place (bronze) in the [Unsat Core Track](https://smt-comp.github.io/2020/results/biggest-lead-unsat-core)
+       - **3<sup>rd</sup>** place (bronze) in the [Incremental Track](https://smt-comp.github.io/2020/results/biggest-lead-incremental)
+       - **3<sup>rd</sup>** place (bronze) in the [Unsat Core Track](https://smt-comp.github.io/2020/results/biggest-lead-unsat-core)
     - Largest Contribution
-       - **3<sup>nd</sup>** place (bronze) in the [Incremental Track](https://smt-comp.github.io/2020/results/largest-contribution-incremental)
-       - **3<sup>nd</sup>** place (bronze) in the [Unsat Core Track](https://smt-comp.github.io/2020/results/largest-contribution-unsat-core)
-       - **3<sup>nd</sup>** place (bronze) in the [Model Validation Track](https://smt-comp.github.io/2020/results/largest-contribution-model-validation)
+       - **3<sup>rd</sup>** place (bronze) in the [Incremental Track](https://smt-comp.github.io/2020/results/largest-contribution-incremental)
+       - **3<sup>rd</sup>** place (bronze) in the [Unsat Core Track](https://smt-comp.github.io/2020/results/largest-contribution-unsat-core)
+       - **3<sup>rd</sup>** place (bronze) in the [Model Validation Track](https://smt-comp.github.io/2020/results/largest-contribution-model-validation)
