@@ -1,7 +1,7 @@
 ## SMT competitions
 
 <h3>
-  <a href="http://www.smt-comp.org/2020/" target="_blank">
+  <a id="smtcomp2020" href="http://www.smt-comp.org/2020/" target="_blank">
     SMT Competition 2020
   </a>
 </h3>

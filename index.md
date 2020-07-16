@@ -16,6 +16,7 @@ can be translated as "someone who tinkers with bits".
 
 # News
 
+- Bitwuzla [won 17 out of 26](smt-comp.html#smtcomp2020) (participated) divisions at [SMT-COMP 2020](http://www.smt-comp.org/2020)
 - Bitwuzla participating at [SMT-COMP 2020](https://smt-comp.github.io/2020) ([submitted binary](https://www.starexec.org/starexec/secure/details/solver.jsp?id=28818))
 
 
