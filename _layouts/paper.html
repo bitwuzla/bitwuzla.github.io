@@ -54,7 +54,12 @@ found below.
 {%- endif -%}
 
 {%- if page.artifact.archive -%}
-  <li><a href="{{ page.artifact.archive }}">Artifact</a> [{{ page.artifact.ext }}] {{ page.artifact.text}}</li>
+  <li>
+    <a href="{{ page.artifact.archive }}">Artifact</a>
+    {%- if page.artifact.ext -%}
+      &nbsp;[{{ page.artifact.ext }}] {{ page.artifact.text}}
+    {%- endif -%}
+  </li>
 {%- endif -%}
 
 {%- if page.benchmarks.size > 1 -%}
@@ -62,7 +67,12 @@ found below.
   <ul>
 {%- endif -%}
 {%- for benchmarks in page.benchmarks -%}
-<li><a href="{{ benchmarks.archive}}">{{ benchmarks.name }}</a>  [{{ benchmarks.ext }}] {{ benchmarks.text}}</li>
+<li>
+  <a href="{{ benchmarks.archive}}">{{ benchmarks.name }}</a>
+  {%- if page.artifact.ext -%}
+    &nbsp;[{{ benchmarks.ext }}] {{ benchmarks.text}}
+  {%- endif -%}
+</li>
 {%- endfor -%}
 {%- if page.benchmarks.size > 1 -%}
   </ul>
@@ -73,7 +83,12 @@ found below.
   <ul>
 {%- endif -%}
 {%- for binary in page.binaries -%}
-<li><a href="{{ binary.archive}}">{{ binary.name }} Binary</a>  [{{ binary.ext }}] {{ binary.text}}</li>
+<li>
+  <a href="{{ binary.archive}}">{{ binary.name }} Binary</a>
+  {%- if binary.ext -%}
+    &nbsp;[{{ binary.ext }}] {{ binary.text}}
+  {%- endif -%}
+</li>
 {%- endfor -%}
 {%- if page.binaries.size > 1 -%}
   </ul>

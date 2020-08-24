@@ -10,25 +10,25 @@ authors:
 - name: Mathias Preiner
   url: https://cs.stanford.edu/~preiner/
 
-pdf:
+pdf: /data/fmcad2020/paper.pdf
 pdf_extended:
 
 artifact:
-  readme:
-  archive:
+  readme: /data/fmcad2020/README.txt
+  archive: /data/fmcad2020/fmcad20-artifact.tar.xz
   ext: tar.xz
   text:
 
 benchmarks:
-- name:
-  archive:
-  ext:
+- name: Benchmarks
+  archive: /data/fmcad2020/fmcad20-artifact.tar.xz
+  ext: tar.xz
   text:
 
 binaries:
-- name:
-  archive:
-  ext:
+- name: Bitwuzla
+  archive: /data/fmcad2020/binary.tar.xz
+  ext: tar.xz
   text:
 
 ---
