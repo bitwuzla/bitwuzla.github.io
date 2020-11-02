@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include_relative bibtex.md %}
+
 # Publications
 
 {% for item in site.data.publications.papers %}

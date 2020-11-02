@@ -14,6 +14,10 @@ can be translated as "someone who tinkers with bits".
 - '**l**' just an 'l',
 - '**a**' as 'u' in 'cut'
 
+### Citing Bitwuzla
+
+{% include_relative bibtex.md %}
+
 # News
 
 - Bitwuzla [won 17 out of 26](smt-comp.html#smtcomp2020) (participated) divisions at [SMT-COMP 2020](http://www.smt-comp.org/2020)
