@@ -1,7 +1,7 @@
 ---
 layout: paper
 
-title: Ternary Propagation_-Based Local Search For More Bit-Precise Reasoning
+title: Ternary Propagation-Based Local Search For More Bit-Precise Reasoning
 conference: FMCAD 2020
 
 authors:
