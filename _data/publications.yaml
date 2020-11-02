@@ -1,0 +1,31 @@
+---
+ papers:
+
+ - title: "Ternary Propagation-Based Local Search for More Bit-Precise Reasoning"
+   author:
+   - name: Aina Niemetz
+   - name: Mathias Preiner
+   year: 2020
+   publication-title: FMCAD 2020
+   pages: 214-224
+   pdf: https://repositum.tuwien.at/bitstream/20.500.12708/15525/1/29_Ternary%20Propagation-Based%20Local%20Search%20for%20More%20Bit_Precise%20Reasoning.pdf
+   doi: 10.34727/2020/isbn.978-3-85448-042-6_29
+   preprint: /data/fmcad2020/paper.pdf
+   artifact: /papers/fmcad2020
+   talk: https://www.youtube.com/watch?v=Rway_22sglk
+
+ - title: Bitwuzla at the SMT-COMP 2020
+   author:
+   - name: Aina Niemetz
+   - name: Mathias Preiner
+   year: 2020
+   publication-title: CoRR abs/2006.01621
+   volume:
+   issue:
+   pages:
+   pdf: https://arxiv.org/pdf/2006.01621
+   doi:
+   bibtex: https://dblp.org/rec/journals/corr/abs-2006-01621.html?view=bibtex
+   arxiv: https://arxiv.org/abs/2006.01621
+
+---
