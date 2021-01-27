@@ -32,11 +32,14 @@ competitions:
             division: QF_BVFP
             url: https://smt-comp.github.io/2020/results/qf-bvfp-single-query
           - place: 1
-            division: QF_FP
+            division: QF_FP (sequential, parallel, sat, unsat)
             url: https://smt-comp.github.io/2020/results/qf-fp-single-query
           - place: 1
             division: QF_UFFP
             url: https://smt-comp.github.io/2020/results/qf-uffp-single-query
+          - place: 1
+            division: QF_UFBV (24s)
+            division_url: https://smt-comp.github.io/2020/results/qf-ufbv-single-query
       - track: Incremental Track
         divisions:
           - place: 1
