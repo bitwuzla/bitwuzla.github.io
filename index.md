@@ -1,9 +1,9 @@
 # About Bitwuzla
 
 Bitwuzla is a Satisfiability Modulo Theories (SMT) solver for the theories of
-bit-vectors, floating-points, arrays and uninterpreted functions and their
-combinations. Its name is derived from an Austrian dialect expression that
-can be translated as "someone who tinkers with bits".
+fixed-size bit-vectors, floating-point arithmetic, arrays and uninterpreted
+functions and their combinations. Its name is derived from an Austrian dialect
+expression that can be translated as "someone who tinkers with bits".
 
 ### Pronunciation of Bitwuzla
 
