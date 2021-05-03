@@ -2,7 +2,9 @@
 layout: default
 ---
 
-{% include_relative bibtex.md %}
+# Bibtex
+
+{% include_relative bibtex-include.md %}
 
 # Publications
 

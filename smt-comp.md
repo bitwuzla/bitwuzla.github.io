@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# SMT competitions
+# SMT Competitions
 
 {% for competition in site.data.competitions.competitions %}
 <h2>

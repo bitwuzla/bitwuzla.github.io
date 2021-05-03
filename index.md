@@ -16,7 +16,7 @@ expression that can be translated as "someone who tinkers with bits".
 
 ### Citing Bitwuzla
 
-{% include_relative bibtex.md %}
+{% include_relative bibtex-include.md %}
 
 # News
 
