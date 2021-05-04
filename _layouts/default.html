@@ -18,10 +18,10 @@
 
   </head>
   <body>
+      {%- assign gh = site.github.public_repositories |where: "name", "bitwuzla" |first -%}
       <div id="header">
         <nav>
-          {%- assign bitwuzla = site.github.public_repositories |where: "name", "bitwuzla" |first -%}
-          <li class="fork"><a href="{{ bitwuzla.html_url }}">View On GitHub</a></li>
+          <li class="fork"><a href="{{ gh.html_url }}">View On GitHub</a></li>
           {% if site.show_downloads %}
             <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
             <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
