@@ -60,6 +60,17 @@ ul.awards li {
    margin: 0;
 }
 
+#header {
+  nav {
+    background: none;
+    li.badge a {
+      border: 0;
+      box-shadow: none;
+      background: none;
+    }
+  }
+}
+
 section {
 
   #title {
