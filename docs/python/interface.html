@@ -1,0 +1,2233 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Python Interface &mdash; Bitwuzla  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script src="../static/jquery.js"></script>
+        <script src="../static/underscore.js"></script>
+        <script src="../static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Building Bitwuzla on Windows" href="../building_on_windows.html" />
+    <link rel="prev" title="Python API Documentation" href="api.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Bitwuzla
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../c/api.html">C API Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">Python API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enums">Enums</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#option">Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kind">Kind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#result">Result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#roundingmode">RoundingMode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bitwuzla">Bitwuzla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitwuzlasort">BitwuzlaSort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitwuzlaterm">BitwuzlaTerm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../building_on_windows.html">Building Bitwuzla on Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bitwuzla</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="api.html">Python API Documentation</a> &raquo;</li>
+        
+      <li>Python Interface</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/python/interface.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-interface">
+<h1>Python Interface<a class="headerlink" href="#python-interface" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="#enums"><span class="std std-ref">Enums</span></a></p></li>
+<li><p><a class="reference internal" href="#classes"><span class="std std-ref">Classes</span></a></p></li>
+</ul>
+<div class="section" id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="option">
+<h3>Option<a class="headerlink" href="#option" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="pybitwuzla.Option">
+<em class="property">class </em><code class="sig-prename descclassname">pybitwuzla.</code><code class="sig-name descname">Option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Option" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.AIGPROP_NPROPS">
+<code class="sig-name descname">AIGPROP_NPROPS</code><em class="property"> = 86</em><a class="headerlink" href="#pybitwuzla.Option.AIGPROP_NPROPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.AIGPROP_USE_BANDIT">
+<code class="sig-name descname">AIGPROP_USE_BANDIT</code><em class="property"> = 87</em><a class="headerlink" href="#pybitwuzla.Option.AIGPROP_USE_BANDIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.AIGPROP_USE_RESTARTS">
+<code class="sig-name descname">AIGPROP_USE_RESTARTS</code><em class="property"> = 88</em><a class="headerlink" href="#pybitwuzla.Option.AIGPROP_USE_RESTARTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.CHECK_MODEL">
+<code class="sig-name descname">CHECK_MODEL</code><em class="property"> = 98</em><a class="headerlink" href="#pybitwuzla.Option.CHECK_MODEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.CHECK_UNCONSTRAINED">
+<code class="sig-name descname">CHECK_UNCONSTRAINED</code><em class="property"> = 99</em><a class="headerlink" href="#pybitwuzla.Option.CHECK_UNCONSTRAINED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.CHECK_UNSAT_ASSUMPTIONS">
+<code class="sig-name descname">CHECK_UNSAT_ASSUMPTIONS</code><em class="property"> = 100</em><a class="headerlink" href="#pybitwuzla.Option.CHECK_UNSAT_ASSUMPTIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.DECLSORT_BV_WIDTH">
+<code class="sig-name descname">DECLSORT_BV_WIDTH</code><em class="property"> = 101</em><a class="headerlink" href="#pybitwuzla.Option.DECLSORT_BV_WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.ENGINE">
+<code class="sig-name descname">ENGINE</code><em class="property"> = 0</em><a class="headerlink" href="#pybitwuzla.Option.ENGINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.EXIT_CODES">
+<code class="sig-name descname">EXIT_CODES</code><em class="property"> = 1</em><a class="headerlink" href="#pybitwuzla.Option.EXIT_CODES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.FUN_DUAL_PROP">
+<code class="sig-name descname">FUN_DUAL_PROP</code><em class="property"> = 34</em><a class="headerlink" href="#pybitwuzla.Option.FUN_DUAL_PROP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.FUN_DUAL_PROP_QSORT">
+<code class="sig-name descname">FUN_DUAL_PROP_QSORT</code><em class="property"> = 35</em><a class="headerlink" href="#pybitwuzla.Option.FUN_DUAL_PROP_QSORT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.FUN_EAGER_LEMMAS">
+<code class="sig-name descname">FUN_EAGER_LEMMAS</code><em class="property"> = 36</em><a class="headerlink" href="#pybitwuzla.Option.FUN_EAGER_LEMMAS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.FUN_JUST">
+<code class="sig-name descname">FUN_JUST</code><em class="property"> = 38</em><a class="headerlink" href="#pybitwuzla.Option.FUN_JUST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.FUN_JUST_HEURISTIC">
+<code class="sig-name descname">FUN_JUST_HEURISTIC</code><em class="property"> = 39</em><a class="headerlink" href="#pybitwuzla.Option.FUN_JUST_HEURISTIC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.FUN_LAZY_SYNTHESIZE">
+<code class="sig-name descname">FUN_LAZY_SYNTHESIZE</code><em class="property"> = 37</em><a class="headerlink" href="#pybitwuzla.Option.FUN_LAZY_SYNTHESIZE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.FUN_PREPROP">
+<code class="sig-name descname">FUN_PREPROP</code><em class="property"> = 40</em><a class="headerlink" href="#pybitwuzla.Option.FUN_PREPROP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.FUN_PRESLS">
+<code class="sig-name descname">FUN_PRESLS</code><em class="property"> = 41</em><a class="headerlink" href="#pybitwuzla.Option.FUN_PRESLS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.FUN_STORE_LAMBDAS">
+<code class="sig-name descname">FUN_STORE_LAMBDAS</code><em class="property"> = 42</em><a class="headerlink" href="#pybitwuzla.Option.FUN_STORE_LAMBDAS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.INCREMENTAL">
+<code class="sig-name descname">INCREMENTAL</code><em class="property"> = 3</em><a class="headerlink" href="#pybitwuzla.Option.INCREMENTAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.INPUT_FORMAT">
+<code class="sig-name descname">INPUT_FORMAT</code><em class="property"> = 2</em><a class="headerlink" href="#pybitwuzla.Option.INPUT_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.LOGLEVEL">
+<code class="sig-name descname">LOGLEVEL</code><em class="property"> = 4</em><a class="headerlink" href="#pybitwuzla.Option.LOGLEVEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.LS_SHARE_SAT">
+<code class="sig-name descname">LS_SHARE_SAT</code><em class="property"> = 102</em><a class="headerlink" href="#pybitwuzla.Option.LS_SHARE_SAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.OUTPUT_FORMAT">
+<code class="sig-name descname">OUTPUT_FORMAT</code><em class="property"> = 5</em><a class="headerlink" href="#pybitwuzla.Option.OUTPUT_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.OUTPUT_NUMBER_FORMAT">
+<code class="sig-name descname">OUTPUT_NUMBER_FORMAT</code><em class="property"> = 6</em><a class="headerlink" href="#pybitwuzla.Option.OUTPUT_NUMBER_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PARSE_INTERACTIVE">
+<code class="sig-name descname">PARSE_INTERACTIVE</code><em class="property"> = 103</em><a class="headerlink" href="#pybitwuzla.Option.PARSE_INTERACTIVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_ACKERMANN">
+<code class="sig-name descname">PP_ACKERMANN</code><em class="property"> = 14</em><a class="headerlink" href="#pybitwuzla.Option.PP_ACKERMANN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_BETA_REDUCE">
+<code class="sig-name descname">PP_BETA_REDUCE</code><em class="property"> = 15</em><a class="headerlink" href="#pybitwuzla.Option.PP_BETA_REDUCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_ELIMINATE_EXTRACTS">
+<code class="sig-name descname">PP_ELIMINATE_EXTRACTS</code><em class="property"> = 16</em><a class="headerlink" href="#pybitwuzla.Option.PP_ELIMINATE_EXTRACTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_ELIMINATE_ITES">
+<code class="sig-name descname">PP_ELIMINATE_ITES</code><em class="property"> = 17</em><a class="headerlink" href="#pybitwuzla.Option.PP_ELIMINATE_ITES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_EXTRACT_LAMBDAS">
+<code class="sig-name descname">PP_EXTRACT_LAMBDAS</code><em class="property"> = 18</em><a class="headerlink" href="#pybitwuzla.Option.PP_EXTRACT_LAMBDAS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_MERGE_LAMBDAS">
+<code class="sig-name descname">PP_MERGE_LAMBDAS</code><em class="property"> = 19</em><a class="headerlink" href="#pybitwuzla.Option.PP_MERGE_LAMBDAS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_NONDESTR_SUBST">
+<code class="sig-name descname">PP_NONDESTR_SUBST</code><em class="property"> = 20</em><a class="headerlink" href="#pybitwuzla.Option.PP_NONDESTR_SUBST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_NORMALIZE_ADD">
+<code class="sig-name descname">PP_NORMALIZE_ADD</code><em class="property"> = 21</em><a class="headerlink" href="#pybitwuzla.Option.PP_NORMALIZE_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_SKELETON_PREPROC">
+<code class="sig-name descname">PP_SKELETON_PREPROC</code><em class="property"> = 22</em><a class="headerlink" href="#pybitwuzla.Option.PP_SKELETON_PREPROC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_UNCONSTRAINED_OPTIMIZATION">
+<code class="sig-name descname">PP_UNCONSTRAINED_OPTIMIZATION</code><em class="property"> = 23</em><a class="headerlink" href="#pybitwuzla.Option.PP_UNCONSTRAINED_OPTIMIZATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PP_VAR_SUBST">
+<code class="sig-name descname">PP_VAR_SUBST</code><em class="property"> = 24</em><a class="headerlink" href="#pybitwuzla.Option.PP_VAR_SUBST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PRETTY_PRINT">
+<code class="sig-name descname">PRETTY_PRINT</code><em class="property"> = 7</em><a class="headerlink" href="#pybitwuzla.Option.PRETTY_PRINT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PRINT_DIMACS">
+<code class="sig-name descname">PRINT_DIMACS</code><em class="property"> = 8</em><a class="headerlink" href="#pybitwuzla.Option.PRINT_DIMACS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PRODUCE_MODELS">
+<code class="sig-name descname">PRODUCE_MODELS</code><em class="property"> = 9</em><a class="headerlink" href="#pybitwuzla.Option.PRODUCE_MODELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PRODUCE_UNSAT_CORES">
+<code class="sig-name descname">PRODUCE_UNSAT_CORES</code><em class="property"> = 10</em><a class="headerlink" href="#pybitwuzla.Option.PRODUCE_UNSAT_CORES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_ASHR">
+<code class="sig-name descname">PROP_ASHR</code><em class="property"> = 60</em><a class="headerlink" href="#pybitwuzla.Option.PROP_ASHR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_CONST_BITS">
+<code class="sig-name descname">PROP_CONST_BITS</code><em class="property"> = 61</em><a class="headerlink" href="#pybitwuzla.Option.PROP_CONST_BITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_CONST_DOMAINS">
+<code class="sig-name descname">PROP_CONST_DOMAINS</code><em class="property"> = 62</em><a class="headerlink" href="#pybitwuzla.Option.PROP_CONST_DOMAINS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_ENTAILED">
+<code class="sig-name descname">PROP_ENTAILED</code><em class="property"> = 63</em><a class="headerlink" href="#pybitwuzla.Option.PROP_ENTAILED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_FLIP_COND_CONST_DELTA">
+<code class="sig-name descname">PROP_FLIP_COND_CONST_DELTA</code><em class="property"> = 64</em><a class="headerlink" href="#pybitwuzla.Option.PROP_FLIP_COND_CONST_DELTA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_FLIP_COND_CONST_NPATHSEL">
+<code class="sig-name descname">PROP_FLIP_COND_CONST_NPATHSEL</code><em class="property"> = 65</em><a class="headerlink" href="#pybitwuzla.Option.PROP_FLIP_COND_CONST_NPATHSEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_INFER_INEQ_BOUNDS">
+<code class="sig-name descname">PROP_INFER_INEQ_BOUNDS</code><em class="property"> = 66</em><a class="headerlink" href="#pybitwuzla.Option.PROP_INFER_INEQ_BOUNDS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_NO_MOVE_ON_CONFLICT">
+<code class="sig-name descname">PROP_NO_MOVE_ON_CONFLICT</code><em class="property"> = 67</em><a class="headerlink" href="#pybitwuzla.Option.PROP_NO_MOVE_ON_CONFLICT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_NPROPS">
+<code class="sig-name descname">PROP_NPROPS</code><em class="property"> = 68</em><a class="headerlink" href="#pybitwuzla.Option.PROP_NPROPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_NUPDATES">
+<code class="sig-name descname">PROP_NUPDATES</code><em class="property"> = 69</em><a class="headerlink" href="#pybitwuzla.Option.PROP_NUPDATES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PATH_SEL">
+<code class="sig-name descname">PROP_PATH_SEL</code><em class="property"> = 70</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PATH_SEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PROB_AND_FLIP">
+<code class="sig-name descname">PROP_PROB_AND_FLIP</code><em class="property"> = 72</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PROB_AND_FLIP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PROB_EQ_FLIP">
+<code class="sig-name descname">PROP_PROB_EQ_FLIP</code><em class="property"> = 73</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PROB_EQ_FLIP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PROB_FALLBACK_RANDOM_VALUE">
+<code class="sig-name descname">PROP_PROB_FALLBACK_RANDOM_VALUE</code><em class="property"> = 71</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PROB_FALLBACK_RANDOM_VALUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PROB_FLIP_COND">
+<code class="sig-name descname">PROP_PROB_FLIP_COND</code><em class="property"> = 74</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PROB_FLIP_COND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PROB_FLIP_COND_CONST">
+<code class="sig-name descname">PROP_PROB_FLIP_COND_CONST</code><em class="property"> = 75</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PROB_FLIP_COND_CONST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PROB_RANDOM_INPUT">
+<code class="sig-name descname">PROP_PROB_RANDOM_INPUT</code><em class="property"> = 76</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PROB_RANDOM_INPUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PROB_SLICE_FLIP">
+<code class="sig-name descname">PROP_PROB_SLICE_FLIP</code><em class="property"> = 77</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PROB_SLICE_FLIP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PROB_SLICE_KEEP_DC">
+<code class="sig-name descname">PROP_PROB_SLICE_KEEP_DC</code><em class="property"> = 78</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PROB_SLICE_KEEP_DC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_PROB_USE_INV_VALUE">
+<code class="sig-name descname">PROP_PROB_USE_INV_VALUE</code><em class="property"> = 79</em><a class="headerlink" href="#pybitwuzla.Option.PROP_PROB_USE_INV_VALUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_SEXT">
+<code class="sig-name descname">PROP_SEXT</code><em class="property"> = 83</em><a class="headerlink" href="#pybitwuzla.Option.PROP_SEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_SKIP_NO_PROGRESS">
+<code class="sig-name descname">PROP_SKIP_NO_PROGRESS</code><em class="property"> = 84</em><a class="headerlink" href="#pybitwuzla.Option.PROP_SKIP_NO_PROGRESS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_USE_BANDIT">
+<code class="sig-name descname">PROP_USE_BANDIT</code><em class="property"> = 80</em><a class="headerlink" href="#pybitwuzla.Option.PROP_USE_BANDIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_USE_INV_LT_CONCAT">
+<code class="sig-name descname">PROP_USE_INV_LT_CONCAT</code><em class="property"> = 81</em><a class="headerlink" href="#pybitwuzla.Option.PROP_USE_INV_LT_CONCAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_USE_RESTARTS">
+<code class="sig-name descname">PROP_USE_RESTARTS</code><em class="property"> = 82</em><a class="headerlink" href="#pybitwuzla.Option.PROP_USE_RESTARTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.PROP_XOR">
+<code class="sig-name descname">PROP_XOR</code><em class="property"> = 85</em><a class="headerlink" href="#pybitwuzla.Option.PROP_XOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.QUANT_CER">
+<code class="sig-name descname">QUANT_CER</code><em class="property"> = 89</em><a class="headerlink" href="#pybitwuzla.Option.QUANT_CER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.QUANT_DER">
+<code class="sig-name descname">QUANT_DER</code><em class="property"> = 90</em><a class="headerlink" href="#pybitwuzla.Option.QUANT_DER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.QUANT_DUAL_SOLVER">
+<code class="sig-name descname">QUANT_DUAL_SOLVER</code><em class="property"> = 91</em><a class="headerlink" href="#pybitwuzla.Option.QUANT_DUAL_SOLVER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.QUANT_FIXSYNTH">
+<code class="sig-name descname">QUANT_FIXSYNTH</code><em class="property"> = 94</em><a class="headerlink" href="#pybitwuzla.Option.QUANT_FIXSYNTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.QUANT_MINISCOPE">
+<code class="sig-name descname">QUANT_MINISCOPE</code><em class="property"> = 92</em><a class="headerlink" href="#pybitwuzla.Option.QUANT_MINISCOPE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.QUANT_SYNTH">
+<code class="sig-name descname">QUANT_SYNTH</code><em class="property"> = 93</em><a class="headerlink" href="#pybitwuzla.Option.QUANT_SYNTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.QUANT_SYNTH_ITE_COMPLETE">
+<code class="sig-name descname">QUANT_SYNTH_ITE_COMPLETE</code><em class="property"> = 95</em><a class="headerlink" href="#pybitwuzla.Option.QUANT_SYNTH_ITE_COMPLETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.QUANT_SYNTH_LIMIT">
+<code class="sig-name descname">QUANT_SYNTH_LIMIT</code><em class="property"> = 96</em><a class="headerlink" href="#pybitwuzla.Option.QUANT_SYNTH_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.QUANT_SYNTH_QI">
+<code class="sig-name descname">QUANT_SYNTH_QI</code><em class="property"> = 97</em><a class="headerlink" href="#pybitwuzla.Option.QUANT_SYNTH_QI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.RW_EXTRACT_ARITH">
+<code class="sig-name descname">RW_EXTRACT_ARITH</code><em class="property"> = 25</em><a class="headerlink" href="#pybitwuzla.Option.RW_EXTRACT_ARITH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.RW_LEVEL">
+<code class="sig-name descname">RW_LEVEL</code><em class="property"> = 26</em><a class="headerlink" href="#pybitwuzla.Option.RW_LEVEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.RW_NORMALIZE">
+<code class="sig-name descname">RW_NORMALIZE</code><em class="property"> = 27</em><a class="headerlink" href="#pybitwuzla.Option.RW_NORMALIZE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.RW_NORMALIZE_ADD">
+<code class="sig-name descname">RW_NORMALIZE_ADD</code><em class="property"> = 28</em><a class="headerlink" href="#pybitwuzla.Option.RW_NORMALIZE_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.RW_SIMPLIFY_CONSTRAINTS">
+<code class="sig-name descname">RW_SIMPLIFY_CONSTRAINTS</code><em class="property"> = 29</em><a class="headerlink" href="#pybitwuzla.Option.RW_SIMPLIFY_CONSTRAINTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.RW_SLT">
+<code class="sig-name descname">RW_SLT</code><em class="property"> = 30</em><a class="headerlink" href="#pybitwuzla.Option.RW_SLT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.RW_SORT_AIG">
+<code class="sig-name descname">RW_SORT_AIG</code><em class="property"> = 31</em><a class="headerlink" href="#pybitwuzla.Option.RW_SORT_AIG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.RW_SORT_AIGVEC">
+<code class="sig-name descname">RW_SORT_AIGVEC</code><em class="property"> = 32</em><a class="headerlink" href="#pybitwuzla.Option.RW_SORT_AIGVEC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.RW_SORT_EXP">
+<code class="sig-name descname">RW_SORT_EXP</code><em class="property"> = 33</em><a class="headerlink" href="#pybitwuzla.Option.RW_SORT_EXP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SAT_ENGINE">
+<code class="sig-name descname">SAT_ENGINE</code><em class="property"> = 11</em><a class="headerlink" href="#pybitwuzla.Option.SAT_ENGINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SAT_ENGINE_CADICAL_FREEZE">
+<code class="sig-name descname">SAT_ENGINE_CADICAL_FREEZE</code><em class="property"> = 104</em><a class="headerlink" href="#pybitwuzla.Option.SAT_ENGINE_CADICAL_FREEZE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SAT_ENGINE_LGL_FORK">
+<code class="sig-name descname">SAT_ENGINE_LGL_FORK</code><em class="property"> = 105</em><a class="headerlink" href="#pybitwuzla.Option.SAT_ENGINE_LGL_FORK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SAT_ENGINE_N_THREADS">
+<code class="sig-name descname">SAT_ENGINE_N_THREADS</code><em class="property"> = 106</em><a class="headerlink" href="#pybitwuzla.Option.SAT_ENGINE_N_THREADS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SEED">
+<code class="sig-name descname">SEED</code><em class="property"> = 12</em><a class="headerlink" href="#pybitwuzla.Option.SEED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_JUST">
+<code class="sig-name descname">SLS_JUST</code><em class="property"> = 43</em><a class="headerlink" href="#pybitwuzla.Option.SLS_JUST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_GW">
+<code class="sig-name descname">SLS_MOVE_GW</code><em class="property"> = 44</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_GW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_INC_MOVE_TEST">
+<code class="sig-name descname">SLS_MOVE_INC_MOVE_TEST</code><em class="property"> = 45</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_INC_MOVE_TEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_PROP">
+<code class="sig-name descname">SLS_MOVE_PROP</code><em class="property"> = 46</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_PROP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_PROP_FORCE_RW">
+<code class="sig-name descname">SLS_MOVE_PROP_FORCE_RW</code><em class="property"> = 47</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_PROP_FORCE_RW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_PROP_NPROPS">
+<code class="sig-name descname">SLS_MOVE_PROP_NPROPS</code><em class="property"> = 48</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_PROP_NPROPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_PROP_NSLSS">
+<code class="sig-name descname">SLS_MOVE_PROP_NSLSS</code><em class="property"> = 49</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_PROP_NSLSS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_RAND_ALL">
+<code class="sig-name descname">SLS_MOVE_RAND_ALL</code><em class="property"> = 50</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_RAND_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_RAND_RANGE">
+<code class="sig-name descname">SLS_MOVE_RAND_RANGE</code><em class="property"> = 51</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_RAND_RANGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_RAND_WALK">
+<code class="sig-name descname">SLS_MOVE_RAND_WALK</code><em class="property"> = 52</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_RAND_WALK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_RANGE">
+<code class="sig-name descname">SLS_MOVE_RANGE</code><em class="property"> = 53</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_RANGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_MOVE_SEGMENT">
+<code class="sig-name descname">SLS_MOVE_SEGMENT</code><em class="property"> = 54</em><a class="headerlink" href="#pybitwuzla.Option.SLS_MOVE_SEGMENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_NFLIPS">
+<code class="sig-name descname">SLS_NFLIPS</code><em class="property"> = 56</em><a class="headerlink" href="#pybitwuzla.Option.SLS_NFLIPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_PROB_MOVE_RAND_WALK">
+<code class="sig-name descname">SLS_PROB_MOVE_RAND_WALK</code><em class="property"> = 55</em><a class="headerlink" href="#pybitwuzla.Option.SLS_PROB_MOVE_RAND_WALK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_STRATEGY">
+<code class="sig-name descname">SLS_STRATEGY</code><em class="property"> = 57</em><a class="headerlink" href="#pybitwuzla.Option.SLS_STRATEGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_USE_BANDIT">
+<code class="sig-name descname">SLS_USE_BANDIT</code><em class="property"> = 59</em><a class="headerlink" href="#pybitwuzla.Option.SLS_USE_BANDIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SLS_USE_RESTARTS">
+<code class="sig-name descname">SLS_USE_RESTARTS</code><em class="property"> = 58</em><a class="headerlink" href="#pybitwuzla.Option.SLS_USE_RESTARTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.SMT_COMP_MODE">
+<code class="sig-name descname">SMT_COMP_MODE</code><em class="property"> = 107</em><a class="headerlink" href="#pybitwuzla.Option.SMT_COMP_MODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Option.VERBOSITY">
+<code class="sig-name descname">VERBOSITY</code><em class="property"> = 13</em><a class="headerlink" href="#pybitwuzla.Option.VERBOSITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="kind">
+<h3>Kind<a class="headerlink" href="#kind" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="pybitwuzla.Kind">
+<em class="property">class </em><code class="sig-prename descclassname">pybitwuzla.</code><code class="sig-name descname">Kind</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.AND">
+<code class="sig-name descname">AND</code><em class="property"> = 0</em><a class="headerlink" href="#pybitwuzla.Kind.AND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.APPLY">
+<code class="sig-name descname">APPLY</code><em class="property"> = 1</em><a class="headerlink" href="#pybitwuzla.Kind.APPLY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.ARRAY_SELECT">
+<code class="sig-name descname">ARRAY_SELECT</code><em class="property"> = 2</em><a class="headerlink" href="#pybitwuzla.Kind.ARRAY_SELECT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.ARRAY_STORE">
+<code class="sig-name descname">ARRAY_STORE</code><em class="property"> = 3</em><a class="headerlink" href="#pybitwuzla.Kind.ARRAY_STORE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_ADD">
+<code class="sig-name descname">BV_ADD</code><em class="property"> = 4</em><a class="headerlink" href="#pybitwuzla.Kind.BV_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_AND">
+<code class="sig-name descname">BV_AND</code><em class="property"> = 5</em><a class="headerlink" href="#pybitwuzla.Kind.BV_AND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_ASHR">
+<code class="sig-name descname">BV_ASHR</code><em class="property"> = 6</em><a class="headerlink" href="#pybitwuzla.Kind.BV_ASHR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_COMP">
+<code class="sig-name descname">BV_COMP</code><em class="property"> = 7</em><a class="headerlink" href="#pybitwuzla.Kind.BV_COMP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_CONCAT">
+<code class="sig-name descname">BV_CONCAT</code><em class="property"> = 8</em><a class="headerlink" href="#pybitwuzla.Kind.BV_CONCAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_DEC">
+<code class="sig-name descname">BV_DEC</code><em class="property"> = 9</em><a class="headerlink" href="#pybitwuzla.Kind.BV_DEC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_EXTRACT">
+<code class="sig-name descname">BV_EXTRACT</code><em class="property"> = 83</em><a class="headerlink" href="#pybitwuzla.Kind.BV_EXTRACT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_INC">
+<code class="sig-name descname">BV_INC</code><em class="property"> = 10</em><a class="headerlink" href="#pybitwuzla.Kind.BV_INC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_MUL">
+<code class="sig-name descname">BV_MUL</code><em class="property"> = 11</em><a class="headerlink" href="#pybitwuzla.Kind.BV_MUL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_NAND">
+<code class="sig-name descname">BV_NAND</code><em class="property"> = 12</em><a class="headerlink" href="#pybitwuzla.Kind.BV_NAND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_NEG">
+<code class="sig-name descname">BV_NEG</code><em class="property"> = 13</em><a class="headerlink" href="#pybitwuzla.Kind.BV_NEG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_NOR">
+<code class="sig-name descname">BV_NOR</code><em class="property"> = 14</em><a class="headerlink" href="#pybitwuzla.Kind.BV_NOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_NOT">
+<code class="sig-name descname">BV_NOT</code><em class="property"> = 15</em><a class="headerlink" href="#pybitwuzla.Kind.BV_NOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_OR">
+<code class="sig-name descname">BV_OR</code><em class="property"> = 16</em><a class="headerlink" href="#pybitwuzla.Kind.BV_OR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_REDAND">
+<code class="sig-name descname">BV_REDAND</code><em class="property"> = 17</em><a class="headerlink" href="#pybitwuzla.Kind.BV_REDAND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_REDOR">
+<code class="sig-name descname">BV_REDOR</code><em class="property"> = 18</em><a class="headerlink" href="#pybitwuzla.Kind.BV_REDOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_REDXOR">
+<code class="sig-name descname">BV_REDXOR</code><em class="property"> = 19</em><a class="headerlink" href="#pybitwuzla.Kind.BV_REDXOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_REPEAT">
+<code class="sig-name descname">BV_REPEAT</code><em class="property"> = 84</em><a class="headerlink" href="#pybitwuzla.Kind.BV_REPEAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_ROL">
+<code class="sig-name descname">BV_ROL</code><em class="property"> = 20</em><a class="headerlink" href="#pybitwuzla.Kind.BV_ROL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_ROLI">
+<code class="sig-name descname">BV_ROLI</code><em class="property"> = 85</em><a class="headerlink" href="#pybitwuzla.Kind.BV_ROLI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_ROR">
+<code class="sig-name descname">BV_ROR</code><em class="property"> = 21</em><a class="headerlink" href="#pybitwuzla.Kind.BV_ROR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_RORI">
+<code class="sig-name descname">BV_RORI</code><em class="property"> = 86</em><a class="headerlink" href="#pybitwuzla.Kind.BV_RORI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SADD_OVERFLOW">
+<code class="sig-name descname">BV_SADD_OVERFLOW</code><em class="property"> = 22</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SADD_OVERFLOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SDIV">
+<code class="sig-name descname">BV_SDIV</code><em class="property"> = 24</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SDIV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SDIV_OVERFLOW">
+<code class="sig-name descname">BV_SDIV_OVERFLOW</code><em class="property"> = 23</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SDIV_OVERFLOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SGE">
+<code class="sig-name descname">BV_SGE</code><em class="property"> = 25</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SGT">
+<code class="sig-name descname">BV_SGT</code><em class="property"> = 26</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SGT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SHL">
+<code class="sig-name descname">BV_SHL</code><em class="property"> = 27</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SHL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SHR">
+<code class="sig-name descname">BV_SHR</code><em class="property"> = 28</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SHR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SIGN_EXTEND">
+<code class="sig-name descname">BV_SIGN_EXTEND</code><em class="property"> = 87</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SIGN_EXTEND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SLE">
+<code class="sig-name descname">BV_SLE</code><em class="property"> = 29</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SLT">
+<code class="sig-name descname">BV_SLT</code><em class="property"> = 30</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SLT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SMOD">
+<code class="sig-name descname">BV_SMOD</code><em class="property"> = 31</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SMOD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SMUL_OVERFLOW">
+<code class="sig-name descname">BV_SMUL_OVERFLOW</code><em class="property"> = 32</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SMUL_OVERFLOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SREM">
+<code class="sig-name descname">BV_SREM</code><em class="property"> = 33</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SREM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SSUB_OVERFLOW">
+<code class="sig-name descname">BV_SSUB_OVERFLOW</code><em class="property"> = 34</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SSUB_OVERFLOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_SUB">
+<code class="sig-name descname">BV_SUB</code><em class="property"> = 35</em><a class="headerlink" href="#pybitwuzla.Kind.BV_SUB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_UADD_OVERFLOW">
+<code class="sig-name descname">BV_UADD_OVERFLOW</code><em class="property"> = 36</em><a class="headerlink" href="#pybitwuzla.Kind.BV_UADD_OVERFLOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_UDIV">
+<code class="sig-name descname">BV_UDIV</code><em class="property"> = 37</em><a class="headerlink" href="#pybitwuzla.Kind.BV_UDIV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_UGE">
+<code class="sig-name descname">BV_UGE</code><em class="property"> = 38</em><a class="headerlink" href="#pybitwuzla.Kind.BV_UGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_UGT">
+<code class="sig-name descname">BV_UGT</code><em class="property"> = 39</em><a class="headerlink" href="#pybitwuzla.Kind.BV_UGT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_ULE">
+<code class="sig-name descname">BV_ULE</code><em class="property"> = 40</em><a class="headerlink" href="#pybitwuzla.Kind.BV_ULE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_ULT">
+<code class="sig-name descname">BV_ULT</code><em class="property"> = 41</em><a class="headerlink" href="#pybitwuzla.Kind.BV_ULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_UMUL_OVERFLOW">
+<code class="sig-name descname">BV_UMUL_OVERFLOW</code><em class="property"> = 42</em><a class="headerlink" href="#pybitwuzla.Kind.BV_UMUL_OVERFLOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_UREM">
+<code class="sig-name descname">BV_UREM</code><em class="property"> = 43</em><a class="headerlink" href="#pybitwuzla.Kind.BV_UREM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_USUB_OVERFLOW">
+<code class="sig-name descname">BV_USUB_OVERFLOW</code><em class="property"> = 44</em><a class="headerlink" href="#pybitwuzla.Kind.BV_USUB_OVERFLOW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_XNOR">
+<code class="sig-name descname">BV_XNOR</code><em class="property"> = 45</em><a class="headerlink" href="#pybitwuzla.Kind.BV_XNOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_XOR">
+<code class="sig-name descname">BV_XOR</code><em class="property"> = 46</em><a class="headerlink" href="#pybitwuzla.Kind.BV_XOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.BV_ZERO_EXTEND">
+<code class="sig-name descname">BV_ZERO_EXTEND</code><em class="property"> = 88</em><a class="headerlink" href="#pybitwuzla.Kind.BV_ZERO_EXTEND" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.DISTINCT">
+<code class="sig-name descname">DISTINCT</code><em class="property"> = 47</em><a class="headerlink" href="#pybitwuzla.Kind.DISTINCT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.EQUAL">
+<code class="sig-name descname">EQUAL</code><em class="property"> = 48</em><a class="headerlink" href="#pybitwuzla.Kind.EQUAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.EXISTS">
+<code class="sig-name descname">EXISTS</code><em class="property"> = 49</em><a class="headerlink" href="#pybitwuzla.Kind.EXISTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FORALL">
+<code class="sig-name descname">FORALL</code><em class="property"> = 50</em><a class="headerlink" href="#pybitwuzla.Kind.FORALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_ABS">
+<code class="sig-name descname">FP_ABS</code><em class="property"> = 51</em><a class="headerlink" href="#pybitwuzla.Kind.FP_ABS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_ADD">
+<code class="sig-name descname">FP_ADD</code><em class="property"> = 52</em><a class="headerlink" href="#pybitwuzla.Kind.FP_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_DIV">
+<code class="sig-name descname">FP_DIV</code><em class="property"> = 53</em><a class="headerlink" href="#pybitwuzla.Kind.FP_DIV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_EQ">
+<code class="sig-name descname">FP_EQ</code><em class="property"> = 54</em><a class="headerlink" href="#pybitwuzla.Kind.FP_EQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_FMA">
+<code class="sig-name descname">FP_FMA</code><em class="property"> = 55</em><a class="headerlink" href="#pybitwuzla.Kind.FP_FMA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_FP">
+<code class="sig-name descname">FP_FP</code><em class="property"> = 56</em><a class="headerlink" href="#pybitwuzla.Kind.FP_FP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_GEQ">
+<code class="sig-name descname">FP_GEQ</code><em class="property"> = 57</em><a class="headerlink" href="#pybitwuzla.Kind.FP_GEQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_GT">
+<code class="sig-name descname">FP_GT</code><em class="property"> = 58</em><a class="headerlink" href="#pybitwuzla.Kind.FP_GT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_IS_INF">
+<code class="sig-name descname">FP_IS_INF</code><em class="property"> = 59</em><a class="headerlink" href="#pybitwuzla.Kind.FP_IS_INF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_IS_NAN">
+<code class="sig-name descname">FP_IS_NAN</code><em class="property"> = 60</em><a class="headerlink" href="#pybitwuzla.Kind.FP_IS_NAN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_IS_NEG">
+<code class="sig-name descname">FP_IS_NEG</code><em class="property"> = 61</em><a class="headerlink" href="#pybitwuzla.Kind.FP_IS_NEG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_IS_NORMAL">
+<code class="sig-name descname">FP_IS_NORMAL</code><em class="property"> = 62</em><a class="headerlink" href="#pybitwuzla.Kind.FP_IS_NORMAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_IS_POS">
+<code class="sig-name descname">FP_IS_POS</code><em class="property"> = 63</em><a class="headerlink" href="#pybitwuzla.Kind.FP_IS_POS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_IS_SUBNORMAL">
+<code class="sig-name descname">FP_IS_SUBNORMAL</code><em class="property"> = 64</em><a class="headerlink" href="#pybitwuzla.Kind.FP_IS_SUBNORMAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_IS_ZERO">
+<code class="sig-name descname">FP_IS_ZERO</code><em class="property"> = 65</em><a class="headerlink" href="#pybitwuzla.Kind.FP_IS_ZERO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_LEQ">
+<code class="sig-name descname">FP_LEQ</code><em class="property"> = 66</em><a class="headerlink" href="#pybitwuzla.Kind.FP_LEQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_LT">
+<code class="sig-name descname">FP_LT</code><em class="property"> = 67</em><a class="headerlink" href="#pybitwuzla.Kind.FP_LT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_MAX">
+<code class="sig-name descname">FP_MAX</code><em class="property"> = 68</em><a class="headerlink" href="#pybitwuzla.Kind.FP_MAX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_MIN">
+<code class="sig-name descname">FP_MIN</code><em class="property"> = 69</em><a class="headerlink" href="#pybitwuzla.Kind.FP_MIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_MUL">
+<code class="sig-name descname">FP_MUL</code><em class="property"> = 70</em><a class="headerlink" href="#pybitwuzla.Kind.FP_MUL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_NEG">
+<code class="sig-name descname">FP_NEG</code><em class="property"> = 71</em><a class="headerlink" href="#pybitwuzla.Kind.FP_NEG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_REM">
+<code class="sig-name descname">FP_REM</code><em class="property"> = 72</em><a class="headerlink" href="#pybitwuzla.Kind.FP_REM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_RTI">
+<code class="sig-name descname">FP_RTI</code><em class="property"> = 73</em><a class="headerlink" href="#pybitwuzla.Kind.FP_RTI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_SQRT">
+<code class="sig-name descname">FP_SQRT</code><em class="property"> = 74</em><a class="headerlink" href="#pybitwuzla.Kind.FP_SQRT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_SUB">
+<code class="sig-name descname">FP_SUB</code><em class="property"> = 75</em><a class="headerlink" href="#pybitwuzla.Kind.FP_SUB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_TO_FP_FROM_BV">
+<code class="sig-name descname">FP_TO_FP_FROM_BV</code><em class="property"> = 89</em><a class="headerlink" href="#pybitwuzla.Kind.FP_TO_FP_FROM_BV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_TO_FP_FROM_FP">
+<code class="sig-name descname">FP_TO_FP_FROM_FP</code><em class="property"> = 90</em><a class="headerlink" href="#pybitwuzla.Kind.FP_TO_FP_FROM_FP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_TO_FP_FROM_SBV">
+<code class="sig-name descname">FP_TO_FP_FROM_SBV</code><em class="property"> = 91</em><a class="headerlink" href="#pybitwuzla.Kind.FP_TO_FP_FROM_SBV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_TO_FP_FROM_UBV">
+<code class="sig-name descname">FP_TO_FP_FROM_UBV</code><em class="property"> = 92</em><a class="headerlink" href="#pybitwuzla.Kind.FP_TO_FP_FROM_UBV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_TO_SBV">
+<code class="sig-name descname">FP_TO_SBV</code><em class="property"> = 93</em><a class="headerlink" href="#pybitwuzla.Kind.FP_TO_SBV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.FP_TO_UBV">
+<code class="sig-name descname">FP_TO_UBV</code><em class="property"> = 94</em><a class="headerlink" href="#pybitwuzla.Kind.FP_TO_UBV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.IFF">
+<code class="sig-name descname">IFF</code><em class="property"> = 76</em><a class="headerlink" href="#pybitwuzla.Kind.IFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.IMPLIES">
+<code class="sig-name descname">IMPLIES</code><em class="property"> = 77</em><a class="headerlink" href="#pybitwuzla.Kind.IMPLIES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.ITE">
+<code class="sig-name descname">ITE</code><em class="property"> = 78</em><a class="headerlink" href="#pybitwuzla.Kind.ITE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.LAMBDA">
+<code class="sig-name descname">LAMBDA</code><em class="property"> = 79</em><a class="headerlink" href="#pybitwuzla.Kind.LAMBDA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.NOT">
+<code class="sig-name descname">NOT</code><em class="property"> = 80</em><a class="headerlink" href="#pybitwuzla.Kind.NOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.OR">
+<code class="sig-name descname">OR</code><em class="property"> = 81</em><a class="headerlink" href="#pybitwuzla.Kind.OR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Kind.XOR">
+<code class="sig-name descname">XOR</code><em class="property"> = 82</em><a class="headerlink" href="#pybitwuzla.Kind.XOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="result">
+<h3>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="pybitwuzla.Result">
+<em class="property">class </em><code class="sig-prename descclassname">pybitwuzla.</code><code class="sig-name descname">Result</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Result" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="pybitwuzla.Result.SAT">
+<code class="sig-name descname">SAT</code><em class="property"> = 10</em><a class="headerlink" href="#pybitwuzla.Result.SAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Result.UNKNOWN">
+<code class="sig-name descname">UNKNOWN</code><em class="property"> = 0</em><a class="headerlink" href="#pybitwuzla.Result.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.Result.UNSAT">
+<code class="sig-name descname">UNSAT</code><em class="property"> = 20</em><a class="headerlink" href="#pybitwuzla.Result.UNSAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="roundingmode">
+<h3>RoundingMode<a class="headerlink" href="#roundingmode" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="pybitwuzla.RoundingMode">
+<em class="property">class </em><code class="sig-prename descclassname">pybitwuzla.</code><code class="sig-name descname">RoundingMode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.RoundingMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="pybitwuzla.RoundingMode.RNA">
+<code class="sig-name descname">RNA</code><em class="property"> = 1</em><a class="headerlink" href="#pybitwuzla.RoundingMode.RNA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.RoundingMode.RNE">
+<code class="sig-name descname">RNE</code><em class="property"> = 0</em><a class="headerlink" href="#pybitwuzla.RoundingMode.RNE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.RoundingMode.RTN">
+<code class="sig-name descname">RTN</code><em class="property"> = 2</em><a class="headerlink" href="#pybitwuzla.RoundingMode.RTN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.RoundingMode.RTP">
+<code class="sig-name descname">RTP</code><em class="property"> = 3</em><a class="headerlink" href="#pybitwuzla.RoundingMode.RTP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pybitwuzla.RoundingMode.RTZ">
+<code class="sig-name descname">RTZ</code><em class="property"> = 4</em><a class="headerlink" href="#pybitwuzla.RoundingMode.RTZ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bitwuzla">
+<h3>Bitwuzla<a class="headerlink" href="#bitwuzla" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="pybitwuzla.Bitwuzla">
+<em class="property">class </em><code class="sig-prename descclassname">pybitwuzla.</code><code class="sig-name descname">Bitwuzla</code><a class="headerlink" href="#pybitwuzla.Bitwuzla" title="Permalink to this definition">¶</a></dt>
+<dd><p>The class representing a Bitwuzla solver instance.</p>
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.assert_formula">
+<code class="sig-name descname">assert_formula</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.assert_formula" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 511)
+assert(formula,…)</p>
+<blockquote>
+<div><p>Assert one or more formulas.</p>
+<p>Added formulas can not be removed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param formula</dt>
+<dd class="field-odd"><p>Boolean term.</p>
+</dd>
+<dt class="field-even">type formula</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pybitwuzla.BitwuzlaTerm" title="pybitwuzla.BitwuzlaTerm"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaTerm</span></code></a></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.assume_formula">
+<code class="sig-name descname">assume_formula</code><span class="sig-paren">(</span><em class="sig-param">formula</em>, <em class="sig-param">...</em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.assume_formula" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assume one or more formulas.</p>
+<p>You must enable incremental usage via
+<code class="xref py py-func docutils literal notranslate"><span class="pre">set_opt()</span></code> before you can add
+assumptions.
+In contrast to assertions added via
+<code class="xref py py-func docutils literal notranslate"><span class="pre">assert()</span></code>, assumptions
+are discarded after each call to
+<a class="reference internal" href="#pybitwuzla.Bitwuzla.check_sat" title="pybitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a>.
+Assumptions and assertions are logically combined via Boolean
+<em>and</em>.
+Assumption handling in Bitwuzla is analogous to assumptions
+in MiniSAT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>formula</strong> (<a class="reference internal" href="#pybitwuzla.BitwuzlaTerm" title="pybitwuzla.BitwuzlaTerm"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaTerm</span></code></a>) – Boolean term.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.check_sat">
+<code class="sig-name descname">check_sat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.check_sat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check satisfiability of asserted and assumed input formulas.</p>
+<p>Input formulas can either be asserted via
+<code class="xref py py-func docutils literal notranslate"><span class="pre">Assert()</span></code> or
+assumed via <a class="reference internal" href="#pybitwuzla.Bitwuzla.assume_formula" title="pybitwuzla.Bitwuzla.assume_formula"><code class="xref py py-func docutils literal notranslate"><span class="pre">assume_formula()</span></code></a>.</p>
+<p>If this function is called multiple times it is required to
+enable incremental usage via <code class="xref py py-func docutils literal notranslate"><span class="pre">set_opt()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>~pybitwuzla.Result.SAT</cite> if the input formula is satisfiable (under possibly given assumptions), <cite>~pybitwuzla.Result.UNSAT</cite> if it is unsatisfiable, and <cite>~pybitwuzla.Result.UNKNOWN</cite> otherwise.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assertions and assumptions are combined via Boolean <em>and</em>.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#pybitwuzla.Bitwuzla.get_value" title="pybitwuzla.Bitwuzla.get_value"><code class="xref py py-data docutils literal notranslate"><span class="pre">get_value</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.copyright">
+<code class="sig-name descname">copyright</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.copyright" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The copyright information.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.dump_formula">
+<code class="sig-name descname">dump_formula</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.dump_formula" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 605)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.fixate_assumptions">
+<code class="sig-name descname">fixate_assumptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.fixate_assumptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert all assumptions added since the last
+<a class="reference internal" href="#pybitwuzla.Bitwuzla.check_sat" title="pybitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a> call as assertions.</p>
+<p>See <a class="reference internal" href="#pybitwuzla.Bitwuzla.assume_formula" title="pybitwuzla.Bitwuzla.assume_formula"><code class="xref py py-func docutils literal notranslate"><span class="pre">assume_formula()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.get_option">
+<code class="sig-name descname">get_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opt</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.get_option" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get value of given Bitwuzla option <code class="docutils literal notranslate"><span class="pre">opt</span></code>.</p>
+<p>For a list of all available options, see
+<a class="reference internal" href="#pybitwuzla.Bitwuzla.set_option" title="pybitwuzla.Bitwuzla.set_option"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_option()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>opt</strong> (<em>BitwuzlaOption</em>) – Option.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Option value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>uint32_t</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.get_unsat_assumptions">
+<code class="sig-name descname">get_unsat_assumptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.get_unsat_assumptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of unsatisfiable assumptions previously added via
+<a class="reference internal" href="#pybitwuzla.Bitwuzla.assume_formula" title="pybitwuzla.Bitwuzla.assume_formula"><code class="xref py py-func docutils literal notranslate"><span class="pre">assume_formula()</span></code></a>.</p>
+<p>Requires that the last <a class="reference internal" href="#pybitwuzla.Bitwuzla.check_sat" title="pybitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a> call
+returned <cite>~pybitwuzla.Result.UNSAT</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of unsatisfiable assumptions</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(<a class="reference internal" href="#pybitwuzla.BitwuzlaTerm" title="pybitwuzla.BitwuzlaTerm">BitwuzlaTerm</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.get_unsat_core">
+<code class="sig-name descname">get_unsat_core</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.get_unsat_core" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of unsatisfiable assertions previously added via
+<a class="reference internal" href="#pybitwuzla.Bitwuzla.assert_formula" title="pybitwuzla.Bitwuzla.assert_formula"><code class="xref py py-func docutils literal notranslate"><span class="pre">assert_formula()</span></code></a>.</p>
+<p>Requires that the last <a class="reference internal" href="#pybitwuzla.Bitwuzla.check_sat" title="pybitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a> call
+returned <cite>~pybitwuzla.Result.UNSAT</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of unsatisfiable assertions</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(<a class="reference internal" href="#pybitwuzla.BitwuzlaTerm" title="pybitwuzla.BitwuzlaTerm">BitwuzlaTerm</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.get_value">
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">term</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get model value of term.</p>
+<p>Requires that the last <a class="reference internal" href="#pybitwuzla.Bitwuzla.check_sat" title="pybitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a> call
+returned <cite>~pybitwuzla.Result.SAT</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Term representing the model value of <cite>term</cite>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pybitwuzla.BitwuzlaTerm" title="pybitwuzla.BitwuzlaTerm">BitwuzlaTerm</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.git_id">
+<code class="sig-name descname">git_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.git_id" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The git commit sha.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.is_unsat_assumption">
+<code class="sig-name descname">is_unsat_assumption</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">...</em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.is_unsat_assumption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if any of the given assumptions are false assumptions.</p>
+<p>Unsat assumptions are those assumptions that force an
+input formula to become unsatisfiable.
+Unsat assumptions handling in Boolector is analogous to
+unsatisfiable assumptions in MiniSAT.</p>
+<p>See <a class="reference internal" href="#pybitwuzla.Bitwuzla.assume_formula" title="pybitwuzla.Bitwuzla.assume_formula"><code class="xref py py-func docutils literal notranslate"><span class="pre">assume_formula()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>a</strong> (<a class="reference internal" href="#pybitwuzla.BitwuzlaTerm" title="pybitwuzla.BitwuzlaTerm"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaTerm</span></code></a>) – Boolean terms.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of Boolean values, where True indicates that the assumption at given index is true or false.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_array_sort">
+<code class="sig-name descname">mk_array_sort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em>, <em class="sig-param"><span class="n">elem</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_array_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create array sort with given index and element sorts.</p>
+<p>See <a class="reference internal" href="#pybitwuzla.Bitwuzla.mk_array_sort" title="pybitwuzla.Bitwuzla.mk_array_sort"><code class="xref py py-func docutils literal notranslate"><span class="pre">mk_array_sort()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<a class="reference internal" href="#pybitwuzla.BitwuzlaSort" title="pybitwuzla.BitwuzlaSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a>) – The sort of the array index.</p></li>
+<li><p><strong>elem</strong> (<a class="reference internal" href="#pybitwuzla.BitwuzlaSort" title="pybitwuzla.BitwuzlaSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a>) – The sort of the array elements.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Array sort.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pybitwuzla.BitwuzlaSort" title="pybitwuzla.BitwuzlaSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_bool_sort">
+<code class="sig-name descname">mk_bool_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_bool_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Boolean sort.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Sort of type Boolean.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pybitwuzla.BitwuzlaSort" title="pybitwuzla.BitwuzlaSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_bv_max_signed">
+<code class="sig-name descname">mk_bv_max_signed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_bv_max_signed" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 903)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_bv_min_signed">
+<code class="sig-name descname">mk_bv_min_signed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_bv_min_signed" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 895)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_bv_ones">
+<code class="sig-name descname">mk_bv_ones</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_bv_ones" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 888)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_bv_sort">
+<code class="sig-name descname">mk_bv_sort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">width</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_bv_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create bit-vector sort of size <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>width</strong> (<em>uint32_t</em>) – Bit width.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Bit-vector sort of bit width <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pybitwuzla.BitwuzlaSort" title="pybitwuzla.BitwuzlaSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_bv_value">
+<code class="sig-name descname">mk_bv_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_bv_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 859)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_const">
+<code class="sig-name descname">mk_const</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_const" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 1006)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_const_array">
+<code class="sig-name descname">mk_const_array</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_const_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 1014)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_fp_nan">
+<code class="sig-name descname">mk_fp_nan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_fp_nan" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 986)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_fp_neg_inf">
+<code class="sig-name descname">mk_fp_neg_inf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_fp_neg_inf" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 979)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_fp_neg_zero">
+<code class="sig-name descname">mk_fp_neg_zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_fp_neg_zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 965)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_fp_pos_inf">
+<code class="sig-name descname">mk_fp_pos_inf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_fp_pos_inf" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 972)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_fp_pos_zero">
+<code class="sig-name descname">mk_fp_pos_zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_fp_pos_zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 958)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_fp_sort">
+<code class="sig-name descname">mk_fp_sort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">exp_size</span></em>, <em class="sig-param"><span class="n">sig_size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_fp_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a floating-point sort with given exponent size <code class="docutils literal notranslate"><span class="pre">exp_size</span></code>
+and significand size <code class="docutils literal notranslate"><span class="pre">sig_size</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>exp_size</strong> (<em>uint32_t</em>) – Exponent size.</p></li>
+<li><p><strong>sig_size</strong> (<em>uint32_t</em>) – Significand size.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Floating-point sort.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pybitwuzla.BitwuzlaSort" title="pybitwuzla.BitwuzlaSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_fp_value">
+<code class="sig-name descname">mk_fp_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_fp_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 913)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_fp_value_from">
+<code class="sig-name descname">mk_fp_value_from</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_fp_value_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 936)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_fun_sort">
+<code class="sig-name descname">mk_fun_sort</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domain</span></em>, <em class="sig-param"><span class="n">codomain</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_fun_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create function sort with given domain and codomain.</p>
+<p>See <a class="reference internal" href="#pybitwuzla.Bitwuzla.mk_const" title="pybitwuzla.Bitwuzla.mk_const"><code class="xref py py-func docutils literal notranslate"><span class="pre">mk_const()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> (<em>list</em>) – A list of all the function arguments’ sorts.</p></li>
+<li><p><strong>codomain</strong> (<a class="reference internal" href="#pybitwuzla.BitwuzlaSort" title="pybitwuzla.BitwuzlaSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a>) – The sort of the function’s return value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Function sort, which maps <code class="docutils literal notranslate"><span class="pre">domain</span></code> to <code class="docutils literal notranslate"><span class="pre">codomain</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pybitwuzla.BitwuzlaSort" title="pybitwuzla.BitwuzlaSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_rm_sort">
+<code class="sig-name descname">mk_rm_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_rm_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a FP rounding mode sort.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Rounding mode sort.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#pybitwuzla.BitwuzlaSort" title="pybitwuzla.BitwuzlaSort"><code class="xref py py-class docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_rm_value">
+<code class="sig-name descname">mk_rm_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_rm_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 993)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_term">
+<code class="sig-name descname">mk_term</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_term" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 1030)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.mk_var">
+<code class="sig-name descname">mk_var</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.mk_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 1022)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.pop">
+<code class="sig-name descname">pop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">level</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.pop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pop context levels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level</strong> – Number of levels to pop.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assumptions added via <cite>:~pybitwuzla.Bitwuzla.assume_formula</cite>
+are not affected by context level changes and are only valid
+until the next <cite>:~pybitwuzla.Bitwuzla.check_sat</cite> call no matter
+at what level they were assumed.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#pybitwuzla.Bitwuzla.assume_formula" title="pybitwuzla.Bitwuzla.assume_formula"><code class="xref py py-func docutils literal notranslate"><span class="pre">assume_formula()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.print_model">
+<code class="sig-name descname">print_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.print_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 600)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.push">
+<code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">level</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.push" title="Permalink to this definition">¶</a></dt>
+<dd><p>push new context levels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level</strong> – Number of context levels to create.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assumptions added via <cite>:~pybitwuzla.Bitwuzla.assume_formula</cite>
+are not affected by context level changes and are only valid
+until the next <cite>:~pybitwuzla.Bitwuzla.check_sat</cite> call no matter
+at what level they were assumed.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#pybitwuzla.Bitwuzla.assume_formula" title="pybitwuzla.Bitwuzla.assume_formula"><code class="xref py py-func docutils literal notranslate"><span class="pre">assume_formula()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.reset_assumptions">
+<code class="sig-name descname">reset_assumptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.reset_assumptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all assumptions added since the last
+<a class="reference internal" href="#pybitwuzla.Bitwuzla.check_sat" title="pybitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a> call.</p>
+<p>See <a class="reference internal" href="#pybitwuzla.Bitwuzla.assume_formula" title="pybitwuzla.Bitwuzla.assume_formula"><code class="xref py py-func docutils literal notranslate"><span class="pre">assume_formula()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.set_option">
+<code class="sig-name descname">set_option</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">opt</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.set_option" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>opt</strong> (<em>BitwuzlaOption</em>) – Option.</p></li>
+<li><p><strong>value</strong> – Option value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.set_term">
+<code class="sig-name descname">set_term</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fun</span></em>, <em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.set_term" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a termination callback function.</p>
+<p>Use this function to force Bitwuzla to prematurely terminate if
+callback function <code class="docutils literal notranslate"><span class="pre">fun</span></code> returns True. Arguments <code class="docutils literal notranslate"><span class="pre">args</span></code> to
+<code class="docutils literal notranslate"><span class="pre">fun</span></code> may be passed as a single Python object (in case that
+<code class="docutils literal notranslate"><span class="pre">fun</span></code> takes only one argument), a tuple, or a list of arguments.</p>
+<p>E.g.,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">fun1</span> <span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+    <span class="c1"># timeout after 1 sec.</span>
+    <span class="k">return</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">arg</span> <span class="o">&gt;</span> <span class="mf">1.0</span>
+
+<span class="k">def</span> <span class="nf">fun2</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">):</span>
+    <span class="c1"># do something and return True/False</span>
+    <span class="o">...</span>
+
+<span class="n">bitwuzla</span> <span class="o">=</span> <span class="n">Bitwuzla</span><span class="p">()</span>
+
+<span class="n">bitwuzla</span><span class="o">.</span><span class="n">set_term</span><span class="p">(</span><span class="n">fun1</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+<span class="n">bitwuzla</span><span class="o">.</span><span class="n">set_term</span><span class="p">(</span><span class="n">fun1</span><span class="p">,</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">(),))</span>
+<span class="n">bitwuzla</span><span class="o">.</span><span class="n">set_term</span><span class="p">(</span><span class="n">fun1</span><span class="p">,</span> <span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()])</span>
+
+<span class="n">bitwuzla</span><span class="o">.</span><span class="n">set_term</span><span class="p">(</span><span class="n">fun2</span><span class="p">,</span> <span class="p">(</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">))</span>
+<span class="n">bitwuzla</span><span class="o">.</span><span class="n">set_term</span><span class="p">(</span><span class="n">run2</span><span class="p">,</span> <span class="p">[</span><span class="n">arg0</span><span class="p">,</span> <span class="n">arg1</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fun</strong> – A python function.</p></li>
+<li><p><strong>args</strong> – A function argument or a list or tuple of function arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.simplify">
+<code class="sig-name descname">simplify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.simplify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simplify current input formula.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>~pybitwuzla.Result.SAT</cite> if the input formula was simplified to true, <cite>~pybitwuzla.Result.UNSAT</cite> if it was simplified to false, and <cite>~pybitwuzla.Result.UNKNOWN</cite> otherwise.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each call to <a class="reference internal" href="#pybitwuzla.Bitwuzla.check_sat" title="pybitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a>
+simplifies the input formula as a preprocessing step.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.substitute">
+<code class="sig-name descname">substitute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.substitute" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 1071)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.terminate">
+<code class="sig-name descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.terminate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if Bitwuzla has been terminated (and/or terminate
+Bitwuzla) via the previously configured termination callback
+function.</p>
+<p>See <a class="reference internal" href="#pybitwuzla.Bitwuzla.set_term" title="pybitwuzla.Bitwuzla.set_term"><code class="xref py py-func docutils literal notranslate"><span class="pre">set_term()</span></code></a>.</p>
+<p>:return True if termination condition is fulfilled, else False.
+:rtype: bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.Bitwuzla.version">
+<code class="sig-name descname">version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.Bitwuzla.version" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The version number.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="bitwuzlasort">
+<h3>BitwuzlaSort<a class="headerlink" href="#bitwuzlasort" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="pybitwuzla.BitwuzlaSort">
+<em class="property">class </em><code class="sig-prename descclassname">pybitwuzla.</code><code class="sig-name descname">BitwuzlaSort</code><a class="headerlink" href="#pybitwuzla.BitwuzlaSort" title="Permalink to this definition">¶</a></dt>
+<dd><p>The class representing a Bitwuzla sort.</p>
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.array_get_element">
+<code class="sig-name descname">array_get_element</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.array_get_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 132)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.array_get_index">
+<code class="sig-name descname">array_get_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.array_get_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 128)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.bv_get_size">
+<code class="sig-name descname">bv_get_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.bv_get_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 113)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.fp_get_exp_size">
+<code class="sig-name descname">fp_get_exp_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.fp_get_exp_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 118)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.fp_get_sig_size">
+<code class="sig-name descname">fp_get_sig_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.fp_get_sig_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 123)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.fun_get_arity">
+<code class="sig-name descname">fun_get_arity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.fun_get_arity" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 155)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.fun_get_codomain">
+<code class="sig-name descname">fun_get_codomain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.fun_get_codomain" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 151)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.fun_get_domain">
+<code class="sig-name descname">fun_get_domain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.fun_get_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 136)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.fun_get_domain_sorts">
+<code class="sig-name descname">fun_get_domain_sorts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.fun_get_domain_sorts" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 140)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.is_array">
+<code class="sig-name descname">is_array</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.is_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 161)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.is_bv">
+<code class="sig-name descname">is_bv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.is_bv" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 164)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.is_fp">
+<code class="sig-name descname">is_fp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.is_fp" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 167)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.is_fun">
+<code class="sig-name descname">is_fun</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.is_fun" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 170)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaSort.is_rm">
+<code class="sig-name descname">is_rm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaSort.is_rm" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 173)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="bitwuzlaterm">
+<h3>BitwuzlaTerm<a class="headerlink" href="#bitwuzlaterm" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="pybitwuzla.BitwuzlaTerm">
+<em class="property">class </em><code class="sig-prename descclassname">pybitwuzla.</code><code class="sig-name descname">BitwuzlaTerm</code><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm" title="Permalink to this definition">¶</a></dt>
+<dd><p>The class representing a Bitwuzla term.</p>
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.array_get_element_sort">
+<code class="sig-name descname">array_get_element_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.array_get_element_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 243)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.array_get_index_sort">
+<code class="sig-name descname">array_get_index_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.array_get_index_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 238)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.bv_get_size">
+<code class="sig-name descname">bv_get_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.bv_get_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 261)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.fp_get_exp_size">
+<code class="sig-name descname">fp_get_exp_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.fp_get_exp_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 264)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.fp_get_sig_size">
+<code class="sig-name descname">fp_get_sig_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.fp_get_sig_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 267)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.fun_get_arity">
+<code class="sig-name descname">fun_get_arity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.fun_get_arity" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 270)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.fun_get_codomain_sort">
+<code class="sig-name descname">fun_get_codomain_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.fun_get_codomain_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 256)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.fun_get_domain_sort">
+<code class="sig-name descname">fun_get_domain_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.fun_get_domain_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 248)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.fun_get_domain_sorts">
+<code class="sig-name descname">fun_get_domain_sorts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.fun_get_domain_sorts" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 253)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.get_children">
+<code class="sig-name descname">get_children</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.get_children" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 214)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.get_indices">
+<code class="sig-name descname">get_indices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.get_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 220)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.get_kind">
+<code class="sig-name descname">get_kind</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.get_kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 230)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.get_sort">
+<code class="sig-name descname">get_sort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.get_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 235)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.get_symbol">
+<code class="sig-name descname">get_symbol</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.get_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 273)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_array">
+<code class="sig-name descname">is_array</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 281)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_bound_var">
+<code class="sig-name descname">is_bound_var</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_bound_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 296)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_bv">
+<code class="sig-name descname">is_bv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_bv" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 308)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_bv_value">
+<code class="sig-name descname">is_bv_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_bv_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 299)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_bv_value_max_signed">
+<code class="sig-name descname">is_bv_value_max_signed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_bv_value_max_signed" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 329)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_bv_value_min_signed">
+<code class="sig-name descname">is_bv_value_min_signed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_bv_value_min_signed" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 326)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_bv_value_one">
+<code class="sig-name descname">is_bv_value_one</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_bv_value_one" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 320)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_bv_value_ones">
+<code class="sig-name descname">is_bv_value_ones</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_bv_value_ones" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 323)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_bv_value_zero">
+<code class="sig-name descname">is_bv_value_zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_bv_value_zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 317)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_const">
+<code class="sig-name descname">is_const</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_const" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 284)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_const_array">
+<code class="sig-name descname">is_const_array</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_const_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 287)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_fp">
+<code class="sig-name descname">is_fp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_fp" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 311)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_fp_value">
+<code class="sig-name descname">is_fp_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_fp_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 302)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_fp_value_nan">
+<code class="sig-name descname">is_fp_value_nan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_fp_value_nan" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 344)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_fp_value_neg_inf">
+<code class="sig-name descname">is_fp_value_neg_inf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_fp_value_neg_inf" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 341)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_fp_value_neg_zero">
+<code class="sig-name descname">is_fp_value_neg_zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_fp_value_neg_zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 335)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_fp_value_pos_inf">
+<code class="sig-name descname">is_fp_value_pos_inf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_fp_value_pos_inf" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 338)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_fp_value_pos_zero">
+<code class="sig-name descname">is_fp_value_pos_zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_fp_value_pos_zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 332)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_fun">
+<code class="sig-name descname">is_fun</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_fun" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 290)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_indexed">
+<code class="sig-name descname">is_indexed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_indexed" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 347)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_rm">
+<code class="sig-name descname">is_rm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_rm" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 314)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_rm_value">
+<code class="sig-name descname">is_rm_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_rm_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 305)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.is_var">
+<code class="sig-name descname">is_var</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.is_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 293)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pybitwuzla.BitwuzlaTerm.set_symbol">
+<code class="sig-name descname">set_symbol</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybitwuzla.BitwuzlaTerm.set_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>File: /home/an/git/dev/bitwuzla/src/api/python/pybitwuzla.pyx (starting at line 276)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../building_on_windows.html" class="btn btn-neutral float-right" title="Building Bitwuzla on Windows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api.html" class="btn btn-neutral float-left" title="Python API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, The Authors of Bitwuzla.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
