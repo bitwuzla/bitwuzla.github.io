@@ -92,7 +92,9 @@
 <li class="toctree-l2"><a class="reference internal" href="interface.html">C Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#quickstart-example">Quickstart example:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quickstart-example">Quickstart Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#incremental-example-with-push-and-pop">Incremental Example with push and pop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#incremental-example-with-check-sat-assuming">Incremental Example with check-sat-assuming</a></li>
 </ul>
 </li>
 </ul>
@@ -190,30 +192,37 @@
 <div class="section" id="quickstart">
 <h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
 <p>First, create a Bitwuzla instance:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">Bitwuzla</span> <span class="o">*</span><span class="n">bzla</span> <span class="o">=</span> <span class="n">bitwuzla_new</span><span class="p">();</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>  <span class="n">Bitwuzla</span> <span class="o">*</span><span class="n">bzla</span> <span class="o">=</span> <span class="n">bitwuzla_new</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>This instance can be configured via <a class="reference internal" href="interface.html#c.bitwuzla_set_option" title="bitwuzla_set_option"><code class="xref c c-func docutils literal notranslate"><span class="pre">bitwuzla_set_option()</span></code></a>.
 For example, to enable model generation
 (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(set-option</span> <span class="pre">:produce-models</span> <span class="pre">true)</span></code>):</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_OPT_PRODUCE_MODELS</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>  <span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_OPT_PRODUCE_MODELS</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Some options expect string values rather than integer values, for example,
 to enable CryptoMiniSat as back end SAT solver instead of the default
 SAT solver CaDiCaL:</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">bitwuzla_set_option_str</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_OPT_SAT_ENGINE</span><span class="p">,</span> <span class="s">&quot;cms&quot;</span><span class="p">);</span>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>  <span class="c1">// Note: This will silently fall back to one of the compiled in SAT solvers</span>
+  <span class="c1">//       if the selected solver is not compiled in.</span>
+  <span class="n">bitwuzla_set_option_str</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_OPT_SAT_ENGINE</span><span class="p">,</span> <span class="s">&quot;cms&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>For more details on available options, see <a class="reference internal" href="options.html#options"><span class="std std-ref">Options</span></a>.</p>
 <p>Next, you will want to create some expressions and assert formulas.
 For example, consider the following SMT-LIB input:</p>
-<div class="highlight-smtlib notranslate"><div class="highlight"><pre><span></span>(<span class="k">declare-const</span> <span class="n">x</span> (_ <span class="k">BitVec</span> <span class="m">8</span>))
-(<span class="k">declare-const</span> <span class="n">y</span> (_ <span class="k">BitVec</span> <span class="m">8</span>))
+<div class="highlight-smtlib notranslate"><div class="highlight"><pre><span></span>(<span class="k">set-logic</span> QF_BV)
+(<span class="k">set-option</span> <span class="na">:produce-models</span> <span class="s">true</span>)
+(<span class="k">declare-const</span> <span class="n">x</span> (_ <span class="na">BitVec</span> <span class="m">8</span>))
+(<span class="k">declare-const</span> <span class="n">y</span> (_ <span class="na">BitVec</span> <span class="m">8</span>))
 (<span class="k">assert</span>
-    (<span class="k">distinct</span>
-        ((_ <span class="k">extract</span> <span class="m">3</span> <span class="m">0</span>) (<span class="k">bvsdiv</span> <span class="n">x</span> (_ <span class="n">bv</span><span class="m">2</span> <span class="m">8</span>)))
-        ((_ <span class="k">extract</span> <span class="m">3</span> <span class="m">0</span>) (<span class="k">bvashr</span> <span class="n">x</span> (_ <span class="n">bv</span><span class="m">1</span> <span class="m">8</span>)))
+    (<span class="o">distinct</span>
+        ((_ <span class="o">extract</span> <span class="m">3</span> <span class="m">0</span>) (<span class="o">bvsdiv</span> <span class="n">x</span> (_ bv2 <span class="m">8</span>)))
+        ((_ <span class="o">extract</span> <span class="m">3</span> <span class="m">0</span>) (<span class="o">bvashr</span> <span class="n">y</span> (_ bv1 <span class="m">8</span>)))))
+(<span class="k">check-sat</span>)
+(<span class="k">get-model</span>)
+(<span class="k">exit</span>)
 </pre></div>
 </div>
 <p>This input is created and asserted as follows:</p>
@@ -225,8 +234,10 @@ For example, consider the following SMT-LIB input:</p>
   <span class="c1">// Note: This will silently fall back to one of the compiled in SAT solvers</span>
   <span class="c1">//       if the selected solver is not compiled in.</span>
   <span class="n">bitwuzla_set_option_str</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_OPT_SAT_ENGINE</span><span class="p">,</span> <span class="s">&quot;cms&quot;</span><span class="p">);</span>
+
   <span class="c1">// Create a bit-vector sort of size 8.</span>
   <span class="n">BitwuzlaSort</span> <span class="o">*</span><span class="n">bv8</span> <span class="o">=</span> <span class="n">bitwuzla_mk_bv_sort</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+
   <span class="c1">// Create two bit-vector variables of that sort.</span>
   <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">x</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv8</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
   <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv8</span><span class="p">,</span> <span class="s">&quot;y&quot;</span><span class="p">);</span>
@@ -240,8 +251,8 @@ For example, consider the following SMT-LIB input:</p>
 
   <span class="c1">// (bvsdiv x (_ bv2 8))</span>
   <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">sdiv</span> <span class="o">=</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_SDIV</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">two</span><span class="p">);</span>
-  <span class="c1">// (bvashr x (_ bv1 8))</span>
-  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">ashr</span> <span class="o">=</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_ASHR</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">one</span><span class="p">);</span>
+  <span class="c1">// (bvashr y (_ bv1 8))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">ashr</span> <span class="o">=</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_ASHR</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">one</span><span class="p">);</span>
   <span class="c1">// ((_ extract 3 0) (bvsdiv x (_ bv2 8)))</span>
   <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">sdive</span> <span class="o">=</span>
       <span class="n">bitwuzla_mk_term1_indexed2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_EXTRACT</span><span class="p">,</span> <span class="n">sdiv</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
@@ -252,7 +263,7 @@ For example, consider the following SMT-LIB input:</p>
   <span class="c1">// (assert</span>
   <span class="c1">//     (distinct</span>
   <span class="c1">//         ((_ extract 3 0) (bvsdiv x (_ bv2 8)))</span>
-  <span class="c1">//         ((_ extract 3 0) (bvashr x (_ bv1 8)))</span>
+  <span class="c1">//         ((_ extract 3 0) (bvashr y (_ bv1 8)))</span>
   <span class="n">bitwuzla_assert</span><span class="p">(</span>
       <span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_DISTINCT</span><span class="p">,</span> <span class="n">sdive</span><span class="p">,</span> <span class="n">ashre</span><span class="p">));</span>
 </pre></div>
@@ -305,15 +316,19 @@ resulting model can be printed via <a class="reference internal" href="interface
 <p>This will output a possible model (default: in SMT-LIB format, configurable
 via option <code class="xref c c-func docutils literal notranslate"><span class="pre">bitwuzla_OPT_OUTPUT_FORMAT()</span></code>) as follows:</p>
 <div class="highlight-smtlib notranslate"><div class="highlight"><pre><span></span>(
-  (<span class="k">define-fun</span> <span class="n">x</span> () (_ <span class="k">BitVec</span> <span class="m">8</span>) #b<span class="m">11111111</span>)
-  (<span class="k">define-fun</span> <span class="n">y</span> () (_ <span class="k">BitVec</span> <span class="m">8</span>) #b<span class="m">00000000</span>)
+  (<span class="k">define-fun</span> <span class="n">x</span> () (_ <span class="na">BitVec</span> <span class="m">8</span>) #b11111111)
+  (<span class="k">define-fun</span> <span class="n">y</span> () (_ <span class="na">BitVec</span> <span class="m">8</span>) #b00011110)
 )
 </pre></div>
 </div>
 <p>Alternatively, it is possible to query the value of expressions via
 <a class="reference internal" href="interface.html#c.bitwuzla_get_value" title="bitwuzla_get_value"><code class="xref c c-func docutils literal notranslate"><span class="pre">bitwuzla_get_value()</span></code></a>.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">v</span> <span class="o">=</span> <span class="n">bitwuzla_get_value</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span>
-    <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_MUL</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">));</span>
+    <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_MUL</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Finally, we delete the Bitwuzla instance.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span>  <span class="n">bitwuzla_delete</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition-todo admonition" id="id4">
@@ -322,18 +337,22 @@ via option <code class="xref c c-func docutils literal notranslate"><span class=
 <li><p>What to do with terms retrieved by get_value?</p></li>
 <li><p>unsat cores</p></li>
 <li><p>unsat assumptions</p></li>
-<li><p>push/pop</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<p>All examples can be found in directory
-<a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples">examples</a>.
-For instructions on how to build these examples, see
-<a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/README.md">examples/README.md</a>.</p>
+<div class="line-block">
+<div class="line">All examples can be found in directory <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples">examples</a>.</div>
+<div class="line">For instructions on how to build these examples, see <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/README.md">examples/README.md</a>.</div>
+</div>
 <div class="section" id="quickstart-example">
-<h3>Quickstart example:<a class="headerlink" href="#quickstart-example" title="Permalink to this headline">¶</a></h3>
+<h3>Quickstart Example<a class="headerlink" href="#quickstart-example" title="Permalink to this headline">¶</a></h3>
+<p>The example used in the <a class="reference internal" href="#quickstart"><span class="std std-ref">Quickstart</span></a> guide.</p>
+<div class="line-block">
+<div class="line">The SMT-LIB input for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/quickstart.smt2">examples/c/quickstart.smt2</a>.</div>
+<div class="line">The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/quickstart.c">examples/c/quickstart.c</a>.</div>
+</div>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bitwuzla/bitwuzla.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
@@ -348,8 +367,10 @@ For instructions on how to build these examples, see
   <span class="c1">// Note: This will silently fall back to one of the compiled in SAT solvers</span>
   <span class="c1">//       if the selected solver is not compiled in.</span>
   <span class="n">bitwuzla_set_option_str</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_OPT_SAT_ENGINE</span><span class="p">,</span> <span class="s">&quot;cms&quot;</span><span class="p">);</span>
+
   <span class="c1">// Create a bit-vector sort of size 8.</span>
   <span class="n">BitwuzlaSort</span> <span class="o">*</span><span class="n">bv8</span> <span class="o">=</span> <span class="n">bitwuzla_mk_bv_sort</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+
   <span class="c1">// Create two bit-vector variables of that sort.</span>
   <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">x</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv8</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">);</span>
   <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv8</span><span class="p">,</span> <span class="s">&quot;y&quot;</span><span class="p">);</span>
@@ -363,8 +384,8 @@ For instructions on how to build these examples, see
 
   <span class="c1">// (bvsdiv x (_ bv2 8))</span>
   <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">sdiv</span> <span class="o">=</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_SDIV</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">two</span><span class="p">);</span>
-  <span class="c1">// (bvashr x (_ bv1 8))</span>
-  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">ashr</span> <span class="o">=</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_ASHR</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">one</span><span class="p">);</span>
+  <span class="c1">// (bvashr y (_ bv1 8))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">ashr</span> <span class="o">=</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_ASHR</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">one</span><span class="p">);</span>
   <span class="c1">// ((_ extract 3 0) (bvsdiv x (_ bv2 8)))</span>
   <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">sdive</span> <span class="o">=</span>
       <span class="n">bitwuzla_mk_term1_indexed2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_EXTRACT</span><span class="p">,</span> <span class="n">sdiv</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
@@ -375,7 +396,7 @@ For instructions on how to build these examples, see
   <span class="c1">// (assert</span>
   <span class="c1">//     (distinct</span>
   <span class="c1">//         ((_ extract 3 0) (bvsdiv x (_ bv2 8)))</span>
-  <span class="c1">//         ((_ extract 3 0) (bvashr x (_ bv1 8)))</span>
+  <span class="c1">//         ((_ extract 3 0) (bvashr y (_ bv1 8)))</span>
   <span class="n">bitwuzla_assert</span><span class="p">(</span>
       <span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_DISTINCT</span><span class="p">,</span> <span class="n">sdive</span><span class="p">,</span> <span class="n">ashre</span><span class="p">));</span>
 
@@ -389,6 +410,242 @@ For instructions on how to build these examples, see
               <span class="o">:</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_UNSAT</span> <span class="o">?</span> <span class="s">&quot;unsat&quot;</span> <span class="o">:</span> <span class="s">&quot;unknown&quot;</span><span class="p">));</span>
   <span class="c1">// Print model in SMT-LIBv2 format.</span>
   <span class="n">bitwuzla_print_model</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="s">&quot;smt2&quot;</span><span class="p">,</span> <span class="n">stdout</span><span class="p">);</span>
+
+  <span class="c1">// Finally, delete the Bitwuzla instance.</span>
+  <span class="n">bitwuzla_delete</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="incremental-example-with-push-and-pop">
+<h3>Incremental Example with push and pop<a class="headerlink" href="#incremental-example-with-push-and-pop" title="Permalink to this headline">¶</a></h3>
+<p>An incremental example with <code class="code docutils literal notranslate"><span class="pre">push</span></code> and <code class="code docutils literal notranslate"><span class="pre">pop</span></code>.</p>
+<div class="line-block">
+<div class="line">The SMT-LIB input for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/pushpop.smt2">examples/c/pushpop.smt2</a>.</div>
+<div class="line">The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/pushpop.c">examples/c/pushpop.c</a>.</div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bitwuzla/bitwuzla.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span>
+<span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">BitwuzlaResult</span> <span class="n">result</span><span class="p">;</span>
+
+  <span class="c1">// First, create a Bitwuzla instance.</span>
+  <span class="n">Bitwuzla</span> <span class="o">*</span><span class="n">bzla</span> <span class="o">=</span> <span class="n">bitwuzla_new</span><span class="p">();</span>
+  <span class="c1">// Then, enable incremental solving.</span>
+  <span class="c1">// Note: Incremental solving is disabled by default.</span>
+  <span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_OPT_INCREMENTAL</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="c1">// Create a bit-vector sort of size 1.</span>
+  <span class="n">BitwuzlaSort</span> <span class="o">*</span><span class="n">bv1</span> <span class="o">=</span> <span class="n">bitwuzla_mk_bv_sort</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="c1">// Create a bit-vector sort of size 2.</span>
+  <span class="n">BitwuzlaSort</span> <span class="o">*</span><span class="n">bv2</span> <span class="o">=</span> <span class="n">bitwuzla_mk_bv_sort</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+  <span class="c1">// Create bit-vector variables.</span>
+  <span class="c1">// (declare-const o0 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">o0</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv1</span><span class="p">,</span> <span class="s">&quot;o0&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const o1 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">o1</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv1</span><span class="p">,</span> <span class="s">&quot;o1&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const s0 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">s0</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="s">&quot;s0&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const s1 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">s1</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="s">&quot;s1&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const s2 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">s2</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="s">&quot;s2&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const goal (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">goal</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="s">&quot;goal&quot;</span><span class="p">);</span>
+
+  <span class="c1">// Create bit-vector values zero, one, three.</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">zero</span>  <span class="o">=</span> <span class="n">bitwuzla_mk_bv_zero</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">);</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">one1</span>  <span class="o">=</span> <span class="n">bitwuzla_mk_bv_one</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv1</span><span class="p">);</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">one2</span>  <span class="o">=</span> <span class="n">bitwuzla_mk_bv_one</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">);</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">three</span> <span class="o">=</span> <span class="n">bitwuzla_mk_bv_value_uint64</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+  <span class="c1">// Add some assertions.</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">s0</span><span class="p">,</span> <span class="n">zero</span><span class="p">));</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span>
+                  <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">three</span><span class="p">));</span>
+
+  <span class="c1">// Push, assert, check sat and pop.</span>
+  <span class="n">bitwuzla_push</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">s0</span><span class="p">,</span> <span class="n">goal</span><span class="p">));</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expect: unsat</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bitwuzla: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+         <span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_SAT</span>
+             <span class="o">?</span> <span class="s">&quot;sat&quot;</span>
+             <span class="o">:</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_UNSAT</span> <span class="o">?</span> <span class="s">&quot;unsat&quot;</span> <span class="o">:</span> <span class="s">&quot;unknown&quot;</span><span class="p">));</span>
+  <span class="n">bitwuzla_pop</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="c1">// (assert (= s1 (ite (= o0 (_ bv1 1)) (bvadd s0 one) s0)))</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span>
+      <span class="n">bzla</span><span class="p">,</span>
+      <span class="n">bitwuzla_mk_term2</span><span class="p">(</span>
+          <span class="n">bzla</span><span class="p">,</span>
+          <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span>
+          <span class="n">s1</span><span class="p">,</span>
+          <span class="n">bitwuzla_mk_term3</span><span class="p">(</span>
+              <span class="n">bzla</span><span class="p">,</span>
+              <span class="n">BITWUZLA_KIND_ITE</span><span class="p">,</span>
+              <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">o0</span><span class="p">,</span> <span class="n">one1</span><span class="p">),</span>
+              <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_ADD</span><span class="p">,</span> <span class="n">s0</span><span class="p">,</span> <span class="n">one2</span><span class="p">),</span>
+              <span class="n">s0</span><span class="p">)));</span>
+
+  <span class="c1">// Push, assert, check sat and pop.</span>
+  <span class="n">bitwuzla_push</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">goal</span><span class="p">));</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expect: unsat</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bitwuzla: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+         <span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_SAT</span>
+             <span class="o">?</span> <span class="s">&quot;sat&quot;</span>
+             <span class="o">:</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_UNSAT</span> <span class="o">?</span> <span class="s">&quot;unsat&quot;</span> <span class="o">:</span> <span class="s">&quot;unknown&quot;</span><span class="p">));</span>
+  <span class="n">bitwuzla_pop</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="c1">// (assert (= s2 (ite (= o1 (_ bv1 1)) (bvadd s1 one) s1)))</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span>
+      <span class="n">bzla</span><span class="p">,</span>
+      <span class="n">bitwuzla_mk_term2</span><span class="p">(</span>
+          <span class="n">bzla</span><span class="p">,</span>
+          <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span>
+          <span class="n">s2</span><span class="p">,</span>
+          <span class="n">bitwuzla_mk_term3</span><span class="p">(</span>
+              <span class="n">bzla</span><span class="p">,</span>
+              <span class="n">BITWUZLA_KIND_ITE</span><span class="p">,</span>
+              <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">o1</span><span class="p">,</span> <span class="n">one1</span><span class="p">),</span>
+              <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_ADD</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">one2</span><span class="p">),</span>
+              <span class="n">s1</span><span class="p">)));</span>
+
+  <span class="c1">// Push, assert, check sat and pop.</span>
+  <span class="n">bitwuzla_push</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">goal</span><span class="p">));</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expect: unsat</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bitwuzla: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+         <span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_SAT</span>
+             <span class="o">?</span> <span class="s">&quot;sat&quot;</span>
+             <span class="o">:</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_UNSAT</span> <span class="o">?</span> <span class="s">&quot;unsat&quot;</span> <span class="o">:</span> <span class="s">&quot;unknown&quot;</span><span class="p">));</span>
+  <span class="n">bitwuzla_pop</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="c1">// Finally, delete the Bitwuzla instance.</span>
+  <span class="n">bitwuzla_delete</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="incremental-example-with-check-sat-assuming">
+<h3>Incremental Example with check-sat-assuming<a class="headerlink" href="#incremental-example-with-check-sat-assuming" title="Permalink to this headline">¶</a></h3>
+<p>This example shows how to implement the example above with
+<code class="code docutils literal notranslate"><span class="pre">check-sat-assuming</span></code> instead of <code class="code docutils literal notranslate"><span class="pre">push</span></code> and <code class="code docutils literal notranslate"><span class="pre">pop</span></code>.
+Note that Bitwuzla requires to first assume formulas (the assumptions in the <code class="code docutils literal notranslate"><span class="pre">check-sat-assuming</span></code> list) with <a class="reference internal" href="interface.html#c.bitwuzla_assume" title="bitwuzla_assume"><code class="xref c c-func docutils literal notranslate"><span class="pre">bitwuzla_assume()</span></code></a> before calling <a class="reference internal" href="interface.html#c.bitwuzla_check_sat" title="bitwuzla_check_sat"><code class="xref c c-func docutils literal notranslate"><span class="pre">bitwuzla_check_sat()</span></code></a>.
+All active assumptions are inactivated after the check sat call.</p>
+<div class="line-block">
+<div class="line">The SMT-LIB input for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/checksatassuming.smt2">examples/c/checksatassuming.smt2</a>.</div>
+<div class="line">The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/checksatassuming.c">examples/c/checksatassuming.c</a>.</div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;bitwuzla/bitwuzla.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span>
+<span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">BitwuzlaResult</span> <span class="n">result</span><span class="p">;</span>
+
+  <span class="c1">// First, create a Bitwuzla instance.</span>
+  <span class="n">Bitwuzla</span> <span class="o">*</span><span class="n">bzla</span> <span class="o">=</span> <span class="n">bitwuzla_new</span><span class="p">();</span>
+  <span class="c1">// Then, enable incremental solving.</span>
+  <span class="c1">// Note: Incremental solving is disabled by default.</span>
+  <span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_OPT_INCREMENTAL</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="c1">// Create a bit-vector sort of size 1.</span>
+  <span class="n">BitwuzlaSort</span> <span class="o">*</span><span class="n">bv1</span> <span class="o">=</span> <span class="n">bitwuzla_mk_bv_sort</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="c1">// Create a bit-vector sort of size 2.</span>
+  <span class="n">BitwuzlaSort</span> <span class="o">*</span><span class="n">bv2</span> <span class="o">=</span> <span class="n">bitwuzla_mk_bv_sort</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+
+  <span class="c1">// Create bit-vector variables.</span>
+  <span class="c1">// (declare-const o0 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">o0</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv1</span><span class="p">,</span> <span class="s">&quot;o0&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const o1 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">o1</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv1</span><span class="p">,</span> <span class="s">&quot;o1&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const s0 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">s0</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="s">&quot;s0&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const s1 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">s1</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="s">&quot;s1&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const s2 (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">s2</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="s">&quot;s2&quot;</span><span class="p">);</span>
+  <span class="c1">// (declare-const goal (_ BitVec 2))</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">goal</span> <span class="o">=</span> <span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="s">&quot;goal&quot;</span><span class="p">);</span>
+
+  <span class="c1">// Create bit-vector values zero, one, three.</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">zero</span>  <span class="o">=</span> <span class="n">bitwuzla_mk_bv_zero</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">);</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">one1</span>  <span class="o">=</span> <span class="n">bitwuzla_mk_bv_one</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv1</span><span class="p">);</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">one2</span>  <span class="o">=</span> <span class="n">bitwuzla_mk_bv_one</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">);</span>
+  <span class="n">BitwuzlaTerm</span> <span class="o">*</span><span class="n">three</span> <span class="o">=</span> <span class="n">bitwuzla_mk_bv_value_uint64</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bv2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+  <span class="c1">// Add some assertions.</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">s0</span><span class="p">,</span> <span class="n">zero</span><span class="p">));</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span>
+                  <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">three</span><span class="p">));</span>
+
+  <span class="c1">// (check-sat-assuming ((= s0 goal)))</span>
+  <span class="n">bitwuzla_assume</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">s0</span><span class="p">,</span> <span class="n">goal</span><span class="p">));</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expect: unsat</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bitwuzla: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+         <span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_SAT</span>
+             <span class="o">?</span> <span class="s">&quot;sat&quot;</span>
+             <span class="o">:</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_UNSAT</span> <span class="o">?</span> <span class="s">&quot;unsat&quot;</span> <span class="o">:</span> <span class="s">&quot;unknown&quot;</span><span class="p">));</span>
+
+  <span class="c1">// (assert (= s1 (ite (= o0 (_ bv1 1)) (bvadd s0 one) s0)))</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span>
+      <span class="n">bzla</span><span class="p">,</span>
+      <span class="n">bitwuzla_mk_term2</span><span class="p">(</span>
+          <span class="n">bzla</span><span class="p">,</span>
+          <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span>
+          <span class="n">s1</span><span class="p">,</span>
+          <span class="n">bitwuzla_mk_term3</span><span class="p">(</span>
+              <span class="n">bzla</span><span class="p">,</span>
+              <span class="n">BITWUZLA_KIND_ITE</span><span class="p">,</span>
+              <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">o0</span><span class="p">,</span> <span class="n">one1</span><span class="p">),</span>
+              <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_ADD</span><span class="p">,</span> <span class="n">s0</span><span class="p">,</span> <span class="n">one2</span><span class="p">),</span>
+              <span class="n">s0</span><span class="p">)));</span>
+
+  <span class="c1">// (check-sat-assuming ((= s1 goal)))</span>
+  <span class="n">bitwuzla_assume</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">goal</span><span class="p">));</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expect: unsat</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bitwuzla: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+         <span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_SAT</span>
+             <span class="o">?</span> <span class="s">&quot;sat&quot;</span>
+             <span class="o">:</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_UNSAT</span> <span class="o">?</span> <span class="s">&quot;unsat&quot;</span> <span class="o">:</span> <span class="s">&quot;unknown&quot;</span><span class="p">));</span>
+
+  <span class="c1">// (assert (= s2 (ite (= o1 (_ bv1 1)) (bvadd s1 one) s1)))</span>
+  <span class="n">bitwuzla_assert</span><span class="p">(</span>
+      <span class="n">bzla</span><span class="p">,</span>
+      <span class="n">bitwuzla_mk_term2</span><span class="p">(</span>
+          <span class="n">bzla</span><span class="p">,</span>
+          <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span>
+          <span class="n">s2</span><span class="p">,</span>
+          <span class="n">bitwuzla_mk_term3</span><span class="p">(</span>
+              <span class="n">bzla</span><span class="p">,</span>
+              <span class="n">BITWUZLA_KIND_ITE</span><span class="p">,</span>
+              <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">o1</span><span class="p">,</span> <span class="n">one1</span><span class="p">),</span>
+              <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_BV_ADD</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">one2</span><span class="p">),</span>
+              <span class="n">s1</span><span class="p">)));</span>
+
+  <span class="c1">// (check-sat-assuming ((= s2 goal)))</span>
+  <span class="n">bitwuzla_assume</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">bitwuzla_mk_term2</span><span class="p">(</span><span class="n">bzla</span><span class="p">,</span> <span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">goal</span><span class="p">));</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expect: unsat</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bitwuzla: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+         <span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_SAT</span>
+             <span class="o">?</span> <span class="s">&quot;sat&quot;</span>
+             <span class="o">:</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">BITWUZLA_UNSAT</span> <span class="o">?</span> <span class="s">&quot;unsat&quot;</span> <span class="o">:</span> <span class="s">&quot;unknown&quot;</span><span class="p">));</span>
+
+  <span class="c1">// Finally, delete the Bitwuzla instance.</span>
+  <span class="n">bitwuzla_delete</span><span class="p">(</span><span class="n">bzla</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
