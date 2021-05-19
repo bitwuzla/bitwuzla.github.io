@@ -690,12 +690,10 @@ Standard 754.</p>
 <dt><strong>See</strong></dt><dd><p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1a6df3b1d90d4430f8c48d0a7556fa28c8"><span class="std std-ref"><span class="pre">bitwuzla_sort_is_fun</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1a43fad67964296d694e1d778ef36dd6b3"><span class="std std-ref"><span class="pre">bitwuzla_sort_fun_get_arity</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1af0ed469bbc7eee1d01d68142f63b4c09"><span class="std std-ref"><span class="pre">bitwuzla_sort_fun_get_domain</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1ae9382268679c8a8c8d17f2490fa4cda2"><span class="std std-ref"><span class="pre">bitwuzla_sort_fun_get_domain_sorts</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1a71499fb6668baf719a6e69b526c44afb"><span class="std std-ref"><span class="pre">bitwuzla_sort_fun_get_codomain</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1a3aac9c657675ef44b02593a8c67611d6"><span class="std std-ref"><span class="pre">bitwuzla_term_is_fun</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1a9923185e3702c57253a6a713d67cb3a7"><span class="std std-ref"><span class="pre">bitwuzla_term_fun_get_arity</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1a24b489b2f56c6ec1b58600b154f3894c"><span class="std std-ref"><span class="pre">bitwuzla_term_fun_get_domain_sort</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1a1da3b8237eeda3700900317b5bdb1fa9"><span class="std std-ref"><span class="pre">bitwuzla_term_fun_get_domain_sorts</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1a691d9cbf8cb5b020ff7bd43ffea3f684"><span class="std std-ref"><span class="pre">bitwuzla_term_fun_get_codomain_sort</span></span></a></code> </p></li>
 </ul>
@@ -1900,24 +1898,6 @@ Standard 754.</p>
 </dd></dl>
 
 <dl class="c function">
-<dt id="c.bitwuzla_sort_fun_get_domain">
-<span class="target" id="bitwuzla_8h_1af0ed469bbc7eee1d01d68142f63b4c09"></span><a class="reference internal" href="#c.BitwuzlaSort" title="BitwuzlaSort">BitwuzlaSort</a> *<code class="sig-name descname">bitwuzla_sort_fun_get_domain</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#c.BitwuzlaSort" title="BitwuzlaSort">BitwuzlaSort</a> *<em>sort</em><span class="sig-paren">)</span><a class="headerlink" href="#c.bitwuzla_sort_fun_get_domain" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the domain sorts of a function sort, wrapped into a single sort.</p>
-<p>Requires that given sort is a function sort.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The returned sort is a tuple sort consisting of the domain sorts of the given function sort. Tuple sorts are internal only and cannot be created via the Api.</p>
-</dd>
-<dt><strong>Return</strong></dt><dd><p>The domain sorts of the function sort. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sort</span></code>: The sort.</p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="c function">
 <dt id="c.bitwuzla_sort_fun_get_domain_sorts">
 <span class="target" id="bitwuzla_8h_1ae9382268679c8a8c8d17f2490fa4cda2"></span><a class="reference internal" href="#c.BitwuzlaSort" title="BitwuzlaSort">BitwuzlaSort</a> **<code class="sig-name descname">bitwuzla_sort_fun_get_domain_sorts</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#c.BitwuzlaSort" title="BitwuzlaSort">BitwuzlaSort</a> *<em>sort</em><span class="sig-paren">)</span><a class="headerlink" href="#c.bitwuzla_sort_fun_get_domain_sorts" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the domain sorts of a function sort.</p>
@@ -2190,24 +2170,6 @@ Standard 754.</p>
 <p>Requires that given term is an array or an array store term.</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The element sort of the array term. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">term</span></code>: The term.</p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="c function">
-<dt id="c.bitwuzla_term_fun_get_domain_sort">
-<span class="target" id="bitwuzla_8h_1a24b489b2f56c6ec1b58600b154f3894c"></span><a class="reference internal" href="#c.BitwuzlaSort" title="BitwuzlaSort">BitwuzlaSort</a> *<code class="sig-name descname">bitwuzla_term_fun_get_domain_sort</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#c.BitwuzlaTerm" title="BitwuzlaTerm">BitwuzlaTerm</a> *<em>term</em><span class="sig-paren">)</span><a class="headerlink" href="#c.bitwuzla_term_fun_get_domain_sort" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the domain sorts of a function term, wrapped into a single sort.</p>
-<p>Requires that given term is an uninterpreted function, a lambda term, a store term, or an ite term over function terms.</p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>The returned sort is a tuple sort consisting of the domain sorts of the given function sort. Tuple sorts are internal only and cannot be created via the Api.</p>
-</dd>
-<dt><strong>Return</strong></dt><dd><p>The domain sorts of the function term. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">term</span></code>: The term.</p></li>
