@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../static/custom.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
         <script src="../static/jquery.js"></script>
         <script src="../static/underscore.js"></script>
         <script src="../static/doctools.js"></script>
@@ -178,13 +181,13 @@
 </ul>
 </div>
 <dl class="c enum">
-<dt id="c.BitwuzlaOption">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884"></span><em class="property">enum </em><code class="sig-name descname">BitwuzlaOption</code><a class="headerlink" href="#c.BitwuzlaOption" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaOption</span></span></span><a class="headerlink" href="#c.BitwuzlaOption" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The options supported by Bitwuzla. </p>
 <p><em>Values:</em></p>
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_ENGINE">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a1c8b5790bc949318507226836bc3375c"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_ENGINE</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_ENGINE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_ENGINE">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a1c8b5790bc949318507226836bc3375c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_ENGINE</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_ENGINE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Configure the solver engine.</strong></p>
 <p>Values:<ul class="simple">
 <li><p><strong>aigprop</strong>: <p> The propagation-based local search QF_BV engine that operates on the bit-blasted formula (the AIG circuit layer).</p>
@@ -202,8 +205,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_EXIT_CODES">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a3524f5269f154e12d4e9a1a25edd2a62"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_EXIT_CODES</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_EXIT_CODES" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_EXIT_CODES">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a3524f5269f154e12d4e9a1a25edd2a62"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_EXIT_CODES</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_EXIT_CODES" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Use non-zero exit codes for sat and unsat results.</strong></p>
 <p>When enabled, use Bitwuzla exit codes:<ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="interface.html#bitwuzla_8h_1a68f12662f6bc3f5f2887144995090dbead34a61d3488e1095ab798f3d1a5540ba"><span class="std std-ref"><span class="pre">BITWUZLA_SAT</span></span></a></code></p></li>
@@ -220,8 +223,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_INPUT_FORMAT">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a0091ef4719a0210fa4624de5bae2bcaf"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_INPUT_FORMAT</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_INPUT_FORMAT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_INPUT_FORMAT">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a0091ef4719a0210fa4624de5bae2bcaf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_INPUT_FORMAT</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_INPUT_FORMAT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Configure input file format.</strong></p>
 <p>If unspecified, Bitwuzla will autodetect the input file format.</p>
 <p>Values:<ul class="simple">
@@ -241,8 +244,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_INCREMENTAL">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884ab66588eaff0ef71ef8f6afd1cd575fe6"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_INCREMENTAL</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_INCREMENTAL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_INCREMENTAL">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884ab66588eaff0ef71ef8f6afd1cd575fe6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_INCREMENTAL</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_INCREMENTAL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Incremental solving.</strong></p>
 <p>Values:<ul class="simple">
 <li><p><strong>1</strong>: enable</p></li>
@@ -262,8 +265,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_LOGLEVEL">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a2ab7a378be67f1f507afb896e3509b4a"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_LOGLEVEL</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_LOGLEVEL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_LOGLEVEL">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a2ab7a378be67f1f507afb896e3509b4a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_LOGLEVEL</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_LOGLEVEL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Log level.</strong></p>
 <p>Values:<ul class="simple">
 <li><p>An unsigned integer value (<strong>default</strong>: 0). </p></li>
@@ -272,8 +275,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_OUTPUT_FORMAT">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884ad633913b9790aaea64ea44956e7db53b"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_OUTPUT_FORMAT</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_OUTPUT_FORMAT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_OUTPUT_FORMAT">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884ad633913b9790aaea64ea44956e7db53b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_OUTPUT_FORMAT</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_OUTPUT_FORMAT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Configure output number format for bit-vector values.</strong></p>
 <p>If unspecified, Bitwuzla will use BTOR format.</p>
 <p>Values:<ul class="simple">
@@ -294,8 +297,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_OUTPUT_NUMBER_FORMAT">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a32c533e187bd845d64d743d34fa6198e"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_OUTPUT_NUMBER_FORMAT</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_OUTPUT_NUMBER_FORMAT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_OUTPUT_NUMBER_FORMAT">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a32c533e187bd845d64d743d34fa6198e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_OUTPUT_NUMBER_FORMAT</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_OUTPUT_NUMBER_FORMAT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Configure output number format for bit-vector values.</strong></p>
 <p>If unspecified, Bitwuzla will use binary representation.</p>
 <p>Values:<ul class="simple">
@@ -310,8 +313,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_PRETTY_PRINT">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884add5a92d91fb056792fb17c6325efc1c0"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_PRETTY_PRINT</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_PRETTY_PRINT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_PRETTY_PRINT">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884add5a92d91fb056792fb17c6325efc1c0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PRETTY_PRINT</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_PRETTY_PRINT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Pretty printing.</strong></p>
 <p>Values:<ul class="simple">
 <li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
@@ -321,8 +324,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_PRINT_DIMACS">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a95e4db5326abf90fb5ed751a6857ee17"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_PRINT_DIMACS</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_PRINT_DIMACS" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_PRINT_DIMACS">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a95e4db5326abf90fb5ed751a6857ee17"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PRINT_DIMACS</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_PRINT_DIMACS" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Print DIMACS.</strong></p>
 <p>Print the CNF sent to the SAT solver in DIMACS format to stdout.</p>
 <p>Values:<ul class="simple">
@@ -333,8 +336,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_PRODUCE_MODELS">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a525874db68efd149c933f7e3171795cf"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_PRODUCE_MODELS</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_PRODUCE_MODELS" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_PRODUCE_MODELS">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a525874db68efd149c933f7e3171795cf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PRODUCE_MODELS</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_PRODUCE_MODELS" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Model generation.</strong></p>
 <p>Values:<ul class="simple">
 <li><p><strong>1</strong>: enable, generate model for assertions only</p></li>
@@ -350,8 +353,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_PRODUCE_UNSAT_CORES">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a0359cdb5fe7bdfa22e75dd97392a1054"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_PRODUCE_UNSAT_CORES</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_PRODUCE_UNSAT_CORES" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_PRODUCE_UNSAT_CORES">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a0359cdb5fe7bdfa22e75dd97392a1054"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PRODUCE_UNSAT_CORES</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_PRODUCE_UNSAT_CORES" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Unsat core generation.</strong></p>
 <p>Values:<ul class="simple">
 <li><p><strong>1</strong>: enable</p></li>
@@ -361,8 +364,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_SAT_ENGINE">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a264107027ef0a36b07222a04a87f6f7c"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_SAT_ENGINE</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_SAT_ENGINE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_SAT_ENGINE">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a264107027ef0a36b07222a04a87f6f7c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_SAT_ENGINE</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_SAT_ENGINE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Configure the SAT solver engine.</strong></p>
 <p>Values:<ul class="simple">
 <li><p><strong>cadical</strong> [<strong>default</strong>]: <a class="reference external" href="https://github.com/arminbiere/cadical">CaDiCaL</a></p></li>
@@ -376,8 +379,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_SEED">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a304e41c8eeef4f03684aa5a0715db010"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_SEED</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_SEED" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_SEED">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a304e41c8eeef4f03684aa5a0715db010"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_SEED</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_SEED" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Seed for random number generator.</strong></p>
 <p>Values:<ul class="simple">
 <li><p>An unsigned integer value (<strong>default</strong>: 0). </p></li>
@@ -386,8 +389,8 @@
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaOption.BITWUZLA_OPT_VERBOSITY">
-<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a026004d32c400ba5d8073463663ac2b8"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_OPT_VERBOSITY</code><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_VERBOSITY" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaOption.BITWUZLA_OPT_VERBOSITY">
+<span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a026004d32c400ba5d8073463663ac2b8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_VERBOSITY</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_VERBOSITY" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Verbosity level.</strong></p>
 <p>Values:<ul class="simple">
 <li><p>An unsigned integer value &lt;= 4 (<strong>default</strong>: 0). </p></li>
@@ -413,7 +416,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, The Authors of Bitwuzla.
+        &#169; Copyright 2021, the authors of Bitwuzla.
 
     </p>
   </div>

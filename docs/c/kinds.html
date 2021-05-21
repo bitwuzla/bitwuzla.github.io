@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../static/custom.css" type="text/css" />
 
   
@@ -30,6 +32,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
         <script src="../static/jquery.js"></script>
         <script src="../static/underscore.js"></script>
         <script src="../static/doctools.js"></script>
@@ -178,669 +181,669 @@
 </ul>
 </div>
 <dl class="c enum">
-<dt id="c.BitwuzlaKind">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"></span><em class="property">enum </em><code class="sig-name descname">BitwuzlaKind</code><a class="headerlink" href="#c.BitwuzlaKind" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaKind</span></span></span><a class="headerlink" href="#c.BitwuzlaKind" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The term kind. </p>
 <p><em>Values:</em></p>
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_AND">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a2f8b31fb232a53eaba787c0b9f36bea9"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_AND</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_AND" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_AND">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a2f8b31fb232a53eaba787c0b9f36bea9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_AND</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_AND" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Boolean and.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">and</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_APPLY">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad5dbcd659d650d1fd1102e3fd5242492"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_APPLY</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_APPLY" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_APPLY">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad5dbcd659d650d1fd1102e3fd5242492"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_APPLY</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_APPLY" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Function application. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_ARRAY_SELECT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8028e1883d64bc49bfc8401081f4659d"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_ARRAY_SELECT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_ARRAY_SELECT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_ARRAY_SELECT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8028e1883d64bc49bfc8401081f4659d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_ARRAY_SELECT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_ARRAY_SELECT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Array select.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">select</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_ARRAY_STORE">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a6d351144a192cd4ab7c2cae6c9112737"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_ARRAY_STORE</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_ARRAY_STORE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_ARRAY_STORE">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a6d351144a192cd4ab7c2cae6c9112737"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_ARRAY_STORE</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_ARRAY_STORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Array store.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">store</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ADD">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad2be0d7279f9d4e97d415583720f3d06"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_ADD</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ADD" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ADD">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad2be0d7279f9d4e97d415583720f3d06"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ADD</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ADD" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector addition.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvadd</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_AND">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aab14ff1efc294974fbb862758ef478d1"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_AND</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_AND" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_AND">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aab14ff1efc294974fbb862758ef478d1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_AND</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_AND" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector and.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvand</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ASHR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a60aae15249bf6ca2ffa70cc40f3e5a42"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_ASHR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ASHR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ASHR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a60aae15249bf6ca2ffa70cc40f3e5a42"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ASHR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ASHR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector arithmetic right shift.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvashr</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_COMP">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976abcef765069014a92b665badcb2515c97"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_COMP</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_COMP" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_COMP">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976abcef765069014a92b665badcb2515c97"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_COMP</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_COMP" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector comparison.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvcomp</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_CONCAT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a760e5d611575e8b36ad4bf8edcd33041"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_CONCAT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_CONCAT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_CONCAT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a760e5d611575e8b36ad4bf8edcd33041"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_CONCAT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_CONCAT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector concat.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">concat</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_DEC">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa00a19318ccce90417f36809255baca2"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_DEC</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_DEC" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_DEC">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa00a19318ccce90417f36809255baca2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_DEC</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_DEC" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector decrement.</p>
 <p>Decrement by one. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_INC">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a591709331a1945c7f14eb6f24e4136a5"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_INC</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_INC" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_INC">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a591709331a1945c7f14eb6f24e4136a5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_INC</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_INC" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector increment.</p>
 <p>Increment by one. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_MUL">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a07f0d5b2b69d13356f787d969184f803"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_MUL</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_MUL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_MUL">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a07f0d5b2b69d13356f787d969184f803"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_MUL</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_MUL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector multiplication.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvmul</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_NAND">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976adbc53d55902adc48a1ea42b2dc5c1117"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_NAND</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_NAND" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_NAND">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976adbc53d55902adc48a1ea42b2dc5c1117"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_NAND</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_NAND" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector nand.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvnand</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_NEG">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aac6172c55b4f444805f1df1bf2257ee2"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_NEG</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_NEG" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_NEG">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aac6172c55b4f444805f1df1bf2257ee2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_NEG</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_NEG" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector negation (two’s complement).</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvneg</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_NOR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8abedf7576512a8090594509365d0eae"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_NOR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_NOR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_NOR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8abedf7576512a8090594509365d0eae"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_NOR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_NOR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector nor.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvnor</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_NOT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976abbe996a2436c6f92948585d30f1199c6"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_NOT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_NOT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_NOT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976abbe996a2436c6f92948585d30f1199c6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_NOT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_NOT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector not (one’s complement).</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvnot</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_OR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ac50ca800e55cc4c8e3197f98dd62aab8"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_OR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_OR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_OR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ac50ca800e55cc4c8e3197f98dd62aab8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_OR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_OR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector or.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvor</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_REDAND">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aeca279a573e098c60c2155cc8e5c3ef4"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_REDAND</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_REDAND" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_REDAND">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aeca279a573e098c60c2155cc8e5c3ef4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_REDAND</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_REDAND" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector and reduction.</p>
 <p>Bit-wise <em>and</em> reduction, all bits are <em>and</em>’ed together into a single bit. This corresponds to bit-wise <em>and</em> reduction as known from Verilog. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_REDOR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afe4cbd7559d69a21b63a4e0bdd6720ee"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_REDOR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_REDOR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_REDOR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afe4cbd7559d69a21b63a4e0bdd6720ee"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_REDOR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_REDOR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector reduce or.</p>
 <p>Bit-wise <em>or</em> reduction, all bits are <em>or</em>’ed together into a single bit. This corresponds to bit-wise <em>or</em> reduction as known from Verilog. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_REDXOR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afec965d045526c9cbec021f35f50f972"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_REDXOR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_REDXOR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_REDXOR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afec965d045526c9cbec021f35f50f972"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_REDXOR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_REDXOR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector reduce xor.</p>
 <p>Bit-wise <em>xor</em> reduction, all bits are <em>xor</em>’ed together into a single bit. This corresponds to bit-wise <em>xor</em> reduction as known from Verilog. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ROL">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8d38519879c8d0600ee9a04d67c060d6"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_ROL</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ROL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ROL">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8d38519879c8d0600ee9a04d67c060d6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ROL</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ROL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector rotate left (not indexed).</p>
 <p>This is a non-indexed variant of SMT-LIB <code class="docutils literal notranslate"><span class="pre">rotate_left</span></code>. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ROR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a397a073af901279009c50d70b5837a21"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_ROR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ROR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ROR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a397a073af901279009c50d70b5837a21"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ROR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ROR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector rotate right.</p>
 <p>This is a non-indexed variant of SMT-LIB <code class="docutils literal notranslate"><span class="pre">rotate_right</span></code>. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SADD_OVERFLOW">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a242fcd66ed186de29a05e8c0b0333b1e"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SADD_OVERFLOW</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SADD_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SADD_OVERFLOW">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a242fcd66ed186de29a05e8c0b0333b1e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SADD_OVERFLOW</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SADD_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed addition overflow test.</p>
 <p>Single bit to indicate if signed addition produces an overflow. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SDIV_OVERFLOW">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa8d6026abeef81976f9f02aff85b6621"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SDIV_OVERFLOW</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SDIV_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SDIV_OVERFLOW">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa8d6026abeef81976f9f02aff85b6621"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SDIV_OVERFLOW</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SDIV_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed division overflow test.</p>
 <p>Single bit to indicate if signed division produces an overflow. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SDIV">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a088ab90a86ff70adc83929ac657c1854"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SDIV</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SDIV" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SDIV">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a088ab90a86ff70adc83929ac657c1854"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SDIV</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SDIV" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed division.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvsdiv</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SGE">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a01b248288899611be827976e5f9fa874"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SGE</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SGE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SGE">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a01b248288899611be827976e5f9fa874"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SGE</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed greater than or equal.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvsle</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SGT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a2aad69a9f398a789d2ae8267643ddd0a"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SGT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SGT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SGT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a2aad69a9f398a789d2ae8267643ddd0a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SGT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SGT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed greater than.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvslt</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SHL">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a1d4250a00c27945b2a3e80949ec4a49e"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SHL</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SHL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SHL">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a1d4250a00c27945b2a3e80949ec4a49e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SHL</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SHL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector logical left shift.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvshl</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SHR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad6a953e005e2a62bfaaa3f81bc2eb527"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SHR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SHR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SHR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad6a953e005e2a62bfaaa3f81bc2eb527"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SHR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SHR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector logical right shift.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvshr</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SLE">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae81c648263570e584d9b8f24521b6089"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SLE</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SLE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SLE">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae81c648263570e584d9b8f24521b6089"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SLE</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SLE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed less than or equal.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvsle</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SLT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a53236cb056d337ca849814a014c33877"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SLT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SLT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SLT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a53236cb056d337ca849814a014c33877"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SLT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SLT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed less than.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvslt</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SMOD">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976abf6c7059aa26bf35f0f5841970cda20a"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SMOD</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SMOD" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SMOD">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976abf6c7059aa26bf35f0f5841970cda20a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SMOD</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SMOD" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed modulo.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvsmod</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SMUL_OVERFLOW">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad01de79cf331d78a8613ed8813680adb"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SMUL_OVERFLOW</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SMUL_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SMUL_OVERFLOW">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad01de79cf331d78a8613ed8813680adb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SMUL_OVERFLOW</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SMUL_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed multiplication overflow test.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvsmod</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SREM">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae7ff2d39fb6461fd5bf0e21ef14feb2e"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SREM</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SREM" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SREM">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae7ff2d39fb6461fd5bf0e21ef14feb2e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SREM</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SREM" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed remainder.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvsrem</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SSUB_OVERFLOW">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a98421bf1207c5cc1d579613abf51052c"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SSUB_OVERFLOW</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SSUB_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SSUB_OVERFLOW">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a98421bf1207c5cc1d579613abf51052c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SSUB_OVERFLOW</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SSUB_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector signed subtraction overflow test.</p>
 <p>Single bit to indicate if signed subtraction produces an overflow. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SUB">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8602929dd0c535a61bfd9b84d916120f"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SUB</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SUB" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SUB">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8602929dd0c535a61bfd9b84d916120f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SUB</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SUB" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector subtraction.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvsub</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UADD_OVERFLOW">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aee364ca83439affd7ffcd952d15d45f3"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_UADD_OVERFLOW</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UADD_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UADD_OVERFLOW">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aee364ca83439affd7ffcd952d15d45f3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UADD_OVERFLOW</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UADD_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector unsigned addition overflow test.</p>
 <p>Single bit to indicate if unsigned addition produces an overflow. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UDIV">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af4b56d840354618c017c2bfe6a937a4c"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_UDIV</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UDIV" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UDIV">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af4b56d840354618c017c2bfe6a937a4c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UDIV</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UDIV" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector unsigned division.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvudiv</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UGE">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad530cccb53508ba0d66963f3855fcbc6"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_UGE</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UGE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UGE">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad530cccb53508ba0d66963f3855fcbc6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UGE</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector unsigned greater than or equal.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvuge</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UGT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976adb7b6519f426ad127b8755273b910926"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_UGT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UGT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UGT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976adb7b6519f426ad127b8755273b910926"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UGT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UGT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector unsigned greater than.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvugt</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ULE">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a60098702a1ed7198e922d6a5fab40078"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_ULE</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ULE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ULE">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a60098702a1ed7198e922d6a5fab40078"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ULE</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ULE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector unsigned less than or equal.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvule</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ULT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa74755a43d11ce093f59bd00c4b3078b"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_ULT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ULT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ULT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa74755a43d11ce093f59bd00c4b3078b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ULT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ULT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector unsigned less than.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvult</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UMUL_OVERFLOW">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aef013815f363f1d1231f13bcf41bf43e"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_UMUL_OVERFLOW</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UMUL_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UMUL_OVERFLOW">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aef013815f363f1d1231f13bcf41bf43e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UMUL_OVERFLOW</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UMUL_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector unsigned multiplication overflow test.</p>
 <p>Single bit to indicate if unsigned multiplication produces an overflow. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UREM">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae8085a0b9726e3d0d035c63f1e5f7d38"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_UREM</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UREM" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_UREM">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae8085a0b9726e3d0d035c63f1e5f7d38"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UREM</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_UREM" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector unsigned remainder.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvurem</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_USUB_OVERFLOW">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a0c15c3a68a3b0c8cf0cadfed57e04464"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_USUB_OVERFLOW</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_USUB_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_USUB_OVERFLOW">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a0c15c3a68a3b0c8cf0cadfed57e04464"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_USUB_OVERFLOW</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_USUB_OVERFLOW" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector unsigned subtraction overflow test.</p>
 <p>Single bit to indicate if unsigned subtraction produces an overflow. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_XNOR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a225cd308cb678b654928a43990e5b62b"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_XNOR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_XNOR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_XNOR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a225cd308cb678b654928a43990e5b62b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_XNOR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_XNOR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector xnor.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvxnor</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_XOR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a02cd2854bdd27276bb5e9832df86a39d"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_XOR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_XOR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_XOR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a02cd2854bdd27276bb5e9832df86a39d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_XOR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_XOR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector xor.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">bvxor</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_DISTINCT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af2bd2b6b5b796208fa5096c791433b58"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_DISTINCT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_DISTINCT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_DISTINCT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af2bd2b6b5b796208fa5096c791433b58"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_DISTINCT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_DISTINCT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Disequality.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">distinct</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_EQUAL">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa9b45c587510b3ff3e26ff58e4e714ff"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_EQUAL</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_EQUAL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_EQUAL">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa9b45c587510b3ff3e26ff58e4e714ff"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_EQUAL</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_EQUAL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Equality.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">=</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_EXISTS">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a586effeff323dc46e51b63dd440acf43"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_EXISTS</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_EXISTS" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_EXISTS">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a586effeff323dc46e51b63dd440acf43"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_EXISTS</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_EXISTS" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Existential quantification.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">exists</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FORALL">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aeeb04d673b25984c3aed068786df0f6a"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FORALL</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FORALL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FORALL">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aeeb04d673b25984c3aed068786df0f6a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FORALL</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FORALL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Universal quantification.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">forall</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_ABS">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a537d83e2bb410f4e285771f54205a5ee"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_ABS</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_ABS" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_ABS">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a537d83e2bb410f4e285771f54205a5ee"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_ABS</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_ABS" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point absolute value.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.abs</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_ADD">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a7c56b2d107f3388a620e45a4a4f5619b"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_ADD</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_ADD" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_ADD">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a7c56b2d107f3388a620e45a4a4f5619b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_ADD</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_ADD" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point addition.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.add</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_DIV">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a461e801b4f2a76f57c8fc191cb38db0c"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_DIV</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_DIV" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_DIV">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a461e801b4f2a76f57c8fc191cb38db0c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_DIV</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_DIV" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point division.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.div</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_EQ">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aea679521d35f3e3f69e943d2d4b3c8c2"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_EQ</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_EQ" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_EQ">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aea679521d35f3e3f69e943d2d4b3c8c2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_EQ</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_EQ" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point equality.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.eq</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_FMA">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af177e9da8ebb95b56c047c0e06619465"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_FMA</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_FMA" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_FMA">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af177e9da8ebb95b56c047c0e06619465"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_FMA</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_FMA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point fused multiplcation and addition.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.fma</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_FP">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af04de051ba27a684762e3d49aff12d0f"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_FP</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_FP" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_FP">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af04de051ba27a684762e3d49aff12d0f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_FP</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_FP" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point IEEE 754 value.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_GEQ">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afa6ed24ccbfe633092709d5f11dbc9fa"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_GEQ</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_GEQ" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_GEQ">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afa6ed24ccbfe633092709d5f11dbc9fa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_GEQ</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_GEQ" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point greater than or equal.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.geq</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_GT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a130e59b80aa27d9e61ae7459e19f2a28"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_GT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_GT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_GT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a130e59b80aa27d9e61ae7459e19f2a28"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_GT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_GT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point greater than.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.gt</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_INF">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a92cd951413a777b45d53383e9c6d6822"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_IS_INF</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_INF" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_INF">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a92cd951413a777b45d53383e9c6d6822"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_INF</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_INF" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point is infinity tester.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.isInfinite</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NAN">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a09eb07070ded59fe96098e64b3208ff6"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_IS_NAN</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NAN" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NAN">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a09eb07070ded59fe96098e64b3208ff6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_NAN</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NAN" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point is Nan tester.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.isNaN</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NEG">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae5883f6f99ccf4d05a6a924930d4d174"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_IS_NEG</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NEG" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NEG">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae5883f6f99ccf4d05a6a924930d4d174"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_NEG</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NEG" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point is negative tester.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.isNegative</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NORMAL">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a369c2b14f3c98b8cc6d2119e3b2fe84c"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_IS_NORMAL</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NORMAL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NORMAL">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a369c2b14f3c98b8cc6d2119e3b2fe84c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_NORMAL</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_NORMAL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point is normal tester.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.isNormal</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_POS">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa87f87ad02f91bd78d75283ae0183fc6"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_IS_POS</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_POS" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_POS">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa87f87ad02f91bd78d75283ae0183fc6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_POS</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_POS" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point is positive tester.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.isPositive</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_SUBNORMAL">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afa0dc7ebb4d5d9aebf99273c83b05ca6"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_IS_SUBNORMAL</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_SUBNORMAL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_SUBNORMAL">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afa0dc7ebb4d5d9aebf99273c83b05ca6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_SUBNORMAL</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_SUBNORMAL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point is subnormal tester.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.isSubnormal</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_ZERO">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a3128bd16528d52f8b3610d07033e6237"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_IS_ZERO</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_ZERO" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_ZERO">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a3128bd16528d52f8b3610d07033e6237"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_ZERO</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_IS_ZERO" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point is zero tester.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.isZero</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_LEQ">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a87fe207aa07e9d617d60012eda1ea34d"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_LEQ</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_LEQ" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_LEQ">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a87fe207aa07e9d617d60012eda1ea34d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_LEQ</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_LEQ" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point less than or equal.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.leq</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_LT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a15453a3762bc268cdce1919331998ff5"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_LT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_LT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_LT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a15453a3762bc268cdce1919331998ff5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_LT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_LT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point less than.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.lt</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_MAX">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976acd955fc447bf93236cf44e547e7d15e9"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_MAX</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_MAX" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_MAX">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976acd955fc447bf93236cf44e547e7d15e9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_MAX</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_MAX" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point max.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.max</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_MIN">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a727ae2bfbf948df14b2f076f4a97d615"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_MIN</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_MIN" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_MIN">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a727ae2bfbf948df14b2f076f4a97d615"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_MIN</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_MIN" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point min.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.min</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_MUL">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a77bd8f7a8f44425b6396950881643d60"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_MUL</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_MUL" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_MUL">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a77bd8f7a8f44425b6396950881643d60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_MUL</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_MUL" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point multiplcation.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.mul</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_NEG">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae2660f0ecd3954635656f59d588d99d9"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_NEG</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_NEG" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_NEG">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae2660f0ecd3954635656f59d588d99d9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_NEG</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_NEG" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point negation.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.neg</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_REM">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a6fe0a39b3d68afe341d0ac044c5e2a63"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_REM</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_REM" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_REM">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a6fe0a39b3d68afe341d0ac044c5e2a63"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_REM</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_REM" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point remainder.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.rem</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_RTI">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a28348c409c85064535d1273c2c3b6b95"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_RTI</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_RTI" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_RTI">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a28348c409c85064535d1273c2c3b6b95"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_RTI</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_RTI" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point round to integral.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.roundToIntegral</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_SQRT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ab68b4ea8274e24fd6f4e5265c4bd2fd2"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_SQRT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_SQRT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_SQRT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ab68b4ea8274e24fd6f4e5265c4bd2fd2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_SQRT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_SQRT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point round to square root.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.sqrt</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_SUB">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976accf8b212b289593bd8a95310e16009df"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_SUB</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_SUB" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_SUB">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976accf8b212b289593bd8a95310e16009df"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_SUB</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_SUB" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point round to subtraction.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.sqrt</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_IFF">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a83912a83b269eee5ba3ca8f15bfac29b"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_IFF</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_IFF" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_IFF">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a83912a83b269eee5ba3ca8f15bfac29b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_IFF</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_IFF" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Boolean if and only if.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">=</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_IMPLIES">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a234a8f030077b6d6e96c354c4df5985c"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_IMPLIES</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_IMPLIES" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_IMPLIES">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a234a8f030077b6d6e96c354c4df5985c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_IMPLIES</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_IMPLIES" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Boolean implies.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_ITE">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a267a359ca60f5e467d908c60b60d31dc"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_ITE</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_ITE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_ITE">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a267a359ca60f5e467d908c60b60d31dc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_ITE</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_ITE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>If-then-else.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">ite</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_LAMBDA">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a73f8f4a1abcbf37ef6429484aa34b866"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_LAMBDA</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_LAMBDA" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_LAMBDA">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a73f8f4a1abcbf37ef6429484aa34b866"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_LAMBDA</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_LAMBDA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Lambda. </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_NOT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a5c575abb7a4e2a84fffb741aff8458c4"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_NOT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_NOT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_NOT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a5c575abb7a4e2a84fffb741aff8458c4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_NOT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_NOT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Boolean not.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">not</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_OR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a99c4e96609877fd3fc5a902bda5d4d06"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_OR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_OR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_OR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a99c4e96609877fd3fc5a902bda5d4d06"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_OR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_OR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Boolean or.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">or</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_XOR">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af37963a5a8f2c3ad7aec03cf691b7e3f"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_XOR</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_XOR" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_XOR">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af37963a5a8f2c3ad7aec03cf691b7e3f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_XOR</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_XOR" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Boolean xor.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">xor</span></code> </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_EXTRACT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a38efd769224b9d4254de1a466495f16b"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_EXTRACT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_EXTRACT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_EXTRACT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a38efd769224b9d4254de1a466495f16b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_EXTRACT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_EXTRACT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector extract.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">extract</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_REPEAT">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a1865af0b8fc3d91290b53d988c83b46b"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_REPEAT</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_REPEAT" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_REPEAT">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a1865af0b8fc3d91290b53d988c83b46b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_REPEAT</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_REPEAT" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector repeat.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">repeat</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ROLI">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa369427c43905830119a99df55008237"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_ROLI</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ROLI" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ROLI">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa369427c43905830119a99df55008237"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ROLI</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ROLI" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector rotate left by integer.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">rotate_left</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_RORI">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad85bb4b6d7fa625070a653f3979308db"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_RORI</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_RORI" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_RORI">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad85bb4b6d7fa625070a653f3979308db"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_RORI</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_RORI" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector rotate right by integer.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">rotate_right</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SIGN_EXTEND">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a0f9f695dc0f3da0d8f49c6d910c7bd9d"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_SIGN_EXTEND</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SIGN_EXTEND" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_SIGN_EXTEND">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a0f9f695dc0f3da0d8f49c6d910c7bd9d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SIGN_EXTEND</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_SIGN_EXTEND" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector sign extend.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">sign_extend</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ZERO_EXTEND">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a1036216205484fc91fe46f9bb1f22bd2"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_BV_ZERO_EXTEND</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ZERO_EXTEND" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_BV_ZERO_EXTEND">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a1036216205484fc91fe46f9bb1f22bd2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ZERO_EXTEND</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_BV_ZERO_EXTEND" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bit-vector zero extend.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">zero_extend</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_BV">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a098166a646b7162defd575dcb9cf8321"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_TO_FP_FROM_BV</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_BV" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_BV">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a098166a646b7162defd575dcb9cf8321"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_TO_FP_FROM_BV</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_BV" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point to_fp from IEEE 754 bit-vector.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">to_fp</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_FP">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a1aad6725035e0bec3272d4304ee87bc7"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_TO_FP_FROM_FP</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_FP" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_FP">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a1aad6725035e0bec3272d4304ee87bc7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_TO_FP_FROM_FP</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_FP" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point to_fp from floating-point.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">to_fp</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_SBV">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a2b60598ce57fc21466f6a5deb8625e8b"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_TO_FP_FROM_SBV</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_SBV" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_SBV">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a2b60598ce57fc21466f6a5deb8625e8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_TO_FP_FROM_SBV</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_SBV" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point to_fp from signed bit-vector value.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">to_fp</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_UBV">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afb9e54c3afcd214e462c4dd01a2069db"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_TO_FP_FROM_UBV</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_UBV" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_UBV">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afb9e54c3afcd214e462c4dd01a2069db"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_TO_FP_FROM_UBV</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_FP_FROM_UBV" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point to_fp from unsigned bit-vector value.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">to_fp_unsigned</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_SBV">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a4af12527b44a241280c4c70f5827e0bf"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_TO_SBV</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_SBV" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_SBV">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a4af12527b44a241280c4c70f5827e0bf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_TO_SBV</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_SBV" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point to_sbv.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.to_sbv</span></code> (indexed) </p>
 </dd></dl>
 
 <dl class="c enumerator">
-<dt id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_UBV">
-<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a179bee132ebd572cf97ff7dbc3ef806d"></span><em class="property">enumerator </em><code class="sig-name descname">BITWUZLA_KIND_FP_TO_UBV</code><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_UBV" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object c" id="c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_UBV">
+<span class="target" id="bitwuzla_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a179bee132ebd572cf97ff7dbc3ef806d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_TO_UBV</span></span></span><a class="headerlink" href="#c.BitwuzlaKind.BITWUZLA_KIND_FP_TO_UBV" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Floating-point to_ubv.</p>
 <p>SMT-LIB: <code class="docutils literal notranslate"><span class="pre">fp.to_ubv</span></code> (indexed) </p>
 </dd></dl>
@@ -863,7 +866,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, The Authors of Bitwuzla.
+        &#169; Copyright 2021, the authors of Bitwuzla.
 
     </p>
   </div>
