@@ -190,15 +190,20 @@
 <span class="target" id="bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884a1c8b5790bc949318507226836bc3375c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_ENGINE</span></span></span><a class="headerlink" href="#c.BitwuzlaOption.BITWUZLA_OPT_ENGINE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><strong>Configure the solver engine.</strong></p>
 <p>Values:<ul class="simple">
-<li><p><strong>aigprop</strong>: <p> The propagation-based local search QF_BV engine that operates on the bit-blasted formula (the AIG circuit layer).</p>
+<li><p><strong>aigprop</strong><p>:</p>
+<p>The propagation-based local search QF_BV engine that operates on the bit-blasted formula (the AIG circuit layer).</p>
 </p></li>
-<li><p><strong>fun</strong> [<strong>default</strong>]: <p> The default engine for all combinations of QF_AUFBVFP, uses lemmas on demand for QF_AUFBVFP, and eager bit-blasting (optionally with local searchin a sequential portfolio) for QF_BV.</p>
+<li><p><strong>fun</strong> [<strong>default</strong><p>]:</p>
+<p>The default engine for all combinations of QF_AUFBVFP, uses lemmas on demand for QF_AUFBVFP, and eager bit-blasting (optionally with local searchin a sequential portfolio) for QF_BV.</p>
 </p></li>
-<li><p><strong>prop</strong>: <p> The propagation-based local search QF_BV engine.</p>
+<li><p><strong>prop</strong><p>:</p>
+<p>The propagation-based local search QF_BV engine.</p>
 </p></li>
-<li><p><strong>sls</strong>: <p> The stochastic local search QF_BV engine.</p>
+<li><p><strong>sls</strong><p>:</p>
+<p>The stochastic local search QF_BV engine.</p>
 </p></li>
-<li><p><strong>quant</strong>: <p> The quantifier engine. </p>
+<li><p><strong>quant</strong><p>:</p>
+<p>The quantifier engine.</p>
 </p></li>
 </ul>
 </p>
@@ -228,16 +233,14 @@
 <dd><p><strong>Configure input file format.</strong></p>
 <p>If unspecified, Bitwuzla will autodetect the input file format.</p>
 <p>Values:<ul class="simple">
-<li><p><strong>none</strong> [<strong>default</strong>]: <p> Auto-detect input file format.</p>
+<li><p><strong>none</strong> [<strong>default</strong><p>]:</p>
+<p>Auto-detect input file format.</p>
 </p></li>
-<li><p><strong>btor</strong>: <p><p>BTOR format <span id="id2">[<a class="reference internal" href="../references.html#id3">BBL08</a>]</span></p>
-</p>
+<li><p><strong>btor</strong>: <p>BTOR format <span id="id2">[<a class="reference internal" href="../references.html#id3">BBL08</a>]</span></p>
 </p></li>
-<li><p><strong>btor2</strong>: <p><p>BTOR2 format <span id="id3">[<a class="reference internal" href="../references.html#id4">NPWB18</a>]</span></p>
-</p>
+<li><p><strong>btor2</strong>: <p>BTOR2 format <span id="id3">[<a class="reference internal" href="../references.html#id4">NPWB18</a>]</span></p>
 </p></li>
-<li><p><strong>smt2</strong>: <p><p>SMT-LIB v2 format <span id="id4">[<a class="reference internal" href="../references.html#id5">BFT17</a>]</span></p>
-</p>
+<li><p><strong>smt2</strong>: <p>SMT-LIB v2 format <span id="id4">[<a class="reference internal" href="../references.html#id5">BFT17</a>]</span></p>
  </p></li>
 </ul>
 </p>
@@ -252,16 +255,15 @@
 <li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
 </p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p><ul class="simple">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><ul class="simple">
 <li><p>Enabling this option turns off some optimization techniques.</p></li>
 <li><p>Enabling/disabling incremental solving after <a class="reference internal" href="interface.html#bitwuzla_8h_1a1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref">bitwuzla_check_sat()</span></a> has been called is not supported.</p></li>
 <li><p>This option cannot be enabled in combination with option <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_OPT_PP_UNCONSTRAINED_OPTIMIZATION</span></code>. </p></li>
 </ul>
 </p>
-</dd>
-</dl>
-</p>
+</div>
 </dd></dl>
 
 <dl class="c enumerator">
@@ -280,17 +282,13 @@
 <dd><p><strong>Configure output number format for bit-vector values.</strong></p>
 <p>If unspecified, Bitwuzla will use BTOR format.</p>
 <p>Values:<ul class="simple">
-<li><p><strong>aiger</strong>: <p><p>AIGER ascii format <span id="id5">[<a class="reference internal" href="../references.html#id6">BHW11</a>]</span></p>
-</p>
+<li><p><strong>aiger</strong>: <p>AIGER ascii format <span id="id5">[<a class="reference internal" href="../references.html#id6">BHW11</a>]</span></p>
 </p></li>
-<li><p><strong>aigerbin</strong>: <p><p>AIGER binary format <span id="id6">[<a class="reference internal" href="../references.html#id6">BHW11</a>]</span></p>
-</p>
+<li><p><strong>aigerbin</strong>: <p>AIGER binary format <span id="id6">[<a class="reference internal" href="../references.html#id6">BHW11</a>]</span></p>
 </p></li>
-<li><p><strong>btor</strong> [<strong>default</strong>]: <p><p>BTOR format <span id="id7">[<a class="reference internal" href="../references.html#id3">BBL08</a>]</span></p>
-</p>
+<li><p><strong>btor</strong> [<strong>default</strong>]: <p>BTOR format <span id="id7">[<a class="reference internal" href="../references.html#id3">BBL08</a>]</span></p>
 </p></li>
-<li><p><strong>smt2</strong>: <p><p>SMT-LIB v2 format <span id="id8">[<a class="reference internal" href="../references.html#id5">BFT17</a>]</span></p>
-</p>
+<li><p><strong>smt2</strong>: <p>SMT-LIB v2 format <span id="id8">[<a class="reference internal" href="../references.html#id5">BFT17</a>]</span></p>
  </p></li>
 </ul>
 </p>
@@ -302,11 +300,14 @@
 <dd><p><strong>Configure output number format for bit-vector values.</strong></p>
 <p>If unspecified, Bitwuzla will use binary representation.</p>
 <p>Values:<ul class="simple">
-<li><p><strong>bin</strong> [<strong>default</strong>]: <p> Binary number format.</p>
+<li><p><strong>bin</strong> [<strong>default</strong><p>]:</p>
+<p>Binary number format.</p>
 </p></li>
-<li><p><strong>hex</strong>: <p> Hexadecimal number format.</p>
+<li><p><strong>hex</strong><p>:</p>
+<p>Hexadecimal number format.</p>
 </p></li>
-<li><p><strong>dec</strong>: <p> Decimal number format. </p>
+<li><p><strong>dec</strong><p>:</p>
+<p>Decimal number format.</p>
 </p></li>
 </ul>
 </p>
@@ -345,11 +346,10 @@
 <li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
 </p>
-<p><dl class="simple">
-<dt><strong>Note</strong></dt><dd><p>This option cannot be enabled in combination with option <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_OPT_PP_UNCONSTRAINED_OPTIMIZATION</span></code>. </p>
-</dd>
-</dl>
-</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option cannot be enabled in combination with option <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_OPT_PP_UNCONSTRAINED_OPTIMIZATION</span></code>. </p>
+</div>
 </dd></dl>
 
 <dl class="c enumerator">
