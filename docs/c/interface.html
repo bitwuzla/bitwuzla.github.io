@@ -622,6 +622,32 @@ Standard 754.</p>
 </dd></dl>
 
 <dl class="c function">
+<dt class="sig sig-object c" id="c.bitwuzla_get_option_str">
+<span class="target" id="bitwuzla_8h_1a2a3ac46238def2f7294f0aa719c8a6cf"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_option_str</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bitwuzla</span></span>, <a class="reference internal" href="options.html#c.BitwuzlaOption" title="BitwuzlaOption"><span class="n"><span class="pre">BitwuzlaOption</span></span></a><span class="w"> </span><span class="n"><span class="pre">option</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.bitwuzla_get_option_str" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the current value of an option as a string if option can be configured via a string value.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#bitwuzla_8h_1a4b3d097604eab4eab9fbd0427be96884"><span class="std std-ref"><span class="pre">BitwuzlaOption</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#bitwuzla_8h_1ada5501c157480c71b94a42d350eefc81"><span class="std std-ref"><span class="pre">bitwuzla_set_option_str</span></span></a></code> </p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
+<li><p><strong>option</strong> – The option.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The option value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="c function">
 <dt class="sig sig-object c" id="c.bitwuzla_mk_array_sort">
 <span class="target" id="bitwuzla_8h_1a2f9b03e0f42606b48b21974097b3eda9"></span><a class="reference internal" href="#c.BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_array_sort</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">bitwuzla</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#c.BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#c.BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.bitwuzla_mk_array_sort" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create an array sort.</p>
