@@ -163,8 +163,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/c/api.rst.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
     
@@ -302,7 +300,7 @@ For example, to parse an input file <cite>example.smt2</cite> in SMT-LIB format:
 <p>If the input is given in SMT-LIB format, commands like <code class="code docutils literal notranslate"><span class="pre">check-sat</span></code>
 or <code class="code docutils literal notranslate"><span class="pre">get-value</span></code> will be executed while parsing.</p>
 </div>
-<p>If incremental usage is enabled (option <code class="xref c c-enum docutils literal notranslate"><span class="pre">BITWUZLA_OPT_INCREMENTAL</span></code>),
+<p>If incremental usage is enabled (option <a class="reference internal" href="options.html#c.BitwuzlaOption.BITWUZLA_OPT_INCREMENTAL" title="BITWUZLA_OPT_INCREMENTAL"><code class="xref c c-enum docutils literal notranslate"><span class="pre">BITWUZLA_OPT_INCREMENTAL</span></code></a>),
 formulas can also be assumed via <a class="reference internal" href="interface.html#c.bitwuzla_assume" title="bitwuzla_assume"><code class="xref c c-func docutils literal notranslate"><span class="pre">bitwuzla_assume()</span></code></a>.
 After parsing an input file and/or asserting and assuming formulas,
 satisfiability can be determined via <a class="reference internal" href="interface.html#c.bitwuzla_check_sat" title="bitwuzla_check_sat"><code class="xref c c-func docutils literal notranslate"><span class="pre">bitwuzla_check_sat()</span></code></a>.</p>
@@ -323,7 +321,7 @@ resulting model can be printed via <a class="reference internal" href="interface
 </pre></div>
 </div>
 <p>This will output a possible model (default: in SMT-LIB format, configurable
-via option <code class="xref c c-enum docutils literal notranslate"><span class="pre">BITWUZLA_OPT_OUTPUT_FORMAT</span></code>) as follows:</p>
+via option <a class="reference internal" href="options.html#c.BitwuzlaOption.BITWUZLA_OPT_OUTPUT_FORMAT" title="BITWUZLA_OPT_OUTPUT_FORMAT"><code class="xref c c-enum docutils literal notranslate"><span class="pre">BITWUZLA_OPT_OUTPUT_FORMAT</span></code></a>) as follows:</p>
 <div class="highlight-smtlib notranslate"><div class="highlight"><pre><span></span>(
   (<span class="k">define-fun</span> <span class="n">x</span> () (_ <span class="na">BitVec</span> <span class="m">8</span>) #b11111111)
   (<span class="k">define-fun</span> <span class="n">y</span> () (_ <span class="na">BitVec</span> <span class="m">8</span>) #b00011110)
