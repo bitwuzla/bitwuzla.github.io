@@ -31,7 +31,7 @@ let ashre = Term.Bv.extract ~hi:3 ~lo:0 ashr in
        ((_ extract 3 0) (bvsdiv x (_ sortbv2 8)))
        ((_ extract 3 0) (bvashr y (_ sortbv1 8)))))
 *)
-assert' @@ Term.equal sdive ashre;</code></pre><p>After asserting formulas, satisfiability can be determined via <code>check_sat</code>.</p><pre><code class="ml">(* (check-sat) *)
+assert' @@ Term.distinct sdive ashre;</code></pre><p>After asserting formulas, satisfiability can be determined via <code>check_sat</code>.</p><pre><code class="ml">(* (check-sat) *)
 let result = check_sat () in</code></pre><p>If the formula is satifiable, it is possible to query the value of expressions via <code>get_value</code> as well as its concrete value via <code>assignment</code>.</p><pre><code class="ml">assert (result = Sat);
 let xval = get_value x and yval = get_value y in
 Format.printf &quot;assignment of x: %s@\n&quot;
@@ -72,7 +72,7 @@ Format.printf &quot;assignment of x * x: %s@\n&quot;
          ((_ extract 3 0) (bvsdiv x (_ sortbv2 8)))
          ((_ extract 3 0) (bvashr y (_ sortbv1 8)))))
   *)
-  assert' @@ Term.equal sdive ashre;
+  assert' @@ Term.distinct sdive ashre;
 
   (* (check-sat) *)
   let result = check_sat () in
