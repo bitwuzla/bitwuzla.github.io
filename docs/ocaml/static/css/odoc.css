@@ -747,14 +747,6 @@ h1+.modules, h1+.sel {
   text-decoration: underline;
 }
 
-/*!* Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome* License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)*/
-@font-face{
-	font-family:FontAwesome;
-	src:url(../../../static/css/fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713);
-	src:url(../../../static/css/fonts/fontawesome-webfont.eot?674f50d287a8c48dc19ba404d20fe713?#iefix&v=4.7.0) format("embedded-opentype"),url(../../../static/css/fonts/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e) format("woff2"),url(../../../static/css/fonts/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad) format("woff"),url(../../../static/css/fonts/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9) format("truetype"),url(../../../static/css/fonts/fontawesome-webfont.svg?912ec66d7572ff821749319396470bde#fontawesomeregular) format("svg");
-	font-weight:400;
-	font-style:normal
-}
 .icon,.icon:focus{
 	display:inline-block;
 	font:normal normal normal 14px/1 FontAwesome;
