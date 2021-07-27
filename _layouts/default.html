@@ -21,6 +21,7 @@
       {%- assign gh = site.github.public_repositories |where: "name", "bitwuzla" |first -%}
       <div id="header">
         <nav>
+          <ul>
           <li class="fork"><a href="{{ gh.html_url }}">View On GitHub</a></li>
           {% if site.show_downloads %}
             <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
@@ -31,6 +32,7 @@
             <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/></a>
             <img src="https://github.com/bitwuzla/bitwuzla/workflows/CI/badge.svg" alt="CI"/>
           </li>
+          </ul>
         </nav>
       </div><!-- end header -->
 
