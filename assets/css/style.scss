@@ -14,10 +14,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2 {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 a {
+  font-weight: inherit;
   color: #afd700;
 }
 

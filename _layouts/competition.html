@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<h1><a href="{{ page.event_url}}">{{ page.event }}</a></h1>
+
+<b>Competing Version:</b> &nbsp;{% if page.version %} {{ page.version }} (<a href="{{ page.binary }}">submitted binary</a>){% else %}<a href="{{ page.binary }}">submitted binary</a>{% endif %}
+<br/>
+<b>System Description:</b> &nbsp;<a href="{{ page.sysdesc-url }}">{{ page.sysdesc-title }}</a>
+
+<h2>Divisions Entered</h2>
+<ul class="awards">
+{% for track in page.entered %}
+{% assign results_url = page.event_url | append: "/" | append: "results/" %}
+<li>
+  <b>{{ track.name }}:</b> &nbsp;
+  {% assign divisions = track.divisions | split: "," %}
+  {% for division in divisions %}
+  {% assign division_str = division | replace: "_", "-" | downcase %}
+  {% assign division_url = results_url | append: division_str | append: '-' | append: track.track %}
+  <a href="{{ division_url }}">{{ division }}</a>
+  {% endfor %}
+</li>
+{% endfor %}
+</ul>
+
+<h2>Division Awards</h2>
+{% for track in page.tracks %}
+<h3>{{ track.name }}</h3>
+<p>
+{% assign results_url = page.event_url | append: "/" | append: "results/" %}
+<a href="{{ results_url | append: track.track }}">{{ results_url | append: "results-" | append: track.track }}<br/></a>
+</p>
+<ul class="awards">
+{% for medal in track.medals %}
+  {% assign division_str = medal.division | replace: "_", "-" | downcase %}
+  {% assign division_url = results_url | append: division_str | append: '-' | append: track.track %}
+  <li class="awards"><span class="orange">{{ medal.place }}<sup>{% if medal.place == 1 %}st{% elsif medal.place == 2 %}nd{% else %}rd{% endif %}</sup></span> place ({% if medal.place == 1 %}gold{% elsif medal.place == 2 %}silver{% else %}bronze{% endif %}) in the <a href="{{ division_url }}">{{ medal.division }}</a></li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+
+<h2>Competition-Wide Awards</h2>
+{% for award in page.overall %}
+<h3>{{ award.name }}</h3>
+<ul>
+{% for medal in award.tracks %}
+  {% assign track_url = results_url | append: award.award | append: "-" | append: medal.track %}
+  <li class="awards"><span class="orange">{{ medal.place }}<sup>{% if medal.place == 1 %}st{% elsif medal.place == 2 %}nd{% else %}rd{% endif %}</sup></span> place ({% if medal.place == 1 %}gold{% elsif medal.place == 2 %}silver{% else %}bronze{% endif %}) in the <a href="{{ track_url }}">{{ medal.name }}</a></li>
+{% endfor %}
+</ul>
+{% endfor %}
+<br/>
+<br/>
+<br/>
+{% if page.img %}<img src="{{ page.img | relative_url }}"/>{% endif %}

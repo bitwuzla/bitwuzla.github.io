@@ -9,3 +9,6 @@ collections:
   papers:
     output: true
     permalink: /papers/:name
+  competitions:
+    output: true
+    permalink: /competitions/:name
