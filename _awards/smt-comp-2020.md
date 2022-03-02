@@ -1,5 +1,5 @@
 ---
-layout: competition
+layout: awards
 title: SMT-COMP 2020
 
 event: SMT-COMP 2020

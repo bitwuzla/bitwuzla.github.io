@@ -9,6 +9,6 @@ collections:
   papers:
     output: true
     permalink: /papers/:name
-  competitions:
+  awards:
     output: true
-    permalink: /competitions/:name
+    permalink: /awards/:name

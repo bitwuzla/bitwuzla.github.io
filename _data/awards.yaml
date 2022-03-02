@@ -1,10 +1,10 @@
 ---
-competitions:
+awards:
 
   - event: SMT-COMP 2020
     event_url: http://smt-comp.github.io/2020
     year: 2020
     gold: 20
-    details: /competitions/smt-comp-2020.html
+    details: /awards/smt-comp-2020.html
 
 ---
