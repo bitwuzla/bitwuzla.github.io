@@ -39,11 +39,14 @@ tracks:
     place: 1
   - division: QF_BVFP
     place: 1
-  - division: QF_FP (sequential, parallel, sat, unsat)
+  - division: QF_FP
+    awards: sequential, parallel, sat, unsat 
     place: 1
-  - division: QF_UFBV (24s)
+  - division: QF_UFBV
+    awards: 24s
     place: 1
-  - division: QF_UFFP (24s)
+  - division: QF_UFFP
+    awards: 24s
     place: 1
 
 - track: incremental
@@ -87,27 +90,30 @@ overall:
   name: Biggest Lead
   tracks:
   - track: model-validation
-    name: Model Validation Track (sequential, parallel)
-    track_url: https://smt-comp.github.io/2020/results/biggest-lead-model-validation
+    name: Model Validation Track
+    awards: sequential, parallel
     place: 1
   - track: incremental
     name: Incremental Track
     place: 3
   - track: unsat-core
-    name: Unsat Core Track (sequential, parallel)
+    name: Unsat Core Track
+    awards: sequential, parallel
     place: 3
 
 - award: largest-contribution
   name: Largest Contribution
   tracks:
   - track: model-validation
-    name: Model Validation Track (sequential, parallel)
+    name: Model Validation Track
+    awards: sequential, parallel
     place: 1
   - track: incremental
     name: Incremental Track
     place: 3
   - track: unsat-core
-    name: Unsat Core Track (sequential, parallel)
+    name: Unsat Core Track
+    awards: sequential, parallel
     place: 3
 
 ---

@@ -35,7 +35,7 @@ layout: default
 {% for medal in track.medals %}
   {% assign division_str = medal.division | replace: "_", "-" | downcase %}
   {% assign division_url = results_url | append: division_str | append: '-' | append: track.track %}
-  <li class="awards"><span class="orange">{{ medal.place }}<sup>{% if medal.place == 1 %}st{% elsif medal.place == 2 %}nd{% else %}rd{% endif %}</sup></span> place ({% if medal.place == 1 %}gold{% elsif medal.place == 2 %}silver{% else %}bronze{% endif %}) in the <a href="{{ division_url }}">{{ medal.division }}</a></li>
+  <li class="awards"><span class="orange">{{ medal.place }}<sup>{% if medal.place == 1 %}st{% elsif medal.place == 2 %}nd{% else %}rd{% endif %}</sup></span> place ({% if medal.place == 1 %}gold{% elsif medal.place == 2 %}silver{% else %}bronze{% endif %}) in the <a href="{{ division_url }}">{{ medal.division }}</a>{% if medal.awards %} ({{ medal.awards }}){% endif %}</li>
 {% endfor %}
 </ul>
 {% endfor %}
@@ -47,7 +47,7 @@ layout: default
 <ul>
 {% for medal in award.tracks %}
   {% assign track_url = results_url | append: award.award | append: "-" | append: medal.track %}
-  <li class="awards"><span {% if medal.place == 1 %}class="orange"{% endif %}>{{ medal.place }}<sup>{% if medal.place == 1 %}st{% elsif medal.place == 2 %}nd{% else %}rd{% endif %}</sup></span> place ({% if medal.place == 1 %}gold{% elsif medal.place == 2 %}silver{% else %}bronze{% endif %}) in the <a href="{{ track_url }}">{{ medal.name }}</a></li>
+  <li class="awards"><span {% if medal.place == 1 %}class="orange"{% endif %}>{{ medal.place }}<sup>{% if medal.place == 1 %}st{% elsif medal.place == 2 %}nd{% else %}rd{% endif %}</sup></span> place ({% if medal.place == 1 %}gold{% elsif medal.place == 2 %}silver{% else %}bronze{% endif %}) in the <a href="{{ track_url }}">{{ medal.name }}</a>{% if medal.awards %} ({{ medal.awards }}){% endif %}</li>
 {% endfor %}
 </ul>
 {% endfor %}
