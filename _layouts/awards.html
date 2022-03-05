@@ -15,11 +15,14 @@ layout: default
 <li>
   <b>{{ track.name }}:</b> &nbsp;
   {% assign divisions = track.divisions | split: "," %}
+  {% assign division_str = "" %}
+  <ul class="awards-entered">
   {% for division in divisions %}
-  {% assign division_str = division | replace: "_", "-" | downcase %}
-  {% assign division_url = results_url | append: division_str | append: '-' | append: track.track %}
-  <a href="{{ division_url }}">{{ division }}</a>
+  {% assign division_url_str = division | replace: "_", "-" | downcase %}
+  {% assign division_url = results_url | append: division_url_str | append: '-' | append: track.track %}
+  <li><a href="{{ division_url}}">{{ division }}</a></li>
   {% endfor %}
+  </ul>
 </li>
 {% endfor %}
 </ul>
@@ -39,6 +42,18 @@ layout: default
   <li class="awards"><span class="orange">{{ medal.place }}<sup>{% if medal.place == 1 %}st{% elsif medal.place == 2 %}nd{% else %}rd{% endif %}</sup></span> place ({% if medal.place == 1 %}gold{% elsif medal.place == 2 %}silver{% else %}bronze{% endif %}) in the <a href="{{ division_url }}">{{ medal.division }}</a>{% if medal.awards %} ({{ medal.awards }}){% endif %}</li>
 {% endfor %}
 </ul>
+{% for mention in track.mentions %}
+  <h4>Honorable Mentions:</h4>
+  {% assign division_str = mention.division | replace: "_", "-" | replace: "+", "-" | downcase %}
+  {% assign division_url = results_url_base | append: division_str | append: '-' | append: track.track %}
+  In division <a href="{{ division_url }}">{{ mention.division }}</a>:
+  {% for logic in mention.logics %}
+  {% assign logic_str = logic.name| replace: "_", "-" | downcase %}
+  {% assign logic_url = results_url_base | append: division_str | append: '-' | append: track.track %}
+  <br/>
+  &nbsp;&nbsp;{% if logic.place == 1 %}<span class="green">{{ logic.place }}<sup>st</sup></span>{% else %}{{ logic.place}}<sup>nd</sup>{% endif %} place in logic <a href="{{ logic_url }}">{{ logic.name }}</a>{% if logic.awards %} ({{ logic.awards }}){% endif %}
+  {% endfor %}
+{% endfor %}
 {% endfor %}
 
 
