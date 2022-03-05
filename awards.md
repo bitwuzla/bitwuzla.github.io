@@ -10,7 +10,7 @@ layout: default
 {% assign yearInt = year | plus: 0 %}
 {% assign entries = site.data.awards.awards | where_exp: "e","e.year == year" %}
 {% for item in entries %}
-- [{{ item.event }}]({{ item.event_url }}):&nbsp; {{ item.gold}} gold medals
+- [{{ item.event }}]({{ item.event_url }}):&nbsp; {{ item.gold}} gold medals (out of {{ item.entered }})
   ([details]({{ item.details | relative_url }}))
 {% endfor %}
 {% endfor %}

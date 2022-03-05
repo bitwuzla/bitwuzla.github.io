@@ -4,12 +4,14 @@ awards:
 - event: SMT-COMP 2021
   event_url: http://smt-comp.github.io/2021
   year: 2021
+  entered: 11
   gold: 6
   details: /awards/smt-comp-2021.html
 
 - event: SMT-COMP 2020
   event_url: http://smt-comp.github.io/2020
   year: 2020
+  entered: 26
   gold: 20
   details: /awards/smt-comp-2020.html
 
