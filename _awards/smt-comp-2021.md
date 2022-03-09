@@ -71,11 +71,9 @@ overall:
   tracks:
   - track: model-validation
     name: Model Validation Track
-    awards: sequential, parallel
     place: 3
   - track: unsat-core
     name: Unsat Core Track
-    awards: sequential, parallel
     place: 3
 
 - award: largest-contribution
@@ -83,7 +81,6 @@ overall:
   tracks:
   - track: model-validation
     name: Model Validation Track
-    awards: sequential, parallel
     place: 2
 
 ---

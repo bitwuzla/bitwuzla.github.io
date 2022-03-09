@@ -4,15 +4,23 @@ awards:
 - event: SMT-COMP 2021
   event_url: http://smt-comp.github.io/2021
   year: 2021
-  entered: 11
-  gold: 6
+  entered:
+    divisions: 11
+    awards: 28
+  gold:
+    divisions: 17
+    competition-wide:
   details: /awards/smt-comp-2021.html
 
 - event: SMT-COMP 2020
   event_url: http://smt-comp.github.io/2020
   year: 2020
-  entered: 26
-  gold: 20
+  entered:
+    divisions: 26
+    awards: 71
+  gold:
+    divisions: 43
+    competition-wide: 2
   details: /awards/smt-comp-2020.html
 
 ---
