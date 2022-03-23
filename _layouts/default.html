@@ -46,7 +46,7 @@
             <tr>
             {% for item in site.data.menu %}
               <td>
-                <a href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong></a>
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
               </td>
             {% endfor %}
             </tr>
