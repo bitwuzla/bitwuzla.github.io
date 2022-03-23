@@ -44,24 +44,11 @@
           <p class="desc">{{ site.description | default: site.github.project_tagline }}</p>
           <table class="menu">
             <tr>
+            {% for item in site.data.menu %}
               <td>
-                <a href="/download.html"><strong>Downloads</strong></a>
+                <a href="{{ item.url | relative_url }}"><strong>{{ item.title }}</strong></a>
               </td>
-              <td>
-                <a href="/docs/index.html"><strong>Documentation</strong></a>
-              </td>
-              <!--td>
-                <a href="/bibtex.html"><strong>Bibtex</strong></a>
-              </td-->
-              <td>
-                <a href="/publications.html"><strong>Publications</strong></a>
-              </td>
-              <td>
-                <a href="/awards.html"><strong>Awards</strong></a>
-              </td>
-              <td>
-                <a href="/people.html"><strong>People</strong></a>
-              </td>
+            {% endfor %}
             </tr>
           </table>
           <hr>
