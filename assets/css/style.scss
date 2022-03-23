@@ -94,6 +94,11 @@ img.logo {
       border: 0;
       box-shadow: none;
       background: none;
+      &:hover {
+        border: 0;
+        box-shadow: none;
+        background: none;
+      }
     }
   }
 }
