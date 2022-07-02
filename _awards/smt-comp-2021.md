@@ -8,7 +8,7 @@ event_url: https://smt-comp.github.io/2021
 version:
 binary: https://www.starexec.org/starexec/secure/details/solver.jsp?id=33809
 sysdesc-title: Bitwuzla at the SMT-COMP 2021
-sysdesc-url:
+sysdesc-url: /data/smtcomp2021/paper.pdf
 
 entered:
 
