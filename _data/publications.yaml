@@ -14,6 +14,7 @@
    bibtex: https://dblp.org/rec/bibtex/conf/fmcad/NiemetzP20
    artifact: /papers/fmcad2020
    talk: https://www.youtube.com/watch?v=Rway_22sglk
+   errata: /data/fmcad2020/errata.txt
 
  - title: Bitwuzla at the SMT-COMP 2020
    author:

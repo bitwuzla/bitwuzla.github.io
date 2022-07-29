@@ -1,0 +1,19 @@
+Ternary Propagation-Based Local Search For More Bit-Precise Reasoning
+at FMCAD 2020
+==============================================================================
+
+Corrections and Comments
+========================
+
+IC for bvult
+------------
+
+In Table 2 on pg. 6, the invertibility condition for (x <u s = t) should read
+  (=> t s != 0 /\ x_lo <u s) /\ (~t => x_hi >=u s)
+                                       ^^^^^^^^^^
+instead of
+  (=> t s != 0 /\ x_lo <u s) /\ (~t => (s >=u x) = t)
+                                       ^^^^^^^^^^^^^
+
+See also the verification conditions for the corresponding case bvuge
+(verify_ic_bvuge_x_s_*.smt2) in the artifact.

@@ -43,10 +43,10 @@ found below.
 
 <h3>Downloads</h3>
 <ul>
-  <li><a href="{{ page.pdf }}">Paper</a> at {{ page.conference }}</li>
+  <li><a href="{{ page.pdf }}">Paper</a> at {{ page.conference }}&nbsp;{%- if page.errata -%} (<a href="{{ page.errata }}">errata</a>){%- endif %}</li>
 
 {%- if page.pdf_extended -%}
-  <li><a href="{{ page.pdf_extended }}">Extended version</a> of our paper at {{ page.conference }}</li>
+<li><a href="{{ page.pdf_extended }}">Extended version</a> of our paper at {{ page.conference }}</li>
 {%- endif -%}
 
 {%- if page.artifact.readme -%}

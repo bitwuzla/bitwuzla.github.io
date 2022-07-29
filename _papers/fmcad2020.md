@@ -13,6 +13,8 @@ authors:
 pdf: /data/fmcad2020/paper.pdf
 pdf_extended:
 
+errata: /data/fmcad2020/errata.txt
+
 artifact:
   readme: /data/fmcad2020/README.txt
   archive: /data/fmcad2020/fmcad20-artifact.tar.xz
