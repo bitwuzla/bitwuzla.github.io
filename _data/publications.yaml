@@ -8,9 +8,9 @@
    year: 2020
    publication-title: FMCAD 2020
    pages: 214-224
-   pdf: /data/fmcad2020/paper.pdf
+   pdf: /data/fmcad2020/NiemetzPreiner-FMCAD20.pdf
    doi: 10.34727/2020/isbn.978-3-85448-042-6_29
-   preprint: /data/fmcad2020/paper.pdf
+   preprint:
    bibtex: https://dblp.org/rec/bibtex/conf/fmcad/NiemetzP20
    artifact: /papers/fmcad2020
    talk: https://www.youtube.com/watch?v=Rway_22sglk
