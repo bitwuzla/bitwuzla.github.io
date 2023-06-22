@@ -1,26 +1,51 @@
 ---
 awards:
 
+- event: SMT-COMP 2022
+  event_url: http://smt-comp.github.io/2022
+  year: 2022
+  solver: Bitwuzla
+  solver_url: https://bitwuzla.github.io
+  entered: 18
+  divisions:
+    total: 48
+    gold: 32
+  competition-wide:
+    total: 20
+    silver: 7
+    bronze: 4
+  floc:
+    silver: 1
+  details: /awards/smt-comp-2022.html
+
 - event: SMT-COMP 2021
   event_url: http://smt-comp.github.io/2021
   year: 2021
-  entered:
-    divisions: 11
-    awards: 28
-  gold:
-    divisions: 17
-    competition-wide:
+  solver: Bitwuzla
+  solver_url: https://bitwuzla.github.io
+  entered: 11
+  divisions:
+    total: 28
+    gold: 17
+  competition-wide:
+    total: 20
+    silver: 2
+    bronze: 5
   details: /awards/smt-comp-2021.html
 
 - event: SMT-COMP 2020
   event_url: http://smt-comp.github.io/2020
   year: 2020
-  entered:
-    divisions: 26
-    awards: 71
-  gold:
-    divisions: 43
-    competition-wide: 2
+  solver: Bitwuzla
+  solver_url: https://bitwuzla.github.io
+  entered: 26
+  divisions:
+    total: 71
+    gold: 43
+  competition-wide:
+    total: 20
+    gold: 2
+    bronze: 6
   details: /awards/smt-comp-2020.html
 
 ---
