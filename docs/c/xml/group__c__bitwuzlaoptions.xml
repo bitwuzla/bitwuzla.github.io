@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__c__bitwuzlaoptions" kind="group">
+    <compoundname>c_bitwuzlaoptions</compoundname>
+    <title>C_bitwuzlaoptions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__c__bitwuzlaoptions_1gaf208fc6d0fe345818d9338dba99f9e7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+        <definition>BitwuzlaOptions * bitwuzla_options_new</definition>
+        <argsstring>()</argsstring>
+        <name>bitwuzla_options_new</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new BitwuzlaOptions instance.</para>
+<para>The returned instance must be deleted via <computeroutput><ref refid="group__c__bitwuzlaoptions_1ga91f0479c3a525e2deabbc0dea5a6f954" kindref="member">bitwuzla_options_delete()</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>A pointer to the created BitwuzlaOptions instance.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlaoptions_1ga91f0479c3a525e2deabbc0dea5a6f954" kindref="member">bitwuzla_options_delete</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="131" column="17" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="131" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaoptions_1ga91f0479c3a525e2deabbc0dea5a6f954" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla_options_delete</definition>
+        <argsstring>(BitwuzlaOptions *options)</argsstring>
+        <name>bitwuzla_options_delete</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete a BitwuzlaOptions instance.</para>
+<para>The given instance must have been created via <computeroutput><ref refid="group__c__bitwuzlaoptions_1gaf208fc6d0fe345818d9338dba99f9e7f" kindref="member">bitwuzla_options_new()</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The BitwuzlaOptions instance to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlaoptions_1gaf208fc6d0fe345818d9338dba99f9e7f" kindref="member">bitwuzla_options_new</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="143" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="143" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaoptions_1ga41012ed3772f0b013182107452556e3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_option_is_numeric</definition>
+        <argsstring>(BitwuzlaOptions *options, BitwuzlaOption option)</argsstring>
+        <name>bitwuzla_option_is_numeric</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a given option is a numeric (or Boolean) option. <simplesect kind="return"><para>True if the given option is a numeric or Boolean option. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="149" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="149" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaoptions_1gafbc68bda6a3c852ea886cc1cef1deb70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_option_is_mode</definition>
+        <argsstring>(BitwuzlaOptions *options, BitwuzlaOption option)</argsstring>
+        <name>bitwuzla_option_is_mode</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a given option is an option with a mode <simplesect kind="return"><para>True if the given option is an option with a mode. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="155" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="155" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla_set_option</definition>
+        <argsstring>(BitwuzlaOptions *options, BitwuzlaOption option, uint64_t val)</argsstring>
+        <name>bitwuzla_set_option</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></type>
+          <declname>option</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set option.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Bitwuzla options instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaoptions_1ga37742ef375def28c195c79249142216d" kindref="member">bitwuzla_get_option</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="168" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="168" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaoptions_1gaff7ff22db2d7d6fa22ba35914e0b7119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla_set_option_mode</definition>
+        <argsstring>(BitwuzlaOptions *options, BitwuzlaOption option, const char *val)</argsstring>
+        <name>bitwuzla_set_option_mode</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></type>
+          <declname>option</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set option mode for options with modes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Bitwuzla options instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option string value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaoptions_1ga4dcd195b9e78bd190b5e96ff3cb0d7f5" kindref="member">bitwuzla_get_option_mode</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="183" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="183" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaoptions_1ga37742ef375def28c195c79249142216d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla_get_option</definition>
+        <argsstring>(BitwuzlaOptions *options, BitwuzlaOption option)</argsstring>
+        <name>bitwuzla_get_option</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the current value of an option.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Bitwuzla options instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The option value.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="198" column="10" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="198" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaoptions_1ga4dcd195b9e78bd190b5e96ff3cb0d7f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * bitwuzla_get_option_mode</definition>
+        <argsstring>(BitwuzlaOptions *options, BitwuzlaOption option)</argsstring>
+        <name>bitwuzla_get_option_mode</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the current mode of an option as a string if option has modes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Bitwuzla options instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The option value.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaoptions_1gaff7ff22db2d7d6fa22ba35914e0b7119" kindref="member">bitwuzla_set_option_mode</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="212" column="12" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="212" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaoptions_1gaa46bec92f4a81ea8a7d94f7ccd205b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla_get_option_info</definition>
+        <argsstring>(BitwuzlaOptions *options, BitwuzlaOption option, BitwuzlaOptionInfo *info)</argsstring>
+        <name>bitwuzla_get_option_info</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></type>
+          <declname>option</declname>
+        </param>
+        <param>
+          <type><ref refid="structBitwuzlaOptionInfo" kindref="compound">BitwuzlaOptionInfo</ref> *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the details of an option.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Bitwuzla options instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The option info to populate, will be valid until the next <computeroutput>bitwuzla_get_option_info</computeroutput> call.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="structBitwuzlaOptionInfo" kindref="compound">BitwuzlaOptionInfo</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="226" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="226" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

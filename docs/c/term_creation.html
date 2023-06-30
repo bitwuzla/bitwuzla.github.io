@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Term Creation &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python API Documentation" href="../python/api.html" />
+    <link rel="prev" title="Sort Creation" href="sort_creation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../cpp/api.html">C++ API Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">C API Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="interface.html">C Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enums/bitwuzlakind.html">Term Kinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sort_creation.html">Sort Creation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Term Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../python/api.html">Python API Documentation</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="api.html">C API Documentation</a></li>
+      <li class="breadcrumb-item active">Term Creation</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="term-creation">
+<h1>Term Creation<a class="headerlink" href="#term-creation" title="Permalink to this headline"></a></h1>
+<p>Terms of a given <a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">BitwuzlaKind</span></code></a> are created via
+<a class="reference internal" href="#_CPPv416bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm" title="bitwuzla_mk_term"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term()</span></code></a> (and related <cite>bitwuzla_mk_term*()</cite> functions
+provided for convenience). a comprehensive documentation of supported
+term kinds can be found <span class="xref std std-doc">here</span>.
+For creating terms that represent general and special values of a given sort,
+Bitwuzla provides additional functions, see below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Terms are not tied to a specific Bitwuzla instance and can be shared across
+instances.</p>
+</div>
+<hr class="docutils" />
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416bitwuzla_mk_truev">
+<span id="_CPPv316bitwuzla_mk_truev"></span><span id="_CPPv216bitwuzla_mk_truev"></span><span id="bitwuzla_mk_true"></span><span class="target" id="group__c__term__creation_1ga66e28b1b57b92d8d85d489c9ede4bbce"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_true</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416bitwuzla_mk_truev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a true value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A term representing true. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417bitwuzla_mk_falsev">
+<span id="_CPPv317bitwuzla_mk_falsev"></span><span id="_CPPv217bitwuzla_mk_falsev"></span><span id="bitwuzla_mk_false"></span><span class="target" id="group__c__term__creation_1ga84036bd7ceabb96fd1dd6d04d08563c6"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_false</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417bitwuzla_mk_falsev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a false value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A term representing false. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419bitwuzla_mk_bv_zero12BitwuzlaSort">
+<span id="_CPPv319bitwuzla_mk_bv_zero12BitwuzlaSort"></span><span id="_CPPv219bitwuzla_mk_bv_zero12BitwuzlaSort"></span><span id="bitwuzla_mk_bv_zero__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1ga5a59a075d6242f52bce659a3b6b1a4b1"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_zero</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_mk_bv_zero12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value zero.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value 0 of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418bitwuzla_mk_bv_one12BitwuzlaSort">
+<span id="_CPPv318bitwuzla_mk_bv_one12BitwuzlaSort"></span><span id="_CPPv218bitwuzla_mk_bv_one12BitwuzlaSort"></span><span id="bitwuzla_mk_bv_one__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1ga41e3edf7686bebdf663baa4a41ae876f"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_one</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418bitwuzla_mk_bv_one12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value one.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value 1 of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419bitwuzla_mk_bv_ones12BitwuzlaSort">
+<span id="_CPPv319bitwuzla_mk_bv_ones12BitwuzlaSort"></span><span id="_CPPv219bitwuzla_mk_bv_ones12BitwuzlaSort"></span><span id="bitwuzla_mk_bv_ones__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1ga75fe6de097b4e057d584ee1da6fa8ddb"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_ones</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_mk_bv_ones12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value where all bits are set to 1.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value of given sort where all bits are set to 1. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425bitwuzla_mk_bv_min_signed12BitwuzlaSort">
+<span id="_CPPv325bitwuzla_mk_bv_min_signed12BitwuzlaSort"></span><span id="_CPPv225bitwuzla_mk_bv_min_signed12BitwuzlaSort"></span><span id="bitwuzla_mk_bv_min_signed__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1ga40015b4da40e207529d25cbee71d9a6d"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_min_signed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425bitwuzla_mk_bv_min_signed12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector minimum signed value.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value of given sort where the MSB is set to 1 and all remaining bits are set to 0. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425bitwuzla_mk_bv_max_signed12BitwuzlaSort">
+<span id="_CPPv325bitwuzla_mk_bv_max_signed12BitwuzlaSort"></span><span id="_CPPv225bitwuzla_mk_bv_max_signed12BitwuzlaSort"></span><span id="bitwuzla_mk_bv_max_signed__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1gac59dbc5f424a1b1f3d4574018669c9d9"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_max_signed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425bitwuzla_mk_bv_max_signed12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector maximum signed value.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value of given sort where the MSB is set to 0 and all remaining bits are set to 1. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423bitwuzla_mk_fp_pos_zero12BitwuzlaSort">
+<span id="_CPPv323bitwuzla_mk_fp_pos_zero12BitwuzlaSort"></span><span id="_CPPv223bitwuzla_mk_fp_pos_zero12BitwuzlaSort"></span><span id="bitwuzla_mk_fp_pos_zero__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1gaef14d5ef49ea543022687f41ef1f50a0"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_pos_zero</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_mk_fp_pos_zero12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point positive zero value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">+zero</span></code>).</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point positive zero value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423bitwuzla_mk_fp_neg_zero12BitwuzlaSort">
+<span id="_CPPv323bitwuzla_mk_fp_neg_zero12BitwuzlaSort"></span><span id="_CPPv223bitwuzla_mk_fp_neg_zero12BitwuzlaSort"></span><span id="bitwuzla_mk_fp_neg_zero__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1ga07c88d8aea8e10b6d141c2ca5b9241eb"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_neg_zero</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_mk_fp_neg_zero12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point negative zero value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">-zero</span></code>).</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point negative zero value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422bitwuzla_mk_fp_pos_inf12BitwuzlaSort">
+<span id="_CPPv322bitwuzla_mk_fp_pos_inf12BitwuzlaSort"></span><span id="_CPPv222bitwuzla_mk_fp_pos_inf12BitwuzlaSort"></span><span id="bitwuzla_mk_fp_pos_inf__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1gaef1f309dc733bc4bc4efca1f166b479e"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_pos_inf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_mk_fp_pos_inf12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point positive infinity value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">+oo</span></code>).</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point positive infinity value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422bitwuzla_mk_fp_neg_inf12BitwuzlaSort">
+<span id="_CPPv322bitwuzla_mk_fp_neg_inf12BitwuzlaSort"></span><span id="_CPPv222bitwuzla_mk_fp_neg_inf12BitwuzlaSort"></span><span id="bitwuzla_mk_fp_neg_inf__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1gac202139fb0cdb5aeb74d2251145d1cb0"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_neg_inf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_mk_fp_neg_inf12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point negative infinity value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">-oo</span></code>).</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point negative infinity value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418bitwuzla_mk_fp_nan12BitwuzlaSort">
+<span id="_CPPv318bitwuzla_mk_fp_nan12BitwuzlaSort"></span><span id="_CPPv218bitwuzla_mk_fp_nan12BitwuzlaSort"></span><span id="bitwuzla_mk_fp_nan__BitwuzlaSort"></span><span class="target" id="group__c__term__creation_1ga7f70be4b69bd56c7ce541ec7954b8693"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_nan</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418bitwuzla_mk_fp_nan12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point NaN value.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point NaN value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420bitwuzla_mk_bv_value12BitwuzlaSortPKc7uint8_t">
+<span id="_CPPv320bitwuzla_mk_bv_value12BitwuzlaSortPKc7uint8_t"></span><span id="_CPPv220bitwuzla_mk_bv_value12BitwuzlaSortPKc7uint8_t"></span><span id="bitwuzla_mk_bv_value__BitwuzlaSort.cCP.uint8_t"></span><span class="target" id="group__c__term__creation_1ga125d09b9ee548724b2cbdf908516883b"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_value</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">base</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420bitwuzla_mk_bv_value12BitwuzlaSortPKc7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value from its string representation.</p>
+<p>Parameter <code class="docutils literal notranslate"><span class="pre">base</span></code> determines the base of the string representation.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given value must fit into a bit-vector of given size (sort).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>value</strong> – A string representing the value. </p></li>
+<li><p><strong>base</strong> – The base in which the string is given; 2 for binary, 10 for decimal, and 16 for hexadecimal.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the bit-vector value of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427bitwuzla_mk_bv_value_uint6412BitwuzlaSort8uint64_t">
+<span id="_CPPv327bitwuzla_mk_bv_value_uint6412BitwuzlaSort8uint64_t"></span><span id="_CPPv227bitwuzla_mk_bv_value_uint6412BitwuzlaSort8uint64_t"></span><span id="bitwuzla_mk_bv_value_uint64__BitwuzlaSort.uint64_t"></span><span class="target" id="group__c__term__creation_1ga6ff3a9d94143fb86984e7fa31cb53f05"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_value_uint64</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427bitwuzla_mk_bv_value_uint6412BitwuzlaSort8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value from its unsigned integer representation.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given value must fit into a bit-vector of given size (sort).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>value</strong> – The unsigned integer representation of the bit-vector value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the bit-vector value of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426bitwuzla_mk_bv_value_int6412BitwuzlaSort7int64_t">
+<span id="_CPPv326bitwuzla_mk_bv_value_int6412BitwuzlaSort7int64_t"></span><span id="_CPPv226bitwuzla_mk_bv_value_int6412BitwuzlaSort7int64_t"></span><span id="bitwuzla_mk_bv_value_int64__BitwuzlaSort.int64_t"></span><span class="target" id="group__c__term__creation_1ga5afafc44f16c593fc8ed62a1ed4abcce"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_value_int64</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="n"><span class="pre">int64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_mk_bv_value_int6412BitwuzlaSort7int64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value from its signed integer representation.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given value must fit into a bit-vector of given size (sort).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>value</strong> – The unsigned integer representation of the bit-vector value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the bit-vector value of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420bitwuzla_mk_fp_value12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm">
+<span id="_CPPv320bitwuzla_mk_fp_value12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm"></span><span id="_CPPv220bitwuzla_mk_fp_value12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm"></span><span id="bitwuzla_mk_fp_value__BitwuzlaTerm.BitwuzlaTerm.BitwuzlaTerm"></span><span class="target" id="group__c__term__creation_1gae95213b8816199235169eedefad3fc6a"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_value</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">bv_sign</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">bv_exponent</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">bv_significand</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420bitwuzla_mk_fp_value12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point value from its IEEE 754 standard representation given as three bit-vector values representing the sign bit, the exponent and the significand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bv_sign</strong> – The sign bit. </p></li>
+<li><p><strong>bv_exponent</strong> – The exponent bit-vector value. </p></li>
+<li><p><strong>bv_significand</strong> – The significand bit-vector value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the floating-point value. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424bitwuzla_mk_fp_from_real12BitwuzlaSort12BitwuzlaTermPKc">
+<span id="_CPPv324bitwuzla_mk_fp_from_real12BitwuzlaSort12BitwuzlaTermPKc"></span><span id="_CPPv224bitwuzla_mk_fp_from_real12BitwuzlaSort12BitwuzlaTermPKc"></span><span id="bitwuzla_mk_fp_from_real__BitwuzlaSort.BitwuzlaTerm.cCP"></span><span class="target" id="group__c__term__creation_1ga76ae4ddccb472f36344fb5ce95b9c5e5"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_from_real</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rm</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">real</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424bitwuzla_mk_fp_from_real12BitwuzlaSort12BitwuzlaTermPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point value from its real representation, given as a decimal string, with respect to given rounding mode.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>rm</strong> – The rounding mode. </p></li>
+<li><p><strong>real</strong> – The decimal string representing a real value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A floating-point representation of the given real string. If <code class="docutils literal notranslate"><span class="pre">rm</span></code> is of kind BITWUZLA_KIND_VALUE the floating-point will be of kind BITWUZLA_KIND_VALUE, else it will be a non-value term. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428bitwuzla_mk_fp_from_rational12BitwuzlaSort12BitwuzlaTermPKcPKc">
+<span id="_CPPv328bitwuzla_mk_fp_from_rational12BitwuzlaSort12BitwuzlaTermPKcPKc"></span><span id="_CPPv228bitwuzla_mk_fp_from_rational12BitwuzlaSort12BitwuzlaTermPKcPKc"></span><span id="bitwuzla_mk_fp_from_rational__BitwuzlaSort.BitwuzlaTerm.cCP.cCP"></span><span class="target" id="group__c__term__creation_1gaee5e7892631d4f0e6f0fc3b593213572"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_from_rational</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rm</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">num</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">den</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428bitwuzla_mk_fp_from_rational12BitwuzlaSort12BitwuzlaTermPKcPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point value from its rational representation, given as a two decimal strings representing the numerator and denominator, with respect to given rounding mode.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>rm</strong> – The rounding mode. </p></li>
+<li><p><strong>num</strong> – The decimal string representing the numerator. </p></li>
+<li><p><strong>den</strong> – The decimal string representing the denominator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A floating-point representation of the given rational string. If <code class="docutils literal notranslate"><span class="pre">rm</span></code> is of kind BITWUZLA_KIND_VALUE the floating-point will be of kind BITWUZLA_KIND_VALUE, else it will be a non-value term. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420bitwuzla_mk_rm_value20BitwuzlaRoundingMode">
+<span id="_CPPv320bitwuzla_mk_rm_value20BitwuzlaRoundingMode"></span><span id="_CPPv220bitwuzla_mk_rm_value20BitwuzlaRoundingMode"></span><span id="bitwuzla_mk_rm_value__BitwuzlaRoundingMode"></span><span class="target" id="group__c__term__creation_1ga456d31991ff15a1df637c672c2a7e996"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_rm_value</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlaroundingmode.html#_CPPv420BitwuzlaRoundingMode" title="BitwuzlaRoundingMode"><span class="n"><span class="pre">BitwuzlaRoundingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420bitwuzla_mk_rm_value20BitwuzlaRoundingMode" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a rounding mode value.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlaroundingmode.html#enums_8h_1a5c1c80490dd4f2642905e2b28be59687"><span class="std std-ref"><span class="pre">BitwuzlaRoundingMode</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rm</strong> – The rounding mode value.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the rounding mode value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417bitwuzla_mk_term112BitwuzlaKind12BitwuzlaTerm">
+<span id="_CPPv317bitwuzla_mk_term112BitwuzlaKind12BitwuzlaTerm"></span><span id="_CPPv217bitwuzla_mk_term112BitwuzlaKind12BitwuzlaTerm"></span><span id="bitwuzla_mk_term1__BitwuzlaKind.BitwuzlaTerm"></span><span class="target" id="group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_term1</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><span class="n"><span class="pre">BitwuzlaKind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417bitwuzla_mk_term112BitwuzlaKind12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a term of given kind with one argument term.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>arg</strong> – The argument to the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417bitwuzla_mk_term212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm">
+<span id="_CPPv317bitwuzla_mk_term212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm"></span><span id="_CPPv217bitwuzla_mk_term212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm"></span><span id="bitwuzla_mk_term2__BitwuzlaKind.BitwuzlaTerm.BitwuzlaTerm"></span><span class="target" id="group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_term2</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><span class="n"><span class="pre">BitwuzlaKind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg0</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417bitwuzla_mk_term212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a term of given kind with two argument terms.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>arg0</strong> – The first argument to the operator. </p></li>
+<li><p><strong>arg1</strong> – The second argument to the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417bitwuzla_mk_term312BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm">
+<span id="_CPPv317bitwuzla_mk_term312BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm"></span><span id="_CPPv217bitwuzla_mk_term312BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm"></span><span id="bitwuzla_mk_term3__BitwuzlaKind.BitwuzlaTerm.BitwuzlaTerm.BitwuzlaTerm"></span><span class="target" id="group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_term3</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><span class="n"><span class="pre">BitwuzlaKind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg0</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417bitwuzla_mk_term312BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a term of given kind with three argument terms.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>arg0</strong> – The first argument to the operator. </p></li>
+<li><p><strong>arg1</strong> – The second argument to the operator. </p></li>
+<li><p><strong>arg2</strong> – The third argument to the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm">
+<span id="_CPPv316bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm"></span><span id="_CPPv216bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm"></span><span id="bitwuzla_mk_term__BitwuzlaKind.uint32_t.BitwuzlaTermA"></span><span class="target" id="group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_term</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><span class="n"><span class="pre">BitwuzlaKind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a term of given kind with the given argument terms.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>argc</strong> – The number of argument terms. </p></li>
+<li><p><strong>args</strong> – The argument terms.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426bitwuzla_mk_term1_indexed112BitwuzlaKind12BitwuzlaTerm8uint64_t">
+<span id="_CPPv326bitwuzla_mk_term1_indexed112BitwuzlaKind12BitwuzlaTerm8uint64_t"></span><span id="_CPPv226bitwuzla_mk_term1_indexed112BitwuzlaKind12BitwuzlaTerm8uint64_t"></span><span id="bitwuzla_mk_term1_indexed1__BitwuzlaKind.BitwuzlaTerm.uint64_t"></span><span class="target" id="group__c__term__creation_1gaa4ef7b33ad8c613365ca275c3293d6fd"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_term1_indexed1</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><span class="n"><span class="pre">BitwuzlaKind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">idx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_mk_term1_indexed112BitwuzlaKind12BitwuzlaTerm8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an indexed term of given kind with one argument term and one index.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>arg</strong> – The argument term. </p></li>
+<li><p><strong>idx</strong> – The index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426bitwuzla_mk_term1_indexed212BitwuzlaKind12BitwuzlaTerm8uint64_t8uint64_t">
+<span id="_CPPv326bitwuzla_mk_term1_indexed212BitwuzlaKind12BitwuzlaTerm8uint64_t8uint64_t"></span><span id="_CPPv226bitwuzla_mk_term1_indexed212BitwuzlaKind12BitwuzlaTerm8uint64_t8uint64_t"></span><span id="bitwuzla_mk_term1_indexed2__BitwuzlaKind.BitwuzlaTerm.uint64_t.uint64_t"></span><span class="target" id="group__c__term__creation_1gab7607ce0925baede9fe4809aa3ec7298"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_term1_indexed2</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><span class="n"><span class="pre">BitwuzlaKind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">idx0</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">idx1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_mk_term1_indexed212BitwuzlaKind12BitwuzlaTerm8uint64_t8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an indexed term of given kind with one argument term and two indices.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>arg</strong> – The argument term. </p></li>
+<li><p><strong>idx0</strong> – The first index. </p></li>
+<li><p><strong>idx1</strong> – The second index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426bitwuzla_mk_term2_indexed112BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t">
+<span id="_CPPv326bitwuzla_mk_term2_indexed112BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t"></span><span id="_CPPv226bitwuzla_mk_term2_indexed112BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t"></span><span id="bitwuzla_mk_term2_indexed1__BitwuzlaKind.BitwuzlaTerm.BitwuzlaTerm.uint64_t"></span><span class="target" id="group__c__term__creation_1ga5b02a9794f16846a96ca0961be42615c"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_term2_indexed1</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><span class="n"><span class="pre">BitwuzlaKind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg0</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">idx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_mk_term2_indexed112BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an indexed term of given kind with two argument terms and one index.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>arg0</strong> – The first argument term. </p></li>
+<li><p><strong>arg1</strong> – The second argument term. </p></li>
+<li><p><strong>idx</strong> – The index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426bitwuzla_mk_term2_indexed212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t8uint64_t">
+<span id="_CPPv326bitwuzla_mk_term2_indexed212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t8uint64_t"></span><span id="_CPPv226bitwuzla_mk_term2_indexed212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t8uint64_t"></span><span id="bitwuzla_mk_term2_indexed2__BitwuzlaKind.BitwuzlaTerm.BitwuzlaTerm.uint64_t.uint64_t"></span><span class="target" id="group__c__term__creation_1ga452fd331163360bce3b2f6d6e52c615f"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_term2_indexed2</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><span class="n"><span class="pre">BitwuzlaKind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg0</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">arg1</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">idx0</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">idx1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_mk_term2_indexed212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an indexed term of given kind with two argument terms and two indices.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>arg0</strong> – The first argument term. </p></li>
+<li><p><strong>arg1</strong> – The second argument term. </p></li>
+<li><p><strong>idx0</strong> – The first index. </p></li>
+<li><p><strong>idx1</strong> – The second index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424bitwuzla_mk_term_indexed12BitwuzlaKind8uint32_tA_12BitwuzlaTerm8uint32_tA_K8uint64_t">
+<span id="_CPPv324bitwuzla_mk_term_indexed12BitwuzlaKind8uint32_tA_12BitwuzlaTerm8uint32_tA_K8uint64_t"></span><span id="_CPPv224bitwuzla_mk_term_indexed12BitwuzlaKind8uint32_tA_12BitwuzlaTerm8uint32_tA_K8uint64_t"></span><span id="bitwuzla_mk_term_indexed__BitwuzlaKind.uint32_t.BitwuzlaTermA.uint32_t.uint64_tCA"></span><span class="target" id="group__c__term__creation_1ga5a32d41a72e80f9ab9fd8b922a2bc22f"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_term_indexed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><span class="n"><span class="pre">BitwuzlaKind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">idxc</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">idxs</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424bitwuzla_mk_term_indexed12BitwuzlaKind8uint32_tA_12BitwuzlaTerm8uint32_tA_K8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an indexed term of given kind with the given argument terms and indices.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>argc</strong> – The number of argument terms. </p></li>
+<li><p><strong>args</strong> – The argument terms. </p></li>
+<li><p><strong>idxc</strong> – The number of indices. </p></li>
+<li><p><strong>idxs</strong> – The indices.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417bitwuzla_mk_const12BitwuzlaSortPKc">
+<span id="_CPPv317bitwuzla_mk_const12BitwuzlaSortPKc"></span><span id="_CPPv217bitwuzla_mk_const12BitwuzlaSortPKc"></span><span id="bitwuzla_mk_const__BitwuzlaSort.cCP"></span><span class="target" id="group__c__term__creation_1ga885a1f71a433bf5ad8b3860d45d766a4"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_const</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">symbol</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417bitwuzla_mk_const12BitwuzlaSortPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a (first-order) constant of given sort with given symbol.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga69dc2abdb304f46618b87e5ad0955361"><span class="std std-ref"><span class="pre">bitwuzla_mk_array_sort</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1gacdf18c2d5a68f684eb93c4e0a781625c"><span class="std std-ref"><span class="pre">bitwuzla_mk_bool_sort</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1gab67bdee3bbcfc271a36dff873ba199c8"><span class="std std-ref"><span class="pre">bitwuzla_mk_fun_sort</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5"><span class="std std-ref"><span class="pre">bitwuzla_mk_rm_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the constant. </p></li>
+<li><p><strong>symbol</strong> – The symbol of the constant.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind BITWUZLA_KIND_CONST, representing the constant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423bitwuzla_mk_const_array12BitwuzlaSort12BitwuzlaTerm">
+<span id="_CPPv323bitwuzla_mk_const_array12BitwuzlaSort12BitwuzlaTerm"></span><span id="_CPPv223bitwuzla_mk_const_array12BitwuzlaSort12BitwuzlaTerm"></span><span id="bitwuzla_mk_const_array__BitwuzlaSort.BitwuzlaTerm"></span><span class="target" id="group__c__term__creation_1gad92c00bf5c5c651384b5550ec4161357"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_const_array</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_mk_const_array12BitwuzlaSort12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a one-dimensional constant array of given sort, initialized with given value.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga69dc2abdb304f46618b87e5ad0955361"><span class="std std-ref"><span class="pre">bitwuzla_mk_array_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the array. </p></li>
+<li><p><strong>value</strong> – The term to initialize the elements of the array with.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind BITWUZLA_KIND_CONST_ARRAY, representing a constant array of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415bitwuzla_mk_var12BitwuzlaSortPKc">
+<span id="_CPPv315bitwuzla_mk_var12BitwuzlaSortPKc"></span><span id="_CPPv215bitwuzla_mk_var12BitwuzlaSortPKc"></span><span id="bitwuzla_mk_var__BitwuzlaSort.cCP"></span><span class="target" id="group__c__term__creation_1ga4e0b935b7719c68a38200d946ea29390"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_var</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">symbol</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415bitwuzla_mk_var12BitwuzlaSortPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a variable of given sort with given symbol.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1gacdf18c2d5a68f684eb93c4e0a781625c"><span class="std std-ref"><span class="pre">bitwuzla_mk_bool_sort</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1gab67bdee3bbcfc271a36dff873ba199c8"><span class="std std-ref"><span class="pre">bitwuzla_mk_fun_sort</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5"><span class="std std-ref"><span class="pre">bitwuzla_mk_rm_sort</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This creates a variable to be bound by quantifiers or lambdas.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the variable. </p></li>
+<li><p><strong>symbol</strong> – The symbol of the variable.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAR, representing the variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sort_creation.html" class="btn btn-neutral float-left" title="Sort Creation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../python/api.html" class="btn btn-neutral float-right" title="Python API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

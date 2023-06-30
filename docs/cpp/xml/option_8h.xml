@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="option_8h" kind="file" language="C++">
+    <compoundname>option.h</compoundname>
+    <includedby refid="bitwuzla_8h" local="no">/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h</label>
+        <link refid="bitwuzla_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h</label>
+        <link refid="parser_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/ma/git/bitwuzla/include/bitwuzla/option.h</label>
+        <link refid="option_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacebitwuzla">bitwuzla</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="option_8h_1afdaccbb8028676944c5b4dad92968641" prot="public" static="no">
+        <name>ENUM</name>
+        <param><defname>name</defname></param>
+        <initializer>class name</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/option.h" line="18" column="9" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/option.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="option_8h_1a8f41c0c7caad09e429617fc016a216e8" prot="public" static="no">
+        <name>EVALUE</name>
+        <param><defname>name</defname></param>
+        <initializer>name</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/option.h" line="19" column="9" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/option.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="option_8h_1a1fd6b96c13bb17b801b9ad07b8741b44" prot="public" static="no">
+        <name>BITWUZLA_API_OPTION_CPP_H_INCLUDED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/option.h" line="407" column="9" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/option.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Bitwuzla:<sp/>Satisfiability<sp/>Modulo<sp/>Theories<sp/>(SMT)<sp/>solver.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2022<sp/>by<sp/>the<sp/>authors<sp/>listed<sp/>in<sp/>the<sp/>AUTHORS<sp/>file<sp/>at</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>https://github.com/bitwuzla/bitwuzla/blob/main/AUTHORS</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>Bitwuzla<sp/>under<sp/>the<sp/>MIT<sp/>license.<sp/>See<sp/>COPYING<sp/>for<sp/>more</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>information<sp/>at<sp/>https://github.com/bitwuzla/bitwuzla/blob/main/COPYING</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(!defined(BITWUZLA_API_USE_C_ENUMS)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>!defined(BITWUZLA_API_OPTION_CPP_H_INCLUDED))<sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>(defined(BITWUZLA_API_USE_C_ENUMS)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>!defined(BITWUZLA_API_OPTION_C_H_INCLUDED))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_USE_C_ENUMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacebitwuzla" kindref="compound">bitwuzla</ref><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="option_8h_1afdaccbb8028676944c5b4dad92968641" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENUM(name)<sp/>class<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="option_8h_1a8f41c0c7caad09e429617fc016a216e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVALUE(name)<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENUM(name)<sp/>Bitwuzla##name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVALUE(name)<sp/>BITWUZLA_OPT_##name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Option<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="enums_8h_1afdaccbb8028676944c5b4dad92968641" kindref="member">ENUM</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186c" kindref="member">Option</ref>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----------------<sp/>General<sp/>Options<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca5048fdbe2a2b837df1853cf489f67c79" kindref="member">LOGLEVEL</ref>),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca774ed7dd04f5529097c71c370400f400" kindref="member">PRODUCE_MODELS</ref>),</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca927ef50820a381ad5bd51e74e2ec0d56" kindref="member">PRODUCE_UNSAT_ASSUMPTIONS</ref>),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca42e86322b1c02730b3d46d3ac7e7b764" kindref="member">PRODUCE_UNSAT_CORES</ref>),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caace01ee43fda36bd62efc12035e693f6" kindref="member">SEED</ref>),</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca47a219833a4b3a09240896c88b2b1969" kindref="member">VERBOSITY</ref>),</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>----------------<sp/>Bitwuzla-specific<sp/>Options<sp/>-----------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd" kindref="member">BV_SOLVER</ref>),</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca96418388056c40211e08154f7a57b968" kindref="member">REWRITE_LEVEL</ref>),</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca515be110f1f5292a65b352304a3830f9" kindref="member">SAT_SOLVER</ref>),</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca5d2a93bb2ff3b4d482dc7689faae9e2a" kindref="member">SMT_COMP_MODE</ref>),</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>----------------<sp/>BV:<sp/>Prop<sp/>Engine<sp/>Options<sp/>(Expert)<sp/>----------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cabe6a4cc7d4b56805103d31dbefbfcd6e" kindref="member">PROP_CONST_BITS</ref>),</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caced9db19fa1257dab49a847db2e4cde9" kindref="member">PROP_INFER_INEQ_BOUNDS</ref>),</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca83063674e672d8e78b083f4dfa408ffb" kindref="member">PROP_NPROPS</ref>),</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca36b1a60b980f5c533aa8a6dbef09a48c" kindref="member">PROP_NUPDATES</ref>),</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca63c7a811c00ff00d9f5a237cabf2543b" kindref="member">PROP_PATH_SEL</ref>),</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca87c6bdf684cee3eb743a8abfa9ed61a7" kindref="member">PROP_PROB_RANDOM_INPUT</ref>),</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cabfa15c20c18066f7610cf3d8a51c032f" kindref="member">PROP_PROB_USE_INV_VALUE</ref>),</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cac2b947f70328a297b870c138e4ad835f" kindref="member">PROP_SEXT</ref>),</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca4bf56e2165830ba1465aed3bdaf72898" kindref="member">PROP_NORMALIZE</ref>),</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cad36ca94e75c11d2653c1e71bcb93710b" kindref="member">PREPROCESS</ref>),</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1c1c4b2437c7952b55e5e2877a75f4fd" kindref="member">PP_CONTRADICTING_ANDS</ref>),</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1d0d73e16af622f85896f6c07df5bc34" kindref="member">PP_ELIM_BV_EXTRACTS</ref>),</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca37991ae5aee10bd7e0fa016150cf6a64" kindref="member">PP_EMBEDDED_CONSTR</ref>),</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cadc7ff13bb74ca1c49e0564abf923e3d2" kindref="member">PP_FLATTEN_AND</ref>),</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca84a8ad14719834487fd8fbee802215eb" kindref="member">PP_NORMALIZE</ref>),</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca7d0099ba97cb317010098d251b0baf3a" kindref="member">PP_NORMALIZE_SHARE_AWARE</ref>),</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca0a6cc51a63c36639ea1769670675f969" kindref="member">PP_SKELETON_PREPROC</ref>),</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cac44b65f5b4b5d31b10ca8b5fe954bbc1" kindref="member">PP_VARIABLE_SUBST</ref>),</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1302e26f0b37334e5c554325a2fad3d1" kindref="member">PP_VARIABLE_SUBST_NORM_EQ</ref>),</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10eb86e7de63c768bde672ecfd292c1" kindref="member">PP_VARIABLE_SUBST_NORM_DISEQ</ref>),</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca2089c6d88dbe832e98a05e815bdf0188" kindref="member">PP_VARIABLE_SUBST_NORM_BV_INEQ</ref>),</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8d8b44fad62581c9ffeeaf68ebe62dc3" kindref="member">DBG_RW_NODE_THRESH</ref>),</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca10f37c69dfa6cd94b4faac917351a255" kindref="member">DBG_PP_NODE_THRESH</ref>),</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cab18b82c70b05c19150feec3faa69e579" kindref="member">DBG_CHECK_MODEL</ref>),</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(<ref refid="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cab981bb691bf2411da3eaf4e90d9789ad" kindref="member">DBG_CHECK_UNSAT_CORE</ref>),</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SKIP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(NUM_OPTS),</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BITWUZLA_API_USE_C_ENUMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SKIP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>BitwuzlaOption<sp/>BitwuzlaOption;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_USE_C_ENUMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>bitwuzla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>EVALUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>ENUM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_USE_C_ENUMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_OPTION_CPP_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407" refid="option_8h_1a1fd6b96c13bb17b801b9ad07b8741b44" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BITWUZLA_API_OPTION_CPP_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_OPTION_C_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BITWUZLA_API_OPTION_C_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/ma/git/bitwuzla/include/bitwuzla/option.h"/>
+  </compounddef>
+</doxygen>

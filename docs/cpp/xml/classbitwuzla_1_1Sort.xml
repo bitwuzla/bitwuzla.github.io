@@ -1,0 +1,1780 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classbitwuzla_1_1Sort" kind="class" language="C++" prot="public">
+    <compoundname>bitwuzla::Sort</compoundname>
+    <includes refid="bitwuzla_8h" local="no">bitwuzla.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classbitwuzla_1_1Sort_1a2da89d4bccbf5958991ae07a588336b5" prot="private" static="no" mutable="no">
+        <type>friend</type>
+        <definition>friend bitwuzla::Sort::Bitwuzla</definition>
+        <argsstring></argsstring>
+        <name>Bitwuzla</name>
+        <qualifiedname>bitwuzla::Sort::Bitwuzla</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="751" column="10" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="751" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Sort_1a49020fd87997b251485ea89e9e8ddbb8" prot="private" static="no" mutable="no">
+        <type>friend</type>
+        <definition>friend bitwuzla::Sort::Term</definition>
+        <argsstring></argsstring>
+        <name>Term</name>
+        <qualifiedname>bitwuzla::Sort::Term</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="752" column="10" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="752" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Sort_1a15c3f0404c1173655e6d32bde92d5544" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; bzla::Type &gt;</type>
+        <definition>std::shared_ptr&lt;bzla::Type&gt; bitwuzla::Sort::d_type</definition>
+        <argsstring></argsstring>
+        <name>d_type</name>
+        <qualifiedname>bitwuzla::Sort::d_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The internal type wrapped by this sort. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="934" column="19" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="934" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1aec66cca27707d2e14070b788814097b6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const Sort &amp;a, const Sort &amp;b)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>bitwuzla::Sort::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Syntactical equality operator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first sort. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second sort. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the given sorts are equal. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="753" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a21dd709785e44efc98c1c9a45290be85" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const Sort &amp;a, const Sort &amp;b)</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>bitwuzla::Sort::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Syntactical disequality operator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first sort. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second sort. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the given sorts are disequal. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="754" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1aed728b09e732e708de8431c5721b7e6f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const Sort &amp;sort)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>bitwuzla::Sort::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print sort to output stream. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The output stream. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="755" column="10"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a581e928e27afdf2f8d69c0965d7ede0a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort mk_array_sort</definition>
+        <argsstring>(const Sort &amp;, const Sort &amp;)</argsstring>
+        <name>mk_array_sort</name>
+        <qualifiedname>bitwuzla::Sort::mk_array_sort</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>index</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>element</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an array sort. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index sort of the array sort. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element sort of the array sort. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array sort which maps sort <computeroutput>index</computeroutput> to sort <computeroutput>element</computeroutput>.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a5053644e2c55124772be5608434dcd0d" kindref="member">Sort::is_array()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput>Sort::array_get_index()</computeroutput></para>
+</listitem><listitem><para><computeroutput>Sort::array_get_element()</computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="757" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1adbbdb9e91f40d3b16b5d3a59ea0b87bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort mk_bool_sort</definition>
+        <argsstring>()</argsstring>
+        <name>mk_bool_sort</name>
+        <qualifiedname>bitwuzla::Sort::mk_bool_sort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a Boolean sort. <simplesect kind="return"><para>A Boolean sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="758" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort mk_bv_sort</definition>
+        <argsstring>(uint64_t)</argsstring>
+        <name>mk_bv_sort</name>
+        <qualifiedname>bitwuzla::Sort::mk_bv_sort</qualifiedname>
+        <param>
+          <type>uint64_t</type>
+          <defname>size</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector sort of given size. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the bit-vector sort. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A bit-vector sort of given size.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a40020deea906cc3d5d3ba68455fecb0d" kindref="member">Sort::is_bv()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a5b31d07e9aad31a5b12d6d6ab0e23596" kindref="member">Sort::bv_size()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="759" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort mk_fp_sort</definition>
+        <argsstring>(uint64_t, uint64_t)</argsstring>
+        <name>mk_fp_sort</name>
+        <qualifiedname>bitwuzla::Sort::mk_fp_sort</qualifiedname>
+        <param>
+          <type>uint64_t</type>
+          <defname>exp_size</defname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <defname>sig_size</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point sort of given exponent and significand size. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>exp_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the exponent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the significand (including sign bit). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point sort of given format.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a4df38c43b17972bd890cc7aed86d1a94" kindref="member">Sort::is_fp()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1ac50225d7851be8aa7656caed0a6e650c" kindref="member">Sort::fp_exp_size()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a87691e57f73024f1ba4bbe7aa88f0f31" kindref="member">Sort::fp_sig_size()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="760" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1acbb0786e7ec9303b882eab9b3eb68fc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort mk_fun_sort</definition>
+        <argsstring>(const std::vector&lt; Sort &gt; &amp;, const Sort &amp;)</argsstring>
+        <name>mk_fun_sort</name>
+        <qualifiedname>bitwuzla::Sort::mk_fun_sort</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &gt; &amp;</type>
+          <defname>domain</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>codomain</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a function sort. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>domain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The domain sorts (the sorts of the arguments). The number of sorts in this vector must match <computeroutput>arity</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>codomain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The codomain sort (the sort of the return value). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A function sort of given domain and codomain sorts.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a94f8916e0b6635e9405f8346b90a0a74" kindref="member">Sort::is_fun()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1ad9f4109e31ec0dba4019bde19e7d4261" kindref="member">Sort::fun_arity()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput>Sort::fun_domain_sorts()</computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a9c7533502e3d1afdc1632f0712a57a92" kindref="member">Sort::fun_codomain()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="761" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1aea08559b2cf04efe9348106fef22dd7e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort mk_uninterpreted_sort</definition>
+        <argsstring>(std::optional&lt; const std::string &gt;)</argsstring>
+        <name>mk_uninterpreted_sort</name>
+        <qualifiedname>bitwuzla::Sort::mk_uninterpreted_sort</qualifiedname>
+        <param>
+          <type>std::optional&lt; const std::string &gt;</type>
+          <defname>symbol</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an uninterpreted sort.</para>
+<para><simplesect kind="note"><para>Only 0-arity uninterpreted sorts are supported.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The symbol of the sort. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An uninterpreted sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1aa6464ab9f30e220a79427551614f7246" kindref="member">Sort::is_uninterpreted()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="762" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a472f4ea2e04142cc8a2d47f2c69ea45f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort mk_rm_sort</definition>
+        <argsstring>()</argsstring>
+        <name>mk_rm_sort</name>
+        <qualifiedname>bitwuzla::Sort::mk_rm_sort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a Roundingmode sort. <simplesect kind="return"><para>A Roundingmode sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1af1ce6186dac747fc78cb9fe78f3a62f4" kindref="member">Sort::is_rm()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="763" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a21deaee413784aedfdb0bf050a8d1ff4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_bv_zero</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_bv_zero</name>
+        <qualifiedname>bitwuzla::Sort::mk_bv_zero</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value zero. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value 0 of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="764" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a1def1d262a66ec5f01c513d2d8794b4f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_bv_one</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_bv_one</name>
+        <qualifiedname>bitwuzla::Sort::mk_bv_one</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value one. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value 1 of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="765" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a096ea9ab2fe938ac1c3d8ea92fcf547b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_bv_ones</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_bv_ones</name>
+        <qualifiedname>bitwuzla::Sort::mk_bv_ones</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value where all bits are set to 1. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value of given sort where all bits are set to 1. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="766" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a52eab4ba74f2b35110100ee56a052bed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_bv_min_signed</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_bv_min_signed</name>
+        <qualifiedname>bitwuzla::Sort::mk_bv_min_signed</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector minimum signed value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value of given sort where the MSB is set to 1 and all remaining bits are set to 0. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="767" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a256519226f125bd3c4e9dcb4155452a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_bv_max_signed</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_bv_max_signed</name>
+        <qualifiedname>bitwuzla::Sort::mk_bv_max_signed</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector maximum signed value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value of given sort where the MSB is set to 0 and all remaining bits are set to 1. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="768" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a1e8974e78a8353987c2289bfc7921410" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_bv_value</definition>
+        <argsstring>(const Sort &amp;, const std::string &amp;, uint8_t)</argsstring>
+        <name>mk_bv_value</name>
+        <qualifiedname>bitwuzla::Sort::mk_bv_value</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>value</defname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <defname>base</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value from its string representation.</para>
+<para>Parameter <computeroutput>base</computeroutput> determines the base of the string representation.</para>
+<para><simplesect kind="note"><para>Given value must fit into a bit-vector of given size (sort).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base in which the string is given; <computeroutput>2</computeroutput> for binary, <computeroutput>10</computeroutput> for decimal, and <computeroutput>16</computeroutput> for hexadecimal.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f" kindref="member">Kind::VALUE</ref>, representing the bit-vector value of given sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="769" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a7e0b05d9ebcd48372423181169909e1e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_bv_value_uint64</definition>
+        <argsstring>(const Sort &amp;, uint64_t)</argsstring>
+        <name>mk_bv_value_uint64</name>
+        <qualifiedname>bitwuzla::Sort::mk_bv_value_uint64</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value from its unsigned integer representation.</para>
+<para><simplesect kind="note"><para>Given value must fit into a bit-vector of given size (sort).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unsigned integer representation of the bit-vector value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f" kindref="member">Kind::VALUE</ref>, representing the bit-vector value of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="770" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a62f3065dfb1ef050261da9915e2be8ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_bv_value_int64</definition>
+        <argsstring>(const Sort &amp;, int64_t)</argsstring>
+        <name>mk_bv_value_int64</name>
+        <qualifiedname>bitwuzla::Sort::mk_bv_value_int64</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value from its signed integer representation.</para>
+<para><simplesect kind="note"><para>Given value must fit into a bit-vector of given size (sort).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unsigned integer representation of the bit-vector value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f" kindref="member">Kind::VALUE</ref>, representing the bit-vector value of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="771" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a999ef3ce6c86e7b796ea13c3bd7f4b52" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_fp_pos_zero</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_fp_pos_zero</name>
+        <qualifiedname>bitwuzla::Sort::mk_fp_pos_zero</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point positive zero value (SMT-LIB: <computeroutput>+zero</computeroutput>). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point positive zero value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" kindref="member">mk_fp_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="772" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a7d6fd157d189b282e6d26e82315cc82c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_fp_neg_zero</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_fp_neg_zero</name>
+        <qualifiedname>bitwuzla::Sort::mk_fp_neg_zero</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point negative zero value (SMT-LIB: <computeroutput>-zero</computeroutput>). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point negative zero value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" kindref="member">mk_fp_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="773" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a0ea70d64b0b879a6dbe98b0d353255ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_fp_pos_inf</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_fp_pos_inf</name>
+        <qualifiedname>bitwuzla::Sort::mk_fp_pos_inf</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point positive infinity value (SMT-LIB: <computeroutput>+oo</computeroutput>). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point positive infinity value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" kindref="member">mk_fp_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="774" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a96d63c3991034eddd8d85af94839d969" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_fp_neg_inf</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_fp_neg_inf</name>
+        <qualifiedname>bitwuzla::Sort::mk_fp_neg_inf</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point negative infinity value (SMT-LIB: <computeroutput>-oo</computeroutput>). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point negative infinity value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" kindref="member">mk_fp_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="775" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1aaa3b3c93aeb9b3ee6ae6a28bc9fee134" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_fp_nan</definition>
+        <argsstring>(const Sort &amp;)</argsstring>
+        <name>mk_fp_nan</name>
+        <qualifiedname>bitwuzla::Sort::mk_fp_nan</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point NaN value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point NaN value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" kindref="member">mk_fp_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="776" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1ad5816c18a3c2849a80fb8975bebb788b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_fp_value</definition>
+        <argsstring>(const Sort &amp;, const Term &amp;, const std::string &amp;)</argsstring>
+        <name>mk_fp_value</name>
+        <qualifiedname>bitwuzla::Sort::mk_fp_value</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &amp;</type>
+          <defname>rm</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>real</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point value from its real representation, given as a decimal string, with respect to given rounding mode.</para>
+<para><simplesect kind="note"><para>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rounding mode. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>real</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decimal string representing a real value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point representation of the given real string. If <computeroutput>rm</computeroutput> is of kind <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f" kindref="member">Kind::VALUE</ref> the floating-point will be of kind <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f" kindref="member">Kind::VALUE</ref>, else it will be a non-value term.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" kindref="member">mk_fp_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="777" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1ab53b48c74a6f31dda077c6ff13537d48" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_fp_value</definition>
+        <argsstring>(const Sort &amp;, const Term &amp;, const std::string &amp;, const std::string &amp;)</argsstring>
+        <name>mk_fp_value</name>
+        <qualifiedname>bitwuzla::Sort::mk_fp_value</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &amp;</type>
+          <defname>rm</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>num</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>den</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point value from its rational representation, given as a two decimal strings representing the numerator and denominator, with respect to given rounding mode.</para>
+<para><simplesect kind="note"><para>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rounding mode. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decimal string representing the numerator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>den</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decimal string representing the denominator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point representation of the given rational string. If <computeroutput>rm</computeroutput> is of kind <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f" kindref="member">Kind::VALUE</ref> the floating-point will be of kind <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f" kindref="member">Kind::VALUE</ref>, else it will be a non-value term.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" kindref="member">mk_fp_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="778" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a5a493568380595a43a6573fd5b6f4ba5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_const_array</definition>
+        <argsstring>(const Sort &amp;, const Term &amp;)</argsstring>
+        <name>mk_const_array</name>
+        <qualifiedname>bitwuzla::Sort::mk_const_array</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &amp;</type>
+          <defname>term</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a one-dimensional constant array of given sort, initialized with given value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the array. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term to initialize the elements of the array with.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca0a0d89e2802bf5614a9e6e3531c563a6" kindref="member">Kind::CONST_ARRAY</ref>, representing a constant array of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a581e928e27afdf2f8d69c0965d7ede0a" kindref="member">mk_array_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="782" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1a0cd6124cb9f917bb8b6aa267c261546d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_term</definition>
+        <argsstring>(Kind, const std::vector&lt; Term &gt; &amp;, const std::vector&lt; uint64_t &gt; &amp;)</argsstring>
+        <name>mk_term</name>
+        <qualifiedname>bitwuzla::Sort::mk_term</qualifiedname>
+        <param>
+          <type><ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4c" kindref="member">Kind</ref></type>
+          <defname>kind</defname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &gt; &amp;</type>
+          <defname>args</defname>
+        </param>
+        <param>
+          <type>const std::vector&lt; uint64_t &gt; &amp;</type>
+          <defname>indices</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a term of given kind with the given argument terms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument terms. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>indices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The indices of this term, empty if not indexed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4c" kindref="member">Kind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="783" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1acbb09fc10eba2a8d26edaa22f606fb25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_const</definition>
+        <argsstring>(const Sort &amp;, std::optional&lt; const std::string &gt;)</argsstring>
+        <name>mk_const</name>
+        <qualifiedname>bitwuzla::Sort::mk_const</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <param>
+          <type>std::optional&lt; const std::string &gt;</type>
+          <defname>symbol</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a (first-order) constant of given sort with given symbol.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the constant. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The symbol of the constant.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca8d6b5cada83510220f59e00ce86d4d92" kindref="member">Kind::CONSTANT</ref>, representing the constant.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a581e928e27afdf2f8d69c0965d7ede0a" kindref="member">mk_array_sort()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1adbbdb9e91f40d3b16b5d3a59ea0b87bd" kindref="member">mk_bool_sort()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" kindref="member">mk_fp_sort()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1acbb0786e7ec9303b882eab9b3eb68fc0" kindref="member">mk_fun_sort()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a472f4ea2e04142cc8a2d47f2c69ea45f" kindref="member">mk_rm_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="786" column="15"/>
+      </memberdef>
+      <memberdef kind="friend" id="classbitwuzla_1_1Sort_1ade2e98bd3bb00199cfcfc43b207fca8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term mk_var</definition>
+        <argsstring>(const Sort &amp;, std::optional&lt; const std::string &gt;)</argsstring>
+        <name>mk_var</name>
+        <qualifiedname>bitwuzla::Sort::mk_var</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &amp;</type>
+          <defname>sort</defname>
+        </param>
+        <param>
+          <type>std::optional&lt; const std::string &gt;</type>
+          <defname>symbol</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a variable of given sort with given symbol.</para>
+<para><simplesect kind="note"><para>This creates a variable to be bound by quantifiers or lambdas.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the variable. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The symbol of the variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of <ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cae61ad9b2553a293b4a3f4d3b4fa5ab31" kindref="member">Kind::VARIABLE</ref>, representing the variable.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1adbbdb9e91f40d3b16b5d3a59ea0b87bd" kindref="member">mk_bool_sort()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" kindref="member">mk_bv_sort()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" kindref="member">mk_fp_sort()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1acbb0786e7ec9303b882eab9b3eb68fc0" kindref="member">mk_fun_sort()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Sort_1a472f4ea2e04142cc8a2d47f2c69ea45f" kindref="member">mk_rm_sort()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="787" column="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1ae49ed087d0b73305a61b3df5b53b3fdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bitwuzla::Sort::Sort</definition>
+        <argsstring>()</argsstring>
+        <name>Sort</name>
+        <qualifiedname>bitwuzla::Sort::Sort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor, creates null sort. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="791" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a29dd62b2c573dfde075750d6bf538394" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bitwuzla::Sort::~Sort</definition>
+        <argsstring>()</argsstring>
+        <name>~Sort</name>
+        <qualifiedname>bitwuzla::Sort::~Sort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="793" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a6ef4a7a7c462ac6772b74df28b0564df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla::Sort::is_null</definition>
+        <argsstring>() const</argsstring>
+        <name>is_null</name>
+        <qualifiedname>bitwuzla::Sort::is_null</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if this sort is a null sort. <simplesect kind="return"><para>True if this sort is a null sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="799" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a6f48ffc96f81bbc105cfe76b9c814261" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla::Sort::id</definition>
+        <argsstring>() const</argsstring>
+        <name>id</name>
+        <qualifiedname>bitwuzla::Sort::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the id of this sort. <simplesect kind="return"><para>The sort id. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="805" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a5b31d07e9aad31a5b12d6d6ab0e23596" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla::Sort::bv_size</definition>
+        <argsstring>() const</argsstring>
+        <name>bv_size</name>
+        <qualifiedname>bitwuzla::Sort::bv_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the size of a bit-vector sort.</para>
+<para>Requires that given sort is a bit-vector sort.</para>
+<para><simplesect kind="return"><para>The size of the bit-vector sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="814" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1ac50225d7851be8aa7656caed0a6e650c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla::Sort::fp_exp_size</definition>
+        <argsstring>() const</argsstring>
+        <name>fp_exp_size</name>
+        <qualifiedname>bitwuzla::Sort::fp_exp_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the exponent size of a floating-point sort.</para>
+<para>Requires that given sort is a floating-point sort.</para>
+<para><simplesect kind="return"><para>The exponent size of the floating-point sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="822" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a87691e57f73024f1ba4bbe7aa88f0f31" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla::Sort::fp_sig_size</definition>
+        <argsstring>() const</argsstring>
+        <name>fp_sig_size</name>
+        <qualifiedname>bitwuzla::Sort::fp_sig_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the significand size of a floating-point sort.</para>
+<para>Requires that given sort is a floating-point sort.</para>
+<para><simplesect kind="return"><para>The significand size of the floating-point sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="830" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a0ae31f6e687985f45808e3ba13e99e5a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort bitwuzla::Sort::array_index</definition>
+        <argsstring>() const</argsstring>
+        <name>array_index</name>
+        <qualifiedname>bitwuzla::Sort::array_index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the index sort of an array sort.</para>
+<para>Requires that given sort is an array sort.</para>
+<para><simplesect kind="return"><para>The index sort of the array sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="838" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a5c024b069c935eb6565c4f311eb15576" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort bitwuzla::Sort::array_element</definition>
+        <argsstring>() const</argsstring>
+        <name>array_element</name>
+        <qualifiedname>bitwuzla::Sort::array_element</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the element sort of an array sort.</para>
+<para>Requires that given sort is an array sort.</para>
+<para><simplesect kind="return"><para>The element sort of the array sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="847" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1aa222025f091b3223690ebdcf7d067695" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &gt;</type>
+        <definition>std::vector&lt; Sort &gt; bitwuzla::Sort::fun_domain</definition>
+        <argsstring>() const</argsstring>
+        <name>fun_domain</name>
+        <qualifiedname>bitwuzla::Sort::fun_domain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the domain sorts of a function sort.</para>
+<para>Requires that given sort is a function sort.</para>
+<para><simplesect kind="return"><para>The domain sorts of the function sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="856" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a9c7533502e3d1afdc1632f0712a57a92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref></type>
+        <definition>Sort bitwuzla::Sort::fun_codomain</definition>
+        <argsstring>() const</argsstring>
+        <name>fun_codomain</name>
+        <qualifiedname>bitwuzla::Sort::fun_codomain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the codomain sort of a function sort.</para>
+<para>Requires that given sort is a function sort.</para>
+<para><simplesect kind="return"><para>The codomain sort of the function sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="865" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1ad9f4109e31ec0dba4019bde19e7d4261" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t bitwuzla::Sort::fun_arity</definition>
+        <argsstring>() const</argsstring>
+        <name>fun_arity</name>
+        <qualifiedname>bitwuzla::Sort::fun_arity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the arity of a function sort. <simplesect kind="return"><para>The number of arguments of the function sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="871" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a8abeaa1a38012dd895a023186fbfb42a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::optional&lt; std::string &gt;</type>
+        <definition>std::optional&lt; std::string &gt; bitwuzla::Sort::uninterpreted_symbol</definition>
+        <argsstring>() const</argsstring>
+        <name>uninterpreted_symbol</name>
+        <qualifiedname>bitwuzla::Sort::uninterpreted_symbol</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the symbol of an uninterpreted sort. <simplesect kind="return"><para>The symbol. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="877" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a5053644e2c55124772be5608434dcd0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla::Sort::is_array</definition>
+        <argsstring>() const</argsstring>
+        <name>is_array</name>
+        <qualifiedname>bitwuzla::Sort::is_array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if this sort is an array sort. <simplesect kind="return"><para>True if this sort is an array sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="883" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a39b28f0a643d86afcb1fa8b643c70b5d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla::Sort::is_bool</definition>
+        <argsstring>() const</argsstring>
+        <name>is_bool</name>
+        <qualifiedname>bitwuzla::Sort::is_bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if this sort is a Boolean sort. <simplesect kind="return"><para>True if this sort is a Boolean sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="889" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a40020deea906cc3d5d3ba68455fecb0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla::Sort::is_bv</definition>
+        <argsstring>() const</argsstring>
+        <name>is_bv</name>
+        <qualifiedname>bitwuzla::Sort::is_bv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if this sort is a bit-vector sort. <simplesect kind="return"><para>True if <computeroutput>sort</computeroutput> is a bit-vector sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="895" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a4df38c43b17972bd890cc7aed86d1a94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla::Sort::is_fp</definition>
+        <argsstring>() const</argsstring>
+        <name>is_fp</name>
+        <qualifiedname>bitwuzla::Sort::is_fp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if this sort is a floating-point sort. <simplesect kind="return"><para>True if this sort is a floating-point sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="901" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a94f8916e0b6635e9405f8346b90a0a74" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla::Sort::is_fun</definition>
+        <argsstring>() const</argsstring>
+        <name>is_fun</name>
+        <qualifiedname>bitwuzla::Sort::is_fun</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if this sort is a function sort. <simplesect kind="return"><para>True if this sort is a function sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="907" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1af1ce6186dac747fc78cb9fe78f3a62f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla::Sort::is_rm</definition>
+        <argsstring>() const</argsstring>
+        <name>is_rm</name>
+        <qualifiedname>bitwuzla::Sort::is_rm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if this sort is a Roundingmode sort. <simplesect kind="return"><para>True if this sort is a Roundingmode sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="913" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1aa6464ab9f30e220a79427551614f7246" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla::Sort::is_uninterpreted</definition>
+        <argsstring>() const</argsstring>
+        <name>is_uninterpreted</name>
+        <qualifiedname>bitwuzla::Sort::is_uninterpreted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if this sort is an uninterpreted sort. <simplesect kind="return"><para>True if this sort is an uninterpreted sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="919" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a91afbf06f7d49aff017482d1fbebdfbb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string bitwuzla::Sort::str</definition>
+        <argsstring>() const</argsstring>
+        <name>str</name>
+        <qualifiedname>bitwuzla::Sort::str</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get string representation of this sort. <simplesect kind="return"><para>String representation of this sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="925" column="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1ac7e177e71b2ccb606f62adbbad968ac1" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; bzla::Type &gt;</type>
+        <definition>static std::vector&lt; bzla::Type &gt; bitwuzla::Sort::sort_vector_to_types</definition>
+        <argsstring>(const std::vector&lt; Sort &gt; &amp;sorts)</argsstring>
+        <name>sort_vector_to_types</name>
+        <qualifiedname>bitwuzla::Sort::sort_vector_to_types</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="classbitwuzla_1_1Sort" kindref="compound">Sort</ref> &gt; &amp;</type>
+          <declname>sorts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert vector of sorts to internal types. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="929" column="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classbitwuzla_1_1Sort_1a49cc0f61947bc205c38fe613da6ecf00" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bitwuzla::Sort::Sort</definition>
+        <argsstring>(const bzla::Type &amp;type)</argsstring>
+        <name>Sort</name>
+        <qualifiedname>bitwuzla::Sort::Sort</qualifiedname>
+        <param>
+          <type>const bzla::Type &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor from internal type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="932" column="3"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="749" column="1" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="750" bodyend="935"/>
+    <listofallmembers>
+      <member refid="classbitwuzla_1_1Sort_1a5c024b069c935eb6565c4f311eb15576" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>array_element</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a0ae31f6e687985f45808e3ba13e99e5a" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>array_index</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a2da89d4bccbf5958991ae07a588336b5" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>Bitwuzla</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a5b31d07e9aad31a5b12d6d6ab0e23596" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>bv_size</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a15c3f0404c1173655e6d32bde92d5544" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>d_type</name></member>
+      <member refid="classbitwuzla_1_1Sort_1ac50225d7851be8aa7656caed0a6e650c" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>fp_exp_size</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a87691e57f73024f1ba4bbe7aa88f0f31" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>fp_sig_size</name></member>
+      <member refid="classbitwuzla_1_1Sort_1ad9f4109e31ec0dba4019bde19e7d4261" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>fun_arity</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a9c7533502e3d1afdc1632f0712a57a92" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>fun_codomain</name></member>
+      <member refid="classbitwuzla_1_1Sort_1aa222025f091b3223690ebdcf7d067695" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>fun_domain</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a6f48ffc96f81bbc105cfe76b9c814261" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>id</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a5053644e2c55124772be5608434dcd0d" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>is_array</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a39b28f0a643d86afcb1fa8b643c70b5d" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>is_bool</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a40020deea906cc3d5d3ba68455fecb0d" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>is_bv</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a4df38c43b17972bd890cc7aed86d1a94" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>is_fp</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a94f8916e0b6635e9405f8346b90a0a74" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>is_fun</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a6ef4a7a7c462ac6772b74df28b0564df" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>is_null</name></member>
+      <member refid="classbitwuzla_1_1Sort_1af1ce6186dac747fc78cb9fe78f3a62f4" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>is_rm</name></member>
+      <member refid="classbitwuzla_1_1Sort_1aa6464ab9f30e220a79427551614f7246" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>is_uninterpreted</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a581e928e27afdf2f8d69c0965d7ede0a" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_array_sort</name></member>
+      <member refid="classbitwuzla_1_1Sort_1adbbdb9e91f40d3b16b5d3a59ea0b87bd" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bool_sort</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a256519226f125bd3c4e9dcb4155452a6" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bv_max_signed</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a52eab4ba74f2b35110100ee56a052bed" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bv_min_signed</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a1def1d262a66ec5f01c513d2d8794b4f" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bv_one</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a096ea9ab2fe938ac1c3d8ea92fcf547b" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bv_ones</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a13ad3af840b0c840c3a18b363c98bef6" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bv_sort</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a1e8974e78a8353987c2289bfc7921410" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bv_value</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a62f3065dfb1ef050261da9915e2be8ac" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bv_value_int64</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a7e0b05d9ebcd48372423181169909e1e" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bv_value_uint64</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a21deaee413784aedfdb0bf050a8d1ff4" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_bv_zero</name></member>
+      <member refid="classbitwuzla_1_1Sort_1acbb09fc10eba2a8d26edaa22f606fb25" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_const</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a5a493568380595a43a6573fd5b6f4ba5" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_const_array</name></member>
+      <member refid="classbitwuzla_1_1Sort_1aaa3b3c93aeb9b3ee6ae6a28bc9fee134" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_fp_nan</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a96d63c3991034eddd8d85af94839d969" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_fp_neg_inf</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a7d6fd157d189b282e6d26e82315cc82c" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_fp_neg_zero</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a0ea70d64b0b879a6dbe98b0d353255ad" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_fp_pos_inf</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a999ef3ce6c86e7b796ea13c3bd7f4b52" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_fp_pos_zero</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a1cbdd7cdde18710c927a75957ed04a60" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_fp_sort</name></member>
+      <member refid="classbitwuzla_1_1Sort_1ad5816c18a3c2849a80fb8975bebb788b" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_fp_value</name></member>
+      <member refid="classbitwuzla_1_1Sort_1ab53b48c74a6f31dda077c6ff13537d48" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_fp_value</name></member>
+      <member refid="classbitwuzla_1_1Sort_1acbb0786e7ec9303b882eab9b3eb68fc0" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_fun_sort</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a472f4ea2e04142cc8a2d47f2c69ea45f" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_rm_sort</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a0cd6124cb9f917bb8b6aa267c261546d" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_term</name></member>
+      <member refid="classbitwuzla_1_1Sort_1aea08559b2cf04efe9348106fef22dd7e" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_uninterpreted_sort</name></member>
+      <member refid="classbitwuzla_1_1Sort_1ade2e98bd3bb00199cfcfc43b207fca8c" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>mk_var</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a21dd709785e44efc98c1c9a45290be85" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>operator!=</name></member>
+      <member refid="classbitwuzla_1_1Sort_1aed728b09e732e708de8431c5721b7e6f" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classbitwuzla_1_1Sort_1aec66cca27707d2e14070b788814097b6" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>operator==</name></member>
+      <member refid="classbitwuzla_1_1Sort_1ae49ed087d0b73305a61b3df5b53b3fdd" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>Sort</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a49cc0f61947bc205c38fe613da6ecf00" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>Sort</name></member>
+      <member refid="classbitwuzla_1_1Sort_1ac7e177e71b2ccb606f62adbbad968ac1" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>sort_vector_to_types</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a91afbf06f7d49aff017482d1fbebdfbb" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>str</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a49020fd87997b251485ea89e9e8ddbb8" prot="private" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>Term</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a8abeaa1a38012dd895a023186fbfb42a" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>uninterpreted_symbol</name></member>
+      <member refid="classbitwuzla_1_1Sort_1a29dd62b2c573dfde075750d6bf538394" prot="public" virt="non-virtual"><scope>bitwuzla::Sort</scope><name>~Sort</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

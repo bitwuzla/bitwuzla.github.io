@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitwuzla &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Bitwuzla</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="bitwuzla">
+<h1>Bitwuzla<a class="headerlink" href="#bitwuzla" title="Permalink to this headline"></a></h1>
+<p>A <a class="reference internal" href="#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla</span></code></a> instance is created from a configuration
+options <a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a> instance. This options instance must be
+configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
+instance is created, configuration options are fixed and <strong>cannot</strong> be changed.
+<a class="reference internal" href="sort.html#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Sorts</span></code></a> and
+<a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Terms</span></code></a> are <strong>independent</strong> of a
+<a class="reference internal" href="#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla</span></code></a> instance and can be shared accross Bitwuzla
+instances.</p>
+<p>Bitwuzla supports <strong>incremental solving</strong> via
+<a class="reference internal" href="#_CPPv4N8bitwuzla8Bitwuzla4pushE8uint32_t" title="bitwuzla::Bitwuzla::push"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::push()</span></code></a> and
+<a class="reference internal" href="#_CPPv4N8bitwuzla8Bitwuzla3popE8uint32_t" title="bitwuzla::Bitwuzla::pop"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::pop()</span></code></a>;
+querying the solver for the current set of assertions via
+<a class="reference internal" href="#_CPPv4N8bitwuzla8Bitwuzla14get_assertionsEv" title="bitwuzla::Bitwuzla::get_assertions"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::get_assertions()</span></code></a>,
+model values via <a class="reference internal" href="#_CPPv4N8bitwuzla8Bitwuzla9get_valueERK4Term" title="bitwuzla::Bitwuzla::get_value"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::get_value()</span></code></a>,
+the unsat core via <a class="reference internal" href="#_CPPv4N8bitwuzla8Bitwuzla14get_unsat_coreEv" title="bitwuzla::Bitwuzla::get_unsat_core"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::get_unsat_core()</span></code></a>,
+and unsat assumptions via <a class="reference internal" href="#_CPPv4N8bitwuzla8Bitwuzla21get_unsat_assumptionsEv" title="bitwuzla::Bitwuzla::get_unsat_assumptions"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::get_unsat_assumptions()</span></code></a>;
+and printing the currently asserted formula via
+<a class="reference internal" href="#_CPPv4NK8bitwuzla8Bitwuzla13print_formulaERNSt7ostreamERKNSt6stringE" title="bitwuzla::Bitwuzla::print_formula"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::print_formula()</span></code></a>.
+The current statistics can be retrieved as a mapping from statistic names
+to values via <a class="reference internal" href="#_CPPv4NK8bitwuzla8Bitwuzla10statisticsEv" title="bitwuzla::Bitwuzla::statistics"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::statistics()</span></code></a>.</p>
+<p>Bitwuzla further supports configuring a <strong>termination callback</strong> via
+<a class="reference internal" href="terminator.html#_CPPv4N8bitwuzla10TerminatorE" title="bitwuzla::Terminator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Terminator</span></code></a>, which implements a callback function
+<a class="reference internal" href="terminator.html#_CPPv4N8bitwuzla10Terminator9terminateEv" title="bitwuzla::Terminator::terminate"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Terminator::terminate()</span></code></a> to allow terminating
+Bitwuzla prematurely, during solving. This termination callback returns a
+<code class="code docutils literal notranslate"><span class="pre">bool</span></code> to indicate if Bitwuzla should be terminated. Bitwuzla
+periodically checks this callback and terminates at the earliest possible
+opportunity if the callback function returns <code class="code docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>class <a class="reference internal" href="#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla</span></code></a></p></li>
+</ul>
+<hr class="docutils" />
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8BitwuzlaE">
+<span id="_CPPv3N8bitwuzla8BitwuzlaE"></span><span id="_CPPv2N8bitwuzla8BitwuzlaE"></span><span id="bitwuzla::Bitwuzla"></span><span class="target" id="classbitwuzla_1_1Bitwuzla"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Bitwuzla</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla8BitwuzlaE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> solver instance. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK7Options">
+<span id="_CPPv3N8bitwuzla8Bitwuzla8BitwuzlaERK7Options"></span><span id="_CPPv2N8bitwuzla8Bitwuzla8BitwuzlaERK7Options"></span><span id="bitwuzla::Bitwuzla::Bitwuzla__OptionsCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1af9a5afc01793860b97125f51f7e8f1ac"></span><span class="sig-name descname"><span class="n"><span class="pre">Bitwuzla</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK7Options" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>options</strong> – The associated options instance. <a class="reference internal" href="options.html#classbitwuzla_1_1Options"><span class="std std-ref">Options</span></a> must be configured at this point. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8BitwuzlaD0Ev">
+<span id="_CPPv3N8bitwuzla8BitwuzlaD0Ev"></span><span id="_CPPv2N8bitwuzla8BitwuzlaD0Ev"></span><span id="bitwuzla::Bitwuzla::~Bitwuzla"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1ac42a8a22eb88c26f08eb1c8c4d84d716"></span><span class="sig-name descname"><span class="n"><span class="pre">~Bitwuzla</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8BitwuzlaD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK8Bitwuzla">
+<span id="_CPPv3N8bitwuzla8Bitwuzla8BitwuzlaERK8Bitwuzla"></span><span id="_CPPv2N8bitwuzla8Bitwuzla8BitwuzlaERK8Bitwuzla"></span><span id="bitwuzla::Bitwuzla::Bitwuzla__BitwuzlaCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1aff292c44109e931e4cf11c4b8b49a06d"></span><span class="sig-name descname"><span class="n"><span class="pre">Bitwuzla</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK8Bitwuzla" title="bitwuzla::Bitwuzla::Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK8Bitwuzla" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Disallow copy construction. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8BitwuzlaaSERK8Bitwuzla">
+<span id="_CPPv3N8bitwuzla8BitwuzlaaSERK8Bitwuzla"></span><span id="_CPPv2N8bitwuzla8BitwuzlaaSERK8Bitwuzla"></span><span id="bitwuzla::Bitwuzla::assign-operator__BitwuzlaCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1adbb7e0309ba6819988a6d14d68211cda"></span><a class="reference internal" href="#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla8BitwuzlaaSERK8Bitwuzla" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Disallow copy assignment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla20configure_terminatorEP10Terminator">
+<span id="_CPPv3N8bitwuzla8Bitwuzla20configure_terminatorEP10Terminator"></span><span id="_CPPv2N8bitwuzla8Bitwuzla20configure_terminatorEP10Terminator"></span><span id="bitwuzla::Bitwuzla::configure_terminator__TerminatorP"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a6c53002c0f3522e61f16657a92e19ca0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure_terminator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="terminator.html#_CPPv4N8bitwuzla10TerminatorE" title="bitwuzla::Terminator"><span class="n"><span class="pre">Terminator</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">terminator</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla20configure_terminatorEP10Terminator" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Connect or disconnect associated termination configuration instance. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only one terminator can be connected at a time. This will disconnect a previously connected terminator before connecting a new one. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>terminator</strong> – The terminator instance. Nullptr disconnects the currently associated terminator. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla4pushE8uint32_t">
+<span id="_CPPv3N8bitwuzla8Bitwuzla4pushE8uint32_t"></span><span id="_CPPv2N8bitwuzla8Bitwuzla4pushE8uint32_t"></span><span id="bitwuzla::Bitwuzla::push__uint32_t"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1afb6442b91ed432fe4fb89347e7ce67c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nlevels</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla4pushE8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Push context levels.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nlevels</strong> – The number of context levels to push.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla3popE8uint32_t">
+<span id="_CPPv3N8bitwuzla8Bitwuzla3popE8uint32_t"></span><span id="_CPPv2N8bitwuzla8Bitwuzla3popE8uint32_t"></span><span id="bitwuzla::Bitwuzla::pop__uint32_t"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1af0918e987c8f3083b989a85c1393573f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pop</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nlevels</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla3popE8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pop context levels.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nlevels</strong> – The number of context levels to pop.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla14assert_formulaERK4Term">
+<span id="_CPPv3N8bitwuzla8Bitwuzla14assert_formulaERK4Term"></span><span id="_CPPv2N8bitwuzla8Bitwuzla14assert_formulaERK4Term"></span><span id="bitwuzla::Bitwuzla::assert_formula__TermCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assert_formula</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla14assert_formulaERK4Term" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Assert formula.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>term</strong> – The formula to assert. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla14get_assertionsEv">
+<span id="_CPPv3N8bitwuzla8Bitwuzla14get_assertionsEv"></span><span id="_CPPv2N8bitwuzla8Bitwuzla14get_assertionsEv"></span><span id="bitwuzla::Bitwuzla::get_assertions"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a3f1ca953b753aec221227b62f7bb8cd8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_assertions</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla14get_assertionsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the set of currently asserted formulas. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The assertion formulas. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla19is_unsat_assumptionERK4Term">
+<span id="_CPPv3N8bitwuzla8Bitwuzla19is_unsat_assumptionERK4Term"></span><span id="_CPPv2N8bitwuzla8Bitwuzla19is_unsat_assumptionERK4Term"></span><span id="bitwuzla::Bitwuzla::is_unsat_assumption__TermCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a61d619f6fba7272d81a08c4152c78d94"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_unsat_assumption</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla19is_unsat_assumptionERK4Term" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Determine if an assumption is an unsat assumption.</p>
+<p>Unsat assumptions are assumptions that force an input formula to become unsatisfiable. Unsat assumptions handling in <a class="reference internal" href="#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> is analogous to failed assumptions in MiniSAT.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421"><span class="std std-ref"><span class="pre">Result::UNSAT</span></span></a></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>term</strong> – The assumption to check for.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if given assumption is an unsat assumption.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla21get_unsat_assumptionsEv">
+<span id="_CPPv3N8bitwuzla8Bitwuzla21get_unsat_assumptionsEv"></span><span id="_CPPv2N8bitwuzla8Bitwuzla21get_unsat_assumptionsEv"></span><span id="bitwuzla::Bitwuzla::get_unsat_assumptions"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1af04af02ee97d71fa448d57dd4c287938"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_unsat_assumptions</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla21get_unsat_assumptionsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the set of unsat assumptions.</p>
+<p>Unsat assumptions are assumptions that force an input formula to become unsatisfiable. Unsat assumptions handling in <a class="reference internal" href="#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> is analogous to failed assumptions in MiniSAT.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421"><span class="std std-ref"><span class="pre">Result::UNSAT</span></span></a></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A vctor with unsat assumptions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla14get_unsat_coreEv">
+<span id="_CPPv3N8bitwuzla8Bitwuzla14get_unsat_coreEv"></span><span id="_CPPv2N8bitwuzla8Bitwuzla14get_unsat_coreEv"></span><span id="bitwuzla::Bitwuzla::get_unsat_core"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1abea6f2061d7ab7783d3510593d8cb5fb"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_unsat_core</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla14get_unsat_coreEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the unsat core (unsat assertions).</p>
+<p>The unsat core consists of the set of assertions that force an input formula to become unsatisfiable.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421"><span class="std std-ref"><span class="pre">Result::UNSAT</span></span></a></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">assert()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A vector with unsat assertions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla8simplifyEv">
+<span id="_CPPv3N8bitwuzla8Bitwuzla8simplifyEv"></span><span id="_CPPv2N8bitwuzla8Bitwuzla8simplifyEv"></span><span id="bitwuzla::Bitwuzla::simplify"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1affa4735cb2150277d0c59a035dc86a39"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">simplify</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla8simplifyEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Simplify the current input formula.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782"><span class="std std-ref"><span class="pre">assert_formula()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each call to <code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">Bitwuzla::check_sat()</span></span></a></code> simplifies the input formula as a preprocessing step. It is not necessary to call this function explicitly in the general case.</p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla9check_satERKNSt6vectorI4TermEE">
+<span id="_CPPv3N8bitwuzla8Bitwuzla9check_satERKNSt6vectorI4TermEE"></span><span id="_CPPv2N8bitwuzla8Bitwuzla9check_satERKNSt6vectorI4TermEE"></span><span id="bitwuzla::Bitwuzla::check_sat__std::vector:Term:CR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"></span><a class="reference internal" href="../enums/result.html#_CPPv4N8bitwuzla6ResultE" title="bitwuzla::Result"><span class="n"><span class="pre">Result</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">check_sat</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">assumptions</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla9check_satERKNSt6vectorI4TermEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Check satisfiability of current input formula.</p>
+<p>An input formula consists of assertions added via <code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782"><span class="std std-ref"><span class="pre">assert_formula()</span></span></a></code>. The search for a solution can by guided by making assumptions via passing a vector of assumptions to <code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782"><span class="std std-ref"><span class="pre">assert_formula()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afa"><span class="std std-ref"><span class="pre">Result</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assertions and assumptions are combined via Boolean and.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa684e1388a91900480c702ac5b8f6b4d8"><span class="std std-ref"><span class="pre">Result::SAT</span></span></a></code> if the input formula is satisfiable and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421"><span class="std std-ref"><span class="pre">Result::UNSAT</span></span></a></code> if it is unsatisfiable, and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa696b031073e74bf2cb98e5ef201d4aa3"><span class="std std-ref"><span class="pre">Result::UNKNOWN</span></span></a></code> when neither satisfiability nor unsatisfiability was determined. This can happen when this <a class="reference internal" href="#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> instance was terminated via a termination callback.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla9get_valueERK4Term">
+<span id="_CPPv3N8bitwuzla8Bitwuzla9get_valueERK4Term"></span><span id="_CPPv2N8bitwuzla8Bitwuzla9get_valueERK4Term"></span><span id="bitwuzla::Bitwuzla::get_value__TermCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a3d27cc1490ad4682c8c666ea6e26155f"></span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_value</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla9get_valueERK4Term" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get a term representing the model value of a given term.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa684e1388a91900480c702ac5b8f6b4d8"><span class="std std-ref"><span class="pre">Result::SAT</span></span></a></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> </p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>term</strong> – The term to query a model value for. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the model value of term <code class="docutils literal notranslate"><span class="pre">term</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla8Bitwuzla13print_formulaERNSt7ostreamERKNSt6stringE">
+<span id="_CPPv3NK8bitwuzla8Bitwuzla13print_formulaERNSt7ostreamERKNSt6stringE"></span><span id="_CPPv2NK8bitwuzla8Bitwuzla13print_formulaERNSt7ostreamERKNSt6stringE"></span><span id="bitwuzla::Bitwuzla::print_formula__osR.ssCRC"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a47646afecd73de40a89f7add8e8d3bcd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_formula</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">format</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;smt2&quot;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla8Bitwuzla13print_formulaERNSt7ostreamERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Print the current input formula to the given output stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>out</strong> – The output stream. </p></li>
+<li><p><strong>format</strong> – The output format for printing the formula. Currently, only <code class="docutils literal notranslate"><span class="pre">&quot;smt2&quot;</span></code> for the SMT-LIB v2 format is supported. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla8Bitwuzla10statisticsEv">
+<span id="_CPPv3NK8bitwuzla8Bitwuzla10statisticsEv"></span><span id="_CPPv2NK8bitwuzla8Bitwuzla10statisticsEv"></span><span id="bitwuzla::Bitwuzla::statisticsC"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a3caa051b55e235599b1dfca0bd999b05"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">statistics</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla8Bitwuzla10statisticsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get current statistics. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A map of strings of statistics entries, maps statistic name to value. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

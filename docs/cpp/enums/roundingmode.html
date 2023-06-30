@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoundingMode &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">RoundingMode</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="roundingmode">
+<h1>RoundingMode<a class="headerlink" href="#roundingmode" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>enum <a class="reference internal" href="#_CPPv4N8bitwuzla12RoundingModeE" title="bitwuzla::RoundingMode"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::RoundingMode</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv4N8bitwuzlalsERNSt7ostreamE12RoundingMode" title="std::ostream &amp;bitwuzla::operator&lt;&lt;(std::ostream &amp;out, RoundingMode rm)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">std::ostream&amp;</span> <span class="pre">bitwuzla::operator&lt;&lt;</span> <span class="pre">(std::ostream&amp;</span> <span class="pre">out,</span> <span class="pre">RoundingMode</span> <span class="pre">rm)</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv4NSt9to_stringEN8bitwuzla12RoundingModeE" title="std::string std::to_string(bitwuzla::RoundingMode rm)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">std::string</span> <span class="pre">std::to_string(bitwuzla::RoundingMode</span> <span class="pre">rm)</span></code></a></p></li>
+</ul>
+<hr class="docutils" />
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla12RoundingModeE">
+<span id="_CPPv3N8bitwuzla12RoundingModeE"></span><span id="_CPPv2N8bitwuzla12RoundingModeE"></span><span class="target" id="namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">RoundingMode</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla12RoundingModeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rounding mode for floating-point operations.</p>
+<p>For some floating-point operations, infinitely precise results may not be representable in a given format. Hence, they are rounded modulo one of five rounding modes to a representable floating-point number.</p>
+<p><p>The following rounding modes follow the SMT-LIB theory for floating-point
+arithmetic, which in turn is based on IEEE Standard 754 <span id="id1">[<a class="reference internal" href="../../references.html#id2" title="IEEE. IEEE Standard for Floating-Point Arithmetic. IEEE Std 754-2019 (Revision of IEEE 754-2008), pages 1-84, 2019. doi:10.1109/IEEESTD.2019.8766229.">IEE19</a>]</span>.
+The rounding modes are specified in Sections 4.3.1 and 4.3.2 of the IEEE
+Standard 754.</p>
+ </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla12RoundingMode3RNEE">
+<span id="_CPPv3N8bitwuzla12RoundingMode3RNEE"></span><span id="_CPPv2N8bitwuzla12RoundingMode3RNEE"></span><span class="target" id="namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9eabbbffe540e9df36d8c8f847b529e3282"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RNE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla12RoundingMode3RNEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Round to the nearest even number. If the two nearest floating-point numbers bracketing an unrepresentable infinitely precise result are equally near, the one with an even least significant digit will be delivered.</p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RNE</span></code> <code class="docutils literal notranslate"><span class="pre">roundNearestTiesToEven</span></code> </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla12RoundingMode3RNAE">
+<span id="_CPPv3N8bitwuzla12RoundingMode3RNAE"></span><span id="_CPPv2N8bitwuzla12RoundingMode3RNAE"></span><span class="target" id="namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9ea78c4454135cafc53f3fc50daf7213847"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RNA</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla12RoundingMode3RNAE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Round to the nearest number away from zero. If the two nearest floating-point numbers bracketing an unrepresentable infinitely precise result are equally near, the one with larger magnitude will be selected.</p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RNA</span></code> <code class="docutils literal notranslate"><span class="pre">roundNearestTiesToAway</span></code> </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla12RoundingMode3RTNE">
+<span id="_CPPv3N8bitwuzla12RoundingMode3RTNE"></span><span id="_CPPv2N8bitwuzla12RoundingMode3RTNE"></span><span class="target" id="namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9eadf5532b153d76557a19431440ebb8312"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RTN</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla12RoundingMode3RTNE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Round towards negative infinity (-oo). The result shall be the format’s floating-point number (possibly -oo) closest to and no less than the infinitely precise result.</p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RTN</span></code> <code class="docutils literal notranslate"><span class="pre">roundTowardNegative</span></code> </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla12RoundingMode3RTPE">
+<span id="_CPPv3N8bitwuzla12RoundingMode3RTPE"></span><span id="_CPPv2N8bitwuzla12RoundingMode3RTPE"></span><span class="target" id="namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9eaf82a692bd388b13723eef7a7f0fba8f5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RTP</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla12RoundingMode3RTPE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Round towards positive infinity (+oo). The result shall be the format’s floating-point number (possibly +oo) closest to and no less than the infinitely precise result.</p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RTP</span></code> <code class="docutils literal notranslate"><span class="pre">roundTowardPositive</span></code> </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla12RoundingMode3RTZE">
+<span id="_CPPv3N8bitwuzla12RoundingMode3RTZE"></span><span id="_CPPv2N8bitwuzla12RoundingMode3RTZE"></span><span class="target" id="namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9ea529a841dde2e78d144c1814e3fc5ac60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RTZ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla12RoundingMode3RTZE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Round towards zero. The result shall be the format’s floating-point number closest to and no greater in magnitude than the infinitely precise result.</p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RTZ</span></code> <code class="docutils literal notranslate"><span class="pre">roundTowardZero</span></code> </p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzlalsERNSt7ostreamE12RoundingMode">
+<span id="_CPPv3N8bitwuzlalsERNSt7ostreamE12RoundingMode"></span><span id="_CPPv2N8bitwuzlalsERNSt7ostreamE12RoundingMode"></span><span id="bitwuzla::lshift-operator__osR.RoundingMode"></span><span class="target" id="namespacebitwuzla_1abb69f6c39d14a28055a8135740b91ae7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span>, <a class="reference internal" href="#_CPPv4N8bitwuzla12RoundingModeE" title="bitwuzla::RoundingMode"><span class="n"><span class="pre">RoundingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzlalsERNSt7ostreamE12RoundingMode" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Print rounding mode to output stream. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>out</strong> – The output stream. </p></li>
+<li><p><strong>rm</strong> – The rounding mode. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The output stream. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+<hr class="docutils" />
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">std</span> <span class="pre">{</span></code></p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NSt9to_stringEN8bitwuzla12RoundingModeE">
+<span id="_CPPv3NSt9to_stringEN8bitwuzla12RoundingModeE"></span><span id="_CPPv2NSt9to_stringEN8bitwuzla12RoundingModeE"></span><span id="std::to_string__bitwuzla::RoundingMode"></span><span class="target" id="namespacestd_1a6efb08969e6a9a2cc1f67bcaa40002dd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">to_string</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla12RoundingModeE" title="bitwuzla::RoundingMode"><span class="n"><span class="pre">RoundingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NSt9to_stringEN8bitwuzla12RoundingModeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get string representation of given rounding mode. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rm</strong> – The roundingmode. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The string representation. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_d2e141e7f1270058a871ae78e0397f39" kind="dir">
+    <compoundname>/home/ma/git/bitwuzla/include/bitwuzla</compoundname>
+    <innerdir refid="dir_48b15951af7611a349c947037a5c230d">/home/ma/git/bitwuzla/include/bitwuzla/cpp</innerdir>
+    <innerfile refid="enums_8h">enums.h</innerfile>
+    <innerfile refid="option_8h">option.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ma/git/bitwuzla/include/bitwuzla/"/>
+  </compounddef>
+</doxygen>

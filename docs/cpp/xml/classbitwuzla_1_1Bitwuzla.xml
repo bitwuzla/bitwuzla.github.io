@@ -1,0 +1,669 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classbitwuzla_1_1Bitwuzla" kind="class" language="C++" prot="public">
+    <compoundname>bitwuzla::Bitwuzla</compoundname>
+    <includes refid="bitwuzla_8h" local="no">bitwuzla.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classbitwuzla_1_1Bitwuzla_1a7d1e47c28be3ff44ce2b5e1d96fea715" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; bzla::SolvingContext &gt;</type>
+        <definition>std::unique_ptr&lt;bzla::SolvingContext&gt; bitwuzla::Bitwuzla::d_ctx</definition>
+        <argsstring></argsstring>
+        <name>d_ctx</name>
+        <qualifiedname>bitwuzla::Bitwuzla::d_ctx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The associated solving context. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1163" column="19" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="1163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Bitwuzla_1acd9834a94e9c3555726bddc131c7a28f" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afa" kindref="member">Result</ref></type>
+        <definition>Result bitwuzla::Bitwuzla::d_last_check_sat</definition>
+        <argsstring></argsstring>
+        <name>d_last_check_sat</name>
+        <qualifiedname>bitwuzla::Bitwuzla::d_last_check_sat</qualifiedname>
+        <initializer>= <ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa696b031073e74bf2cb98e5ef201d4aa3" kindref="member">Result::UNKNOWN</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The result of the last <ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref> call. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1165" column="10" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="1165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Bitwuzla_1a9f4430aa8d02fc8c31e3898ce92970fc" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla::Bitwuzla::d_n_sat_calls</definition>
+        <argsstring></argsstring>
+        <name>d_n_sat_calls</name>
+        <qualifiedname>bitwuzla::Bitwuzla::d_n_sat_calls</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of issued check-sat queries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1167" column="12" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="1167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Bitwuzla_1abae74e92e1d1c70b5d2e3500e61b13a0" prot="private" static="no" mutable="no">
+        <type><ref refid="classbitwuzla_1_1Terminator" kindref="compound">Terminator</ref> *</type>
+        <definition>Terminator* bitwuzla::Bitwuzla::d_terminator</definition>
+        <argsstring></argsstring>
+        <name>d_terminator</name>
+        <qualifiedname>bitwuzla::Bitwuzla::d_terminator</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The associated terminator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1169" column="14" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="1169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Bitwuzla_1a24995d1fe5cf218dae516f05e12a3b77" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; bzla::Terminator &gt;</type>
+        <definition>std::unique_ptr&lt;bzla::Terminator&gt; bitwuzla::Bitwuzla::d_terminator_internal</definition>
+        <argsstring></argsstring>
+        <name>d_terminator_internal</name>
+        <qualifiedname>bitwuzla::Bitwuzla::d_terminator_internal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The internal terminator. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1171" column="19" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="1171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Bitwuzla_1adf4fc3b67dbf0461752b3fa15a13457c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &gt;</type>
+        <definition>std::vector&lt;Term&gt; bitwuzla::Bitwuzla::d_unsat_core</definition>
+        <argsstring></argsstring>
+        <name>d_unsat_core</name>
+        <qualifiedname>bitwuzla::Bitwuzla::d_unsat_core</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cache holding the current unsat core. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1173" column="15" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="1173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Bitwuzla_1a1fad34789f9b7034a90365a79cd06902" prot="private" static="no" mutable="no">
+        <type>std::unordered_set&lt; <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &gt;</type>
+        <definition>std::unordered_set&lt;Term&gt; bitwuzla::Bitwuzla::d_assumptions</definition>
+        <argsstring></argsstring>
+        <name>d_assumptions</name>
+        <qualifiedname>bitwuzla::Bitwuzla::d_assumptions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cache the current set of assumptions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1175" column="22" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="1175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Bitwuzla_1a536a5cc6520918d52e3dd503f5f3effa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bitwuzla::Bitwuzla::d_uc_is_valid</definition>
+        <argsstring></argsstring>
+        <name>d_uc_is_valid</name>
+        <qualifiedname>bitwuzla::Bitwuzla::d_uc_is_valid</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True if d_unsat_core holds the current unsat core. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1177" column="8" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="1177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classbitwuzla_1_1Bitwuzla_1a22a0061ce3861eeecdec295086260241" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bitwuzla::Bitwuzla::d_pending_pop</definition>
+        <argsstring></argsstring>
+        <name>d_pending_pop</name>
+        <qualifiedname>bitwuzla::Bitwuzla::d_pending_pop</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates a pending pop from check-sat with assumptions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1179" column="8" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="1179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1af9a5afc01793860b97125f51f7e8f1ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bitwuzla::Bitwuzla::Bitwuzla</definition>
+        <argsstring>(const Options &amp;options=Options())</argsstring>
+        <name>Bitwuzla</name>
+        <qualifiedname>bitwuzla::Bitwuzla::Bitwuzla</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Options" kindref="compound">Options</ref> &amp;</type>
+          <declname>options</declname>
+          <defval><ref refid="classbitwuzla_1_1Options" kindref="compound">Options</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The associated options instance. <ref refid="classbitwuzla_1_1Options" kindref="compound">Options</ref> must be configured at this point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="995" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1ac42a8a22eb88c26f08eb1c8c4d84d716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bitwuzla::Bitwuzla::~Bitwuzla</definition>
+        <argsstring>()</argsstring>
+        <name>~Bitwuzla</name>
+        <qualifiedname>bitwuzla::Bitwuzla::~Bitwuzla</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="997" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1aff292c44109e931e4cf11c4b8b49a06d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bitwuzla::Bitwuzla::Bitwuzla</definition>
+        <argsstring>(const Bitwuzla &amp;bitwuzla)=delete</argsstring>
+        <name>Bitwuzla</name>
+        <qualifiedname>bitwuzla::Bitwuzla::Bitwuzla</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> &amp;</type>
+          <declname>bitwuzla</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disallow copy construction. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1000" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1adbb7e0309ba6819988a6d14d68211cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> &amp;</type>
+        <definition>Bitwuzla &amp; bitwuzla::Bitwuzla::operator=</definition>
+        <argsstring>(const Bitwuzla &amp;bitwuzla)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>bitwuzla::Bitwuzla::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> &amp;</type>
+          <declname>bitwuzla</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disallow copy assignment. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1002" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1a6c53002c0f3522e61f16657a92e19ca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla::Bitwuzla::configure_terminator</definition>
+        <argsstring>(Terminator *terminator)</argsstring>
+        <name>configure_terminator</name>
+        <qualifiedname>bitwuzla::Bitwuzla::configure_terminator</qualifiedname>
+        <param>
+          <type><ref refid="classbitwuzla_1_1Terminator" kindref="compound">Terminator</ref> *</type>
+          <declname>terminator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Connect or disconnect associated termination configuration instance. <simplesect kind="note"><para>Only one terminator can be connected at a time. This will disconnect a previously connected terminator before connecting a new one. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>terminator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The terminator instance. Nullptr disconnects the currently associated terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1011" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1afb6442b91ed432fe4fb89347e7ce67c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla::Bitwuzla::push</definition>
+        <argsstring>(uint32_t nlevels)</argsstring>
+        <name>push</name>
+        <qualifiedname>bitwuzla::Bitwuzla::push</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>nlevels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Push context levels.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nlevels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of context levels to push.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79" kindref="member">Options::set()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1021" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1af0918e987c8f3083b989a85c1393573f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla::Bitwuzla::pop</definition>
+        <argsstring>(uint32_t nlevels)</argsstring>
+        <name>pop</name>
+        <qualifiedname>bitwuzla::Bitwuzla::pop</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>nlevels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pop context levels.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nlevels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of context levels to pop.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79" kindref="member">Options::set()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1030" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla::Bitwuzla::assert_formula</definition>
+        <argsstring>(const Term &amp;term)</argsstring>
+        <name>assert_formula</name>
+        <qualifiedname>bitwuzla::Bitwuzla::assert_formula</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &amp;</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assert formula.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The formula to assert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1037" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1a3f1ca953b753aec221227b62f7bb8cd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &gt;</type>
+        <definition>std::vector&lt; Term &gt; bitwuzla::Bitwuzla::get_assertions</definition>
+        <argsstring>()</argsstring>
+        <name>get_assertions</name>
+        <qualifiedname>bitwuzla::Bitwuzla::get_assertions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the set of currently asserted formulas. <simplesect kind="return"><para>The assertion formulas. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1043" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1a61d619f6fba7272d81a08c4152c78d94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla::Bitwuzla::is_unsat_assumption</definition>
+        <argsstring>(const Term &amp;term)</argsstring>
+        <name>is_unsat_assumption</name>
+        <qualifiedname>bitwuzla::Bitwuzla::is_unsat_assumption</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &amp;</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if an assumption is an unsat assumption.</para>
+<para>Unsat assumptions are assumptions that force an input formula to become unsatisfiable. Unsat assumptions handling in <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> is analogous to failed assumptions in MiniSAT.</para>
+<para>Requires that the last <computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref></computeroutput> query returned <computeroutput><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421" kindref="member">Result::UNSAT</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The assumption to check for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if given assumption is an unsat assumption.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79" kindref="member">Options::set()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1062" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1af04af02ee97d71fa448d57dd4c287938" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &gt;</type>
+        <definition>std::vector&lt; Term &gt; bitwuzla::Bitwuzla::get_unsat_assumptions</definition>
+        <argsstring>()</argsstring>
+        <name>get_unsat_assumptions</name>
+        <qualifiedname>bitwuzla::Bitwuzla::get_unsat_assumptions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the set of unsat assumptions.</para>
+<para>Unsat assumptions are assumptions that force an input formula to become unsatisfiable. Unsat assumptions handling in <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> is analogous to failed assumptions in MiniSAT.</para>
+<para>Requires that the last <computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref></computeroutput> query returned <computeroutput><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421" kindref="member">Result::UNSAT</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>A vctor with unsat assumptions.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79" kindref="member">Options::set()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1078" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1abea6f2061d7ab7783d3510593d8cb5fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &gt;</type>
+        <definition>std::vector&lt; Term &gt; bitwuzla::Bitwuzla::get_unsat_core</definition>
+        <argsstring>()</argsstring>
+        <name>get_unsat_core</name>
+        <qualifiedname>bitwuzla::Bitwuzla::get_unsat_core</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the unsat core (unsat assertions).</para>
+<para>The unsat core consists of the set of assertions that force an input formula to become unsatisfiable.</para>
+<para>Requires that the last <computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref></computeroutput> query returned <computeroutput><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421" kindref="member">Result::UNSAT</ref></computeroutput>.</para>
+<para><simplesect kind="return"><para>A vector with unsat assertions.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput>assert()</computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1093" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1affa4735cb2150277d0c59a035dc86a39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla::Bitwuzla::simplify</definition>
+        <argsstring>()</argsstring>
+        <name>simplify</name>
+        <qualifiedname>bitwuzla::Bitwuzla::simplify</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Simplify the current input formula.</para>
+<para><simplesect kind="note"><para>Each call to <computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">Bitwuzla::check_sat()</ref></computeroutput> simplifies the input formula as a preprocessing step. It is not necessary to call this function explicitly in the general case.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782" kindref="member">assert_formula()</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1105" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afa" kindref="member">Result</ref></type>
+        <definition>Result bitwuzla::Bitwuzla::check_sat</definition>
+        <argsstring>(const std::vector&lt; Term &gt; &amp;assumptions={})</argsstring>
+        <name>check_sat</name>
+        <qualifiedname>bitwuzla::Bitwuzla::check_sat</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &gt; &amp;</type>
+          <declname>assumptions</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check satisfiability of current input formula.</para>
+<para>An input formula consists of assertions added via <computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782" kindref="member">assert_formula()</ref></computeroutput>. The search for a solution can by guided by making assumptions via passing a vector of assumptions to <computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref></computeroutput>.</para>
+<para><simplesect kind="note"><para>Assertions and assumptions are combined via Boolean and.</para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa684e1388a91900480c702ac5b8f6b4d8" kindref="member">Result::SAT</ref></computeroutput> if the input formula is satisfiable and <computeroutput><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421" kindref="member">Result::UNSAT</ref></computeroutput> if it is unsatisfiable, and <computeroutput><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa696b031073e74bf2cb98e5ef201d4aa3" kindref="member">Result::UNKNOWN</ref></computeroutput> when neither satisfiability nor unsatisfiability was determined. This can happen when this <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> instance was terminated via a termination callback.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782" kindref="member">assert_formula()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79" kindref="member">Options::set()</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afa" kindref="member">Result</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1127" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1a3d27cc1490ad4682c8c666ea6e26155f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref></type>
+        <definition>Term bitwuzla::Bitwuzla::get_value</definition>
+        <argsstring>(const Term &amp;term)</argsstring>
+        <name>get_value</name>
+        <qualifiedname>bitwuzla::Bitwuzla::get_value</qualifiedname>
+        <param>
+          <type>const <ref refid="classbitwuzla_1_1Term" kindref="compound">Term</ref> &amp;</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a term representing the model value of a given term.</para>
+<para>Requires that the last <computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref></computeroutput> query returned <computeroutput><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa684e1388a91900480c702ac5b8f6b4d8" kindref="member">Result::SAT</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term to query a model value for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the model value of term <computeroutput>term</computeroutput>. </para>
+</simplesect>
+<simplesect kind="see"><para><computeroutput><ref refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" kindref="member">check_sat()</ref></computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1139" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1a47646afecd73de40a89f7add8e8d3bcd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla::Bitwuzla::print_formula</definition>
+        <argsstring>(std::ostream &amp;out, const std::string &amp;format=&quot;smt2&quot;) const</argsstring>
+        <name>print_formula</name>
+        <qualifiedname>bitwuzla::Bitwuzla::print_formula</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>format</declname>
+          <defval>&quot;smt2&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print the current input formula to the given output stream.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output format for printing the formula. Currently, only <computeroutput>&quot;smt2&quot;</computeroutput> for the SMT-LIB v2 format is supported. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1148" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1a3caa051b55e235599b1dfca0bd999b05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; bitwuzla::Bitwuzla::statistics</definition>
+        <argsstring>() const</argsstring>
+        <name>statistics</name>
+        <qualifiedname>bitwuzla::Bitwuzla::statistics</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get current statistics. <simplesect kind="return"><para>A map of strings of statistics entries, maps statistic name to value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1156" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classbitwuzla_1_1Bitwuzla_1acb0098c4708a62645edfb2fc9f8df500" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla::Bitwuzla::solver_state_change</definition>
+        <argsstring>()</argsstring>
+        <name>solver_state_change</name>
+        <qualifiedname>bitwuzla::Bitwuzla::solver_state_change</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper called when solver state changes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1160" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> solver instance. </para>
+    </detaileddescription>
+    <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="987" column="1" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="988" bodyend="1180"/>
+    <listofallmembers>
+      <member refid="classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>assert_formula</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1af9a5afc01793860b97125f51f7e8f1ac" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>Bitwuzla</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1aff292c44109e931e4cf11c4b8b49a06d" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>Bitwuzla</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>check_sat</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a6c53002c0f3522e61f16657a92e19ca0" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>configure_terminator</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a1fad34789f9b7034a90365a79cd06902" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>d_assumptions</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a7d1e47c28be3ff44ce2b5e1d96fea715" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>d_ctx</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1acd9834a94e9c3555726bddc131c7a28f" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>d_last_check_sat</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a9f4430aa8d02fc8c31e3898ce92970fc" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>d_n_sat_calls</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a22a0061ce3861eeecdec295086260241" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>d_pending_pop</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1abae74e92e1d1c70b5d2e3500e61b13a0" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>d_terminator</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a24995d1fe5cf218dae516f05e12a3b77" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>d_terminator_internal</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a536a5cc6520918d52e3dd503f5f3effa" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>d_uc_is_valid</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1adf4fc3b67dbf0461752b3fa15a13457c" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>d_unsat_core</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a3f1ca953b753aec221227b62f7bb8cd8" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>get_assertions</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1af04af02ee97d71fa448d57dd4c287938" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>get_unsat_assumptions</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1abea6f2061d7ab7783d3510593d8cb5fb" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>get_unsat_core</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a3d27cc1490ad4682c8c666ea6e26155f" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>get_value</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a61d619f6fba7272d81a08c4152c78d94" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>is_unsat_assumption</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1adbb7e0309ba6819988a6d14d68211cda" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>operator=</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1af0918e987c8f3083b989a85c1393573f" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>pop</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a47646afecd73de40a89f7add8e8d3bcd" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>print_formula</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1afb6442b91ed432fe4fb89347e7ce67c6" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>push</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1affa4735cb2150277d0c59a035dc86a39" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>simplify</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1acb0098c4708a62645edfb2fc9f8df500" prot="private" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>solver_state_change</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1a3caa051b55e235599b1dfca0bd999b05" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>statistics</name></member>
+      <member refid="classbitwuzla_1_1Bitwuzla_1ac42a8a22eb88c26f08eb1c8c4d84d716" prot="public" virt="non-virtual"><scope>bitwuzla::Bitwuzla</scope><name>~Bitwuzla</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

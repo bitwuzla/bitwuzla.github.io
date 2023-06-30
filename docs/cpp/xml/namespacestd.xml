@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespacestd" kind="namespace" language="C++">
+    <compoundname>std</compoundname>
+    <innerclass refid="structstd_1_1hash_3_01bitwuzla_1_1Sort_01_4" prot="public">std::hash&lt; bitwuzla::Sort &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01bitwuzla_1_1Term_01_4" prot="public">std::hash&lt; bitwuzla::Term &gt;</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacestd_1a7c6a296e55c707490a5a47eb2ea729c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string std::to_string</definition>
+        <argsstring>(bitwuzla::Kind kind)</argsstring>
+        <name>to_string</name>
+        <qualifiedname>std::to_string</qualifiedname>
+        <param>
+          <type><ref refid="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4c" kindref="member">bitwuzla::Kind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get string representation of given kind. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The kind. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string representation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1637" column="13" declfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" declline="1637" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestd_1a6efb08969e6a9a2cc1f67bcaa40002dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string std::to_string</definition>
+        <argsstring>(bitwuzla::RoundingMode rm)</argsstring>
+        <name>to_string</name>
+        <qualifiedname>std::to_string</qualifiedname>
+        <param>
+          <type><ref refid="namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e" kindref="member">bitwuzla::RoundingMode</ref></type>
+          <declname>rm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get string representation of given rounding mode. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The roundingmode. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string representation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1644" column="13" declfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" declline="1644" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestd_1a8b5e9b1680d70e3f76f49a42b409afb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string std::to_string</definition>
+        <argsstring>(bitwuzla::Result result)</argsstring>
+        <name>to_string</name>
+        <qualifiedname>std::to_string</qualifiedname>
+        <param>
+          <type><ref refid="namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afa" kindref="member">bitwuzla::Result</ref></type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get string representation of given result. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The result. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string representation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1651" column="13" declfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" declline="1651" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="48" column="1"/>
+  </compounddef>
+</doxygen>

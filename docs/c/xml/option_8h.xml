@@ -1,0 +1,690 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="option_8h" kind="file" language="C++">
+    <compoundname>option.h</compoundname>
+    <includedby refid="bitwuzla_8h" local="no">/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h</label>
+        <link refid="bitwuzla_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/ma/git/bitwuzla/include/bitwuzla/c/parser.h</label>
+        <link refid="parser_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/ma/git/bitwuzla/include/bitwuzla/option.h</label>
+        <link refid="option_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="option_8h_1afdaccbb8028676944c5b4dad92968641" prot="public" static="no">
+        <name>ENUM</name>
+        <param><defname>name</defname></param>
+        <initializer><ref refid="bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087" kindref="member">Bitwuzla</ref>##name</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/option.h" line="21" column="10" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/option.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="option_8h_1a8f41c0c7caad09e429617fc016a216e8" prot="public" static="no">
+        <name>EVALUE</name>
+        <param><defname>name</defname></param>
+        <initializer>BITWUZLA_OPT_##name</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/option.h" line="22" column="9" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/option.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="option_8h_1a60aa6b2ced84dbbbd0794207bfdf0369" prot="public" static="no">
+        <name>BITWUZLA_API_OPTION_C_H_INCLUDED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/option.h" line="411" column="9" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/option.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884" prot="public" static="no" strong="no">
+        <type></type>
+        <name>BitwuzlaOption</name>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a2ab7a378be67f1f507afb896e3509b4a" prot="public">
+          <name>BITWUZLA_OPT_LOGLEVEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Log level.</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para>An unsigned integer value. [<bold>default</bold>: 0] </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a525874db68efd149c933f7e3171795cf" prot="public">
+          <name>BITWUZLA_OPT_PRODUCE_MODELS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Model generation.</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable, generate model for assertions only</para>
+</listitem><listitem><para><bold>2</bold>: enable, generate model for all created terms</para>
+</listitem><listitem><para><bold>0</bold>: disable [<bold>default</bold>]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="note"><para>This option cannot be enabled in combination with option <computeroutput><ref refid="option_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_UNCONSTRAINED_OPTIMIZATION</computeroutput>. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a10ec079491917966ccfe3be25e68d1fe" prot="public">
+          <name>BITWUZLA_OPT_PRODUCE_UNSAT_ASSUMPTIONS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Unsat assumptions generation.</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable</para>
+</listitem><listitem><para><bold>0</bold>: disable [<bold>default</bold>] </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a0359cdb5fe7bdfa22e75dd97392a1054" prot="public">
+          <name>BITWUZLA_OPT_PRODUCE_UNSAT_CORES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Unsat core generation.</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable</para>
+</listitem><listitem><para><bold>0</bold>: disable [<bold>default</bold>] </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a304e41c8eeef4f03684aa5a0715db010" prot="public">
+          <name>BITWUZLA_OPT_SEED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Seed for random number generator.</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para>An unsigned integer value. [<bold>default</bold>: 0] </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a026004d32c400ba5d8073463663ac2b8" prot="public">
+          <name>BITWUZLA_OPT_VERBOSITY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Verbosity level.</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para>An unsigned integer value &lt;= 4. [<bold>default</bold>: 0] </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a13e82d6a8e6a7acba0575de4e48e4638" prot="public">
+          <name>BITWUZLA_OPT_BV_SOLVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Configure the bit-vector solver engine.</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>bitblast</bold>: The classical bit-blasting approach. [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>prop</bold>: Propagation-based local search (sat only).</para>
+</listitem><listitem><para><bold>preprop</bold>: Sequential portfolio combination of bit-blasting and propagation-based local search. </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac9409f175590e3255dc7638d618deda9" prot="public">
+          <name>BITWUZLA_OPT_REWRITE_LEVEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Rewrite level.</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>0</bold>: no rewriting</para>
+</listitem><listitem><para><bold>1</bold>: term level rewriting</para>
+</listitem><listitem><para><bold>2</bold>: term level rewriting and basic preprocessing</para>
+</listitem><listitem><para><bold>3</bold>: term level rewriting and full preprocessing [<bold>default</bold>]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="note"><para>Configuring the rewrite level after terms have been created is not allowed.</para>
+</simplesect>
+<simplesect kind="warning"><para>This is an expert option to configure rewriting. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a81150490cd8088f9619cb14c3f507ea8" prot="public">
+          <name>BITWUZLA_OPT_SAT_SOLVER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Configure the SAT solver engine.</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>cadical</bold>: <ulink url="https://github.com/arminbiere/cadical">CaDiCaL</ulink> [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>cms</bold>: <ulink url="https://github.com/msoos/cryptominisat">CryptoMiniSat</ulink></para>
+</listitem><listitem><para><bold>gimsatul</bold>: <ulink url="https://github.com/arminbiere/gimsatul">Gimsatul</ulink></para>
+</listitem><listitem><para><bold>kissat</bold>: <ulink url="https://github.com/arminbiere/kissat">Kissat</ulink></para>
+</listitem><listitem><para><bold>lingeling</bold>: <ulink url="https://github.com/arminbiere/lingeling">Lingeling</ulink> </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ad73cc8f6974b29c456350e2fcd040035" prot="public">
+          <name>BITWUZLA_OPT_SMT_COMP_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Enable SMT-COMP mode.</bold></para>
+<para>Parser only option. Only effective when an SMT2 input file is parsed.</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable</para>
+</listitem><listitem><para><bold>0</bold>: disable [<bold>default</bold>]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a662544a09e473e545eaded327139626e" prot="public">
+          <name>BITWUZLA_OPT_PROP_CONST_BITS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Propagation-based local search solver engine: Constant bits.</bold></para>
+<para>Configure constant bit propagation (requries bit-blasting to AIG).</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option to configure the prop solver engine. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac99ae4f106122638f50c701c0bb18ece" prot="public">
+          <name>BITWUZLA_OPT_PROP_INFER_INEQ_BOUNDS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Propagation-based local search solver engine: Infer bounds for inequalities for value computation.</bold></para>
+<para>When enabled, infer bounds for value computation for inequalities based on satisfied top level inequalities.</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable</para>
+</listitem><listitem><para><bold>0</bold>: disable [<bold>default</bold>]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option to configure the prop solver engine. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884af5da1dff30cc2a53767384fad18be760" prot="public">
+          <name>BITWUZLA_OPT_PROP_NPROPS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Propagation-based local search solver engine: Number of propagations.</bold></para>
+<para>Configure the number of propagations used as a limit for the propagation-based local search solver engine. No limit if 0.</para>
+<para>Values:<itemizedlist>
+<listitem><para>An unsigned integer value. [<bold>default</bold>: 0]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option to configure the prop solver engine. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a76c11fe73212cd94000f0caa67a8fbc7" prot="public">
+          <name>BITWUZLA_OPT_PROP_NUPDATES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Propagation-based local search solver engine: Number of updates.</bold></para>
+<para>Configure the number of model value updates used as a limit for the propagation-based local search solver engine. No limit if 0.</para>
+<para>Values:<itemizedlist>
+<listitem><para>An unsigned integer value. [<bold>default</bold>: 0]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option to configure the prop solver engine. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a6e4273d4fa7a24899ced29405a44c14c" prot="public">
+          <name>BITWUZLA_OPT_PROP_PATH_SEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Propagation-based local search solver engine: Path selection.</bold></para>
+<para>Configure mode for path selection.</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>essential</bold>: Select path based on essential inputs. [default]</para>
+</listitem><listitem><para><bold>random</bold>: Select path randomly.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option to configure the prop solver engine. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ae6d5cf63bb62a61bf80e6bb23560bef8" prot="public">
+          <name>BITWUZLA_OPT_PROP_PROB_RANDOM_INPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Propagation-based local search solver engine: Probability for selecting random input.</bold></para>
+<para>Configure the probability with which to select a random input instead of an essential input when selecting the path.</para>
+<para>Values:<itemizedlist>
+<listitem><para>An unsigned integer value &lt;= 1000 (= 100%). [<bold>default</bold>: 0]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option to configure the prop solver engine. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a24eece7a53b8c6683259d46b1bd41c9e" prot="public">
+          <name>BITWUZLA_OPT_PROP_PROB_USE_INV_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Propagation-based local search solver engine: Probability for inverse values.</bold></para>
+<para>Configure the probability with which to choose an inverse value over a consistent value when aninverse value exists.</para>
+<para>Values:<itemizedlist>
+<listitem><para>An unsigned integer value &lt;= 1000 (= 100%). [<bold>default</bold>: 990]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option to configure the prop solver engine. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac13cba3b2e5690ad17d0920650f0428d" prot="public">
+          <name>BITWUZLA_OPT_PROP_SEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Propagation-based local search solver engine: Value computation for sign extension.</bold></para>
+<para>When enabled, detect sign extension operations (are rewritten on construction) and use value computation for sign extension.</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable</para>
+</listitem><listitem><para><bold>0</bold>: disable [<bold>default</bold>]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option to configure the prop solver engine. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a56d3e7656e9b41636edc2abf30972e92" prot="public">
+          <name>BITWUZLA_OPT_PROP_NORMALIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Propagation-based local search solver engine: Local search specific normalization.</bold></para>
+<para>When enabled, perform normalizations for local search, on the local search layer (does not affect node layer).</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable</para>
+</listitem><listitem><para><bold>0</bold>: disable [<bold>default</bold>]</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This is an expert option to configure the prop solver engine. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a04773114ffcfbfd294711a2f1a64fa5b" prot="public">
+          <name>BITWUZLA_OPT_PREPROCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing</bold></para>
+<para>When enabled, applies all enabled preprocessing passes.</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a8974dfa8f2dfd9ef83657183980fdbe1" prot="public">
+          <name>BITWUZLA_OPT_PP_CONTRADICTING_ANDS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Find contradicting bit-vector ands</bold></para>
+<para>When enabled, substitutes contradicting nodes of kind #BV_AND with zero.</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a581a5ddbe9de2f06f7bddff168c0b48d" prot="public">
+          <name>BITWUZLA_OPT_PP_ELIM_BV_EXTRACTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Eliminate bit-vector extracts on bit-vector constants</bold></para>
+<para>When enabled, eliminates bit-vector extracts on constants.</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a1fa614a38db895c953461e76dd950db1" prot="public">
+          <name>BITWUZLA_OPT_PP_EMBEDDED_CONSTR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Embedded constraint substitution</bold></para>
+<para>When enabled, substitutes assertions that occur as sub-expression in the formula with their respective Boolean value.</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ab742a76bc6a303c9fadbd0b9c85ad985" prot="public">
+          <name>BITWUZLA_OPT_PP_FLATTEN_AND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: AND flattening</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a2b8662195c7cc409adcf7b10b79c17db" prot="public">
+          <name>BITWUZLA_OPT_PP_NORMALIZE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Normalization</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a6f45c5b69ece7b8b11d12f7c184fee14" prot="public">
+          <name>BITWUZLA_OPT_PP_NORMALIZE_SHARE_AWARE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Normalization: Enable share awareness normlization</bold></para>
+<para>When enabled, this disables normalizations that may yield blow-up on the bit-level.</para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac0c2d2b1c4447948d64e48fb298bd95a" prot="public">
+          <name>BITWUZLA_OPT_PP_SKELETON_PREPROC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Boolean skeleton preprocessing</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a746e24513193ef3220f12f03d72b6f5d" prot="public">
+          <name>BITWUZLA_OPT_PP_VARIABLE_SUBST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Variable substitution</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a50414a05056676edf04f11108068d0ac" prot="public">
+          <name>BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_EQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Variable substitution: Equality Normalization</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a4b5ba45cd594fbae18e505304c64c55b" prot="public">
+          <name>BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_DISEQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Variable substitution: Disequality Normalization</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884afbe7832902e72d5f07c9fb5743b578f4" prot="public">
+          <name>BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_BV_INEQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><bold>Preprocessing: Variable substitution: Bit-Vector Inequality Normalization</bold></para>
+<para>Values:<itemizedlist>
+<listitem><para><bold>1</bold>: enable [<bold>default</bold>]</para>
+</listitem><listitem><para><bold>0</bold>: disable </para>
+</listitem></itemizedlist>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884adc0aa19c602642a0f86325d846163086" prot="public">
+          <name>BITWUZLA_OPT_DBG_RW_NODE_THRESH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>**Debug: Threshold for number of new nodes introduced for recursive call of rewrite(). **</para>
+<para>Prints a warning number of newly introduced nodes is above threshold.</para>
+<para><simplesect kind="warning"><para>This is an expert debug option. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a1bec401b944a263574c422dbb4a8ae9e" prot="public">
+          <name>BITWUZLA_OPT_DBG_PP_NODE_THRESH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>**Debug: Threshold for formula size increase after preprocessing in percent. **</para>
+<para>Prints a warning if formula size increase is above threshold.</para>
+<para><simplesect kind="warning"><para>This is an expert debug option. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a4784c68ce452d7b71ca6af9f5534bb98" prot="public">
+          <name>BITWUZLA_OPT_DBG_CHECK_MODEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>**Debug: Check models for each satisfiable query. **</para>
+<para><simplesect kind="warning"><para>This is an expert debug option. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a48bfe6e712629163883c0a59fcade171" prot="public">
+          <name>BITWUZLA_OPT_DBG_CHECK_UNSAT_CORE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>**Debug: Check unsat core for each unsatisfiable query. **</para>
+<para><simplesect kind="warning"><para>This is an expert debug option. </para>
+</simplesect>
+</para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The configuration options supported by Bitwuzla.</para>
+<para>Options that list string values can be configured via <computeroutput>bitwuzla_set_option_str</computeroutput>. Options with integer configuration values are configured via <computeroutput>bitwuzla_set_option</computeroutput>.</para>
+<para>For all options, the current configuration value can be queried via <computeroutput>bitwuzla_get_option</computeroutput>. Options with string configuration values internally represent these values as enum values. For these options, <computeroutput>bitwuzla_get_opiton</computeroutput> will return such an enum value. Use <computeroutput>bitwuzla_get_option_str</computeroutput> to query enum options for the corresponding string representation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/option.h" line="44" column="1" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/option.h" bodystart="45" bodyend="388"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Bitwuzla:<sp/>Satisfiability<sp/>Modulo<sp/>Theories<sp/>(SMT)<sp/>solver.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2022<sp/>by<sp/>the<sp/>authors<sp/>listed<sp/>in<sp/>the<sp/>AUTHORS<sp/>file<sp/>at</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>https://github.com/bitwuzla/bitwuzla/blob/main/AUTHORS</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>Bitwuzla<sp/>under<sp/>the<sp/>MIT<sp/>license.<sp/>See<sp/>COPYING<sp/>for<sp/>more</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>information<sp/>at<sp/>https://github.com/bitwuzla/bitwuzla/blob/main/COPYING</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(!defined(BITWUZLA_API_USE_C_ENUMS)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>!defined(BITWUZLA_API_OPTION_CPP_H_INCLUDED))<sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>||<sp/>(defined(BITWUZLA_API_USE_C_ENUMS)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>!defined(BITWUZLA_API_OPTION_C_H_INCLUDED))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_USE_C_ENUMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">bitwuzla<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENUM(name)<sp/>class<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVALUE(name)<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="option_8h_1afdaccbb8028676944c5b4dad92968641" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENUM(name)<sp/>Bitwuzla##name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="option_8h_1a8f41c0c7caad09e429617fc016a216e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVALUE(name)<sp/>BITWUZLA_OPT_##name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Option<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--------------------------------------------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="enums_8h_1afdaccbb8028676944c5b4dad92968641" kindref="member">ENUM</ref>(Option)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----------------<sp/>General<sp/>Options<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a2ab7a378be67f1f507afb896e3509b4a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(LOGLEVEL),</highlight></codeline>
+<codeline lineno="63" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a525874db68efd149c933f7e3171795cf" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PRODUCE_MODELS),</highlight></codeline>
+<codeline lineno="70" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a10ec079491917966ccfe3be25e68d1fe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PRODUCE_UNSAT_ASSUMPTIONS),</highlight></codeline>
+<codeline lineno="77" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a0359cdb5fe7bdfa22e75dd97392a1054" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PRODUCE_UNSAT_CORES),</highlight></codeline>
+<codeline lineno="83" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a304e41c8eeef4f03684aa5a0715db010" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(SEED),</highlight></codeline>
+<codeline lineno="89" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a026004d32c400ba5d8073463663ac2b8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(VERBOSITY),</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>----------------<sp/>Bitwuzla-specific<sp/>Options<sp/>-----------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a13e82d6a8e6a7acba0575de4e48e4638" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(BV_SOLVER),</highlight></codeline>
+<codeline lineno="115" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac9409f175590e3255dc7638d618deda9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(REWRITE_LEVEL),</highlight></codeline>
+<codeline lineno="130" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a81150490cd8088f9619cb14c3f507ea8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(SAT_SOLVER),</highlight></codeline>
+<codeline lineno="141" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884ad73cc8f6974b29c456350e2fcd040035" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(SMT_COMP_MODE),</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>----------------<sp/>BV:<sp/>Prop<sp/>Engine<sp/>Options<sp/>(Expert)<sp/>----------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a662544a09e473e545eaded327139626e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PROP_CONST_BITS),</highlight></codeline>
+<codeline lineno="169" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac99ae4f106122638f50c701c0bb18ece" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PROP_INFER_INEQ_BOUNDS),</highlight></codeline>
+<codeline lineno="181" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884af5da1dff30cc2a53767384fad18be760" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PROP_NPROPS),</highlight></codeline>
+<codeline lineno="193" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a76c11fe73212cd94000f0caa67a8fbc7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PROP_NUPDATES),</highlight></codeline>
+<codeline lineno="207" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a6e4273d4fa7a24899ced29405a44c14c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PROP_PATH_SEL),</highlight></codeline>
+<codeline lineno="219" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884ae6d5cf63bb62a61bf80e6bb23560bef8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PROP_PROB_RANDOM_INPUT),</highlight></codeline>
+<codeline lineno="231" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a24eece7a53b8c6683259d46b1bd41c9e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PROP_PROB_USE_INV_VALUE),</highlight></codeline>
+<codeline lineno="244" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac13cba3b2e5690ad17d0920650f0428d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PROP_SEXT),</highlight></codeline>
+<codeline lineno="257" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a56d3e7656e9b41636edc2abf30972e92" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PROP_NORMALIZE),</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a04773114ffcfbfd294711a2f1a64fa5b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PREPROCESS),</highlight></codeline>
+<codeline lineno="276" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a8974dfa8f2dfd9ef83657183980fdbe1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_CONTRADICTING_ANDS),</highlight></codeline>
+<codeline lineno="285" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a581a5ddbe9de2f06f7bddff168c0b48d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_ELIM_BV_EXTRACTS),</highlight></codeline>
+<codeline lineno="295" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a1fa614a38db895c953461e76dd950db1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_EMBEDDED_CONSTR),</highlight></codeline>
+<codeline lineno="302" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884ab742a76bc6a303c9fadbd0b9c85ad985" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_FLATTEN_AND),</highlight></codeline>
+<codeline lineno="309" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a2b8662195c7cc409adcf7b10b79c17db" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_NORMALIZE),</highlight></codeline>
+<codeline lineno="319" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a6f45c5b69ece7b8b11d12f7c184fee14" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_NORMALIZE_SHARE_AWARE),</highlight></codeline>
+<codeline lineno="326" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac0c2d2b1c4447948d64e48fb298bd95a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_SKELETON_PREPROC),</highlight></codeline>
+<codeline lineno="333" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a746e24513193ef3220f12f03d72b6f5d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_VARIABLE_SUBST),</highlight></codeline>
+<codeline lineno="340" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a50414a05056676edf04f11108068d0ac" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_VARIABLE_SUBST_NORM_EQ),</highlight></codeline>
+<codeline lineno="347" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a4b5ba45cd594fbae18e505304c64c55b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_VARIABLE_SUBST_NORM_DISEQ),</highlight></codeline>
+<codeline lineno="355" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884afbe7832902e72d5f07c9fb5743b578f4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(PP_VARIABLE_SUBST_NORM_BV_INEQ),</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884adc0aa19c602642a0f86325d846163086" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(DBG_RW_NODE_THRESH),</highlight></codeline>
+<codeline lineno="373" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a1bec401b944a263574c422dbb4a8ae9e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(DBG_PP_NODE_THRESH),</highlight></codeline>
+<codeline lineno="378" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a4784c68ce452d7b71ca6af9f5534bb98" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(DBG_CHECK_MODEL),</highlight></codeline>
+<codeline lineno="383" refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884a48bfe6e712629163883c0a59fcade171" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(DBG_CHECK_UNSAT_CORE),</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SKIP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><ref refid="enums_8h_1a8f41c0c7caad09e429617fc016a216e8" kindref="member">EVALUE</ref>(NUM_OPTS),</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BITWUZLA_API_USE_C_ENUMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DOXYGEN_SKIP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref><sp/><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref>;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_USE_C_ENUMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>bitwuzla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>EVALUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>ENUM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_USE_C_ENUMS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_OPTION_CPP_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BITWUZLA_API_OPTION_CPP_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BITWUZLA_API_OPTION_C_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411" refid="option_8h_1a60aa6b2ced84dbbbd0794207bfdf0369" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BITWUZLA_API_OPTION_C_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/ma/git/bitwuzla/include/bitwuzla/option.h"/>
+  </compounddef>
+</doxygen>

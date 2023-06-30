@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Line Interface &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="api.html" />
+    <link rel="prev" title="Installation and Build Instructions" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Command Line Interface</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="command-line-interface">
+<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline"></a></h1>
+<p>Bitwuzla provides a command line interface that supports parsing of SMT-LIBv2
+<span id="id1">[<a class="reference internal" href="references.html#id5" title="Clark Barrett, Pascal Fontaine, and Cesare Tinelli. The SMT-LIB Standard: Version 2.6. Technical Report, Department of Computer Science, The University of Iowa, 2017. URL: https://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf.">BFT17</a>]</span> and non-sequential BTOR2 <span id="id2">[<a class="reference internal" href="references.html#id4" title="Aina Niemetz, Mathias Preiner, Clifford Wolf, and Armin Biere. Btor2 , BtorMC and Boolector 3.0. In Hana Chockler and Georg Weissenbacher, editors, Computer Aided Verification - 30th International Conference, CAV 2018, Held as Part of the Federated Logic Conference, FloC 2018, Oxford, UK, July 14-17, 2018, Proceedings, Part I, volume 10981 of Lecture Notes in Computer Science, 587–595. Springer, 2018. doi:10.1007/978-3-319-96145-3\_32.">NPWB18</a>]</span> input files (i.e. no
+model-checking features supported).</p>
+<p>The command line usage of Bitwuzla is as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Usage:
+  bitwuzla [&lt;options&gt;] [&lt;input&gt;]
+
+Options:
+  &lt;input&gt;                                        input file, reads from stdin if 
+                                                 omitted 
+  -h, --help                                     print this message and exit 
+  -V, --version                                  print version and exit 
+  -c, --copyright                                print copyright and exit 
+  -p, --print-formula                            print formula in smt2 format 
+  -P, --parse-only                               only parse input without calling 
+                                                 check-sat 
+  -l &lt;n&gt;, --log-level &lt;n&gt;           [0]          log level 
+  -m, --produce-models              [false]      model production 
+  --produce-unsat-assumptions       [false]      unsat assumptions production 
+  --produce-unsat-cores             [false]      unsat core production 
+  -s &lt;n&gt;, --seed &lt;n&gt;                [42]         seed for the random number generator 
+  -v &lt;n&gt;, --verbose &lt;n&gt;             [0]          verbosity level 
+  --bv-solver &lt;M&gt;                   [bitblast]   bv solver engine {preprop, prop, 
+                                                 bitblast} 
+  -rwl &lt;n&gt;, --rewrite-level &lt;n&gt;     [2]          rewrite level 
+  -S &lt;M&gt;, --sat-solver &lt;M&gt;          [cadical]    backend SAT solver {kissat, cms, 
+                                                 cadical} 
+  --smt-comp-mode                   [false]      SMT-COMP mode 
+  --prop-const-bits                 [true]       use constant bits propagation 
+  --prop-ineq-bounds                [true]       infer inequality bounds for 
+                                                 invertibility conditions and 
+                                                 inverse value computation 
+  --prop-nprops &lt;n&gt;                 [0]          number of propagation steps used as a 
+                                                 limit for propagation-based local 
+                                                 search engine 
+  --prop-nupdates &lt;n&gt;               [0]          number of model value updates used as a 
+                                                 limit for propagation-based local 
+                                                 search engine 
+  --prop-path-sel &lt;M&gt;               [essential]  propagation path selection mode for 
+                                                 propagation-based local search 
+                                                 engine {random, essential} 
+  --prop-prob-pick-rand-input &lt;n&gt;   [10]         probability for selecting a random 
+                                                 input instead of an essential input 
+                                                 (interpreted as &lt;n&gt;/1000) 
+  --prop-prob-pick-inv-value &lt;n&gt;    [990]        probability for producing inverse 
+                                                 rather than consistent values 
+                                                 (interpreted as &lt;n&gt;/1000) 
+  --prop-sext                       [true]       use sign_extend nodes for concats 
+                                                 that represent sign_extend nodes for 
+                                                 propagation-based local search 
+                                                 engine 
+  --prop-normalize                  [false]      enable normalization for local 
+                                                 search 
+  --preprocess                      [true]       enable preprocessing 
+  --pp-contr-ands                   [false]      enable contradicting ands 
+                                                 preprocessing pass 
+  --pp-elim-extracts                [false]      eliminate extract on BV constants 
+  --pp-embedded                     [true]       enable embedded contraint 
+                                                 preprocessing pass 
+  --pp-flatten-and                  [true]       enable AND flattening preprocessing 
+                                                 pass 
+  --pp-normalize                    [true]       enable normalization pass 
+  --pp-normalize-share-aware        [true]       disable normalizations in 
+                                                 normalization pass that may yield 
+                                                 blow-up on the bit-level 
+  --pp-skeleton-preproc             [true]       enable skeleton preprocessing pass 
+  --pp-variable-subst               [true]       enable variable substitution 
+                                                 preprocessing pass 
+  --pp-variable-subst-norm-eq       [true]       enable equality normalization via 
+                                                 Gaussian elimination if variable 
+                                                 substitution preprocessing pass is 
+                                                 enabled 
+  --pp-variable-subst-norm-diseq    [false]      enable disequality normalization if 
+                                                 variable substitution 
+                                                 preprocessing pass is enabled 
+  --pp-variable-subst-norm-bv-ineq  [false]      enable bit-vector unsigned 
+                                                 inequality normalization if 
+                                                 variable substitution 
+                                                 preprocessing pass is enabled 
+  --dbg-rw-node-thresh &lt;n&gt;          [0]          warn threshold [#] for new nodes 
+                                                 created through rewriting steps 
+  --dbg-pp-node-thresh &lt;n&gt;          [0]          warn threshold [%] for new nodes 
+                                                 created through preprocessing in 
+                                                 total 
+  --check-model                     [false]      check model for each satisfiable 
+                                                 query 
+  --check-unsat-core                [false]      check unsat core model for each 
+                                                 unsatisfiable query 
+
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install.html" class="btn btn-neutral float-left" title="Installation and Build Instructions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

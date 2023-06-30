@@ -1,0 +1,85 @@
+Usage:
+  bitwuzla [<options>] [<input>]
+
+Options:
+  <input>                                        input file, reads from stdin if 
+                                                 omitted 
+  -h, --help                                     print this message and exit 
+  -V, --version                                  print version and exit 
+  -c, --copyright                                print copyright and exit 
+  -p, --print-formula                            print formula in smt2 format 
+  -P, --parse-only                               only parse input without calling 
+                                                 check-sat 
+  -l <n>, --log-level <n>           [0]          log level 
+  -m, --produce-models              [false]      model production 
+  --produce-unsat-assumptions       [false]      unsat assumptions production 
+  --produce-unsat-cores             [false]      unsat core production 
+  -s <n>, --seed <n>                [42]         seed for the random number generator 
+  -v <n>, --verbose <n>             [0]          verbosity level 
+  --bv-solver <M>                   [bitblast]   bv solver engine {preprop, prop, 
+                                                 bitblast} 
+  -rwl <n>, --rewrite-level <n>     [2]          rewrite level 
+  -S <M>, --sat-solver <M>          [cadical]    backend SAT solver {kissat, cms, 
+                                                 cadical} 
+  --smt-comp-mode                   [false]      SMT-COMP mode 
+  --prop-const-bits                 [true]       use constant bits propagation 
+  --prop-ineq-bounds                [true]       infer inequality bounds for 
+                                                 invertibility conditions and 
+                                                 inverse value computation 
+  --prop-nprops <n>                 [0]          number of propagation steps used as a 
+                                                 limit for propagation-based local 
+                                                 search engine 
+  --prop-nupdates <n>               [0]          number of model value updates used as a 
+                                                 limit for propagation-based local 
+                                                 search engine 
+  --prop-path-sel <M>               [essential]  propagation path selection mode for 
+                                                 propagation-based local search 
+                                                 engine {random, essential} 
+  --prop-prob-pick-rand-input <n>   [10]         probability for selecting a random 
+                                                 input instead of an essential input 
+                                                 (interpreted as <n>/1000) 
+  --prop-prob-pick-inv-value <n>    [990]        probability for producing inverse 
+                                                 rather than consistent values 
+                                                 (interpreted as <n>/1000) 
+  --prop-sext                       [true]       use sign_extend nodes for concats 
+                                                 that represent sign_extend nodes for 
+                                                 propagation-based local search 
+                                                 engine 
+  --prop-normalize                  [false]      enable normalization for local 
+                                                 search 
+  --preprocess                      [true]       enable preprocessing 
+  --pp-contr-ands                   [false]      enable contradicting ands 
+                                                 preprocessing pass 
+  --pp-elim-extracts                [false]      eliminate extract on BV constants 
+  --pp-embedded                     [true]       enable embedded contraint 
+                                                 preprocessing pass 
+  --pp-flatten-and                  [true]       enable AND flattening preprocessing 
+                                                 pass 
+  --pp-normalize                    [true]       enable normalization pass 
+  --pp-normalize-share-aware        [true]       disable normalizations in 
+                                                 normalization pass that may yield 
+                                                 blow-up on the bit-level 
+  --pp-skeleton-preproc             [true]       enable skeleton preprocessing pass 
+  --pp-variable-subst               [true]       enable variable substitution 
+                                                 preprocessing pass 
+  --pp-variable-subst-norm-eq       [true]       enable equality normalization via 
+                                                 Gaussian elimination if variable 
+                                                 substitution preprocessing pass is 
+                                                 enabled 
+  --pp-variable-subst-norm-diseq    [false]      enable disequality normalization if 
+                                                 variable substitution 
+                                                 preprocessing pass is enabled 
+  --pp-variable-subst-norm-bv-ineq  [false]      enable bit-vector unsigned 
+                                                 inequality normalization if 
+                                                 variable substitution 
+                                                 preprocessing pass is enabled 
+  --dbg-rw-node-thresh <n>          [0]          warn threshold [#] for new nodes 
+                                                 created through rewriting steps 
+  --dbg-pp-node-thresh <n>          [0]          warn threshold [%] for new nodes 
+                                                 created through preprocessing in 
+                                                 total 
+  --check-model                     [false]      check model for each satisfiable 
+                                                 query 
+  --check-unsat-core                [false]      check unsat core model for each 
+                                                 unsatisfiable query 
+

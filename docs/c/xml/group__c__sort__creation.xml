@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__c__sort__creation" kind="group">
+    <compoundname>c_sort_creation</compoundname>
+    <title>C_sort_creation</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__c__sort__creation_1ga69dc2abdb304f46618b87e5ad0955361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_mk_array_sort</definition>
+        <argsstring>(BitwuzlaSort index, BitwuzlaSort element)</argsstring>
+        <name>bitwuzla_mk_array_sort</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an array sort.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index sort of the array sort. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The element sort of the array sort. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array sort which maps sort <computeroutput>index</computeroutput> to sort <computeroutput>element</computeroutput>.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1ga223021177f73fb498200dc54a73cd222" kindref="member">bitwuzla_sort_is_array</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1gace27780a390857382fe95dcf1883fcc3" kindref="member">bitwuzla_sort_array_get_index</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1ga5260f3a3293ab59ecbba24500e9a484f" kindref="member">bitwuzla_sort_array_get_element</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1ga9f1e378f65a01e952266fa3f4329edfb" kindref="member">bitwuzla_term_is_array</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1gaede3ec49cd0246cf82aba9d6f56cf1ab" kindref="member">bitwuzla_term_array_get_index_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1ga3b3d22be4845607e9fef67234bbe49b3" kindref="member">bitwuzla_term_array_get_element_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1344" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1344" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__sort__creation_1gacdf18c2d5a68f684eb93c4e0a781625c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_mk_bool_sort</definition>
+        <argsstring>()</argsstring>
+        <name>bitwuzla_mk_bool_sort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a Boolean sort. <simplesect kind="return"><para>A Boolean sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1350" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1350" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_mk_bv_sort</definition>
+        <argsstring>(uint64_t size)</argsstring>
+        <name>bitwuzla_mk_bv_sort</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector sort of given size.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the bit-vector sort. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A bit-vector sort of given size.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1ga144ec29d4ab20bf57771fd8176d8a97f" kindref="member">bitwuzla_sort_is_bv</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1ga72f79b3c0df6adf66106b61fe8b7f175" kindref="member">bitwuzla_sort_bv_get_size</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1gab0a016bbaf3df6b5cd7f86b75462702d" kindref="member">bitwuzla_term_is_bv</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1gaca4f4cdbeb541b7383d05505869b8c52" kindref="member">bitwuzla_term_bv_get_size</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1364" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1364" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_mk_fp_sort</definition>
+        <argsstring>(uint64_t exp_size, uint64_t sig_size)</argsstring>
+        <name>bitwuzla_mk_fp_sort</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>exp_size</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>sig_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point sort of given exponent and significand size.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>exp_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the exponent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the significand (including sign bit). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point sort of given format.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1gadf39de9ace9af52172ed29d7360fe498" kindref="member">bitwuzla_sort_is_fp</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1gaf70dd1197655ee8300524ce23ffd6647" kindref="member">bitwuzla_sort_fp_get_exp_size</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1ga2dd5e721758bce9191d8ad1bba9d0895" kindref="member">bitwuzla_sort_fp_get_sig_size</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1gaa4b342abd33b3ca5c41562282309af03" kindref="member">bitwuzla_term_is_fp</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1ga3433f784e5828c28de594c2eae2bfb25" kindref="member">bitwuzla_term_fp_get_exp_size</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1gadb45c01bf4a9299f2423e1eaaadb0033" kindref="member">bitwuzla_term_fp_get_sig_size</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1381" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1381" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__sort__creation_1gab67bdee3bbcfc271a36dff873ba199c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_mk_fun_sort</definition>
+        <argsstring>(uint64_t arity, BitwuzlaSort domain[], BitwuzlaSort codomain)</argsstring>
+        <name>bitwuzla_mk_fun_sort</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>arity</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>domain</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>codomain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a function sort.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of arguments to the function. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>domain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The domain sorts (the sorts of the arguments). The number of sorts in this vector must match <computeroutput>arity</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>codomain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The codomain sort (the sort of the return value). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A function sort of given domain and codomain sorts.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1ga28ee43c983d134b737d3020724e11778" kindref="member">bitwuzla_sort_is_fun</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1gacfb5896f5bcf57d84cd4e7f6673cb91b" kindref="member">bitwuzla_sort_fun_get_arity</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1gad524c5ed6629d63dcb36cfa833993dd7" kindref="member">bitwuzla_sort_fun_get_domain_sorts</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1gac293ff68f4f2109f45232a057b591685" kindref="member">bitwuzla_sort_fun_get_codomain</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1gacfbbebc377fc344eb21d06a2236c8575" kindref="member">bitwuzla_term_is_fun</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1ga691c7593f89b78f0aff9a975d7605809" kindref="member">bitwuzla_term_fun_get_arity</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1ga3989a0aec5d263aa2850237932de03e3" kindref="member">bitwuzla_term_fun_get_domain_sorts</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1ga6e7d67964c94704bd225f011a70caf49" kindref="member">bitwuzla_term_fun_get_codomain_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1402" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1402" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_mk_rm_sort</definition>
+        <argsstring>()</argsstring>
+        <name>bitwuzla_mk_rm_sort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a Roundingmode sort. <simplesect kind="return"><para>A Roundingmode sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1ga2a3f0e4bc15dec1ce49319265130501b" kindref="member">bitwuzla_sort_is_rm</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1gae75357462b4b26a8b94c97cd04512b2e" kindref="member">bitwuzla_term_is_rm</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1413" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1413" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__sort__creation_1ga43c064c2ea8b99a1e6543bc1d814d857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_mk_uninterpreted_sort</definition>
+        <argsstring>(const char *symbol)</argsstring>
+        <name>bitwuzla_mk_uninterpreted_sort</name>
+        <param>
+          <type>const char *</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an uninterpreted sort. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The symbol of the sort. May be NULL. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A uninterpreted sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlasort_1gaf57078a6b8847a862a43899b94b1a176" kindref="member">bitwuzla_sort_is_uninterpreted</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__bitwuzlaterm_1gad157215b947eeaa42f2817cebe685185" kindref="member">bitwuzla_term_is_uninterpreted</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1423" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1423" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

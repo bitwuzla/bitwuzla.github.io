@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BitwuzlaOption &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">BitwuzlaOption</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="bitwuzlaoption">
+<h1>BitwuzlaOption<a class="headerlink" href="#bitwuzlaoption" title="Permalink to this headline"></a></h1>
+<p>The kind of a Bitwuzla configuration option.</p>
+<p>Options are configured via a <a class="reference internal" href="../types/bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance,
+which must be configured before creating a <a class="reference internal" href="../types/bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some options are labeled as “expert” options. Use with caution.</p>
+</div>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>enum <a class="reference internal" href="#_CPPv414BitwuzlaOption" title="BitwuzlaOption"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">BitwuzlaOption</span></code></a></p></li>
+</ul>
+<hr class="docutils" />
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv414BitwuzlaOption">
+<span id="_CPPv314BitwuzlaOption"></span><span id="_CPPv214BitwuzlaOption"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaOption</span></span></span><a class="headerlink" href="#_CPPv414BitwuzlaOption" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The configuration options supported by Bitwuzla.</p>
+<p>Options that list string values can be configured via <code class="docutils literal notranslate"><span class="pre">bitwuzla_set_option_str</span></code>. Options with integer configuration values are configured via <code class="docutils literal notranslate"><span class="pre">bitwuzla_set_option</span></code>.</p>
+<p>For all options, the current configuration value can be queried via <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_option</span></code>. Options with string configuration values internally represent these values as enum values. For these options, <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_opiton</span></code> will return such an enum value. Use <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_option_str</span></code> to query enum options for the corresponding string representation. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption21BITWUZLA_OPT_LOGLEVELE">
+<span id="_CPPv3N14BitwuzlaOption21BITWUZLA_OPT_LOGLEVELE"></span><span id="_CPPv2N14BitwuzlaOption21BITWUZLA_OPT_LOGLEVELE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a2ab7a378be67f1f507afb896e3509b4a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_LOGLEVEL</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption21BITWUZLA_OPT_LOGLEVELE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Log level.</strong></p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value. [<strong>default</strong>: 0] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption27BITWUZLA_OPT_PRODUCE_MODELSE">
+<span id="_CPPv3N14BitwuzlaOption27BITWUZLA_OPT_PRODUCE_MODELSE"></span><span id="_CPPv2N14BitwuzlaOption27BITWUZLA_OPT_PRODUCE_MODELSE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a525874db68efd149c933f7e3171795cf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PRODUCE_MODELS</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption27BITWUZLA_OPT_PRODUCE_MODELSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Model generation.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable, generate model for assertions only</p></li>
+<li><p><strong>2</strong>: enable, generate model for all created terms</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option cannot be enabled in combination with option <code class="docutils literal notranslate"><span class="pre">EVALUE</span><span class="pre">(PP_UNCONSTRAINED_OPTIMIZATION</span></code>. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption38BITWUZLA_OPT_PRODUCE_UNSAT_ASSUMPTIONSE">
+<span id="_CPPv3N14BitwuzlaOption38BITWUZLA_OPT_PRODUCE_UNSAT_ASSUMPTIONSE"></span><span id="_CPPv2N14BitwuzlaOption38BITWUZLA_OPT_PRODUCE_UNSAT_ASSUMPTIONSE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a10ec079491917966ccfe3be25e68d1fe"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PRODUCE_UNSAT_ASSUMPTIONS</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption38BITWUZLA_OPT_PRODUCE_UNSAT_ASSUMPTIONSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Unsat assumptions generation.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption32BITWUZLA_OPT_PRODUCE_UNSAT_CORESE">
+<span id="_CPPv3N14BitwuzlaOption32BITWUZLA_OPT_PRODUCE_UNSAT_CORESE"></span><span id="_CPPv2N14BitwuzlaOption32BITWUZLA_OPT_PRODUCE_UNSAT_CORESE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a0359cdb5fe7bdfa22e75dd97392a1054"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PRODUCE_UNSAT_CORES</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption32BITWUZLA_OPT_PRODUCE_UNSAT_CORESE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Unsat core generation.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption17BITWUZLA_OPT_SEEDE">
+<span id="_CPPv3N14BitwuzlaOption17BITWUZLA_OPT_SEEDE"></span><span id="_CPPv2N14BitwuzlaOption17BITWUZLA_OPT_SEEDE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a304e41c8eeef4f03684aa5a0715db010"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_SEED</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption17BITWUZLA_OPT_SEEDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Seed for random number generator.</strong></p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value. [<strong>default</strong>: 0] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption22BITWUZLA_OPT_VERBOSITYE">
+<span id="_CPPv3N14BitwuzlaOption22BITWUZLA_OPT_VERBOSITYE"></span><span id="_CPPv2N14BitwuzlaOption22BITWUZLA_OPT_VERBOSITYE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a026004d32c400ba5d8073463663ac2b8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_VERBOSITY</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption22BITWUZLA_OPT_VERBOSITYE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Verbosity level.</strong></p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value &lt;= 4. [<strong>default</strong>: 0] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption22BITWUZLA_OPT_BV_SOLVERE">
+<span id="_CPPv3N14BitwuzlaOption22BITWUZLA_OPT_BV_SOLVERE"></span><span id="_CPPv2N14BitwuzlaOption22BITWUZLA_OPT_BV_SOLVERE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a13e82d6a8e6a7acba0575de4e48e4638"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_BV_SOLVER</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption22BITWUZLA_OPT_BV_SOLVERE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Configure the bit-vector solver engine.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>bitblast</strong>: The classical bit-blasting approach. [<strong>default</strong>]</p></li>
+<li><p><strong>prop</strong>: Propagation-based local search (sat only).</p></li>
+<li><p><strong>preprop</strong>: Sequential portfolio combination of bit-blasting and propagation-based local search. </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption26BITWUZLA_OPT_REWRITE_LEVELE">
+<span id="_CPPv3N14BitwuzlaOption26BITWUZLA_OPT_REWRITE_LEVELE"></span><span id="_CPPv2N14BitwuzlaOption26BITWUZLA_OPT_REWRITE_LEVELE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac9409f175590e3255dc7638d618deda9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_REWRITE_LEVEL</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption26BITWUZLA_OPT_REWRITE_LEVELE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Rewrite level.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>0</strong>: no rewriting</p></li>
+<li><p><strong>1</strong>: term level rewriting</p></li>
+<li><p><strong>2</strong>: term level rewriting and basic preprocessing</p></li>
+<li><p><strong>3</strong>: term level rewriting and full preprocessing [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Configuring the rewrite level after terms have been created is not allowed.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure rewriting. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption23BITWUZLA_OPT_SAT_SOLVERE">
+<span id="_CPPv3N14BitwuzlaOption23BITWUZLA_OPT_SAT_SOLVERE"></span><span id="_CPPv2N14BitwuzlaOption23BITWUZLA_OPT_SAT_SOLVERE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a81150490cd8088f9619cb14c3f507ea8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_SAT_SOLVER</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption23BITWUZLA_OPT_SAT_SOLVERE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Configure the SAT solver engine.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>cadical</strong>: <a class="reference external" href="https://github.com/arminbiere/cadical">CaDiCaL</a> [<strong>default</strong>]</p></li>
+<li><p><strong>cms</strong>: <a class="reference external" href="https://github.com/msoos/cryptominisat">CryptoMiniSat</a></p></li>
+<li><p><strong>gimsatul</strong>: <a class="reference external" href="https://github.com/arminbiere/gimsatul">Gimsatul</a></p></li>
+<li><p><strong>kissat</strong>: <a class="reference external" href="https://github.com/arminbiere/kissat">Kissat</a></p></li>
+<li><p><strong>lingeling</strong>: <a class="reference external" href="https://github.com/arminbiere/lingeling">Lingeling</a> </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption26BITWUZLA_OPT_SMT_COMP_MODEE">
+<span id="_CPPv3N14BitwuzlaOption26BITWUZLA_OPT_SMT_COMP_MODEE"></span><span id="_CPPv2N14BitwuzlaOption26BITWUZLA_OPT_SMT_COMP_MODEE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ad73cc8f6974b29c456350e2fcd040035"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_SMT_COMP_MODE</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption26BITWUZLA_OPT_SMT_COMP_MODEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Enable SMT-COMP mode.</strong></p>
+<p>Parser only option. Only effective when an SMT2 input file is parsed.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption28BITWUZLA_OPT_PROP_CONST_BITSE">
+<span id="_CPPv3N14BitwuzlaOption28BITWUZLA_OPT_PROP_CONST_BITSE"></span><span id="_CPPv2N14BitwuzlaOption28BITWUZLA_OPT_PROP_CONST_BITSE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a662544a09e473e545eaded327139626e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PROP_CONST_BITS</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption28BITWUZLA_OPT_PROP_CONST_BITSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Constant bits.</strong></p>
+<p>Configure constant bit propagation (requries bit-blasting to AIG).</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption35BITWUZLA_OPT_PROP_INFER_INEQ_BOUNDSE">
+<span id="_CPPv3N14BitwuzlaOption35BITWUZLA_OPT_PROP_INFER_INEQ_BOUNDSE"></span><span id="_CPPv2N14BitwuzlaOption35BITWUZLA_OPT_PROP_INFER_INEQ_BOUNDSE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac99ae4f106122638f50c701c0bb18ece"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PROP_INFER_INEQ_BOUNDS</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption35BITWUZLA_OPT_PROP_INFER_INEQ_BOUNDSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Infer bounds for inequalities for value computation.</strong></p>
+<p>When enabled, infer bounds for value computation for inequalities based on satisfied top level inequalities.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption24BITWUZLA_OPT_PROP_NPROPSE">
+<span id="_CPPv3N14BitwuzlaOption24BITWUZLA_OPT_PROP_NPROPSE"></span><span id="_CPPv2N14BitwuzlaOption24BITWUZLA_OPT_PROP_NPROPSE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884af5da1dff30cc2a53767384fad18be760"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PROP_NPROPS</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption24BITWUZLA_OPT_PROP_NPROPSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Number of propagations.</strong></p>
+<p>Configure the number of propagations used as a limit for the propagation-based local search solver engine. No limit if 0.</p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value. [<strong>default</strong>: 0]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption26BITWUZLA_OPT_PROP_NUPDATESE">
+<span id="_CPPv3N14BitwuzlaOption26BITWUZLA_OPT_PROP_NUPDATESE"></span><span id="_CPPv2N14BitwuzlaOption26BITWUZLA_OPT_PROP_NUPDATESE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a76c11fe73212cd94000f0caa67a8fbc7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PROP_NUPDATES</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption26BITWUZLA_OPT_PROP_NUPDATESE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Number of updates.</strong></p>
+<p>Configure the number of model value updates used as a limit for the propagation-based local search solver engine. No limit if 0.</p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value. [<strong>default</strong>: 0]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption26BITWUZLA_OPT_PROP_PATH_SELE">
+<span id="_CPPv3N14BitwuzlaOption26BITWUZLA_OPT_PROP_PATH_SELE"></span><span id="_CPPv2N14BitwuzlaOption26BITWUZLA_OPT_PROP_PATH_SELE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a6e4273d4fa7a24899ced29405a44c14c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PROP_PATH_SEL</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption26BITWUZLA_OPT_PROP_PATH_SELE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Path selection.</strong></p>
+<p>Configure mode for path selection.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>essential</strong>: Select path based on essential inputs. [default]</p></li>
+<li><p><strong>random</strong>: Select path randomly.</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption35BITWUZLA_OPT_PROP_PROB_RANDOM_INPUTE">
+<span id="_CPPv3N14BitwuzlaOption35BITWUZLA_OPT_PROP_PROB_RANDOM_INPUTE"></span><span id="_CPPv2N14BitwuzlaOption35BITWUZLA_OPT_PROP_PROB_RANDOM_INPUTE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ae6d5cf63bb62a61bf80e6bb23560bef8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PROP_PROB_RANDOM_INPUT</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption35BITWUZLA_OPT_PROP_PROB_RANDOM_INPUTE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Probability for selecting random input.</strong></p>
+<p>Configure the probability with which to select a random input instead of an essential input when selecting the path.</p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value &lt;= 1000 (= 100%). [<strong>default</strong>: 0]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption36BITWUZLA_OPT_PROP_PROB_USE_INV_VALUEE">
+<span id="_CPPv3N14BitwuzlaOption36BITWUZLA_OPT_PROP_PROB_USE_INV_VALUEE"></span><span id="_CPPv2N14BitwuzlaOption36BITWUZLA_OPT_PROP_PROB_USE_INV_VALUEE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a24eece7a53b8c6683259d46b1bd41c9e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PROP_PROB_USE_INV_VALUE</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption36BITWUZLA_OPT_PROP_PROB_USE_INV_VALUEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Probability for inverse values.</strong></p>
+<p>Configure the probability with which to choose an inverse value over a consistent value when aninverse value exists.</p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value &lt;= 1000 (= 100%). [<strong>default</strong>: 990]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption22BITWUZLA_OPT_PROP_SEXTE">
+<span id="_CPPv3N14BitwuzlaOption22BITWUZLA_OPT_PROP_SEXTE"></span><span id="_CPPv2N14BitwuzlaOption22BITWUZLA_OPT_PROP_SEXTE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac13cba3b2e5690ad17d0920650f0428d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PROP_SEXT</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption22BITWUZLA_OPT_PROP_SEXTE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Value computation for sign extension.</strong></p>
+<p>When enabled, detect sign extension operations (are rewritten on construction) and use value computation for sign extension.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption27BITWUZLA_OPT_PROP_NORMALIZEE">
+<span id="_CPPv3N14BitwuzlaOption27BITWUZLA_OPT_PROP_NORMALIZEE"></span><span id="_CPPv2N14BitwuzlaOption27BITWUZLA_OPT_PROP_NORMALIZEE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a56d3e7656e9b41636edc2abf30972e92"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PROP_NORMALIZE</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption27BITWUZLA_OPT_PROP_NORMALIZEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Local search specific normalization.</strong></p>
+<p>When enabled, perform normalizations for local search, on the local search layer (does not affect node layer).</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption23BITWUZLA_OPT_PREPROCESSE">
+<span id="_CPPv3N14BitwuzlaOption23BITWUZLA_OPT_PREPROCESSE"></span><span id="_CPPv2N14BitwuzlaOption23BITWUZLA_OPT_PREPROCESSE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a04773114ffcfbfd294711a2f1a64fa5b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PREPROCESS</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption23BITWUZLA_OPT_PREPROCESSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing</strong></p>
+<p>When enabled, applies all enabled preprocessing passes.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption34BITWUZLA_OPT_PP_CONTRADICTING_ANDSE">
+<span id="_CPPv3N14BitwuzlaOption34BITWUZLA_OPT_PP_CONTRADICTING_ANDSE"></span><span id="_CPPv2N14BitwuzlaOption34BITWUZLA_OPT_PP_CONTRADICTING_ANDSE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a8974dfa8f2dfd9ef83657183980fdbe1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_CONTRADICTING_ANDS</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption34BITWUZLA_OPT_PP_CONTRADICTING_ANDSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Find contradicting bit-vector ands</strong></p>
+<p>When enabled, substitutes contradicting nodes of kind #BV_AND with zero.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption32BITWUZLA_OPT_PP_ELIM_BV_EXTRACTSE">
+<span id="_CPPv3N14BitwuzlaOption32BITWUZLA_OPT_PP_ELIM_BV_EXTRACTSE"></span><span id="_CPPv2N14BitwuzlaOption32BITWUZLA_OPT_PP_ELIM_BV_EXTRACTSE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a581a5ddbe9de2f06f7bddff168c0b48d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_ELIM_BV_EXTRACTS</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption32BITWUZLA_OPT_PP_ELIM_BV_EXTRACTSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Eliminate bit-vector extracts on bit-vector constants</strong></p>
+<p>When enabled, eliminates bit-vector extracts on constants.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption31BITWUZLA_OPT_PP_EMBEDDED_CONSTRE">
+<span id="_CPPv3N14BitwuzlaOption31BITWUZLA_OPT_PP_EMBEDDED_CONSTRE"></span><span id="_CPPv2N14BitwuzlaOption31BITWUZLA_OPT_PP_EMBEDDED_CONSTRE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a1fa614a38db895c953461e76dd950db1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_EMBEDDED_CONSTR</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption31BITWUZLA_OPT_PP_EMBEDDED_CONSTRE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Embedded constraint substitution</strong></p>
+<p>When enabled, substitutes assertions that occur as sub-expression in the formula with their respective Boolean value.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption27BITWUZLA_OPT_PP_FLATTEN_ANDE">
+<span id="_CPPv3N14BitwuzlaOption27BITWUZLA_OPT_PP_FLATTEN_ANDE"></span><span id="_CPPv2N14BitwuzlaOption27BITWUZLA_OPT_PP_FLATTEN_ANDE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ab742a76bc6a303c9fadbd0b9c85ad985"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_FLATTEN_AND</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption27BITWUZLA_OPT_PP_FLATTEN_ANDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: AND flattening</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption25BITWUZLA_OPT_PP_NORMALIZEE">
+<span id="_CPPv3N14BitwuzlaOption25BITWUZLA_OPT_PP_NORMALIZEE"></span><span id="_CPPv2N14BitwuzlaOption25BITWUZLA_OPT_PP_NORMALIZEE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a2b8662195c7cc409adcf7b10b79c17db"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_NORMALIZE</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption25BITWUZLA_OPT_PP_NORMALIZEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Normalization</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption37BITWUZLA_OPT_PP_NORMALIZE_SHARE_AWAREE">
+<span id="_CPPv3N14BitwuzlaOption37BITWUZLA_OPT_PP_NORMALIZE_SHARE_AWAREE"></span><span id="_CPPv2N14BitwuzlaOption37BITWUZLA_OPT_PP_NORMALIZE_SHARE_AWAREE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a6f45c5b69ece7b8b11d12f7c184fee14"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_NORMALIZE_SHARE_AWARE</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption37BITWUZLA_OPT_PP_NORMALIZE_SHARE_AWAREE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Normalization: Enable share awareness normlization</strong></p>
+<p>When enabled, this disables normalizations that may yield blow-up on the bit-level.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption32BITWUZLA_OPT_PP_SKELETON_PREPROCE">
+<span id="_CPPv3N14BitwuzlaOption32BITWUZLA_OPT_PP_SKELETON_PREPROCE"></span><span id="_CPPv2N14BitwuzlaOption32BITWUZLA_OPT_PP_SKELETON_PREPROCE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884ac0c2d2b1c4447948d64e48fb298bd95a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_SKELETON_PREPROC</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption32BITWUZLA_OPT_PP_SKELETON_PREPROCE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Boolean skeleton preprocessing</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption30BITWUZLA_OPT_PP_VARIABLE_SUBSTE">
+<span id="_CPPv3N14BitwuzlaOption30BITWUZLA_OPT_PP_VARIABLE_SUBSTE"></span><span id="_CPPv2N14BitwuzlaOption30BITWUZLA_OPT_PP_VARIABLE_SUBSTE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a746e24513193ef3220f12f03d72b6f5d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_VARIABLE_SUBST</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption30BITWUZLA_OPT_PP_VARIABLE_SUBSTE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Variable substitution</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption38BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_EQE">
+<span id="_CPPv3N14BitwuzlaOption38BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_EQE"></span><span id="_CPPv2N14BitwuzlaOption38BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_EQE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a50414a05056676edf04f11108068d0ac"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_EQ</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption38BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_EQE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Variable substitution: Equality Normalization</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption41BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_DISEQE">
+<span id="_CPPv3N14BitwuzlaOption41BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_DISEQE"></span><span id="_CPPv2N14BitwuzlaOption41BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_DISEQE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a4b5ba45cd594fbae18e505304c64c55b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_DISEQ</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption41BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_DISEQE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Variable substitution: Disequality Normalization</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption43BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_BV_INEQE">
+<span id="_CPPv3N14BitwuzlaOption43BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_BV_INEQE"></span><span id="_CPPv2N14BitwuzlaOption43BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_BV_INEQE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884afbe7832902e72d5f07c9fb5743b578f4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_BV_INEQ</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption43BITWUZLA_OPT_PP_VARIABLE_SUBST_NORM_BV_INEQE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Variable substitution: Bit-Vector Inequality Normalization</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption31BITWUZLA_OPT_DBG_RW_NODE_THRESHE">
+<span id="_CPPv3N14BitwuzlaOption31BITWUZLA_OPT_DBG_RW_NODE_THRESHE"></span><span id="_CPPv2N14BitwuzlaOption31BITWUZLA_OPT_DBG_RW_NODE_THRESHE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884adc0aa19c602642a0f86325d846163086"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_DBG_RW_NODE_THRESH</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption31BITWUZLA_OPT_DBG_RW_NODE_THRESHE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>**Debug: Threshold for number of new nodes introduced for recursive call of rewrite(). **</p>
+<p>Prints a warning number of newly introduced nodes is above threshold.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert debug option. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption31BITWUZLA_OPT_DBG_PP_NODE_THRESHE">
+<span id="_CPPv3N14BitwuzlaOption31BITWUZLA_OPT_DBG_PP_NODE_THRESHE"></span><span id="_CPPv2N14BitwuzlaOption31BITWUZLA_OPT_DBG_PP_NODE_THRESHE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a1bec401b944a263574c422dbb4a8ae9e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_DBG_PP_NODE_THRESH</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption31BITWUZLA_OPT_DBG_PP_NODE_THRESHE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>**Debug: Threshold for formula size increase after preprocessing in percent. **</p>
+<p>Prints a warning if formula size increase is above threshold.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert debug option. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption28BITWUZLA_OPT_DBG_CHECK_MODELE">
+<span id="_CPPv3N14BitwuzlaOption28BITWUZLA_OPT_DBG_CHECK_MODELE"></span><span id="_CPPv2N14BitwuzlaOption28BITWUZLA_OPT_DBG_CHECK_MODELE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a4784c68ce452d7b71ca6af9f5534bb98"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_DBG_CHECK_MODEL</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption28BITWUZLA_OPT_DBG_CHECK_MODELE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>**Debug: Check models for each satisfiable query. **</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert debug option. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BitwuzlaOption33BITWUZLA_OPT_DBG_CHECK_UNSAT_COREE">
+<span id="_CPPv3N14BitwuzlaOption33BITWUZLA_OPT_DBG_CHECK_UNSAT_COREE"></span><span id="_CPPv2N14BitwuzlaOption33BITWUZLA_OPT_DBG_CHECK_UNSAT_COREE"></span><span class="target" id="option_8h_1a4b3d097604eab4eab9fbd0427be96884a48bfe6e712629163883c0a59fcade171"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_OPT_DBG_CHECK_UNSAT_CORE</span></span></span><a class="headerlink" href="#_CPPv4N14BitwuzlaOption33BITWUZLA_OPT_DBG_CHECK_UNSAT_COREE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>**Debug: Check unsat core for each unsatisfiable query. **</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert debug option. </p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

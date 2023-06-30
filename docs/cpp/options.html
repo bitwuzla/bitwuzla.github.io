@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Options &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Kind" href="enums/kind.html" />
+    <link rel="prev" title="C++ Interface" href="interface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">C++ API Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="interface.html">C++ Interface</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#optioninfo">OptionInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="enums/kind.html">Term Kinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sort_creation.html">Sort Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="term_creation.html">Term Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../c/api.html">C API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/api.html">Python API Documentation</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="api.html">C++ API Documentation</a></li>
+      <li class="breadcrumb-item active">Options</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="options">
+<span id="cpp-options"></span><h1>Options<a class="headerlink" href="#options" title="Permalink to this headline"></a></h1>
+<p>A <a class="reference internal" href="classes/bitwuzla.html#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla</span></code></a> instance is created from a configuration
+options <a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a> instance. This options instance must
+be configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
+instance is created, configuration options are fixed and <strong>cannot</strong> be changed.</p>
+<p><strong>Bitwuzla</strong> supports three kinds of options: Boolean options, numeric options
+and options with option modes.
+The kind of an option can be queried via
+<a class="reference internal" href="classes/options.html#_CPPv4NK8bitwuzla7Options7is_boolE6Option" title="bool bitwuzla::Options::is_bool(Option option) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bool</span> <span class="pre">bitwuzla::Options::is_bool(Option</span> <span class="pre">option)</span> <span class="pre">const</span></code></a>,
+<a class="reference internal" href="classes/options.html#_CPPv4NK8bitwuzla7Options10is_numericE6Option" title="bool bitwuzla::Options::is_numeric(Option option) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bool</span> <span class="pre">bitwuzla::Options::is_numeric(Option</span> <span class="pre">option)</span> <span class="pre">const</span></code></a>, and
+<a class="reference internal" href="classes/options.html#_CPPv4NK8bitwuzla7Options7is_modeE6Option" title="bool bitwuzla::Options::is_mode(Option option) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bool</span> <span class="pre">bitwuzla::Options::is_mode(Option</span> <span class="pre">option)</span> <span class="pre">const</span></code></a>.</p>
+<p>Boolean and numeric options are configured via
+<a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7Options3setE6Option8uint64_t" title="void bitwuzla::Options::set(Option option, uint64_t value)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">bitwuzla::Options::set(Option</span> <span class="pre">option,</span> <span class="pre">uint64_t</span> <span class="pre">value)</span></code></a>, and
+options with option modes are configured via
+<a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7Options3setE6OptionRKNSt6stringE" title="void bitwuzla::Options::set(Option option, const std::string &amp;value)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">bitwuzla::Options::set(Option</span> <span class="pre">option,</span> <span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">value)</span></code></a>.
+Any option can also be configured via
+<a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7Options3setERKNSt6stringERKNSt6stringE" title="void bitwuzla::Options::set(const std::string &amp;lng, const std::string &amp;value)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">bitwuzla::Options::set(const</span> <span class="pre">std::string</span> <span class="pre">&amp;lng,</span> <span class="pre">const</span> <span class="pre">std::string</span> <span class="pre">&amp;value)</span></code></a>,
+where <code class="code docutils literal notranslate"><span class="pre">lng</span></code> is the long name of the option (e.g., <code class="code docutils literal notranslate"><span class="pre">&quot;produce-models&quot;</span></code>).</p>
+<p>Additionally, it is also possible to confgure options in batch via
+<a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7Options3setERKNSt6vectorINSt6stringEEE" title="void bitwuzla::Options::set(const std::vector&lt;std::string&gt; &amp;args)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">bitwuzla::Options::set(const</span> <span class="pre">std::vector&lt;std::string&gt;</span> <span class="pre">&amp;args)</span></code></a>,
+where <code class="code docutils literal notranslate"><span class="pre">args</span></code> is a vector of command line option configuration strings,
+e.g., <code class="code docutils literal notranslate"><span class="pre">{&quot;-i&quot;,</span> <span class="pre">&quot;--produce-models=true&quot;,</span> <span class="pre">&quot;--produce-unsat-cores</span> <span class="pre">true&quot;}</span></code>.</p>
+<p>The configured value of Boolean and numeric options can be queried via
+<a class="reference internal" href="classes/options.html#_CPPv4NK8bitwuzla7Options3getE6Option" title="uint64_t bitwuzla::Options::get(Option option) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">uint64_t</span> <span class="pre">bitwuzla::Options::get(Option</span> <span class="pre">option)</span> <span class="pre">const</span></code></a>,
+and the value of an option with modes can be queried via
+<a class="reference internal" href="classes/options.html#_CPPv4NK8bitwuzla7Options8get_modeE6Option" title="const std::string &amp;bitwuzla::Options::get_mode(Option option) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">bitwuzla::Options::get_mode(Option</span> <span class="pre">option)</span> <span class="pre">const</span></code></a>.</p>
+<p>The short name of an option can be queried via
+<a class="reference internal" href="classes/options.html#_CPPv4NK8bitwuzla7Options4shrtE6Option" title="const char *bitwuzla::Options::shrt(Option option) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">const</span> <span class="pre">char*</span> <span class="pre">bitwuzla::Options::shrt(Option</span> <span class="pre">option)</span> <span class="pre">const</span></code></a>,
+its long name via
+<a class="reference internal" href="classes/options.html#_CPPv4NK8bitwuzla7Options3lngE6Option" title="const char *bitwuzla::Options::lng(Option option) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">const</span> <span class="pre">char*</span> <span class="pre">bitwuzla::Options::lng(Option</span> <span class="pre">option)</span> <span class="pre">const</span></code></a>,
+its description via
+<a class="reference internal" href="classes/options.html#_CPPv4NK8bitwuzla7Options11descriptionE6Option" title="const char *bitwuzla::Options::description(Option option) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">const</span> <span class="pre">char*</span> <span class="pre">bitwuzla::Options::description(Option</span> <span class="pre">option)</span> <span class="pre">const</span></code></a>,
+and, if given option is an option with modes, its modes can be queried via
+<a class="reference internal" href="classes/options.html#_CPPv4NK8bitwuzla7Options5modesE6Option" title="std::vector&lt;std::string&gt; bitwuzla::Options::modes(Option option) const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">std::vector&lt;std::string&gt;</span> <span class="pre">bitwuzla::Options::modes(Option</span> <span class="pre">option)</span> <span class="pre">const</span></code></a>.</p>
+<p>The option kind is defined via <a class="reference internal" href="enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::Option</span></code></a>.
+A <strong>comprehensive list</strong> of all configurable options is available
+<a class="reference internal" href="enums/option.html"><span class="doc">here</span></a>.</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<p>The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/options.cpp">examples/c/options.cpp</a>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/***</span>
+<span class="cm"> * Bitwuzla: Satisfiability Modulo Theories (SMT) solver.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Copyright (C) 2023 by the authors listed in the AUTHORS file at</span>
+<span class="cm"> * https://github.com/bitwuzla/bitwuzla/blob/main/AUTHORS</span>
+<span class="cm"> *</span>
+<span class="cm"> * This file is part of Bitwuzla under the MIT license. See COPYING for more</span>
+<span class="cm"> * information at https://github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
+<span class="cm"> */</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bitwuzla/cpp/bitwuzla.h&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="p">;</span>
+
+<span class="kt">int</span>
+<span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
+<span class="w">  </span><span class="n">Options</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Then, query which bit-vector solver engine is set.</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Default bv solver: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">get_mode</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">BV_SOLVER</span><span class="p">)</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Now, select the propagation-based local search engine as solver engine.</span>
+<span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">BV_SOLVER</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;prop&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Current engine: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">get_mode</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">BV_SOLVER</span><span class="p">)</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Then, configure some options that expect an integer configuration value.</span>
+<span class="w">  </span><span class="c1">// First, enable model generation.</span>
+<span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">PRODUCE_MODELS</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Then, increase the verbosity level.</span>
+<span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">VERBOSITY</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Now, create a Bitwuzla instance.</span>
+<span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Check sat (nothing to solve, input formula is empty).</span>
+<span class="w">  </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">check_sat</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="optioninfo">
+<h2>OptionInfo<a class="headerlink" href="#optioninfo" title="Permalink to this headline"></a></h2>
+<p>Bitwuzla offers a compact way to retrieve all information about a configuration
+option as a <a class="reference internal" href="classes/optioninfo.html#_CPPv4N8bitwuzla10OptionInfoE" title="bitwuzla::OptionInfo"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">bitwuzla::OptionInfo</span></code></a> object via
+<a class="reference internal" href="classes/optioninfo.html#_CPPv4N8bitwuzla10OptionInfo10OptionInfoERK7Options6Option" title="bitwuzla::OptionInfo::OptionInfo"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::OptionInfo::OptionInfo()</span></code></a>.
+This object is created per option and can be queried for the same information
+as <a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="interface.html" class="btn btn-neutral float-left" title="C++ Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enums/kind.html" class="btn btn-neutral float-right" title="Kind" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

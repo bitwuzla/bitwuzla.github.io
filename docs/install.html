@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation and Build Instructions &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Command Line Interface" href="binary.html" />
+    <link rel="prev" title="Bitwuzla Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation and Build Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#building-bitwuzla">Building Bitwuzla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-bindings">Python Bindings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building-without-pip">Building without pip</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#api-documentation">API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-coverage-reports">Code Coverage Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="binary.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation and Build Instructions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="installation-and-build-instructions">
+<h1>Installation and Build Instructions<a class="headerlink" href="#installation-and-build-instructions" title="Permalink to this headline"></a></h1>
+<div class="section" id="building-bitwuzla">
+<h2>Building Bitwuzla<a class="headerlink" href="#building-bitwuzla" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone Bitwuzla repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bitwuzla/bitwuzla
+<span class="nb">cd</span><span class="w"> </span>bitwuzla
+
+<span class="c1"># Configure Bitwuzla release build</span>
+./configure.py
+
+<span class="c1"># Build and install</span>
+<span class="nb">cd</span><span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ninja<span class="w"> </span>install<span class="w">   </span><span class="c1"># or just `ninja` to only build Bitwuzla</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If Bitwuzla is not installed, you can find the binary in <code class="docutils literal notranslate"><span class="pre">build/src/main/</span></code>
+and the library in <code class="docutils literal notranslate"><span class="pre">build/src/</span></code>.</p>
+</div>
+<ul class="simple">
+<li><p><strong>Required Dependencies</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.python.org">Python &gt;= 3.7</a></p></li>
+<li><p><a class="reference external" href="https://mesonbuild.com">Meson &gt;= 0.64</a></p></li>
+<li><p><a class="reference external" href="https://ninja-build.org">Ninja</a></p></li>
+<li><p><a class="reference external" href="https://gmplib.org">GMP &gt;= v6.1 (GNU Multi-Precision arithmetic library)</a></p></li>
+<li><p><a class="reference external" href="https://github.com/arminbiere/cadical">CaDiCaL &gt;= 1.5.0</a></p></li>
+<li><p><a class="reference external" href="https://github.com/martin-cs/symfpu">SymFPU</a></p></li>
+</ul>
+</li>
+<li><p><strong>Optional Dependencies</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/msoos/cryptominisat">CryptoMiniSat</a></p></li>
+<li><p><a class="reference external" href="https://github.com/arminbiere/kissat">Kissat</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the build system does not find CaDiCaL or SymFPU, it will fall back to
+downloading and building a suitable version itself.</p>
+</div>
+</div>
+<div class="section" id="python-bindings">
+<h2>Python Bindings<a class="headerlink" href="#python-bindings" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone Bitwuzla repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bitwuzla/bitwuzla
+<span class="nb">cd</span><span class="w"> </span>bitwuzla
+
+<span class="c1"># Build and install Bitwuzla Python bindings</span>
+pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
+</div>
+<p>For how to use the Python bindings, please refer to the <a class="reference internal" href="python/api.html#python-api"><span class="std std-ref">Python API Documentation</span></a>.</p>
+<ul class="simple">
+<li><p><strong>Required Dependencies</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://pypi.org/project/Cython">cython &gt;= 3.0.0</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/meson-python">meson-python</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="building-without-pip">
+<h3>Building without pip<a class="headerlink" href="#building-without-pip" title="Permalink to this headline"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone Bitwuzla repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bitwuzla/bitwuzla
+<span class="nb">cd</span><span class="w"> </span>bitwuzla
+
+./configure.py<span class="w"> </span>--python
+
+<span class="c1"># Build Python bindings</span>
+<span class="nb">cd</span><span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ninja<span class="w"> </span>python-bindings
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Python module can be found in <code class="docutils literal notranslate"><span class="pre">build/src/api/python/</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="api-documentation">
+<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline"></a></h2>
+<p>The documentation for the latest stable release is available at:
+<a class="reference external" href="https://bitwuzla.github.io/docs">https://bitwuzla.github.io/docs</a></p>
+<p>You can build the documentation from the repository as follows.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./configure.py<span class="w"> </span>--docs<span class="w"> </span>--python
+
+<span class="nb">cd</span><span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ninja<span class="w"> </span>docs
+</pre></div>
+</div>
+<p>The documentation can be found in <code class="docutils literal notranslate"><span class="pre">build/docs/</span></code>.</p>
+<ul class="simple">
+<li><p><strong>Required Dependencies</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://www.doxygen.nl">Doxygen</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org">Sphinx &gt;= 1.2</a></p></li>
+<li><p><a class="reference external" href="https://sphinxcontrib-bibtex.readthedocs.io">sphinxcontrib-bibtex</a></p></li>
+<li><p><a class="reference external" href="https://breathe.readthedocs.io">Breathe</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Configure with <code class="docutils literal notranslate"><span class="pre">--python</span></code> to include the documentation for the Python
+bindings.</p>
+</div>
+</div>
+<div class="section" id="code-coverage-reports">
+<h2>Code Coverage Reports<a class="headerlink" href="#code-coverage-reports" title="Permalink to this headline"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate code coverage reports for debug build</span>
+./configure.py<span class="w"> </span>debug<span class="w"> </span>--coverage
+
+<span class="nb">cd</span><span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>meson<span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ninja<span class="w"> </span>coverage
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The code coverage reports can be found in <code class="docutils literal notranslate"><span class="pre">build/meson-logs/</span></code>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Bitwuzla Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="binary.html" class="btn btn-neutral float-right" title="Command Line Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

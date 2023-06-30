@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__cpp__term__substitution" kind="group">
+    <compoundname>cpp_term_substitution</compoundname>
+    <title>Cpp_term_substitution</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__cpp__term__substitution_1gaa9a95b567380e18b16be86b940e800f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Term</type>
+        <definition>Term bitwuzla::substitute_term</definition>
+        <argsstring>(const Term &amp;term, const std::unordered_map&lt; Term, Term &gt; map)</argsstring>
+        <name>substitute_term</name>
+        <qualifiedname>bitwuzla::substitute_term</qualifiedname>
+        <param>
+          <type>const Term &amp;</type>
+          <declname>term</declname>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; Term, Term &gt;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Substitute a set of keys with their corresponding values in the given term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term in which the keys are to be substituted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The substitution map. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The resulting term from this substitution. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1603" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" declline="1603" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cpp__term__substitution_1ga93a89648b6b0190d468abaa392896628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla::substitute_terms</definition>
+        <argsstring>(std::vector&lt; Term &gt; &amp;terms, const std::unordered_map&lt; Term, Term &gt; map)</argsstring>
+        <name>substitute_terms</name>
+        <qualifiedname>bitwuzla::substitute_terms</qualifiedname>
+        <param>
+          <type>std::vector&lt; Term &gt; &amp;</type>
+          <declname>terms</declname>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; Term, Term &gt;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Substitute a set of keys with their corresponding values in the set of given terms.</para>
+<para>The terms in <computeroutput>terms</computeroutput> are replaced with the terms resulting from this substitutions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>terms_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the set of terms. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>terms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The terms in which the keys are to be substituted. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the substitution map. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map_keys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keys. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>map_values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mapped values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="1619" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" declline="1619" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

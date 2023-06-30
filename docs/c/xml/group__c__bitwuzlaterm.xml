@@ -1,0 +1,1698 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__c__bitwuzlaterm" kind="group">
+    <compoundname>c_bitwuzlaterm</compoundname>
+    <title>C_bitwuzlaterm</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gab61f1c9a4e2f27dec964c29dbcda6d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t bitwuzla_term_hash</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_hash</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the hash value for a term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The hash value of the term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="501" column="8" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="501" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga5bf4cc6b1847e96ea0296713083f1b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+        <definition>BitwuzlaKind bitwuzla_term_get_kind</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_get_kind</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the kind of a term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The kind of the given term.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="512" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="512" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga5975a209491cf1cc7eecb856447b1246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref> *</type>
+        <definition>BitwuzlaTerm * bitwuzla_term_get_children</definition>
+        <argsstring>(BitwuzlaTerm term, size_t *size)</argsstring>
+        <name>bitwuzla_term_get_children</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the child terms of a term.</para>
+<para>Returns <computeroutput>NULL</computeroutput> if given term does not have children.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter, stores the number of children of <computeroutput>term</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The children of <computeroutput>term</computeroutput> as an array of terms. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="524" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="524" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gabc37593daef49722a67da682bc387a71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t *</type>
+        <definition>uint64_t * bitwuzla_term_get_indices</definition>
+        <argsstring>(BitwuzlaTerm term, size_t *size)</argsstring>
+        <name>bitwuzla_term_get_indices</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the indices of an indexed term.</para>
+<para>Requires that given term is an indexed term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter, stores the number of indices of <computeroutput>term</computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The indices of <computeroutput>term</computeroutput> as an array of indices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="536" column="10" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="536" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga4833ef04df4355257a7295522f5905da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_indexed</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_indexed</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is an indexed term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is an indexed term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="545" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="545" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga78d7733d49ec4134be75e26704303275" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_term_get_sort</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_get_sort</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the sort of a term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sort of the term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="554" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="554" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gaede3ec49cd0246cf82aba9d6f56cf1ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_term_array_get_index_sort</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_array_get_index_sort</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the index sort of an array term.</para>
+<para>Requires that given term is an array or an array store term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The index sort of the array term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="565" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="565" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga3b3d22be4845607e9fef67234bbe49b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_term_array_get_element_sort</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_array_get_element_sort</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the element sort of an array term.</para>
+<para>Requires that given term is an array or an array store term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The element sort of the array term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="576" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="576" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga3989a0aec5d263aa2850237932de03e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref> *</type>
+        <definition>BitwuzlaSort * bitwuzla_term_fun_get_domain_sorts</definition>
+        <argsstring>(BitwuzlaTerm term, size_t *size)</argsstring>
+        <name>bitwuzla_term_fun_get_domain_sorts</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the domain sorts of a function term.</para>
+<para>The domain sorts are returned as an array of sorts of size `size. Requires that given term is an uninterpreted function, a lambda term, an array store term, or an ite term over function terms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the returned array. Optional, NULL is allowed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The domain sorts of the function term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="590" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="590" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga6e7d67964c94704bd225f011a70caf49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+        <definition>BitwuzlaSort bitwuzla_term_fun_get_codomain_sort</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_fun_get_codomain_sort</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the codomain sort of a function term.</para>
+<para>Requires that given term is an uninterpreted function, a lambda term, an array store term, or an ite term over function terms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The codomain sort of the function term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="603" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="603" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gaca4f4cdbeb541b7383d05505869b8c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla_term_bv_get_size</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_bv_get_size</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the bit-width of a bit-vector term.</para>
+<para>Requires that given term is a bit-vector term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The bit-width of the bit-vector term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="614" column="10" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="614" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga3433f784e5828c28de594c2eae2bfb25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla_term_fp_get_exp_size</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_fp_get_exp_size</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the bit-width of the exponent of a floating-point term.</para>
+<para>Requires that given term is a floating-point term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The bit-width of the exponent of the floating-point term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="625" column="10" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="625" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gadb45c01bf4a9299f2423e1eaaadb0033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla_term_fp_get_sig_size</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_fp_get_sig_size</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the bit-width of the significand of a floating-point term.</para>
+<para>Requires that given term is a floating-point term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The bit-width of the significand of the floating-point term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="636" column="10" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="636" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga691c7593f89b78f0aff9a975d7605809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t bitwuzla_term_fun_get_arity</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_fun_get_arity</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the arity of a function term.</para>
+<para>Requires that given term is a function term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The arity of the function term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="647" column="10" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="647" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gad4343e156e526e366a1c28c90c6f2270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * bitwuzla_term_get_symbol</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_get_symbol</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the symbol of a term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The symbol of <computeroutput>term</computeroutput>. <computeroutput>NULL</computeroutput> if no symbol is defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="656" column="12" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="656" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gacacafcb92b8d267c93691df53a036759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_equal_sort</definition>
+        <argsstring>(BitwuzlaTerm term0, BitwuzlaTerm term1)</argsstring>
+        <name>bitwuzla_term_is_equal_sort</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term0</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if the sorts of two terms are equal.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>term1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the sorts of <computeroutput>term0</computeroutput> and <computeroutput>term1</computeroutput> are equal. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="666" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="666" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga9f1e378f65a01e952266fa3f4329edfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_array</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_array</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is an array term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is an array term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="675" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="675" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga340e84297905fea70861c42781cd5937" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_const</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_const</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a constant.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a constant. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="684" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="684" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gacfbbebc377fc344eb21d06a2236c8575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_fun</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_fun</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="693" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="693" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga4ec5da3adbe1fb6b2141bbf45e2713b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_var</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_var</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a variable.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a variable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="702" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="702" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga939a56d13f0c03f10c27347a71b04842" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_value</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_value</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="711" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="711" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga14de5f5c450cf229c031a55f71e697ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_bv_value</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_bv_value</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a bit-vector value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a bit-vector value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="720" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="720" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga4e18f841753e6dbcb362670eb9e42d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_fp_value</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_fp_value</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a floating-point value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a floating-point value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="729" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="729" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga88a7d6bf6ce86452dfac4d3c1608ceae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_rm_value</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_rm_value</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a rounding mode value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a rounding mode value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="738" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="738" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gab951c96cf7c8de78d290b9641a85fbf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_bool</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_bool</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a Boolean term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a Boolean term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="747" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="747" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gab0a016bbaf3df6b5cd7f86b75462702d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_bv</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_bv</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a bit-vector term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a bit-vector term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="756" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="756" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gaa4b342abd33b3ca5c41562282309af03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_fp</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_fp</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a floating-point term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a floating-point term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="765" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="765" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gae75357462b4b26a8b94c97cd04512b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_rm</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_rm</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a rounding mode term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a rounding mode term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="774" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="774" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gad157215b947eeaa42f2817cebe685185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_uninterpreted</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_uninterpreted</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a term of uninterpreted sort.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a term of uninterpreted sort. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="783" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="783" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga42be1121f209572968bead0a74a60477" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_true</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_true</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is Boolean value true.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a Boolean value true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="792" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="792" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gad2e371db2d700c9da236ff1463461459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_false</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_false</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is Boolean value false.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false if <computeroutput>term</computeroutput> is a Boolean value false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="801" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="801" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gadc9fe31254a283614f004399fc8c6725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_bv_value_zero</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_bv_value_zero</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a bit-vector value representing zero.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a bit-vector zero value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="810" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="810" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gace12c03afef849b9ca83a49a13c260e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_bv_value_one</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_bv_value_one</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a bit-vector value representing one.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a bit-vector one value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="819" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="819" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gacb238425795b3b8ce7bf856886f622b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_bv_value_ones</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_bv_value_ones</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a bit-vector value with all bits set to one.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a bit-vector value with all bits set to one. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="828" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="828" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gad6e95a9f6dc656d59e21e4aeb7d39db1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_bv_value_min_signed</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_bv_value_min_signed</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a bit-vector minimum signed value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a bit-vector value with the most significant bit set to 1 and all other bits set to 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="838" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="838" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga1a20f9c395fa0e62f1ae73f8cf97a06e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_bv_value_max_signed</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_bv_value_max_signed</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a bit-vector maximum signed value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a bit-vector value with the most significant bit set to 0 and all other bits set to 1. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="848" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="848" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga3ecc6ad220c9cbfbde228e43cae03c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_fp_value_pos_zero</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_fp_value_pos_zero</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a floating-point positive zero (+zero) value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a floating-point +zero value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="857" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="857" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga3c6b7642e844ee2483a99bb50a1fcf5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_fp_value_neg_zero</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_fp_value_neg_zero</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a floating-point value negative zero (-zero).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a floating-point value negative zero. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="866" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="866" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga8297d9cc289fb7d79be43c02fa7abe60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_fp_value_pos_inf</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_fp_value_pos_inf</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a floating-point positive infinity (+oo) value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a floating-point +oo value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="875" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="875" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga81780cfa1b0fbd2c2b2cc155aed98393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_fp_value_neg_inf</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_fp_value_neg_inf</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a floating-point negative infinity (-oo) value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a floating-point -oo value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="884" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="884" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gac39fe5279fac847b2efb0993cd733c85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_fp_value_nan</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_fp_value_nan</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a floating-point NaN value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a floating-point NaN value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="893" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="893" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga1e69b5a3ad0202c4b47556b176e90bab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_rm_value_rna</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_rm_value_rna</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a rounding mode RNA value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a roundindg mode RNA value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="902" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="902" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga3a1e94d761563347307003f24388d8ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_rm_value_rne</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_rm_value_rne</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a rounding mode RNE value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a rounding mode RNE value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="911" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="911" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga92d3e231c9c457797d2607639137960e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_rm_value_rtn</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_rm_value_rtn</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a rounding mode RTN value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a rounding mode RTN value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="920" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="920" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga90be42f9b3195a9ce88246dd1f365f26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_rm_value_rtp</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_rm_value_rtp</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a rounding mode RTP value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a rounding mode RTP value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="929" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="929" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gaadd12467f48db5ab96d1b18f2df3457f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_is_rm_value_rtz</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_is_rm_value_rtz</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if a term is a rounding mode RTZ value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <computeroutput>term</computeroutput> is a rounding mode RTZ value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="938" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="938" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga62ff89de320dfd2646f63e6babd1c45b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bitwuzla_term_value_get_bool</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_value_get_bool</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get Boolean representation of given Boolean value term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Boolean value term. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Boolean representation of value term. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="946" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="946" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga6ae143e7115ee05a05243ced5c617c80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * bitwuzla_term_value_get_str</definition>
+        <argsstring>(BitwuzlaTerm term, uint8_t base)</argsstring>
+        <name>bitwuzla_term_value_get_str</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get string representation of Boolean, bit-vector, floating-point, or rounding mode value term.</para>
+<para>This returns the raw value string (as opposed to <ref refid="group__c__bitwuzlaterm_1gaff9c507bbaeef8fb88ef39b84bab489e" kindref="member">bitwuzla_term_to_string()</ref>, which returns the SMT-LIB v2 representation of a term). For example, this function returns &quot;010&quot; for a bit-vector value 2 of size 3, while <ref refid="group__c__bitwuzlaterm_1gaff9c507bbaeef8fb88ef39b84bab489e" kindref="member">bitwuzla_term_to_string()</ref> returns &quot;#b010&quot;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base in which the output strings are given; 2 for binary, 10 for decimal, and 16 for hexadecimal.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String representation of the value term.</para>
+</simplesect>
+<simplesect kind="note"><para>The returned string for floating-point values is always the binary IEEE-754 representation of the value (parameter <computeroutput>base</computeroutput> is ignored). Parameter <computeroutput>base</computeroutput> always configures the numeric base for bit-vector values, and for floating-point values in case of the tuple of strings instantiation. It is always ignored for Boolean and RoundingMode values.</para>
+</simplesect>
+<simplesect kind="note"><para>Return value is valid until next <computeroutput>bitwuzla_term_value_get_bv</computeroutput> call. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="972" column="12" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="972" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gaca69b705a8660a78f154756d7ec9fc08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla_term_value_get_fp_ieee</definition>
+        <argsstring>(BitwuzlaTerm term, const char **sign, const char **exponent, const char **significand, uint8_t base)</argsstring>
+        <name>bitwuzla_term_value_get_fp_ieee</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>sign</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>exponent</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>significand</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get string of IEEE 754 standard representation of given floating-point value term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The floating-point value term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter. String representation of the sign bit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter. String representation of the exponent bit-vector value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>significand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter. String representation of the significand bit-vector value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base in which the output strings are given; 2 for binary, 10 for decimal, and 16 for hexadecimal.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Return values sign, exponent and significand are valid until next <computeroutput>bitwuzla_term_value_get_fp_ieee</computeroutput> call. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="991" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="991" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1ga4ad8a8bd87b9922b6561ac02f1184fc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="enums_8h_1a5c1c80490dd4f2642905e2b28be59687" kindref="member">BitwuzlaRoundingMode</ref></type>
+        <definition>BitwuzlaRoundingMode bitwuzla_term_value_get_rm</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_value_get_rm</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get representation of given rounding mode value term. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rounding mode value term. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The BitwuzlaRoundingMode representation of the given rounding mode value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1003" column="22" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1003" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gaff9c507bbaeef8fb88ef39b84bab489e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * bitwuzla_term_to_string</definition>
+        <argsstring>(BitwuzlaTerm term)</argsstring>
+        <name>bitwuzla_term_to_string</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the SMT-LIB v2 string representation of a term. <simplesect kind="return"><para>A string representation of the given term. </para>
+</simplesect>
+<simplesect kind="note"><para>The returned char* pointer is only valid until the next <computeroutput>bitwuzla_term_to_string</computeroutput> call. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1011" column="12" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1011" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaterm_1gab88474ca5324cb6f1409f97ad0ff70c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla_term_print</definition>
+        <argsstring>(BitwuzlaTerm term, FILE *file)</argsstring>
+        <name>bitwuzla_term_print</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>term</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print term in SMT-LIB v2 format. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to print the term to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1018" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1018" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

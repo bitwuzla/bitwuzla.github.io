@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classbitwuzla_1_1Terminator" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>bitwuzla::Terminator</compoundname>
+    <includes refid="bitwuzla_8h" local="no">bitwuzla.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbitwuzla_1_1Terminator_1aaa741a64f1147315c1c09bcd96c1c03b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual bitwuzla::Terminator::~Terminator</definition>
+        <argsstring>()</argsstring>
+        <name>~Terminator</name>
+        <qualifiedname>bitwuzla::Terminator::~Terminator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="972" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1Terminator_1a29a530191df3c050e593516156e663bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool bitwuzla::Terminator::terminate</definition>
+        <argsstring>()=0</argsstring>
+        <name>terminate</name>
+        <qualifiedname>bitwuzla::Terminator::terminate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Termination function. If terminator has been connected, <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> calls this function periodically to determine if the connected instance should be terminated. <simplesect kind="return"><para>True if the associated instance of <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> should be terminated. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="979" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The termination callback configuration. </para>
+    </detaileddescription>
+    <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="968" column="1" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" bodystart="969" bodyend="980"/>
+    <listofallmembers>
+      <member refid="classbitwuzla_1_1Terminator_1a29a530191df3c050e593516156e663bd" prot="public" virt="pure-virtual"><scope>bitwuzla::Terminator</scope><name>terminate</name></member>
+      <member refid="classbitwuzla_1_1Terminator_1aaa741a64f1147315c1c09bcd96c1c03b" prot="public" virt="virtual"><scope>bitwuzla::Terminator</scope><name>~Terminator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

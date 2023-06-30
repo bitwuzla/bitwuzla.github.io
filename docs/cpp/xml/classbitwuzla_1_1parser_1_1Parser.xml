@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classbitwuzla_1_1parser_1_1Parser" kind="class" language="C++" prot="public">
+    <compoundname>bitwuzla::parser::Parser</compoundname>
+    <includes refid="parser_8h" local="no">parser.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classbitwuzla_1_1parser_1_1Parser_1a464dda9b1d410be374d44ed6058ccfcd" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; bzla::parser::Parser &gt;</type>
+        <definition>std::unique_ptr&lt;bzla::parser::Parser&gt; bitwuzla::parser::Parser::d_parser</definition>
+        <argsstring></argsstring>
+        <name>d_parser</name>
+        <qualifiedname>bitwuzla::parser::Parser::d_parser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h" line="70" column="19" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbitwuzla_1_1parser_1_1Parser_1a9bf75506cbbcfb7e1496efff63a3198d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bitwuzla::parser::Parser::Parser</definition>
+        <argsstring>(Options &amp;options, const std::string &amp;infile_name, const std::string &amp;language=&quot;smt2&quot;)</argsstring>
+        <name>Parser</name>
+        <qualifiedname>bitwuzla::parser::Parser::Parser</qualifiedname>
+        <param>
+          <type><ref refid="classbitwuzla_1_1Options" kindref="compound">Options</ref> &amp;</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>infile_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>language</declname>
+          <defval>&quot;smt2&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. <simplesect kind="note"><para>The parser creates and owns the associated <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> instance. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The configuration options for the <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> instance (created by the parser). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>infile_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the input file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>language</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format of the input file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h" line="38" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1parser_1_1Parser_1a913c0b88162aac4eceb96ab626abd169" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bitwuzla::parser::Parser::Parser</definition>
+        <argsstring>(Options &amp;options, const std::string &amp;infile_name, FILE *infile, const std::string &amp;language=&quot;smt2&quot;)</argsstring>
+        <name>Parser</name>
+        <qualifiedname>bitwuzla::parser::Parser::Parser</qualifiedname>
+        <param>
+          <type><ref refid="classbitwuzla_1_1Options" kindref="compound">Options</ref> &amp;</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>infile_name</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>infile</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>language</declname>
+          <defval>&quot;smt2&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. <simplesect kind="note"><para>The parser creates and owns the associated <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> instance. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The configuration options for the <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> instance (created by the parser). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>infile_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the input file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>infile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>language</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format of the input file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h" line="50" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1parser_1_1Parser_1a5c520cd245c68a2895ddf6d5929dddfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bitwuzla::parser::Parser::~Parser</definition>
+        <argsstring>()</argsstring>
+        <name>~Parser</name>
+        <qualifiedname>bitwuzla::parser::Parser::~Parser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h" line="55" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1parser_1_1Parser_1a73dbf07bc34ce7afd451df9046046bdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string bitwuzla::parser::Parser::parse</definition>
+        <argsstring>(bool parse_only=false)</argsstring>
+        <name>parse</name>
+        <qualifiedname>bitwuzla::parser::Parser::parse</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>parse_only</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse input file. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parse_only</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to only parse without issuing calls to check_sat. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The error message in case of an error, empty if no error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h" line="61" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classbitwuzla_1_1parser_1_1Parser_1aa8f25de18f6b308c160f9d587d9f5da1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">bitwuzla::Bitwuzla</ref> *</type>
+        <definition>bitwuzla::Bitwuzla * bitwuzla::parser::Parser::bitwuzla</definition>
+        <argsstring>()</argsstring>
+        <name>bitwuzla</name>
+        <qualifiedname>bitwuzla::parser::Parser::bitwuzla</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the associated <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> instance. <simplesect kind="return"><para>The <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h" line="67" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classbitwuzla_1_1Bitwuzla" kindref="compound">Bitwuzla</ref> parser. </para>
+    </detaileddescription>
+    <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h" line="27" column="1" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/parser.h" bodystart="28" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classbitwuzla_1_1parser_1_1Parser_1aa8f25de18f6b308c160f9d587d9f5da1" prot="public" virt="non-virtual"><scope>bitwuzla::parser::Parser</scope><name>bitwuzla</name></member>
+      <member refid="classbitwuzla_1_1parser_1_1Parser_1a464dda9b1d410be374d44ed6058ccfcd" prot="private" virt="non-virtual"><scope>bitwuzla::parser::Parser</scope><name>d_parser</name></member>
+      <member refid="classbitwuzla_1_1parser_1_1Parser_1a73dbf07bc34ce7afd451df9046046bdc" prot="public" virt="non-virtual"><scope>bitwuzla::parser::Parser</scope><name>parse</name></member>
+      <member refid="classbitwuzla_1_1parser_1_1Parser_1a9bf75506cbbcfb7e1496efff63a3198d" prot="public" virt="non-virtual"><scope>bitwuzla::parser::Parser</scope><name>Parser</name></member>
+      <member refid="classbitwuzla_1_1parser_1_1Parser_1a913c0b88162aac4eceb96ab626abd169" prot="public" virt="non-virtual"><scope>bitwuzla::parser::Parser</scope><name>Parser</name></member>
+      <member refid="classbitwuzla_1_1parser_1_1Parser_1a5c520cd245c68a2895ddf6d5929dddfa" prot="public" virt="non-virtual"><scope>bitwuzla::parser::Parser</scope><name>~Parser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

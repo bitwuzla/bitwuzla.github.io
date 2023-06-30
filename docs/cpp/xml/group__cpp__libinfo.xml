@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__cpp__libinfo" kind="group">
+    <compoundname>cpp_libinfo</compoundname>
+    <title>Cpp_libinfo</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__cpp__libinfo_1ga51ebf4c81f12c7ec820aeb4be7d882a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * bitwuzla::copyright</definition>
+        <argsstring>()</argsstring>
+        <name>copyright</name>
+        <qualifiedname>bitwuzla::copyright</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get copyright information. <simplesect kind="return"><para>A string with the copyright information. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="90" column="12" declfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" declline="90" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cpp__libinfo_1gaa53a283252260381679c9af07297a37b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * bitwuzla::version</definition>
+        <argsstring>()</argsstring>
+        <name>version</name>
+        <qualifiedname>bitwuzla::version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get version information. <simplesect kind="return"><para>A string with the version information. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="95" column="12" declfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" declline="95" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cpp__libinfo_1ga7698d8855e13957976d228c9313d9253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * bitwuzla::git_id</definition>
+        <argsstring>()</argsstring>
+        <name>git_id</name>
+        <qualifiedname>bitwuzla::git_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get git information. <simplesect kind="return"><para>A string with the git information. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" line="100" column="12" declfile="/home/ma/git/bitwuzla/include/bitwuzla/cpp/bitwuzla.h" declline="100" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

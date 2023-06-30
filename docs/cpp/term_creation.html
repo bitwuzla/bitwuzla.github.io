@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Term Creation &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C API Documentation" href="../c/api.html" />
+    <link rel="prev" title="Sort Creation" href="sort_creation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">C++ API Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="interface.html">C++ Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enums/kind.html">Term Kinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sort_creation.html">Sort Creation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Term Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../c/api.html">C API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/api.html">Python API Documentation</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="api.html">C++ API Documentation</a></li>
+      <li class="breadcrumb-item active">Term Creation</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="term-creation">
+<h1>Term Creation<a class="headerlink" href="#term-creation" title="Permalink to this headline"></a></h1>
+<p>Terms of a given <a class="reference internal" href="enums/kind.html#_CPPv4N8bitwuzla4KindE" title="bitwuzla::Kind"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::Kind</span></code></a> are created via
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code>. A comprehensive documentation of supported
+term kinds can be found <a class="reference internal" href="enums/kind.html"><span class="doc">here</span></a>.
+For creating terms that represent general and special values of a given sort,
+Bitwuzla provides additional functions, see below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Terms are not tied to a specific Bitwuzla instance and can be shared across
+instances.</p>
+</div>
+<hr class="docutils" />
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv47mk_truev">
+<span id="_CPPv37mk_truev"></span><span id="_CPPv27mk_truev"></span><span id="mk_true"></span><span class="target" id="group__cpp__term__creation_1ga902572f98c22861ec1ceb64d454ae335"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_true</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47mk_truev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a true value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A term representing true. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv48mk_falsev">
+<span id="_CPPv38mk_falsev"></span><span id="_CPPv28mk_falsev"></span><span id="mk_false"></span><span class="target" id="group__cpp__term__creation_1gaab3ce23bc5eb7edb0a6069fbe508dbd6"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_false</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48mk_falsev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a false value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A term representing false. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410mk_bv_zeroRK4Sort">
+<span id="_CPPv310mk_bv_zeroRK4Sort"></span><span id="_CPPv210mk_bv_zeroRK4Sort"></span><span id="mk_bv_zero__SortCR"></span><span class="target" id="group__cpp__term__creation_1ga182c486f7632e2013059400459412fa7"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_zero</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_bv_zeroRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value zero. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value 0 of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49mk_bv_oneRK4Sort">
+<span id="_CPPv39mk_bv_oneRK4Sort"></span><span id="_CPPv29mk_bv_oneRK4Sort"></span><span id="mk_bv_one__SortCR"></span><span class="target" id="group__cpp__term__creation_1ga5478a12d384c325cbbb13fd8cbde0a5b"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_one</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49mk_bv_oneRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value one. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value 1 of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410mk_bv_onesRK4Sort">
+<span id="_CPPv310mk_bv_onesRK4Sort"></span><span id="_CPPv210mk_bv_onesRK4Sort"></span><span id="mk_bv_ones__SortCR"></span><span class="target" id="group__cpp__term__creation_1ga910d5b918ee7e69288c3721da48791ba"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_ones</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_bv_onesRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value where all bits are set to 1. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value of given sort where all bits are set to 1. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416mk_bv_min_signedRK4Sort">
+<span id="_CPPv316mk_bv_min_signedRK4Sort"></span><span id="_CPPv216mk_bv_min_signedRK4Sort"></span><span id="mk_bv_min_signed__SortCR"></span><span class="target" id="group__cpp__term__creation_1ga4a59e3bafa6cd9f52a4a65758ad95052"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_min_signed</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416mk_bv_min_signedRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector minimum signed value. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value of given sort where the MSB is set to 1 and all remaining bits are set to 0. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416mk_bv_max_signedRK4Sort">
+<span id="_CPPv316mk_bv_max_signedRK4Sort"></span><span id="_CPPv216mk_bv_max_signedRK4Sort"></span><span id="mk_bv_max_signed__SortCR"></span><span class="target" id="group__cpp__term__creation_1ga45fd6a4fba7bac9d28c0ea1d511138e4"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_max_signed</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416mk_bv_max_signedRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector maximum signed value. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the bit-vector value of given sort where the MSB is set to 0 and all remaining bits are set to 1. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411mk_bv_valueRK4SortRKNSt6stringE7uint8_t">
+<span id="_CPPv311mk_bv_valueRK4SortRKNSt6stringE7uint8_t"></span><span id="_CPPv211mk_bv_valueRK4SortRKNSt6stringE7uint8_t"></span><span id="mk_bv_value__SortCR.ssCR.uint8_t"></span><span class="target" id="group__cpp__term__creation_1ga2d2afbe1e27516eaaa1dd47809dd7098"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_value</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">base</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411mk_bv_valueRK4SortRKNSt6stringE7uint8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value from its string representation.</p>
+<p>Parameter <code class="docutils literal notranslate"><span class="pre">base</span></code> determines the base of the string representation.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given value must fit into a bit-vector of given size (sort).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>value</strong> – A string representing the value. </p></li>
+<li><p><strong>base</strong> – The base in which the string is given; <code class="docutils literal notranslate"><span class="pre">2</span></code> for binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and <code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the bit-vector value of given sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418mk_bv_value_uint64RK4Sort8uint64_t">
+<span id="_CPPv318mk_bv_value_uint64RK4Sort8uint64_t"></span><span id="_CPPv218mk_bv_value_uint64RK4Sort8uint64_t"></span><span id="mk_bv_value_uint64__SortCR.uint64_t"></span><span class="target" id="group__cpp__term__creation_1ga80b3bd6d331e9e12df6971924447ac76"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_value_uint64</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418mk_bv_value_uint64RK4Sort8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value from its unsigned integer representation.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given value must fit into a bit-vector of given size (sort).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>value</strong> – The unsigned integer representation of the bit-vector value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the bit-vector value of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417mk_bv_value_int64RK4Sort7int64_t">
+<span id="_CPPv317mk_bv_value_int64RK4Sort7int64_t"></span><span id="_CPPv217mk_bv_value_int64RK4Sort7int64_t"></span><span id="mk_bv_value_int64__SortCR.int64_t"></span><span class="target" id="group__cpp__term__creation_1ga0b5e7662789c679d1bd2ca1c569e7598"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_value_int64</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="n"><span class="pre">int64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417mk_bv_value_int64RK4Sort7int64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector value from its signed integer representation.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given value must fit into a bit-vector of given size (sort).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>value</strong> – The unsigned integer representation of the bit-vector value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the bit-vector value of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414mk_fp_pos_zeroRK4Sort">
+<span id="_CPPv314mk_fp_pos_zeroRK4Sort"></span><span id="_CPPv214mk_fp_pos_zeroRK4Sort"></span><span id="mk_fp_pos_zero__SortCR"></span><span class="target" id="group__cpp__term__creation_1gae0da5b9c302f271096e15105de4646ae"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_pos_zero</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414mk_fp_pos_zeroRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point positive zero value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">+zero</span></code>). <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point positive zero value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414mk_fp_neg_zeroRK4Sort">
+<span id="_CPPv314mk_fp_neg_zeroRK4Sort"></span><span id="_CPPv214mk_fp_neg_zeroRK4Sort"></span><span id="mk_fp_neg_zero__SortCR"></span><span class="target" id="group__cpp__term__creation_1ga7f4521eb01475b4a2d4f41e4519a0b8e"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_neg_zero</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414mk_fp_neg_zeroRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point negative zero value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">-zero</span></code>). <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point negative zero value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413mk_fp_pos_infRK4Sort">
+<span id="_CPPv313mk_fp_pos_infRK4Sort"></span><span id="_CPPv213mk_fp_pos_infRK4Sort"></span><span id="mk_fp_pos_inf__SortCR"></span><span class="target" id="group__cpp__term__creation_1gae20bc19e3c5852973a1736db0f3ffb77"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_pos_inf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413mk_fp_pos_infRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point positive infinity value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">+oo</span></code>). <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point positive infinity value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413mk_fp_neg_infRK4Sort">
+<span id="_CPPv313mk_fp_neg_infRK4Sort"></span><span id="_CPPv213mk_fp_neg_infRK4Sort"></span><span id="mk_fp_neg_inf__SortCR"></span><span class="target" id="group__cpp__term__creation_1gae8c1a802a61223522ebccd324c6cb084"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_neg_inf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413mk_fp_neg_infRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point negative infinity value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">-oo</span></code>). <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point negative infinity value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49mk_fp_nanRK4Sort">
+<span id="_CPPv39mk_fp_nanRK4Sort"></span><span id="_CPPv29mk_fp_nanRK4Sort"></span><span id="mk_fp_nan__SortCR"></span><span class="target" id="group__cpp__term__creation_1ga13bec6d23d799a2868e875cd7d53d266"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_nan</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49mk_fp_nanRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point NaN value. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing the floating-point NaN value of given floating-point sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411mk_fp_valueRK4TermRK4TermRK4Term">
+<span id="_CPPv311mk_fp_valueRK4TermRK4TermRK4Term"></span><span id="_CPPv211mk_fp_valueRK4TermRK4TermRK4Term"></span><span id="mk_fp_value__TermCR.TermCR.TermCR"></span><span class="target" id="group__cpp__term__creation_1ga1f132666bc60445c6de534ce4edd7a9d"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_value</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bv_sign</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bv_exponent</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bv_significand</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411mk_fp_valueRK4TermRK4TermRK4Term" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point value from its IEEE 754 standard representation given as three bit-vector values representing the sign bit, the exponent and the significand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bv_sign</strong> – The sign bit. </p></li>
+<li><p><strong>bv_exponent</strong> – The exponent bit-vector value. </p></li>
+<li><p><strong>bv_significand</strong> – The significand bit-vector value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the floating-point value. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411mk_fp_valueRK4SortRK4TermRKNSt6stringE">
+<span id="_CPPv311mk_fp_valueRK4SortRK4TermRKNSt6stringE"></span><span id="_CPPv211mk_fp_valueRK4SortRK4TermRKNSt6stringE"></span><span id="mk_fp_value__SortCR.TermCR.ssCR"></span><span class="target" id="group__cpp__term__creation_1ga6c03776ba4d3027608db3c129e76b2e3"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_value</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rm</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">real</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411mk_fp_valueRK4SortRK4TermRKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point value from its real representation, given as a decimal string, with respect to given rounding mode.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>rm</strong> – The rounding mode. </p></li>
+<li><p><strong>real</strong> – The decimal string representing a real value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A floating-point representation of the given real string. If <code class="docutils literal notranslate"><span class="pre">rm</span></code> is of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a> the floating-point will be of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, else it will be a non-value term.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411mk_fp_valueRK4SortRK4TermRKNSt6stringERKNSt6stringE">
+<span id="_CPPv311mk_fp_valueRK4SortRK4TermRKNSt6stringERKNSt6stringE"></span><span id="_CPPv211mk_fp_valueRK4SortRK4TermRKNSt6stringERKNSt6stringE"></span><span id="mk_fp_value__SortCR.TermCR.ssCR.ssCR"></span><span class="target" id="group__cpp__term__creation_1ga76318f9908943e1d22829a315cff2e13"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_value</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rm</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">num</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">den</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411mk_fp_valueRK4SortRK4TermRKNSt6stringERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point value from its rational representation, given as a two decimal strings representing the numerator and denominator, with respect to given rounding mode.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the value. </p></li>
+<li><p><strong>rm</strong> – The rounding mode. </p></li>
+<li><p><strong>num</strong> – The decimal string representing the numerator. </p></li>
+<li><p><strong>den</strong> – The decimal string representing the denominator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A floating-point representation of the given rational string. If <code class="docutils literal notranslate"><span class="pre">rm</span></code> is of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a> the floating-point will be of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, else it will be a non-value term.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414mk_const_arrayRK4SortRK4Term">
+<span id="_CPPv314mk_const_arrayRK4SortRK4Term"></span><span id="_CPPv214mk_const_arrayRK4SortRK4Term"></span><span id="mk_const_array__SortCR.TermCR"></span><span class="target" id="group__cpp__term__creation_1ga7eeb452aecbc3eb2f226e5d4f6542987"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_const_array</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414mk_const_arrayRK4SortRK4Term" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a one-dimensional constant array of given sort, initialized with given value.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gacb1c94b05a3181ab3797461db1e0101c"><span class="std std-ref"><span class="pre">mk_array_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the array. </p></li>
+<li><p><strong>value</strong> – The term to initialize the elements of the array with.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca0a0d89e2802bf5614a9e6e3531c563a6"><span class="std std-ref">Kind::CONST_ARRAY</span></a>, representing a constant array of given sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411mk_rm_value12RoundingMode">
+<span id="_CPPv311mk_rm_value12RoundingMode"></span><span id="_CPPv211mk_rm_value12RoundingMode"></span><span id="mk_rm_value__RoundingMode"></span><span class="target" id="group__cpp__term__creation_1gae73ff6d9f3f6fe02614addf7ae800624"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_rm_value</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RoundingMode</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411mk_rm_value12RoundingMode" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a rounding mode value. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/roundingmode.html#namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e"><span class="std std-ref"><span class="pre">RoundingMode</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rm</strong> – The rounding mode value. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the rounding mode value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv47mk_term4KindRKNSt6vectorI4TermEERKNSt6vectorI8uint64_tEE">
+<span id="_CPPv37mk_term4KindRKNSt6vectorI4TermEERKNSt6vectorI8uint64_tEE"></span><span id="_CPPv27mk_term4KindRKNSt6vectorI4TermEERKNSt6vectorI8uint64_tEE"></span><span id="mk_term__Kind.std::vector:Term:CR.std::vector:uint64_t:CR"></span><span class="target" id="group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_term</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Kind</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">args</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint64_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">indices</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47mk_term4KindRKNSt6vectorI4TermEERKNSt6vectorI8uint64_tEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a term of given kind with the given argument terms.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4c"><span class="std std-ref"><span class="pre">Kind</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> – The operator kind. </p></li>
+<li><p><strong>args</strong> – The argument terms. </p></li>
+<li><p><strong>indices</strong> – The indices of this term, empty if not indexed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term representing an operation of given kind.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv48mk_constRK4SortNSt8optionalIKNSt6stringEEE">
+<span id="_CPPv38mk_constRK4SortNSt8optionalIKNSt6stringEEE"></span><span id="_CPPv28mk_constRK4SortNSt8optionalIKNSt6stringEEE"></span><span id="mk_const__SortCR.std::optional:ssC:"></span><span class="target" id="group__cpp__term__creation_1ga737adf241e82d1876f28a32d6bb4f973"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_const</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">symbol</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48mk_constRK4SortNSt8optionalIKNSt6stringEEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a (first-order) constant of given sort with given symbol.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gacb1c94b05a3181ab3797461db1e0101c"><span class="std std-ref"><span class="pre">mk_array_sort()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga7bcc9c149fc0adfa1adb1ff4628fae0b"><span class="std std-ref"><span class="pre">mk_bool_sort()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gacccceb1252cbd32e2bb1600de5651b12"><span class="std std-ref"><span class="pre">mk_fun_sort()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga86aa84200669f4ea6101efce53653b55"><span class="std std-ref"><span class="pre">mk_rm_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the constant. </p></li>
+<li><p><strong>symbol</strong> – The symbol of the constant.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca8d6b5cada83510220f59e00ce86d4d92"><span class="std std-ref">Kind::CONSTANT</span></a>, representing the constant.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv46mk_varRK4SortNSt8optionalIKNSt6stringEEE">
+<span id="_CPPv36mk_varRK4SortNSt8optionalIKNSt6stringEEE"></span><span id="_CPPv26mk_varRK4SortNSt8optionalIKNSt6stringEEE"></span><span id="mk_var__SortCR.std::optional:ssC:"></span><span class="target" id="group__cpp__term__creation_1ga4a1a72d493b85392b0b47c8b5ed2c2b2"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_var</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">symbol</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv46mk_varRK4SortNSt8optionalIKNSt6stringEEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a variable of given sort with given symbol.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga7bcc9c149fc0adfa1adb1ff4628fae0b"><span class="std std-ref"><span class="pre">mk_bool_sort()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gacccceb1252cbd32e2bb1600de5651b12"><span class="std std-ref"><span class="pre">mk_fun_sort()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga86aa84200669f4ea6101efce53653b55"><span class="std std-ref"><span class="pre">mk_rm_sort()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This creates a variable to be bound by quantifiers or lambdas.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sort</strong> – The sort of the variable. </p></li>
+<li><p><strong>symbol</strong> – The symbol of the variable.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A term of <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cae61ad9b2553a293b4a3f4d3b4fa5ab31"><span class="std std-ref">Kind::VARIABLE</span></a>, representing the variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sort_creation.html" class="btn btn-neutral float-left" title="Sort Creation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../c/api.html" class="btn btn-neutral float-right" title="C API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

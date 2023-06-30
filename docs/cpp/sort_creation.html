@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sort Creation &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Term Creation" href="term_creation.html" />
+    <link rel="prev" title="Kind" href="enums/kind.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">C++ API Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="interface.html">C++ Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enums/kind.html">Term Kinds</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sort Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="term_creation.html">Term Creation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../c/api.html">C API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/api.html">Python API Documentation</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="api.html">C++ API Documentation</a></li>
+      <li class="breadcrumb-item active">Sort Creation</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="sort-creation">
+<h1>Sort Creation<a class="headerlink" href="#sort-creation" title="Permalink to this headline"></a></h1>
+<p>Bitwuzla supports creating array (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">Array</span></code>), Boolean (SMT-LIB:
+<code class="code docutils literal notranslate"><span class="pre">Bool</span></code>), bit-vector (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">BitVec</span> <span class="pre">n)</span></code>), floating-point
+(SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">FloatingPoint</span> <span class="pre">e</span> <span class="pre">s)</span></code>), rounding mode (SMT-LIB:
+<code class="code docutils literal notranslate"><span class="pre">RoundingMode</span></code>), and uninterpreted sorts (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">declare-sort</span></code>).
+As for array sorts, this includes nested arrays, i.e., array sorts where the
+element sort is an array sort.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sorts are not tied to a specific Bitwuzla instance and can be shared across
+instances.</p>
+</div>
+<hr class="docutils" />
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413mk_array_sortRK4SortRK4Sort">
+<span id="_CPPv313mk_array_sortRK4SortRK4Sort"></span><span id="_CPPv213mk_array_sortRK4SortRK4Sort"></span><span id="mk_array_sort__SortCR.SortCR"></span><span class="target" id="group__cpp__sort__creation_1gacb1c94b05a3181ab3797461db1e0101c"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_array_sort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413mk_array_sortRK4SortRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an array sort. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a5053644e2c55124772be5608434dcd0d"><span class="std std-ref"><span class="pre">Sort::is_array()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Sort::array_get_index()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Sort::array_get_element()</span></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> – The index sort of the array sort. </p></li>
+<li><p><strong>element</strong> – The element sort of the array sort. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An array sort which maps sort <code class="docutils literal notranslate"><span class="pre">index</span></code> to sort <code class="docutils literal notranslate"><span class="pre">element</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412mk_bool_sortv">
+<span id="_CPPv312mk_bool_sortv"></span><span id="_CPPv212mk_bool_sortv"></span><span id="mk_bool_sort"></span><span class="target" id="group__cpp__sort__creation_1ga7bcc9c149fc0adfa1adb1ff4628fae0b"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bool_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412mk_bool_sortv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a Boolean sort. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A Boolean sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410mk_bv_sort8uint64_t">
+<span id="_CPPv310mk_bv_sort8uint64_t"></span><span id="_CPPv210mk_bv_sort8uint64_t"></span><span id="mk_bv_sort__uint64_t"></span><span class="target" id="group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_bv_sort8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a bit-vector sort of given size. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a40020deea906cc3d5d3ba68455fecb0d"><span class="std std-ref"><span class="pre">Sort::is_bv()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a5b31d07e9aad31a5b12d6d6ab0e23596"><span class="std std-ref"><span class="pre">Sort::bv_size()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> – The size of the bit-vector sort. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A bit-vector sort of given size.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410mk_fp_sort8uint64_t8uint64_t">
+<span id="_CPPv310mk_fp_sort8uint64_t8uint64_t"></span><span id="_CPPv210mk_fp_sort8uint64_t8uint64_t"></span><span id="mk_fp_sort__uint64_t.uint64_t"></span><span class="target" id="group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">exp_size</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sig_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_fp_sort8uint64_t8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a floating-point sort of given exponent and significand size. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a4df38c43b17972bd890cc7aed86d1a94"><span class="std std-ref"><span class="pre">Sort::is_fp()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1ac50225d7851be8aa7656caed0a6e650c"><span class="std std-ref"><span class="pre">Sort::fp_exp_size()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a87691e57f73024f1ba4bbe7aa88f0f31"><span class="std std-ref"><span class="pre">Sort::fp_sig_size()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>exp_size</strong> – The size of the exponent. </p></li>
+<li><p><strong>sig_size</strong> – The size of the significand (including sign bit). </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A floating-point sort of given format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411mk_fun_sortRKNSt6vectorI4SortEERK4Sort">
+<span id="_CPPv311mk_fun_sortRKNSt6vectorI4SortEERK4Sort"></span><span id="_CPPv211mk_fun_sortRKNSt6vectorI4SortEERK4Sort"></span><span id="mk_fun_sort__std::vector:Sort:CR.SortCR"></span><span class="target" id="group__cpp__sort__creation_1gacccceb1252cbd32e2bb1600de5651b12"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fun_sort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Sort</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">domain</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">codomain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411mk_fun_sortRKNSt6vectorI4SortEERK4Sort" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a function sort. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a94f8916e0b6635e9405f8346b90a0a74"><span class="std std-ref"><span class="pre">Sort::is_fun()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1ad9f4109e31ec0dba4019bde19e7d4261"><span class="std std-ref"><span class="pre">Sort::fun_arity()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Sort::fun_domain_sorts()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a9c7533502e3d1afdc1632f0712a57a92"><span class="std std-ref"><span class="pre">Sort::fun_codomain()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain</strong> – The domain sorts (the sorts of the arguments). The number of sorts in this vector must match <code class="docutils literal notranslate"><span class="pre">arity</span></code>. </p></li>
+<li><p><strong>codomain</strong> – The codomain sort (the sort of the return value). </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A function sort of given domain and codomain sorts.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410mk_rm_sortv">
+<span id="_CPPv310mk_rm_sortv"></span><span id="_CPPv210mk_rm_sortv"></span><span id="mk_rm_sort"></span><span class="target" id="group__cpp__sort__creation_1ga86aa84200669f4ea6101efce53653b55"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_rm_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_rm_sortv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a Roundingmode sort. <div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1af1ce6186dac747fc78cb9fe78f3a62f4"><span class="std std-ref"><span class="pre">Sort::is_rm()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A Roundingmode sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE">
+<span id="_CPPv321mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE"></span><span id="_CPPv221mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE"></span><span id="mk_uninterpreted_sort__std::optional:ssC:"></span><span class="target" id="group__cpp__sort__creation_1ga7c032cef692b18294022faa531b9e1b1"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_uninterpreted_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">symbol</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create an uninterpreted sort.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1aa6464ab9f30e220a79427551614f7246"><span class="std std-ref"><span class="pre">Sort::is_uninterpreted()</span></span></a></code> </p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only 0-arity uninterpreted sorts are supported.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>symbol</strong> – The symbol of the sort. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An uninterpreted sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="enums/kind.html" class="btn btn-neutral float-left" title="Kind" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="term_creation.html" class="btn btn-neutral float-right" title="Term Creation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

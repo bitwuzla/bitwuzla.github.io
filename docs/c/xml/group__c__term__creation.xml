@@ -1,0 +1,1536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__c__term__creation" kind="group">
+    <compoundname>c_term_creation</compoundname>
+    <title>C_term_creation</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__c__term__creation_1ga66e28b1b57b92d8d85d489c9ede4bbce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_true</definition>
+        <argsstring>()</argsstring>
+        <name>bitwuzla_mk_true</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a true value. <simplesect kind="return"><para>A term representing true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1439" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1439" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga84036bd7ceabb96fd1dd6d04d08563c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_false</definition>
+        <argsstring>()</argsstring>
+        <name>bitwuzla_mk_false</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a false value. <simplesect kind="return"><para>A term representing false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1445" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1445" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga5a59a075d6242f52bce659a3b6b1a4b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_bv_zero</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_bv_zero</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value zero.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value 0 of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1456" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1456" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga41e3edf7686bebdf663baa4a41ae876f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_bv_one</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_bv_one</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value one.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value 1 of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1467" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1467" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga75fe6de097b4e057d584ee1da6fa8ddb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_bv_ones</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_bv_ones</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value where all bits are set to 1.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value of given sort where all bits are set to 1. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1478" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1478" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga40015b4da40e207529d25cbee71d9a6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_bv_min_signed</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_bv_min_signed</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector minimum signed value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value of given sort where the MSB is set to 1 and all remaining bits are set to 0. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1489" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1489" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gac59dbc5f424a1b1f3d4574018669c9d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_bv_max_signed</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_bv_max_signed</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector maximum signed value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the bit-vector value of given sort where the MSB is set to 0 and all remaining bits are set to 1. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1499" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1499" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gaef14d5ef49ea543022687f41ef1f50a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_fp_pos_zero</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_fp_pos_zero</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point positive zero value (SMT-LIB: <computeroutput>+zero</computeroutput>).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point positive zero value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" kindref="member">bitwuzla_mk_fp_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1510" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1510" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga07c88d8aea8e10b6d141c2ca5b9241eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_fp_neg_zero</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_fp_neg_zero</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point negative zero value (SMT-LIB: <computeroutput>-zero</computeroutput>).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point negative zero value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" kindref="member">bitwuzla_mk_fp_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1521" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1521" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gaef1f309dc733bc4bc4efca1f166b479e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_fp_pos_inf</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_fp_pos_inf</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point positive infinity value (SMT-LIB: <computeroutput>+oo</computeroutput>).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point positive infinity value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" kindref="member">bitwuzla_mk_fp_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1532" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1532" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gac202139fb0cdb5aeb74d2251145d1cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_fp_neg_inf</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_fp_neg_inf</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point negative infinity value (SMT-LIB: <computeroutput>-oo</computeroutput>).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point negative infinity value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" kindref="member">bitwuzla_mk_fp_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1543" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1543" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga7f70be4b69bd56c7ce541ec7954b8693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_fp_nan</definition>
+        <argsstring>(BitwuzlaSort sort)</argsstring>
+        <name>bitwuzla_mk_fp_nan</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point NaN value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing the floating-point NaN value of given floating-point sort. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" kindref="member">bitwuzla_mk_fp_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1554" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1554" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga125d09b9ee548724b2cbdf908516883b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_bv_value</definition>
+        <argsstring>(BitwuzlaSort sort, const char *value, uint8_t base)</argsstring>
+        <name>bitwuzla_mk_bv_value</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value from its string representation.</para>
+<para>Parameter <computeroutput>base</computeroutput> determines the base of the string representation.</para>
+<para><simplesect kind="note"><para>Given value must fit into a bit-vector of given size (sort).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string representing the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base in which the string is given; 2 for binary, 10 for decimal, and 16 for hexadecimal.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind BITWUZLA_KIND_VAL, representing the bit-vector value of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1574" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1574" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga6ff3a9d94143fb86984e7fa31cb53f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_bv_value_uint64</definition>
+        <argsstring>(BitwuzlaSort sort, uint64_t value)</argsstring>
+        <name>bitwuzla_mk_bv_value_uint64</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value from its unsigned integer representation.</para>
+<para><simplesect kind="note"><para>Given value must fit into a bit-vector of given size (sort).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unsigned integer representation of the bit-vector value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind BITWUZLA_KIND_VAL, representing the bit-vector value of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1592" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1592" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga5afafc44f16c593fc8ed62a1ed4abcce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_bv_value_int64</definition>
+        <argsstring>(BitwuzlaSort sort, int64_t value)</argsstring>
+        <name>bitwuzla_mk_bv_value_int64</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a bit-vector value from its signed integer representation.</para>
+<para><simplesect kind="note"><para>Given value must fit into a bit-vector of given size (sort).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unsigned integer representation of the bit-vector value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind BITWUZLA_KIND_VAL, representing the bit-vector value of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1608" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1608" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gae95213b8816199235169eedefad3fc6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_fp_value</definition>
+        <argsstring>(BitwuzlaTerm bv_sign, BitwuzlaTerm bv_exponent, BitwuzlaTerm bv_significand)</argsstring>
+        <name>bitwuzla_mk_fp_value</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>bv_sign</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>bv_exponent</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>bv_significand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point value from its IEEE 754 standard representation given as three bit-vector values representing the sign bit, the exponent and the significand.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bv_sign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sign bit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bv_exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exponent bit-vector value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bv_significand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The significand bit-vector value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind BITWUZLA_KIND_VAL, representing the floating-point value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1622" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1622" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga76ae4ddccb472f36344fb5ce95b9c5e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_fp_from_real</definition>
+        <argsstring>(BitwuzlaSort sort, BitwuzlaTerm rm, const char *real)</argsstring>
+        <name>bitwuzla_mk_fp_from_real</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>rm</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>real</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point value from its real representation, given as a decimal string, with respect to given rounding mode.</para>
+<para><simplesect kind="note"><para>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rounding mode. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>real</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decimal string representing a real value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point representation of the given real string. If <computeroutput>rm</computeroutput> is of kind BITWUZLA_KIND_VALUE the floating-point will be of kind BITWUZLA_KIND_VALUE, else it will be a non-value term. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" kindref="member">bitwuzla_mk_fp_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1644" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1644" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gaee5e7892631d4f0e6f0fc3b593213572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_fp_from_rational</definition>
+        <argsstring>(BitwuzlaSort sort, BitwuzlaTerm rm, const char *num, const char *den)</argsstring>
+        <name>bitwuzla_mk_fp_from_rational</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>rm</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>den</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a floating-point value from its rational representation, given as a two decimal strings representing the numerator and denominator, with respect to given rounding mode.</para>
+<para><simplesect kind="note"><para>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rounding mode. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decimal string representing the numerator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>den</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decimal string representing the denominator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A floating-point representation of the given rational string. If <computeroutput>rm</computeroutput> is of kind BITWUZLA_KIND_VALUE the floating-point will be of kind BITWUZLA_KIND_VALUE, else it will be a non-value term. </para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" kindref="member">bitwuzla_mk_fp_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1668" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1668" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga456d31991ff15a1df637c672c2a7e996" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_rm_value</definition>
+        <argsstring>(BitwuzlaRoundingMode rm)</argsstring>
+        <name>bitwuzla_mk_rm_value</name>
+        <param>
+          <type><ref refid="enums_8h_1a5c1c80490dd4f2642905e2b28be59687" kindref="member">BitwuzlaRoundingMode</ref></type>
+          <declname>rm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a rounding mode value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rounding mode value.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind BITWUZLA_KIND_VAL, representing the rounding mode value.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1a5c1c80490dd4f2642905e2b28be59687" kindref="member">BitwuzlaRoundingMode</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1684" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1684" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_term1</definition>
+        <argsstring>(BitwuzlaKind kind, BitwuzlaTerm arg)</argsstring>
+        <name>bitwuzla_mk_term1</name>
+        <param>
+          <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a term of given kind with one argument term.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument to the operator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1697" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1697" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_term2</definition>
+        <argsstring>(BitwuzlaKind kind, BitwuzlaTerm arg0, BitwuzlaTerm arg1)</argsstring>
+        <name>bitwuzla_mk_term2</name>
+        <param>
+          <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg0</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a term of given kind with two argument terms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first argument to the operator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second argument to the operator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1711" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1711" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_term3</definition>
+        <argsstring>(BitwuzlaKind kind, BitwuzlaTerm arg0, BitwuzlaTerm arg1, BitwuzlaTerm arg2)</argsstring>
+        <name>bitwuzla_mk_term3</name>
+        <param>
+          <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg0</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a term of given kind with three argument terms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first argument to the operator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second argument to the operator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The third argument to the operator.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1728" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1728" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_term</definition>
+        <argsstring>(BitwuzlaKind kind, uint32_t argc, BitwuzlaTerm args[])</argsstring>
+        <name>bitwuzla_mk_term</name>
+        <param>
+          <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>args</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a term of given kind with the given argument terms.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of argument terms. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument terms.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1745" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1745" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gaa4ef7b33ad8c613365ca275c3293d6fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_term1_indexed1</definition>
+        <argsstring>(BitwuzlaKind kind, BitwuzlaTerm arg, uint64_t idx)</argsstring>
+        <name>bitwuzla_mk_term1_indexed1</name>
+        <param>
+          <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an indexed term of given kind with one argument term and one index.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an indexed operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1761" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1761" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gab7607ce0925baede9fe4809aa3ec7298" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_term1_indexed2</definition>
+        <argsstring>(BitwuzlaKind kind, BitwuzlaTerm arg, uint64_t idx0, uint64_t idx1)</argsstring>
+        <name>bitwuzla_mk_term1_indexed2</name>
+        <param>
+          <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>idx0</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>idx1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an indexed term of given kind with one argument term and two indices.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an indexed operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1778" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1778" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga5b02a9794f16846a96ca0961be42615c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_term2_indexed1</definition>
+        <argsstring>(BitwuzlaKind kind, BitwuzlaTerm arg0, BitwuzlaTerm arg1, uint64_t idx)</argsstring>
+        <name>bitwuzla_mk_term2_indexed1</name>
+        <param>
+          <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg0</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an indexed term of given kind with two argument terms and one index.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first argument term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second argument term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an indexed operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1796" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1796" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga452fd331163360bce3b2f6d6e52c615f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_term2_indexed2</definition>
+        <argsstring>(BitwuzlaKind kind, BitwuzlaTerm arg0, BitwuzlaTerm arg1, uint64_t idx0, uint64_t idx1)</argsstring>
+        <name>bitwuzla_mk_term2_indexed2</name>
+        <param>
+          <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg0</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>idx0</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>idx1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an indexed term of given kind with two argument terms and two indices.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first argument term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second argument term. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an indexed operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1815" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1815" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga5a32d41a72e80f9ab9fd8b922a2bc22f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_term_indexed</definition>
+        <argsstring>(BitwuzlaKind kind, uint32_t argc, BitwuzlaTerm args[], uint32_t idxc, const uint64_t idxs[])</argsstring>
+        <name>bitwuzla_mk_term_indexed</name>
+        <param>
+          <type><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>args</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>idxc</declname>
+        </param>
+        <param>
+          <type>const uint64_t</type>
+          <declname>idxs</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an indexed term of given kind with the given argument terms and indices.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kind</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator kind. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of argument terms. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The argument terms. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idxc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of indices. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idxs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The indices.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term representing an indexed operation of given kind.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976" kindref="member">BitwuzlaKind</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1836" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1836" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga885a1f71a433bf5ad8b3860d45d766a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_const</definition>
+        <argsstring>(BitwuzlaSort sort, const char *symbol)</argsstring>
+        <name>bitwuzla_mk_const</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a (first-order) constant of given sort with given symbol.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the constant. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The symbol of the constant.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind BITWUZLA_KIND_CONST, representing the constant.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga69dc2abdb304f46618b87e5ad0955361" kindref="member">bitwuzla_mk_array_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__sort__creation_1gacdf18c2d5a68f684eb93c4e0a781625c" kindref="member">bitwuzla_mk_bool_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" kindref="member">bitwuzla_mk_fp_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__sort__creation_1gab67bdee3bbcfc271a36dff873ba199c8" kindref="member">bitwuzla_mk_fun_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5" kindref="member">bitwuzla_mk_rm_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1858" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1858" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1gad92c00bf5c5c651384b5550ec4161357" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_const_array</definition>
+        <argsstring>(BitwuzlaSort sort, BitwuzlaTerm value)</argsstring>
+        <name>bitwuzla_mk_const_array</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a one-dimensional constant array of given sort, initialized with given value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the array. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term to initialize the elements of the array with.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind BITWUZLA_KIND_CONST_ARRAY, representing a constant array of given sort.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga69dc2abdb304f46618b87e5ad0955361" kindref="member">bitwuzla_mk_array_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1873" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1873" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__term__creation_1ga4e0b935b7719c68a38200d946ea29390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14" kindref="member">BitwuzlaTerm</ref></type>
+        <definition>BitwuzlaTerm bitwuzla_mk_var</definition>
+        <argsstring>(BitwuzlaSort sort, const char *symbol)</argsstring>
+        <name>bitwuzla_mk_var</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2" kindref="member">BitwuzlaSort</ref></type>
+          <declname>sort</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a variable of given sort with given symbol.</para>
+<para><simplesect kind="note"><para>This creates a variable to be bound by quantifiers or lambdas.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sort of the variable. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The symbol of the variable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A term of kind BITWUZLA_KIND_VAR, representing the variable.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__sort__creation_1gacdf18c2d5a68f684eb93c4e0a781625c" kindref="member">bitwuzla_mk_bool_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f" kindref="member">bitwuzla_mk_bv_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99" kindref="member">bitwuzla_mk_fp_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__sort__creation_1gab67bdee3bbcfc271a36dff873ba199c8" kindref="member">bitwuzla_mk_fun_sort</ref></computeroutput></para>
+</listitem><listitem><para><computeroutput><ref refid="group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5" kindref="member">bitwuzla_mk_rm_sort</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="1892" column="14" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" declline="1892" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

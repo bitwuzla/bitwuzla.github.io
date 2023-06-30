@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Option &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Option</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="option">
+<h1>Option<a class="headerlink" href="#option" title="Permalink to this headline"></a></h1>
+<p>The kind of a Bitwuzla configuration option.</p>
+<p>Options are configured via a <a class="reference internal" href="../classes/options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a> instance,
+which must be configured before creating a <a class="reference internal" href="../classes/bitwuzla.html#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla</span></code></a>
+instance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some options are labeled as “expert” options. Use with caution.</p>
+</div>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>enum <a class="reference internal" href="#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::Option</span></code></a></p></li>
+</ul>
+<hr class="docutils" />
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6OptionE">
+<span id="_CPPv3N8bitwuzla6OptionE"></span><span id="_CPPv2N8bitwuzla6OptionE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186c"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Option</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6OptionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The configuration options supported by <a class="reference internal" href="../classes/bitwuzla.html#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a>.</p>
+<p><a class="reference internal" href="../classes/options.html#classbitwuzla_1_1Options"><span class="std std-ref">Options</span></a> that list string values can be configured via <code class="docutils literal notranslate"><span class="pre">bitwuzla_set_option_str</span></code>. <a class="reference internal" href="../classes/options.html#classbitwuzla_1_1Options"><span class="std std-ref">Options</span></a> with integer configuration values are configured via <code class="docutils literal notranslate"><span class="pre">bitwuzla_set_option</span></code>.</p>
+<p>For all options, the current configuration value can be queried via <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_option</span></code>. <a class="reference internal" href="../classes/options.html#classbitwuzla_1_1Options"><span class="std std-ref">Options</span></a> with string configuration values internally represent these values as enum values. For these options, <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_opiton</span></code> will return such an enum value. Use <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_option_str</span></code> to query enum options for the corresponding string representation. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option8LOGLEVELE">
+<span id="_CPPv3N8bitwuzla6Option8LOGLEVELE"></span><span id="_CPPv2N8bitwuzla6Option8LOGLEVELE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca5048fdbe2a2b837df1853cf489f67c79"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LOGLEVEL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option8LOGLEVELE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Log level.</strong></p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value. [<strong>default</strong>: 0] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option14PRODUCE_MODELSE">
+<span id="_CPPv3N8bitwuzla6Option14PRODUCE_MODELSE"></span><span id="_CPPv2N8bitwuzla6Option14PRODUCE_MODELSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca774ed7dd04f5529097c71c370400f400"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PRODUCE_MODELS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14PRODUCE_MODELSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Model generation.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable, generate model for assertions only</p></li>
+<li><p><strong>2</strong>: enable, generate model for all created terms</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option cannot be enabled in combination with option <code class="docutils literal notranslate"><span class="pre">EVALUE</span><span class="pre">(PP_UNCONSTRAINED_OPTIMIZATION</span></code>. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option25PRODUCE_UNSAT_ASSUMPTIONSE">
+<span id="_CPPv3N8bitwuzla6Option25PRODUCE_UNSAT_ASSUMPTIONSE"></span><span id="_CPPv2N8bitwuzla6Option25PRODUCE_UNSAT_ASSUMPTIONSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca927ef50820a381ad5bd51e74e2ec0d56"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PRODUCE_UNSAT_ASSUMPTIONS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option25PRODUCE_UNSAT_ASSUMPTIONSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Unsat assumptions generation.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19PRODUCE_UNSAT_CORESE">
+<span id="_CPPv3N8bitwuzla6Option19PRODUCE_UNSAT_CORESE"></span><span id="_CPPv2N8bitwuzla6Option19PRODUCE_UNSAT_CORESE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca42e86322b1c02730b3d46d3ac7e7b764"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PRODUCE_UNSAT_CORES</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19PRODUCE_UNSAT_CORESE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Unsat core generation.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option4SEEDE">
+<span id="_CPPv3N8bitwuzla6Option4SEEDE"></span><span id="_CPPv2N8bitwuzla6Option4SEEDE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caace01ee43fda36bd62efc12035e693f6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEED</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option4SEEDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Seed for random number generator.</strong></p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value. [<strong>default</strong>: 0] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option9VERBOSITYE">
+<span id="_CPPv3N8bitwuzla6Option9VERBOSITYE"></span><span id="_CPPv2N8bitwuzla6Option9VERBOSITYE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca47a219833a4b3a09240896c88b2b1969"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VERBOSITY</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option9VERBOSITYE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Verbosity level.</strong></p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value &lt;= 4. [<strong>default</strong>: 0] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option9BV_SOLVERE">
+<span id="_CPPv3N8bitwuzla6Option9BV_SOLVERE"></span><span id="_CPPv2N8bitwuzla6Option9BV_SOLVERE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SOLVER</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option9BV_SOLVERE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Configure the bit-vector solver engine.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>bitblast</strong>: The classical bit-blasting approach. [<strong>default</strong>]</p></li>
+<li><p><strong>prop</strong>: Propagation-based local search (sat only).</p></li>
+<li><p><strong>preprop</strong>: Sequential portfolio combination of bit-blasting and propagation-based local search. </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option13REWRITE_LEVELE">
+<span id="_CPPv3N8bitwuzla6Option13REWRITE_LEVELE"></span><span id="_CPPv2N8bitwuzla6Option13REWRITE_LEVELE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca96418388056c40211e08154f7a57b968"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">REWRITE_LEVEL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option13REWRITE_LEVELE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Rewrite level.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>0</strong>: no rewriting</p></li>
+<li><p><strong>1</strong>: term level rewriting</p></li>
+<li><p><strong>2</strong>: term level rewriting and basic preprocessing</p></li>
+<li><p><strong>3</strong>: term level rewriting and full preprocessing [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Configuring the rewrite level after terms have been created is not allowed.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure rewriting. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option10SAT_SOLVERE">
+<span id="_CPPv3N8bitwuzla6Option10SAT_SOLVERE"></span><span id="_CPPv2N8bitwuzla6Option10SAT_SOLVERE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca515be110f1f5292a65b352304a3830f9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAT_SOLVER</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option10SAT_SOLVERE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Configure the SAT solver engine.</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>cadical</strong>: <a class="reference external" href="https://github.com/arminbiere/cadical">CaDiCaL</a> [<strong>default</strong>]</p></li>
+<li><p><strong>cms</strong>: <a class="reference external" href="https://github.com/msoos/cryptominisat">CryptoMiniSat</a></p></li>
+<li><p><strong>gimsatul</strong>: <a class="reference external" href="https://github.com/arminbiere/gimsatul">Gimsatul</a></p></li>
+<li><p><strong>kissat</strong>: <a class="reference external" href="https://github.com/arminbiere/kissat">Kissat</a></p></li>
+<li><p><strong>lingeling</strong>: <a class="reference external" href="https://github.com/arminbiere/lingeling">Lingeling</a> </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option13SMT_COMP_MODEE">
+<span id="_CPPv3N8bitwuzla6Option13SMT_COMP_MODEE"></span><span id="_CPPv2N8bitwuzla6Option13SMT_COMP_MODEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca5d2a93bb2ff3b4d482dc7689faae9e2a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMT_COMP_MODE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option13SMT_COMP_MODEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Enable SMT-COMP mode.</strong></p>
+<p>Parser only option. Only effective when an SMT2 input file is parsed.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15PROP_CONST_BITSE">
+<span id="_CPPv3N8bitwuzla6Option15PROP_CONST_BITSE"></span><span id="_CPPv2N8bitwuzla6Option15PROP_CONST_BITSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cabe6a4cc7d4b56805103d31dbefbfcd6e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_CONST_BITS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15PROP_CONST_BITSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Constant bits.</strong></p>
+<p>Configure constant bit propagation (requries bit-blasting to AIG).</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option22PROP_INFER_INEQ_BOUNDSE">
+<span id="_CPPv3N8bitwuzla6Option22PROP_INFER_INEQ_BOUNDSE"></span><span id="_CPPv2N8bitwuzla6Option22PROP_INFER_INEQ_BOUNDSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caced9db19fa1257dab49a847db2e4cde9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_INFER_INEQ_BOUNDS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option22PROP_INFER_INEQ_BOUNDSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Infer bounds for inequalities for value computation.</strong></p>
+<p>When enabled, infer bounds for value computation for inequalities based on satisfied top level inequalities.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option11PROP_NPROPSE">
+<span id="_CPPv3N8bitwuzla6Option11PROP_NPROPSE"></span><span id="_CPPv2N8bitwuzla6Option11PROP_NPROPSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca83063674e672d8e78b083f4dfa408ffb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_NPROPS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option11PROP_NPROPSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Number of propagations.</strong></p>
+<p>Configure the number of propagations used as a limit for the propagation-based local search solver engine. No limit if 0.</p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value. [<strong>default</strong>: 0]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option13PROP_NUPDATESE">
+<span id="_CPPv3N8bitwuzla6Option13PROP_NUPDATESE"></span><span id="_CPPv2N8bitwuzla6Option13PROP_NUPDATESE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca36b1a60b980f5c533aa8a6dbef09a48c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_NUPDATES</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option13PROP_NUPDATESE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Number of updates.</strong></p>
+<p>Configure the number of model value updates used as a limit for the propagation-based local search solver engine. No limit if 0.</p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value. [<strong>default</strong>: 0]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option13PROP_PATH_SELE">
+<span id="_CPPv3N8bitwuzla6Option13PROP_PATH_SELE"></span><span id="_CPPv2N8bitwuzla6Option13PROP_PATH_SELE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca63c7a811c00ff00d9f5a237cabf2543b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_PATH_SEL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option13PROP_PATH_SELE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Path selection.</strong></p>
+<p>Configure mode for path selection.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>essential</strong>: Select path based on essential inputs. [default]</p></li>
+<li><p><strong>random</strong>: Select path randomly.</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option22PROP_PROB_RANDOM_INPUTE">
+<span id="_CPPv3N8bitwuzla6Option22PROP_PROB_RANDOM_INPUTE"></span><span id="_CPPv2N8bitwuzla6Option22PROP_PROB_RANDOM_INPUTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca87c6bdf684cee3eb743a8abfa9ed61a7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_PROB_RANDOM_INPUT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option22PROP_PROB_RANDOM_INPUTE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Probability for selecting random input.</strong></p>
+<p>Configure the probability with which to select a random input instead of an essential input when selecting the path.</p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value &lt;= 1000 (= 100%). [<strong>default</strong>: 0]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option23PROP_PROB_USE_INV_VALUEE">
+<span id="_CPPv3N8bitwuzla6Option23PROP_PROB_USE_INV_VALUEE"></span><span id="_CPPv2N8bitwuzla6Option23PROP_PROB_USE_INV_VALUEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cabfa15c20c18066f7610cf3d8a51c032f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_PROB_USE_INV_VALUE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option23PROP_PROB_USE_INV_VALUEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Probability for inverse values.</strong></p>
+<p>Configure the probability with which to choose an inverse value over a consistent value when aninverse value exists.</p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value &lt;= 1000 (= 100%). [<strong>default</strong>: 990]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option9PROP_SEXTE">
+<span id="_CPPv3N8bitwuzla6Option9PROP_SEXTE"></span><span id="_CPPv2N8bitwuzla6Option9PROP_SEXTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cac2b947f70328a297b870c138e4ad835f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_SEXT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option9PROP_SEXTE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Value computation for sign extension.</strong></p>
+<p>When enabled, detect sign extension operations (are rewritten on construction) and use value computation for sign extension.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option14PROP_NORMALIZEE">
+<span id="_CPPv3N8bitwuzla6Option14PROP_NORMALIZEE"></span><span id="_CPPv2N8bitwuzla6Option14PROP_NORMALIZEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca4bf56e2165830ba1465aed3bdaf72898"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_NORMALIZE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14PROP_NORMALIZEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Propagation-based local search solver engine: Local search specific normalization.</strong></p>
+<p>When enabled, perform normalizations for local search, on the local search layer (does not affect node layer).</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option10PREPROCESSE">
+<span id="_CPPv3N8bitwuzla6Option10PREPROCESSE"></span><span id="_CPPv2N8bitwuzla6Option10PREPROCESSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cad36ca94e75c11d2653c1e71bcb93710b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PREPROCESS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option10PREPROCESSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing</strong></p>
+<p>When enabled, applies all enabled preprocessing passes.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option21PP_CONTRADICTING_ANDSE">
+<span id="_CPPv3N8bitwuzla6Option21PP_CONTRADICTING_ANDSE"></span><span id="_CPPv2N8bitwuzla6Option21PP_CONTRADICTING_ANDSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1c1c4b2437c7952b55e5e2877a75f4fd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_CONTRADICTING_ANDS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option21PP_CONTRADICTING_ANDSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Find contradicting bit-vector ands</strong></p>
+<p>When enabled, substitutes contradicting nodes of kind <a class="reference internal" href="kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca470f951c16d4dfe3fd980f21a2a9a58c"><span class="std std-ref">BV_AND</span></a> with zero.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE">
+<span id="_CPPv3N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE"></span><span id="_CPPv2N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1d0d73e16af622f85896f6c07df5bc34"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_ELIM_BV_EXTRACTS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Eliminate bit-vector extracts on bit-vector constants</strong></p>
+<p>When enabled, eliminates bit-vector extracts on constants.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18PP_EMBEDDED_CONSTRE">
+<span id="_CPPv3N8bitwuzla6Option18PP_EMBEDDED_CONSTRE"></span><span id="_CPPv2N8bitwuzla6Option18PP_EMBEDDED_CONSTRE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca37991ae5aee10bd7e0fa016150cf6a64"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_EMBEDDED_CONSTR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18PP_EMBEDDED_CONSTRE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Embedded constraint substitution</strong></p>
+<p>When enabled, substitutes assertions that occur as sub-expression in the formula with their respective Boolean value.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option14PP_FLATTEN_ANDE">
+<span id="_CPPv3N8bitwuzla6Option14PP_FLATTEN_ANDE"></span><span id="_CPPv2N8bitwuzla6Option14PP_FLATTEN_ANDE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cadc7ff13bb74ca1c49e0564abf923e3d2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_FLATTEN_AND</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14PP_FLATTEN_ANDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: AND flattening</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option12PP_NORMALIZEE">
+<span id="_CPPv3N8bitwuzla6Option12PP_NORMALIZEE"></span><span id="_CPPv2N8bitwuzla6Option12PP_NORMALIZEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca84a8ad14719834487fd8fbee802215eb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_NORMALIZE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option12PP_NORMALIZEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Normalization</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option24PP_NORMALIZE_SHARE_AWAREE">
+<span id="_CPPv3N8bitwuzla6Option24PP_NORMALIZE_SHARE_AWAREE"></span><span id="_CPPv2N8bitwuzla6Option24PP_NORMALIZE_SHARE_AWAREE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca7d0099ba97cb317010098d251b0baf3a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_NORMALIZE_SHARE_AWARE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option24PP_NORMALIZE_SHARE_AWAREE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Normalization: Enable share awareness normlization</strong></p>
+<p>When enabled, this disables normalizations that may yield blow-up on the bit-level.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19PP_SKELETON_PREPROCE">
+<span id="_CPPv3N8bitwuzla6Option19PP_SKELETON_PREPROCE"></span><span id="_CPPv2N8bitwuzla6Option19PP_SKELETON_PREPROCE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca0a6cc51a63c36639ea1769670675f969"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_SKELETON_PREPROC</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19PP_SKELETON_PREPROCE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Boolean skeleton preprocessing</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option17PP_VARIABLE_SUBSTE">
+<span id="_CPPv3N8bitwuzla6Option17PP_VARIABLE_SUBSTE"></span><span id="_CPPv2N8bitwuzla6Option17PP_VARIABLE_SUBSTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cac44b65f5b4b5d31b10ca8b5fe954bbc1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option17PP_VARIABLE_SUBSTE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Variable substitution</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option25PP_VARIABLE_SUBST_NORM_EQE">
+<span id="_CPPv3N8bitwuzla6Option25PP_VARIABLE_SUBST_NORM_EQE"></span><span id="_CPPv2N8bitwuzla6Option25PP_VARIABLE_SUBST_NORM_EQE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1302e26f0b37334e5c554325a2fad3d1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST_NORM_EQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option25PP_VARIABLE_SUBST_NORM_EQE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Variable substitution: Equality Normalization</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE">
+<span id="_CPPv3N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE"></span><span id="_CPPv2N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10eb86e7de63c768bde672ecfd292c1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST_NORM_DISEQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Variable substitution: Disequality Normalization</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE">
+<span id="_CPPv3N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE"></span><span id="_CPPv2N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca2089c6d88dbe832e98a05e815bdf0188"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST_NORM_BV_INEQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Variable substitution: Bit-Vector Inequality Normalization</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18DBG_RW_NODE_THRESHE">
+<span id="_CPPv3N8bitwuzla6Option18DBG_RW_NODE_THRESHE"></span><span id="_CPPv2N8bitwuzla6Option18DBG_RW_NODE_THRESHE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8d8b44fad62581c9ffeeaf68ebe62dc3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_RW_NODE_THRESH</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18DBG_RW_NODE_THRESHE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>**Debug: Threshold for number of new nodes introduced for recursive call of rewrite(). **</p>
+<p>Prints a warning number of newly introduced nodes is above threshold.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert debug option. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18DBG_PP_NODE_THRESHE">
+<span id="_CPPv3N8bitwuzla6Option18DBG_PP_NODE_THRESHE"></span><span id="_CPPv2N8bitwuzla6Option18DBG_PP_NODE_THRESHE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca10f37c69dfa6cd94b4faac917351a255"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_PP_NODE_THRESH</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18DBG_PP_NODE_THRESHE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>**Debug: Threshold for formula size increase after preprocessing in percent. **</p>
+<p>Prints a warning if formula size increase is above threshold.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert debug option. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15DBG_CHECK_MODELE">
+<span id="_CPPv3N8bitwuzla6Option15DBG_CHECK_MODELE"></span><span id="_CPPv2N8bitwuzla6Option15DBG_CHECK_MODELE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cab18b82c70b05c19150feec3faa69e579"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_CHECK_MODEL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15DBG_CHECK_MODELE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>**Debug: Check models for each satisfiable query. **</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert debug option. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option20DBG_CHECK_UNSAT_COREE">
+<span id="_CPPv3N8bitwuzla6Option20DBG_CHECK_UNSAT_COREE"></span><span id="_CPPv2N8bitwuzla6Option20DBG_CHECK_UNSAT_COREE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cab981bb691bf2411da3eaf4e90d9789ad"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_CHECK_UNSAT_CORE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option20DBG_CHECK_UNSAT_COREE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>**Debug: Check unsat core for each unsatisfiable query. **</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert debug option. </p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

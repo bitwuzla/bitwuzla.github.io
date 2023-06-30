@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="group__c__bitwuzlaparser" kind="group">
+    <compoundname>c_bitwuzlaparser</compoundname>
+    <title>C_bitwuzlaparser</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__c__bitwuzlaparser_1ga10b68b847ea340064faa3caf49344d00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="parser_8h_1a84a27985387da6b5ef7257c15cf6929b" kindref="member">BitwuzlaParser</ref> *</type>
+        <definition>BitwuzlaParser * bitwuzla_parser_new</definition>
+        <argsstring>(BitwuzlaOptions *options, const char *infile_name, FILE *infile, const char *language)</argsstring>
+        <name>bitwuzla_parser_new</name>
+        <param>
+          <type><ref refid="bitwuzla_8h_1aee766cc456eef191a186478f37558eb5" kindref="member">BitwuzlaOptions</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>infile_name</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>infile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>language</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new Bitwuzla parser instance.</para>
+<para>The returned instance must be deleted via <computeroutput><ref refid="group__c__bitwuzlaparser_1gaab697a4bcaab2507641079b14656064e" kindref="member">bitwuzla_parser_delete()</ref></computeroutput>.</para>
+<para><simplesect kind="note"><para>The parser creates and owns the associated Bitwuzla instance. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The associated options. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>infile_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the input file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>infile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format of the input file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the created Bitwuzla parser instance.</para>
+</simplesect>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlaparser_1gaab697a4bcaab2507641079b14656064e" kindref="member">bitwuzla_parser_delete</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/parser.h" line="38" column="16" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/parser.h" declline="38" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaparser_1gaab697a4bcaab2507641079b14656064e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bitwuzla_parser_delete</definition>
+        <argsstring>(BitwuzlaParser *parser)</argsstring>
+        <name>bitwuzla_parser_delete</name>
+        <param>
+          <type><ref refid="parser_8h_1a84a27985387da6b5ef7257c15cf6929b" kindref="member">BitwuzlaParser</ref> *</type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete a Bitwuzla parser instance.</para>
+<para>The given instance must have been created via <computeroutput><ref refid="group__c__bitwuzlaparser_1ga10b68b847ea340064faa3caf49344d00" kindref="member">bitwuzla_parser_new()</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Bitwuzla parser instance to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlaparser_1ga10b68b847ea340064faa3caf49344d00" kindref="member">bitwuzla_parser_new</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/parser.h" line="53" column="6" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/parser.h" declline="53" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaparser_1ga26a56abe99caa0c7ec4869fd6331b064" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * bitwuzla_parser_parse</definition>
+        <argsstring>(BitwuzlaParser *parser, bool parse_only)</argsstring>
+        <name>bitwuzla_parser_parse</name>
+        <param>
+          <type><ref refid="parser_8h_1a84a27985387da6b5ef7257c15cf6929b" kindref="member">BitwuzlaParser</ref> *</type>
+          <declname>parser</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>parse_only</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parser input file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Bitwuzla parser instance to delete. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parse_only</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to only parse without executing check-sat calls. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The error message in case of an error, else NULL. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/parser.h" line="62" column="12" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/parser.h" declline="62" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__c__bitwuzlaparser_1gab908bca018eca736af6d9d224bcffa20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087" kindref="member">Bitwuzla</ref> *</type>
+        <definition>Bitwuzla * bitwuzla_parser_get_bitwuzla</definition>
+        <argsstring>(BitwuzlaParser *parser)</argsstring>
+        <name>bitwuzla_parser_get_bitwuzla</name>
+        <param>
+          <type><ref refid="parser_8h_1a84a27985387da6b5ef7257c15cf6929b" kindref="member">BitwuzlaParser</ref> *</type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the associated Bitwuzla instance. <simplesect kind="return"><para>The Bitwuzla instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/parser.h" line="68" column="10" declfile="/home/ma/git/bitwuzla/include/bitwuzla/c/parser.h" declline="68" declcolumn="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

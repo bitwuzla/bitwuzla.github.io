@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="structBitwuzlaOptionInfo" kind="struct" language="C++" prot="public">
+    <compoundname>BitwuzlaOptionInfo</compoundname>
+    <includes refid="bitwuzla_8h" local="no">bitwuzla.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a3a58eec6fc27a64028124caa3032af37" prot="public" static="no" mutable="no">
+        <type><ref refid="option_8h_1a4b3d097604eab4eab9fbd0427be96884" kindref="member">BitwuzlaOption</ref></type>
+        <definition>BitwuzlaOption BitwuzlaOptionInfo::opt</definition>
+        <argsstring></argsstring>
+        <name>opt</name>
+        <qualifiedname>BitwuzlaOptionInfo::opt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Bitwuzla option. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="68" column="18" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1afa075308de7ab7b7f4da50c2016ab9f6" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* BitwuzlaOptionInfo::shrt</definition>
+        <argsstring></argsstring>
+        <name>shrt</name>
+        <qualifiedname>BitwuzlaOptionInfo::shrt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Short option name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="70" column="14" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a9e0862ed850268624e82d476a678fc77" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* BitwuzlaOptionInfo::lng</definition>
+        <argsstring></argsstring>
+        <name>lng</name>
+        <qualifiedname>BitwuzlaOptionInfo::lng</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Long option name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="72" column="14" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1ab6e641c1e6490c7df67b6c291fcb20d1" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* BitwuzlaOptionInfo::desc</definition>
+        <argsstring></argsstring>
+        <name>desc</name>
+        <qualifiedname>BitwuzlaOptionInfo::desc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Option description. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="74" column="14" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a8a86e5b13551115832ab8dd73468a1c8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BitwuzlaOptionInfo::is_numeric</definition>
+        <argsstring></argsstring>
+        <name>is_numeric</name>
+        <qualifiedname>BitwuzlaOptionInfo::is_numeric</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether values are numeric or strings. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="76" column="8" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a51626618d07d2990bee37c61e02ff191" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t BitwuzlaOptionInfo::cur</definition>
+        <argsstring></argsstring>
+        <name>cur</name>
+        <qualifiedname>BitwuzlaOptionInfo::cur</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current numeric option value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="83" column="16" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a93772f1d17c4b2435c38c94cc811b2a4" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t BitwuzlaOptionInfo::dflt</definition>
+        <argsstring></argsstring>
+        <name>dflt</name>
+        <qualifiedname>BitwuzlaOptionInfo::dflt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default numeric option value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="85" column="16" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a5c18bee9f6d1b2585ac5b42ca70712d1" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t BitwuzlaOptionInfo::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <qualifiedname>BitwuzlaOptionInfo::min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum numeric option value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="87" column="16" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a81a7a0f8863b72bfea525718b0ef7847" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t BitwuzlaOptionInfo::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <qualifiedname>BitwuzlaOptionInfo::max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum numeric option value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="89" column="16" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1afc9822d1fd9dd04dd0e7111eee2f05e5" prot="public" static="no" mutable="no">
+        <type>struct BitwuzlaOptionInfo::@0::@2</type>
+        <definition>struct BitwuzlaOptionInfo::@0::@2 BitwuzlaOptionInfo::numeric</definition>
+        <argsstring></argsstring>
+        <name>numeric</name>
+        <qualifiedname>BitwuzlaOptionInfo::numeric</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="90" column="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a94c94a1845181a312e076b9f72f8f93c" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* BitwuzlaOptionInfo::cur</definition>
+        <argsstring></argsstring>
+        <name>cur</name>
+        <qualifiedname>BitwuzlaOptionInfo::cur</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current mode option value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="95" column="18" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1aac8c8d0492eee62afd1be3c59d465ac5" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* BitwuzlaOptionInfo::dflt</definition>
+        <argsstring></argsstring>
+        <name>dflt</name>
+        <qualifiedname>BitwuzlaOptionInfo::dflt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default mode option value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="97" column="18" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1ab7eee70697921a48a6f696b9a1d0c7e8" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t BitwuzlaOptionInfo::num_modes</definition>
+        <argsstring></argsstring>
+        <name>num_modes</name>
+        <qualifiedname>BitwuzlaOptionInfo::num_modes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of available modes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="99" column="14" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a785d79a595b694c98af58035949c1d5b" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** BitwuzlaOptionInfo::modes</definition>
+        <argsstring></argsstring>
+        <name>modes</name>
+        <qualifiedname>BitwuzlaOptionInfo::modes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of available modes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="101" column="12" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a7e2fda39a7c665c57e3879785072c60f" prot="public" static="no" mutable="no">
+        <type>struct BitwuzlaOptionInfo::@0::@3</type>
+        <definition>struct BitwuzlaOptionInfo::@0::@3 BitwuzlaOptionInfo::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>BitwuzlaOptionInfo::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="102" column="10"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBitwuzlaOptionInfo_1a88acdee474b4ce87496cd859d4f9e705" prot="public" static="no" mutable="no">
+        <type>union BitwuzlaOptionInfo::@0</type>
+        <definition>union BitwuzlaOptionInfo::@0 BitwuzlaOptionInfo::@1</definition>
+        <argsstring></argsstring>
+        <name>@1</name>
+        <qualifiedname>BitwuzlaOptionInfo::@1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="103" column="3"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The option info struct holds all information about an option, which can be queried via <computeroutput>bitwuzla_get_option_info</computeroutput>.</para>
+<para><simplesect kind="see"><para><itemizedlist>
+<listitem><para><computeroutput><ref refid="group__c__bitwuzlaoptions_1gaa46bec92f4a81ea8a7d94f7ccd205b34" kindref="member">bitwuzla_get_option_info</ref></computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" line="65" column="1" bodyfile="/home/ma/git/bitwuzla/include/bitwuzla/c/bitwuzla.h" bodystart="66" bodyend="104"/>
+    <listofallmembers>
+      <member refid="structBitwuzlaOptionInfo_1a51626618d07d2990bee37c61e02ff191" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>cur</name></member>
+      <member refid="structBitwuzlaOptionInfo_1a94c94a1845181a312e076b9f72f8f93c" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>cur</name></member>
+      <member refid="structBitwuzlaOptionInfo_1ab6e641c1e6490c7df67b6c291fcb20d1" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>desc</name></member>
+      <member refid="structBitwuzlaOptionInfo_1a93772f1d17c4b2435c38c94cc811b2a4" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>dflt</name></member>
+      <member refid="structBitwuzlaOptionInfo_1aac8c8d0492eee62afd1be3c59d465ac5" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>dflt</name></member>
+      <member refid="structBitwuzlaOptionInfo_1a8a86e5b13551115832ab8dd73468a1c8" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>is_numeric</name></member>
+      <member refid="structBitwuzlaOptionInfo_1a9e0862ed850268624e82d476a678fc77" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>lng</name></member>
+      <member refid="structBitwuzlaOptionInfo_1a81a7a0f8863b72bfea525718b0ef7847" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>max</name></member>
+      <member refid="structBitwuzlaOptionInfo_1a5c18bee9f6d1b2585ac5b42ca70712d1" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>min</name></member>
+      <member refid="structBitwuzlaOptionInfo_1a7e2fda39a7c665c57e3879785072c60f" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>mode</name></member>
+      <member refid="structBitwuzlaOptionInfo_1a785d79a595b694c98af58035949c1d5b" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>modes</name></member>
+      <member refid="structBitwuzlaOptionInfo_1ab7eee70697921a48a6f696b9a1d0c7e8" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>num_modes</name></member>
+      <member refid="structBitwuzlaOptionInfo_1afc9822d1fd9dd04dd0e7111eee2f05e5" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>numeric</name></member>
+      <member refid="structBitwuzlaOptionInfo_1a3a58eec6fc27a64028124caa3032af37" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>opt</name></member>
+      <member refid="structBitwuzlaOptionInfo_1afa075308de7ab7b7f4da50c2016ab9f6" prot="public" virt="non-virtual"><scope>BitwuzlaOptionInfo</scope><name>shrt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
