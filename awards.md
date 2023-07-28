@@ -4,14 +4,27 @@ layout: default
 
 # Awards
 
+## Paper Awards
+
+{% for item in site.data.publications.papers %}
+{% if item.awards %}
+<i class="fa fa-trophy"></i>&nbsp;
+{% for cauthor in item.author %}{{ cauthor }}{% if forloop.last == false %}, {% endif %}{% endfor %}.
+{% if item.pdf %}[{{ item.title }}](publications.html#{{ item.id }}){% else %}{{ item.title }}{% endif %}.
+{{ item.publication-title }}{% if item.type == "journal" and item.volume %} {{ item.volume }}{% if item.issue %} ({{ item.issue }}){% endif %}{% endif %}{% if item.pages %}: {{ item.pages }}{% endif %}. ({% if item.year == 9999 %}to appear{% else %}{{ item.year }}{% endif %}){% if item.awards %}<span class="awards">{% if item.awards.url %}<a href="{{ item.awards.url }}">{% endif %}{% for award in item.awards.awards %}<br/><b>{{ award }}</b>{% endfor %}{% if item.awards.url %}</a>{% endif %}</span>{% endif %}<br />
+{% endif %}
+{% endfor %}
+
+## Competitions
+
 {% assign years = site.data.awards.awards | map: "year" | uniq | sort | reverse %}
 {% for year in years %}
 {% assign yearStr = year | append: "" %}
 {% assign yearInt = year | plus: 0 %}
 {% assign entries = site.data.awards.awards | where_exp: "e","e.year == year" %}
 {% for item in entries %}
-<ul class="awards">
-<li>
+<p>
+<i class="fa fa-trophy"></i>&nbsp;
 <b><a href="{{ item.event_url }}">{{ item.event }}</a></b> (<a href="{{ item.details | relative_url }}">details</a>)
 <ul>
 <li><span class="gray">entered:</span> {{ item.entered}} divisions</li>
@@ -69,8 +82,7 @@ layout: default
 </li>
 {% endif %}
 </ul>
-</li>
-</ul>
+</p>
 
 {% endfor %}
 {% endfor %}

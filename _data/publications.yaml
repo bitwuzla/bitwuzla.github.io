@@ -2,9 +2,10 @@
  papers:
 
  - title: "Bitwuzla"
+   id: cav23
    author:
-   - name: Aina Niemetz
-   - name: Mathias Preiner
+   - Aina Niemetz
+   - Mathias Preiner
    issued:
    year: 2023
    publication-title: CAV
@@ -29,9 +30,10 @@
      - CAV Distinguished Paper Award
 
  - title: "Ternary Propagation-Based Local Search for More Bit-Precise Reasoning"
+   id: fmcad20
    author:
-   - name: Aina Niemetz
-   - name: Mathias Preiner
+   - Aina Niemetz
+   - Mathias Preiner
    year: 2020
    publication-title: FMCAD
    pages: 214-224
@@ -44,9 +46,10 @@
    errata: /data/fmcad2020/errata.txt
 
  - title: Bitwuzla at the SMT-COMP 2020
+   id: arxiv20
    author:
-   - name: Aina Niemetz
-   - name: Mathias Preiner
+   - Aina Niemetz
+   - Mathias Preiner
    year: 2020
    publication-title: CoRR abs/2006.01621
    volume:

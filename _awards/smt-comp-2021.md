@@ -6,7 +6,7 @@ event: SMT-COMP 2021
 event_url: https://smt-comp.github.io/2021
 
 version:
-binary: https://www.starexec.org/starexec/secure/details/solver.jsp?id=33809
+binary: https://www.starexec.org/starexec/secure/details/solver.jsp?id=33469
 sysdesc-title: Bitwuzla at the SMT-COMP 2021
 sysdesc-url: /data/smtcomp2021/paper.pdf
 

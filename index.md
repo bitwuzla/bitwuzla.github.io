@@ -31,7 +31,8 @@ and awarded a <span class="orange">CAV Distinguished Paper Award</span>.
 
 # News
 
-- Our [system description](/data/NiemetzP-CAV23.pdf) of Bitwuzla won <span class="orange">CAV distinguished paper award</span> at [CAV 2023](http://www.i-cav.org/2023/)
+- Bitwuzla [won 26 out of 56](/awards/smt-comp-2023.html) (participated) division awards at [SMT-COMP 2023](http://www.smt-comp.org/2023)
+- Our [system description](/data/NiemetzP-CAV23.pdf) of Bitwuzla won a <span class="orange">CAV distinguished paper award</span> at [CAV 2023](http://www.i-cav.org/2023/)
 - Bitwuzla [won 32 out of 48](/awards/smt-comp-2022.html) (participated) division awards at [SMT-COMP 2022](http://www.smt-comp.org/2022)
 - Bitwuzla [won 17 out of 28](/awards/smt-comp-2021.html) (participated) division awards at [SMT-COMP 2021](http://www.smt-comp.org/2021)
 - Bitwuzla is now available on [GitHub]({{ gh.html_url }})

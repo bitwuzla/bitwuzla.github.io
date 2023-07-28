@@ -10,7 +10,7 @@ layout: default
 
 {% for item in site.data.publications.papers %}
 {% if item.id %}<a name="{{ item.id }}"></a>{% endif %}
-{% for cauthor in item.author %}{{ cauthor.name}}{% if forloop.last == false %}, {% endif %}{% endfor %}.
+{% for cauthor in item.author %}{{ cauthor}}{% if forloop.last == false %}, {% endif %}{% endfor %}.
 {% if item.pdf %}<a href="{{ item.pdf | relative_url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}.
 {{ item.publication-title }}{% if item.type == "journal" and item.volume %} {{ item.volume }}{% if item.issue %} ({{ item.issue }}){% endif %}{% endif %}{% if item.pages %}: {{ item.pages }}{% endif %}. ({{ item.year }}){% if item.awards %}<span class="awards">{% if item.awards.url %}<a href="{{ item.awards.url }}">{% endif %}{% for award in item.awards.awards %}<br/><b>{{ award }}</b>{% endfor %}{% if item.awards.url %}</a>{% endif %}</span>{% endif %}<br />
 <span class="gray">
