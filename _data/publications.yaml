@@ -1,12 +1,39 @@
 ---
  papers:
 
+ - title: "Bitwuzla"
+   author:
+   - name: Aina Niemetz
+   - name: Mathias Preiner
+   issued:
+   year: 2023
+   publication-title: CAV
+   volume:
+   issue:
+   pages: 3-17
+   abstract: "Bitwuzla is a new SMT solver for the quantifier-free and
+     quantified theories of fixed-size bit-vectors, arrays, floating-point
+     arith metic, and uninterpreted functions. This paper serves as a
+     comprehensive system description of its architecture and components. We
+     evaluate Bitwuzla’s performance on all benchmarks of supported logics in
+     SMT-LIB and provide a comparison against other state-of-the-art SMT
+     solvers."
+   pdf: /data/NiemetzP-CAV23.pdf
+   doi: 10.1007/978-3-031-37703-7_1
+   preprint:
+   bibtex:
+   artifact: https://zenodo.org/record/7864687
+   talk:
+   awards:
+     awards:
+     - CAV Distinguished Paper Award
+
  - title: "Ternary Propagation-Based Local Search for More Bit-Precise Reasoning"
    author:
    - name: Aina Niemetz
    - name: Mathias Preiner
    year: 2020
-   publication-title: FMCAD 2020
+   publication-title: FMCAD
    pages: 214-224
    pdf: /data/fmcad2020/NiemetzPreiner-FMCAD20.pdf
    doi: 10.34727/2020/isbn.978-3-85448-042-6_29

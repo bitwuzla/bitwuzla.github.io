@@ -11,9 +11,9 @@ fixed-size bit-vectors, floating-point arithmetic, arrays and uninterpreted
 functions and their combinations.
 
 Its name is derived from an Austrian dialect expression that can be translated
-as "someone who tinkers with bits".
+as "<span class="orange">someone who tinkers with bits</span>".
 
-### Pronunciation of Bitwuzla
+### "Bitwuzla" is pronounced as "<span class="orange">*bitvootslah*</span>"
 
 - **Bit**...
 - '**w**' as 'v' in 'vector',
@@ -22,14 +22,20 @@ as "someone who tinkers with bits".
 - '**l**' just an 'l',
 - '**a**' as 'u' in 'cut'
 
-### Citing Bitwuzla
+# Citing Bitwuzla
+
+A [comprehensive system description](/data/NiemetzP-CAV23.pdf) was presented and published at CAV 2023
+and awarded a <span class="orange">CAV Distinguished Paper Award</span>.
 
 {% include_relative bibtex-include.md %}
 
 # News
 
+- Our [system description](/data/NiemetzP-CAV23.pdf) of Bitwuzla won <span class="orange">CAV distinguished paper award</span> at [CAV 2023](http://www.i-cav.org/2023/)
+- Bitwuzla [won 32 out of 48](/awards/smt-comp-2022.html) (participated) division awards at [SMT-COMP 2022](http://www.smt-comp.org/2022)
+- Bitwuzla [won 17 out of 28](/awards/smt-comp-2021.html) (participated) division awards at [SMT-COMP 2021](http://www.smt-comp.org/2021)
 - Bitwuzla is now available on [GitHub]({{ gh.html_url }})
-- Bitwuzla [won 17 out of 26](smt-comp.html#smtcomp2020) (participated) divisions at [SMT-COMP 2020](http://www.smt-comp.org/2020)
+- Bitwuzla [won 43 out of 71](/awards/smt-comp-2020.html) (participated) division awards at [SMT-COMP 2020](http://www.smt-comp.org/2020)
 - Bitwuzla participating at [SMT-COMP 2020](https://smt-comp.github.io/2020) ([submitted binary](https://www.starexec.org/starexec/secure/details/solver.jsp?id=28818))
 
 
