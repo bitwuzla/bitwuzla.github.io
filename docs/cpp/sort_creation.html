@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sort Creation &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-        <script src="../static/jquery.js"></script>
-        <script src="../static/underscore.js"></script>
-        <script src="../static/doctools.js"></script>
+        <script src="../static/jquery.js?v=5d32c60e"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/doctools.js?v=888ff710"></script>
+        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -35,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -93,8 +95,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="sort-creation">
-<h1>Sort Creation<a class="headerlink" href="#sort-creation" title="Permalink to this headline"></a></h1>
+  <section id="sort-creation">
+<h1>Sort Creation<a class="headerlink" href="#sort-creation" title="Permalink to this heading"></a></h1>
 <p>Bitwuzla supports creating array (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">Array</span></code>), Boolean (SMT-LIB:
 <code class="code docutils literal notranslate"><span class="pre">Bool</span></code>), bit-vector (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">BitVec</span> <span class="pre">n)</span></code>), floating-point
 (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">FloatingPoint</span> <span class="pre">e</span> <span class="pre">s)</span></code>), rounding mode (SMT-LIB:
@@ -116,19 +118,19 @@ instances.</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a5053644e2c55124772be5608434dcd0d"><span class="std std-ref"><span class="pre">Sort::is_array()</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Sort::array_get_index()</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Sort::array_get_element()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Sort::array_get_element()</span></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – The index sort of the array sort. </p></li>
 <li><p><strong>element</strong> – The element sort of the array sort. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An array sort which maps sort <code class="docutils literal notranslate"><span class="pre">index</span></code> to sort <code class="docutils literal notranslate"><span class="pre">element</span></code>.</p>
 </dd>
 </dl>
@@ -139,7 +141,7 @@ instances.</p>
 <span id="_CPPv312mk_bool_sortv"></span><span id="_CPPv212mk_bool_sortv"></span><span id="mk_bool_sort"></span><span class="target" id="group__cpp__sort__creation_1ga7bcc9c149fc0adfa1adb1ff4628fae0b"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bool_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412mk_bool_sortv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a Boolean sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A Boolean sort. </p>
 </dd>
 </dl>
@@ -152,16 +154,16 @@ instances.</p>
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a40020deea906cc3d5d3ba68455fecb0d"><span class="std std-ref"><span class="pre">Sort::is_bv()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a5b31d07e9aad31a5b12d6d6ab0e23596"><span class="std std-ref"><span class="pre">Sort::bv_size()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a5b31d07e9aad31a5b12d6d6ab0e23596"><span class="std std-ref"><span class="pre">Sort::bv_size()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>size</strong> – The size of the bit-vector sort. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A bit-vector sort of given size.</p>
 </dd>
 </dl>
@@ -175,19 +177,19 @@ instances.</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a4df38c43b17972bd890cc7aed86d1a94"><span class="std std-ref"><span class="pre">Sort::is_fp()</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1ac50225d7851be8aa7656caed0a6e650c"><span class="std std-ref"><span class="pre">Sort::fp_exp_size()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a87691e57f73024f1ba4bbe7aa88f0f31"><span class="std std-ref"><span class="pre">Sort::fp_sig_size()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a87691e57f73024f1ba4bbe7aa88f0f31"><span class="std std-ref"><span class="pre">Sort::fp_sig_size()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>exp_size</strong> – The size of the exponent. </p></li>
 <li><p><strong>sig_size</strong> – The size of the significand (including sign bit). </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A floating-point sort of given format.</p>
 </dd>
 </dl>
@@ -202,19 +204,19 @@ instances.</p>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a94f8916e0b6635e9405f8346b90a0a74"><span class="std std-ref"><span class="pre">Sort::is_fun()</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1ad9f4109e31ec0dba4019bde19e7d4261"><span class="std std-ref"><span class="pre">Sort::fun_arity()</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Sort::fun_domain_sorts()</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a9c7533502e3d1afdc1632f0712a57a92"><span class="std std-ref"><span class="pre">Sort::fun_codomain()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1a9c7533502e3d1afdc1632f0712a57a92"><span class="std std-ref"><span class="pre">Sort::fun_codomain()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>domain</strong> – The domain sorts (the sorts of the arguments). The number of sorts in this vector must match <code class="docutils literal notranslate"><span class="pre">arity</span></code>. </p></li>
 <li><p><strong>codomain</strong> – The codomain sort (the sort of the return value). </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A function sort of given domain and codomain sorts.</p>
 </dd>
 </dl>
@@ -226,13 +228,13 @@ instances.</p>
 <dd><p>Create a Roundingmode sort. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1af1ce6186dac747fc78cb9fe78f3a62f4"><span class="std std-ref"><span class="pre">Sort::is_rm()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1af1ce6186dac747fc78cb9fe78f3a62f4"><span class="std std-ref"><span class="pre">Sort::is_rm()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A Roundingmode sort. </p>
 </dd>
 </dl>
@@ -245,7 +247,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1aa6464ab9f30e220a79427551614f7246"><span class="std std-ref"><span class="pre">Sort::is_uninterpreted()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="classes/sort.html#classbitwuzla_1_1Sort_1aa6464ab9f30e220a79427551614f7246"><span class="std std-ref"><span class="pre">Sort::is_uninterpreted()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -255,17 +257,17 @@ instances.</p>
 <p>Only 0-arity uninterpreted sorts are supported.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>symbol</strong> – The symbol of the sort. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An uninterpreted sort.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
-</div>
+</section>
 
 
            </div>

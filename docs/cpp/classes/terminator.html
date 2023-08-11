@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terminator &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -33,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -75,8 +77,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="terminator">
-<h1>Terminator<a class="headerlink" href="#terminator" title="Permalink to this headline"></a></h1>
+  <section id="terminator">
+<h1>Terminator<a class="headerlink" href="#terminator" title="Permalink to this heading"></a></h1>
 <p>The termination callback configuration of a Bitwuzla instance.</p>
 <p>Bitwuzla supports configuring a termination callback via class
 <a class="reference internal" href="#_CPPv4N8bitwuzla10TerminatorE" title="bitwuzla::Terminator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Terminator</span></code></a>, which implements a callback function
@@ -112,7 +114,7 @@ can be connected to a Bitwuzla instance at a time.</p>
 <span id="_CPPv3N8bitwuzla10Terminator9terminateEv"></span><span id="_CPPv2N8bitwuzla10Terminator9terminateEv"></span><span id="bitwuzla::Terminator::terminate"></span><span class="target" id="classbitwuzla_1_1Terminator_1a29a530191df3c050e593516156e663bd"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">terminate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10Terminator9terminateEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Termination function. If terminator has been connected, <a class="reference internal" href="bitwuzla.html#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> calls this function periodically to determine if the connected instance should be terminated. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if the associated instance of <a class="reference internal" href="bitwuzla.html#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> should be terminated. </p>
 </dd>
 </dl>
@@ -123,8 +125,8 @@ can be connected to a Bitwuzla instance at a time.</p>
 
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
 <hr class="docutils" />
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <p>The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/cpp/terminator.cpp">examples/c/terminator.cpp</a>.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/***</span>
 <span class="cm"> * Bitwuzla: Satisfiability Modulo Theories (SMT) solver.</span>
@@ -210,8 +212,8 @@ can be connected to a Bitwuzla instance at a time.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

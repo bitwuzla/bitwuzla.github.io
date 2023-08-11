@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kind &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -36,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -94,8 +96,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="kind">
-<h1>Kind<a class="headerlink" href="#kind" title="Permalink to this headline"></a></h1>
+  <section id="kind">
+<h1>Kind<a class="headerlink" href="#kind" title="Permalink to this heading"></a></h1>
 <p>The kind of a <a class="reference internal" href="../classes/term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Term</span></code></a>.</p>
 <p>Terms of a given kind are created via <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code>.
 The kind of a term can be queried via <a class="reference internal" href="../classes/term.html#_CPPv4NK8bitwuzla4Term4kindEv" title="bitwuzla::Term::kind"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Term::kind()</span></code></a>.</p>
@@ -144,7 +146,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind3ANDE">
 <span id="_CPPv3N8bitwuzla4Kind3ANDE"></span><span id="_CPPv2N8bitwuzla4Kind3ANDE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca558ffc8f5770d8e4f95f51d822685532"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AND</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind3ANDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean and.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">and</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">and</span></code></p>
 <p><strong>Number of arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -155,7 +157,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -166,7 +168,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind8DISTINCTE">
 <span id="_CPPv3N8bitwuzla4Kind8DISTINCTE"></span><span id="_CPPv2N8bitwuzla4Kind8DISTINCTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cabc80de8822d41a253a50099abd672477"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DISTINCT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind8DISTINCTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Disequality.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">distinct</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">distinct</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S \times ... \times S \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -177,7 +179,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -188,7 +190,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind5EQUALE">
 <span id="_CPPv3N8bitwuzla4Kind5EQUALE"></span><span id="_CPPv2N8bitwuzla4Kind5EQUALE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca969f331a87d8c958473c32b4d0e61a44"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EQUAL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind5EQUALE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Equality.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S \times ... \times S \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -199,7 +201,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -210,7 +212,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind3IFFE">
 <span id="_CPPv3N8bitwuzla4Kind3IFFE"></span><span id="_CPPv2N8bitwuzla4Kind3IFFE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cac1cbcd58f852f8efa45845cf292e350c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IFF</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind3IFFE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean if and only if.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -221,7 +223,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -232,7 +234,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7IMPLIESE">
 <span id="_CPPv3N8bitwuzla4Kind7IMPLIESE"></span><span id="_CPPv2N8bitwuzla4Kind7IMPLIESE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca1e69ece8728dae84275e3f76b89d73db"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IMPLIES</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7IMPLIESE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean implies.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -243,7 +245,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -254,7 +256,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind3NOTE">
 <span id="_CPPv3N8bitwuzla4Kind3NOTE"></span><span id="_CPPv2N8bitwuzla4Kind3NOTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca10df3d67626099df882920ba6552f16d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NOT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind3NOTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean not.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">not</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">not</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -264,7 +266,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -275,7 +277,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind2ORE">
 <span id="_CPPv3N8bitwuzla4Kind2ORE"></span><span id="_CPPv2N8bitwuzla4Kind2ORE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca1d00e7dce692e8dc3f6877f035e3a616"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind2ORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean or.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">or</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">or</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -286,7 +288,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -297,7 +299,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind3XORE">
 <span id="_CPPv3N8bitwuzla4Kind3XORE"></span><span id="_CPPv2N8bitwuzla4Kind3XORE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca97675eb3f268048604dc5155511a2a4d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">XOR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind3XORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean xor.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">xor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">xor</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -308,7 +310,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -319,7 +321,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind3ITEE">
 <span id="_CPPv3N8bitwuzla4Kind3ITEE"></span><span id="_CPPv2N8bitwuzla4Kind3ITEE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cac1cb5ee8f71d941fe8a121edb324101f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ITE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind3ITEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>If-then-else.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">ite</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">ite</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times S  \times S \rightarrow S\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -329,7 +331,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -340,7 +342,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6EXISTSE">
 <span id="_CPPv3N8bitwuzla4Kind6EXISTSE"></span><span id="_CPPv2N8bitwuzla4Kind6EXISTSE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca6a240802522e95fc9e2c1d09122d8ec4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EXISTS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6EXISTSE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Existential quantification.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">exists</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">exists</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S_1 \times ...  \times S_n \times Bool \rightarrow
  Bool\)</span></p>
@@ -351,7 +353,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -362,7 +364,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FORALLE">
 <span id="_CPPv3N8bitwuzla4Kind6FORALLE"></span><span id="_CPPv2N8bitwuzla4Kind6FORALLE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca6e5a8a2e655574b65920ce0c5d2f0010"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FORALL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FORALLE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Universal quantification.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">forall</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">forall</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S_1 \times ...  \times S_n \times Bool \rightarrow
  Bool\)</span></p>
@@ -373,7 +375,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -394,7 +396,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -415,7 +417,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -426,7 +428,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind12ARRAY_SELECTE">
 <span id="_CPPv3N8bitwuzla4Kind12ARRAY_SELECTE"></span><span id="_CPPv2N8bitwuzla4Kind12ARRAY_SELECTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca2c543c370d60402f32b6854c17429f8d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ARRAY_SELECT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind12ARRAY_SELECTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Array select.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">select</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">select</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\((S_i \rightarrow S_e) \times S_i \rightarrow S_e\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -436,7 +438,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -447,7 +449,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind11ARRAY_STOREE">
 <span id="_CPPv3N8bitwuzla4Kind11ARRAY_STOREE"></span><span id="_CPPv2N8bitwuzla4Kind11ARRAY_STOREE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca9c101cd89f872101b69a30c3c2bbaae4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ARRAY_STORE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind11ARRAY_STOREE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Array store.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">store</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">store</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\((S_i \rightarrow S_e) \times S_i \times S_e \rightarrow
  (S_i \rightarrow S_e)\)</span></p>
@@ -458,7 +460,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -469,7 +471,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_ADDE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_ADDE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_ADDE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca6fc1778b31ccaba7b24b4da233d43f07"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_ADD</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_ADDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector addition.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvadd</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvadd</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -480,7 +482,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -491,7 +493,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_ANDE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_ANDE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_ANDE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca470f951c16d4dfe3fd980f21a2a9a58c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_AND</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_ANDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector and.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvand</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvand</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -502,7 +504,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -513,7 +515,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7BV_ASHRE">
 <span id="_CPPv3N8bitwuzla4Kind7BV_ASHRE"></span><span id="_CPPv2N8bitwuzla4Kind7BV_ASHRE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cabd7fac5b1f108bfb6c6fb178b6e90527"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_ASHR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7BV_ASHRE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector arithmetic right shift.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvashr</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvashr</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -523,7 +525,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -534,7 +536,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7BV_COMPE">
 <span id="_CPPv3N8bitwuzla4Kind7BV_COMPE"></span><span id="_CPPv2N8bitwuzla4Kind7BV_COMPE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cab4fb9aa0b26093801f2a898945576519"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_COMP</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7BV_COMPE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector comparison.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvcomp</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvcomp</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_1\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -545,7 +547,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -556,7 +558,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind9BV_CONCATE">
 <span id="_CPPv3N8bitwuzla4Kind9BV_CONCATE"></span><span id="_CPPv2N8bitwuzla4Kind9BV_CONCATE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca47d7fdacb5a4cb77983672b99b91f189"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_CONCAT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind9BV_CONCATE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector concat.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">concat</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">concat</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_m \rightarrow BV_{n + ... +
  m}\)</span></p>
@@ -568,7 +570,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -589,7 +591,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -610,7 +612,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -621,7 +623,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_MULE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_MULE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_MULE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca2a6e0b161167f7a6945bab2247665baf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_MUL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_MULE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector multiplication.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvmul</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvmul</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -632,7 +634,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -643,7 +645,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7BV_NANDE">
 <span id="_CPPv3N8bitwuzla4Kind7BV_NANDE"></span><span id="_CPPv2N8bitwuzla4Kind7BV_NANDE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cab5990b5a2d2bd0ba41f3e804ac09bc0f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_NAND</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7BV_NANDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector nand.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnand</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnand</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -653,7 +655,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -664,7 +666,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_NEGE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_NEGE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_NEGE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca36f53c79c3ce0a324adfe50e1e16b2db"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_NEG</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_NEGE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector negation (two’s complement).</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvneg</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvneg</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -674,7 +676,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -685,7 +687,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_NORE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_NORE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_NORE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caaf2124c44c3d65d0ae1b260b3d996f2e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_NOR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_NORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector nor.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnor</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -695,7 +697,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -706,7 +708,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_NOTE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_NOTE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_NOTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca9b68eeeeffc56636010f7708abe3aefd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_NOT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_NOTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector not (one’s complement).</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnot</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnot</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -716,7 +718,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -727,7 +729,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind5BV_ORE">
 <span id="_CPPv3N8bitwuzla4Kind5BV_ORE"></span><span id="_CPPv2N8bitwuzla4Kind5BV_ORE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca1afe96380b344b267d1b21c8d610bffd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_OR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind5BV_ORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector or.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvor</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -738,7 +740,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -759,7 +761,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -780,7 +782,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -801,7 +803,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -822,7 +824,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -843,7 +845,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -855,7 +857,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <span id="_CPPv3N8bitwuzla4Kind16BV_SADD_OVERFLOWE"></span><span id="_CPPv2N8bitwuzla4Kind16BV_SADD_OVERFLOWE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cac515bd7ba9c36debaf1e29d2d164c021"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SADD_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind16BV_SADD_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed addition overflow test.</p>
 <p>Predicate indicating if signed addition produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsaddo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsaddo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -865,7 +867,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -877,7 +879,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <span id="_CPPv3N8bitwuzla4Kind16BV_SDIV_OVERFLOWE"></span><span id="_CPPv2N8bitwuzla4Kind16BV_SDIV_OVERFLOWE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca0443767dc22c96a6c2b8986c9119dfac"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SDIV_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind16BV_SDIV_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed division overflow test.</p>
 <p>Predicate indicating if signed division produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsdivo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsdivo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -887,7 +889,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -898,7 +900,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7BV_SDIVE">
 <span id="_CPPv3N8bitwuzla4Kind7BV_SDIVE"></span><span id="_CPPv2N8bitwuzla4Kind7BV_SDIVE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca42428bc63f1950e8840bcecbd57cee60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SDIV</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7BV_SDIVE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed division.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsdiv</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsdiv</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -908,7 +910,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -919,7 +921,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_SGEE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_SGEE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_SGEE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cacd99b3d70d5d9fcea1b33c0a9804ef39"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SGE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_SGEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed greater than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsle</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsle</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -929,7 +931,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -940,7 +942,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_SGTE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_SGTE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_SGTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cae33c37597fa5c0c063d7e6e287f29329"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SGT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_SGTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed greater than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvslt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvslt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -950,7 +952,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -961,7 +963,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_SHLE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_SHLE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_SHLE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca4b3ad5279d22a8d48e70b76aff430020"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SHL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_SHLE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector logical left shift.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvshl</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvshl</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -971,7 +973,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -982,7 +984,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_SHRE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_SHRE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_SHRE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca25622ee2ea0d91ba9521d1be88ae7c4d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SHR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_SHRE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector logical right shift.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvshr</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvshr</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -992,7 +994,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1003,7 +1005,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_SLEE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_SLEE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_SLEE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caac2b7b7ff0c61cf7204c369dc295bf9b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SLE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_SLEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed less than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsle</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsle</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1013,7 +1015,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1024,7 +1026,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_SLTE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_SLTE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_SLTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cafabd77c43faf006761489bdf9edaa00a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SLT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_SLTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed less than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvslt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvslt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1034,7 +1036,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1045,7 +1047,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7BV_SMODE">
 <span id="_CPPv3N8bitwuzla4Kind7BV_SMODE"></span><span id="_CPPv2N8bitwuzla4Kind7BV_SMODE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cad0dc34b1610672e8935b3a1a2e8fe243"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SMOD</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7BV_SMODE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed modulo.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsmod</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsmod</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1055,7 +1057,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1067,7 +1069,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <span id="_CPPv3N8bitwuzla4Kind16BV_SMUL_OVERFLOWE"></span><span id="_CPPv2N8bitwuzla4Kind16BV_SMUL_OVERFLOWE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca901a2cb3eedb7e37b1fd5bc4b80355d7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SMUL_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind16BV_SMUL_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed multiplication overflow test.</p>
 <p>Predicate indicating if signed multiplication produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsmulo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsmulo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1077,7 +1079,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1088,7 +1090,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7BV_SREME">
 <span id="_CPPv3N8bitwuzla4Kind7BV_SREME"></span><span id="_CPPv2N8bitwuzla4Kind7BV_SREME"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca7bb758d1623d1322e42430d9fdd064ad"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SREM</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7BV_SREME" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed remainder.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsrem</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsrem</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1098,7 +1100,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1110,7 +1112,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <span id="_CPPv3N8bitwuzla4Kind16BV_SSUB_OVERFLOWE"></span><span id="_CPPv2N8bitwuzla4Kind16BV_SSUB_OVERFLOWE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca7349e02cc4a3ad2d9a3cd1c5a8d1f669"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SSUB_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind16BV_SSUB_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed subtraction overflow test.</p>
 <p>Predicate indicatin if signed subtraction produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvssubo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvssubo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1120,7 +1122,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1131,7 +1133,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_SUBE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_SUBE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_SUBE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cae9474c0334b6694097d59b6b3a3cf385"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SUB</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_SUBE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector subtraction.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsub</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsub</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1141,7 +1143,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1153,7 +1155,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <span id="_CPPv3N8bitwuzla4Kind16BV_UADD_OVERFLOWE"></span><span id="_CPPv2N8bitwuzla4Kind16BV_UADD_OVERFLOWE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca6e88b96e404981d3c33c4d8e07615df5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_UADD_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind16BV_UADD_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned addition overflow test.</p>
 <p>Predicate indicating if unsigned addition produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvuaddo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvuaddo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1163,7 +1165,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1174,7 +1176,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7BV_UDIVE">
 <span id="_CPPv3N8bitwuzla4Kind7BV_UDIVE"></span><span id="_CPPv2N8bitwuzla4Kind7BV_UDIVE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca6e1c882f128cd69b7bb22c7a06241ac1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_UDIV</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7BV_UDIVE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned division.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvudiv</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvudiv</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1184,7 +1186,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1195,7 +1197,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_UGEE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_UGEE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_UGEE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca9eb0dc350c5b9d6293937afd1ac7847b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_UGE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_UGEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned greater than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvuge</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvuge</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1205,7 +1207,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1216,7 +1218,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_UGTE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_UGTE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_UGTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca4eb3077afa33f7899e199709deb51aba"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_UGT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_UGTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned greater than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvugt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvugt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1226,7 +1228,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1237,7 +1239,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_ULEE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_ULEE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_ULEE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca3d3810bcc31e7d6c57d189c9a77ddca5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_ULE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_ULEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned less than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvule</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvule</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1247,7 +1249,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1258,7 +1260,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_ULTE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_ULTE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_ULTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caeb9a03b71e150aace7cf6bb3c08a19a9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_ULT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_ULTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned less than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvult</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvult</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1268,7 +1270,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1280,7 +1282,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <span id="_CPPv3N8bitwuzla4Kind16BV_UMUL_OVERFLOWE"></span><span id="_CPPv2N8bitwuzla4Kind16BV_UMUL_OVERFLOWE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca4701b0009f298bb99cf0533fdedab5f6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_UMUL_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind16BV_UMUL_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned multiplication overflow test.</p>
 <p>Predicate indicating if unsigned multiplication produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvumulo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvumulo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1290,7 +1292,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1301,7 +1303,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7BV_UREME">
 <span id="_CPPv3N8bitwuzla4Kind7BV_UREME"></span><span id="_CPPv2N8bitwuzla4Kind7BV_UREME"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca701106866ba6c949faf29d2c4c16e685"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_UREM</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7BV_UREME" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned remainder.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvurem</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvurem</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1311,7 +1313,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1323,7 +1325,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <span id="_CPPv3N8bitwuzla4Kind16BV_USUB_OVERFLOWE"></span><span id="_CPPv2N8bitwuzla4Kind16BV_USUB_OVERFLOWE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca681c830f17bcf43bd31157b0242293dc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_USUB_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind16BV_USUB_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned subtraction overflow test.</p>
 <p>Predicate indicating if unsigned subtraction produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvusubo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvusubo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1333,7 +1335,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1344,7 +1346,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7BV_XNORE">
 <span id="_CPPv3N8bitwuzla4Kind7BV_XNORE"></span><span id="_CPPv2N8bitwuzla4Kind7BV_XNORE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca44b2e5b1be99c4b41d6fcabfd7c7dede"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_XNOR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7BV_XNORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector xnor.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvxnor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvxnor</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1354,7 +1356,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1365,7 +1367,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6BV_XORE">
 <span id="_CPPv3N8bitwuzla4Kind6BV_XORE"></span><span id="_CPPv2N8bitwuzla4Kind6BV_XORE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca0a28b36709e2e2e563443e1dae8b6411"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_XOR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6BV_XORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector xor.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvxor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvxor</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1376,7 +1378,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1398,7 +1400,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1420,7 +1422,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1442,7 +1444,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1464,7 +1466,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1486,7 +1488,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1508,7 +1510,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1519,7 +1521,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_ABSE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_ABSE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_ABSE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca3d5a23a90c9ba49e81e6a5c447dcf0b0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_ABS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_ABSE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point absolute value.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.abs</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.abs</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1529,7 +1531,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1540,7 +1542,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_ADDE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_ADDE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_ADDE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca21c06ae7a323c956b972d389f43fb850"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_ADD</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_ADDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point addition.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.add</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.add</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1550,7 +1552,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1561,7 +1563,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_DIVE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_DIVE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_DIVE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca428f035d51521a5c9fa07e5c397b1d25"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_DIV</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_DIVE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point division.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.div</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.div</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1571,7 +1573,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1582,7 +1584,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind8FP_EQUALE">
 <span id="_CPPv3N8bitwuzla4Kind8FP_EQUALE"></span><span id="_CPPv2N8bitwuzla4Kind8FP_EQUALE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cafc48a79b205db676e8d5ceafcc46b7ad"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_EQUAL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind8FP_EQUALE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point equality.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.eq</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.eq</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times ... \times \mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1592,7 +1594,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1603,7 +1605,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_FMAE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_FMAE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_FMAE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca8d4b57bfeee462b404dfbd8ad6b29930"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_FMA</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_FMAE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point fused multiplcation and addition.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.fma</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.fma</span></code></p>
 <p><strong>Number of Arguments:</strong> 4</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1612,7 +1614,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1623,7 +1625,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind5FP_FPE">
 <span id="_CPPv3N8bitwuzla4Kind5FP_FPE"></span><span id="_CPPv2N8bitwuzla4Kind5FP_FPE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca495d1ed64caa13170844fd7e473126b6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_FP</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind5FP_FPE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point IEEE 754 value.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_1 \times BV_e \times BV_{s-1} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1633,7 +1635,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1644,7 +1646,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_GEQE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_GEQE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_GEQE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca1d85e49fe5f807a62813e54ff9089244"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_GEQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_GEQE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point greater than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.geq</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.geq</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times ... \times \mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1654,7 +1656,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1665,7 +1667,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind5FP_GTE">
 <span id="_CPPv3N8bitwuzla4Kind5FP_GTE"></span><span id="_CPPv2N8bitwuzla4Kind5FP_GTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cadf0c949d45b9662d1204ce807ba2d92b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_GT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind5FP_GTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point greater than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.gt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.gt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times ... \times \mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1675,7 +1677,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1686,7 +1688,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind9FP_IS_INFE">
 <span id="_CPPv3N8bitwuzla4Kind9FP_IS_INFE"></span><span id="_CPPv2N8bitwuzla4Kind9FP_IS_INFE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cae9d7869e7339627d8e3478c6c1250d25"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_IS_INF</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind9FP_IS_INFE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is infinity tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isInfinite</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isInfinite</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1696,7 +1698,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1707,7 +1709,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind9FP_IS_NANE">
 <span id="_CPPv3N8bitwuzla4Kind9FP_IS_NANE"></span><span id="_CPPv2N8bitwuzla4Kind9FP_IS_NANE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca1251e35fb975dc2d32fec0f6f090721b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_IS_NAN</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind9FP_IS_NANE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is Nan tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNaN</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNaN</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1717,7 +1719,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1728,7 +1730,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind9FP_IS_NEGE">
 <span id="_CPPv3N8bitwuzla4Kind9FP_IS_NEGE"></span><span id="_CPPv2N8bitwuzla4Kind9FP_IS_NEGE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cac1e320c10f598b342c1a601fc9c1197a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_IS_NEG</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind9FP_IS_NEGE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is negative tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNegative</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNegative</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1738,7 +1740,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1749,7 +1751,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind12FP_IS_NORMALE">
 <span id="_CPPv3N8bitwuzla4Kind12FP_IS_NORMALE"></span><span id="_CPPv2N8bitwuzla4Kind12FP_IS_NORMALE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca326db7d53c5406c360eeaff6cdb6c77e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_IS_NORMAL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind12FP_IS_NORMALE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is normal tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNormal</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNormal</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1759,7 +1761,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1770,7 +1772,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind9FP_IS_POSE">
 <span id="_CPPv3N8bitwuzla4Kind9FP_IS_POSE"></span><span id="_CPPv2N8bitwuzla4Kind9FP_IS_POSE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caf19967abb2610f1cd2fd0d25ca7020ba"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_IS_POS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind9FP_IS_POSE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is positive tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isPositive</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isPositive</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1780,7 +1782,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1791,7 +1793,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind15FP_IS_SUBNORMALE">
 <span id="_CPPv3N8bitwuzla4Kind15FP_IS_SUBNORMALE"></span><span id="_CPPv2N8bitwuzla4Kind15FP_IS_SUBNORMALE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca44318c2a6afe50df45d435f6cd8d181d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_IS_SUBNORMAL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind15FP_IS_SUBNORMALE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is subnormal tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isSubnormal</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isSubnormal</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1801,7 +1803,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1812,7 +1814,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind10FP_IS_ZEROE">
 <span id="_CPPv3N8bitwuzla4Kind10FP_IS_ZEROE"></span><span id="_CPPv2N8bitwuzla4Kind10FP_IS_ZEROE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca2ec5309d64127027a57e2b80668fcb59"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_IS_ZERO</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind10FP_IS_ZEROE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is zero tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isZero</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isZero</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1822,7 +1824,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1833,7 +1835,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_LEQE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_LEQE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_LEQE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cae4734773861d76750b3c745d10e57220"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_LEQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_LEQE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point less than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.leq</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.leq</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times ... \times \mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1844,7 +1846,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1855,7 +1857,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind5FP_LTE">
 <span id="_CPPv3N8bitwuzla4Kind5FP_LTE"></span><span id="_CPPv2N8bitwuzla4Kind5FP_LTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca1fe14198a928f0b52cc152ba89e51694"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_LT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind5FP_LTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point less than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.lt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.lt</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1866,7 +1868,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1877,7 +1879,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_MAXE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_MAXE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_MAXE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca2e38920c6b0f577c81906d8deae2e80b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_MAX</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_MAXE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point max.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.max</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.max</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1887,7 +1889,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1898,7 +1900,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_MINE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_MINE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_MINE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca6719d5599ea6657da3292b2176a92a76"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_MIN</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_MINE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point min.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.min</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.min</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1908,7 +1910,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1919,7 +1921,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_MULE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_MULE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_MULE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca4c7e74ed042a427b76667613bdd6197b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_MUL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_MULE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point multiplcation.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.mul</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.mul</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1929,7 +1931,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1940,7 +1942,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_NEGE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_NEGE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_NEGE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca4139ef53581cfaa00363ee1485bc878e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_NEG</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_NEGE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point negation.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.neg</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.neg</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1950,7 +1952,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1961,7 +1963,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_REME">
 <span id="_CPPv3N8bitwuzla4Kind6FP_REME"></span><span id="_CPPv2N8bitwuzla4Kind6FP_REME"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cac9e93590b6c8eb78f97be5f61ef4a026"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_REM</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_REME" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point remainder.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.rem</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.rem</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1971,7 +1973,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1982,7 +1984,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_RTIE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_RTIE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_RTIE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca89cb48657c102e45474107af0772ba14"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_RTI</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_RTIE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point round to integral.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.roundToIntegral</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.roundToIntegral</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1992,7 +1994,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2003,7 +2005,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind7FP_SQRTE">
 <span id="_CPPv3N8bitwuzla4Kind7FP_SQRTE"></span><span id="_CPPv2N8bitwuzla4Kind7FP_SQRTE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cabfacfd21b1c4d95d36c264d2e99046da"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_SQRT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind7FP_SQRTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point square root.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.sqrt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.sqrt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -2013,7 +2015,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2024,7 +2026,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla4Kind6FP_SUBE">
 <span id="_CPPv3N8bitwuzla4Kind6FP_SUBE"></span><span id="_CPPv2N8bitwuzla4Kind6FP_SUBE"></span><span class="target" id="namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cabe948a40c1abf92568e9bb8516f26818"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FP_SUB</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla4Kind6FP_SUBE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point subtraction.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.sub</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.sub</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -2034,7 +2036,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2056,7 +2058,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2078,7 +2080,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2100,7 +2102,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2122,7 +2124,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2144,7 +2146,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2166,7 +2168,7 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__cpp__term__creation_1ga86c3e3625eb88816202d24c874c2f737"><span class="std std-ref"><span class="pre">bitwuzla::mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2181,13 +2183,13 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <span id="_CPPv3N8bitwuzlalsERNSt7ostreamE4Kind"></span><span id="_CPPv2N8bitwuzlalsERNSt7ostreamE4Kind"></span><span id="bitwuzla::lshift-operator__osR.Kind"></span><span class="target" id="namespacebitwuzla_1aead3243a3ce97843875c90bed0265952"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span>, <a class="reference internal" href="#_CPPv4N8bitwuzla4KindE" title="bitwuzla::Kind"><span class="n"><span class="pre">Kind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzlalsERNSt7ostreamE4Kind" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Print kind to output stream. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>out</strong> – The output stream. </p></li>
 <li><p><strong>kind</strong> – The kind. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The output stream. </p>
 </dd>
 </dl>
@@ -2201,17 +2203,17 @@ given <cite>ostream</cite> via <a class="reference internal" href="#_CPPv4N8bitw
 <span id="_CPPv3NSt9to_stringEN8bitwuzla4KindE"></span><span id="_CPPv2NSt9to_stringEN8bitwuzla4KindE"></span><span id="std::to_string__bitwuzla::Kind"></span><span class="target" id="namespacestd_1a7c6a296e55c707490a5a47eb2ea729c2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">to_string</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla4KindE" title="bitwuzla::Kind"><span class="n"><span class="pre">Kind</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">kind</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NSt9to_stringEN8bitwuzla4KindE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get string representation of given kind. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>kind</strong> – The kind. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The string representation. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
-</div>
+</section>
 
 
            </div>

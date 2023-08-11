@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BitwuzlaTerm &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -33,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -75,8 +77,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="bitwuzlaterm">
-<h1>BitwuzlaTerm<a class="headerlink" href="#bitwuzlaterm" title="Permalink to this headline"></a></h1>
+  <section id="bitwuzlaterm">
+<h1>BitwuzlaTerm<a class="headerlink" href="#bitwuzlaterm" title="Permalink to this heading"></a></h1>
 <p>Terms of a given <a class="reference internal" href="../enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">BitwuzlaKind</span></code></a> are created via
 <a class="reference internal" href="../term_creation.html#_CPPv416bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm" title="bitwuzla_mk_term"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term()</span></code></a> (and related <cite>bitwuzla_mk_term*()</cite> functions
 provided for convenience). a comprehensive documentation of supported
@@ -155,10 +157,10 @@ instances.</p>
 <span id="_CPPv318bitwuzla_term_hash12BitwuzlaTerm"></span><span id="_CPPv218bitwuzla_term_hash12BitwuzlaTerm"></span><span id="bitwuzla_term_hash__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gab61f1c9a4e2f27dec964c29dbcda6d22"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_hash</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418bitwuzla_term_hash12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Compute the hash value for a term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The hash value of the term. </p>
 </dd>
 </dl>
@@ -170,14 +172,14 @@ instances.</p>
 <dd><p>Get the kind of a term.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="../enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref">BitwuzlaKind</span></a> </p>
+<p><a class="reference internal" href="../enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref">BitwuzlaKind</span></a></p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The kind of the given term.</p>
 </dd>
 </dl>
@@ -189,13 +191,13 @@ instances.</p>
 <dd><p>Get the child terms of a term.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if given term does not have children.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>term</strong> – The term. </p></li>
 <li><p><strong>size</strong> – Output parameter, stores the number of children of <code class="docutils literal notranslate"><span class="pre">term</span></code>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The children of <code class="docutils literal notranslate"><span class="pre">term</span></code> as an array of terms. </p>
 </dd>
 </dl>
@@ -207,13 +209,13 @@ instances.</p>
 <dd><p>Get the indices of an indexed term.</p>
 <p>Requires that given term is an indexed term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>term</strong> – The term. </p></li>
 <li><p><strong>size</strong> – Output parameter, stores the number of indices of <code class="docutils literal notranslate"><span class="pre">term</span></code>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The indices of <code class="docutils literal notranslate"><span class="pre">term</span></code> as an array of indices. </p>
 </dd>
 </dl>
@@ -224,10 +226,10 @@ instances.</p>
 <span id="_CPPv324bitwuzla_term_is_indexed12BitwuzlaTerm"></span><span id="_CPPv224bitwuzla_term_is_indexed12BitwuzlaTerm"></span><span id="bitwuzla_term_is_indexed__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga4833ef04df4355257a7295522f5905da"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_indexed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424bitwuzla_term_is_indexed12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is an indexed term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is an indexed term. </p>
 </dd>
 </dl>
@@ -238,10 +240,10 @@ instances.</p>
 <span id="_CPPv322bitwuzla_term_get_sort12BitwuzlaTerm"></span><span id="_CPPv222bitwuzla_term_get_sort12BitwuzlaTerm"></span><span id="bitwuzla_term_get_sort__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga78d7733d49ec4134be75e26704303275"></span><a class="reference internal" href="bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_get_sort</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_term_get_sort12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the sort of a term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The sort of the term. </p>
 </dd>
 </dl>
@@ -253,10 +255,10 @@ instances.</p>
 <dd><p>Get the index sort of an array term.</p>
 <p>Requires that given term is an array or an array store term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The index sort of the array term. </p>
 </dd>
 </dl>
@@ -268,10 +270,10 @@ instances.</p>
 <dd><p>Get the element sort of an array term.</p>
 <p>Requires that given term is an array or an array store term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The element sort of the array term. </p>
 </dd>
 </dl>
@@ -283,13 +285,13 @@ instances.</p>
 <dd><p>Get the domain sorts of a function term.</p>
 <p>The domain sorts are returned as an array of sorts of size `size. Requires that given term is an uninterpreted function, a lambda term, an array store term, or an ite term over function terms.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>term</strong> – The term. </p></li>
 <li><p><strong>size</strong> – The size of the returned array. Optional, NULL is allowed.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The domain sorts of the function term. </p>
 </dd>
 </dl>
@@ -301,10 +303,10 @@ instances.</p>
 <dd><p>Get the codomain sort of a function term.</p>
 <p>Requires that given term is an uninterpreted function, a lambda term, an array store term, or an ite term over function terms.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The codomain sort of the function term. </p>
 </dd>
 </dl>
@@ -316,10 +318,10 @@ instances.</p>
 <dd><p>Get the bit-width of a bit-vector term.</p>
 <p>Requires that given term is a bit-vector term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The bit-width of the bit-vector term. </p>
 </dd>
 </dl>
@@ -331,10 +333,10 @@ instances.</p>
 <dd><p>Get the bit-width of the exponent of a floating-point term.</p>
 <p>Requires that given term is a floating-point term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The bit-width of the exponent of the floating-point term. </p>
 </dd>
 </dl>
@@ -346,10 +348,10 @@ instances.</p>
 <dd><p>Get the bit-width of the significand of a floating-point term.</p>
 <p>Requires that given term is a floating-point term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The bit-width of the significand of the floating-point term. </p>
 </dd>
 </dl>
@@ -361,10 +363,10 @@ instances.</p>
 <dd><p>Get the arity of a function term.</p>
 <p>Requires that given term is a function term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The arity of the function term. </p>
 </dd>
 </dl>
@@ -375,10 +377,10 @@ instances.</p>
 <span id="_CPPv324bitwuzla_term_get_symbol12BitwuzlaTerm"></span><span id="_CPPv224bitwuzla_term_get_symbol12BitwuzlaTerm"></span><span id="bitwuzla_term_get_symbol__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gad4343e156e526e366a1c28c90c6f2270"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_get_symbol</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424bitwuzla_term_get_symbol12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the symbol of a term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The symbol of <code class="docutils literal notranslate"><span class="pre">term</span></code>. <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if no symbol is defined. </p>
 </dd>
 </dl>
@@ -389,13 +391,13 @@ instances.</p>
 <span id="_CPPv327bitwuzla_term_is_equal_sort12BitwuzlaTerm12BitwuzlaTerm"></span><span id="_CPPv227bitwuzla_term_is_equal_sort12BitwuzlaTerm12BitwuzlaTerm"></span><span id="bitwuzla_term_is_equal_sort__BitwuzlaTerm.BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gacacafcb92b8d267c93691df53a036759"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_equal_sort</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term0</span></span>, <a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427bitwuzla_term_is_equal_sort12BitwuzlaTerm12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if the sorts of two terms are equal.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>term0</strong> – The first term. </p></li>
 <li><p><strong>term1</strong> – The second term.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if the sorts of <code class="docutils literal notranslate"><span class="pre">term0</span></code> and <code class="docutils literal notranslate"><span class="pre">term1</span></code> are equal. </p>
 </dd>
 </dl>
@@ -406,10 +408,10 @@ instances.</p>
 <span id="_CPPv322bitwuzla_term_is_array12BitwuzlaTerm"></span><span id="_CPPv222bitwuzla_term_is_array12BitwuzlaTerm"></span><span id="bitwuzla_term_is_array__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga9f1e378f65a01e952266fa3f4329edfb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_array</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_term_is_array12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is an array term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is an array term. </p>
 </dd>
 </dl>
@@ -420,10 +422,10 @@ instances.</p>
 <span id="_CPPv322bitwuzla_term_is_const12BitwuzlaTerm"></span><span id="_CPPv222bitwuzla_term_is_const12BitwuzlaTerm"></span><span id="bitwuzla_term_is_const__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga340e84297905fea70861c42781cd5937"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_const</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_term_is_const12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a constant.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a constant. </p>
 </dd>
 </dl>
@@ -434,10 +436,10 @@ instances.</p>
 <span id="_CPPv320bitwuzla_term_is_fun12BitwuzlaTerm"></span><span id="_CPPv220bitwuzla_term_is_fun12BitwuzlaTerm"></span><span id="bitwuzla_term_is_fun__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gacfbbebc377fc344eb21d06a2236c8575"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_fun</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420bitwuzla_term_is_fun12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a function.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a function. </p>
 </dd>
 </dl>
@@ -448,10 +450,10 @@ instances.</p>
 <span id="_CPPv320bitwuzla_term_is_var12BitwuzlaTerm"></span><span id="_CPPv220bitwuzla_term_is_var12BitwuzlaTerm"></span><span id="bitwuzla_term_is_var__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga4ec5da3adbe1fb6b2141bbf45e2713b6"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_var</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420bitwuzla_term_is_var12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a variable. </p>
 </dd>
 </dl>
@@ -462,10 +464,10 @@ instances.</p>
 <span id="_CPPv322bitwuzla_term_is_value12BitwuzlaTerm"></span><span id="_CPPv222bitwuzla_term_is_value12BitwuzlaTerm"></span><span id="bitwuzla_term_is_value__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga939a56d13f0c03f10c27347a71b04842"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_value</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_term_is_value12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a value. </p>
 </dd>
 </dl>
@@ -476,10 +478,10 @@ instances.</p>
 <span id="_CPPv325bitwuzla_term_is_bv_value12BitwuzlaTerm"></span><span id="_CPPv225bitwuzla_term_is_bv_value12BitwuzlaTerm"></span><span id="bitwuzla_term_is_bv_value__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga14de5f5c450cf229c031a55f71e697ff"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_bv_value</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425bitwuzla_term_is_bv_value12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a bit-vector value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a bit-vector value. </p>
 </dd>
 </dl>
@@ -490,10 +492,10 @@ instances.</p>
 <span id="_CPPv325bitwuzla_term_is_fp_value12BitwuzlaTerm"></span><span id="_CPPv225bitwuzla_term_is_fp_value12BitwuzlaTerm"></span><span id="bitwuzla_term_is_fp_value__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga4e18f841753e6dbcb362670eb9e42d44"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_fp_value</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425bitwuzla_term_is_fp_value12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a floating-point value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a floating-point value. </p>
 </dd>
 </dl>
@@ -504,10 +506,10 @@ instances.</p>
 <span id="_CPPv325bitwuzla_term_is_rm_value12BitwuzlaTerm"></span><span id="_CPPv225bitwuzla_term_is_rm_value12BitwuzlaTerm"></span><span id="bitwuzla_term_is_rm_value__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga88a7d6bf6ce86452dfac4d3c1608ceae"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_rm_value</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425bitwuzla_term_is_rm_value12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a rounding mode value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a rounding mode value. </p>
 </dd>
 </dl>
@@ -518,10 +520,10 @@ instances.</p>
 <span id="_CPPv321bitwuzla_term_is_bool12BitwuzlaTerm"></span><span id="_CPPv221bitwuzla_term_is_bool12BitwuzlaTerm"></span><span id="bitwuzla_term_is_bool__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gab951c96cf7c8de78d290b9641a85fbf0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_bool</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_term_is_bool12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a Boolean term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a Boolean term. </p>
 </dd>
 </dl>
@@ -532,10 +534,10 @@ instances.</p>
 <span id="_CPPv319bitwuzla_term_is_bv12BitwuzlaTerm"></span><span id="_CPPv219bitwuzla_term_is_bv12BitwuzlaTerm"></span><span id="bitwuzla_term_is_bv__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gab0a016bbaf3df6b5cd7f86b75462702d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_bv</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_term_is_bv12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a bit-vector term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a bit-vector term. </p>
 </dd>
 </dl>
@@ -546,10 +548,10 @@ instances.</p>
 <span id="_CPPv319bitwuzla_term_is_fp12BitwuzlaTerm"></span><span id="_CPPv219bitwuzla_term_is_fp12BitwuzlaTerm"></span><span id="bitwuzla_term_is_fp__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gaa4b342abd33b3ca5c41562282309af03"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_fp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_term_is_fp12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a floating-point term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a floating-point term. </p>
 </dd>
 </dl>
@@ -560,10 +562,10 @@ instances.</p>
 <span id="_CPPv319bitwuzla_term_is_rm12BitwuzlaTerm"></span><span id="_CPPv219bitwuzla_term_is_rm12BitwuzlaTerm"></span><span id="bitwuzla_term_is_rm__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gae75357462b4b26a8b94c97cd04512b2e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_rm</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_term_is_rm12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a rounding mode term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a rounding mode term. </p>
 </dd>
 </dl>
@@ -574,10 +576,10 @@ instances.</p>
 <span id="_CPPv330bitwuzla_term_is_uninterpreted12BitwuzlaTerm"></span><span id="_CPPv230bitwuzla_term_is_uninterpreted12BitwuzlaTerm"></span><span id="bitwuzla_term_is_uninterpreted__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gad157215b947eeaa42f2817cebe685185"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_uninterpreted</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430bitwuzla_term_is_uninterpreted12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a term of uninterpreted sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a term of uninterpreted sort. </p>
 </dd>
 </dl>
@@ -588,10 +590,10 @@ instances.</p>
 <span id="_CPPv321bitwuzla_term_is_true12BitwuzlaTerm"></span><span id="_CPPv221bitwuzla_term_is_true12BitwuzlaTerm"></span><span id="bitwuzla_term_is_true__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga42be1121f209572968bead0a74a60477"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_true</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_term_is_true12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is Boolean value true.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a Boolean value true. </p>
 </dd>
 </dl>
@@ -602,10 +604,10 @@ instances.</p>
 <span id="_CPPv322bitwuzla_term_is_false12BitwuzlaTerm"></span><span id="_CPPv222bitwuzla_term_is_false12BitwuzlaTerm"></span><span id="bitwuzla_term_is_false__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gad2e371db2d700c9da236ff1463461459"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_false</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_term_is_false12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is Boolean value false.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>false if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a Boolean value false. </p>
 </dd>
 </dl>
@@ -616,10 +618,10 @@ instances.</p>
 <span id="_CPPv330bitwuzla_term_is_bv_value_zero12BitwuzlaTerm"></span><span id="_CPPv230bitwuzla_term_is_bv_value_zero12BitwuzlaTerm"></span><span id="bitwuzla_term_is_bv_value_zero__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gadc9fe31254a283614f004399fc8c6725"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_bv_value_zero</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430bitwuzla_term_is_bv_value_zero12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a bit-vector value representing zero.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a bit-vector zero value. </p>
 </dd>
 </dl>
@@ -630,10 +632,10 @@ instances.</p>
 <span id="_CPPv329bitwuzla_term_is_bv_value_one12BitwuzlaTerm"></span><span id="_CPPv229bitwuzla_term_is_bv_value_one12BitwuzlaTerm"></span><span id="bitwuzla_term_is_bv_value_one__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gace12c03afef849b9ca83a49a13c260e5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_bv_value_one</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429bitwuzla_term_is_bv_value_one12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a bit-vector value representing one.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a bit-vector one value. </p>
 </dd>
 </dl>
@@ -644,10 +646,10 @@ instances.</p>
 <span id="_CPPv330bitwuzla_term_is_bv_value_ones12BitwuzlaTerm"></span><span id="_CPPv230bitwuzla_term_is_bv_value_ones12BitwuzlaTerm"></span><span id="bitwuzla_term_is_bv_value_ones__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gacb238425795b3b8ce7bf856886f622b1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_bv_value_ones</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430bitwuzla_term_is_bv_value_ones12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a bit-vector value with all bits set to one.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a bit-vector value with all bits set to one. </p>
 </dd>
 </dl>
@@ -658,10 +660,10 @@ instances.</p>
 <span id="_CPPv336bitwuzla_term_is_bv_value_min_signed12BitwuzlaTerm"></span><span id="_CPPv236bitwuzla_term_is_bv_value_min_signed12BitwuzlaTerm"></span><span id="bitwuzla_term_is_bv_value_min_signed__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gad6e95a9f6dc656d59e21e4aeb7d39db1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_bv_value_min_signed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv436bitwuzla_term_is_bv_value_min_signed12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a bit-vector minimum signed value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a bit-vector value with the most significant bit set to 1 and all other bits set to 0. </p>
 </dd>
 </dl>
@@ -672,10 +674,10 @@ instances.</p>
 <span id="_CPPv336bitwuzla_term_is_bv_value_max_signed12BitwuzlaTerm"></span><span id="_CPPv236bitwuzla_term_is_bv_value_max_signed12BitwuzlaTerm"></span><span id="bitwuzla_term_is_bv_value_max_signed__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga1a20f9c395fa0e62f1ae73f8cf97a06e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_bv_value_max_signed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv436bitwuzla_term_is_bv_value_max_signed12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a bit-vector maximum signed value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a bit-vector value with the most significant bit set to 0 and all other bits set to 1. </p>
 </dd>
 </dl>
@@ -686,10 +688,10 @@ instances.</p>
 <span id="_CPPv334bitwuzla_term_is_fp_value_pos_zero12BitwuzlaTerm"></span><span id="_CPPv234bitwuzla_term_is_fp_value_pos_zero12BitwuzlaTerm"></span><span id="bitwuzla_term_is_fp_value_pos_zero__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga3ecc6ad220c9cbfbde228e43cae03c05"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_fp_value_pos_zero</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434bitwuzla_term_is_fp_value_pos_zero12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a floating-point positive zero (+zero) value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a floating-point +zero value. </p>
 </dd>
 </dl>
@@ -700,10 +702,10 @@ instances.</p>
 <span id="_CPPv334bitwuzla_term_is_fp_value_neg_zero12BitwuzlaTerm"></span><span id="_CPPv234bitwuzla_term_is_fp_value_neg_zero12BitwuzlaTerm"></span><span id="bitwuzla_term_is_fp_value_neg_zero__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga3c6b7642e844ee2483a99bb50a1fcf5c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_fp_value_neg_zero</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434bitwuzla_term_is_fp_value_neg_zero12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a floating-point value negative zero (-zero).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a floating-point value negative zero. </p>
 </dd>
 </dl>
@@ -714,10 +716,10 @@ instances.</p>
 <span id="_CPPv333bitwuzla_term_is_fp_value_pos_inf12BitwuzlaTerm"></span><span id="_CPPv233bitwuzla_term_is_fp_value_pos_inf12BitwuzlaTerm"></span><span id="bitwuzla_term_is_fp_value_pos_inf__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga8297d9cc289fb7d79be43c02fa7abe60"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_fp_value_pos_inf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433bitwuzla_term_is_fp_value_pos_inf12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a floating-point positive infinity (+oo) value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a floating-point +oo value. </p>
 </dd>
 </dl>
@@ -728,10 +730,10 @@ instances.</p>
 <span id="_CPPv333bitwuzla_term_is_fp_value_neg_inf12BitwuzlaTerm"></span><span id="_CPPv233bitwuzla_term_is_fp_value_neg_inf12BitwuzlaTerm"></span><span id="bitwuzla_term_is_fp_value_neg_inf__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga81780cfa1b0fbd2c2b2cc155aed98393"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_fp_value_neg_inf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433bitwuzla_term_is_fp_value_neg_inf12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a floating-point negative infinity (-oo) value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a floating-point -oo value. </p>
 </dd>
 </dl>
@@ -742,10 +744,10 @@ instances.</p>
 <span id="_CPPv329bitwuzla_term_is_fp_value_nan12BitwuzlaTerm"></span><span id="_CPPv229bitwuzla_term_is_fp_value_nan12BitwuzlaTerm"></span><span id="bitwuzla_term_is_fp_value_nan__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gac39fe5279fac847b2efb0993cd733c85"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_fp_value_nan</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429bitwuzla_term_is_fp_value_nan12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a floating-point NaN value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a floating-point NaN value. </p>
 </dd>
 </dl>
@@ -756,10 +758,10 @@ instances.</p>
 <span id="_CPPv329bitwuzla_term_is_rm_value_rna12BitwuzlaTerm"></span><span id="_CPPv229bitwuzla_term_is_rm_value_rna12BitwuzlaTerm"></span><span id="bitwuzla_term_is_rm_value_rna__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga1e69b5a3ad0202c4b47556b176e90bab"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_rm_value_rna</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429bitwuzla_term_is_rm_value_rna12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a rounding mode RNA value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a roundindg mode RNA value. </p>
 </dd>
 </dl>
@@ -770,10 +772,10 @@ instances.</p>
 <span id="_CPPv329bitwuzla_term_is_rm_value_rne12BitwuzlaTerm"></span><span id="_CPPv229bitwuzla_term_is_rm_value_rne12BitwuzlaTerm"></span><span id="bitwuzla_term_is_rm_value_rne__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga3a1e94d761563347307003f24388d8ce"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_rm_value_rne</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429bitwuzla_term_is_rm_value_rne12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a rounding mode RNE value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a rounding mode RNE value. </p>
 </dd>
 </dl>
@@ -784,10 +786,10 @@ instances.</p>
 <span id="_CPPv329bitwuzla_term_is_rm_value_rtn12BitwuzlaTerm"></span><span id="_CPPv229bitwuzla_term_is_rm_value_rtn12BitwuzlaTerm"></span><span id="bitwuzla_term_is_rm_value_rtn__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga92d3e231c9c457797d2607639137960e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_rm_value_rtn</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429bitwuzla_term_is_rm_value_rtn12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a rounding mode RTN value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a rounding mode RTN value. </p>
 </dd>
 </dl>
@@ -798,10 +800,10 @@ instances.</p>
 <span id="_CPPv329bitwuzla_term_is_rm_value_rtp12BitwuzlaTerm"></span><span id="_CPPv229bitwuzla_term_is_rm_value_rtp12BitwuzlaTerm"></span><span id="bitwuzla_term_is_rm_value_rtp__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga90be42f9b3195a9ce88246dd1f365f26"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_rm_value_rtp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429bitwuzla_term_is_rm_value_rtp12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a rounding mode RTP value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a rounding mode RTP value. </p>
 </dd>
 </dl>
@@ -812,10 +814,10 @@ instances.</p>
 <span id="_CPPv329bitwuzla_term_is_rm_value_rtz12BitwuzlaTerm"></span><span id="_CPPv229bitwuzla_term_is_rm_value_rtz12BitwuzlaTerm"></span><span id="bitwuzla_term_is_rm_value_rtz__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gaadd12467f48db5ab96d1b18f2df3457f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_is_rm_value_rtz</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429bitwuzla_term_is_rm_value_rtz12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a term is a rounding mode RTZ value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">term</span></code> is a rounding mode RTZ value. </p>
 </dd>
 </dl>
@@ -826,10 +828,10 @@ instances.</p>
 <span id="_CPPv328bitwuzla_term_value_get_bool12BitwuzlaTerm"></span><span id="_CPPv228bitwuzla_term_value_get_bool12BitwuzlaTerm"></span><span id="bitwuzla_term_value_get_bool__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga62ff89de320dfd2646f63e6babd1c45b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_value_get_bool</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428bitwuzla_term_value_get_bool12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get Boolean representation of given Boolean value term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The Boolean value term. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Boolean representation of value term. </p>
 </dd>
 </dl>
@@ -849,13 +851,13 @@ instances.</p>
 <p>Return value is valid until next <code class="docutils literal notranslate"><span class="pre">bitwuzla_term_value_get_bv</span></code> call. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>term</strong> – The value term. </p></li>
 <li><p><strong>base</strong> – The base in which the output strings are given; 2 for binary, 10 for decimal, and 16 for hexadecimal.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>String representation of the value term.</p>
 </dd>
 </dl>
@@ -870,7 +872,7 @@ instances.</p>
 <p>Return values sign, exponent and significand are valid until next <code class="docutils literal notranslate"><span class="pre">bitwuzla_term_value_get_fp_ieee</span></code> call. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>term</strong> – The floating-point value term. </p></li>
 <li><p><strong>sign</strong> – Output parameter. String representation of the sign bit. </p></li>
@@ -887,10 +889,10 @@ instances.</p>
 <span id="_CPPv326bitwuzla_term_value_get_rm12BitwuzlaTerm"></span><span id="_CPPv226bitwuzla_term_value_get_rm12BitwuzlaTerm"></span><span id="bitwuzla_term_value_get_rm__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga4ad8a8bd87b9922b6561ac02f1184fc0"></span><a class="reference internal" href="../enums/bitwuzlaroundingmode.html#_CPPv420BitwuzlaRoundingMode" title="BitwuzlaRoundingMode"><span class="n"><span class="pre">BitwuzlaRoundingMode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_value_get_rm</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_term_value_get_rm12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get representation of given rounding mode value term. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The rounding mode value term. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The BitwuzlaRoundingMode representation of the given rounding mode value. </p>
 </dd>
 </dl>
@@ -905,7 +907,7 @@ instances.</p>
 <p>The returned char* pointer is only valid until the next <code class="docutils literal notranslate"><span class="pre">bitwuzla_term_to_string</span></code> call. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A string representation of the given term. </p>
 </dd>
 </dl>
@@ -916,7 +918,7 @@ instances.</p>
 <span id="_CPPv319bitwuzla_term_print12BitwuzlaTermP4FILE"></span><span id="_CPPv219bitwuzla_term_print12BitwuzlaTermP4FILE"></span><span id="bitwuzla_term_print__BitwuzlaTerm.FILEP"></span><span class="target" id="group__c__bitwuzlaterm_1gab88474ca5324cb6f1409f97ad0ff70c8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_print</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span>, <span class="n"><span class="pre">FILE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_term_print12BitwuzlaTermP4FILE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Print term in SMT-LIB v2 format. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>term</strong> – The term. </p></li>
 <li><p><strong>file</strong> – The file to print the term to. </p></li>
@@ -925,7 +927,7 @@ instances.</p>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

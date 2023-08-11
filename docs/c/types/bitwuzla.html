@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitwuzla &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -33,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -75,8 +77,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="bitwuzla">
-<h1>Bitwuzla<a class="headerlink" href="#bitwuzla" title="Permalink to this headline"></a></h1>
+  <section id="bitwuzla">
+<h1>Bitwuzla<a class="headerlink" href="#bitwuzla" title="Permalink to this heading"></a></h1>
 <p>A <a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
 options <a class="reference internal" href="bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance. This options instance must be
 configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
@@ -143,16 +145,16 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gab6ade680629434fe7dc817d61e03f98c"><span class="std std-ref"><span class="pre">bitwuzla_delete</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gab6ade680629434fe7dc817d61e03f98c"><span class="std std-ref"><span class="pre">bitwuzla_delete</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>options</strong> – The associated options (optional). </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A pointer to the created Bitwuzla instance.</p>
 </dd>
 </dl>
@@ -166,13 +168,13 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gab0208cac6b875988472798fcc891c691"><span class="std std-ref"><span class="pre">bitwuzla_new</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gab0208cac6b875988472798fcc891c691"><span class="std std-ref"><span class="pre">bitwuzla_new</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>bitwuzla</strong> – The Bitwuzla instance to delete.</p>
 </dd>
 </dl>
@@ -187,13 +189,13 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla_terminate</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga02a938405a46c7a6b4dd6ab22dc7659f"><span class="std std-ref"><span class="pre">bitwuzla_get_termination_callback_state</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga02a938405a46c7a6b4dd6ab22dc7659f"><span class="std std-ref"><span class="pre">bitwuzla_get_termination_callback_state</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>fun</strong> – The callback function, returns a value != 0 if <code class="docutils literal notranslate"><span class="pre">bitwuzla</span></code> should be terminated. </p></li>
@@ -212,16 +214,16 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla_terminate</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gae849b4da4cf424b7f23f53f5455fe8ce"><span class="std std-ref"><span class="pre">bitwuzla_set_termination_callback</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gae849b4da4cf424b7f23f53f5455fe8ce"><span class="std std-ref"><span class="pre">bitwuzla_set_termination_callback</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>bitwuzla</strong> – The Bitwuzla instance.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The object passed as argument <code class="docutils literal notranslate"><span class="pre">state</span></code> to the callback function.</p>
 </dd>
 </dl>
@@ -236,7 +238,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p>If the abort callback function throws a C++ exception, this must be thrown via std::rethrow_if_nested.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>fun</strong> – The callback function. Argument <code class="docutils literal notranslate"><span class="pre">msg</span></code> explains the reason for the abort. </p>
 </dd>
 </dl>
@@ -249,13 +251,13 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>nlevels</strong> – The number of context levels to push.</p></li>
@@ -271,13 +273,13 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>nlevels</strong> – The number of context levels to pop.</p></li>
@@ -291,7 +293,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <span id="_CPPv315bitwuzla_assertP8Bitwuzla12BitwuzlaTerm"></span><span id="_CPPv215bitwuzla_assertP8Bitwuzla12BitwuzlaTerm"></span><span id="bitwuzla_assert__BitwuzlaP.BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_assert</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415bitwuzla_assertP8Bitwuzla12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Assert formula.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>term</strong> – The formula to assert. </p></li>
@@ -305,10 +307,10 @@ opportunity if the callback function returns a value <code class="code docutils 
 <span id="_CPPv323bitwuzla_get_assertionsP8BitwuzlaP6size_t"></span><span id="_CPPv223bitwuzla_get_assertionsP8BitwuzlaP6size_t"></span><span id="bitwuzla_get_assertions__BitwuzlaP.sP"></span><span class="target" id="group__c__bitwuzla_1ga42acd0a49fd3d85ed882a34a8733b01b"></span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_assertions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_get_assertionsP8BitwuzlaP6size_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the set of currently asserted formulas. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The asserted formulas. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An array with the set of asserted formulas of size <code class="docutils literal notranslate"><span class="pre">size</span></code>. Only valid until the next <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_assertions</span></code> call. </p>
 </dd>
 </dl>
@@ -324,19 +326,19 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>term</strong> – The assumption to check for.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if given assumption is an unsat assumption.</p>
 </dd>
 </dl>
@@ -352,19 +354,19 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>size</strong> – Output parameter, stores the size of the returned array.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An array with unsat assumptions of size <code class="docutils literal notranslate"><span class="pre">size</span></code>. Only valid until the next <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_unsat_assumptions</span></code> call.</p>
 </dd>
 </dl>
@@ -380,19 +382,19 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>size</strong> – Output parameter, stores the size of the returned array.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An array with unsat assertions of size <code class="docutils literal notranslate"><span class="pre">size</span></code>. Only valid until the next <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_unsat_core</span></code> call.</p>
 </dd>
 </dl>
@@ -405,7 +407,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -415,7 +417,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p>Each call to <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> and <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga753f826b5468f6ccbeb3f2a3aebd371e"><span class="std std-ref"><span class="pre">bitwuzla_check_sat_assuming()</span></span></a></code> simplifies the input formula as a preprocessing step. It is not necessary to call this function explicitly in the general case.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>bitwuzla</strong> – The Bitwuzla instance.</p>
 </dd>
 </dl>
@@ -431,7 +433,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbe"><span class="std std-ref"><span class="pre">BitwuzlaResult</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbe"><span class="std std-ref"><span class="pre">BitwuzlaResult</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -441,10 +443,10 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p>Assertions and assumptions are combined via Boolean and.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>bitwuzla</strong> – The Bitwuzla instance.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbead34a61d3488e1095ab798f3d1a5540ba"><span class="std std-ref"><span class="pre">BITWUZLA_SAT</span></span></a></code> if the input formula is satisfiable and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae3a04c185b6d00a30c1b08b8d8b17abf"><span class="std std-ref"><span class="pre">BITWUZLA_UNSAT</span></span></a></code> if it is unsatisfiable, and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae7db846c2213a0bb55ac7871b31803ff"><span class="std std-ref"><span class="pre">BITWUZLA_UNKNOWN</span></span></a></code> when neither satisfiability nor unsatisfiability was determined. This can happen when <code class="docutils literal notranslate"><span class="pre">bitwuzla</span></code> was terminated via a termination callback.</p>
 </dd>
 </dl>
@@ -460,7 +462,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbe"><span class="std std-ref"><span class="pre">BitwuzlaResult</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbe"><span class="std std-ref"><span class="pre">BitwuzlaResult</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -470,14 +472,14 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p>Assertions and assumptions are combined via Boolean and.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>argc</strong> – The number of assumptions in <code class="docutils literal notranslate"><span class="pre">args</span></code>. </p></li>
 <li><p><strong>args</strong> – The assumptions.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbead34a61d3488e1095ab798f3d1a5540ba"><span class="std std-ref"><span class="pre">BITWUZLA_SAT</span></span></a></code> if the input formula is satisfiable and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae3a04c185b6d00a30c1b08b8d8b17abf"><span class="std std-ref"><span class="pre">BITWUZLA_UNSAT</span></span></a></code> if it is unsatisfiable, and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae7db846c2213a0bb55ac7871b31803ff"><span class="std std-ref"><span class="pre">BITWUZLA_UNKNOWN</span></span></a></code> when neither satisfiability nor unsatisfiability was determined. This can happen when <code class="docutils literal notranslate"><span class="pre">bitwuzla</span></code> was terminated via a termination callback.</p>
 </dd>
 </dl>
@@ -490,17 +492,17 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbead34a61d3488e1095ab798f3d1a5540ba"><span class="std std-ref"><span class="pre">BITWUZLA_SAT</span></span></a></code>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat</span></span></a></code> </p>
+<p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat</span></span></a></code></p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>term</strong> – The term to query a model value for.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the model value of term <code class="docutils literal notranslate"><span class="pre">term</span></code>.</p>
 </dd>
 </dl>
@@ -511,7 +513,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <span id="_CPPv322bitwuzla_print_formulaP8BitwuzlaPKcP4FILE"></span><span id="_CPPv222bitwuzla_print_formulaP8BitwuzlaPKcP4FILE"></span><span id="bitwuzla_print_formula__BitwuzlaP.cCP.FILEP"></span><span class="target" id="group__c__bitwuzla_1ga4655af630e087a0bd001a90dc4094819"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_print_formula</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">format</span></span>, <span class="n"><span class="pre">FILE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_print_formulaP8BitwuzlaPKcP4FILE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Print the current input formula.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>format</strong> – The output format for printing the formula. Currently, only <code class="docutils literal notranslate"><span class="pre">&quot;smt2&quot;</span></code> for the SMT-LIB v2 format is supported. </p></li>
@@ -531,7 +533,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p>Output parameters <code class="docutils literal notranslate"><span class="pre">keys</span></code> and <code class="docutils literal notranslate"><span class="pre">values</span></code> are only valid until the next call to <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga9f3132743854aef12cd983272d483e54"><span class="std std-ref"><span class="pre">bitwuzla_get_statistics()</span></span></a></code>. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>keys</strong> – The resulting set of statistic names. </p></li>
@@ -542,7 +544,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

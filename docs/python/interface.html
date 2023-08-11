@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Python Interface &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-        <script src="../static/jquery.js"></script>
-        <script src="../static/underscore.js"></script>
-        <script src="../static/doctools.js"></script>
+        <script src="../static/jquery.js?v=5d32c60e"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/doctools.js?v=888ff710"></script>
+        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -35,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -94,8 +96,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="python-interface">
-<h1>Python Interface<a class="headerlink" href="#python-interface" title="Permalink to this headline"></a></h1>
+  <section id="python-interface">
+<h1>Python Interface<a class="headerlink" href="#python-interface" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="#classes"><span class="std std-ref">Classes</span></a></p>
 <ul>
@@ -125,19 +127,19 @@
 </ul>
 </li>
 </ul>
-<div class="section" id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
-<div class="section" id="options">
-<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline"></a></h3>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
+<section id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Options">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Options</span></span><a class="headerlink" href="#bitwuzla.Options" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Options.description">
-<span class="sig-name descname"><span class="pre">description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">bitwuzla.Option</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#bitwuzla.Options.description" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">Option</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#bitwuzla.Options.description" title="Permalink to this definition"></a></dt>
 <dd><p>Get the description of this option.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The description of this option.</p>
 </dd>
 </dl>
@@ -145,13 +147,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Options.get">
-<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">bitwuzla.Option</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Options.get" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">Option</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Options.get" title="Permalink to this definition"></a></dt>
 <dd><p>Get the current value of the given option.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>option</strong> – The option.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The current value of the given option.</p>
 </dd>
 </dl>
@@ -159,10 +161,10 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Options.lng">
-<span class="sig-name descname"><span class="pre">lng</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">bitwuzla.Option</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#bitwuzla.Options.lng" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">lng</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">Option</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#bitwuzla.Options.lng" title="Permalink to this definition"></a></dt>
 <dd><p>Get the long name of this option.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The long name of this option.</p>
 </dd>
 </dl>
@@ -170,10 +172,10 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Options.modes">
-<span class="sig-name descname"><span class="pre">modes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">bitwuzla.Option</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#bitwuzla.Options.modes" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">modes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">Option</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#bitwuzla.Options.modes" title="Permalink to this definition"></a></dt>
 <dd><p>Get the modes of this option.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The modes of this option.</p>
 </dd>
 </dl>
@@ -181,10 +183,10 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Options.option">
-<span class="sig-name descname"><span class="pre">option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">bitwuzla.Option</span></a></span></span><a class="headerlink" href="#bitwuzla.Options.option" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">Option</span></a></span></span><a class="headerlink" href="#bitwuzla.Options.option" title="Permalink to this definition"></a></dt>
 <dd><p>Get the option associated to the given short or long option name.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The option associated to the given short or long option name.</p>
 </dd>
 </dl>
@@ -195,7 +197,7 @@
 <span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Options.set" title="Permalink to this definition"></a></dt>
 <dd><p>Set option.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>option</strong> – The option or the long or short name of an option.</p></li>
 <li><p><strong>value</strong> – The option value.</p></li>
@@ -222,7 +224,7 @@
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>args</strong> – List of command line options.</p>
 </dd>
 </dl>
@@ -230,10 +232,10 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Options.shrt">
-<span class="sig-name descname"><span class="pre">shrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">bitwuzla.Option</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#bitwuzla.Options.shrt" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">shrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Option" title="bitwuzla.Option"><span class="pre">Option</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#bitwuzla.Options.shrt" title="Permalink to this definition"></a></dt>
 <dd><p>Get the short name of this option.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The short name of this option.</p>
 </dd>
 </dl>
@@ -241,18 +243,18 @@
 
 </dd></dl>
 
-</div>
-<div class="section" id="bitwuzla">
-<h3>Bitwuzla<a class="headerlink" href="#bitwuzla" title="Permalink to this headline"></a></h3>
+</section>
+<section id="bitwuzla">
+<h3>Bitwuzla<a class="headerlink" href="#bitwuzla" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Bitwuzla">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Bitwuzla</span></span><a class="headerlink" href="#bitwuzla.Bitwuzla" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Bitwuzla.assert_formula">
-<span class="sig-name descname"><span class="pre">assert_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">formulas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Bitwuzla.assert_formula" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">assert_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">formulas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Bitwuzla.assert_formula" title="Permalink to this definition"></a></dt>
 <dd><p>Assert one or more formulas.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>formulas</strong> – One or more Boolean terms.</p>
 </dd>
 </dl>
@@ -260,14 +262,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Bitwuzla.check_sat">
-<span class="sig-name descname"><span class="pre">check_sat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">assumptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Result" title="bitwuzla.Result"><span class="pre">bitwuzla.Result</span></a></span></span><a class="headerlink" href="#bitwuzla.Bitwuzla.check_sat" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">check_sat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">assumptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Result" title="bitwuzla.Result"><span class="pre">Result</span></a></span></span><a class="headerlink" href="#bitwuzla.Bitwuzla.check_sat" title="Permalink to this definition"></a></dt>
 <dd><p>Check satisfiability of asserted formulas under possibly given
 assumptions.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>assumptions</strong> – Zero or more Boolean terms.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><a class="reference internal" href="#bitwuzla.Result.SAT" title="bitwuzla.Result.SAT"><code class="xref py py-class docutils literal notranslate"><span class="pre">SAT</span></code></a> if the input formula is
 satisfiable (under possibly given assumptions)</p></li>
@@ -312,7 +314,7 @@ __call__().</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – A callable Python object.</p>
 </dd>
 </dl>
@@ -333,7 +335,7 @@ __call__().</p>
 <p>Requires that the last <a class="reference internal" href="#bitwuzla.Bitwuzla.check_sat" title="bitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a> call
 returned <cite>~bitwuzla.Result.UNSAT</cite>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>List of unsatisfiable assumptions</p>
 </dd>
 </dl>
@@ -347,7 +349,7 @@ returned <cite>~bitwuzla.Result.UNSAT</cite>.</p>
 <p>Requires that the last <a class="reference internal" href="#bitwuzla.Bitwuzla.check_sat" title="bitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a> call
 returned <a class="reference internal" href="#bitwuzla.Result.UNSAT" title="bitwuzla.Result.UNSAT"><code class="xref py py-class docutils literal notranslate"><span class="pre">UNSAT</span></code></a>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list of unsatisfiable assertions</p>
 </dd>
 </dl>
@@ -355,12 +357,12 @@ returned <a class="reference internal" href="#bitwuzla.Result.UNSAT" title="bitw
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Bitwuzla.get_value">
-<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">term</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.Bitwuzla.get_value" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">term</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.Bitwuzla.get_value" title="Permalink to this definition"></a></dt>
 <dd><p>Get model value of term.</p>
 <p>Requires that the last <a class="reference internal" href="#bitwuzla.Bitwuzla.check_sat" title="bitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a> call
 returned <cite>~bitwuzla.Result.SAT</cite>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Term representing the model value of <cite>term</cite>.</p>
 </dd>
 </dl>
@@ -374,10 +376,10 @@ returned <cite>~bitwuzla.Result.SAT</cite>.</p>
 input formula to become unsatisfiable.</p>
 <p>See <a class="reference internal" href="#bitwuzla.Bitwuzla.check_sat" title="bitwuzla.Bitwuzla.check_sat"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_sat()</span></code></a>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – Boolean term.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if assumption is unsat, False otherwise.</p>
 </dd>
 </dl>
@@ -388,7 +390,7 @@ input formula to become unsatisfiable.</p>
 <span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlevels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Bitwuzla.pop" title="Permalink to this definition"></a></dt>
 <dd><p>Pop assertion levels.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>levels</strong> (<em>int</em>) – Number of assertion levels to pop.</p>
 </dd>
 </dl>
@@ -399,7 +401,7 @@ input formula to become unsatisfiable.</p>
 <span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlevels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Bitwuzla.push" title="Permalink to this definition"></a></dt>
 <dd><p>Push new assertion levels.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>levels</strong> (<em>int</em>) – Number of assertion levels to create.</p>
 </dd>
 </dl>
@@ -420,19 +422,19 @@ general case.</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="sort">
-<h3>Sort<a class="headerlink" href="#sort" title="Permalink to this headline"></a></h3>
+</section>
+<section id="sort">
+<h3>Sort<a class="headerlink" href="#sort" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Sort">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Sort</span></span><a class="headerlink" href="#bitwuzla.Sort" title="Permalink to this definition"></a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Sort.array_element">
-<span class="sig-name descname"><span class="pre">array_element</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.Sort.array_element" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">array_element</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.Sort.array_element" title="Permalink to this definition"></a></dt>
 <dd><p>Get the element sort of an array sort.</p>
 <p>Requires that given sort is an array sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The element sort of the array sort.</p>
 </dd>
 </dl>
@@ -440,11 +442,11 @@ general case.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Sort.array_index">
-<span class="sig-name descname"><span class="pre">array_index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.Sort.array_index" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">array_index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.Sort.array_index" title="Permalink to this definition"></a></dt>
 <dd><p>Get the index sort of an array sort.</p>
 <p>Requires that given sort is an array sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The index sort of the array sort.</p>
 </dd>
 </dl>
@@ -456,7 +458,7 @@ general case.</p>
 <dd><p>Get the size of a bit-vector sort.</p>
 <p>Requires that given sort is a bit-vector sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The size of the bit-vector sort.</p>
 </dd>
 </dl>
@@ -468,7 +470,7 @@ general case.</p>
 <dd><p>Get the exponent size of a floating-point sort.</p>
 <p>Requires that given sort is a floating-point sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The exponent size of the floating-point sort.</p>
 </dd>
 </dl>
@@ -480,7 +482,7 @@ general case.</p>
 <dd><p>Get the significand size of a floating-point sort.</p>
 <p>Requires that given sort is a floating-point sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The significand size of the floating-point sort.</p>
 </dd>
 </dl>
@@ -491,7 +493,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">fun_arity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#bitwuzla.Sort.fun_arity" title="Permalink to this definition"></a></dt>
 <dd><p>Get the arity of a function sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The number of arguments of the function sort.</p>
 </dd>
 </dl>
@@ -499,11 +501,11 @@ general case.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Sort.fun_codomain">
-<span class="sig-name descname"><span class="pre">fun_codomain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.Sort.fun_codomain" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fun_codomain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.Sort.fun_codomain" title="Permalink to this definition"></a></dt>
 <dd><p>Get the codomain sort of a function sort.</p>
 <p>Requires that given sort is a function sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The codomain sort of the function sort.</p>
 </dd>
 </dl>
@@ -515,7 +517,7 @@ general case.</p>
 <dd><p>Get the domain sorts of a function sort.</p>
 <p>Requires that given sort is a function sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The domain sorts of the function sort.</p>
 </dd>
 </dl>
@@ -526,7 +528,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#bitwuzla.Sort.id" title="Permalink to this definition"></a></dt>
 <dd><p>Get the id of this sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The sort id.</p>
 </dd>
 </dl>
@@ -537,7 +539,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">is_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Sort.is_array" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this sort is an array sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is an array sort.</p>
 </dd>
 </dl>
@@ -548,7 +550,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">is_bool</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Sort.is_bool" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this sort is a Boolean sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a Boolean sort.</p>
 </dd>
 </dl>
@@ -559,7 +561,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">is_bv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Sort.is_bv" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this sort is a bit-vector sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if <cite>sort</cite> is a bit-vector sort.</p>
 </dd>
 </dl>
@@ -570,7 +572,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">is_fp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Sort.is_fp" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this sort is a floating-point sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a floating-point sort.</p>
 </dd>
 </dl>
@@ -581,7 +583,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">is_fun</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Sort.is_fun" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this sort is a function sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a function sort.</p>
 </dd>
 </dl>
@@ -592,7 +594,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">is_null</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Sort.is_null" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this sort is a null sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a null sort.</p>
 </dd>
 </dl>
@@ -603,7 +605,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">is_rm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Sort.is_rm" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this sort is a Roundingmode sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a Roundingmode sort.</p>
 </dd>
 </dl>
@@ -614,7 +616,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">is_uninterpreted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Sort.is_uninterpreted" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this sort is an uninterpreted sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is an uninterpreted sort.</p>
 </dd>
 </dl>
@@ -625,7 +627,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">uninterpreted_symbol</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#bitwuzla.Sort.uninterpreted_symbol" title="Permalink to this definition"></a></dt>
 <dd><p>Get the symbol of an uninterpreted sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The symbol.</p>
 </dd>
 </dl>
@@ -633,9 +635,9 @@ general case.</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="term">
-<h3>Term<a class="headerlink" href="#term" title="Permalink to this headline"></a></h3>
+</section>
+<section id="term">
+<h3>Term<a class="headerlink" href="#term" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Term">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Term</span></span><a class="headerlink" href="#bitwuzla.Term" title="Permalink to this definition"></a></dt>
@@ -644,7 +646,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#bitwuzla.Term.children" title="Permalink to this definition"></a></dt>
 <dd><p>Get the child terms of this term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The children of this term as a vector of terms.</p>
 </dd>
 </dl>
@@ -655,7 +657,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#bitwuzla.Term.id" title="Permalink to this definition"></a></dt>
 <dd><p>Get the id of this term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The term id.</p>
 </dd>
 </dl>
@@ -667,7 +669,7 @@ general case.</p>
 <dd><p>Get the indices of an indexed term.</p>
 <p>Requires that given term is an indexed term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The indices of this term as a vector of indices.</p>
 </dd>
 </dl>
@@ -678,7 +680,7 @@ general case.</p>
 <span class="sig-name descname"><span class="pre">is_bv_value_max_signed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_bv_value_max_signed" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a bit-vector maximum signed value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a bit-vector value with the most
 significant bit set to 0 and all other bits set to 1.</p>
 </dd>
@@ -690,7 +692,7 @@ significant bit set to 0 and all other bits set to 1.</p>
 <span class="sig-name descname"><span class="pre">is_bv_value_min_signed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_bv_value_min_signed" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a bit-vector minimum signed value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a bit-vector value with the most
 significant bit set to 1 and all other bits set to 0.</p>
 </dd>
@@ -702,7 +704,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <span class="sig-name descname"><span class="pre">is_bv_value_one</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_bv_value_one" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a bit-vector value representing one.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a bit-vector one value.</p>
 </dd>
 </dl>
@@ -713,7 +715,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <span class="sig-name descname"><span class="pre">is_bv_value_ones</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_bv_value_ones" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a bit-vector value with all bits set to one.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a bit-vector value with all bits set to one.</p>
 </dd>
 </dl>
@@ -724,7 +726,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <span class="sig-name descname"><span class="pre">is_bv_value_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_bv_value_zero" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a bit-vector value representing zero.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a bit-vector zero value.</p>
 </dd>
 </dl>
@@ -735,7 +737,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <span class="sig-name descname"><span class="pre">is_const</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_const" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a constant.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a constant.</p>
 </dd>
 </dl>
@@ -746,7 +748,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <span class="sig-name descname"><span class="pre">is_false</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_false" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is Boolean value false.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is Boolean value false.</p>
 </dd>
 </dl>
@@ -757,7 +759,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <span class="sig-name descname"><span class="pre">is_fp_value_nan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_fp_value_nan" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a floating-point NaN value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a floating-point NaN value.</p>
 </dd>
 </dl>
@@ -769,7 +771,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <dd><p>Determine if this term is a floating-point negative infinity
 (<code class="docutils literal notranslate"><span class="pre">-oo</span></code>) value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a floating-point <code class="docutils literal notranslate"><span class="pre">-oo</span></code> value.</p>
 </dd>
 </dl>
@@ -781,7 +783,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <dd><p>Determine if this term is a floating-point value negative zero
 (<code class="docutils literal notranslate"><span class="pre">-zero</span></code>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a floating-point <code class="docutils literal notranslate"><span class="pre">-zero</span></code>.</p>
 </dd>
 </dl>
@@ -793,7 +795,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <dd><p>Determine if this term is a floating-point positive infinity
 (<code class="docutils literal notranslate"><span class="pre">+oo</span></code>) value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a floating-point <code class="docutils literal notranslate"><span class="pre">+oo</span></code> value.</p>
 </dd>
 </dl>
@@ -805,7 +807,7 @@ significant bit set to 1 and all other bits set to 0.</p>
 <dd><p>Determine if this term is a floating-point positive zero (<code class="docutils literal notranslate"><span class="pre">+zero</span></code>)
 value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a floating-point <code class="docutils literal notranslate"><span class="pre">+zero</span></code> value.</p>
 </dd>
 </dl>
@@ -816,7 +818,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">is_null</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_null" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a null term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a null term.</p>
 </dd>
 </dl>
@@ -827,7 +829,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">is_rm_value_rna</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_rm_value_rna" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a rounding mode <code class="docutils literal notranslate"><span class="pre">RNA</span></code> value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a roundindg mode <code class="docutils literal notranslate"><span class="pre">RNA</span></code> value.</p>
 </dd>
 </dl>
@@ -838,7 +840,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">is_rm_value_rne</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_rm_value_rne" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a rounding mode <code class="docutils literal notranslate"><span class="pre">RNE</span></code> value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a rounding mode <code class="docutils literal notranslate"><span class="pre">RNE</span></code> value.</p>
 </dd>
 </dl>
@@ -849,7 +851,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">is_rm_value_rtn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_rm_value_rtn" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a rounding mode <code class="docutils literal notranslate"><span class="pre">RTN</span></code> value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a rounding mode RTN value.</p>
 </dd>
 </dl>
@@ -860,7 +862,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">is_rm_value_rtp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_rm_value_rtp" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a rounding mode <code class="docutils literal notranslate"><span class="pre">RTP</span></code> value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a rounding mode <code class="docutils literal notranslate"><span class="pre">RTP</span></code> value.</p>
 </dd>
 </dl>
@@ -871,7 +873,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">is_rm_value_rtz</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_rm_value_rtz" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a rounding mode <code class="docutils literal notranslate"><span class="pre">RTZ</span></code> value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a rounding mode <code class="docutils literal notranslate"><span class="pre">RTZ</span></code> value.</p>
 </dd>
 </dl>
@@ -882,7 +884,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">is_true</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_true" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is Boolean value true.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is Boolean value true.</p>
 </dd>
 </dl>
@@ -893,7 +895,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">is_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_value" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a value.</p>
 </dd>
 </dl>
@@ -904,7 +906,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">is_variable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Term.is_variable" title="Permalink to this definition"></a></dt>
 <dd><p>Determine if this term is a variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this term is a variable.</p>
 </dd>
 </dl>
@@ -912,10 +914,10 @@ value.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Term.kind">
-<span class="sig-name descname"><span class="pre">kind</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Kind" title="bitwuzla.Kind"><span class="pre">bitwuzla.Kind</span></a></span></span><a class="headerlink" href="#bitwuzla.Term.kind" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">kind</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Kind" title="bitwuzla.Kind"><span class="pre">Kind</span></a></span></span><a class="headerlink" href="#bitwuzla.Term.kind" title="Permalink to this definition"></a></dt>
 <dd><p>Get the kind of this term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The kind.</p>
 </dd>
 </dl>
@@ -926,7 +928,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">num_children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#bitwuzla.Term.num_children" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of child terms of this term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The number of children of this term.</p>
 </dd>
 </dl>
@@ -937,7 +939,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">num_indices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#bitwuzla.Term.num_indices" title="Permalink to this definition"></a></dt>
 <dd><p>Get the number of indices of this term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The number of indices of this term.</p>
 </dd>
 </dl>
@@ -945,10 +947,10 @@ value.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Term.sort">
-<span class="sig-name descname"><span class="pre">sort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.Term.sort" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.Term.sort" title="Permalink to this definition"></a></dt>
 <dd><p>Get the sort of this term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The sort of the term.</p>
 </dd>
 </dl>
@@ -959,7 +961,7 @@ value.</p>
 <span class="sig-name descname"><span class="pre">symbol</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#bitwuzla.Term.symbol" title="Permalink to this definition"></a></dt>
 <dd><p>Get the symbol of this term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The symbol of this term. <cite>None</cite> if no symbol is defined.</p>
 </dd>
 </dl>
@@ -979,7 +981,7 @@ representation of a term). For example, this function returns
 <code class="docutils literal notranslate"><span class="pre">&quot;010&quot;</span></code> for a bit-vector value 2 of size 3, while str() returns
 <code class="docutils literal notranslate"><span class="pre">&quot;#b010&quot;</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Note</dt>
+<dt class="field-odd">Note<span class="colon">:</span></dt>
 <dd class="field-odd"><p>For floating-point values, the returned string is always the
 binary IEEE-754 representation of the value (parameter
 <code class="docutils literal notranslate"><span class="pre">base</span></code> is ignored). Parameter <code class="docutils literal notranslate"><span class="pre">base</span></code> always configures
@@ -988,7 +990,7 @@ floating-point values in case of the tuple of strings
 instantiation. It is always ignored for Boolean and
 RoundingMode values.</p>
 </dd>
-<dt class="field-even">Parameters</dt>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>base</strong> – The numeric base for bit-vector values; <code class="docutils literal notranslate"><span class="pre">2</span></code> for
 binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and <code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal.</p>
 </dd>
@@ -997,18 +999,18 @@ binary, <code class="docutils literal notranslate"><span class="pre">10</span></
 
 </dd></dl>
 
-</div>
-</div>
-<div class="section" id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
-<div class="section" id="sort-creation">
-<h3>Sort Creation<a class="headerlink" href="#sort-creation" title="Permalink to this headline"></a></h3>
+</section>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
+<section id="sort-creation">
+<h3>Sort Creation<a class="headerlink" href="#sort-creation" title="Permalink to this heading"></a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_bool_sort">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_bool_sort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_bool_sort" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_bool_sort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_bool_sort" title="Permalink to this definition"></a></dt>
 <dd><p>Create a Boolean sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Sort of type Boolean.</p>
 </dd>
 </dl>
@@ -1019,10 +1021,10 @@ binary, <code class="docutils literal notranslate"><span class="pre">10</span></
 <span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_bv_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_bv_sort" title="Permalink to this definition"></a></dt>
 <dd><p>Create bit-vector sort of size <code class="docutils literal notranslate"><span class="pre">size</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>size</strong> – Bit width.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Bit-vector sort of size <code class="docutils literal notranslate"><span class="pre">size</span></code>.</p>
 </dd>
 </dl>
@@ -1030,16 +1032,16 @@ binary, <code class="docutils literal notranslate"><span class="pre">10</span></
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_array_sort">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_array_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">elem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_array_sort" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_array_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">elem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_array_sort" title="Permalink to this definition"></a></dt>
 <dd><p>Create array sort with given index and element sorts.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – The sort of the array index.</p></li>
 <li><p><strong>elem</strong> – The sort of the array elements.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Array sort.</p>
 </dd>
 </dl>
@@ -1047,16 +1049,16 @@ binary, <code class="docutils literal notranslate"><span class="pre">10</span></
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_fun_sort">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fun_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">codomain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fun_sort" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fun_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">codomain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fun_sort" title="Permalink to this definition"></a></dt>
 <dd><p>Create function sort with given domain and codomain.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>domain</strong> – A list of all the function arguments’ sorts.</p></li>
 <li><p><strong>codomain</strong> – The sort of the function’s return value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Function sort, which maps <code class="docutils literal notranslate"><span class="pre">domain</span></code> to <code class="docutils literal notranslate"><span class="pre">codomain</span></code>.</p>
 </dd>
 </dl>
@@ -1068,13 +1070,13 @@ binary, <code class="docutils literal notranslate"><span class="pre">10</span></
 <dd><p>Create a floating-point sort with given exponent size <code class="docutils literal notranslate"><span class="pre">exp_size</span></code>
 and significand size <code class="docutils literal notranslate"><span class="pre">sig_size</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>exp_size</strong> – Exponent size.</p></li>
 <li><p><strong>sig_size</strong> – Significand size.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Floating-point sort.</p>
 </dd>
 </dl>
@@ -1082,10 +1084,10 @@ and significand size <code class="docutils literal notranslate"><span class="pre
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_rm_sort">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_rm_sort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_rm_sort" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_rm_sort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_rm_sort" title="Permalink to this definition"></a></dt>
 <dd><p>Create a rounding mode sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Rounding mode sort.</p>
 </dd>
 </dl>
@@ -1093,13 +1095,13 @@ and significand size <code class="docutils literal notranslate"><span class="pre
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_uninterpreted_sort">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_uninterpreted_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_uninterpreted_sort" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_uninterpreted_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_uninterpreted_sort" title="Permalink to this definition"></a></dt>
 <dd><p>Create an uninterpreted sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>symbol</strong> – The symbol of the sort.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Uninterpreted Sort.</p>
 </dd>
 </dl>
@@ -1109,21 +1111,21 @@ and significand size <code class="docutils literal notranslate"><span class="pre
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="term-creation">
-<h3>Term Creation<a class="headerlink" href="#term-creation" title="Permalink to this headline"></a></h3>
+</section>
+<section id="term-creation">
+<h3>Term Creation<a class="headerlink" href="#term-creation" title="Permalink to this heading"></a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_const">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_const</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_const" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_const</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_const" title="Permalink to this definition"></a></dt>
 <dd><p>Create a (first-order) constant of given sort with given symbol.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the constant.</p></li>
 <li><p><strong>symbol</strong> – The symbol of the constant.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind <a class="reference internal" href="#bitwuzla.Kind.CONSTANT" title="bitwuzla.Kind.CONSTANT"><code class="xref py py-class docutils literal notranslate"><span class="pre">CONSTANT</span></code></a>,
 representing the constant.</p>
 </dd>
@@ -1132,17 +1134,17 @@ representing the constant.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_const_array">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_const_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">term</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_const_array" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_const_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">term</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_const_array" title="Permalink to this definition"></a></dt>
 <dd><p>Create a one-dimensional constant array of given sort, initialized with
 given value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the array.</p></li>
 <li><p><strong>term</strong> – The term to initialize the elements of the array with.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind <a class="reference internal" href="#bitwuzla.Kind.CONST_ARRAY" title="bitwuzla.Kind.CONST_ARRAY"><code class="xref py py-class docutils literal notranslate"><span class="pre">CONST_ARRAY</span></code></a>,
 representing a constant array of given sort.</p>
 </dd>
@@ -1151,16 +1153,16 @@ representing a constant array of given sort.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_var">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_var</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_var" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_var</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_var" title="Permalink to this definition"></a></dt>
 <dd><p>Create a (first-order) variable of given sort with given symbol.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the variable.</p></li>
 <li><p><strong>symbol</strong> – The symbol of the variable.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind <a class="reference internal" href="#bitwuzla.Kind.VARIABLE" title="bitwuzla.Kind.VARIABLE"><code class="xref py py-class docutils literal notranslate"><span class="pre">VARIABLE</span></code></a>,
 representing the variable.</p>
 </dd>
@@ -1169,33 +1171,33 @@ representing the variable.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_term">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Kind" title="bitwuzla.Kind"><span class="pre">bitwuzla.Kind</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_term" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Kind" title="bitwuzla.Kind"><span class="pre">Kind</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_term" title="Permalink to this definition"></a></dt>
 <dd><p>Create a term of given kind with the given argument terms.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind.</p></li>
 <li><p><strong>terms</strong> – The argument terms.</p></li>
 <li><p><strong>indices</strong> – The indices of this term, empty if not indexed.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an operation of given kind.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<div class="section" id="values">
-<h4>Values<a class="headerlink" href="#values" title="Permalink to this headline"></a></h4>
+<section id="values">
+<h4>Values<a class="headerlink" href="#values" title="Permalink to this heading"></a></h4>
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_true">
 <span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_true</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.mk_true" title="Permalink to this definition"></a></dt>
 <dd><p>Create true value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A term representing true.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>BitwuzlaTerm</p>
 </dd>
 </dl>
@@ -1206,10 +1208,10 @@ representing the variable.</p>
 <span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_false</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.mk_false" title="Permalink to this definition"></a></dt>
 <dd><p>Create false value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A term representing false.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>BitwuzlaTerm</p>
 </dd>
 </dl>
@@ -1217,19 +1219,19 @@ representing the variable.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_bv_value">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_bv_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_bv_value" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_bv_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_bv_value" title="Permalink to this definition"></a></dt>
 <dd><p>Create bit-vector <code class="docutils literal notranslate"><span class="pre">value</span></code> with given <code class="docutils literal notranslate"><span class="pre">sort</span></code> and <code class="docutils literal notranslate"><span class="pre">base</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> (<em>BitwuzlaSort</em>) – Bit-vector sort.</p></li>
 <li><p><strong>value</strong> (<em>str</em><em> or </em><em>int</em>) – A string or integer representing of the value</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>BitwuzlaTerm</p>
 </dd>
 </dl>
@@ -1246,7 +1248,7 @@ representing the variable.</p>
 representation given as three bit-vector values representing the
 sign bit, the exponent and the significand.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sign</strong> – Bit-vector value term representing the sign bit.</p></li>
 <li><p><strong>exponent</strong> – Bit-vector value term representing the exponent.</p></li>
@@ -1257,7 +1259,7 @@ sign bit, the exponent and the significand.</p>
 <p>Create a floating-point value from its real representation, given as a
 decimal string, with respect to given rounding mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – Floating-point sort.</p></li>
 <li><p><strong>rm</strong> – Rounding mode term.</p></li>
@@ -1269,7 +1271,7 @@ decimal string, with respect to given rounding mode.</p>
 a two decimal strings representing the numerator and denominator, with
 respect to given rounding mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – Floating-point sort.</p></li>
 <li><p><strong>rm</strong> – Rounding mode term.</p></li>
@@ -1277,7 +1279,7 @@ respect to given rounding mode.</p>
 <li><p><strong>den</strong> – The decimal string representing the denominator.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point value.</p>
 </dd>
 </dl>
@@ -1290,34 +1292,34 @@ format for <code class="docutils literal notranslate"><span class="pre">sign</sp
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_rm_value">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_rm_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.RoundingMode" title="bitwuzla.RoundingMode"><span class="pre">bitwuzla.RoundingMode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_rm_value" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_rm_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.RoundingMode" title="bitwuzla.RoundingMode"><span class="pre">RoundingMode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_rm_value" title="Permalink to this definition"></a></dt>
 <dd><p>Create a rounding mode value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>rm</strong> – Rounding mode.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the rounding mode value.</p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="special-values">
-<h4>Special Values<a class="headerlink" href="#special-values" title="Permalink to this headline"></a></h4>
+</section>
+<section id="special-values">
+<h4>Special Values<a class="headerlink" href="#special-values" title="Permalink to this heading"></a></h4>
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_bv_ones">
 <span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_bv_ones</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.mk_bv_ones" title="Permalink to this definition"></a></dt>
 <dd><p>Create a bit-vector value with <code class="docutils literal notranslate"><span class="pre">sort</span></code> where all bits are set to 1.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> (<em>BitwuzlaSort</em>) – Bit-vector sort.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value of given sort
 where all bits are set to 1.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>BitwuzlaTerm</p>
 </dd>
 </dl>
@@ -1328,15 +1330,15 @@ where all bits are set to 1.</p>
 <span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_bv_min_signed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.mk_bv_min_signed" title="Permalink to this definition"></a></dt>
 <dd><p>Create a bit-vector minimum signed value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> (<em>BitwuzlaSort</em>) – Bit-vector sort.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value of given sort
 where the MSB is set to 1 and all remaining bits are set to
 0.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>BitwuzlaTerm</p>
 </dd>
 </dl>
@@ -1347,15 +1349,15 @@ where the MSB is set to 1 and all remaining bits are set to
 <span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_bv_max_signed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.mk_bv_max_signed" title="Permalink to this definition"></a></dt>
 <dd><p>Create a bit-vector maximum signed value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> (<em>BitwuzlaSort</em>) – Bit-vector sort.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value of given sort
 where the MSB is set to 0 and all remaining bits are set to
 1.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>BitwuzlaTerm</p>
 </dd>
 </dl>
@@ -1363,13 +1365,13 @@ where the MSB is set to 0 and all remaining bits are set to
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_fp_pos_zero">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_pos_zero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_pos_zero" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_pos_zero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_pos_zero" title="Permalink to this definition"></a></dt>
 <dd><p>Create a floating-point positive zero value (SMT-LIB: <cite>+zero</cite>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – Floating-point sort.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point positive zero value
 of given floating-point sort.</p>
 </dd>
@@ -1378,13 +1380,13 @@ of given floating-point sort.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_fp_neg_zero">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_neg_zero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_neg_zero" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_neg_zero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_neg_zero" title="Permalink to this definition"></a></dt>
 <dd><p>Create a floating-point negative zero value (SMT-LIB: <cite>-zero</cite>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – Floating-point sort.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point negative zero value
 of given floating-point sort.</p>
 </dd>
@@ -1393,13 +1395,13 @@ of given floating-point sort.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_fp_pos_inf">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_pos_inf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_pos_inf" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_pos_inf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_pos_inf" title="Permalink to this definition"></a></dt>
 <dd><p>Create a floating-point positive infinity value (SMT-LIB: <cite>+oo</cite>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – Floating-point sort.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point positive infinity
 value of given floating-point sort.</p>
 </dd>
@@ -1408,13 +1410,13 @@ value of given floating-point sort.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_fp_neg_inf">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_neg_inf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_neg_inf" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_neg_inf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_neg_inf" title="Permalink to this definition"></a></dt>
 <dd><p>Create a floating-point negative infinity value (SMT-LIB: <cite>-oo</cite>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – Floating-point sort.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point negative infinity
 value of given floating-point sort.</p>
 </dd>
@@ -1423,29 +1425,29 @@ value of given floating-point sort.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="bitwuzla.mk_fp_nan">
-<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_nan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">bitwuzla.Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">bitwuzla.Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_nan" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">mk_fp_nan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a></span></span><a class="headerlink" href="#bitwuzla.mk_fp_nan" title="Permalink to this definition"></a></dt>
 <dd><p>Create a floating-point NaN value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – Floating-point sort.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point NaN value of given
 floating-point sort.</p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
-</div>
-</div>
-<div class="section" id="enums">
-<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline"></a></h2>
-<div class="section" id="option">
-<h3>Option<a class="headerlink" href="#option" title="Permalink to this headline"></a></h3>
+</section>
+</section>
+</section>
+<section id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this heading"></a></h2>
+<section id="option">
+<h3>Option<a class="headerlink" href="#option" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Option">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Option" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Option" title="Permalink to this definition"></a></dt>
 <dd><p>Configuration options supported by Bitwuzla. For more information on
 options see <a class="reference internal" href="../cpp/options.html#cpp-options"><span class="std std-ref">Options</span></a>.</p>
 <dl class="py attribute">
@@ -1625,12 +1627,12 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 
 </dd></dl>
 
-</div>
-<div class="section" id="kind">
-<h3>Kind<a class="headerlink" href="#kind" title="Permalink to this headline"></a></h3>
+</section>
+<section id="kind">
+<h3>Kind<a class="headerlink" href="#kind" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Kind">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Kind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Kind" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Kind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Kind" title="Permalink to this definition"></a></dt>
 <dd><p>BitwuzlaTerm kinds. For more information on term kinds see <span class="xref std std-ref">cpp_kinds</span>.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Kind.AND">
@@ -2129,12 +2131,12 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 
 </dd></dl>
 
-</div>
-<div class="section" id="result">
-<h3>Result<a class="headerlink" href="#result" title="Permalink to this headline"></a></h3>
+</section>
+<section id="result">
+<h3>Result<a class="headerlink" href="#result" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Result">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Result" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Result" title="Permalink to this definition"></a></dt>
 <dd><p>Satisfiability result.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Result.SAT">
@@ -2153,12 +2155,12 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 
 </dd></dl>
 
-</div>
-<div class="section" id="roundingmode">
-<h3>RoundingMode<a class="headerlink" href="#roundingmode" title="Permalink to this headline"></a></h3>
+</section>
+<section id="roundingmode">
+<h3>RoundingMode<a class="headerlink" href="#roundingmode" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.RoundingMode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">RoundingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.RoundingMode" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">RoundingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.RoundingMode" title="Permalink to this definition"></a></dt>
 <dd><p>Floating-point rounding mode.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.RoundingMode.RNA">
@@ -2187,9 +2189,9 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 
 </dd></dl>
 
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

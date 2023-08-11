@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BitwuzlaOptions &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -33,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -75,8 +77,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="bitwuzlaoptions">
-<h1>BitwuzlaOptions<a class="headerlink" href="#bitwuzlaoptions" title="Permalink to this headline"></a></h1>
+  <section id="bitwuzlaoptions">
+<h1>BitwuzlaOptions<a class="headerlink" href="#bitwuzlaoptions" title="Permalink to this heading"></a></h1>
 <p>A <a class="reference internal" href="bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
 options <a class="reference internal" href="#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance via
 <a class="reference internal" href="#_CPPv420bitwuzla_options_newv" title="bitwuzla_options_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_options_new()</span></code></a>, and must be released via
@@ -129,13 +131,13 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1ga91f0479c3a525e2deabbc0dea5a6f954"><span class="std std-ref"><span class="pre">bitwuzla_options_delete</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1ga91f0479c3a525e2deabbc0dea5a6f954"><span class="std std-ref"><span class="pre">bitwuzla_options_delete</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A pointer to the created BitwuzlaOptions instance.</p>
 </dd>
 </dl>
@@ -149,13 +151,13 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1gaf208fc6d0fe345818d9338dba99f9e7f"><span class="std std-ref"><span class="pre">bitwuzla_options_new</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1gaf208fc6d0fe345818d9338dba99f9e7f"><span class="std std-ref"><span class="pre">bitwuzla_options_new</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>options</strong> – The BitwuzlaOptions instance to delete.</p>
 </dd>
 </dl>
@@ -166,7 +168,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv326bitwuzla_option_is_numericP15BitwuzlaOptions14BitwuzlaOption"></span><span id="_CPPv226bitwuzla_option_is_numericP15BitwuzlaOptions14BitwuzlaOption"></span><span id="bitwuzla_option_is_numeric__BitwuzlaOptionsP.BitwuzlaOption"></span><span class="target" id="group__c__bitwuzlaoptions_1ga41012ed3772f0b013182107452556e3c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_option_is_numeric</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><span class="n"><span class="pre">BitwuzlaOptions</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">options</span></span>, <a class="reference internal" href="../enums/bitwuzlaoption.html#_CPPv414BitwuzlaOption" title="BitwuzlaOption"><span class="n"><span class="pre">BitwuzlaOption</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_option_is_numericP15BitwuzlaOptions14BitwuzlaOption" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a given option is a numeric (or Boolean) option. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if the given option is a numeric or Boolean option. </p>
 </dd>
 </dl>
@@ -177,7 +179,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv323bitwuzla_option_is_modeP15BitwuzlaOptions14BitwuzlaOption"></span><span id="_CPPv223bitwuzla_option_is_modeP15BitwuzlaOptions14BitwuzlaOption"></span><span id="bitwuzla_option_is_mode__BitwuzlaOptionsP.BitwuzlaOption"></span><span class="target" id="group__c__bitwuzlaoptions_1gafbc68bda6a3c852ea886cc1cef1deb70"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_option_is_mode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><span class="n"><span class="pre">BitwuzlaOptions</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">options</span></span>, <a class="reference internal" href="../enums/bitwuzlaoption.html#_CPPv414BitwuzlaOption" title="BitwuzlaOption"><span class="n"><span class="pre">BitwuzlaOption</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_option_is_modeP15BitwuzlaOptions14BitwuzlaOption" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if a given option is an option with a mode </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if the given option is an option with a mode. </p>
 </dd>
 </dl>
@@ -191,13 +193,13 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaoption.html#option_8h_1a4b3d097604eab4eab9fbd0427be96884"><span class="std std-ref"><span class="pre">BitwuzlaOption</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1ga37742ef375def28c195c79249142216d"><span class="std std-ref"><span class="pre">bitwuzla_get_option</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1ga37742ef375def28c195c79249142216d"><span class="std std-ref"><span class="pre">bitwuzla_get_option</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>options</strong> – The Bitwuzla options instance. </p></li>
 <li><p><strong>option</strong> – The option. </p></li>
@@ -215,13 +217,13 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaoption.html#option_8h_1a4b3d097604eab4eab9fbd0427be96884"><span class="std std-ref"><span class="pre">BitwuzlaOption</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1ga4dcd195b9e78bd190b5e96ff3cb0d7f5"><span class="std std-ref"><span class="pre">bitwuzla_get_option_mode</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1ga4dcd195b9e78bd190b5e96ff3cb0d7f5"><span class="std std-ref"><span class="pre">bitwuzla_get_option_mode</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>options</strong> – The Bitwuzla options instance. </p></li>
 <li><p><strong>option</strong> – The option. </p></li>
@@ -238,19 +240,19 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaoption.html#option_8h_1a4b3d097604eab4eab9fbd0427be96884"><span class="std std-ref"><span class="pre">BitwuzlaOption</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaoption.html#option_8h_1a4b3d097604eab4eab9fbd0427be96884"><span class="std std-ref"><span class="pre">BitwuzlaOption</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>options</strong> – The Bitwuzla options instance. </p></li>
 <li><p><strong>option</strong> – The option.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The option value.</p>
 </dd>
 </dl>
@@ -264,19 +266,19 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaoption.html#option_8h_1a4b3d097604eab4eab9fbd0427be96884"><span class="std std-ref"><span class="pre">BitwuzlaOption</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1gaff7ff22db2d7d6fa22ba35914e0b7119"><span class="std std-ref"><span class="pre">bitwuzla_set_option_mode</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaoptions_1gaff7ff22db2d7d6fa22ba35914e0b7119"><span class="std std-ref"><span class="pre">bitwuzla_set_option_mode</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>options</strong> – The Bitwuzla options instance. </p></li>
 <li><p><strong>option</strong> – The option.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The option value.</p>
 </dd>
 </dl>
@@ -289,13 +291,13 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../structs/bitwuzlaoptioninfo.html#structBitwuzlaOptionInfo"><span class="std std-ref"><span class="pre">BitwuzlaOptionInfo</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../structs/bitwuzlaoptioninfo.html#structBitwuzlaOptionInfo"><span class="std std-ref"><span class="pre">BitwuzlaOptionInfo</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>options</strong> – The Bitwuzla options instance. </p></li>
 <li><p><strong>option</strong> – The option. </p></li>
@@ -305,7 +307,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

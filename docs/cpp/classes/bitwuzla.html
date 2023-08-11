@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitwuzla &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -33,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -75,8 +77,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="bitwuzla">
-<h1>Bitwuzla<a class="headerlink" href="#bitwuzla" title="Permalink to this headline"></a></h1>
+  <section id="bitwuzla">
+<h1>Bitwuzla<a class="headerlink" href="#bitwuzla" title="Permalink to this heading"></a></h1>
 <p>A <a class="reference internal" href="#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla</span></code></a> instance is created from a configuration
 options <a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a> instance. This options instance must be
 configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
@@ -121,7 +123,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 <span id="_CPPv3N8bitwuzla8Bitwuzla8BitwuzlaERK7Options"></span><span id="_CPPv2N8bitwuzla8Bitwuzla8BitwuzlaERK7Options"></span><span id="bitwuzla::Bitwuzla::Bitwuzla__OptionsCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1af9a5afc01793860b97125f51f7e8f1ac"></span><span class="sig-name descname"><span class="n"><span class="pre">Bitwuzla</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK7Options" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>options</strong> – The associated options instance. <a class="reference internal" href="options.html#classbitwuzla_1_1Options"><span class="std std-ref">Options</span></a> must be configured at this point. </p>
 </dd>
 </dl>
@@ -154,7 +156,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p>Only one terminator can be connected at a time. This will disconnect a previously connected terminator before connecting a new one. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>terminator</strong> – The terminator instance. Nullptr disconnects the currently associated terminator. </p>
 </dd>
 </dl>
@@ -167,13 +169,13 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>nlevels</strong> – The number of context levels to push.</p>
 </dd>
 </dl>
@@ -186,13 +188,13 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>nlevels</strong> – The number of context levels to pop.</p>
 </dd>
 </dl>
@@ -203,7 +205,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 <span id="_CPPv3N8bitwuzla8Bitwuzla14assert_formulaERK4Term"></span><span id="_CPPv2N8bitwuzla8Bitwuzla14assert_formulaERK4Term"></span><span id="bitwuzla::Bitwuzla::assert_formula__TermCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assert_formula</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla14assert_formulaERK4Term" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Assert formula.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The formula to assert. </p>
 </dd>
 </dl>
@@ -214,7 +216,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 <span id="_CPPv3N8bitwuzla8Bitwuzla14get_assertionsEv"></span><span id="_CPPv2N8bitwuzla8Bitwuzla14get_assertionsEv"></span><span id="bitwuzla::Bitwuzla::get_assertions"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a3f1ca953b753aec221227b62f7bb8cd8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="term.html#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_assertions</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla14get_assertionsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the set of currently asserted formulas. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The assertion formulas. </p>
 </dd>
 </dl>
@@ -230,16 +232,16 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The assumption to check for.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if given assumption is an unsat assumption.</p>
 </dd>
 </dl>
@@ -255,13 +257,13 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vctor with unsat assumptions.</p>
 </dd>
 </dl>
@@ -277,13 +279,13 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">assert()</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vector with unsat assertions.</p>
 </dd>
 </dl>
@@ -296,7 +298,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782"><span class="std std-ref"><span class="pre">assert_formula()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782"><span class="std std-ref"><span class="pre">assert_formula()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -317,7 +319,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1adae5165839b35bd39e19b3747a901782"><span class="std std-ref"><span class="pre">assert_formula()</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"><span class="std std-ref"><span class="pre">Options::set()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afa"><span class="std std-ref"><span class="pre">Result</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afa"><span class="std std-ref"><span class="pre">Result</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -327,7 +329,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p>Assertions and assumptions are combined via Boolean and.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa684e1388a91900480c702ac5b8f6b4d8"><span class="std std-ref"><span class="pre">Result::SAT</span></span></a></code> if the input formula is satisfiable and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421"><span class="std std-ref"><span class="pre">Result::UNSAT</span></span></a></code> if it is unsatisfiable, and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa696b031073e74bf2cb98e5ef201d4aa3"><span class="std std-ref"><span class="pre">Result::UNKNOWN</span></span></a></code> when neither satisfiability nor unsatisfiability was determined. This can happen when this <a class="reference internal" href="#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> instance was terminated via a termination callback.</p>
 </dd>
 </dl>
@@ -340,14 +342,14 @@ opportunity if the callback function returns <code class="code docutils literal 
 <p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa684e1388a91900480c702ac5b8f6b4d8"><span class="std std-ref"><span class="pre">Result::SAT</span></span></a></code>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> </p>
+<p><code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code></p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>term</strong> – The term to query a model value for. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the model value of term <code class="docutils literal notranslate"><span class="pre">term</span></code>. </p>
 </dd>
 </dl>
@@ -358,7 +360,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 <span id="_CPPv3NK8bitwuzla8Bitwuzla13print_formulaERNSt7ostreamERKNSt6stringE"></span><span id="_CPPv2NK8bitwuzla8Bitwuzla13print_formulaERNSt7ostreamERKNSt6stringE"></span><span id="bitwuzla::Bitwuzla::print_formula__osR.ssCRC"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a47646afecd73de40a89f7add8e8d3bcd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_formula</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">format</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;smt2&quot;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla8Bitwuzla13print_formulaERNSt7ostreamERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Print the current input formula to the given output stream.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>out</strong> – The output stream. </p></li>
 <li><p><strong>format</strong> – The output format for printing the formula. Currently, only <code class="docutils literal notranslate"><span class="pre">&quot;smt2&quot;</span></code> for the SMT-LIB v2 format is supported. </p></li>
@@ -372,7 +374,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 <span id="_CPPv3NK8bitwuzla8Bitwuzla10statisticsEv"></span><span id="_CPPv2NK8bitwuzla8Bitwuzla10statisticsEv"></span><span id="bitwuzla::Bitwuzla::statisticsC"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a3caa051b55e235599b1dfca0bd999b05"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">statistics</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla8Bitwuzla10statisticsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get current statistics. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A map of strings of statistics entries, maps statistic name to value. </p>
 </dd>
 </dl>
@@ -382,7 +384,7 @@ opportunity if the callback function returns <code class="code docutils literal 
 </dd></dl>
 
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
-</div>
+</section>
 
 
            </div>

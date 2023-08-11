@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Options &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-        <script src="../static/jquery.js"></script>
-        <script src="../static/underscore.js"></script>
-        <script src="../static/doctools.js"></script>
+        <script src="../static/jquery.js?v=5d32c60e"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/doctools.js?v=888ff710"></script>
+        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -35,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -97,8 +99,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="options">
-<span id="c-options"></span><h1>Options<a class="headerlink" href="#options" title="Permalink to this headline"></a></h1>
+  <section id="options">
+<span id="c-options"></span><h1>Options<a class="headerlink" href="#options" title="Permalink to this heading"></a></h1>
 <p>A <a class="reference internal" href="types/bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
 options <a class="reference internal" href="types/bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance. This options instance must
 be configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
@@ -119,8 +121,8 @@ and the value of an option with modes can be queried via
 <p>The option kind is defined via <a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">BitwuzlaKind</span></code></a>.
 A <strong>comprehensive list</strong> of all configurable options is available
 <a class="reference internal" href="enums/bitwuzlaoption.html"><span class="doc">here</span></a>.</p>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <p>The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/options.c">examples/c/options.c</a>.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/***</span>
 <span class="cm"> * Bitwuzla: Satisfiability Modulo Theories (SMT) solver.</span>
@@ -169,9 +171,9 @@ A <strong>comprehensive list</strong> of all configurable options is available
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="optioninfo">
-<h2>OptionInfo<a class="headerlink" href="#optioninfo" title="Permalink to this headline"></a></h2>
+</section>
+<section id="optioninfo">
+<h2>OptionInfo<a class="headerlink" href="#optioninfo" title="Permalink to this heading"></a></h2>
 <p>Bitwuzla offers a compact way to retrieve all information about a configuration
 option as a <a class="reference internal" href="structs/bitwuzlaoptioninfo.html#_CPPv418BitwuzlaOptionInfo" title="BitwuzlaOptionInfo"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptionInfo</span></code></a> object via
 <a class="reference internal" href="types/bitwuzlaoptions.html#_CPPv424bitwuzla_get_option_infoP15BitwuzlaOptions14BitwuzlaOptionP18BitwuzlaOptionInfo" title="bitwuzla_get_option_info"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_get_option_info()</span></code></a>.
@@ -179,8 +181,8 @@ This object is created per option and can be queried for any available
 information, e.g., long and short option names, description, (current, default,
 minimum and maximum) values for numeric options, and (current, default and
 available) modes for configuration options with modes.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

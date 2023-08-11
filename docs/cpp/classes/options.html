@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Options &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -33,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -75,8 +77,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="options">
-<h1>Options<a class="headerlink" href="#options" title="Permalink to this headline"></a></h1>
+  <section id="options">
+<h1>Options<a class="headerlink" href="#options" title="Permalink to this heading"></a></h1>
 <p>A <a class="reference internal" href="bitwuzla.html#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla</span></code></a> instance is created from a configuration
 options <a class="reference internal" href="#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a> instance.</p>
 <div class="admonition note">
@@ -140,10 +142,10 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3NK8bitwuzla7Options7is_boolE6Option"></span><span id="_CPPv2NK8bitwuzla7Options7is_boolE6Option"></span><span id="bitwuzla::Options::is_bool__OptionC"></span><span class="target" id="classbitwuzla_1_1Options_1a19a5bc2d35ae566e88861ec8262b21b5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_bool</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options7is_boolE6Option" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if given option is a Boolean option. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>option</strong> – The option to query. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">option</span></code> is a Boolean option. </p>
 </dd>
 </dl>
@@ -154,10 +156,10 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3NK8bitwuzla7Options10is_numericE6Option"></span><span id="_CPPv2NK8bitwuzla7Options10is_numericE6Option"></span><span id="bitwuzla::Options::is_numeric__OptionC"></span><span class="target" id="classbitwuzla_1_1Options_1a166ac149cded44fe338578930c0c9aac"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_numeric</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options10is_numericE6Option" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if given option is a numeric option. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>option</strong> – The option to query. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">option</span></code> is a numeric option. </p>
 </dd>
 </dl>
@@ -168,10 +170,10 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3NK8bitwuzla7Options7is_modeE6Option"></span><span id="_CPPv2NK8bitwuzla7Options7is_modeE6Option"></span><span id="bitwuzla::Options::is_mode__OptionC"></span><span class="target" id="classbitwuzla_1_1Options_1a6c0e8a2ee61e5d9e9bd29846762a64c4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_mode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options7is_modeE6Option" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if given option is an option with a mode. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>option</strong> – The option to query. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if <code class="docutils literal notranslate"><span class="pre">option</span></code> is an option with a mode. </p>
 </dd>
 </dl>
@@ -181,7 +183,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla7Options4shrtE6Option">
 <span id="_CPPv3NK8bitwuzla7Options4shrtE6Option"></span><span id="_CPPv2NK8bitwuzla7Options4shrtE6Option"></span><span id="bitwuzla::Options::shrt__OptionC"></span><span class="target" id="classbitwuzla_1_1Options_1ac274a77add7656e79d8e429aa6bd6769"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">shrt</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options4shrtE6Option" title="Permalink to this definition"></a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The short name of this option. </p>
 </dd>
 </dl>
@@ -191,7 +193,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla7Options3lngE6Option">
 <span id="_CPPv3NK8bitwuzla7Options3lngE6Option"></span><span id="_CPPv2NK8bitwuzla7Options3lngE6Option"></span><span id="bitwuzla::Options::lng__OptionC"></span><span class="target" id="classbitwuzla_1_1Options_1ac21eb7d5d1d6cf53ead769004fcbdbc7"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">lng</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options3lngE6Option" title="Permalink to this definition"></a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The long name of this option. </p>
 </dd>
 </dl>
@@ -201,7 +203,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla7Options11descriptionE6Option">
 <span id="_CPPv3NK8bitwuzla7Options11descriptionE6Option"></span><span id="_CPPv2NK8bitwuzla7Options11descriptionE6Option"></span><span id="bitwuzla::Options::description__OptionC"></span><span class="target" id="classbitwuzla_1_1Options_1a586bf2a05e6302b348c0ebae1b25c448"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">description</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options11descriptionE6Option" title="Permalink to this definition"></a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The description of this option. </p>
 </dd>
 </dl>
@@ -211,7 +213,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla7Options5modesE6Option">
 <span id="_CPPv3NK8bitwuzla7Options5modesE6Option"></span><span id="_CPPv2NK8bitwuzla7Options5modesE6Option"></span><span id="bitwuzla::Options::modes__OptionC"></span><span class="target" id="classbitwuzla_1_1Options_1a5b531809faf378c57185246e2d357053"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">modes</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options5modesE6Option" title="Permalink to this definition"></a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The modes of this option. </p>
 </dd>
 </dl>
@@ -221,7 +223,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla7Options6optionEPKc">
 <span id="_CPPv3NK8bitwuzla7Options6optionEPKc"></span><span id="_CPPv2NK8bitwuzla7Options6optionEPKc"></span><span id="bitwuzla::Options::option__cCPC"></span><span class="target" id="classbitwuzla_1_1Options_1af996881eeb499cc7ac43a003ade6d267"></span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">option</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options6optionEPKc" title="Permalink to this definition"></a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The option associated to the given short or long option name. </p>
 </dd>
 </dl>
@@ -232,7 +234,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3N8bitwuzla7Options3setE6Option8uint64_t"></span><span id="_CPPv2N8bitwuzla7Options3setE6Option8uint64_t"></span><span id="bitwuzla::Options::set__Option.uint64_t"></span><span class="target" id="classbitwuzla_1_1Options_1a9c084d7bb12c1b94a07abb0a3a2e2a79"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla7Options3setE6Option8uint64_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set Boolean or numeric option.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>option</strong> – The option. </p></li>
 <li><p><strong>value</strong> – The option value. </p></li>
@@ -246,7 +248,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3N8bitwuzla7Options3setE6OptionRKNSt6stringE"></span><span id="_CPPv2N8bitwuzla7Options3setE6OptionRKNSt6stringE"></span><span id="bitwuzla::Options::set__Option.ssCR"></span><span class="target" id="classbitwuzla_1_1Options_1a56170251d39d930d7d08e744cd08b2a4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla7Options3setE6OptionRKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set option value for options with different modes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>option</strong> – The option. </p></li>
 <li><p><strong>mode</strong> – The option mode. </p></li>
@@ -260,7 +262,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3N8bitwuzla7Options3setE6OptionPKc"></span><span id="_CPPv2N8bitwuzla7Options3setE6OptionPKc"></span><span id="bitwuzla::Options::set__Option.cCP"></span><span class="target" id="classbitwuzla_1_1Options_1afacc58fad8f7db059ef51e5baf958c35"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla7Options3setE6OptionPKc" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set option value for options with different modes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>option</strong> – The option. </p></li>
 <li><p><strong>mode</strong> – The option mode. </p></li>
@@ -274,7 +276,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3N8bitwuzla7Options3setERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N8bitwuzla7Options3setERKNSt6stringERKNSt6stringE"></span><span id="bitwuzla::Options::set__ssCR.ssCR"></span><span class="target" id="classbitwuzla_1_1Options_1ae6e655ee8f5ed015ffeedc390a011b93"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lng</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla7Options3setERKNSt6stringERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set current value of option, configured via the long option name and its value in string representation. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>lng</strong> – The long name of the option to set. </p></li>
 <li><p><strong>value</strong> – The string representation of the value to set. </p></li>
@@ -288,9 +290,9 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3N8bitwuzla7Options3setERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2N8bitwuzla7Options3setERKNSt6vectorINSt6stringEEE"></span><span id="bitwuzla::Options::set__std::vector:ss:CR"></span><span class="target" id="classbitwuzla_1_1Options_1a2e329072edd196df44c838a5a4781a34"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla7Options3setERKNSt6vectorINSt6stringEEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set options via command line arguments.</p>
 <p>Supports the following command line option format: Short option names: -short … {“-short”} -short=val … {“-short=val”} -short val … {“-short”, “val”}</p>
-<p>Long option names: &amp;#8212;long … {“–long”} &amp;#8212;long=val … {“–long=val”} &amp;#8212;long val … {“–long”, “val”}</p>
+<p>Long option names: &amp;#8212;long … {”–long”} &amp;#8212;long=val … {”–long=val”} &amp;#8212;long val … {”–long”, “val”}</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>args</strong> – List of command line options. </p>
 </dd>
 </dl>
@@ -301,10 +303,10 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3NK8bitwuzla7Options3getE6Option"></span><span id="_CPPv2NK8bitwuzla7Options3getE6Option"></span><span id="bitwuzla::Options::get__OptionC"></span><span class="target" id="classbitwuzla_1_1Options_1a618f9119a0b1a140f650d2aa3b54ab22"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options3getE6Option" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the current value of a Boolean or numeric option.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>option</strong> – The option. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The option value. </p>
 </dd>
 </dl>
@@ -315,10 +317,10 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3NK8bitwuzla7Options8get_modeE6Option"></span><span id="_CPPv2NK8bitwuzla7Options8get_modeE6Option"></span><span id="bitwuzla::Options::get_mode__OptionC"></span><span class="target" id="classbitwuzla_1_1Options_1a1f07e0ec2b8bcfcbf9c7f0e073b284bd"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_mode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><span class="n"><span class="pre">Option</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla7Options8get_modeE6Option" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the current value of an option with modes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>option</strong> – The option. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The option value. </p>
 </dd>
 </dl>
@@ -328,7 +330,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 </dd></dl>
 
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
-</div>
+</section>
 
 
            </div>

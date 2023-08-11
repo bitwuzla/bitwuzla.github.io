@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BitwuzlaKind &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -36,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -94,8 +96,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="bitwuzlakind">
-<h1>BitwuzlaKind<a class="headerlink" href="#bitwuzlakind" title="Permalink to this headline"></a></h1>
+  <section id="bitwuzlakind">
+<h1>BitwuzlaKind<a class="headerlink" href="#bitwuzlakind" title="Permalink to this heading"></a></h1>
 <p>The kind of a <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaTerm</span></code></a>.</p>
 <p>Terms of a given kind are created via <a class="reference internal" href="../term_creation.html#_CPPv416bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm" title="bitwuzla_mk_term"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term()</span></code></a>,
 <a class="reference internal" href="../term_creation.html#_CPPv417bitwuzla_mk_term112BitwuzlaKind12BitwuzlaTerm" title="bitwuzla_mk_term1"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term1()</span></code></a>, <a class="reference internal" href="../term_creation.html#_CPPv417bitwuzla_mk_term212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm" title="bitwuzla_mk_term2"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term2()</span></code></a>,
@@ -146,7 +148,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_ANDE">
 <span id="_CPPv3N12BitwuzlaKind17BITWUZLA_KIND_ANDE"></span><span id="_CPPv2N12BitwuzlaKind17BITWUZLA_KIND_ANDE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a2f8b31fb232a53eaba787c0b9f36bea9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_AND</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_ANDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean and.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">and</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">and</span></code></p>
 <p><strong>Number of arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -157,7 +159,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -168,7 +170,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind22BITWUZLA_KIND_DISTINCTE">
 <span id="_CPPv3N12BitwuzlaKind22BITWUZLA_KIND_DISTINCTE"></span><span id="_CPPv2N12BitwuzlaKind22BITWUZLA_KIND_DISTINCTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af2bd2b6b5b796208fa5096c791433b58"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_DISTINCT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind22BITWUZLA_KIND_DISTINCTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Disequality.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">distinct</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">distinct</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S \times ... \times S \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -179,7 +181,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -190,7 +192,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_EQUALE">
 <span id="_CPPv3N12BitwuzlaKind19BITWUZLA_KIND_EQUALE"></span><span id="_CPPv2N12BitwuzlaKind19BITWUZLA_KIND_EQUALE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa9b45c587510b3ff3e26ff58e4e714ff"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_EQUAL</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_EQUALE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Equality.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S \times ... \times S \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -201,7 +203,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -212,7 +214,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_IFFE">
 <span id="_CPPv3N12BitwuzlaKind17BITWUZLA_KIND_IFFE"></span><span id="_CPPv2N12BitwuzlaKind17BITWUZLA_KIND_IFFE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a83912a83b269eee5ba3ca8f15bfac29b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_IFF</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_IFFE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean if and only if.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -223,7 +225,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -234,7 +236,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_IMPLIESE">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_IMPLIESE"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_IMPLIESE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a234a8f030077b6d6e96c354c4df5985c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_IMPLIES</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_IMPLIESE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean implies.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -245,7 +247,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -256,7 +258,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_NOTE">
 <span id="_CPPv3N12BitwuzlaKind17BITWUZLA_KIND_NOTE"></span><span id="_CPPv2N12BitwuzlaKind17BITWUZLA_KIND_NOTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a5c575abb7a4e2a84fffb741aff8458c4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_NOT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_NOTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean not.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">not</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">not</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -266,7 +268,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -277,7 +279,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind16BITWUZLA_KIND_ORE">
 <span id="_CPPv3N12BitwuzlaKind16BITWUZLA_KIND_ORE"></span><span id="_CPPv2N12BitwuzlaKind16BITWUZLA_KIND_ORE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a99c4e96609877fd3fc5a902bda5d4d06"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_OR</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind16BITWUZLA_KIND_ORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean or.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">or</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">or</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -288,7 +290,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -299,7 +301,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_XORE">
 <span id="_CPPv3N12BitwuzlaKind17BITWUZLA_KIND_XORE"></span><span id="_CPPv2N12BitwuzlaKind17BITWUZLA_KIND_XORE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af37963a5a8f2c3ad7aec03cf691b7e3f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_XOR</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_XORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Boolean xor.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">xor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">xor</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -310,7 +312,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -321,7 +323,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_ITEE">
 <span id="_CPPv3N12BitwuzlaKind17BITWUZLA_KIND_ITEE"></span><span id="_CPPv2N12BitwuzlaKind17BITWUZLA_KIND_ITEE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a267a359ca60f5e467d908c60b60d31dc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_ITE</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind17BITWUZLA_KIND_ITEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>If-then-else.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">ite</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">ite</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times S  \times S \rightarrow S\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -331,7 +333,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -342,7 +344,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_EXISTSE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_EXISTSE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_EXISTSE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a586effeff323dc46e51b63dd440acf43"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_EXISTS</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_EXISTSE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Existential quantification.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">exists</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">exists</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S_1 \times ...  \times S_n \times Bool \rightarrow
  Bool\)</span></p>
@@ -353,7 +355,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -364,7 +366,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FORALLE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FORALLE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FORALLE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aeeb04d673b25984c3aed068786df0f6a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FORALL</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FORALLE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Universal quantification.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">forall</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">forall</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S_1 \times ...  \times S_n \times Bool \rightarrow
  Bool\)</span></p>
@@ -375,7 +377,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -396,7 +398,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -417,7 +419,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -428,7 +430,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind26BITWUZLA_KIND_ARRAY_SELECTE">
 <span id="_CPPv3N12BitwuzlaKind26BITWUZLA_KIND_ARRAY_SELECTE"></span><span id="_CPPv2N12BitwuzlaKind26BITWUZLA_KIND_ARRAY_SELECTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8028e1883d64bc49bfc8401081f4659d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_ARRAY_SELECT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind26BITWUZLA_KIND_ARRAY_SELECTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Array select.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">select</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">select</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\((S_i \rightarrow S_e) \times S_i \rightarrow S_e\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -438,7 +440,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -449,7 +451,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind25BITWUZLA_KIND_ARRAY_STOREE">
 <span id="_CPPv3N12BitwuzlaKind25BITWUZLA_KIND_ARRAY_STOREE"></span><span id="_CPPv2N12BitwuzlaKind25BITWUZLA_KIND_ARRAY_STOREE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a6d351144a192cd4ab7c2cae6c9112737"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_ARRAY_STORE</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind25BITWUZLA_KIND_ARRAY_STOREE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Array store.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">store</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">store</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\((S_i \rightarrow S_e) \times S_i \times S_e \rightarrow
  (S_i \rightarrow S_e)\)</span></p>
@@ -460,7 +462,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -471,7 +473,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_ADDE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_ADDE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_ADDE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad2be0d7279f9d4e97d415583720f3d06"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ADD</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_ADDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector addition.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvadd</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvadd</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -482,7 +484,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -493,7 +495,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_ANDE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_ANDE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_ANDE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aab14ff1efc294974fbb862758ef478d1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_AND</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_ANDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector and.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvand</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvand</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -504,7 +506,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -515,7 +517,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_ASHRE">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_BV_ASHRE"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_BV_ASHRE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a60aae15249bf6ca2ffa70cc40f3e5a42"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ASHR</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_ASHRE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector arithmetic right shift.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvashr</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvashr</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -525,7 +527,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -536,7 +538,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_COMPE">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_BV_COMPE"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_BV_COMPE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976abcef765069014a92b665badcb2515c97"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_COMP</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_COMPE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector comparison.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvcomp</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvcomp</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_1\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -547,7 +549,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -558,7 +560,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_BV_CONCATE">
 <span id="_CPPv3N12BitwuzlaKind23BITWUZLA_KIND_BV_CONCATE"></span><span id="_CPPv2N12BitwuzlaKind23BITWUZLA_KIND_BV_CONCATE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a760e5d611575e8b36ad4bf8edcd33041"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_CONCAT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_BV_CONCATE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector concat.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">concat</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">concat</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_m \rightarrow BV_{n + ... +
  m}\)</span></p>
@@ -570,7 +572,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -591,7 +593,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -612,7 +614,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -623,7 +625,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_MULE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_MULE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_MULE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a07f0d5b2b69d13356f787d969184f803"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_MUL</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_MULE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector multiplication.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvmul</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvmul</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -634,7 +636,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -645,7 +647,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_NANDE">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_BV_NANDE"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_BV_NANDE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976adbc53d55902adc48a1ea42b2dc5c1117"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_NAND</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_NANDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector nand.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnand</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnand</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -655,7 +657,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -666,7 +668,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_NEGE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_NEGE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_NEGE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aac6172c55b4f444805f1df1bf2257ee2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_NEG</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_NEGE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector negation (two’s complement).</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvneg</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvneg</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -676,7 +678,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -687,7 +689,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_NORE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_NORE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_NORE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8abedf7576512a8090594509365d0eae"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_NOR</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_NORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector nor.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnor</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -697,7 +699,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -708,7 +710,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_NOTE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_NOTE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_NOTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976abbe996a2436c6f92948585d30f1199c6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_NOT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_NOTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector not (one’s complement).</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnot</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvnot</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -718,7 +720,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -729,7 +731,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_BV_ORE">
 <span id="_CPPv3N12BitwuzlaKind19BITWUZLA_KIND_BV_ORE"></span><span id="_CPPv2N12BitwuzlaKind19BITWUZLA_KIND_BV_ORE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ac50ca800e55cc4c8e3197f98dd62aab8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_OR</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_BV_ORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector or.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvor</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -740,7 +742,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -761,7 +763,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -782,7 +784,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -803,7 +805,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -824,7 +826,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -845,7 +847,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -857,7 +859,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <span id="_CPPv3N12BitwuzlaKind30BITWUZLA_KIND_BV_SADD_OVERFLOWE"></span><span id="_CPPv2N12BitwuzlaKind30BITWUZLA_KIND_BV_SADD_OVERFLOWE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a242fcd66ed186de29a05e8c0b0333b1e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SADD_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind30BITWUZLA_KIND_BV_SADD_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed addition overflow test.</p>
 <p>Predicate indicating if signed addition produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsaddo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsaddo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -867,7 +869,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -879,7 +881,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <span id="_CPPv3N12BitwuzlaKind30BITWUZLA_KIND_BV_SDIV_OVERFLOWE"></span><span id="_CPPv2N12BitwuzlaKind30BITWUZLA_KIND_BV_SDIV_OVERFLOWE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa8d6026abeef81976f9f02aff85b6621"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SDIV_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind30BITWUZLA_KIND_BV_SDIV_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed division overflow test.</p>
 <p>Predicate indicating if signed division produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsdivo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsdivo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -889,7 +891,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -900,7 +902,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_SDIVE">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_BV_SDIVE"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_BV_SDIVE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a088ab90a86ff70adc83929ac657c1854"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SDIV</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_SDIVE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed division.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsdiv</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsdiv</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -910,7 +912,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -921,7 +923,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SGEE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_SGEE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_SGEE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a01b248288899611be827976e5f9fa874"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SGE</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SGEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed greater than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsle</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsle</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -931,7 +933,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -942,7 +944,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SGTE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_SGTE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_SGTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a2aad69a9f398a789d2ae8267643ddd0a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SGT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SGTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed greater than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvslt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvslt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -952,7 +954,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -963,7 +965,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SHLE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_SHLE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_SHLE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a1d4250a00c27945b2a3e80949ec4a49e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SHL</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SHLE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector logical left shift.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvshl</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvshl</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -973,7 +975,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -984,7 +986,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SHRE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_SHRE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_SHRE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad6a953e005e2a62bfaaa3f81bc2eb527"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SHR</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SHRE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector logical right shift.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvshr</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvshr</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -994,7 +996,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1005,7 +1007,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SLEE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_SLEE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_SLEE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae81c648263570e584d9b8f24521b6089"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SLE</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SLEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed less than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsle</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsle</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1015,7 +1017,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1026,7 +1028,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SLTE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_SLTE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_SLTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a53236cb056d337ca849814a014c33877"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SLT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SLTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed less than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvslt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvslt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1036,7 +1038,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1047,7 +1049,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_SMODE">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_BV_SMODE"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_BV_SMODE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976abf6c7059aa26bf35f0f5841970cda20a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SMOD</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_SMODE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed modulo.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsmod</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsmod</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1057,7 +1059,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1069,7 +1071,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <span id="_CPPv3N12BitwuzlaKind30BITWUZLA_KIND_BV_SMUL_OVERFLOWE"></span><span id="_CPPv2N12BitwuzlaKind30BITWUZLA_KIND_BV_SMUL_OVERFLOWE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad01de79cf331d78a8613ed8813680adb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SMUL_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind30BITWUZLA_KIND_BV_SMUL_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed multiplication overflow test.</p>
 <p>Predicate indicating if signed multiplication produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsmulo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsmulo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1079,7 +1081,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1090,7 +1092,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_SREME">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_BV_SREME"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_BV_SREME"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae7ff2d39fb6461fd5bf0e21ef14feb2e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SREM</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_SREME" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed remainder.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsrem</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsrem</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1100,7 +1102,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1112,7 +1114,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <span id="_CPPv3N12BitwuzlaKind30BITWUZLA_KIND_BV_SSUB_OVERFLOWE"></span><span id="_CPPv2N12BitwuzlaKind30BITWUZLA_KIND_BV_SSUB_OVERFLOWE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a98421bf1207c5cc1d579613abf51052c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SSUB_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind30BITWUZLA_KIND_BV_SSUB_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector signed subtraction overflow test.</p>
 <p>Predicate indicatin if signed subtraction produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvssubo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvssubo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1122,7 +1124,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1133,7 +1135,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SUBE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_SUBE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_SUBE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a8602929dd0c535a61bfd9b84d916120f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_SUB</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_SUBE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector subtraction.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsub</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvsub</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1143,7 +1145,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1155,7 +1157,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <span id="_CPPv3N12BitwuzlaKind30BITWUZLA_KIND_BV_UADD_OVERFLOWE"></span><span id="_CPPv2N12BitwuzlaKind30BITWUZLA_KIND_BV_UADD_OVERFLOWE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aee364ca83439affd7ffcd952d15d45f3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UADD_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind30BITWUZLA_KIND_BV_UADD_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned addition overflow test.</p>
 <p>Predicate indicating if unsigned addition produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvuaddo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvuaddo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1165,7 +1167,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1176,7 +1178,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_UDIVE">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_BV_UDIVE"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_BV_UDIVE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af4b56d840354618c017c2bfe6a937a4c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UDIV</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_UDIVE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned division.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvudiv</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvudiv</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1186,7 +1188,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1197,7 +1199,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_UGEE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_UGEE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_UGEE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ad530cccb53508ba0d66963f3855fcbc6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UGE</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_UGEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned greater than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvuge</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvuge</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1207,7 +1209,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1218,7 +1220,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_UGTE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_UGTE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_UGTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976adb7b6519f426ad127b8755273b910926"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UGT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_UGTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned greater than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvugt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvugt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1228,7 +1230,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1239,7 +1241,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_ULEE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_ULEE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_ULEE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a60098702a1ed7198e922d6a5fab40078"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ULE</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_ULEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned less than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvule</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvule</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1249,7 +1251,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1260,7 +1262,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_ULTE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_ULTE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_ULTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa74755a43d11ce093f59bd00c4b3078b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_ULT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_ULTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned less than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvult</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvult</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1270,7 +1272,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1282,7 +1284,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <span id="_CPPv3N12BitwuzlaKind30BITWUZLA_KIND_BV_UMUL_OVERFLOWE"></span><span id="_CPPv2N12BitwuzlaKind30BITWUZLA_KIND_BV_UMUL_OVERFLOWE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aef013815f363f1d1231f13bcf41bf43e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UMUL_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind30BITWUZLA_KIND_BV_UMUL_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned multiplication overflow test.</p>
 <p>Predicate indicating if unsigned multiplication produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvumulo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvumulo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1292,7 +1294,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1303,7 +1305,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_UREME">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_BV_UREME"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_BV_UREME"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae8085a0b9726e3d0d035c63f1e5f7d38"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_UREM</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_UREME" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned remainder.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvurem</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvurem</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1313,7 +1315,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1325,7 +1327,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <span id="_CPPv3N12BitwuzlaKind30BITWUZLA_KIND_BV_USUB_OVERFLOWE"></span><span id="_CPPv2N12BitwuzlaKind30BITWUZLA_KIND_BV_USUB_OVERFLOWE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a0c15c3a68a3b0c8cf0cadfed57e04464"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_USUB_OVERFLOW</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind30BITWUZLA_KIND_BV_USUB_OVERFLOWE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector unsigned subtraction overflow test.</p>
 <p>Predicate indicating if unsigned subtraction produces an overflow.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvusubo</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvusubo</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1335,7 +1337,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1346,7 +1348,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_XNORE">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_BV_XNORE"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_BV_XNORE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a225cd308cb678b654928a43990e5b62b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_XNOR</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_BV_XNORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector xnor.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvxnor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvxnor</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1356,7 +1358,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1367,7 +1369,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_XORE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_BV_XORE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_BV_XORE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a02cd2854bdd27276bb5e9832df86a39d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_BV_XOR</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_BV_XORE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Bit-vector xor.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvxor</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">bvxor</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1378,7 +1380,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1400,7 +1402,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1422,7 +1424,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1444,7 +1446,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1466,7 +1468,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1488,7 +1490,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1510,7 +1512,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1521,7 +1523,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_ABSE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_ABSE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_ABSE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a537d83e2bb410f4e285771f54205a5ee"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_ABS</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_ABSE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point absolute value.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.abs</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.abs</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1531,7 +1533,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1542,7 +1544,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_ADDE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_ADDE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_ADDE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a7c56b2d107f3388a620e45a4a4f5619b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_ADD</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_ADDE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point addition.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.add</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.add</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1552,7 +1554,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1563,7 +1565,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_DIVE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_DIVE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_DIVE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a461e801b4f2a76f57c8fc191cb38db0c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_DIV</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_DIVE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point division.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.div</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.div</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1573,7 +1575,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1584,7 +1586,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind22BITWUZLA_KIND_FP_EQUALE">
 <span id="_CPPv3N12BitwuzlaKind22BITWUZLA_KIND_FP_EQUALE"></span><span id="_CPPv2N12BitwuzlaKind22BITWUZLA_KIND_FP_EQUALE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a464f0dc1d9147d030830f1f11dfa3a93"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_EQUAL</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind22BITWUZLA_KIND_FP_EQUALE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point equality.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.eq</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.eq</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times ... \times \mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1594,7 +1596,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1605,7 +1607,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_FMAE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_FMAE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_FMAE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af177e9da8ebb95b56c047c0e06619465"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_FMA</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_FMAE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point fused multiplcation and addition.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.fma</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.fma</span></code></p>
 <p><strong>Number of Arguments:</strong> 4</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1614,7 +1616,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1625,7 +1627,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_FP_FPE">
 <span id="_CPPv3N12BitwuzlaKind19BITWUZLA_KIND_FP_FPE"></span><span id="_CPPv2N12BitwuzlaKind19BITWUZLA_KIND_FP_FPE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976af04de051ba27a684762e3d49aff12d0f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_FP</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_FP_FPE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point IEEE 754 value.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_1 \times BV_e \times BV_{s-1} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1635,7 +1637,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1646,7 +1648,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_GEQE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_GEQE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_GEQE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afa6ed24ccbfe633092709d5f11dbc9fa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_GEQ</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_GEQE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point greater than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.geq</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.geq</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times ... \times \mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1656,7 +1658,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1667,7 +1669,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_FP_GTE">
 <span id="_CPPv3N12BitwuzlaKind19BITWUZLA_KIND_FP_GTE"></span><span id="_CPPv2N12BitwuzlaKind19BITWUZLA_KIND_FP_GTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a130e59b80aa27d9e61ae7459e19f2a28"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_GT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_FP_GTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point greater than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.gt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.gt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times ... \times \mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1677,7 +1679,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1688,7 +1690,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_INFE">
 <span id="_CPPv3N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_INFE"></span><span id="_CPPv2N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_INFE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a92cd951413a777b45d53383e9c6d6822"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_INF</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_INFE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is infinity tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isInfinite</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isInfinite</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1698,7 +1700,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1709,7 +1711,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_NANE">
 <span id="_CPPv3N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_NANE"></span><span id="_CPPv2N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_NANE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a09eb07070ded59fe96098e64b3208ff6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_NAN</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_NANE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is Nan tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNaN</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNaN</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1719,7 +1721,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1730,7 +1732,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_NEGE">
 <span id="_CPPv3N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_NEGE"></span><span id="_CPPv2N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_NEGE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae5883f6f99ccf4d05a6a924930d4d174"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_NEG</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_NEGE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is negative tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNegative</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNegative</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1740,7 +1742,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1751,7 +1753,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind26BITWUZLA_KIND_FP_IS_NORMALE">
 <span id="_CPPv3N12BitwuzlaKind26BITWUZLA_KIND_FP_IS_NORMALE"></span><span id="_CPPv2N12BitwuzlaKind26BITWUZLA_KIND_FP_IS_NORMALE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a369c2b14f3c98b8cc6d2119e3b2fe84c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_NORMAL</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind26BITWUZLA_KIND_FP_IS_NORMALE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is normal tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNormal</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isNormal</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1761,7 +1763,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1772,7 +1774,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_POSE">
 <span id="_CPPv3N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_POSE"></span><span id="_CPPv2N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_POSE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976aa87f87ad02f91bd78d75283ae0183fc6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_POS</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind23BITWUZLA_KIND_FP_IS_POSE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is positive tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isPositive</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isPositive</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1782,7 +1784,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1793,7 +1795,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind29BITWUZLA_KIND_FP_IS_SUBNORMALE">
 <span id="_CPPv3N12BitwuzlaKind29BITWUZLA_KIND_FP_IS_SUBNORMALE"></span><span id="_CPPv2N12BitwuzlaKind29BITWUZLA_KIND_FP_IS_SUBNORMALE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976afa0dc7ebb4d5d9aebf99273c83b05ca6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_SUBNORMAL</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind29BITWUZLA_KIND_FP_IS_SUBNORMALE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is subnormal tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isSubnormal</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isSubnormal</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1803,7 +1805,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1814,7 +1816,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind24BITWUZLA_KIND_FP_IS_ZEROE">
 <span id="_CPPv3N12BitwuzlaKind24BITWUZLA_KIND_FP_IS_ZEROE"></span><span id="_CPPv2N12BitwuzlaKind24BITWUZLA_KIND_FP_IS_ZEROE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a3128bd16528d52f8b3610d07033e6237"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_IS_ZERO</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind24BITWUZLA_KIND_FP_IS_ZEROE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point is zero tester.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isZero</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.isZero</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1824,7 +1826,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1835,7 +1837,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_LEQE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_LEQE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_LEQE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a87fe207aa07e9d617d60012eda1ea34d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_LEQ</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_LEQE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point less than or equal.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.leq</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.leq</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times ... \times \mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1846,7 +1848,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1857,7 +1859,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_FP_LTE">
 <span id="_CPPv3N12BitwuzlaKind19BITWUZLA_KIND_FP_LTE"></span><span id="_CPPv2N12BitwuzlaKind19BITWUZLA_KIND_FP_LTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a15453a3762bc268cdce1919331998ff5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_LT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind19BITWUZLA_KIND_FP_LTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point less than.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.lt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.lt</span></code></p>
 <p><strong>Number of Arguments:</strong> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1868,7 +1870,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1879,7 +1881,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_MAXE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_MAXE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_MAXE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976acd955fc447bf93236cf44e547e7d15e9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_MAX</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_MAXE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point max.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.max</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.max</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1889,7 +1891,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1900,7 +1902,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_MINE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_MINE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_MINE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a727ae2bfbf948df14b2f076f4a97d615"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_MIN</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_MINE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point min.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.min</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.min</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1910,7 +1912,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1921,7 +1923,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_MULE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_MULE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_MULE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a77bd8f7a8f44425b6396950881643d60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_MUL</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_MULE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point multiplcation.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.mul</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.mul</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1931,7 +1933,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1942,7 +1944,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_NEGE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_NEGE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_NEGE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ae2660f0ecd3954635656f59d588d99d9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_NEG</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_NEGE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point negation.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.neg</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.neg</span></code></p>
 <p><strong>Number of Arguments:</strong> 1</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1952,7 +1954,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1963,7 +1965,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_REME">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_REME"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_REME"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a6fe0a39b3d68afe341d0ac044c5e2a63"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_REM</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_REME" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point remainder.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.rem</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.rem</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1973,7 +1975,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -1984,7 +1986,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_RTIE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_RTIE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_RTIE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976a28348c409c85064535d1273c2c3b6b95"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_RTI</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_RTIE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point round to integral.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.roundToIntegral</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.roundToIntegral</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -1994,7 +1996,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2005,7 +2007,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_FP_SQRTE">
 <span id="_CPPv3N12BitwuzlaKind21BITWUZLA_KIND_FP_SQRTE"></span><span id="_CPPv2N12BitwuzlaKind21BITWUZLA_KIND_FP_SQRTE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976ab68b4ea8274e24fd6f4e5265c4bd2fd2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_SQRT</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind21BITWUZLA_KIND_FP_SQRTE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point square root.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.sqrt</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.sqrt</span></code></p>
 <p><strong>Number of Arguments:</strong> 2</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -2015,7 +2017,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2026,7 +2028,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <dt class="sig sig-object cpp" id="_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_SUBE">
 <span id="_CPPv3N12BitwuzlaKind20BITWUZLA_KIND_FP_SUBE"></span><span id="_CPPv2N12BitwuzlaKind20BITWUZLA_KIND_FP_SUBE"></span><span class="target" id="enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976accf8b212b289593bd8a95310e16009df"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_KIND_FP_SUB</span></span></span><a class="headerlink" href="#_CPPv4N12BitwuzlaKind20BITWUZLA_KIND_FP_SUBE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Floating-point subtraction.</p>
-<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.sub</span></code> </p>
+<p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">fp.sub</span></code></p>
 <p><strong>Number of Arguments:</strong> 3</p>
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \times \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
@@ -2036,7 +2038,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2058,7 +2060,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2080,7 +2082,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2102,7 +2104,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2124,7 +2126,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2146,7 +2148,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2168,7 +2170,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code> </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code></p></li>
 </ul>
 </p></li>
 </ul>
@@ -2187,13 +2189,13 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p>The returned char* pointer is only valid until the next <code class="docutils literal notranslate"><span class="pre">bitwuzla_kind_to_string</span></code> call. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A string representation of the given term kind. </p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

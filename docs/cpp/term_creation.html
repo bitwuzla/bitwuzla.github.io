@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Term Creation &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-        <script src="../static/jquery.js"></script>
-        <script src="../static/underscore.js"></script>
-        <script src="../static/doctools.js"></script>
+        <script src="../static/jquery.js?v=5d32c60e"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/doctools.js?v=888ff710"></script>
+        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -35,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -93,8 +95,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="term-creation">
-<h1>Term Creation<a class="headerlink" href="#term-creation" title="Permalink to this headline"></a></h1>
+  <section id="term-creation">
+<h1>Term Creation<a class="headerlink" href="#term-creation" title="Permalink to this heading"></a></h1>
 <p>Terms of a given <a class="reference internal" href="enums/kind.html#_CPPv4N8bitwuzla4KindE" title="bitwuzla::Kind"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::Kind</span></code></a> are created via
 <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code>. A comprehensive documentation of supported
 term kinds can be found <a class="reference internal" href="enums/kind.html"><span class="doc">here</span></a>.
@@ -112,7 +114,7 @@ instances.</p>
 <span id="_CPPv37mk_truev"></span><span id="_CPPv27mk_truev"></span><span id="mk_true"></span><span class="target" id="group__cpp__term__creation_1ga902572f98c22861ec1ceb64d454ae335"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_true</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47mk_truev" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a true value. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A term representing true. </p>
 </dd>
 </dl>
@@ -123,7 +125,7 @@ instances.</p>
 <span id="_CPPv38mk_falsev"></span><span id="_CPPv28mk_falsev"></span><span id="mk_false"></span><span class="target" id="group__cpp__term__creation_1gaab3ce23bc5eb7edb0a6069fbe508dbd6"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_false</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48mk_falsev" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a false value. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A term representing false. </p>
 </dd>
 </dl>
@@ -135,16 +137,16 @@ instances.</p>
 <dd><p>Create a bit-vector value zero. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value 0 of given sort.</p>
 </dd>
 </dl>
@@ -156,16 +158,16 @@ instances.</p>
 <dd><p>Create a bit-vector value one. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value 1 of given sort.</p>
 </dd>
 </dl>
@@ -177,16 +179,16 @@ instances.</p>
 <dd><p>Create a bit-vector value where all bits are set to 1. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value of given sort where all bits are set to 1. </p>
 </dd>
 </dl>
@@ -198,16 +200,16 @@ instances.</p>
 <dd><p>Create a bit-vector minimum signed value. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value of given sort where the MSB is set to 1 and all remaining bits are set to 0. </p>
 </dd>
 </dl>
@@ -219,16 +221,16 @@ instances.</p>
 <dd><p>Create a bit-vector maximum signed value. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value of given sort where the MSB is set to 0 and all remaining bits are set to 1. </p>
 </dd>
 </dl>
@@ -242,7 +244,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -252,14 +254,14 @@ instances.</p>
 <p>Given value must fit into a bit-vector of given size (sort).</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>value</strong> – A string representing the value. </p></li>
 <li><p><strong>base</strong> – The base in which the string is given; <code class="docutils literal notranslate"><span class="pre">2</span></code> for binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and <code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the bit-vector value of given sort. </p>
 </dd>
 </dl>
@@ -272,7 +274,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -282,13 +284,13 @@ instances.</p>
 <p>Given value must fit into a bit-vector of given size (sort).</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>value</strong> – The unsigned integer representation of the bit-vector value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the bit-vector value of given sort.</p>
 </dd>
 </dl>
@@ -301,7 +303,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -311,13 +313,13 @@ instances.</p>
 <p>Given value must fit into a bit-vector of given size (sort).</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>value</strong> – The unsigned integer representation of the bit-vector value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the bit-vector value of given sort.</p>
 </dd>
 </dl>
@@ -329,16 +331,16 @@ instances.</p>
 <dd><p>Create a floating-point positive zero value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">+zero</span></code>). <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point positive zero value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -350,16 +352,16 @@ instances.</p>
 <dd><p>Create a floating-point negative zero value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">-zero</span></code>). <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point negative zero value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -371,16 +373,16 @@ instances.</p>
 <dd><p>Create a floating-point positive infinity value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">+oo</span></code>). <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point positive infinity value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -392,16 +394,16 @@ instances.</p>
 <dd><p>Create a floating-point negative infinity value (SMT-LIB: <code class="docutils literal notranslate"><span class="pre">-oo</span></code>). <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point negative infinity value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -413,16 +415,16 @@ instances.</p>
 <dd><p>Create a floating-point NaN value. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point NaN value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -433,14 +435,14 @@ instances.</p>
 <span id="_CPPv311mk_fp_valueRK4TermRK4TermRK4Term"></span><span id="_CPPv211mk_fp_valueRK4TermRK4TermRK4Term"></span><span id="mk_fp_value__TermCR.TermCR.TermCR"></span><span class="target" id="group__cpp__term__creation_1ga1f132666bc60445c6de534ce4edd7a9d"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_value</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bv_sign</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bv_exponent</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bv_significand</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411mk_fp_valueRK4TermRK4TermRK4Term" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a floating-point value from its IEEE 754 standard representation given as three bit-vector values representing the sign bit, the exponent and the significand.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bv_sign</strong> – The sign bit. </p></li>
 <li><p><strong>bv_exponent</strong> – The exponent bit-vector value. </p></li>
 <li><p><strong>bv_significand</strong> – The significand bit-vector value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the floating-point value. </p>
 </dd>
 </dl>
@@ -453,7 +455,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -463,14 +465,14 @@ instances.</p>
 <p>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>rm</strong> – The rounding mode. </p></li>
 <li><p><strong>real</strong> – The decimal string representing a real value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A floating-point representation of the given real string. If <code class="docutils literal notranslate"><span class="pre">rm</span></code> is of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a> the floating-point will be of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, else it will be a non-value term.</p>
 </dd>
 </dl>
@@ -483,7 +485,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -493,7 +495,7 @@ instances.</p>
 <p>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>rm</strong> – The rounding mode. </p></li>
@@ -501,7 +503,7 @@ instances.</p>
 <li><p><strong>den</strong> – The decimal string representing the denominator.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A floating-point representation of the given rational string. If <code class="docutils literal notranslate"><span class="pre">rm</span></code> is of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a> the floating-point will be of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, else it will be a non-value term.</p>
 </dd>
 </dl>
@@ -514,19 +516,19 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gacb1c94b05a3181ab3797461db1e0101c"><span class="std std-ref"><span class="pre">mk_array_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gacb1c94b05a3181ab3797461db1e0101c"><span class="std std-ref"><span class="pre">mk_array_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the array. </p></li>
 <li><p><strong>value</strong> – The term to initialize the elements of the array with.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca0a0d89e2802bf5614a9e6e3531c563a6"><span class="std std-ref">Kind::CONST_ARRAY</span></a>, representing a constant array of given sort.</p>
 </dd>
 </dl>
@@ -538,16 +540,16 @@ instances.</p>
 <dd><p>Create a rounding mode value. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/roundingmode.html#namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e"><span class="std std-ref"><span class="pre">RoundingMode</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/roundingmode.html#namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e"><span class="std std-ref"><span class="pre">RoundingMode</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>rm</strong> – The rounding mode value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4caecc2e9c313faddb07e7da223c1dc5c3f"><span class="std std-ref">Kind::VALUE</span></a>, representing the rounding mode value.</p>
 </dd>
 </dl>
@@ -560,20 +562,20 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4c"><span class="std std-ref"><span class="pre">Kind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4c"><span class="std std-ref"><span class="pre">Kind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>args</strong> – The argument terms. </p></li>
 <li><p><strong>indices</strong> – The indices of this term, empty if not indexed.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an operation of given kind.</p>
 </dd>
 </dl>
@@ -591,19 +593,19 @@ instances.</p>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gacccceb1252cbd32e2bb1600de5651b12"><span class="std std-ref"><span class="pre">mk_fun_sort()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga86aa84200669f4ea6101efce53653b55"><span class="std std-ref"><span class="pre">mk_rm_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga86aa84200669f4ea6101efce53653b55"><span class="std std-ref"><span class="pre">mk_rm_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the constant. </p></li>
 <li><p><strong>symbol</strong> – The symbol of the constant.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca8d6b5cada83510220f59e00ce86d4d92"><span class="std std-ref">Kind::CONSTANT</span></a>, representing the constant.</p>
 </dd>
 </dl>
@@ -620,7 +622,7 @@ instances.</p>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"><span class="std std-ref"><span class="pre">mk_bv_sort()</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"><span class="std std-ref"><span class="pre">mk_fp_sort()</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1gacccceb1252cbd32e2bb1600de5651b12"><span class="std std-ref"><span class="pre">mk_fun_sort()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga86aa84200669f4ea6101efce53653b55"><span class="std std-ref"><span class="pre">mk_rm_sort()</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__cpp__sort__creation_1ga86aa84200669f4ea6101efce53653b55"><span class="std std-ref"><span class="pre">mk_rm_sort()</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -630,20 +632,20 @@ instances.</p>
 <p>This creates a variable to be bound by quantifiers or lambdas.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the variable. </p></li>
 <li><p><strong>symbol</strong> – The symbol of the variable.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of <a class="reference internal" href="enums/kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4cae61ad9b2553a293b4a3f4d3b4fa5ab31"><span class="std std-ref">Kind::VARIABLE</span></a>, representing the variable.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
-</div>
+</section>
 
 
            </div>

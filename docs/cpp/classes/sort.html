@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sort &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -33,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -75,8 +77,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="sort">
-<h1>Sort<a class="headerlink" href="#sort" title="Permalink to this headline"></a></h1>
+  <section id="sort">
+<h1>Sort<a class="headerlink" href="#sort" title="Permalink to this heading"></a></h1>
 <p>Bitwuzla supports array (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">Array</span></code>), Boolean (SMT-LIB:
 <code class="code docutils literal notranslate"><span class="pre">Bool</span></code>), bit-vector (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">BitVec</span> <span class="pre">n)</span></code>), floating-point
 (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">FloatingPoint</span> <span class="pre">e</span> <span class="pre">s)</span></code>), rounding mode (SMT-LIB:
@@ -120,7 +122,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort7is_nullEv"></span><span id="_CPPv2NK8bitwuzla4Sort7is_nullEv"></span><span id="bitwuzla::Sort::is_nullC"></span><span class="target" id="classbitwuzla_1_1Sort_1a6ef4a7a7c462ac6772b74df28b0564df"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_null</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort7is_nullEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if this sort is a null sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a null sort. </p>
 </dd>
 </dl>
@@ -131,7 +133,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort2idEv"></span><span id="_CPPv2NK8bitwuzla4Sort2idEv"></span><span id="bitwuzla::Sort::idC"></span><span class="target" id="classbitwuzla_1_1Sort_1a6f48ffc96f81bbc105cfe76b9c814261"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort2idEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the id of this sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The sort id. </p>
 </dd>
 </dl>
@@ -143,7 +145,7 @@ instances.</p>
 <dd><p>Get the size of a bit-vector sort.</p>
 <p>Requires that given sort is a bit-vector sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The size of the bit-vector sort. </p>
 </dd>
 </dl>
@@ -155,7 +157,7 @@ instances.</p>
 <dd><p>Get the exponent size of a floating-point sort.</p>
 <p>Requires that given sort is a floating-point sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The exponent size of the floating-point sort. </p>
 </dd>
 </dl>
@@ -167,7 +169,7 @@ instances.</p>
 <dd><p>Get the significand size of a floating-point sort.</p>
 <p>Requires that given sort is a floating-point sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The significand size of the floating-point sort. </p>
 </dd>
 </dl>
@@ -179,7 +181,7 @@ instances.</p>
 <dd><p>Get the index sort of an array sort.</p>
 <p>Requires that given sort is an array sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The index sort of the array sort. </p>
 </dd>
 </dl>
@@ -191,7 +193,7 @@ instances.</p>
 <dd><p>Get the element sort of an array sort.</p>
 <p>Requires that given sort is an array sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The element sort of the array sort. </p>
 </dd>
 </dl>
@@ -203,7 +205,7 @@ instances.</p>
 <dd><p>Get the domain sorts of a function sort.</p>
 <p>Requires that given sort is a function sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The domain sorts of the function sort. </p>
 </dd>
 </dl>
@@ -215,7 +217,7 @@ instances.</p>
 <dd><p>Get the codomain sort of a function sort.</p>
 <p>Requires that given sort is a function sort.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The codomain sort of the function sort. </p>
 </dd>
 </dl>
@@ -226,7 +228,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort9fun_arityEv"></span><span id="_CPPv2NK8bitwuzla4Sort9fun_arityEv"></span><span id="bitwuzla::Sort::fun_arityC"></span><span class="target" id="classbitwuzla_1_1Sort_1ad9f4109e31ec0dba4019bde19e7d4261"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fun_arity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort9fun_arityEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the arity of a function sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The number of arguments of the function sort. </p>
 </dd>
 </dl>
@@ -237,7 +239,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort20uninterpreted_symbolEv"></span><span id="_CPPv2NK8bitwuzla4Sort20uninterpreted_symbolEv"></span><span id="bitwuzla::Sort::uninterpreted_symbolC"></span><span class="target" id="classbitwuzla_1_1Sort_1a8abeaa1a38012dd895a023186fbfb42a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">uninterpreted_symbol</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort20uninterpreted_symbolEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the symbol of an uninterpreted sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The symbol. </p>
 </dd>
 </dl>
@@ -248,7 +250,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort8is_arrayEv"></span><span id="_CPPv2NK8bitwuzla4Sort8is_arrayEv"></span><span id="bitwuzla::Sort::is_arrayC"></span><span class="target" id="classbitwuzla_1_1Sort_1a5053644e2c55124772be5608434dcd0d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_array</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort8is_arrayEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if this sort is an array sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is an array sort. </p>
 </dd>
 </dl>
@@ -259,7 +261,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort7is_boolEv"></span><span id="_CPPv2NK8bitwuzla4Sort7is_boolEv"></span><span id="bitwuzla::Sort::is_boolC"></span><span class="target" id="classbitwuzla_1_1Sort_1a39b28f0a643d86afcb1fa8b643c70b5d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort7is_boolEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if this sort is a Boolean sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a Boolean sort. </p>
 </dd>
 </dl>
@@ -270,7 +272,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort5is_bvEv"></span><span id="_CPPv2NK8bitwuzla4Sort5is_bvEv"></span><span id="bitwuzla::Sort::is_bvC"></span><span class="target" id="classbitwuzla_1_1Sort_1a40020deea906cc3d5d3ba68455fecb0d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_bv</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort5is_bvEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if this sort is a bit-vector sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if <code class="docutils literal notranslate"><span class="pre">sort</span></code> is a bit-vector sort. </p>
 </dd>
 </dl>
@@ -281,7 +283,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort5is_fpEv"></span><span id="_CPPv2NK8bitwuzla4Sort5is_fpEv"></span><span id="bitwuzla::Sort::is_fpC"></span><span class="target" id="classbitwuzla_1_1Sort_1a4df38c43b17972bd890cc7aed86d1a94"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_fp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort5is_fpEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if this sort is a floating-point sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a floating-point sort. </p>
 </dd>
 </dl>
@@ -292,7 +294,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort6is_funEv"></span><span id="_CPPv2NK8bitwuzla4Sort6is_funEv"></span><span id="bitwuzla::Sort::is_funC"></span><span class="target" id="classbitwuzla_1_1Sort_1a94f8916e0b6635e9405f8346b90a0a74"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_fun</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort6is_funEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if this sort is a function sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a function sort. </p>
 </dd>
 </dl>
@@ -303,7 +305,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort5is_rmEv"></span><span id="_CPPv2NK8bitwuzla4Sort5is_rmEv"></span><span id="bitwuzla::Sort::is_rmC"></span><span class="target" id="classbitwuzla_1_1Sort_1af1ce6186dac747fc78cb9fe78f3a62f4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_rm</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort5is_rmEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if this sort is a Roundingmode sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is a Roundingmode sort. </p>
 </dd>
 </dl>
@@ -314,7 +316,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort16is_uninterpretedEv"></span><span id="_CPPv2NK8bitwuzla4Sort16is_uninterpretedEv"></span><span id="bitwuzla::Sort::is_uninterpretedC"></span><span class="target" id="classbitwuzla_1_1Sort_1aa6464ab9f30e220a79427551614f7246"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_uninterpreted</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort16is_uninterpretedEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine if this sort is an uninterpreted sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if this sort is an uninterpreted sort. </p>
 </dd>
 </dl>
@@ -325,7 +327,7 @@ instances.</p>
 <span id="_CPPv3NK8bitwuzla4Sort3strEv"></span><span id="_CPPv2NK8bitwuzla4Sort3strEv"></span><span id="bitwuzla::Sort::strC"></span><span class="target" id="classbitwuzla_1_1Sort_1a91afbf06f7d49aff017482d1fbebdfbb"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">str</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Sort3strEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get string representation of this sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>String representation of this sort. </p>
 </dd>
 </dl>
@@ -340,13 +342,13 @@ instances.</p>
 <span id="_CPPv3N8bitwuzlaeqERK4SortRK4Sort"></span><span id="_CPPv2N8bitwuzlaeqERK4SortRK4Sort"></span><span id="bitwuzla::eq-operator__SortCR.SortCR"></span><span class="target" id="namespacebitwuzla_1a4ba0c24855c35ade9d9eabd19ebf7c18"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><span class="n"><span class="pre">Sort</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">a</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><span class="n"><span class="pre">Sort</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzlaeqERK4SortRK4Sort" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Syntactical equality operator.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>a</strong> – The first sort. </p></li>
 <li><p><strong>b</strong> – The second sort. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if the given sorts are equal. </p>
 </dd>
 </dl>
@@ -357,13 +359,13 @@ instances.</p>
 <span id="_CPPv3N8bitwuzlaneERK4SortRK4Sort"></span><span id="_CPPv2N8bitwuzlaneERK4SortRK4Sort"></span><span id="bitwuzla::neq-operator__SortCR.SortCR"></span><span class="target" id="namespacebitwuzla_1a841e511f8f36d5c4ca14dffb910110a4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><span class="n"><span class="pre">Sort</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">a</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><span class="n"><span class="pre">Sort</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzlaneERK4SortRK4Sort" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Syntactical disequality operator.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>a</strong> – The first sort. </p></li>
 <li><p><strong>b</strong> – The second sort. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if the given sorts are disequal. </p>
 </dd>
 </dl>
@@ -374,13 +376,13 @@ instances.</p>
 <span id="_CPPv3N8bitwuzlalsERNSt7ostreamERK4Sort"></span><span id="_CPPv2N8bitwuzlalsERNSt7ostreamERK4Sort"></span><span id="bitwuzla::lshift-operator__osR.SortCR"></span><span class="target" id="namespacebitwuzla_1a67bb5a7e549af92a48b54d169225e3c9"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><span class="n"><span class="pre">Sort</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzlalsERNSt7ostreamERK4Sort" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Print sort to output stream. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>out</strong> – The output stream. </p></li>
 <li><p><strong>sort</strong> – The sort. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The output stream. </p>
 </dd>
 </dl>
@@ -399,10 +401,10 @@ instances.</p>
 <span id="_CPPv3NKSt4hashIN8bitwuzla4SortEEclERKN8bitwuzla4SortE"></span><span id="_CPPv2NKSt4hashIN8bitwuzla4SortEEclERKN8bitwuzla4SortE"></span><span id="std::hash:bitwuzla::Sort:::call-operator__bitwuzla::SortCRC"></span><span class="target" id="structstd_1_1hash_3_01bitwuzla_1_1Sort_01_4_1a470e53b4875bf593247cf97e1aa923d0"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><span class="n"><span class="pre">Sort</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NKSt4hashIN8bitwuzla4SortEEclERKN8bitwuzla4SortE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Hash function for Sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The hash value of the sort. </p>
 </dd>
 </dl>
@@ -412,7 +414,7 @@ instances.</p>
 </dd></dl>
 
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
-</div>
+</section>
 
 
            </div>

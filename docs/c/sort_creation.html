@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sort Creation &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-        <script src="../static/jquery.js"></script>
-        <script src="../static/underscore.js"></script>
-        <script src="../static/doctools.js"></script>
+        <script src="../static/jquery.js?v=5d32c60e"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/doctools.js?v=888ff710"></script>
+        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -35,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -93,8 +95,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="sort-creation">
-<h1>Sort Creation<a class="headerlink" href="#sort-creation" title="Permalink to this headline"></a></h1>
+  <section id="sort-creation">
+<h1>Sort Creation<a class="headerlink" href="#sort-creation" title="Permalink to this heading"></a></h1>
 <p>Bitwuzla supports creating array (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">Array</span></code>), Boolean (SMT-LIB:
 <code class="code docutils literal notranslate"><span class="pre">Bool</span></code>), bit-vector (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">BitVec</span> <span class="pre">n)</span></code>), floating-point
 (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">FloatingPoint</span> <span class="pre">e</span> <span class="pre">s)</span></code>), rounding mode (SMT-LIB:
@@ -119,19 +121,19 @@ instances.</p>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlasort.html#group__c__bitwuzlasort_1ga5260f3a3293ab59ecbba24500e9a484f"><span class="std std-ref"><span class="pre">bitwuzla_sort_array_get_element</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1ga9f1e378f65a01e952266fa3f4329edfb"><span class="std std-ref"><span class="pre">bitwuzla_term_is_array</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gaede3ec49cd0246cf82aba9d6f56cf1ab"><span class="std std-ref"><span class="pre">bitwuzla_term_array_get_index_sort</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1ga3b3d22be4845607e9fef67234bbe49b3"><span class="std std-ref"><span class="pre">bitwuzla_term_array_get_element_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1ga3b3d22be4845607e9fef67234bbe49b3"><span class="std std-ref"><span class="pre">bitwuzla_term_array_get_element_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>index</strong> – The index sort of the array sort. </p></li>
 <li><p><strong>element</strong> – The element sort of the array sort. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>An array sort which maps sort <code class="docutils literal notranslate"><span class="pre">index</span></code> to sort <code class="docutils literal notranslate"><span class="pre">element</span></code>.</p>
 </dd>
 </dl>
@@ -142,7 +144,7 @@ instances.</p>
 <span id="_CPPv321bitwuzla_mk_bool_sortv"></span><span id="_CPPv221bitwuzla_mk_bool_sortv"></span><span id="bitwuzla_mk_bool_sort"></span><span class="target" id="group__c__sort__creation_1gacdf18c2d5a68f684eb93c4e0a781625c"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bool_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_mk_bool_sortv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a Boolean sort. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A Boolean sort. </p>
 </dd>
 </dl>
@@ -158,16 +160,16 @@ instances.</p>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlasort.html#group__c__bitwuzlasort_1ga144ec29d4ab20bf57771fd8176d8a97f"><span class="std std-ref"><span class="pre">bitwuzla_sort_is_bv</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlasort.html#group__c__bitwuzlasort_1ga72f79b3c0df6adf66106b61fe8b7f175"><span class="std std-ref"><span class="pre">bitwuzla_sort_bv_get_size</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gab0a016bbaf3df6b5cd7f86b75462702d"><span class="std std-ref"><span class="pre">bitwuzla_term_is_bv</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gaca4f4cdbeb541b7383d05505869b8c52"><span class="std std-ref"><span class="pre">bitwuzla_term_bv_get_size</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gaca4f4cdbeb541b7383d05505869b8c52"><span class="std std-ref"><span class="pre">bitwuzla_term_bv_get_size</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>size</strong> – The size of the bit-vector sort. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A bit-vector sort of given size.</p>
 </dd>
 </dl>
@@ -185,19 +187,19 @@ instances.</p>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlasort.html#group__c__bitwuzlasort_1ga2dd5e721758bce9191d8ad1bba9d0895"><span class="std std-ref"><span class="pre">bitwuzla_sort_fp_get_sig_size</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gaa4b342abd33b3ca5c41562282309af03"><span class="std std-ref"><span class="pre">bitwuzla_term_is_fp</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1ga3433f784e5828c28de594c2eae2bfb25"><span class="std std-ref"><span class="pre">bitwuzla_term_fp_get_exp_size</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gadb45c01bf4a9299f2423e1eaaadb0033"><span class="std std-ref"><span class="pre">bitwuzla_term_fp_get_sig_size</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gadb45c01bf4a9299f2423e1eaaadb0033"><span class="std std-ref"><span class="pre">bitwuzla_term_fp_get_sig_size</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>exp_size</strong> – The size of the exponent. </p></li>
 <li><p><strong>sig_size</strong> – The size of the significand (including sign bit). </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A floating-point sort of given format.</p>
 </dd>
 </dl>
@@ -217,20 +219,20 @@ instances.</p>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gacfbbebc377fc344eb21d06a2236c8575"><span class="std std-ref"><span class="pre">bitwuzla_term_is_fun</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1ga691c7593f89b78f0aff9a975d7605809"><span class="std std-ref"><span class="pre">bitwuzla_term_fun_get_arity</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1ga3989a0aec5d263aa2850237932de03e3"><span class="std std-ref"><span class="pre">bitwuzla_term_fun_get_domain_sorts</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1ga6e7d67964c94704bd225f011a70caf49"><span class="std std-ref"><span class="pre">bitwuzla_term_fun_get_codomain_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1ga6e7d67964c94704bd225f011a70caf49"><span class="std std-ref"><span class="pre">bitwuzla_term_fun_get_codomain_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>arity</strong> – The number of arguments to the function. </p></li>
 <li><p><strong>domain</strong> – The domain sorts (the sorts of the arguments). The number of sorts in this vector must match <code class="docutils literal notranslate"><span class="pre">arity</span></code>. </p></li>
 <li><p><strong>codomain</strong> – The codomain sort (the sort of the return value). </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A function sort of given domain and codomain sorts.</p>
 </dd>
 </dl>
@@ -243,13 +245,13 @@ instances.</p>
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlasort.html#group__c__bitwuzlasort_1ga2a3f0e4bc15dec1ce49319265130501b"><span class="std std-ref"><span class="pre">bitwuzla_sort_is_rm</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gae75357462b4b26a8b94c97cd04512b2e"><span class="std std-ref"><span class="pre">bitwuzla_term_is_rm</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gae75357462b4b26a8b94c97cd04512b2e"><span class="std std-ref"><span class="pre">bitwuzla_term_is_rm</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A Roundingmode sort. </p>
 </dd>
 </dl>
@@ -262,22 +264,22 @@ instances.</p>
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlasort.html#group__c__bitwuzlasort_1gaf57078a6b8847a862a43899b94b1a176"><span class="std std-ref"><span class="pre">bitwuzla_sort_is_uninterpreted</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gad157215b947eeaa42f2817cebe685185"><span class="std std-ref"><span class="pre">bitwuzla_term_is_uninterpreted</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="types/bitwuzlaterm.html#group__c__bitwuzlaterm_1gad157215b947eeaa42f2817cebe685185"><span class="std std-ref"><span class="pre">bitwuzla_term_is_uninterpreted</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>symbol</strong> – The symbol of the sort. May be NULL. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A uninterpreted sort. </p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

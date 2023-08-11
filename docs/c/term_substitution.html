@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Term Substitution &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-        <script src="../static/jquery.js"></script>
-        <script src="../static/underscore.js"></script>
-        <script src="../static/doctools.js"></script>
+        <script src="../static/jquery.js?v=5d32c60e"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/doctools.js?v=888ff710"></script>
+        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -33,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -75,14 +77,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="term-substitution">
-<h1>Term Substitution<a class="headerlink" href="#term-substitution" title="Permalink to this headline"></a></h1>
+  <section id="term-substitution">
+<h1>Term Substitution<a class="headerlink" href="#term-substitution" title="Permalink to this heading"></a></h1>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv424bitwuzla_substitute_termP8Bitwuzla12BitwuzlaTerm6size_tA_12BitwuzlaTermA_12BitwuzlaTerm">
 <span id="_CPPv324bitwuzla_substitute_termP8Bitwuzla12BitwuzlaTerm6size_tA_12BitwuzlaTermA_12BitwuzlaTerm"></span><span id="_CPPv224bitwuzla_substitute_termP8Bitwuzla12BitwuzlaTerm6size_tA_12BitwuzlaTermA_12BitwuzlaTerm"></span><span id="bitwuzla_substitute_term__BitwuzlaP.BitwuzlaTerm.s.BitwuzlaTermA.BitwuzlaTermA"></span><span class="target" id="group__c__term__substitution_1gaaec7b262c26d704a75dd2f6454c92756"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_substitute_term</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">map_size</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">map_keys</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">map_values</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424bitwuzla_substitute_termP8Bitwuzla12BitwuzlaTerm6size_tA_12BitwuzlaTermA_12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Substitute a set of keys with their corresponding values in the given term.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>term</strong> – The term in which the keys are to be substituted. </p></li>
@@ -91,7 +93,7 @@
 <li><p><strong>map_values</strong> – The mapped values.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The resulting term from this substitution. </p>
 </dd>
 </dl>
@@ -103,7 +105,7 @@
 <dd><p>Substitute a set of keys with their corresponding values in the set of given terms.</p>
 <p>The terms in <code class="docutils literal notranslate"><span class="pre">terms</span></code> are replaced with the terms resulting from this substitutions.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
 <li><p><strong>terms_size</strong> – The size of the set of terms. </p></li>
@@ -116,7 +118,7 @@
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

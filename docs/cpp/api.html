@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C++ API Documentation &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -12,11 +13,12 @@
     <script src="../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-        <script src="../static/jquery.js"></script>
-        <script src="../static/underscore.js"></script>
-        <script src="../static/doctools.js"></script>
-        <script src="../static/tabs.js"></script>
+        <script src="../static/jquery.js?v=5d32c60e"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/doctools.js?v=888ff710"></script>
+        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../static/tabs.js?v=3030b3cb"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -36,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -104,8 +106,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="c-api-documentation">
-<h1>C++ API Documentation<a class="headerlink" href="#c-api-documentation" title="Permalink to this headline"></a></h1>
+  <section id="c-api-documentation">
+<h1>C++ API Documentation<a class="headerlink" href="#c-api-documentation" title="Permalink to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="interface.html">C++ Interface</a></li>
@@ -115,7 +117,7 @@
 <li class="toctree-l1"><a class="reference internal" href="term_creation.html">Term Creation</a></li>
 </ul>
 </div>
-<div class="contents local topic" id="contents">
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#quickstart" id="id4">Quickstart</a></p></li>
 <li><p><a class="reference internal" href="#examples" id="id5">Examples</a></p>
@@ -132,29 +134,29 @@
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="quickstart">
-<h2><a class="toc-backref" href="#id4">Quickstart</a><a class="headerlink" href="#quickstart" title="Permalink to this headline"></a></h2>
+</nav>
+<section id="quickstart">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Quickstart</a><a class="headerlink" href="#quickstart" title="Permalink to this heading"></a></h2>
 <p>First, create a <a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a> instance:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bitwuzla/cpp/bitwuzla.h&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">Options</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This instance can be configured via <a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7Options3setE6Option8uint64_t" title="bitwuzla::Options::set"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Options::set()</span></code></a>.
 For example, to enable model generation
 (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(set-option</span> <span class="pre">:produce-models</span> <span class="pre">true)</span></code>):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">PRODUCE_MODELS</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Some options have modes, which can be configured via the string representation
 of their modes. For example, to enable CaDiCaL as back end SAT solver (this
 is for illustration purposes only, CaDiCaL is configured by default):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">main</span><span class="p">()</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">SAT_SOLVER</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cadical&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>For more details on available options, see <a class="reference internal" href="options.html"><span class="doc">Options</span></a>.</p>
 <p>Then, create a <a class="reference internal" href="../c/types/bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance (configuration options are
 now frozen and cannot be changed for this instance):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="nf">bitwuzla</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Next, you will want to create some expressions and assert formulas.
@@ -178,17 +180,7 @@ For example, consider the following SMT-LIB input:</p>
 </pre></div>
 </div>
 <p>This input is created and asserted as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;assert.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bitwuzla/cpp/bitwuzla.h&gt;</span>
-
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="p">;</span>
-
-<span class="kt">int</span>
-<span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
 <span class="w">  </span><span class="n">Options</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// Then, enable model generation.</span>
 <span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">PRODUCE_MODELS</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
@@ -198,7 +190,7 @@ For example, consider the following SMT-LIB input:</p>
 <span class="w">  </span><span class="c1">//       if the selected solver is not compiled in.</span>
 <span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">SAT_SOLVER</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cadical&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// Then, create a Bitwuzla instance.</span>
-<span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="nf">bitwuzla</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// Create bit-vector sorts of size 4 and 8.</span>
 <span class="w">  </span><span class="n">Sort</span><span class="w"> </span><span class="n">sortbv4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_bv_sort</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
@@ -234,6 +226,16 @@ For example, consider the following SMT-LIB input:</p>
 <span class="w">  </span><span class="c1">// (assert</span>
 <span class="w">  </span><span class="c1">//     (distinct</span>
 <span class="w">  </span><span class="c1">//         ((_ extract 3 0) (bvsdiv x (_ bv2 8)))</span>
+<span class="w">  </span><span class="c1">//         ((_ extract 3 0) (bvashr y (_ bv1 8)))))</span>
+<span class="w">  </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">assert_formula</span><span class="p">(</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">DISTINCT</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">sdive</span><span class="p">,</span><span class="w"> </span><span class="n">ashre</span><span class="p">}));</span>
+<span class="w">  </span><span class="c1">// (assert (= (f x ((_ extract 6 3) x)) y))</span>
+<span class="w">  </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">assert_formula</span><span class="p">(</span><span class="n">mk_term</span><span class="p">(</span>
+<span class="w">      </span><span class="n">Kind</span><span class="o">::</span><span class="n">EQUAL</span><span class="p">,</span>
+<span class="w">      </span><span class="p">{</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">APPLY</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_EXTRACT</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">})}),</span>
+<span class="w">       </span><span class="n">y</span><span class="p">}));</span>
+<span class="w">  </span><span class="c1">// (assert (= (select a x) y))</span>
+<span class="w">  </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">assert_formula</span><span class="p">(</span>
+<span class="w">      </span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">EQUAL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">ARRAY_SELECT</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">}),</span><span class="w"> </span><span class="n">y</span><span class="p">}));</span>
 </pre></div>
 </div>
 <p>Alternatively, you can parse an input file in BTOR2 format <span id="id1">[<a class="reference internal" href="../references.html#id4" title="Aina Niemetz, Mathias Preiner, Clifford Wolf, and Armin Biere. Btor2 , BtorMC and Boolector 3.0. In Hana Chockler and Georg Weissenbacher, editors, Computer Aided Verification - 30th International Conference, CAV 2018, Held as Part of the Federated Logic Conference, FloC 2018, Oxford, UK, July 14-17, 2018, Proceedings, Part I, volume 10981 of Lecture Notes in Computer Science, 587–595. Springer, 2018. doi:10.1007/978-3-319-96145-3\_32.">NPWB18</a>]</span> or
@@ -248,17 +250,7 @@ parser. This Bitwuzla instance can be retrieved via
 <a class="reference internal" href="classes/parser.html#_CPPv4N8bitwuzla6parser6Parser8bitwuzlaEv" title="bitwuzla::parser::Parser::bitwuzla"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::parser::Parser::bitwuzla()</span></code></a>.</p>
 </div>
 <p>For example, to parse an example file <cite>examples/smt2/quickstart.smt2</cite> in SMT-LIB format:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bitwuzla/cpp/bitwuzla.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bitwuzla/cpp/parser.h&gt;</span>
-
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="p">;</span>
-
-<span class="kt">int</span>
-<span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
 <span class="w">  </span><span class="n">Options</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
 
 <span class="w">  </span><span class="c1">// We will parse example file `smt2/quickstart.smt2`.</span>
@@ -268,6 +260,16 @@ parser. This Bitwuzla instance can be retrieved via
 <span class="w">  </span><span class="c1">// Now parse the input file.</span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">err_msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parse</span><span class="p">();</span>
 <span class="w">  </span><span class="c1">// We expect no error to occur.</span>
+<span class="w">  </span><span class="n">assert</span><span class="p">(</span><span class="n">err_msg</span><span class="p">.</span><span class="n">empty</span><span class="p">());</span>
+
+<span class="w">  </span><span class="c1">// Now we retrieve the set of asserted formulas and print them.</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">assertions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">bitwuzla</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">get_assertions</span><span class="p">();</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Assertions:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;{&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">assertions</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;}&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -278,8 +280,8 @@ is passed into <a class="reference internal" href="classes/parser.html#_CPPv4N8b
 </div>
 <p>After parsing an input file and asserting formulas, satisfiability can be
 determined via <a class="reference internal" href="classes/bitwuzla.html#_CPPv4N8bitwuzla8Bitwuzla9check_satERKNSt6vectorI4TermEE" title="bitwuzla::Bitwuzla::check_sat"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::check_sat()</span></code></a>.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">assert_formula</span><span class="p">(</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">DISTINCT</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">sdive</span><span class="p">,</span><span class="w"> </span><span class="n">ashre</span><span class="p">}));</span>
-<span class="w">  </span><span class="c1">// (assert (= (f x ((_ extract 6 3) x)) y))</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// (check-sat)</span>
+<span class="w">  </span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">check_sat</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Formulas can also be assumed via passing a vector of assumptions into
@@ -290,17 +292,7 @@ and <a class="reference internal" href="classes/term.html#_CPPv4NK8bitwuzla4Term
 An example implementation illustrating how to print
 the current model via declared symbols (in this case <code class="code docutils literal notranslate"><span class="pre">x</span></code>, <code class="code docutils literal notranslate"><span class="pre">y</span></code>,
 <code class="code docutils literal notranslate"><span class="pre">f</span></code> and <code class="code docutils literal notranslate"><span class="pre">a</span></code>) is below:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">check_sat</span><span class="p">();</span>
-
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Expect: sat&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Bitwuzla: &quot;</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Result</span><span class="o">::</span><span class="n">SAT</span>
-<span class="w">                    </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;sat&quot;</span>
-<span class="w">                    </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Result</span><span class="o">::</span><span class="n">UNSAT</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;unsat&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;unknown&quot;</span><span class="p">))</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// Print model in SMT-LIBv2 format.</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Print model in SMT-LIBv2 format.</span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Model:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">term</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">})</span>
 <span class="w">  </span><span class="p">{</span>
@@ -325,6 +317,16 @@ the current model via declared symbols (in this case <code class="code docutils 
 <span class="w">      </span><span class="p">}</span>
 <span class="w">      </span><span class="n">assert</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">is_variable</span><span class="p">());</span>
 <span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">sort</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)) &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sort</span><span class="p">.</span><span class="n">fun_codomain</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;) &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sort</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">term</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span>
+<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This will output a possible model, in this case:</p>
@@ -348,12 +350,12 @@ and for <code class="code docutils literal notranslate"><span class="pre">Roundi
 <a class="reference internal" href="../c/enums/bitwuzlaroundingmode.html#_CPPv420BitwuzlaRoundingMode" title="BitwuzlaRoundingMode"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">BitwuzlaRoundingMode</span></code></a>.</p>
 <p>In our case, we can query the assignments of <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>, both
 bit-vector terms, as binary strings:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;) &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sort</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">term</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span>
-<span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Both x and y are bit-vector terms and their value is a bit-vector</span>
+<span class="w">  </span><span class="c1">// value that can be printed via Term::value().</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;value of x: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">x</span><span class="p">).</span><span class="n">value</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;value of y: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">y</span><span class="p">).</span><span class="n">value</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This will print:</p>
@@ -367,63 +369,63 @@ given as <a class="reference internal" href="enums/kind.html#_CPPv4N8bitwuzla4Ki
 <a class="reference internal" href="enums/kind.html#_CPPv4N8bitwuzla4Kind11ARRAY_STOREE" title="bitwuzla::Kind::ARRAY_STORE"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::Kind::ARRAY_STORE</span></code></a>.
 We can retrieve an SMT-LIB2 string representation of the values via
 <a class="reference internal" href="classes/term.html#_CPPv4NK8bitwuzla4Term3strEv" title="bitwuzla::Term::str"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Term::str()</span></code></a> (and <a class="reference internal" href="classes/sort.html#_CPPv4N8bitwuzlalsERNSt7ostreamERK4Sort" title="bitwuzla::operator&lt;&lt;"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::operator&lt;&lt;()</span></code></a>:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Print value for x, y, f and a.</span>
-<span class="w">  </span><span class="c1">// Note: The returned string of Term::value() is only valid until the next</span>
-<span class="w">  </span><span class="c1">//       call to Term::value().</span>
-<span class="w">  </span><span class="c1">// Both x and y are bit-vector terms and their value is a bit-vector</span>
-<span class="w">  </span><span class="c1">// value that can be printed via Term::value().</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;value of x: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">x</span><span class="p">).</span><span class="n">value</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// f and a, on the other hand, are a function and array term, respectively.</span>
+<span class="w">  </span><span class="c1">// The value of these terms is not a value term: for f, it is a lambda term,</span>
+<span class="w">  </span><span class="c1">// and the value of a is represented as a store term. Thus we cannot use</span>
+<span class="w">  </span><span class="c1">// Term::value(), but we can print the value of the terms via Term::str()</span>
+<span class="w">  </span><span class="c1">// or operator&lt;&lt;.</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;str() representation of value of f:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
 <span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;value of y: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">y</span><span class="p">).</span><span class="n">value</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;str() representation of value of a:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
 <span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="c1">// f and a, on the other hand, are a function and array term, respectively.</span>
 </pre></div>
 </div>
 <p>This will print:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">to_string</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">value</span> <span class="n">of</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">()</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">value</span> <span class="n">of</span> <span class="n">f</span><span class="p">:</span>
 <span class="p">(</span><span class="k">lambda</span> <span class="p">((</span><span class="nd">@bzla</span><span class="o">.</span><span class="n">var_74</span> <span class="p">(</span><span class="n">_</span> <span class="n">BitVec</span> <span class="mi">8</span><span class="p">)))</span> <span class="p">(</span><span class="k">lambda</span> <span class="p">((</span><span class="nd">@bzla</span><span class="o">.</span><span class="n">var_75</span> <span class="p">(</span><span class="n">_</span> <span class="n">BitVec</span> <span class="mi">4</span><span class="p">)))</span> <span class="p">(</span><span class="n">ite</span> <span class="p">(</span><span class="ow">and</span> <span class="p">(</span><span class="o">=</span> <span class="nd">@bzla</span><span class="o">.</span><span class="n">var_74</span> <span class="c1">#b10011111) (= @bzla.var_75 #b0011)) #b11111111 #b00000000)))</span>
 
-<span class="n">to_string</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">value</span> <span class="n">of</span> <span class="n">a</span><span class="p">:</span>
+<span class="nb">str</span><span class="p">()</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">value</span> <span class="n">of</span> <span class="n">a</span><span class="p">:</span>
 <span class="p">(</span><span class="n">store</span> <span class="p">((</span><span class="k">as</span> <span class="n">const</span> <span class="p">(</span><span class="n">Array</span> <span class="p">(</span><span class="n">_</span> <span class="n">BitVec</span> <span class="mi">8</span><span class="p">)</span> <span class="p">(</span><span class="n">_</span> <span class="n">BitVec</span> <span class="mi">8</span><span class="p">)))</span> <span class="c1">#b00000000) #b10011111 #b11111111)</span>
 </pre></div>
 </div>
 <p>Note that the string representation of values representable as simple type
 (bit-vectors, boolean, floating-point, rounding mode) are given as pure
 value string (in the given number format) via
-<a class="reference internal" href="../c/types/bitwuzlaterm.html#_CPPv427bitwuzla_term_value_get_str12BitwuzlaTerm7uint8_t" title="bitwuzla_term_value_get_str"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_value_get_str()</span></code></a>.
-Their string representation retrieved via <a class="reference internal" href="../c/types/bitwuzlaterm.html#_CPPv423bitwuzla_term_to_string12BitwuzlaTerm" title="bitwuzla_term_to_string"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_to_string()</span></code></a>,
+<a class="reference internal" href="classes/term.html#_CPPv4I0ENK8bitwuzla4Term5valueE1T7uint8_t" title="bitwuzla::Term::value"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Term::value()</span></code></a>.
+Their string representation retrieved via <a class="reference internal" href="classes/term.html#_CPPv4NK8bitwuzla4Term3strEv" title="bitwuzla::Term::str"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Term::str()</span></code></a>,
 however, is given in SMT-LIB2 format. For example,</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;str() representation of value of x: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;str() representation of value of a:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;str() representation of value of y: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This will print:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">to_string</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">value</span> <span class="n">of</span> <span class="n">x</span><span class="p">:</span> <span class="c1">#b10011111</span>
-<span class="n">to_string</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">value</span> <span class="n">of</span> <span class="n">y</span><span class="p">:</span> <span class="c1">#b11111111</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">()</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">value</span> <span class="n">of</span> <span class="n">x</span><span class="p">:</span> <span class="c1">#b10011111</span>
+<span class="nb">str</span><span class="p">()</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">value</span> <span class="n">of</span> <span class="n">y</span><span class="p">:</span> <span class="c1">#b11111111</span>
 </pre></div>
 </div>
 <p>It is also possible to query the model value of expressions that do not
 occur in the input formula:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// pure assignment string, either in binary, hexadecimal or decimal format,</span>
-<span class="w">  </span><span class="c1">// whereas Term::str() and operator&lt;&lt; print the value in SMT-LIB2 format</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_MUL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">}));</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;value of v = x * x: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">value</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>This will print:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="n">of</span> <span class="n">v</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">:</span> <span class="mi">11000001</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="examples">
-<h2><a class="toc-backref" href="#id5">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+</section>
+<section id="examples">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Examples</a><a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line">All examples can be found in directory <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples">examples</a>.</div>
 <div class="line">For instructions on how to build these examples, see <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/README.md">examples/README.md</a>.</div>
 </div>
-<div class="section" id="quickstart-example">
-<h3><a class="toc-backref" href="#id6">Quickstart Example</a><a class="headerlink" href="#quickstart-example" title="Permalink to this headline"></a></h3>
+<section id="quickstart-example">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Quickstart Example</a><a class="headerlink" href="#quickstart-example" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">The example used in the <a class="reference internal" href="#quickstart"><span class="std std-ref">Quickstart</span></a> guide.</div>
 <div class="line">The SMT-LIB input for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/smt2/quickstart.smt2">examples/smt2/quickstart.smt2</a>.</div>
@@ -613,9 +615,9 @@ occur in the input formula:</p>
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="incremental-example-with-push-and-pop">
-<h3><a class="toc-backref" href="#id7">Incremental Example with push and pop</a><a class="headerlink" href="#incremental-example-with-push-and-pop" title="Permalink to this headline"></a></h3>
+</section>
+<section id="incremental-example-with-push-and-pop">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Incremental Example with push and pop</a><a class="headerlink" href="#incremental-example-with-push-and-pop" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">An incremental example with <code class="code docutils literal notranslate"><span class="pre">push</span></code> and <code class="code docutils literal notranslate"><span class="pre">pop</span></code>.</div>
 <div class="line">The SMT-LIB input for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/smt2/pushpop.smt2">examples/smt2/pushpop.smt2</a>.</div>
@@ -681,9 +683,9 @@ occur in the input formula:</p>
 <span class="linenos"> 28</span><span class="w">  </span><span class="n">Sort</span><span class="w"> </span><span class="n">sortbv2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_bv_sort</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <span class="linenos"> 29</span>
 <span class="linenos"> 30</span><span class="w">  </span><span class="c1">// Create bit-vector variables.</span>
-<span class="linenos"> 31</span><span class="w">  </span><span class="c1">// (declare-const o0 (_ BitVec 2))</span>
+<span class="linenos"> 31</span><span class="w">  </span><span class="c1">// (declare-const o0 (_ BitVec 1))</span>
 <span class="linenos"> 32</span><span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">o0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_const</span><span class="p">(</span><span class="n">sortbv1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;o0&quot;</span><span class="p">);</span>
-<span class="linenos"> 33</span><span class="w">  </span><span class="c1">// (declare-const o1 (_ BitVec 2))</span>
+<span class="linenos"> 33</span><span class="w">  </span><span class="c1">// (declare-const o1 (_ BitVec 1))</span>
 <span class="linenos"> 34</span><span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">o1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_const</span><span class="p">(</span><span class="n">sortbv1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;o1&quot;</span><span class="p">);</span>
 <span class="linenos"> 35</span><span class="w">  </span><span class="c1">// (declare-const s0 (_ BitVec 2))</span>
 <span class="linenos"> 36</span><span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_const</span><span class="p">(</span><span class="n">sortbv2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s0&quot;</span><span class="p">);</span>
@@ -761,9 +763,9 @@ occur in the input formula:</p>
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="incremental-example-with-check-sat-assuming">
-<h3><a class="toc-backref" href="#id8">Incremental Example with check-sat-assuming</a><a class="headerlink" href="#incremental-example-with-check-sat-assuming" title="Permalink to this headline"></a></h3>
+</section>
+<section id="incremental-example-with-check-sat-assuming">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Incremental Example with check-sat-assuming</a><a class="headerlink" href="#incremental-example-with-check-sat-assuming" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">This example shows how to implement the example above with <code class="code docutils literal notranslate"><span class="pre">check-sat-assuming</span></code>.</div>
 <div class="line">The SMT-LIB input for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/smt2/checksatassuming.smt2">examples/smt2/checksatassuming.smt2</a>.</div>
@@ -822,9 +824,9 @@ occur in the input formula:</p>
 <span class="linenos">30</span><span class="w">  </span><span class="n">Sort</span><span class="w"> </span><span class="n">sortbv2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_bv_sort</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <span class="linenos">31</span>
 <span class="linenos">32</span><span class="w">  </span><span class="c1">// Create bit-vector variables.</span>
-<span class="linenos">33</span><span class="w">  </span><span class="c1">// (declare-const o0 (_ BitVec 2))</span>
+<span class="linenos">33</span><span class="w">  </span><span class="c1">// (declare-const o0 (_ BitVec 1))</span>
 <span class="linenos">34</span><span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">o0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_const</span><span class="p">(</span><span class="n">sortbv1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;o0&quot;</span><span class="p">);</span>
-<span class="linenos">35</span><span class="w">  </span><span class="c1">// (declare-const o1 (_ BitVec 2))</span>
+<span class="linenos">35</span><span class="w">  </span><span class="c1">// (declare-const o1 (_ BitVec 1))</span>
 <span class="linenos">36</span><span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">o1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_const</span><span class="p">(</span><span class="n">sortbv1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;o1&quot;</span><span class="p">);</span>
 <span class="linenos">37</span><span class="w">  </span><span class="c1">// (declare-const s0 (_ BitVec 2))</span>
 <span class="linenos">38</span><span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">s0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_const</span><span class="p">(</span><span class="n">sortbv2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s0&quot;</span><span class="p">);</span>
@@ -892,9 +894,9 @@ occur in the input formula:</p>
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="unsat-core-example">
-<h3><a class="toc-backref" href="#id9">Unsat Core Example</a><a class="headerlink" href="#unsat-core-example" title="Permalink to this headline"></a></h3>
+</section>
+<section id="unsat-core-example">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Unsat Core Example</a><a class="headerlink" href="#unsat-core-example" title="Permalink to this heading"></a></h3>
 <p>This example shows how to extract an unsat core.
 It creates bit-vector and floating-point terms and further illustrates how to
 create lambda terms (<code class="code docutils literal notranslate"><span class="pre">define-fun</span></code>).</p>
@@ -1026,9 +1028,9 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="unsat-assumptions-example">
-<h3><a class="toc-backref" href="#id10">Unsat Assumptions Example</a><a class="headerlink" href="#unsat-assumptions-example" title="Permalink to this headline"></a></h3>
+</section>
+<section id="unsat-assumptions-example">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Unsat Assumptions Example</a><a class="headerlink" href="#unsat-assumptions-example" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">This example shows how to implement the example above with <code class="code docutils literal notranslate"><span class="pre">get-unsat-assumptions</span></code>.</div>
 <div class="line">The SMT-LIB input for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/smt2/unsatassumptions.smt2">examples/smt2/unsatassumptions.smt2</a>.</div>
@@ -1164,9 +1166,9 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="reset-example">
-<h3><a class="toc-backref" href="#id11">Reset Example</a><a class="headerlink" href="#reset-example" title="Permalink to this headline"></a></h3>
+</section>
+<section id="reset-example">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Reset Example</a><a class="headerlink" href="#reset-example" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">This example shows how to reset the solver instance (SMT-LIB command <code class="code docutils literal notranslate"><span class="pre">reset</span></code>).</div>
 <div class="line">The SMT-LIB input for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/smt2/reset.smt2">examples/smt2/reset.smt2</a>.</div>
@@ -1278,9 +1280,9 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="reset-assertions-example">
-<h3><a class="toc-backref" href="#id12">Reset Assertions Example</a><a class="headerlink" href="#reset-assertions-example" title="Permalink to this headline"></a></h3>
+</section>
+<section id="reset-assertions-example">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Reset Assertions Example</a><a class="headerlink" href="#reset-assertions-example" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">This example shows how to reset the currently asserted formulas of a solver instance (SMT-LIB command <code class="code docutils literal notranslate"><span class="pre">reset-assertions</span></code>).</div>
 <div class="line">The SMT-LIB input for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/smt2/reset_assertions.smt2">examples/smt2/reset_assertions.smt2</a>.</div>
@@ -1390,9 +1392,9 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="parsing-example">
-<h3><a class="toc-backref" href="#id13">Parsing Example</a><a class="headerlink" href="#parsing-example" title="Permalink to this headline"></a></h3>
+</section>
+<section id="parsing-example">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Parsing Example</a><a class="headerlink" href="#parsing-example" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">This example shows how to parse an input file via the API.</div>
 <div class="line">The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/cpp/parse.cpp">examples/cpp/parse.cpp</a>.</div>
@@ -1445,9 +1447,9 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="termination-callback-example">
-<h3><a class="toc-backref" href="#id14">Termination Callback Example</a><a class="headerlink" href="#termination-callback-example" title="Permalink to this headline"></a></h3>
+</section>
+<section id="termination-callback-example">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Termination Callback Example</a><a class="headerlink" href="#termination-callback-example" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">This example shows how to configure a termination callback.</div>
 <div class="line">The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/cpp/terminator.cpp">examples/cpp/terminator.cpp</a>.</div>
@@ -1538,9 +1540,9 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 </pre></div>
 </div>
 </div></div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BitwuzlaParser &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js"></script>
-        <script src="../../static/jquery.js"></script>
-        <script src="../../static/underscore.js"></script>
-        <script src="../../static/doctools.js"></script>
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/doctools.js?v=888ff710"></script>
+        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -33,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -75,8 +77,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="bitwuzlaparser">
-<h1>BitwuzlaParser<a class="headerlink" href="#bitwuzlaparser" title="Permalink to this headline"></a></h1>
+  <section id="bitwuzlaparser">
+<h1>BitwuzlaParser<a class="headerlink" href="#bitwuzlaparser" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>typedef struct <a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaParser</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv419bitwuzla_parser_newP15BitwuzlaOptionsPKcP4FILEPKc" title="bitwuzla_parser_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_parser_new()</span></code></a></p></li>
@@ -100,7 +102,7 @@
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1gaab697a4bcaab2507641079b14656064e"><span class="std std-ref"><span class="pre">bitwuzla_parser_delete</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1gaab697a4bcaab2507641079b14656064e"><span class="std std-ref"><span class="pre">bitwuzla_parser_delete</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -110,7 +112,7 @@
 <p>The parser creates and owns the associated Bitwuzla instance. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>options</strong> – The associated options. </p></li>
 <li><p><strong>infile_name</strong> – The name of the input file. </p></li>
@@ -118,7 +120,7 @@
 <li><p><strong>format</strong> – The format of the input file. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A pointer to the created Bitwuzla parser instance.</p>
 </dd>
 </dl>
@@ -132,13 +134,13 @@
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1ga10b68b847ea340064faa3caf49344d00"><span class="std std-ref"><span class="pre">bitwuzla_parser_new</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1ga10b68b847ea340064faa3caf49344d00"><span class="std std-ref"><span class="pre">bitwuzla_parser_new</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>parser</strong> – The Bitwuzla parser instance to delete.</p>
 </dd>
 </dl>
@@ -149,13 +151,13 @@
 <span id="_CPPv321bitwuzla_parser_parseP14BitwuzlaParserb"></span><span id="_CPPv221bitwuzla_parser_parseP14BitwuzlaParserb"></span><span id="bitwuzla_parser_parse__BitwuzlaParserP.b"></span><span class="target" id="group__c__bitwuzlaparser_1ga26a56abe99caa0c7ec4869fd6331b064"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_parse</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">parse_only</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_parser_parseP14BitwuzlaParserb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Parser input file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>parser</strong> – The Bitwuzla parser instance to delete. </p></li>
 <li><p><strong>parse_only</strong> – True to only parse without executing check-sat calls. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The error message in case of an error, else NULL. </p>
 </dd>
 </dl>
@@ -166,13 +168,13 @@
 <span id="_CPPv328bitwuzla_parser_get_bitwuzlaP14BitwuzlaParser"></span><span id="_CPPv228bitwuzla_parser_get_bitwuzlaP14BitwuzlaParser"></span><span id="bitwuzla_parser_get_bitwuzla__BitwuzlaParserP"></span><span class="target" id="group__c__bitwuzlaparser_1gab908bca018eca736af6d9d224bcffa20"></span><a class="reference internal" href="bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_get_bitwuzla</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428bitwuzla_parser_get_bitwuzlaP14BitwuzlaParser" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the associated Bitwuzla instance. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The Bitwuzla instance. </p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

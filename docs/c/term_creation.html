@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Term Creation &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -12,10 +13,11 @@
     <script src="../static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-        <script src="../static/jquery.js"></script>
-        <script src="../static/underscore.js"></script>
-        <script src="../static/doctools.js"></script>
+        <script src="../static/jquery.js?v=5d32c60e"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/doctools.js?v=888ff710"></script>
+        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -35,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -93,8 +95,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="term-creation">
-<h1>Term Creation<a class="headerlink" href="#term-creation" title="Permalink to this headline"></a></h1>
+  <section id="term-creation">
+<h1>Term Creation<a class="headerlink" href="#term-creation" title="Permalink to this heading"></a></h1>
 <p>Terms of a given <a class="reference internal" href="enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">BitwuzlaKind</span></code></a> are created via
 <a class="reference internal" href="#_CPPv416bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm" title="bitwuzla_mk_term"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term()</span></code></a> (and related <cite>bitwuzla_mk_term*()</cite> functions
 provided for convenience). a comprehensive documentation of supported
@@ -112,7 +114,7 @@ instances.</p>
 <span id="_CPPv316bitwuzla_mk_truev"></span><span id="_CPPv216bitwuzla_mk_truev"></span><span id="bitwuzla_mk_true"></span><span class="target" id="group__c__term__creation_1ga66e28b1b57b92d8d85d489c9ede4bbce"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_true</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416bitwuzla_mk_truev" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a true value. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A term representing true. </p>
 </dd>
 </dl>
@@ -123,7 +125,7 @@ instances.</p>
 <span id="_CPPv317bitwuzla_mk_falsev"></span><span id="_CPPv217bitwuzla_mk_falsev"></span><span id="bitwuzla_mk_false"></span><span class="target" id="group__c__term__creation_1ga84036bd7ceabb96fd1dd6d04d08563c6"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_false</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417bitwuzla_mk_falsev" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a false value. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A term representing false. </p>
 </dd>
 </dl>
@@ -136,16 +138,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value 0 of given sort.</p>
 </dd>
 </dl>
@@ -158,16 +160,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value 1 of given sort.</p>
 </dd>
 </dl>
@@ -180,16 +182,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value of given sort where all bits are set to 1. </p>
 </dd>
 </dl>
@@ -202,16 +204,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value of given sort where the MSB is set to 1 and all remaining bits are set to 0. </p>
 </dd>
 </dl>
@@ -224,16 +226,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the bit-vector value of given sort where the MSB is set to 0 and all remaining bits are set to 1. </p>
 </dd>
 </dl>
@@ -246,16 +248,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point positive zero value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -268,16 +270,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point negative zero value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -290,16 +292,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point positive infinity value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -312,16 +314,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point negative infinity value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -334,16 +336,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>sort</strong> – The sort of the value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the floating-point NaN value of given floating-point sort. </p>
 </dd>
 </dl>
@@ -357,7 +359,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -367,14 +369,14 @@ instances.</p>
 <p>Given value must fit into a bit-vector of given size (sort).</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>value</strong> – A string representing the value. </p></li>
 <li><p><strong>base</strong> – The base in which the string is given; 2 for binary, 10 for decimal, and 16 for hexadecimal.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the bit-vector value of given sort.</p>
 </dd>
 </dl>
@@ -387,7 +389,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -397,13 +399,13 @@ instances.</p>
 <p>Given value must fit into a bit-vector of given size (sort).</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>value</strong> – The unsigned integer representation of the bit-vector value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the bit-vector value of given sort.</p>
 </dd>
 </dl>
@@ -416,7 +418,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -426,13 +428,13 @@ instances.</p>
 <p>Given value must fit into a bit-vector of given size (sort).</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>value</strong> – The unsigned integer representation of the bit-vector value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the bit-vector value of given sort.</p>
 </dd>
 </dl>
@@ -443,14 +445,14 @@ instances.</p>
 <span id="_CPPv320bitwuzla_mk_fp_value12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm"></span><span id="_CPPv220bitwuzla_mk_fp_value12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm"></span><span id="bitwuzla_mk_fp_value__BitwuzlaTerm.BitwuzlaTerm.BitwuzlaTerm"></span><span class="target" id="group__c__term__creation_1gae95213b8816199235169eedefad3fc6a"></span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_value</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">bv_sign</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">bv_exponent</span></span>, <a class="reference internal" href="types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">bv_significand</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420bitwuzla_mk_fp_value12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a floating-point value from its IEEE 754 standard representation given as three bit-vector values representing the sign bit, the exponent and the significand.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>bv_sign</strong> – The sign bit. </p></li>
 <li><p><strong>bv_exponent</strong> – The exponent bit-vector value. </p></li>
 <li><p><strong>bv_significand</strong> – The significand bit-vector value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the floating-point value. </p>
 </dd>
 </dl>
@@ -463,7 +465,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -473,14 +475,14 @@ instances.</p>
 <p>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>rm</strong> – The rounding mode. </p></li>
 <li><p><strong>real</strong> – The decimal string representing a real value.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A floating-point representation of the given real string. If <code class="docutils literal notranslate"><span class="pre">rm</span></code> is of kind BITWUZLA_KIND_VALUE the floating-point will be of kind BITWUZLA_KIND_VALUE, else it will be a non-value term. </p>
 </dd>
 </dl>
@@ -493,7 +495,7 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -503,7 +505,7 @@ instances.</p>
 <p>Given rounding mode may be an arbitrary, non-value rounding mode term. If it is a value, the returned term will be a floating-point value, else a non-value floating-point term.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the value. </p></li>
 <li><p><strong>rm</strong> – The rounding mode. </p></li>
@@ -511,7 +513,7 @@ instances.</p>
 <li><p><strong>den</strong> – The decimal string representing the denominator.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A floating-point representation of the given rational string. If <code class="docutils literal notranslate"><span class="pre">rm</span></code> is of kind BITWUZLA_KIND_VALUE the floating-point will be of kind BITWUZLA_KIND_VALUE, else it will be a non-value term. </p>
 </dd>
 </dl>
@@ -524,16 +526,16 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlaroundingmode.html#enums_8h_1a5c1c80490dd4f2642905e2b28be59687"><span class="std std-ref"><span class="pre">BitwuzlaRoundingMode</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlaroundingmode.html#enums_8h_1a5c1c80490dd4f2642905e2b28be59687"><span class="std std-ref"><span class="pre">BitwuzlaRoundingMode</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>rm</strong> – The rounding mode value.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAL, representing the rounding mode value.</p>
 </dd>
 </dl>
@@ -546,19 +548,19 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>arg</strong> – The argument to the operator.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an operation of given kind.</p>
 </dd>
 </dl>
@@ -571,20 +573,20 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>arg0</strong> – The first argument to the operator. </p></li>
 <li><p><strong>arg1</strong> – The second argument to the operator.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an operation of given kind.</p>
 </dd>
 </dl>
@@ -597,13 +599,13 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>arg0</strong> – The first argument to the operator. </p></li>
@@ -611,7 +613,7 @@ instances.</p>
 <li><p><strong>arg2</strong> – The third argument to the operator.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an operation of given kind.</p>
 </dd>
 </dl>
@@ -624,20 +626,20 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>argc</strong> – The number of argument terms. </p></li>
 <li><p><strong>args</strong> – The argument terms.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an operation of given kind.</p>
 </dd>
 </dl>
@@ -650,20 +652,20 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>arg</strong> – The argument term. </p></li>
 <li><p><strong>idx</strong> – The index.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
 </dd>
 </dl>
@@ -676,13 +678,13 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>arg</strong> – The argument term. </p></li>
@@ -690,7 +692,7 @@ instances.</p>
 <li><p><strong>idx1</strong> – The second index.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
 </dd>
 </dl>
@@ -703,13 +705,13 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>arg0</strong> – The first argument term. </p></li>
@@ -717,7 +719,7 @@ instances.</p>
 <li><p><strong>idx</strong> – The index.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
 </dd>
 </dl>
@@ -730,13 +732,13 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>arg0</strong> – The first argument term. </p></li>
@@ -745,7 +747,7 @@ instances.</p>
 <li><p><strong>idx1</strong> – The second index.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
 </dd>
 </dl>
@@ -758,13 +760,13 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="enums/bitwuzlakind.html#enums_8h_1aab03a20a5632ef7b0bd1b362d9ae4976"><span class="std std-ref"><span class="pre">BitwuzlaKind</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>kind</strong> – The operator kind. </p></li>
 <li><p><strong>argc</strong> – The number of argument terms. </p></li>
@@ -773,7 +775,7 @@ instances.</p>
 <li><p><strong>idxs</strong> – The indices.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing an indexed operation of given kind.</p>
 </dd>
 </dl>
@@ -791,19 +793,19 @@ instances.</p>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1gab67bdee3bbcfc271a36dff873ba199c8"><span class="std std-ref"><span class="pre">bitwuzla_mk_fun_sort</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5"><span class="std std-ref"><span class="pre">bitwuzla_mk_rm_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5"><span class="std std-ref"><span class="pre">bitwuzla_mk_rm_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the constant. </p></li>
 <li><p><strong>symbol</strong> – The symbol of the constant.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind BITWUZLA_KIND_CONST, representing the constant.</p>
 </dd>
 </dl>
@@ -816,19 +818,19 @@ instances.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga69dc2abdb304f46618b87e5ad0955361"><span class="std std-ref"><span class="pre">bitwuzla_mk_array_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga69dc2abdb304f46618b87e5ad0955361"><span class="std std-ref"><span class="pre">bitwuzla_mk_array_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the array. </p></li>
 <li><p><strong>value</strong> – The term to initialize the elements of the array with.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind BITWUZLA_KIND_CONST_ARRAY, representing a constant array of given sort.</p>
 </dd>
 </dl>
@@ -845,7 +847,7 @@ instances.</p>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"><span class="std std-ref"><span class="pre">bitwuzla_mk_bv_sort</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"><span class="std std-ref"><span class="pre">bitwuzla_mk_fp_sort</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1gab67bdee3bbcfc271a36dff873ba199c8"><span class="std std-ref"><span class="pre">bitwuzla_mk_fun_sort</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5"><span class="std std-ref"><span class="pre">bitwuzla_mk_rm_sort</span></span></a></code> </p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="sort_creation.html#group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5"><span class="std std-ref"><span class="pre">bitwuzla_mk_rm_sort</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -855,19 +857,19 @@ instances.</p>
 <p>This creates a variable to be bound by quantifiers or lambdas.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sort</strong> – The sort of the variable. </p></li>
 <li><p><strong>symbol</strong> – The symbol of the variable.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term of kind BITWUZLA_KIND_VAR, representing the variable.</p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
