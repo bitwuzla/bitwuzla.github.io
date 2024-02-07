@@ -15,9 +15,9 @@
   
         <script src="../../static/jquery.js?v=5d32c60e"></script>
         <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../../static/doctools.js?v=888ff710"></script>
-        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.1
+                0.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -78,7 +78,7 @@
            <div itemprop="articleBody">
              
   <section id="bitwuzlaoptioninfo">
-<h1>BitwuzlaOptionInfo<a class="headerlink" href="#bitwuzlaoptioninfo" title="Permalink to this heading"></a></h1>
+<h1>BitwuzlaOptionInfo<a class="headerlink" href="#bitwuzlaoptioninfo" title="Link to this heading"></a></h1>
 <p>The configuration data of an option.</p>
 <p>Bitwuzla offers a compact way to retrieve all information about a configuration
 option <a class="reference internal" href="../enums/bitwuzlaoption.html#_CPPv414BitwuzlaOption" title="BitwuzlaOption"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">BitwuzlaOption</span></code></a> as a <a class="reference internal" href="#_CPPv418BitwuzlaOptionInfo" title="BitwuzlaOptionInfo"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptionInfo</span></code></a>
@@ -100,7 +100,7 @@ and can be queried for</p>
 <hr class="docutils" />
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv418BitwuzlaOptionInfo">
-<span id="_CPPv318BitwuzlaOptionInfo"></span><span id="_CPPv218BitwuzlaOptionInfo"></span><span id="BitwuzlaOptionInfo"></span><span class="target" id="structBitwuzlaOptionInfo"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaOptionInfo</span></span></span><a class="headerlink" href="#_CPPv418BitwuzlaOptionInfo" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv318BitwuzlaOptionInfo"></span><span id="_CPPv218BitwuzlaOptionInfo"></span><span id="BitwuzlaOptionInfo"></span><span class="target" id="structBitwuzlaOptionInfo"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaOptionInfo</span></span></span><a class="headerlink" href="#_CPPv418BitwuzlaOptionInfo" title="Link to this definition"></a><br /></dt>
 <dd><p>The option info struct holds all information about an option, which can be queried via <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_option_info</span></code>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -114,83 +114,99 @@ and can be queried for</p>
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo3optE">
-<span id="_CPPv3N18BitwuzlaOptionInfo3optE"></span><span id="_CPPv2N18BitwuzlaOptionInfo3optE"></span><span id="BitwuzlaOptionInfo::opt__BitwuzlaOption"></span><span class="target" id="structBitwuzlaOptionInfo_1a3a58eec6fc27a64028124caa3032af37"></span><a class="reference internal" href="../enums/bitwuzlaoption.html#_CPPv414BitwuzlaOption" title="BitwuzlaOption"><span class="n"><span class="pre">BitwuzlaOption</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">opt</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo3optE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18BitwuzlaOptionInfo3optE"></span><span id="_CPPv2N18BitwuzlaOptionInfo3optE"></span><span id="BitwuzlaOptionInfo::opt__BitwuzlaOption"></span><span class="target" id="structBitwuzlaOptionInfo_1a3a58eec6fc27a64028124caa3032af37"></span><a class="reference internal" href="../enums/bitwuzlaoption.html#_CPPv414BitwuzlaOption" title="BitwuzlaOption"><span class="n"><span class="pre">BitwuzlaOption</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">opt</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo3optE" title="Link to this definition"></a><br /></dt>
 <dd><p>The Bitwuzla option. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo4shrtE">
-<span id="_CPPv3N18BitwuzlaOptionInfo4shrtE"></span><span id="_CPPv2N18BitwuzlaOptionInfo4shrtE"></span><span id="BitwuzlaOptionInfo::shrt__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1afa075308de7ab7b7f4da50c2016ab9f6"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">shrt</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo4shrtE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18BitwuzlaOptionInfo4shrtE"></span><span id="_CPPv2N18BitwuzlaOptionInfo4shrtE"></span><span id="BitwuzlaOptionInfo::shrt__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1afa075308de7ab7b7f4da50c2016ab9f6"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">shrt</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo4shrtE" title="Link to this definition"></a><br /></dt>
 <dd><p>Short option name. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo3lngE">
-<span id="_CPPv3N18BitwuzlaOptionInfo3lngE"></span><span id="_CPPv2N18BitwuzlaOptionInfo3lngE"></span><span id="BitwuzlaOptionInfo::lng__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1a9e0862ed850268624e82d476a678fc77"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">lng</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo3lngE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18BitwuzlaOptionInfo3lngE"></span><span id="_CPPv2N18BitwuzlaOptionInfo3lngE"></span><span id="BitwuzlaOptionInfo::lng__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1a9e0862ed850268624e82d476a678fc77"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">lng</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo3lngE" title="Link to this definition"></a><br /></dt>
 <dd><p>Long option name. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo4descE">
-<span id="_CPPv3N18BitwuzlaOptionInfo4descE"></span><span id="_CPPv2N18BitwuzlaOptionInfo4descE"></span><span id="BitwuzlaOptionInfo::desc__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1ab6e641c1e6490c7df67b6c291fcb20d1"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">desc</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo4descE" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo11descriptionE">
+<span id="_CPPv3N18BitwuzlaOptionInfo11descriptionE"></span><span id="_CPPv2N18BitwuzlaOptionInfo11descriptionE"></span><span id="BitwuzlaOptionInfo::description__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1ac1c49d6860a195f6b248e719337fb056"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">description</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo11descriptionE" title="Link to this definition"></a><br /></dt>
 <dd><p>Option description. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo10is_numericE">
-<span id="_CPPv3N18BitwuzlaOptionInfo10is_numericE"></span><span id="_CPPv2N18BitwuzlaOptionInfo10is_numericE"></span><span id="BitwuzlaOptionInfo::is_numeric__b"></span><span class="target" id="structBitwuzlaOptionInfo_1a8a86e5b13551115832ab8dd73468a1c8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_numeric</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo10is_numericE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N18BitwuzlaOptionInfo10is_numericE"></span><span id="_CPPv2N18BitwuzlaOptionInfo10is_numericE"></span><span id="BitwuzlaOptionInfo::is_numeric__b"></span><span class="target" id="structBitwuzlaOptionInfo_1a8a86e5b13551115832ab8dd73468a1c8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_numeric</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo10is_numericE" title="Link to this definition"></a><br /></dt>
 <dd><p>Indicates whether values are numeric or strings. </p>
 </dd></dl>
 
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo9ModeValueE">
+<span id="_CPPv3N18BitwuzlaOptionInfo9ModeValueE"></span><span id="_CPPv2N18BitwuzlaOptionInfo9ModeValueE"></span><span id="BitwuzlaOptionInfo::ModeValue"></span><span class="target" id="structBitwuzlaOptionInfo_1_1ModeValue"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModeValue</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo9ModeValueE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo3curE">
-<span id="_CPPv3N18BitwuzlaOptionInfo3curE"></span><span id="_CPPv2N18BitwuzlaOptionInfo3curE"></span><span id="BitwuzlaOptionInfo::cur__uint64_t"></span><span class="target" id="structBitwuzlaOptionInfo_1a51626618d07d2990bee37c61e02ff191"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo3curE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Current numeric option value. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo4dfltE">
-<span id="_CPPv3N18BitwuzlaOptionInfo4dfltE"></span><span id="_CPPv2N18BitwuzlaOptionInfo4dfltE"></span><span id="BitwuzlaOptionInfo::dflt__uint64_t"></span><span class="target" id="structBitwuzlaOptionInfo_1a93772f1d17c4b2435c38c94cc811b2a4"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dflt</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo4dfltE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Default numeric option value. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo3minE">
-<span id="_CPPv3N18BitwuzlaOptionInfo3minE"></span><span id="_CPPv2N18BitwuzlaOptionInfo3minE"></span><span id="BitwuzlaOptionInfo::min__uint64_t"></span><span class="target" id="structBitwuzlaOptionInfo_1a5c18bee9f6d1b2585ac5b42ca70712d1"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">min</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo3minE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Minimum numeric option value. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo3maxE">
-<span id="_CPPv3N18BitwuzlaOptionInfo3maxE"></span><span id="_CPPv2N18BitwuzlaOptionInfo3maxE"></span><span id="BitwuzlaOptionInfo::max__uint64_t"></span><span class="target" id="structBitwuzlaOptionInfo_1a81a7a0f8863b72bfea525718b0ef7847"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo3maxE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Maximum numeric option value. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp">
-<span class="target" id="structBitwuzlaOptionInfo_1a94c94a1845181a312e076b9f72f8f93c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo9ModeValue3curE">
+<span id="_CPPv3N18BitwuzlaOptionInfo9ModeValue3curE"></span><span id="_CPPv2N18BitwuzlaOptionInfo9ModeValue3curE"></span><span id="BitwuzlaOptionInfo::ModeValue::cur__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1_1ModeValue_1a85cb1e4bf1bcd1a7970dc3ff25f755a2"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo9ModeValue3curE" title="Link to this definition"></a><br /></dt>
 <dd><p>Current mode option value. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp">
-<span class="target" id="structBitwuzlaOptionInfo_1aac8c8d0492eee62afd1be3c59d465ac5"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">dflt</span></span></span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo9ModeValue4dfltE">
+<span id="_CPPv3N18BitwuzlaOptionInfo9ModeValue4dfltE"></span><span id="_CPPv2N18BitwuzlaOptionInfo9ModeValue4dfltE"></span><span id="BitwuzlaOptionInfo::ModeValue::dflt__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1_1ModeValue_1ab0ddb0ca4d44d36a1d7f865c038665df"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">dflt</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo9ModeValue4dfltE" title="Link to this definition"></a><br /></dt>
 <dd><p>Default mode option value. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo9num_modesE">
-<span id="_CPPv3N18BitwuzlaOptionInfo9num_modesE"></span><span id="_CPPv2N18BitwuzlaOptionInfo9num_modesE"></span><span id="BitwuzlaOptionInfo::num_modes__s"></span><span class="target" id="structBitwuzlaOptionInfo_1ab7eee70697921a48a6f696b9a1d0c7e8"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_modes</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo9num_modesE" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo9ModeValue9num_modesE">
+<span id="_CPPv3N18BitwuzlaOptionInfo9ModeValue9num_modesE"></span><span id="_CPPv2N18BitwuzlaOptionInfo9ModeValue9num_modesE"></span><span id="BitwuzlaOptionInfo::ModeValue::num_modes__s"></span><span class="target" id="structBitwuzlaOptionInfo_1_1ModeValue_1ab6138f41d1c8047420ca54c59cfb8383"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_modes</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo9ModeValue9num_modesE" title="Link to this definition"></a><br /></dt>
 <dd><p>Number of available modes. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo5modesE">
-<span id="_CPPv3N18BitwuzlaOptionInfo5modesE"></span><span id="_CPPv2N18BitwuzlaOptionInfo5modesE"></span><span id="BitwuzlaOptionInfo::modes__cPP"></span><span class="target" id="structBitwuzlaOptionInfo_1a785d79a595b694c98af58035949c1d5b"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">modes</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo5modesE" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo9ModeValue5modesE">
+<span id="_CPPv3N18BitwuzlaOptionInfo9ModeValue5modesE"></span><span id="_CPPv2N18BitwuzlaOptionInfo9ModeValue5modesE"></span><span id="BitwuzlaOptionInfo::ModeValue::modes__cCPP"></span><span class="target" id="structBitwuzlaOptionInfo_1_1ModeValue_1a4d071617c0fac2ff5d5d91d691a9c465"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">modes</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo9ModeValue5modesE" title="Link to this definition"></a><br /></dt>
 <dd><p>List of available modes. </p>
 </dd></dl>
 
 </div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo12NumericValueE">
+<span id="_CPPv3N18BitwuzlaOptionInfo12NumericValueE"></span><span id="_CPPv2N18BitwuzlaOptionInfo12NumericValueE"></span><span id="BitwuzlaOptionInfo::NumericValue"></span><span class="target" id="structBitwuzlaOptionInfo_1_1NumericValue"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NumericValue</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo12NumericValueE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo12NumericValue3curE">
+<span id="_CPPv3N18BitwuzlaOptionInfo12NumericValue3curE"></span><span id="_CPPv2N18BitwuzlaOptionInfo12NumericValue3curE"></span><span id="BitwuzlaOptionInfo::NumericValue::cur__uint64_t"></span><span class="target" id="structBitwuzlaOptionInfo_1_1NumericValue_1a739f1a64568a6de80a9176c79cd74be7"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo12NumericValue3curE" title="Link to this definition"></a><br /></dt>
+<dd><p>Current numeric option value. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo12NumericValue4dfltE">
+<span id="_CPPv3N18BitwuzlaOptionInfo12NumericValue4dfltE"></span><span id="_CPPv2N18BitwuzlaOptionInfo12NumericValue4dfltE"></span><span id="BitwuzlaOptionInfo::NumericValue::dflt__uint64_t"></span><span class="target" id="structBitwuzlaOptionInfo_1_1NumericValue_1a6c5577513d52982d07f5688d863455ce"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dflt</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo12NumericValue4dfltE" title="Link to this definition"></a><br /></dt>
+<dd><p>Default numeric option value. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo12NumericValue3minE">
+<span id="_CPPv3N18BitwuzlaOptionInfo12NumericValue3minE"></span><span id="_CPPv2N18BitwuzlaOptionInfo12NumericValue3minE"></span><span id="BitwuzlaOptionInfo::NumericValue::min__uint64_t"></span><span class="target" id="structBitwuzlaOptionInfo_1_1NumericValue_1a24c96a0f0c10a633c1220d5e5e3aa218"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">min</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo12NumericValue3minE" title="Link to this definition"></a><br /></dt>
+<dd><p>Minimum numeric option value. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo12NumericValue3maxE">
+<span id="_CPPv3N18BitwuzlaOptionInfo12NumericValue3maxE"></span><span id="_CPPv2N18BitwuzlaOptionInfo12NumericValue3maxE"></span><span id="BitwuzlaOptionInfo::NumericValue::max__uint64_t"></span><span class="target" id="structBitwuzlaOptionInfo_1_1NumericValue_1a8390fc4c3b06cebac94446a5aa8a950a"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo12NumericValue3maxE" title="Link to this definition"></a><br /></dt>
+<dd><p>Maximum numeric option value. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </section>

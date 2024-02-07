@@ -15,9 +15,9 @@
   
         <script src="../static/jquery.js?v=5d32c60e"></script>
         <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../static/doctools.js?v=888ff710"></script>
-        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.1
+                0.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -78,16 +78,16 @@
            <div itemprop="articleBody">
              
   <section id="term-substitution">
-<h1>Term Substitution<a class="headerlink" href="#term-substitution" title="Permalink to this heading"></a></h1>
+<h1>Term Substitution<a class="headerlink" href="#term-substitution" title="Link to this heading"></a></h1>
 <p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv415substitute_termRK4TermKNSt13unordered_mapI4Term4TermEE">
-<span id="_CPPv315substitute_termRK4TermKNSt13unordered_mapI4Term4TermEE"></span><span id="_CPPv215substitute_termRK4TermKNSt13unordered_mapI4Term4TermEE"></span><span id="substitute_term__TermCR.std::unordered_map:Term.Term:C"></span><span class="target" id="group__cpp__term__substitution_1gaa9a95b567380e18b16be86b940e800f4"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">substitute_term</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">term</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415substitute_termRK4TermKNSt13unordered_mapI4Term4TermEE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Substitute a set of keys with their corresponding values in the given term.</p>
+<dt class="sig sig-object cpp" id="_CPPv415substitute_termRK4TermRKNSt13unordered_mapI4Term4TermEE">
+<span id="_CPPv315substitute_termRK4TermRKNSt13unordered_mapI4Term4TermEE"></span><span id="_CPPv215substitute_termRK4TermRKNSt13unordered_mapI4Term4TermEE"></span><span id="substitute_term__TermCR.std::unordered_map:Term.Term:CR"></span><span class="target" id="group__cpp__term__substitution_1ga66398deba6479598e2d61a4187fc195b"></span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">substitute_term</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">term</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415substitute_termRK4TermRKNSt13unordered_mapI4Term4TermEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Substitute a set terms in a given term. The substitutions to perform are represented as map from keys to be substituted with their corresponding values in the given term.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>term</strong> – The term in which the keys are to be substituted. </p></li>
+<li><p><strong>term</strong> – The term in which the terms are to be substituted. </p></li>
 <li><p><strong>map</strong> – The substitution map. </p></li>
 </ul>
 </dd>
@@ -98,18 +98,15 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv416substitute_termsRNSt6vectorI4TermEEKNSt13unordered_mapI4Term4TermEE">
-<span id="_CPPv316substitute_termsRNSt6vectorI4TermEEKNSt13unordered_mapI4Term4TermEE"></span><span id="_CPPv216substitute_termsRNSt6vectorI4TermEEKNSt13unordered_mapI4Term4TermEE"></span><span id="substitute_terms__std::vector:Term:R.std::unordered_map:Term.Term:C"></span><span class="target" id="group__cpp__term__substitution_1ga93a89648b6b0190d468abaa392896628"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">substitute_terms</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">terms</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416substitute_termsRNSt6vectorI4TermEEKNSt13unordered_mapI4Term4TermEE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Substitute a set of keys with their corresponding values in the set of given terms.</p>
-<p>The terms in <code class="docutils literal notranslate"><span class="pre">terms</span></code> are replaced with the terms resulting from this substitutions.</p>
+<dt class="sig sig-object cpp" id="_CPPv416substitute_termsRNSt6vectorI4TermEERKNSt13unordered_mapI4Term4TermEE">
+<span id="_CPPv316substitute_termsRNSt6vectorI4TermEERKNSt13unordered_mapI4Term4TermEE"></span><span id="_CPPv216substitute_termsRNSt6vectorI4TermEERKNSt13unordered_mapI4Term4TermEE"></span><span id="substitute_terms__std::vector:Term:R.std::unordered_map:Term.Term:CR"></span><span class="target" id="group__cpp__term__substitution_1gada7679d8e30dd05d7c452747feef7e2a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">substitute_terms</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">terms</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Term</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416substitute_termsRNSt6vectorI4TermEERKNSt13unordered_mapI4Term4TermEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Substitute a set of terms in a set of given terms. The substitutions to perform are represented as map from keys to be substituted with their corresponding values in the given terms.</p>
+<p>The terms in <code class="docutils literal notranslate"><span class="pre">terms</span></code> are replaced with the terms resulting from these substitutions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>terms_size</strong> – The size of the set of terms. </p></li>
-<li><p><strong>terms</strong> – The terms in which the keys are to be substituted. </p></li>
-<li><p><strong>map_size</strong> – The size of the substitution map. </p></li>
-<li><p><strong>map_keys</strong> – The keys. </p></li>
-<li><p><strong>map_values</strong> – The mapped values. </p></li>
+<li><p><strong>terms</strong> – The terms in which the terms are to be substituted. </p></li>
+<li><p><strong>map</strong> – The substitution map. </p></li>
 </ul>
 </dd>
 </dl>

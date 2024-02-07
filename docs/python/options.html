@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Options &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../static/jquery.js?v=5d32c60e"></script>
+        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../static/doctools.js?v=888ff710"></script>
+        <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.3.2
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Options</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="options">
+<span id="python-options"></span><h1>Options<a class="headerlink" href="#options" title="Link to this heading"></a></h1>
+<p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla</span></code> instance is created from a configuration
+options <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Options</span></code> instance. This options instance must
+be configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
+instance is created, configuration options are fixed and <strong>cannot</strong> be changed.</p>
+<p><strong>Bitwuzla</strong> supports three kinds of options: Boolean options, numeric options
+and options with option modes.
+The kind of an option can be queried via
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.is_bool()</span></code>,
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.is_numeric()</span></code>, and
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.is_mode()</span></code>.</p>
+<p>All options are configured via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.set()</span></code>.
+Additionally, it is also possible to configure options in batch via
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.set_args()</span></code>,
+where the given arguments are each a command line option configuration string,
+e.g., <code class="code docutils literal notranslate"><span class="pre">set_args(&quot;-i&quot;,</span> <span class="pre">&quot;--produce-models=true&quot;,</span> <span class="pre">&quot;--produce-unsat-cores</span> <span class="pre">true&quot;)</span></code>.</p>
+<p>The configured value of options can be queried via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.get()</span></code>.</p>
+<p>The short name of an option can be queried via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.shrt()</span></code>,
+its long name via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.lng()</span></code>, its description via
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.description()</span></code>,
+and, if given option is an option with modes, its modes can be queried via
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.modes()</span></code>.</p>
+<p>The option kind is defined via <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Option</span></code>.
+A <strong>comprehensive list</strong> of all configurable options is available
+<a class="reference internal" href="enums/option.html"><span class="doc">here</span></a>.</p>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p>The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/python/options.py">examples/python/options.py</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">###</span>
+<span class="c1"># Bitwuzla: Satisfiability Modulo Theories (SMT) solver.</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (C) 2023 by the authors listed in the AUTHORS file at</span>
+<span class="c1"># https:#github.com/bitwuzla/bitwuzla/blob/main/AUTHORS</span>
+<span class="c1">#</span>
+<span class="c1"># This file is part of Bitwuzla under the MIT license. See COPYING for more</span>
+<span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
+<span class="c1">##</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="c1"># First, create a Bitwuzla options instance.</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="n">Options</span><span class="p">()</span>
+
+    <span class="c1"># Enable model generation, which expects a boolean configuration value.</span>
+    <span class="n">options</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">.</span><span class="n">PRODUCE_MODELS</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Increase the verbosity level, which expects an integer value.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Previous verbosity level: </span><span class="si">{</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Option</span><span class="o">.</span><span class="n">VERBOSITY</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">options</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">.</span><span class="n">VERBOSITY</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Current verbosity level: </span><span class="si">{</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Option</span><span class="o">.</span><span class="n">VERBOSITY</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Now configure an option that has modes (a choice of configuration values).</span>
+    <span class="c1"># First, query which bit-vector solver engine is set.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Default bv solver: </span><span class="si">{</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Option</span><span class="o">.</span><span class="n">BV_SOLVER</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="c1"># Then, select the propagation-based local search engine as solver engine.</span>
+    <span class="n">options</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">.</span><span class="n">BV_SOLVER</span><span class="p">,</span> <span class="s1">&#39;prop&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Current engine: </span><span class="si">{</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Option</span><span class="o">.</span><span class="n">BV_SOLVER</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Now, create a Bitwuzla instance.</span>
+    <span class="n">bitwuzla</span> <span class="o">=</span> <span class="n">Bitwuzla</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+    <span class="c1"># Check sat (nothing to solve, input formula is empty).</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">bitwuzla</span><span class="o">.</span><span class="n">check_sat</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expect: sat&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Bitwuzla: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

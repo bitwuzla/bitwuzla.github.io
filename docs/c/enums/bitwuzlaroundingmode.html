@@ -15,9 +15,9 @@
   
         <script src="../../static/jquery.js?v=5d32c60e"></script>
         <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../../static/doctools.js?v=888ff710"></script>
-        <script src="../../static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.1
+                0.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -78,7 +78,7 @@
            <div itemprop="articleBody">
              
   <section id="bitwuzlaroundingmode">
-<h1>BitwuzlaRoundingMode<a class="headerlink" href="#bitwuzlaroundingmode" title="Permalink to this heading"></a></h1>
+<h1>BitwuzlaRoundingMode<a class="headerlink" href="#bitwuzlaroundingmode" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><p>enum <a class="reference internal" href="#_CPPv420BitwuzlaRoundingMode" title="BitwuzlaRoundingMode"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">BitwuzlaRoundingMode</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv421bitwuzla_rm_to_string20BitwuzlaRoundingMode" title="bitwuzla_rm_to_string"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_rm_to_string()</span></code></a></p></li>
@@ -86,7 +86,7 @@
 <hr class="docutils" />
 <dl class="cpp enum">
 <dt class="sig sig-object cpp" id="_CPPv420BitwuzlaRoundingMode">
-<span id="_CPPv320BitwuzlaRoundingMode"></span><span id="_CPPv220BitwuzlaRoundingMode"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaRoundingMode</span></span></span><a class="headerlink" href="#_CPPv420BitwuzlaRoundingMode" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv320BitwuzlaRoundingMode"></span><span id="_CPPv220BitwuzlaRoundingMode"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaRoundingMode</span></span></span><a class="headerlink" href="#_CPPv420BitwuzlaRoundingMode" title="Link to this definition"></a><br /></dt>
 <dd><p>Rounding mode for floating-point operations.</p>
 <p>For some floating-point operations, infinitely precise results may not be representable in a given format. Hence, they are rounded modulo one of five rounding modes to a representable floating-point number.</p>
 <p>The following rounding modes follow the SMT-LIB theory for floating-point
@@ -96,35 +96,35 @@ Standard 754.</p>
 <p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RNEE">
-<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RNEE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RNEE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687a4ff005bc6c6e7f16c373ff3d8c394faa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RNE</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RNEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RNEE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RNEE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687a4ff005bc6c6e7f16c373ff3d8c394faa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RNE</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RNEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Round to the nearest even number. If the two nearest floating-point numbers bracketing an unrepresentable infinitely precise result are equally near, the one with an even least significant digit will be delivered.</p>
 <p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RNE</span></code> <code class="docutils literal notranslate"><span class="pre">roundNearestTiesToEven</span></code></p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RNAE">
-<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RNAE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RNAE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687a2ae5a35efca1f8119145bf856bc0cf30"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RNA</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RNAE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RNAE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RNAE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687a2ae5a35efca1f8119145bf856bc0cf30"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RNA</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RNAE" title="Link to this definition"></a><br /></dt>
 <dd><p>Round to the nearest number away from zero. If the two nearest floating-point numbers bracketing an unrepresentable infinitely precise result are equally near, the one with larger magnitude will be selected.</p>
 <p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RNA</span></code> <code class="docutils literal notranslate"><span class="pre">roundNearestTiesToAway</span></code></p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RTNE">
-<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RTNE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RTNE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687ac3a88e1a706b1cfcf04f8c6933ab318c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RTN</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RTNE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RTNE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RTNE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687ac3a88e1a706b1cfcf04f8c6933ab318c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RTN</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RTNE" title="Link to this definition"></a><br /></dt>
 <dd><p>Round towards negative infinity (-oo). The result shall be the format’s floating-point number (possibly -oo) closest to and no less than the infinitely precise result.</p>
 <p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RTN</span></code> <code class="docutils literal notranslate"><span class="pre">roundTowardNegative</span></code></p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RTPE">
-<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RTPE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RTPE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687a80d4f992cf0cdc9174d0d50c6e1116b1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RTP</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RTPE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RTPE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RTPE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687a80d4f992cf0cdc9174d0d50c6e1116b1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RTP</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RTPE" title="Link to this definition"></a><br /></dt>
 <dd><p>Round towards positive infinity (+oo). The result shall be the format’s floating-point number (possibly +oo) closest to and no less than the infinitely precise result.</p>
 <p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RTP</span></code> <code class="docutils literal notranslate"><span class="pre">roundTowardPositive</span></code></p>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RTZE">
-<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RTZE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RTZE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687a32f64de42dcea0e4cfe6a33e90da557b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RTZ</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RTZE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N20BitwuzlaRoundingMode15BITWUZLA_RM_RTZE"></span><span id="_CPPv2N20BitwuzlaRoundingMode15BITWUZLA_RM_RTZE"></span><span class="target" id="enums_8h_1a5c1c80490dd4f2642905e2b28be59687a32f64de42dcea0e4cfe6a33e90da557b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BITWUZLA_RM_RTZ</span></span></span><a class="headerlink" href="#_CPPv4N20BitwuzlaRoundingMode15BITWUZLA_RM_RTZE" title="Link to this definition"></a><br /></dt>
 <dd><p>Round towards zero. The result shall be the format’s floating-point number closest to and no greater in magnitude than the infinitely precise result.</p>
 <p><strong>SMT-LIB:</strong> <code class="docutils literal notranslate"><span class="pre">RTZ</span></code> <code class="docutils literal notranslate"><span class="pre">roundTowardZero</span></code></p>
 </dd></dl>
@@ -134,7 +134,7 @@ Standard 754.</p>
 <hr class="docutils" />
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv421bitwuzla_rm_to_string20BitwuzlaRoundingMode">
-<span id="_CPPv321bitwuzla_rm_to_string20BitwuzlaRoundingMode"></span><span id="_CPPv221bitwuzla_rm_to_string20BitwuzlaRoundingMode"></span><span id="bitwuzla_rm_to_string__BitwuzlaRoundingMode"></span><span class="target" id="bitwuzla_8h_1ad175d1c194384f7c99e9154b6683ce44"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_rm_to_string</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420BitwuzlaRoundingMode" title="BitwuzlaRoundingMode"><span class="n"><span class="pre">BitwuzlaRoundingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_rm_to_string20BitwuzlaRoundingMode" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv321bitwuzla_rm_to_string20BitwuzlaRoundingMode"></span><span id="_CPPv221bitwuzla_rm_to_string20BitwuzlaRoundingMode"></span><span id="bitwuzla_rm_to_string__BitwuzlaRoundingMode"></span><span class="target" id="bitwuzla_8h_1ad175d1c194384f7c99e9154b6683ce44"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_rm_to_string</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420BitwuzlaRoundingMode" title="BitwuzlaRoundingMode"><span class="n"><span class="pre">BitwuzlaRoundingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_rm_to_string20BitwuzlaRoundingMode" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the string representation of a rounding mode. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

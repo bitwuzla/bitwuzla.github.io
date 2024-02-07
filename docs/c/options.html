@@ -15,9 +15,9 @@
   
         <script src="../static/jquery.js?v=5d32c60e"></script>
         <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../static/doctools.js?v=888ff710"></script>
-        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.1
+                0.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -100,7 +100,7 @@
            <div itemprop="articleBody">
              
   <section id="options">
-<span id="c-options"></span><h1>Options<a class="headerlink" href="#options" title="Permalink to this heading"></a></h1>
+<span id="c-options"></span><h1>Options<a class="headerlink" href="#options" title="Link to this heading"></a></h1>
 <p>A <a class="reference internal" href="types/bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
 options <a class="reference internal" href="types/bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance. This options instance must
 be configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
@@ -122,7 +122,7 @@ and the value of an option with modes can be queried via
 A <strong>comprehensive list</strong> of all configurable options is available
 <a class="reference internal" href="enums/bitwuzlaoption.html"><span class="doc">here</span></a>.</p>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <p>The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/options.c">examples/c/options.c</a>.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/***</span>
 <span class="cm"> * Bitwuzla: Satisfiability Modulo Theories (SMT) solver.</span>
@@ -143,25 +143,31 @@ A <strong>comprehensive list</strong> of all configurable options is available
 <span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
 <span class="w">  </span><span class="n">BitwuzlaOptions</span><span class="o">*</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_options_new</span><span class="p">();</span>
 
-<span class="w">  </span><span class="c1">// Then, query which bit-vector solver engine is set.</span>
+<span class="w">  </span><span class="c1">// Enable model generation, which expects a boolean configuration value.</span>
+<span class="w">  </span><span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_PRODUCE_MODELS</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Increase the verbosity level, which expects an integer value.</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Previous verbosity level: %lu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="n">bitwuzla_get_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_VERBOSITY</span><span class="p">));</span>
+<span class="w">  </span><span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_VERBOSITY</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Current verbosity level: %lu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="n">bitwuzla_get_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_VERBOSITY</span><span class="p">));</span>
+
+<span class="w">  </span><span class="c1">// Now configure an option that has modes (a choice of configuration values).</span>
+<span class="w">  </span><span class="c1">// First, query which bit-vector solver engine is set.</span>
 <span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Default bv solver: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="n">bitwuzla_get_option_mode</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_BV_SOLVER</span><span class="p">));</span>
-
-<span class="w">  </span><span class="c1">// Now, select the propagation-based local search engine as solver engine.</span>
+<span class="w">  </span><span class="c1">// Then, select the propagation-based local search engine as solver engine.</span>
 <span class="w">  </span><span class="n">bitwuzla_set_option_mode</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_BV_SOLVER</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;prop&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Current engine: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="n">bitwuzla_get_option_mode</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_BV_SOLVER</span><span class="p">));</span>
 
-<span class="w">  </span><span class="c1">// Then, configure some options that expect an integer configuration value.</span>
-<span class="w">  </span><span class="c1">// First, enable model generation.</span>
-<span class="w">  </span><span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_PRODUCE_MODELS</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="w">  </span><span class="c1">// Then, increase the verbosity level.</span>
-<span class="w">  </span><span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_VERBOSITY</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-
 <span class="w">  </span><span class="c1">// Now, create a Bitwuzla instance.</span>
 <span class="w">  </span><span class="n">Bitwuzla</span><span class="o">*</span><span class="w"> </span><span class="n">bitwuzla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_new</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// Check sat (nothing to solve, input formula is empty).</span>
-<span class="w">  </span><span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">);</span>
+<span class="w">  </span><span class="n">BitwuzlaResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">);</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expect: sat</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bitwuzla: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bitwuzla_result_to_string</span><span class="p">(</span><span class="n">result</span><span class="p">));</span>
 
 <span class="w">  </span><span class="c1">// Finally, delete the Bitwuzla and Bitwuzla options instance.</span>
 <span class="w">  </span><span class="n">bitwuzla_delete</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">);</span>
@@ -173,7 +179,7 @@ A <strong>comprehensive list</strong> of all configurable options is available
 </div>
 </section>
 <section id="optioninfo">
-<h2>OptionInfo<a class="headerlink" href="#optioninfo" title="Permalink to this heading"></a></h2>
+<h2>OptionInfo<a class="headerlink" href="#optioninfo" title="Link to this heading"></a></h2>
 <p>Bitwuzla offers a compact way to retrieve all information about a configuration
 option as a <a class="reference internal" href="structs/bitwuzlaoptioninfo.html#_CPPv418BitwuzlaOptionInfo" title="BitwuzlaOptionInfo"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptionInfo</span></code></a> object via
 <a class="reference internal" href="types/bitwuzlaoptions.html#_CPPv424bitwuzla_get_option_infoP15BitwuzlaOptions14BitwuzlaOptionP18BitwuzlaOptionInfo" title="bitwuzla_get_option_info"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_get_option_info()</span></code></a>.

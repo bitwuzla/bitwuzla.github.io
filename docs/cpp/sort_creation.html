@@ -15,9 +15,9 @@
   
         <script src="../static/jquery.js?v=5d32c60e"></script>
         <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../static/doctools.js?v=888ff710"></script>
-        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.1
+                0.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -55,7 +55,16 @@
 <li class="toctree-l3"><a class="reference internal" href="interface.html">C++ Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="options.html">Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enums/kind.html">Term Kinds</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Sort Creation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sort Creation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv413mk_array_sortRK4SortRK4Sort"><code class="docutils literal notranslate"><span class="pre">mk_array_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv412mk_bool_sortv"><code class="docutils literal notranslate"><span class="pre">mk_bool_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv410mk_bv_sort8uint64_t"><code class="docutils literal notranslate"><span class="pre">mk_bv_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv410mk_fp_sort8uint64_t8uint64_t"><code class="docutils literal notranslate"><span class="pre">mk_fp_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv411mk_fun_sortRKNSt6vectorI4SortEERK4Sort"><code class="docutils literal notranslate"><span class="pre">mk_fun_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv410mk_rm_sortv"><code class="docutils literal notranslate"><span class="pre">mk_rm_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv421mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">mk_uninterpreted_sort()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="term_creation.html">Term Creation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#examples">Examples</a></li>
@@ -96,7 +105,7 @@
            <div itemprop="articleBody">
              
   <section id="sort-creation">
-<h1>Sort Creation<a class="headerlink" href="#sort-creation" title="Permalink to this heading"></a></h1>
+<h1>Sort Creation<a class="headerlink" href="#sort-creation" title="Link to this heading"></a></h1>
 <p>Bitwuzla supports creating array (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">Array</span></code>), Boolean (SMT-LIB:
 <code class="code docutils literal notranslate"><span class="pre">Bool</span></code>), bit-vector (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">BitVec</span> <span class="pre">n)</span></code>), floating-point
 (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">FloatingPoint</span> <span class="pre">e</span> <span class="pre">s)</span></code>), rounding mode (SMT-LIB:
@@ -112,7 +121,7 @@ instances.</p>
 <p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv413mk_array_sortRK4SortRK4Sort">
-<span id="_CPPv313mk_array_sortRK4SortRK4Sort"></span><span id="_CPPv213mk_array_sortRK4SortRK4Sort"></span><span id="mk_array_sort__SortCR.SortCR"></span><span class="target" id="group__cpp__sort__creation_1gacb1c94b05a3181ab3797461db1e0101c"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_array_sort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413mk_array_sortRK4SortRK4Sort" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv313mk_array_sortRK4SortRK4Sort"></span><span id="_CPPv213mk_array_sortRK4SortRK4Sort"></span><span id="mk_array_sort__SortCR.SortCR"></span><span class="target" id="group__cpp__sort__creation_1gacb1c94b05a3181ab3797461db1e0101c"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_array_sort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413mk_array_sortRK4SortRK4Sort" title="Link to this definition"></a><br /></dt>
 <dd><p>Create an array sort. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
@@ -138,7 +147,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv412mk_bool_sortv">
-<span id="_CPPv312mk_bool_sortv"></span><span id="_CPPv212mk_bool_sortv"></span><span id="mk_bool_sort"></span><span class="target" id="group__cpp__sort__creation_1ga7bcc9c149fc0adfa1adb1ff4628fae0b"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bool_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412mk_bool_sortv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv312mk_bool_sortv"></span><span id="_CPPv212mk_bool_sortv"></span><span id="mk_bool_sort"></span><span class="target" id="group__cpp__sort__creation_1ga7bcc9c149fc0adfa1adb1ff4628fae0b"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bool_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412mk_bool_sortv" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a Boolean sort. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -149,7 +158,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv410mk_bv_sort8uint64_t">
-<span id="_CPPv310mk_bv_sort8uint64_t"></span><span id="_CPPv210mk_bv_sort8uint64_t"></span><span id="mk_bv_sort__uint64_t"></span><span class="target" id="group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_bv_sort8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv310mk_bv_sort8uint64_t"></span><span id="_CPPv210mk_bv_sort8uint64_t"></span><span id="mk_bv_sort__uint64_t"></span><span class="target" id="group__cpp__sort__creation_1gab19c95c55b4150e7cc010c66b3dca9d7"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_bv_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_bv_sort8uint64_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a bit-vector sort of given size. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
@@ -171,7 +180,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv410mk_fp_sort8uint64_t8uint64_t">
-<span id="_CPPv310mk_fp_sort8uint64_t8uint64_t"></span><span id="_CPPv210mk_fp_sort8uint64_t8uint64_t"></span><span id="mk_fp_sort__uint64_t.uint64_t"></span><span class="target" id="group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">exp_size</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sig_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_fp_sort8uint64_t8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv310mk_fp_sort8uint64_t8uint64_t"></span><span id="_CPPv210mk_fp_sort8uint64_t8uint64_t"></span><span id="mk_fp_sort__uint64_t.uint64_t"></span><span class="target" id="group__cpp__sort__creation_1ga9e112a033b5250f84d870985f111eb9b"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fp_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">exp_size</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sig_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_fp_sort8uint64_t8uint64_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a floating-point sort of given exponent and significand size. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
@@ -197,7 +206,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv411mk_fun_sortRKNSt6vectorI4SortEERK4Sort">
-<span id="_CPPv311mk_fun_sortRKNSt6vectorI4SortEERK4Sort"></span><span id="_CPPv211mk_fun_sortRKNSt6vectorI4SortEERK4Sort"></span><span id="mk_fun_sort__std::vector:Sort:CR.SortCR"></span><span class="target" id="group__cpp__sort__creation_1gacccceb1252cbd32e2bb1600de5651b12"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fun_sort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Sort</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">domain</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">codomain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411mk_fun_sortRKNSt6vectorI4SortEERK4Sort" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv311mk_fun_sortRKNSt6vectorI4SortEERK4Sort"></span><span id="_CPPv211mk_fun_sortRKNSt6vectorI4SortEERK4Sort"></span><span id="mk_fun_sort__std::vector:Sort:CR.SortCR"></span><span class="target" id="group__cpp__sort__creation_1gacccceb1252cbd32e2bb1600de5651b12"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_fun_sort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Sort</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">domain</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">codomain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411mk_fun_sortRKNSt6vectorI4SortEERK4Sort" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a function sort. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
@@ -224,7 +233,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv410mk_rm_sortv">
-<span id="_CPPv310mk_rm_sortv"></span><span id="_CPPv210mk_rm_sortv"></span><span id="mk_rm_sort"></span><span class="target" id="group__cpp__sort__creation_1ga86aa84200669f4ea6101efce53653b55"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_rm_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_rm_sortv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv310mk_rm_sortv"></span><span id="_CPPv210mk_rm_sortv"></span><span id="mk_rm_sort"></span><span class="target" id="group__cpp__sort__creation_1ga86aa84200669f4ea6101efce53653b55"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_rm_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410mk_rm_sortv" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a Roundingmode sort. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
@@ -242,7 +251,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv421mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE">
-<span id="_CPPv321mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE"></span><span id="_CPPv221mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE"></span><span id="mk_uninterpreted_sort__std::optional:ssC:"></span><span class="target" id="group__cpp__sort__creation_1ga7c032cef692b18294022faa531b9e1b1"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_uninterpreted_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">symbol</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv321mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE"></span><span id="_CPPv221mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE"></span><span id="mk_uninterpreted_sort__std::optional:ssC:"></span><span class="target" id="group__cpp__sort__creation_1ga7c032cef692b18294022faa531b9e1b1"></span><span class="n"><span class="pre">Sort</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mk_uninterpreted_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">symbol</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421mk_uninterpreted_sortNSt8optionalIKNSt6stringEEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Create an uninterpreted sort.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>

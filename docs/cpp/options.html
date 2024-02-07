@@ -15,9 +15,9 @@
   
         <script src="../static/jquery.js?v=5d32c60e"></script>
         <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../static/doctools.js?v=888ff710"></script>
-        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.1
+                0.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -100,7 +100,7 @@
            <div itemprop="articleBody">
              
   <section id="options">
-<span id="cpp-options"></span><h1>Options<a class="headerlink" href="#options" title="Permalink to this heading"></a></h1>
+<span id="cpp-options"></span><h1>Options<a class="headerlink" href="#options" title="Link to this heading"></a></h1>
 <p>A <a class="reference internal" href="classes/bitwuzla.html#_CPPv4N8bitwuzla8BitwuzlaE" title="bitwuzla::Bitwuzla"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla</span></code></a> instance is created from a configuration
 options <a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a> instance. This options instance must
 be configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
@@ -118,7 +118,7 @@ options with option modes are configured via
 Any option can also be configured via
 <a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7Options3setERKNSt6stringERKNSt6stringE" title="void bitwuzla::Options::set(const std::string &amp;lng, const std::string &amp;value)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">bitwuzla::Options::set(const</span> <span class="pre">std::string</span> <span class="pre">&amp;lng,</span> <span class="pre">const</span> <span class="pre">std::string</span> <span class="pre">&amp;value)</span></code></a>,
 where <code class="code docutils literal notranslate"><span class="pre">lng</span></code> is the long name of the option (e.g., <code class="code docutils literal notranslate"><span class="pre">&quot;produce-models&quot;</span></code>).</p>
-<p>Additionally, it is also possible to confgure options in batch via
+<p>Additionally, it is also possible to configure options in batch via
 <a class="reference internal" href="classes/options.html#_CPPv4N8bitwuzla7Options3setERKNSt6vectorINSt6stringEEE" title="void bitwuzla::Options::set(const std::vector&lt;std::string&gt; &amp;args)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">bitwuzla::Options::set(const</span> <span class="pre">std::vector&lt;std::string&gt;</span> <span class="pre">&amp;args)</span></code></a>,
 where <code class="code docutils literal notranslate"><span class="pre">args</span></code> is a vector of command line option configuration strings,
 e.g., <code class="code docutils literal notranslate"><span class="pre">{&quot;-i&quot;,</span> <span class="pre">&quot;--produce-models=true&quot;,</span> <span class="pre">&quot;--produce-unsat-cores</span> <span class="pre">true&quot;}</span></code>.</p>
@@ -138,7 +138,7 @@ and, if given option is an option with modes, its modes can be queried via
 A <strong>comprehensive list</strong> of all configurable options is available
 <a class="reference internal" href="enums/option.html"><span class="doc">here</span></a>.</p>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
 <p>The source code for this example can be found at <a class="reference external" href="https://github.com/bitwuzla/bitwuzla/tree/main/examples/c/options.cpp">examples/c/options.cpp</a>.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/***</span>
 <span class="cm"> * Bitwuzla: Satisfiability Modulo Theories (SMT) solver.</span>
@@ -162,25 +162,31 @@ A <strong>comprehensive list</strong> of all configurable options is available
 <span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
 <span class="w">  </span><span class="n">Options</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
 
-<span class="w">  </span><span class="c1">// Then, query which bit-vector solver engine is set.</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Default bv solver: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">get_mode</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">BV_SOLVER</span><span class="p">)</span>
+<span class="w">  </span><span class="c1">// Enable model generation, which expects a boolean configuration value.</span>
+<span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">PRODUCE_MODELS</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Increase the verbosity level, which expects an integer value.</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Previous verbosity level: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">VERBOSITY</span><span class="p">)</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">VERBOSITY</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Current verbosity level: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">VERBOSITY</span><span class="p">)</span>
 <span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
-<span class="w">  </span><span class="c1">// Now, select the propagation-based local search engine as solver engine.</span>
+<span class="w">  </span><span class="c1">// Now configure an option that has modes (a choice of configuration values).</span>
+<span class="w">  </span><span class="c1">// First, query which bit-vector solver engine is set.</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Default bv solver: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">get_mode</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">BV_SOLVER</span><span class="p">)</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Then, select the propagation-based local search engine as solver engine.</span>
 <span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">BV_SOLVER</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;prop&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Current engine: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">get_mode</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">BV_SOLVER</span><span class="p">)</span>
 <span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
-<span class="w">  </span><span class="c1">// Then, configure some options that expect an integer configuration value.</span>
-<span class="w">  </span><span class="c1">// First, enable model generation.</span>
-<span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">PRODUCE_MODELS</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
-<span class="w">  </span><span class="c1">// Then, increase the verbosity level.</span>
-<span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">VERBOSITY</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-
 <span class="w">  </span><span class="c1">// Now, create a Bitwuzla instance.</span>
 <span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// Check sat (nothing to solve, input formula is empty).</span>
-<span class="w">  </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">check_sat</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">check_sat</span><span class="p">();</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Expect: sat&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Bitwuzla: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -188,7 +194,7 @@ A <strong>comprehensive list</strong> of all configurable options is available
 </div>
 </section>
 <section id="optioninfo">
-<h2>OptionInfo<a class="headerlink" href="#optioninfo" title="Permalink to this heading"></a></h2>
+<h2>OptionInfo<a class="headerlink" href="#optioninfo" title="Link to this heading"></a></h2>
 <p>Bitwuzla offers a compact way to retrieve all information about a configuration
 option as a <a class="reference internal" href="classes/optioninfo.html#_CPPv4N8bitwuzla10OptionInfoE" title="bitwuzla::OptionInfo"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">bitwuzla::OptionInfo</span></code></a> object via
 <a class="reference internal" href="classes/optioninfo.html#_CPPv4N8bitwuzla10OptionInfo10OptionInfoERK7Options6Option" title="bitwuzla::OptionInfo::OptionInfo"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::OptionInfo::OptionInfo()</span></code></a>.

@@ -15,9 +15,9 @@
   
         <script src="../static/jquery.js?v=5d32c60e"></script>
         <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js?v=b3ba4146"></script>
+        <script src="../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../static/doctools.js?v=888ff710"></script>
-        <script src="../static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.1.1
+                0.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -56,7 +56,16 @@
 <li class="toctree-l3"><a class="reference internal" href="interface.html">C Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="options.html">Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enums/bitwuzlakind.html">Term Kinds</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Sort Creation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Sort Creation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv422bitwuzla_mk_array_sort12BitwuzlaSort12BitwuzlaSort"><code class="docutils literal notranslate"><span class="pre">bitwuzla_mk_array_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv421bitwuzla_mk_bool_sortv"><code class="docutils literal notranslate"><span class="pre">bitwuzla_mk_bool_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv419bitwuzla_mk_bv_sort8uint64_t"><code class="docutils literal notranslate"><span class="pre">bitwuzla_mk_bv_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv419bitwuzla_mk_fp_sort8uint64_t8uint64_t"><code class="docutils literal notranslate"><span class="pre">bitwuzla_mk_fp_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv420bitwuzla_mk_fun_sort8uint64_tA_12BitwuzlaSort12BitwuzlaSort"><code class="docutils literal notranslate"><span class="pre">bitwuzla_mk_fun_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv419bitwuzla_mk_rm_sortv"><code class="docutils literal notranslate"><span class="pre">bitwuzla_mk_rm_sort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv430bitwuzla_mk_uninterpreted_sortPKc"><code class="docutils literal notranslate"><span class="pre">bitwuzla_mk_uninterpreted_sort()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="term_creation.html">Term Creation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#examples">Examples</a></li>
@@ -96,7 +105,7 @@
            <div itemprop="articleBody">
              
   <section id="sort-creation">
-<h1>Sort Creation<a class="headerlink" href="#sort-creation" title="Permalink to this heading"></a></h1>
+<h1>Sort Creation<a class="headerlink" href="#sort-creation" title="Link to this heading"></a></h1>
 <p>Bitwuzla supports creating array (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">Array</span></code>), Boolean (SMT-LIB:
 <code class="code docutils literal notranslate"><span class="pre">Bool</span></code>), bit-vector (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">BitVec</span> <span class="pre">n)</span></code>), floating-point
 (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(_</span> <span class="pre">FloatingPoint</span> <span class="pre">e</span> <span class="pre">s)</span></code>), rounding mode (SMT-LIB:
@@ -111,7 +120,7 @@ instances.</p>
 <hr class="docutils" />
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv422bitwuzla_mk_array_sort12BitwuzlaSort12BitwuzlaSort">
-<span id="_CPPv322bitwuzla_mk_array_sort12BitwuzlaSort12BitwuzlaSort"></span><span id="_CPPv222bitwuzla_mk_array_sort12BitwuzlaSort12BitwuzlaSort"></span><span id="bitwuzla_mk_array_sort__BitwuzlaSort.BitwuzlaSort"></span><span class="target" id="group__c__sort__creation_1ga69dc2abdb304f46618b87e5ad0955361"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_array_sort</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_mk_array_sort12BitwuzlaSort12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv322bitwuzla_mk_array_sort12BitwuzlaSort12BitwuzlaSort"></span><span id="_CPPv222bitwuzla_mk_array_sort12BitwuzlaSort12BitwuzlaSort"></span><span id="bitwuzla_mk_array_sort__BitwuzlaSort.BitwuzlaSort"></span><span class="target" id="group__c__sort__creation_1ga69dc2abdb304f46618b87e5ad0955361"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_array_sort</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_mk_array_sort12BitwuzlaSort12BitwuzlaSort" title="Link to this definition"></a><br /></dt>
 <dd><p>Create an array sort.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -141,7 +150,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv421bitwuzla_mk_bool_sortv">
-<span id="_CPPv321bitwuzla_mk_bool_sortv"></span><span id="_CPPv221bitwuzla_mk_bool_sortv"></span><span id="bitwuzla_mk_bool_sort"></span><span class="target" id="group__c__sort__creation_1gacdf18c2d5a68f684eb93c4e0a781625c"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bool_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_mk_bool_sortv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv321bitwuzla_mk_bool_sortv"></span><span id="_CPPv221bitwuzla_mk_bool_sortv"></span><span id="bitwuzla_mk_bool_sort"></span><span class="target" id="group__c__sort__creation_1gacdf18c2d5a68f684eb93c4e0a781625c"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bool_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_mk_bool_sortv" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a Boolean sort. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -152,7 +161,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419bitwuzla_mk_bv_sort8uint64_t">
-<span id="_CPPv319bitwuzla_mk_bv_sort8uint64_t"></span><span id="_CPPv219bitwuzla_mk_bv_sort8uint64_t"></span><span id="bitwuzla_mk_bv_sort__uint64_t"></span><span class="target" id="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_mk_bv_sort8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv319bitwuzla_mk_bv_sort8uint64_t"></span><span id="_CPPv219bitwuzla_mk_bv_sort8uint64_t"></span><span id="bitwuzla_mk_bv_sort__uint64_t"></span><span class="target" id="group__c__sort__creation_1ga6b834d1967cf36cc7922fd2b8720a09f"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_bv_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_mk_bv_sort8uint64_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a bit-vector sort of given size.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -177,7 +186,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419bitwuzla_mk_fp_sort8uint64_t8uint64_t">
-<span id="_CPPv319bitwuzla_mk_fp_sort8uint64_t8uint64_t"></span><span id="_CPPv219bitwuzla_mk_fp_sort8uint64_t8uint64_t"></span><span id="bitwuzla_mk_fp_sort__uint64_t.uint64_t"></span><span class="target" id="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">exp_size</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sig_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_mk_fp_sort8uint64_t8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv319bitwuzla_mk_fp_sort8uint64_t8uint64_t"></span><span id="_CPPv219bitwuzla_mk_fp_sort8uint64_t8uint64_t"></span><span id="bitwuzla_mk_fp_sort__uint64_t.uint64_t"></span><span class="target" id="group__c__sort__creation_1ga722e4fff4a5326e8f0c5720bf08a7c99"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fp_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">exp_size</span></span>, <span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sig_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_mk_fp_sort8uint64_t8uint64_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a floating-point sort of given exponent and significand size.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -207,7 +216,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv420bitwuzla_mk_fun_sort8uint64_tA_12BitwuzlaSort12BitwuzlaSort">
-<span id="_CPPv320bitwuzla_mk_fun_sort8uint64_tA_12BitwuzlaSort12BitwuzlaSort"></span><span id="_CPPv220bitwuzla_mk_fun_sort8uint64_tA_12BitwuzlaSort12BitwuzlaSort"></span><span id="bitwuzla_mk_fun_sort__uint64_t.BitwuzlaSortA.BitwuzlaSort"></span><span class="target" id="group__c__sort__creation_1gab67bdee3bbcfc271a36dff873ba199c8"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fun_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arity</span></span>, <a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">domain</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">codomain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420bitwuzla_mk_fun_sort8uint64_tA_12BitwuzlaSort12BitwuzlaSort" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv320bitwuzla_mk_fun_sort8uint64_tA_12BitwuzlaSort12BitwuzlaSort"></span><span id="_CPPv220bitwuzla_mk_fun_sort8uint64_tA_12BitwuzlaSort12BitwuzlaSort"></span><span id="bitwuzla_mk_fun_sort__uint64_t.BitwuzlaSortA.BitwuzlaSort"></span><span class="target" id="group__c__sort__creation_1gab67bdee3bbcfc271a36dff873ba199c8"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_fun_sort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arity</span></span>, <a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">domain</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">codomain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420bitwuzla_mk_fun_sort8uint64_tA_12BitwuzlaSort12BitwuzlaSort" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a function sort.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -240,7 +249,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv419bitwuzla_mk_rm_sortv">
-<span id="_CPPv319bitwuzla_mk_rm_sortv"></span><span id="_CPPv219bitwuzla_mk_rm_sortv"></span><span id="bitwuzla_mk_rm_sort"></span><span class="target" id="group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_rm_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_mk_rm_sortv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv319bitwuzla_mk_rm_sortv"></span><span id="_CPPv219bitwuzla_mk_rm_sortv"></span><span id="bitwuzla_mk_rm_sort"></span><span class="target" id="group__c__sort__creation_1ga6c0ad22f24247d6998225cd1105a93f5"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_rm_sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_mk_rm_sortv" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a Roundingmode sort. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
@@ -259,7 +268,7 @@ instances.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv430bitwuzla_mk_uninterpreted_sortPKc">
-<span id="_CPPv330bitwuzla_mk_uninterpreted_sortPKc"></span><span id="_CPPv230bitwuzla_mk_uninterpreted_sortPKc"></span><span id="bitwuzla_mk_uninterpreted_sort__cCP"></span><span class="target" id="group__c__sort__creation_1ga43c064c2ea8b99a1e6543bc1d814d857"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_uninterpreted_sort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">symbol</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430bitwuzla_mk_uninterpreted_sortPKc" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv330bitwuzla_mk_uninterpreted_sortPKc"></span><span id="_CPPv230bitwuzla_mk_uninterpreted_sortPKc"></span><span id="bitwuzla_mk_uninterpreted_sort__cCP"></span><span class="target" id="group__c__sort__creation_1ga43c064c2ea8b99a1e6543bc1d814d857"></span><a class="reference internal" href="types/bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_mk_uninterpreted_sort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">symbol</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430bitwuzla_mk_uninterpreted_sortPKc" title="Link to this definition"></a><br /></dt>
 <dd><p>Create an uninterpreted sort. <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
