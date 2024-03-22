@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -79,15 +79,15 @@
              
   <section id="bitwuzla">
 <h1>Bitwuzla<a class="headerlink" href="#bitwuzla" title="Link to this heading"></a></h1>
-<p>A <a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
-options <a class="reference internal" href="bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance. This options instance must be
+<p>A <a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
+options <a class="reference internal" href="bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance. This options instance must be
 configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
 instance is created, configuration options are fixed and <strong>cannot</strong> be changed.
-<a class="reference internal" href="bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaSorts</span></code></a> and
-<a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaTerms</span></code></a> are <strong>independent</strong> of a
-<a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance and can be shared across Bitwuzla
+<a class="reference internal" href="bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaSorts</span></code></a> and
+<a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaTerms</span></code></a> are <strong>independent</strong> of a
+<a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance and can be shared across Bitwuzla
 instances.</p>
-<p>A Bitwuzla instance is created via <a class="reference internal" href="#_CPPv412bitwuzla_newPK15BitwuzlaOptions" title="bitwuzla_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_new()</span></code></a> and must be
+<p>A Bitwuzla instance is created via <a class="reference internal" href="#_CPPv412bitwuzla_newP19BitwuzlaTermManagerPK15BitwuzlaOptions" title="bitwuzla_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_new()</span></code></a> and must be
 released via <a class="reference internal" href="#_CPPv415bitwuzla_deleteP8Bitwuzla" title="bitwuzla_delete"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_delete()</span></code></a>.</p>
 <p>Bitwuzla supports <strong>incremental solving</strong> via
 <a class="reference internal" href="#_CPPv413bitwuzla_pushP8Bitwuzla8uint64_t" title="bitwuzla_push"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_push()</span></code></a> and <a class="reference internal" href="#_CPPv412bitwuzla_popP8Bitwuzla8uint64_t" title="bitwuzla_pop"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_pop()</span></code></a>;
@@ -108,8 +108,8 @@ periodically checks this callback and terminates at the earliest possible
 opportunity if the callback function returns a value <code class="code docutils literal notranslate"><span class="pre">!=</span> <span class="pre">0</span></code>.</p>
 <hr class="docutils" />
 <ul class="simple">
-<li><p>typedef struct <a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a></p></li>
-<li><p><a class="reference internal" href="#_CPPv412bitwuzla_newPK15BitwuzlaOptions" title="bitwuzla_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_new()</span></code></a></p></li>
+<li><p>typedef struct <a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv412bitwuzla_newP19BitwuzlaTermManagerPK15BitwuzlaOptions" title="bitwuzla_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_new()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv415bitwuzla_deleteP8Bitwuzla" title="bitwuzla_delete"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_delete()</span></code></a></p></li>
 <li><p><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_terminate()</span></code></p></li>
 <li><p><a class="reference internal" href="#_CPPv433bitwuzla_set_termination_callbackP8BitwuzlaPF7int32_tPvEPv" title="bitwuzla_set_termination_callback"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_set_termination_callback()</span></code></a></p></li>
@@ -138,8 +138,8 @@ opportunity if the callback function returns a value <code class="code docutils 
 
 <hr class="docutils" />
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv412bitwuzla_newPK15BitwuzlaOptions">
-<span id="_CPPv312bitwuzla_newPK15BitwuzlaOptions"></span><span id="_CPPv212bitwuzla_newPK15BitwuzlaOptions"></span><span id="bitwuzla_new__BitwuzlaOptionsCP"></span><span class="target" id="group__c__bitwuzla_1gab0208cac6b875988472798fcc891c691"></span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_new</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><span class="n"><span class="pre">BitwuzlaOptions</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412bitwuzla_newPK15BitwuzlaOptions" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv412bitwuzla_newP19BitwuzlaTermManagerPK15BitwuzlaOptions">
+<span id="_CPPv312bitwuzla_newP19BitwuzlaTermManagerPK15BitwuzlaOptions"></span><span id="_CPPv212bitwuzla_newP19BitwuzlaTermManagerPK15BitwuzlaOptions"></span><span id="bitwuzla_new__BitwuzlaTermManagerP.BitwuzlaOptionsCP"></span><span class="target" id="group__c__bitwuzla_1gad92e1d0eabd62d13f59713ea90cbd9d9"></span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_new</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="bitwuzlatermmanager.html#_CPPv419BitwuzlaTermManager" title="BitwuzlaTermManager"><span class="n"><span class="pre">BitwuzlaTermManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tm</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><span class="n"><span class="pre">BitwuzlaOptions</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412bitwuzla_newP19BitwuzlaTermManagerPK15BitwuzlaOptions" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a new Bitwuzla instance.</p>
 <p>The returned instance must be deleted via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gab6ade680629434fe7dc817d61e03f98c"><span class="std std-ref"><span class="pre">bitwuzla_delete()</span></span></a></code>.</p>
 <p><div class="admonition seealso">
@@ -152,7 +152,10 @@ opportunity if the callback function returns a value <code class="code docutils 
 </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>options</strong> – The associated options (optional). </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tm</strong> – The associated term manager instance. </p></li>
+<li><p><strong>options</strong> – The associated options (optional). </p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A pointer to the created Bitwuzla instance.</p>
@@ -164,11 +167,11 @@ opportunity if the callback function returns a value <code class="code docutils 
 <dt class="sig sig-object cpp" id="_CPPv415bitwuzla_deleteP8Bitwuzla">
 <span id="_CPPv315bitwuzla_deleteP8Bitwuzla"></span><span id="_CPPv215bitwuzla_deleteP8Bitwuzla"></span><span id="bitwuzla_delete__BitwuzlaP"></span><span class="target" id="group__c__bitwuzla_1gab6ade680629434fe7dc817d61e03f98c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_delete</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415bitwuzla_deleteP8Bitwuzla" title="Link to this definition"></a><br /></dt>
 <dd><p>Delete a Bitwuzla instance.</p>
-<p>The given instance must have been created via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gab0208cac6b875988472798fcc891c691"><span class="std std-ref"><span class="pre">bitwuzla_new()</span></span></a></code>.</p>
+<p>The given instance must have been created via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gad92e1d0eabd62d13f59713ea90cbd9d9"><span class="std std-ref"><span class="pre">bitwuzla_new()</span></span></a></code>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gab0208cac6b875988472798fcc891c691"><span class="std std-ref"><span class="pre">bitwuzla_new</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gad92e1d0eabd62d13f59713ea90cbd9d9"><span class="std std-ref"><span class="pre">bitwuzla_new</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -545,6 +548,20 @@ opportunity if the callback function returns a value <code class="code docutils 
 <li><p><strong>values</strong> – The resulting set of statistic values. </p></li>
 <li><p><strong>size</strong> – The resulting size of <code class="docutils literal notranslate"><span class="pre">keys</span></code> and <code class="docutils literal notranslate"><span class="pre">values</span></code>.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421bitwuzla_get_term_mgrP8Bitwuzla">
+<span id="_CPPv321bitwuzla_get_term_mgrP8Bitwuzla"></span><span id="_CPPv221bitwuzla_get_term_mgrP8Bitwuzla"></span><span id="bitwuzla_get_term_mgr__BitwuzlaP"></span><span class="target" id="group__c__bitwuzla_1ga5d10e519d98659af0c9af92b94b39205"></span><a class="reference internal" href="bitwuzlatermmanager.html#_CPPv419BitwuzlaTermManager" title="BitwuzlaTermManager"><span class="n"><span class="pre">BitwuzlaTermManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_term_mgr</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_get_term_mgrP8Bitwuzla" title="Link to this definition"></a><br /></dt>
+<dd><p>Get term manager instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bitwuzla</strong> – The bitwuzla instance. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Term manager instance used by given Bitwuzla instance. </p>
 </dd>
 </dl>
 </dd></dl>

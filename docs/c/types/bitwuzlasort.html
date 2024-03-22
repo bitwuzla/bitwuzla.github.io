@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -92,8 +92,10 @@ instances.</p>
 </div>
 <hr class="docutils" />
 <ul class="simple">
-<li><p>typedef struct <a class="reference internal" href="#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a></p></li>
+<li><p>typedef struct <a class="reference internal" href="#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaSort</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv418bitwuzla_sort_hash12BitwuzlaSort" title="bitwuzla_sort_hash"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_hash()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv418bitwuzla_sort_copy12BitwuzlaSort" title="bitwuzla_sort_copy"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_copy()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv421bitwuzla_sort_release12BitwuzlaSort" title="bitwuzla_sort_release"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_release()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv425bitwuzla_sort_bv_get_size12BitwuzlaSort" title="bitwuzla_sort_bv_get_size"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_bv_get_size()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv429bitwuzla_sort_fp_get_exp_size12BitwuzlaSort" title="bitwuzla_sort_fp_get_exp_size"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_fp_get_exp_size()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv429bitwuzla_sort_fp_get_sig_size12BitwuzlaSort" title="bitwuzla_sort_fp_get_sig_size"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_fp_get_sig_size()</span></code></a></p></li>
@@ -103,7 +105,6 @@ instances.</p>
 <li><p><a class="reference internal" href="#_CPPv430bitwuzla_sort_fun_get_codomain12BitwuzlaSort" title="bitwuzla_sort_fun_get_codomain"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_fun_get_codomain()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv427bitwuzla_sort_fun_get_arity12BitwuzlaSort" title="bitwuzla_sort_fun_get_arity"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_fun_get_arity()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv438bitwuzla_sort_get_uninterpreted_symbol12BitwuzlaSort" title="bitwuzla_sort_get_uninterpreted_symbol"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_get_uninterpreted_symbol()</span></code></a></p></li>
-<li><p><a class="reference internal" href="#_CPPv422bitwuzla_sort_is_equal12BitwuzlaSort12BitwuzlaSort" title="bitwuzla_sort_is_equal"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_is_equal()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv422bitwuzla_sort_is_array12BitwuzlaSort" title="bitwuzla_sort_is_array"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_is_array()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv421bitwuzla_sort_is_bool12BitwuzlaSort" title="bitwuzla_sort_is_bool"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_is_bool()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv419bitwuzla_sort_is_bv12BitwuzlaSort" title="bitwuzla_sort_is_bv"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_sort_is_bv()</span></code></a></p></li>
@@ -117,7 +118,7 @@ instances.</p>
 <hr class="docutils" />
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv412BitwuzlaSort">
-<span id="_CPPv312BitwuzlaSort"></span><span id="_CPPv212BitwuzlaSort"></span><span id="BitwuzlaSort"></span><span class="target" id="bitwuzla_8h_1a06673ea4feafd6e4c256a93804b827e2"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaSort</span></span></span><a class="headerlink" href="#_CPPv412BitwuzlaSort" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv312BitwuzlaSort"></span><span id="_CPPv212BitwuzlaSort"></span><span id="BitwuzlaSort"></span><span class="target" id="bitwuzla_8h_1a0c543311531bf44f37c0257113fc9758"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">bitwuzla_sort_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaSort</span></span></span><a class="headerlink" href="#_CPPv412BitwuzlaSort" title="Link to this definition"></a><br /></dt>
 <dd><p>A Bitwuzla sort. </p>
 </dd></dl>
 
@@ -132,6 +133,58 @@ instances.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The hash value of the sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418bitwuzla_sort_copy12BitwuzlaSort">
+<span id="_CPPv318bitwuzla_sort_copy12BitwuzlaSort"></span><span id="_CPPv218bitwuzla_sort_copy12BitwuzlaSort"></span><span id="bitwuzla_sort_copy__BitwuzlaSort"></span><span class="target" id="group__c__bitwuzlasort_1ga3724743b05a6be69f09fb840882681de"></span><a class="reference internal" href="#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_sort_copy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418bitwuzla_sort_copy12BitwuzlaSort" title="Link to this definition"></a><br /></dt>
+<dd><p>Make copy of sort.</p>
+<p>Increments reference counter of <code class="docutils literal notranslate"><span class="pre">sort</span></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlasort_1gaf5bdf1bafde46c85bdc8135d2b3df54c"><span class="std std-ref"><span class="pre">bitwuzla_sort_release</span></span></a></code></p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step is optional and allows users to manage resources in a more fine-grained manner.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort to copy.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The same sort with its reference count increased by one.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421bitwuzla_sort_release12BitwuzlaSort">
+<span id="_CPPv321bitwuzla_sort_release12BitwuzlaSort"></span><span id="_CPPv221bitwuzla_sort_release12BitwuzlaSort"></span><span id="bitwuzla_sort_release__BitwuzlaSort"></span><span class="target" id="group__c__bitwuzlasort_1gaf5bdf1bafde46c85bdc8135d2b3df54c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_sort_release</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_sort_release12BitwuzlaSort" title="Link to this definition"></a><br /></dt>
+<dd><p>Release copy of sort.</p>
+<p>Decrements reference counter of `sort.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlasort_1ga3724743b05a6be69f09fb840882681de"><span class="std std-ref"><span class="pre">bitwuzla_sort_copy</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlatermmanager.html#group__c__bitwuzlatermmanager_1ga1e70ca4324b442fd6716ff2d9f43402f"><span class="std std-ref"><span class="pre">bitwuzla_term_manager_release</span></span></a></code></p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step is optional and allows users to release resources in a more fine-grained manner. Further, any API function that returns a BitwuzlaSort returns a copy that is owned by the callee of the function and thus, can be released.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sort</strong> – The sort to release.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -272,23 +325,6 @@ instances.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The symbol; NULL if no symbol is defined. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv422bitwuzla_sort_is_equal12BitwuzlaSort12BitwuzlaSort">
-<span id="_CPPv322bitwuzla_sort_is_equal12BitwuzlaSort12BitwuzlaSort"></span><span id="_CPPv222bitwuzla_sort_is_equal12BitwuzlaSort12BitwuzlaSort"></span><span id="bitwuzla_sort_is_equal__BitwuzlaSort.BitwuzlaSort"></span><span class="target" id="group__c__bitwuzlasort_1ga5f7dd39207213dd7cbbc56483cdc81ca"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_sort_is_equal</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort0</span></span>, <a class="reference internal" href="#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sort1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_sort_is_equal12BitwuzlaSort12BitwuzlaSort" title="Link to this definition"></a><br /></dt>
-<dd><p>Determine if two sorts are equal.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sort0</strong> – The first sort. </p></li>
-<li><p><strong>sort1</strong> – The second sort.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>True if the given sorts are equal. </p>
 </dd>
 </dl>
 </dd></dl>

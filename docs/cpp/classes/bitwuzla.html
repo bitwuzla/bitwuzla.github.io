@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -101,7 +101,7 @@ The current statistics can be retrieved as a mapping from statistic names
 to values via <a class="reference internal" href="#_CPPv4NK8bitwuzla8Bitwuzla10statisticsEv" title="bitwuzla::Bitwuzla::statistics"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla::statistics()</span></code></a>.</p>
 <p>Bitwuzla further supports configuring a <strong>termination callback</strong> via
 <a class="reference internal" href="terminator.html#_CPPv4N8bitwuzla10TerminatorE" title="bitwuzla::Terminator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Terminator</span></code></a>, which implements a callback function
-<a class="reference internal" href="terminator.html#_CPPv4N8bitwuzla10Terminator9terminateEv" title="bitwuzla::Terminator::terminate"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Terminator::terminate()</span></code></a> to allow terminating
+<a class="reference internal" href="terminator.html#_CPPv4N8bitwuzla10Terminator9terminateEv" title="bitwuzla::Terminator::terminate"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Terminator::terminate()</span></code></a> to allow terminating
 Bitwuzla prematurely, during solving. This termination callback returns a
 <code class="code docutils literal notranslate"><span class="pre">bool</span></code> to indicate if Bitwuzla should be terminated. Bitwuzla
 periodically checks this callback and terminates at the earliest possible
@@ -119,12 +119,30 @@ opportunity if the callback function returns <code class="code docutils literal 
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK7Options">
-<span id="_CPPv3N8bitwuzla8Bitwuzla8BitwuzlaERK7Options"></span><span id="_CPPv2N8bitwuzla8Bitwuzla8BitwuzlaERK7Options"></span><span id="bitwuzla::Bitwuzla::Bitwuzla__OptionsCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1af9a5afc01793860b97125f51f7e8f1ac"></span><span class="sig-name descname"><span class="n"><span class="pre">Bitwuzla</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK7Options" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaER11TermManagerRK7Options">
+<span id="_CPPv3N8bitwuzla8Bitwuzla8BitwuzlaER11TermManagerRK7Options"></span><span id="_CPPv2N8bitwuzla8Bitwuzla8BitwuzlaER11TermManagerRK7Options"></span><span id="bitwuzla::Bitwuzla::Bitwuzla__TermManagerR.OptionsCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1ada3e053e30c84fabdce499f1bc45897d"></span><span class="sig-name descname"><span class="n"><span class="pre">Bitwuzla</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="termmanager.html#_CPPv4N8bitwuzla11TermManagerE" title="bitwuzla::TermManager"><span class="n"><span class="pre">TermManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tm</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaER11TermManagerRK7Options" title="Link to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>options</strong> – The associated options instance. <a class="reference internal" href="options.html#classbitwuzla_1_1Options"><span class="std std-ref">Options</span></a> must be configured at this point. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tm</strong> – The associated term manager instance. </p></li>
+<li><p><strong>options</strong> – The associated options instance. <a class="reference internal" href="options.html#classbitwuzla_1_1Options"><span class="std std-ref">Options</span></a> must be configured at this point. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK7Options">
+<span id="_CPPv3N8bitwuzla8Bitwuzla8BitwuzlaERK7Options"></span><span id="_CPPv2N8bitwuzla8Bitwuzla8BitwuzlaERK7Options"></span><span id="bitwuzla::Bitwuzla::Bitwuzla__OptionsCR"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1af9a5afc01793860b97125f51f7e8f1ac"></span><span class="sig-name descname"><span class="n"><span class="pre">Bitwuzla</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaERK7Options" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>: (deprecated) Uses the global thread-local term manager. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>options</strong> – The associated options instance. <a class="reference internal" href="options.html#classbitwuzla_1_1Options"><span class="std std-ref">Options</span></a> must be configured at this point.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -376,6 +394,16 @@ opportunity if the callback function returns <code class="code docutils literal 
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A map of strings of statistics entries, maps statistic name to value. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla8Bitwuzla8term_mgrEv">
+<span id="_CPPv3N8bitwuzla8Bitwuzla8term_mgrEv"></span><span id="_CPPv2N8bitwuzla8Bitwuzla8term_mgrEv"></span><span id="bitwuzla::Bitwuzla::term_mgr"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a1b1d37037b6ca4dd81a3ccb7d2ea5693"></span><a class="reference internal" href="termmanager.html#_CPPv4N8bitwuzla11TermManagerE" title="bitwuzla::TermManager"><span class="n"><span class="pre">TermManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">term_mgr</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla8Bitwuzla8term_mgrEv" title="Link to this definition"></a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The associated term manager instance. </p>
 </dd>
 </dl>
 </dd></dl>

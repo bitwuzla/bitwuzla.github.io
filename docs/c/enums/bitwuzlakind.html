@@ -22,7 +22,7 @@
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Sort Creation" href="../sort_creation.html" />
+    <link rel="next" title="Python API Documentation" href="../../python/api.html" />
     <link rel="prev" title="Options" href="../options.html" /> 
 </head>
 
@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -61,8 +61,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv423bitwuzla_kind_to_string12BitwuzlaKind"><code class="docutils literal notranslate"><span class="pre">bitwuzla_kind_to_string()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../sort_creation.html">Sort Creation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../term_creation.html">Term Creation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api.html#quickstart">Quickstart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api.html#examples">Examples</a></li>
 </ul>
@@ -102,13 +100,13 @@
              
   <section id="bitwuzlakind">
 <h1>BitwuzlaKind<a class="headerlink" href="#bitwuzlakind" title="Link to this heading"></a></h1>
-<p>The kind of a <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaTerm</span></code></a>.</p>
-<p>Terms of a given kind are created via <a class="reference internal" href="../term_creation.html#_CPPv416bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm" title="bitwuzla_mk_term"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term()</span></code></a>,
-<a class="reference internal" href="../term_creation.html#_CPPv417bitwuzla_mk_term112BitwuzlaKind12BitwuzlaTerm" title="bitwuzla_mk_term1"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term1()</span></code></a>, <a class="reference internal" href="../term_creation.html#_CPPv417bitwuzla_mk_term212BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm" title="bitwuzla_mk_term2"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term2()</span></code></a>,
-<a class="reference internal" href="../term_creation.html#_CPPv417bitwuzla_mk_term312BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm" title="bitwuzla_mk_term3"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term3()</span></code></a>, <a class="reference internal" href="../term_creation.html#_CPPv426bitwuzla_mk_term1_indexed112BitwuzlaKind12BitwuzlaTerm8uint64_t" title="bitwuzla_mk_term1_indexed1"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term1_indexed1()</span></code></a>,
-<a class="reference internal" href="../term_creation.html#_CPPv426bitwuzla_mk_term1_indexed212BitwuzlaKind12BitwuzlaTerm8uint64_t8uint64_t" title="bitwuzla_mk_term1_indexed2"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term1_indexed2()</span></code></a>,
-<a class="reference internal" href="../term_creation.html#_CPPv426bitwuzla_mk_term2_indexed112BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t" title="bitwuzla_mk_term2_indexed1"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term2_indexed1()</span></code></a>, and
-<a class="reference internal" href="../term_creation.html#_CPPv426bitwuzla_mk_term1_indexed212BitwuzlaKind12BitwuzlaTerm8uint64_t8uint64_t" title="bitwuzla_mk_term1_indexed2"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term1_indexed2()</span></code></a>.</p>
+<p>The kind of a <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaTerm</span></code></a>.</p>
+<p>Terms of a given kind are created via <a class="reference internal" href="../types/bitwuzlatermmanager.html#_CPPv416bitwuzla_mk_termP19BitwuzlaTermManager12BitwuzlaKind8uint32_tA_12BitwuzlaTerm" title="bitwuzla_mk_term"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term()</span></code></a>,
+<a class="reference internal" href="../types/bitwuzlatermmanager.html#_CPPv417bitwuzla_mk_term1P19BitwuzlaTermManager12BitwuzlaKind12BitwuzlaTerm" title="bitwuzla_mk_term1"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term1()</span></code></a>, <a class="reference internal" href="../types/bitwuzlatermmanager.html#_CPPv417bitwuzla_mk_term2P19BitwuzlaTermManager12BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm" title="bitwuzla_mk_term2"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term2()</span></code></a>,
+<a class="reference internal" href="../types/bitwuzlatermmanager.html#_CPPv417bitwuzla_mk_term3P19BitwuzlaTermManager12BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm12BitwuzlaTerm" title="bitwuzla_mk_term3"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term3()</span></code></a>, <a class="reference internal" href="../types/bitwuzlatermmanager.html#_CPPv426bitwuzla_mk_term1_indexed1P19BitwuzlaTermManager12BitwuzlaKind12BitwuzlaTerm8uint64_t" title="bitwuzla_mk_term1_indexed1"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term1_indexed1()</span></code></a>,
+<a class="reference internal" href="../types/bitwuzlatermmanager.html#_CPPv426bitwuzla_mk_term1_indexed2P19BitwuzlaTermManager12BitwuzlaKind12BitwuzlaTerm8uint64_t8uint64_t" title="bitwuzla_mk_term1_indexed2"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term1_indexed2()</span></code></a>,
+<a class="reference internal" href="../types/bitwuzlatermmanager.html#_CPPv426bitwuzla_mk_term2_indexed1P19BitwuzlaTermManager12BitwuzlaKind12BitwuzlaTerm12BitwuzlaTerm8uint64_t" title="bitwuzla_mk_term2_indexed1"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term2_indexed1()</span></code></a>, and
+<a class="reference internal" href="../types/bitwuzlatermmanager.html#_CPPv426bitwuzla_mk_term1_indexed2P19BitwuzlaTermManager12BitwuzlaKind12BitwuzlaTerm8uint64_t8uint64_t" title="bitwuzla_mk_term1_indexed2"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term1_indexed2()</span></code></a>.</p>
 <p>The kind of a term can be queried via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv422bitwuzla_term_get_kind12BitwuzlaTerm" title="bitwuzla_term_get_kind"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_get_kind()</span></code></a>.
 The string representation of a term kind can be queried via
 <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv423bitwuzla_term_to_string12BitwuzlaTerm" title="bitwuzla_term_to_string"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_to_string()</span></code></a>, and printed to a given file
@@ -157,9 +155,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -179,9 +177,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S \times ... \times S \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -201,9 +199,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(S \times ... \times S \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -223,9 +221,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -245,9 +243,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -267,8 +265,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -288,9 +286,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -310,9 +308,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times ... \times Bool \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -332,8 +330,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(Bool \times S  \times S \rightarrow S\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -354,8 +352,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -376,8 +374,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -397,8 +395,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \times ...  \times S_n \rightarrow S\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -418,8 +416,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \times ... \times S_n \rightarrow S)\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -439,8 +437,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\((S_i \rightarrow S_e) \times S_i \rightarrow S_e\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -461,8 +459,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  (S_i \rightarrow S_e)\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -482,9 +480,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -504,9 +502,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -526,8 +524,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -547,9 +545,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_1\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -570,9 +568,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  m}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -592,8 +590,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p>Create with:<ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -613,8 +611,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -634,9 +632,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -656,8 +654,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -677,8 +675,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -699,8 +697,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -720,8 +718,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -741,8 +739,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -762,9 +760,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -784,8 +782,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_1\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -805,8 +803,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_1\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -826,8 +824,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_1\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -847,8 +845,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -868,8 +866,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -890,8 +888,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -912,8 +910,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -933,8 +931,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -954,8 +952,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -975,8 +973,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -996,8 +994,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1017,8 +1015,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1038,8 +1036,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1059,8 +1057,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1080,8 +1078,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1102,8 +1100,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1123,8 +1121,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1145,8 +1143,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1166,8 +1164,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1188,8 +1186,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1209,8 +1207,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1230,8 +1228,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1251,8 +1249,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1272,8 +1270,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1293,8 +1291,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1315,8 +1313,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1336,8 +1334,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1358,8 +1356,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1379,8 +1377,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1400,9 +1398,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \times ... \times BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1423,8 +1421,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_{u - l + 1}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gab7607ce0925baede9fe4809aa3ec7298"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga443b1f2ec9177ab038937d887cbb5421"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1445,8 +1443,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_{n * i}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaa4ef7b33ad8c613365ca275c3293d6fd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga62788ef22b793cc7c4802b6aafa4db41"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1467,8 +1465,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaa4ef7b33ad8c613365ca275c3293d6fd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga62788ef22b793cc7c4802b6aafa4db41"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1489,8 +1487,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaa4ef7b33ad8c613365ca275c3293d6fd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga62788ef22b793cc7c4802b6aafa4db41"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1511,8 +1509,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_{n + i}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaa4ef7b33ad8c613365ca275c3293d6fd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga62788ef22b793cc7c4802b6aafa4db41"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1533,8 +1531,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow BV_{n + i}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaa4ef7b33ad8c613365ca275c3293d6fd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga62788ef22b793cc7c4802b6aafa4db41"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1554,8 +1552,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1576,8 +1574,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1598,8 +1596,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1620,8 +1618,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1642,7 +1640,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1663,8 +1661,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1685,8 +1683,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1707,8 +1705,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1728,8 +1726,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1749,8 +1747,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1770,8 +1768,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1791,8 +1789,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1812,8 +1810,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1833,8 +1831,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1854,8 +1852,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1876,9 +1874,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1898,9 +1896,9 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow Bool\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1921,8 +1919,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1943,8 +1941,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1965,8 +1963,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -1986,8 +1984,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(\mathit{FP}_{es} \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga8a310d7dff8b393722d297da57b3de02"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga2cc681bc0071866adf197b804b6a9e17"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2008,8 +2006,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2030,8 +2028,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2052,8 +2050,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga694d5705287a8a8dfc85cf9ad9527cdd"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaef1ec18d3c54065b19f06ea2f467a201"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2074,8 +2072,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaaa12811ec39e7142c91c5cce0ba90dc3"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gaffa4377ac20a3d2bb2666687e4741ea9"><span class="std std-ref"><span class="pre">bitwuzla_mk_term3()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2096,8 +2094,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(BV_n \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gab7607ce0925baede9fe4809aa3ec7298"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1ga443b1f2ec9177ab038937d887cbb5421"><span class="std std-ref"><span class="pre">bitwuzla_mk_term1_indexed2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2119,8 +2117,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
  \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga452fd331163360bce3b2f6d6e52c615f"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gae5475fe485cb11ae6789a6351fdbc777"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2141,8 +2139,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times BV_n \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga452fd331163360bce3b2f6d6e52c615f"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gae5475fe485cb11ae6789a6351fdbc777"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2163,8 +2161,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times BV_n \rightarrow \mathit{FP}_{es}\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga452fd331163360bce3b2f6d6e52c615f"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed2()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gae5475fe485cb11ae6789a6351fdbc777"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed2()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2185,8 +2183,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga5b02a9794f16846a96ca0961be42615c"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gae35a58a250234ac8f4ebe273d6898fc4"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2207,8 +2205,8 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
 <p><strong>Arguments:</strong> <span class="math notranslate nohighlight">\(RM \times \mathit{FP}_{es} \rightarrow BV_n\)</span></p>
 <p><strong>Create with:</strong><ul class="simple">
 <li><p><strong>C</strong><ul>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1ga5b02a9794f16846a96ca0961be42615c"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed1()</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../term_creation.html#group__c__term__creation_1gaf937695970f9ccc26694ffd10580da9a"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gae35a58a250234ac8f4ebe273d6898fc4"><span class="std std-ref"><span class="pre">bitwuzla_mk_term2_indexed1()</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../types/bitwuzlatermmanager.html#group__c__term__creation_1gac636f07e097408d00b8863dfdda83a40"><span class="std std-ref"><span class="pre">bitwuzla_mk_term()</span></span></a></code></p></li>
 </ul>
 </p></li>
 <li><p><strong>C++</strong><ul>
@@ -2244,7 +2242,7 @@ via <a class="reference internal" href="../types/bitwuzlaterm.html#_CPPv419bitwu
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../options.html" class="btn btn-neutral float-left" title="Options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../sort_creation.html" class="btn btn-neutral float-right" title="Sort Creation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../python/api.html" class="btn btn-neutral float-right" title="Python API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

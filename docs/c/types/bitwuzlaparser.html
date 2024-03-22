@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -80,10 +80,10 @@
   <section id="bitwuzlaparser">
 <h1>BitwuzlaParser<a class="headerlink" href="#bitwuzlaparser" title="Link to this heading"></a></h1>
 <ul class="simple">
-<li><p>typedef struct <a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaParser</span></code></a></p></li>
-<li><p><a class="reference internal" href="#_CPPv419bitwuzla_parser_newP15BitwuzlaOptionsPKcP4FILEPKc7uint8_tPKc" title="bitwuzla_parser_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_parser_new()</span></code></a></p></li>
+<li><p>typedef struct <a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaParser</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv419bitwuzla_parser_newP19BitwuzlaTermManagerP15BitwuzlaOptionsPKc7uint8_tPKc" title="bitwuzla_parser_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_parser_new()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv422bitwuzla_parser_deleteP14BitwuzlaParser" title="bitwuzla_parser_delete"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_parser_delete()</span></code></a></p></li>
-<li><p><a class="reference internal" href="#_CPPv421bitwuzla_parser_parseP14BitwuzlaParserb" title="bitwuzla_parser_parse"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_parser_parse()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv421bitwuzla_parser_parseP14BitwuzlaParserPKcbbPPKc" title="bitwuzla_parser_parse"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_parser_parse()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv428bitwuzla_parser_get_bitwuzlaP14BitwuzlaParser" title="bitwuzla_parser_get_bitwuzla"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_parser_get_bitwuzla()</span></code></a></p></li>
 </ul>
 <hr class="docutils" />
@@ -95,8 +95,8 @@
 
 <hr class="docutils" />
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv419bitwuzla_parser_newP15BitwuzlaOptionsPKcP4FILEPKc7uint8_tPKc">
-<span id="_CPPv319bitwuzla_parser_newP15BitwuzlaOptionsPKcP4FILEPKc7uint8_tPKc"></span><span id="_CPPv219bitwuzla_parser_newP15BitwuzlaOptionsPKcP4FILEPKc7uint8_tPKc"></span><span id="bitwuzla_parser_new__BitwuzlaOptionsP.cCP.FILEP.cCP.uint8_t.cCP"></span><span class="target" id="group__c__bitwuzlaparser_1ga128f6c421f2dca1acd1f037698f2318e"></span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_new</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><span class="n"><span class="pre">BitwuzlaOptions</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">options</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">infile_name</span></span>, <span class="n"><span class="pre">FILE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">infile</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">language</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">base</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">outfile_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_parser_newP15BitwuzlaOptionsPKcP4FILEPKc7uint8_tPKc" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv419bitwuzla_parser_newP19BitwuzlaTermManagerP15BitwuzlaOptionsPKc7uint8_tPKc">
+<span id="_CPPv319bitwuzla_parser_newP19BitwuzlaTermManagerP15BitwuzlaOptionsPKc7uint8_tPKc"></span><span id="_CPPv219bitwuzla_parser_newP19BitwuzlaTermManagerP15BitwuzlaOptionsPKc7uint8_tPKc"></span><span id="bitwuzla_parser_new__BitwuzlaTermManagerP.BitwuzlaOptionsP.cCP.uint8_t.cCP"></span><span class="target" id="group__c__bitwuzlaparser_1gacc226b05448beba3b50830d1ae09e7a9"></span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_new</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="bitwuzlatermmanager.html#_CPPv419BitwuzlaTermManager" title="BitwuzlaTermManager"><span class="n"><span class="pre">BitwuzlaTermManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tm</span></span>, <a class="reference internal" href="bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><span class="n"><span class="pre">BitwuzlaOptions</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">options</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">language</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">base</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">outfile_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419bitwuzla_parser_newP19BitwuzlaTermManagerP15BitwuzlaOptionsPKc7uint8_tPKc" title="Link to this definition"></a><br /></dt>
 <dd><p>Create a new Bitwuzla parser instance.</p>
 <p>The returned instance must be deleted via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1gaab697a4bcaab2507641079b14656064e"><span class="std std-ref"><span class="pre">bitwuzla_parser_delete()</span></span></a></code>.</p>
 <p><div class="admonition seealso">
@@ -114,10 +114,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>tm</strong> – The associated term manager instance. </p></li>
 <li><p><strong>options</strong> – The associated options. </p></li>
-<li><p><strong>infile_name</strong> – The name of the input file. </p></li>
-<li><p><strong>infile</strong> – The input file. </p></li>
-<li><p><strong>language</strong> – The format of the input file. </p></li>
+<li><p><strong>language</strong> – The format of the input. </p></li>
 <li><p><strong>base</strong> – The base of the string representation of bit-vector values; <code class="docutils literal notranslate"><span class="pre">2</span></code> for binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and <code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal. Always ignored for Boolean and RoundingMode values. </p></li>
 <li><p><strong>outfile_name</strong> – The output file name. If name is ‘&lt;stdout&gt;’, the parser writes to stdout. </p></li>
 </ul>
@@ -132,11 +131,11 @@
 <dt class="sig sig-object cpp" id="_CPPv422bitwuzla_parser_deleteP14BitwuzlaParser">
 <span id="_CPPv322bitwuzla_parser_deleteP14BitwuzlaParser"></span><span id="_CPPv222bitwuzla_parser_deleteP14BitwuzlaParser"></span><span id="bitwuzla_parser_delete__BitwuzlaParserP"></span><span class="target" id="group__c__bitwuzlaparser_1gaab697a4bcaab2507641079b14656064e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_delete</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422bitwuzla_parser_deleteP14BitwuzlaParser" title="Link to this definition"></a><br /></dt>
 <dd><p>Delete a Bitwuzla parser instance.</p>
-<p>The given instance must have been created via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1ga128f6c421f2dca1acd1f037698f2318e"><span class="std std-ref"><span class="pre">bitwuzla_parser_new()</span></span></a></code>.</p>
+<p>The given instance must have been created via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1gacc226b05448beba3b50830d1ae09e7a9"><span class="std std-ref"><span class="pre">bitwuzla_parser_new()</span></span></a></code>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1ga128f6c421f2dca1acd1f037698f2318e"><span class="std std-ref"><span class="pre">bitwuzla_parser_new</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1gacc226b05448beba3b50830d1ae09e7a9"><span class="std std-ref"><span class="pre">bitwuzla_parser_new</span></span></a></code></p></li>
 </ul>
 </p>
 </div>
@@ -149,18 +148,72 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv421bitwuzla_parser_parseP14BitwuzlaParserb">
-<span id="_CPPv321bitwuzla_parser_parseP14BitwuzlaParserb"></span><span id="_CPPv221bitwuzla_parser_parseP14BitwuzlaParserb"></span><span id="bitwuzla_parser_parse__BitwuzlaParserP.b"></span><span class="target" id="group__c__bitwuzlaparser_1ga26a56abe99caa0c7ec4869fd6331b064"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_parse</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">parse_only</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_parser_parseP14BitwuzlaParserb" title="Link to this definition"></a><br /></dt>
-<dd><p>Parser input file.</p>
+<dt class="sig sig-object cpp" id="_CPPv421bitwuzla_parser_parseP14BitwuzlaParserPKcbbPPKc">
+<span id="_CPPv321bitwuzla_parser_parseP14BitwuzlaParserPKcbbPPKc"></span><span id="_CPPv221bitwuzla_parser_parseP14BitwuzlaParserPKcbbPPKc"></span><span id="bitwuzla_parser_parse__BitwuzlaParserP.cCP.b.b.cCPP"></span><span class="target" id="group__c__bitwuzlaparser_1gabcbfd4e60cfd0dd18133eded9aa5fc26"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_parse</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">input</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">parse_only</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">parse_file</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_parser_parseP14BitwuzlaParserPKcbbPPKc" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse input, either from a file or from a string.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Parameter <code class="docutils literal notranslate"><span class="pre">parse_only</span></code> is redundant for BTOR2 input, its the only available mode for BTOR2 (due to the language not supporting “commands” as in SMT2). </p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>parser</strong> – The Bitwuzla parser instance to delete. </p></li>
+<li><p><strong>parser</strong> – The Bitwuzla parser instance. </p></li>
+<li><p><strong>input</strong> – The name of the input file if <code class="docutils literal notranslate"><span class="pre">parse_file</span></code> is true, else a string with the input. </p></li>
 <li><p><strong>parse_only</strong> – True to only parse without executing check-sat calls. </p></li>
+<li><p><strong>parse_file</strong> – True to parse an input file with the given name <code class="docutils literal notranslate"><span class="pre">input</span></code>, false to parse from <code class="docutils literal notranslate"><span class="pre">input</span></code> as a string input. </p></li>
+<li><p><strong>error_msg</strong> – Output parameter for the error message in case of a parse error, NULL if no error occurred. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426bitwuzla_parser_parse_termP14BitwuzlaParserPKcPPKc">
+<span id="_CPPv326bitwuzla_parser_parse_termP14BitwuzlaParserPKcPPKc"></span><span id="_CPPv226bitwuzla_parser_parse_termP14BitwuzlaParserPKcPPKc"></span><span id="bitwuzla_parser_parse_term__BitwuzlaParserP.cCP.cCPP"></span><span class="target" id="group__c__bitwuzlaparser_1gaf447dc90116eb671a656a0aa75c79c5e"></span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_parse_term</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">input</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_parser_parse_termP14BitwuzlaParserPKcPPKc" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse term from string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parser</strong> – The Bitwuzla parser instance. </p></li>
+<li><p><strong>input</strong> – The input string. </p></li>
+<li><p><strong>error_msg</strong> – Output parameter for the error message in case of a parse error, NULL if no error occurred. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The error message in case of an error, else NULL. </p>
+<dd class="field-even"><p>The resulting term. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426bitwuzla_parser_parse_sortP14BitwuzlaParserPKcPPKc">
+<span id="_CPPv326bitwuzla_parser_parse_sortP14BitwuzlaParserPKcPPKc"></span><span id="_CPPv226bitwuzla_parser_parse_sortP14BitwuzlaParserPKcPPKc"></span><span id="bitwuzla_parser_parse_sort__BitwuzlaParserP.cCP.cCPP"></span><span class="target" id="group__c__bitwuzlaparser_1ga19be22bdaafce8b7d4de7246ef1808b1"></span><a class="reference internal" href="bitwuzlasort.html#_CPPv412BitwuzlaSort" title="BitwuzlaSort"><span class="n"><span class="pre">BitwuzlaSort</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_parse_sort</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">input</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">error_msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_parser_parse_sortP14BitwuzlaParserPKcPPKc" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse sort from string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parser</strong> – The Bitwuzla parser instance. </p></li>
+<li><p><strong>input</strong> – The input string. </p></li>
+<li><p><strong>error_msg</strong> – Output parameter for the error message in case of a parse error, NULL if no error occurred. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The resulting sort. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429bitwuzla_parser_get_error_msgP14BitwuzlaParser">
+<span id="_CPPv329bitwuzla_parser_get_error_msgP14BitwuzlaParser"></span><span id="_CPPv229bitwuzla_parser_get_error_msgP14BitwuzlaParser"></span><span id="bitwuzla_parser_get_error_msg__BitwuzlaParserP"></span><span class="target" id="group__c__bitwuzlaparser_1ga18a81d95fae17b8b6ad41c73f4e10827"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_get_error_msg</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429bitwuzla_parser_get_error_msgP14BitwuzlaParser" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the current error message. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>parser</strong> – The Bitwuzla parser instance. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The error message. </p>
 </dd>
 </dl>
 </dd></dl>

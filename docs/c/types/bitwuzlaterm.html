@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -80,7 +80,7 @@
   <section id="bitwuzlaterm">
 <h1>BitwuzlaTerm<a class="headerlink" href="#bitwuzlaterm" title="Link to this heading"></a></h1>
 <p>Terms of a given <a class="reference internal" href="../enums/bitwuzlakind.html#_CPPv412BitwuzlaKind" title="BitwuzlaKind"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">BitwuzlaKind</span></code></a> are created via
-<a class="reference internal" href="../term_creation.html#_CPPv416bitwuzla_mk_term12BitwuzlaKind8uint32_tA_12BitwuzlaTerm" title="bitwuzla_mk_term"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term()</span></code></a> (and related <cite>bitwuzla_mk_term*()</cite> functions
+<a class="reference internal" href="bitwuzlatermmanager.html#_CPPv416bitwuzla_mk_termP19BitwuzlaTermManager12BitwuzlaKind8uint32_tA_12BitwuzlaTerm" title="bitwuzla_mk_term"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_mk_term()</span></code></a> (and related <cite>bitwuzla_mk_term*()</cite> functions
 provided for convenience). a comprehensive documentation of supported
 term kinds can be found <span class="xref std std-doc">here</span>.
 For creating terms that represent general and special values of a given sort,
@@ -92,8 +92,10 @@ instances.</p>
 </div>
 <hr class="docutils" />
 <ul class="simple">
-<li><p>typedef struct <a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaTerm</span></code></a></p></li>
+<li><p>typedef struct <a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaTerm</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv418bitwuzla_term_hash12BitwuzlaTerm" title="bitwuzla_term_hash"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_hash()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv418bitwuzla_term_copy12BitwuzlaTerm" title="bitwuzla_term_copy"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_copy()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv421bitwuzla_term_release12BitwuzlaTerm" title="bitwuzla_term_release"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_release()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv422bitwuzla_term_get_kind12BitwuzlaTerm" title="bitwuzla_term_get_kind"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_get_kind()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv426bitwuzla_term_get_children12BitwuzlaTermP6size_t" title="bitwuzla_term_get_children"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_get_children()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv425bitwuzla_term_get_indices12BitwuzlaTermP6size_t" title="bitwuzla_term_get_indices"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_get_indices()</span></code></a></p></li>
@@ -108,7 +110,6 @@ instances.</p>
 <li><p><a class="reference internal" href="#_CPPv429bitwuzla_term_fp_get_sig_size12BitwuzlaTerm" title="bitwuzla_term_fp_get_sig_size"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_fp_get_sig_size()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv427bitwuzla_term_fun_get_arity12BitwuzlaTerm" title="bitwuzla_term_fun_get_arity"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_fun_get_arity()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv424bitwuzla_term_get_symbol12BitwuzlaTerm" title="bitwuzla_term_get_symbol"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_get_symbol()</span></code></a></p></li>
-<li><p><a class="reference internal" href="#_CPPv427bitwuzla_term_is_equal_sort12BitwuzlaTerm12BitwuzlaTerm" title="bitwuzla_term_is_equal_sort"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_is_equal_sort()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv422bitwuzla_term_is_array12BitwuzlaTerm" title="bitwuzla_term_is_array"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_is_array()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv422bitwuzla_term_is_const12BitwuzlaTerm" title="bitwuzla_term_is_const"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_is_const()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv420bitwuzla_term_is_fun12BitwuzlaTerm" title="bitwuzla_term_is_fun"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_is_fun()</span></code></a></p></li>
@@ -147,7 +148,7 @@ instances.</p>
 <hr class="docutils" />
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv412BitwuzlaTerm">
-<span id="_CPPv312BitwuzlaTerm"></span><span id="_CPPv212BitwuzlaTerm"></span><span id="BitwuzlaTerm"></span><span class="target" id="bitwuzla_8h_1a42ac3566bfad7e7643b4682598d07f14"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaTerm</span></span></span><a class="headerlink" href="#_CPPv412BitwuzlaTerm" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv312BitwuzlaTerm"></span><span id="_CPPv212BitwuzlaTerm"></span><span id="BitwuzlaTerm"></span><span class="target" id="bitwuzla_8h_1a6b12acdfadbf3264353f5cd41bd4a816"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">bitwuzla_term_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">BitwuzlaTerm</span></span></span><a class="headerlink" href="#_CPPv412BitwuzlaTerm" title="Link to this definition"></a><br /></dt>
 <dd><p>A Bitwuzla term. </p>
 </dd></dl>
 
@@ -162,6 +163,58 @@ instances.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The hash value of the term. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418bitwuzla_term_copy12BitwuzlaTerm">
+<span id="_CPPv318bitwuzla_term_copy12BitwuzlaTerm"></span><span id="_CPPv218bitwuzla_term_copy12BitwuzlaTerm"></span><span id="bitwuzla_term_copy__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1ga51cb12c0b4452da971a28706e4c1fa8b"></span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_copy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418bitwuzla_term_copy12BitwuzlaTerm" title="Link to this definition"></a><br /></dt>
+<dd><p>Make copy of term.</p>
+<p>Increase reference counter of <code class="docutils literal notranslate"><span class="pre">term</span></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaterm_1gaa61d75c6b05f50509b7f8e7080e57dcd"><span class="std std-ref"><span class="pre">bitwuzla_term_release</span></span></a></code></p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step is optional and allows users to manage resources in a more fine-grained manner.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>term</strong> – The term to copy.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The same term with its reference count increased by one.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421bitwuzla_term_release12BitwuzlaTerm">
+<span id="_CPPv321bitwuzla_term_release12BitwuzlaTerm"></span><span id="_CPPv221bitwuzla_term_release12BitwuzlaTerm"></span><span id="bitwuzla_term_release__BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzlaterm_1gaa61d75c6b05f50509b7f8e7080e57dcd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_release</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421bitwuzla_term_release12BitwuzlaTerm" title="Link to this definition"></a><br /></dt>
+<dd><p>Release copy of term.</p>
+<p>Decrements reference counter of <code class="docutils literal notranslate"><span class="pre">term</span></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaterm_1ga51cb12c0b4452da971a28706e4c1fa8b"><span class="std std-ref"><span class="pre">bitwuzla_term_copy</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlatermmanager.html#group__c__bitwuzlatermmanager_1ga1e70ca4324b442fd6716ff2d9f43402f"><span class="std std-ref"><span class="pre">bitwuzla_term_manager_release</span></span></a></code></p></li>
+</ul>
+</p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step is optional and allows users to release resources in a more fine-grained manner. Further, any API function that returns a BitwuzlaTerm returns a copy that is owned by the callee of the function and thus, can be released.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>term</strong> – The term to release.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -943,14 +996,17 @@ instances.</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv427bitwuzla_term_to_string_fmt12BitwuzlaTerm7uint8_t">
 <span id="_CPPv327bitwuzla_term_to_string_fmt12BitwuzlaTerm7uint8_t"></span><span id="_CPPv227bitwuzla_term_to_string_fmt12BitwuzlaTerm7uint8_t"></span><span id="bitwuzla_term_to_string_fmt__BitwuzlaTerm.uint8_t"></span><span class="target" id="group__c__bitwuzlaterm_1ga7fccacb2a90706c003c7ca9969b154b1"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_term_to_string_fmt</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">base</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427bitwuzla_term_to_string_fmt12BitwuzlaTerm7uint8_t" title="Link to this definition"></a><br /></dt>
-<dd><p>Get the SMT-LIB v2 string representation of a term. String representations of bit-vector values are printed in the given base. </p>
+<dd><p>Get the SMT-LIB v2 string representation of a term. String representations of bit-vector values are printed in the given base.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The returned char* pointer is only valid until the next <code class="docutils literal notranslate"><span class="pre">bitwuzla_term_to_string</span></code> call. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>base</strong> – The base of the string representation of bit-vector values; <code class="docutils literal notranslate"><span class="pre">2</span></code> for binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and <code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal. Always ignored for Boolean and RoundingMode values. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>term</strong> – The term. </p></li>
+<li><p><strong>base</strong> – The base of the string representation of bit-vector values; <code class="docutils literal notranslate"><span class="pre">2</span></code> for binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and <code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal. Always ignored for Boolean and RoundingMode values. </p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A string representation of the given term.</p>

@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -79,8 +79,8 @@
              
   <section id="bitwuzlaoptions">
 <h1>BitwuzlaOptions<a class="headerlink" href="#bitwuzlaoptions" title="Link to this heading"></a></h1>
-<p>A <a class="reference internal" href="bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
-options <a class="reference internal" href="#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance via
+<p>A <a class="reference internal" href="bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
+options <a class="reference internal" href="#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance via
 <a class="reference internal" href="#_CPPv420bitwuzla_options_newv" title="bitwuzla_options_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_options_new()</span></code></a>, and must be released via
 <a class="reference internal" href="#_CPPv423bitwuzla_options_deleteP15BitwuzlaOptions" title="bitwuzla_options_delete"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_options_delete()</span></code></a>.</p>
 <div class="admonition note">
@@ -104,7 +104,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 </div>
 <hr class="docutils" />
 <ul class="simple">
-<li><p>typedef struct <a class="reference internal" href="#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a></p></li>
+<li><p>typedef struct <a class="reference internal" href="#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv420bitwuzla_options_newv" title="bitwuzla_options_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_options_new()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv423bitwuzla_options_deleteP15BitwuzlaOptions" title="bitwuzla_options_delete"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_options_delete()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv426bitwuzla_option_is_numericP15BitwuzlaOptions14BitwuzlaOption" title="bitwuzla_option_is_numeric"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_option_is_numeric()</span></code></a></p></li>
@@ -169,7 +169,10 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <dd><p>Determine if given string is a valid short or long option name. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> – The name. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – The Bitwuzla options instance. </p></li>
+<li><p><strong>name</strong> – The name. </p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if given string is a option name. </p>
@@ -182,8 +185,14 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv326bitwuzla_option_is_numericP15BitwuzlaOptions14BitwuzlaOption"></span><span id="_CPPv226bitwuzla_option_is_numericP15BitwuzlaOptions14BitwuzlaOption"></span><span id="bitwuzla_option_is_numeric__BitwuzlaOptionsP.BitwuzlaOption"></span><span class="target" id="group__c__bitwuzlaoptions_1ga41012ed3772f0b013182107452556e3c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_option_is_numeric</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><span class="n"><span class="pre">BitwuzlaOptions</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">options</span></span>, <a class="reference internal" href="../enums/bitwuzlaoption.html#_CPPv414BitwuzlaOption" title="BitwuzlaOption"><span class="n"><span class="pre">BitwuzlaOption</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426bitwuzla_option_is_numericP15BitwuzlaOptions14BitwuzlaOption" title="Link to this definition"></a><br /></dt>
 <dd><p>Determine if a given option is a numeric (or Boolean) option. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>True if the given option is a numeric or Boolean option. </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – The Bitwuzla options instance. </p></li>
+<li><p><strong>option</strong> – The option. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the given option is a numeric or Boolean option. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -193,8 +202,14 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv323bitwuzla_option_is_modeP15BitwuzlaOptions14BitwuzlaOption"></span><span id="_CPPv223bitwuzla_option_is_modeP15BitwuzlaOptions14BitwuzlaOption"></span><span id="bitwuzla_option_is_mode__BitwuzlaOptionsP.BitwuzlaOption"></span><span class="target" id="group__c__bitwuzlaoptions_1gafbc68bda6a3c852ea886cc1cef1deb70"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_option_is_mode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><span class="n"><span class="pre">BitwuzlaOptions</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">options</span></span>, <a class="reference internal" href="../enums/bitwuzlaoption.html#_CPPv414BitwuzlaOption" title="BitwuzlaOption"><span class="n"><span class="pre">BitwuzlaOption</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_option_is_modeP15BitwuzlaOptions14BitwuzlaOption" title="Link to this definition"></a><br /></dt>
 <dd><p>Determine if a given option is an option with a mode </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>True if the given option is an option with a mode. </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>options</strong> – The Bitwuzla options instance. </p></li>
+<li><p><strong>option</strong> – The option. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the given option is an option with a mode. </p>
 </dd>
 </dl>
 </dd></dl>

@@ -37,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -59,8 +59,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="enums/kind.html">Term Kinds</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sort_creation.html">Sort Creation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="term_creation.html">Term Creation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#examples">Examples</a></li>
 </ul>
@@ -181,8 +179,9 @@ A <strong>comprehensive list</strong> of all configurable options is available
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Current engine: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">get_mode</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">BV_SOLVER</span><span class="p">)</span>
 <span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
-<span class="w">  </span><span class="c1">// Now, create a Bitwuzla instance.</span>
-<span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Now, create a Bitwuzla instance with a new term manager.</span>
+<span class="w">  </span><span class="n">TermManager</span><span class="w"> </span><span class="n">tm</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// Check sat (nothing to solve, input formula is empty).</span>
 <span class="w">  </span><span class="n">Result</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">.</span><span class="n">check_sat</span><span class="p">();</span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Expect: sat&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>

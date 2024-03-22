@@ -37,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -60,8 +60,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="enums/bitwuzlakind.html">Term Kinds</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sort_creation.html">Sort Creation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="term_creation.html">Term Creation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#examples">Examples</a></li>
 </ul>
@@ -101,8 +99,8 @@
              
   <section id="options">
 <span id="c-options"></span><h1>Options<a class="headerlink" href="#options" title="Link to this heading"></a></h1>
-<p>A <a class="reference internal" href="types/bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
-options <a class="reference internal" href="types/bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance. This options instance must
+<p>A <a class="reference internal" href="types/bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a> instance is created from a configuration
+options <a class="reference internal" href="types/bitwuzlaoptions.html#_CPPv415BitwuzlaOptions" title="BitwuzlaOptions"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaOptions</span></code></a> instance. This options instance must
 be configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
 instance is created, configuration options are fixed and <strong>cannot</strong> be changed.</p>
 <p>Via the C API, <strong>Bitwuzla</strong> distinguishes two kinds of options: Numeric options
@@ -135,22 +133,25 @@ A <strong>comprehensive list</strong> of all configurable options is available
 <span class="cm"> */</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bitwuzla/c/bitwuzla.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;inttypes.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 
 <span class="kt">int</span>
 <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
+<span class="w">  </span><span class="c1">// First, create a term manager instance.</span>
+<span class="w">  </span><span class="n">BitwuzlaTermManager</span><span class="o">*</span><span class="w"> </span><span class="n">tm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_term_manager_new</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// Create a Bitwuzla options instance.</span>
 <span class="w">  </span><span class="n">BitwuzlaOptions</span><span class="o">*</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_options_new</span><span class="p">();</span>
 
 <span class="w">  </span><span class="c1">// Enable model generation, which expects a boolean configuration value.</span>
 <span class="w">  </span><span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_PRODUCE_MODELS</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// Increase the verbosity level, which expects an integer value.</span>
-<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Previous verbosity level: %lu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Previous verbosity level: %&quot;</span><span class="w"> </span><span class="n">PRIu64</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="n">bitwuzla_get_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_VERBOSITY</span><span class="p">));</span>
 <span class="w">  </span><span class="n">bitwuzla_set_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_VERBOSITY</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Current verbosity level: %lu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Current verbosity level: %&quot;</span><span class="w"> </span><span class="n">PRIu64</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
 <span class="w">         </span><span class="n">bitwuzla_get_option</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_VERBOSITY</span><span class="p">));</span>
 
 <span class="w">  </span><span class="c1">// Now configure an option that has modes (a choice of configuration values).</span>
@@ -163,15 +164,16 @@ A <strong>comprehensive list</strong> of all configurable options is available
 <span class="w">         </span><span class="n">bitwuzla_get_option_mode</span><span class="p">(</span><span class="n">options</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_OPT_BV_SOLVER</span><span class="p">));</span>
 
 <span class="w">  </span><span class="c1">// Now, create a Bitwuzla instance.</span>
-<span class="w">  </span><span class="n">Bitwuzla</span><span class="o">*</span><span class="w"> </span><span class="n">bitwuzla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_new</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Bitwuzla</span><span class="o">*</span><span class="w"> </span><span class="n">bitwuzla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_new</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// Check sat (nothing to solve, input formula is empty).</span>
 <span class="w">  </span><span class="n">BitwuzlaResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">);</span>
 <span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Expect: sat</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bitwuzla: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">bitwuzla_result_to_string</span><span class="p">(</span><span class="n">result</span><span class="p">));</span>
 
-<span class="w">  </span><span class="c1">// Finally, delete the Bitwuzla and Bitwuzla options instance.</span>
+<span class="w">  </span><span class="c1">// Finally, delete the Bitwuzla solver, options, and term manager instances.</span>
 <span class="w">  </span><span class="n">bitwuzla_delete</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">);</span>
 <span class="w">  </span><span class="n">bitwuzla_options_delete</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<span class="w">  </span><span class="n">bitwuzla_term_manager_delete</span><span class="p">(</span><span class="n">tm</span><span class="p">);</span>
 
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>

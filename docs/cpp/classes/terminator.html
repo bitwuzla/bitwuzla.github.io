@@ -35,7 +35,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.3.2
+                0.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -82,7 +82,7 @@
 <p>The termination callback configuration of a Bitwuzla instance.</p>
 <p>Bitwuzla supports configuring a termination callback via class
 <a class="reference internal" href="#_CPPv4N8bitwuzla10TerminatorE" title="bitwuzla::Terminator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Terminator</span></code></a>, which implements a callback function
-<a class="reference internal" href="#_CPPv4N8bitwuzla10Terminator9terminateEv" title="bitwuzla::Terminator::terminate"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Terminator::terminate()</span></code></a> to allow terminating
+<a class="reference internal" href="#_CPPv4N8bitwuzla10Terminator9terminateEv" title="bitwuzla::Terminator::terminate"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Terminator::terminate()</span></code></a> to allow terminating
 Bitwuzla prematurely, during solving. This termination callback returns a
 <code class="code docutils literal notranslate"><span class="pre">bool</span></code> to indicate if Bitwuzla should be terminated. Bitwuzla
 periodically checks this callback and terminates at the earliest possible
@@ -172,20 +172,23 @@ can be connected to a Bitwuzla instance at a time.</p>
 <span class="kt">int</span>
 <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">  </span><span class="c1">// First, create a Bitwuzla options instance.</span>
+<span class="w">  </span><span class="c1">// First, create a term manager instance.</span>
+<span class="w">  </span><span class="n">TermManager</span><span class="w"> </span><span class="n">tm</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Create a Bitwuzla options instance.</span>
 <span class="w">  </span><span class="n">Options</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// Then, create a Bitwuzla instance.</span>
-<span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="n">bitwuzla</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">Sort</span><span class="w"> </span><span class="n">bv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_bv_sort</span><span class="p">(</span><span class="mi">32</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Sort</span><span class="w"> </span><span class="n">bv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tm</span><span class="p">.</span><span class="n">mk_bv_sort</span><span class="p">(</span><span class="mi">32</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_const</span><span class="p">(</span><span class="n">bv</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_const</span><span class="p">(</span><span class="n">bv</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_const</span><span class="p">(</span><span class="n">bv</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tm</span><span class="p">.</span><span class="n">mk_const</span><span class="p">(</span><span class="n">bv</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tm</span><span class="p">.</span><span class="n">mk_const</span><span class="p">(</span><span class="n">bv</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tm</span><span class="p">.</span><span class="n">mk_const</span><span class="p">(</span><span class="n">bv</span><span class="p">);</span>
 
-<span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">DISTINCT</span><span class="p">,</span>
-<span class="w">                   </span><span class="p">{</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_MUL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_MUL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">})}),</span>
-<span class="w">                    </span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_MUL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_MUL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">}),</span><span class="w"> </span><span class="n">t</span><span class="p">})});</span>
+<span class="w">  </span><span class="n">Term</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tm</span><span class="p">.</span><span class="n">mk_term</span><span class="p">(</span>
+<span class="w">      </span><span class="n">Kind</span><span class="o">::</span><span class="n">DISTINCT</span><span class="p">,</span>
+<span class="w">      </span><span class="p">{</span><span class="n">tm</span><span class="p">.</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_MUL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">tm</span><span class="p">.</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_MUL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">})}),</span>
+<span class="w">       </span><span class="n">tm</span><span class="p">.</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_MUL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">tm</span><span class="p">.</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">::</span><span class="n">BV_MUL</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">}),</span><span class="w"> </span><span class="n">t</span><span class="p">})});</span>
 
 <span class="w">  </span><span class="c1">// Now, we check that the following formula is unsat.</span>
 <span class="w">  </span><span class="c1">// (assert (distinct (bvmul s (bvmul x t)) (bvmul (bvmul s x) t)))</span>
@@ -198,7 +201,7 @@ can be connected to a Bitwuzla instance at a time.</p>
 <span class="w">  </span><span class="c1">// that terminates after a certain time limit.</span>
 <span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">::</span><span class="n">PREPROCESS</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// Create new Bitwuzla instance with reconfigured options.</span>
-<span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="n">bitwuzla2</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Bitwuzla</span><span class="w"> </span><span class="n">bitwuzla2</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 <span class="w">  </span><span class="c1">// Configure and connect terminator.</span>
 <span class="w">  </span><span class="n">TestTerminator</span><span class="w"> </span><span class="n">tt</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
 <span class="w">  </span><span class="n">bitwuzla2</span><span class="p">.</span><span class="n">configure_terminator</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tt</span><span class="p">);</span>
