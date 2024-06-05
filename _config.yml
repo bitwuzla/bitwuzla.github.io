@@ -2,7 +2,6 @@ theme: jekyll-theme-midnight
 title: Bitwuzla
 description: An SMT solver for bit-vectors, floating-points,
   arrays and uninterpreted functions.
-google_analytics: UA-180005653-1
 exclude: [tags]
 show_downloads: true
 collections:
