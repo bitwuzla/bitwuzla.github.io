@@ -29,7 +29,7 @@
    pdf: /data/NiemetzPZ-CAV24.pdf
    doi: 10.1007/978-3-031-65627-9_9
    preprint:
-   bibtex:
+   bibtex: https://dblp.org/rec/conf/cav/NiemetzPZ24.html?view=bibtex
    artifact: https://zenodo.org/records/10913320
    talk:
 
@@ -54,7 +54,7 @@
    pdf: /data/NiemetzP-CAV23.pdf
    doi: 10.1007/978-3-031-37703-7_1
    preprint:
-   bibtex:
+   bibtex: https://dblp.org/rec/conf/cav/NiemetzP23.html?view=bibtex
    artifact: https://zenodo.org/record/7864687
    talk:
    awards:
