@@ -1,6 +1,38 @@
 ---
  papers:
 
+ - title: "Scalable Bit-Blasting with Abstractions"
+   id: cav24
+   author:
+   - Aina Niemetz
+   - Mathias Preiner
+   - Yoni Zohar
+   issued:
+   year: 2024
+   publication-title: CAV
+   volume:
+   issue:
+   pages: 178-200
+   abstract: "The dominant state-of-the-art approach for solving bit-vector
+   formulas in Satisfiability Modulo Theories (SMT) is bit-blasting, an eager
+   reduction to propositional logic. Bit-blasting is surprisingly efficient in
+   practice but does not generally scale well with increasing bit-widths,
+   especially when bit-vector arithmetic is present. In this paper, we present
+   a novel CEGAR-style abstraction-refinement procedure for the theory of
+   fixed-size bit-vectors that significantly improves the scalability of
+   bit-blasting. We provide lemma schemes for various arithmetic bit-vector
+   operators and an abduction-based framework for synthesizing refinement
+   lemmas. We extended the state-of-the-art SMT solver Bitwuzla with our
+   abstraction-refinement approach and show that it significantly improves
+   solver performance on a variety of benchmark sets, including industrial
+   benchmarks that arise from smart contract verification."
+   pdf: /data/NiemetzPZ-CAV24.pdf
+   doi: 10.1007/978-3-031-65627-9_9
+   preprint:
+   bibtex:
+   artifact: https://zenodo.org/records/10913320
+   talk:
+
  - title: "Bitwuzla"
    id: cav23
    author:
