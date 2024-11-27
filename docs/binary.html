@@ -5,20 +5,20 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Command Line Interface &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" href="static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
-    <script src="static/js/html5shiv.min.js"></script>
+    <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="static/jquery.js?v=5d32c60e"></script>
-        <script src="static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="static/documentation_options.js?v=5929fcd5"></script>
-        <script src="static/doctools.js?v=888ff710"></script>
-        <script src="static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="static/js/theme.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API Documentation" href="api.html" />
@@ -37,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.4.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -94,8 +94,13 @@ Options:
   -V, --version                                  print version and exit 
   -c, --copyright                                print copyright and exit 
   -p, --print-formula                            print formula in smt2 format 
+  --print-unsat-core                             print unsat core in smt2 format 
+  --print-model                                  print model in smt2 format 
+  --print-no-letify                              do not letify expressions when 
+                                                 printing 
   -P, --parse-only                  [false]      only parse input without calling 
                                                  check-sat 
+  --pp-only                         [false]      exit after preprocessing 
   --bv-output-format                [2]          output number format for bit-vector 
                                                  values {2, 10, 16} 
   -t &lt;n&gt;, --time-limit &lt;n&gt;          [0]          time limit in milliseconds 
@@ -109,6 +114,8 @@ Options:
   -T &lt;n&gt;, --time-limit-per &lt;n&gt;      [0]          time limit in milliseconds per 
                                                  satisfiability check 
   -M &lt;n&gt;, --memory-limit &lt;n&gt;        [0]          set maximum memory limit in MB 
+  --relevant-terms                  [false]      consider relevant terms only when 
+                                                 checking 
   --bv-solver &lt;M&gt;                   [bitblast]   bv solver engine {preprop, prop, 
                                                  bitblast} 
   -rwl &lt;n&gt;, --rewrite-level &lt;n&gt;     [2]          rewrite level 
@@ -124,7 +131,7 @@ Options:
   --prop-nupdates &lt;n&gt;               [0]          number of model value updates used as a 
                                                  limit for propagation-based local 
                                                  search engine 
-  --prop-opt-lt-concat-sext         [true]       optimization for inverse value 
+  --prop-opt-lt-concat-sext         [false]      optimization for inverse value 
                                                  computation of inequalities over 
                                                  concat and sign extension operands 
   --prop-path-sel &lt;M&gt;               [essential]  propagation path selection mode for 
@@ -142,18 +149,37 @@ Options:
                                                  engine 
   --prop-normalize                  [false]      enable normalization for local 
                                                  search 
+  --abstraction                     [false]      enable abstraction module 
+  --abstraction-bv-size &lt;n&gt;         [32]         enable abstraction for bit-vector 
+                                                 terms of given minimum size 
+  --abstraction-eager-refine        [false]      add all violated abstraction lemmas 
+                                                 at once 
+  --abstraction-value-limit &lt;n&gt;     [8]          value instantiation limit 
+                                                 bv-size/&lt;n&gt; until adding original 
+                                                 term as refinement 
+  --abstraction-value-only          [false]      only add value instantiations 
+  --abstraction-assert              [false]      assertion abstraction 
+  --abstraction-assert-refs &lt;n&gt;     [100]        number of assertion refinements per 
+                                                 check 
+  --abstraction-initial-lemmas      [false]      use initial lemma refinements only 
+  --abstraction-inc-bitblast        [false]      incrementally bit-blast bvmul and 
+                                                 bvadd 
+  --abstraction-bvadd               [false]      term abstraction for bvadd 
+  --abstraction-bvmul               [true]       term abstraction for bvmul 
+  --abstraction-bvudiv              [true]       term abstraction for bvudiv 
+  --abstraction-bvurem              [true]       term abstraction for bvurem 
+  --abstraction-eq                  [false]      term abstraction for = 
+  --abstraction-ite                 [false]      term abstraction for ite 
   --preprocess                      [true]       enable preprocessing 
   --pp-contr-ands                   [false]      enable contradicting ands 
                                                  preprocessing pass 
   --pp-elim-extracts                [false]      eliminate extract on BV constants 
+  --pp-elim-bvudiv                  [false]      eliminate bvudiv and bvurem 
   --pp-embedded                     [true]       enable embedded constraint 
                                                  preprocessing pass 
   --pp-flatten-and                  [true]       enable AND flattening preprocessing 
                                                  pass 
   --pp-normalize                    [true]       enable normalization pass 
-  --pp-normalize-share-aware        [true]       disable normalizations in 
-                                                 normalization pass that may yield 
-                                                 blow-up on the bit-level 
   --pp-skeleton-preproc             [true]       enable skeleton preprocessing pass 
   --pp-variable-subst               [true]       enable variable substitution 
                                                  preprocessing pass 
@@ -173,9 +199,9 @@ Options:
   --dbg-pp-node-thresh &lt;n&gt;          [0]          warn threshold [%] for new nodes 
                                                  created through preprocessing in 
                                                  total 
-  --check-model                     [false]      check model for each satisfiable 
+  --check-model                     [true]       check model for each satisfiable 
                                                  query 
-  --check-unsat-core                [false]      check unsat core model for each 
+  --check-unsat-core                [true]       check unsat core for each 
                                                  unsatisfiable query 
 
 </pre></div>

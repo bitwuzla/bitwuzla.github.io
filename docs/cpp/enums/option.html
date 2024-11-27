@@ -5,22 +5,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Option &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
-    <script src="../../static/js/html5shiv.min.js"></script>
+    <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../static/jquery.js?v=5d32c60e"></script>
-        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../static/doctools.js?v=888ff710"></script>
-        <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../static/js/theme.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Options" href="../classes/options.html" />
+    <link rel="prev" title="Kind" href="kind.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.4.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -45,10 +47,41 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../binary.html">Command Line Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html">C++ API Documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../interface.html">C++ Interface</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../classes/bitwuzla.html">Bitwuzla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/exception.html">Exception</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kind.html">Kind</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/options.html">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/optioninfo.html">OptionInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/parser.html">Parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="result.html">Result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/sort.html">Sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/term.html">Term</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/termmanager.html">TermManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/terminator.html">Terminator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../library_info.html">Library Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../options.html">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kind.html">Term Kinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../c/api.html">C API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../python/api.html">Python API Documentation</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
@@ -68,6 +101,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../api.html">C++ API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../interface.html">C++ Interface</a></li>
       <li class="breadcrumb-item active">Option</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -186,6 +222,22 @@ instance.</p>
 <li><p>An unsigned integer for the memory limit in MB. [<strong>default</strong>: 0] </p></li>
 </ul>
 </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option14RELEVANT_TERMSE">
+<span id="_CPPv3N8bitwuzla6Option14RELEVANT_TERMSE"></span><span id="_CPPv2N8bitwuzla6Option14RELEVANT_TERMSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8d18402d6fd5245f0f692b2f5059f948"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RELEVANT_TERMS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14RELEVANT_TERMSE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Check relevant terms only.</strong></p>
+<p>Theory solvers only perform checks on relevant terms.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disabe [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure theory solvers. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp enumerator">
@@ -391,6 +443,237 @@ instance.</p>
 </dd></dl>
 
 <dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option11ABSTRACTIONE">
+<span id="_CPPv3N8bitwuzla6Option11ABSTRACTIONE"></span><span id="_CPPv2N8bitwuzla6Option11ABSTRACTIONE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option11ABSTRACTIONE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Abstraction module</strong></p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_SIZEE">
+<span id="_CPPv3N8bitwuzla6Option19ABSTRACTION_BV_SIZEE"></span><span id="_CPPv2N8bitwuzla6Option19ABSTRACTION_BV_SIZEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca3759905092bd8b8b34f7755929eedbe8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_SIZE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_SIZEE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Minimum bit-vector term size. **</p>
+<p>Specifies at which size supported bit-vector operators should be abstracted.</p>
+<p>Values:<ul class="simple">
+<li><p>**&gt;0**: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option24ABSTRACTION_EAGER_REFINEE">
+<span id="_CPPv3N8bitwuzla6Option24ABSTRACTION_EAGER_REFINEE"></span><span id="_CPPv2N8bitwuzla6Option24ABSTRACTION_EAGER_REFINEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa501f6f47a73ac3d53a352f526391546"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_EAGER_REFINE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option24ABSTRACTION_EAGER_REFINEE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Bit-vector bitblasting solver: Abstraction module eager mode. **</p>
+<p>When enabled, eagerly adds violated refinement lemmas.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option23ABSTRACTION_VALUE_LIMITE">
+<span id="_CPPv3N8bitwuzla6Option23ABSTRACTION_VALUE_LIMITE"></span><span id="_CPPv2N8bitwuzla6Option23ABSTRACTION_VALUE_LIMITE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa0187ce10a585bde0c1cb09b7baf93c4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_VALUE_LIMIT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option23ABSTRACTION_VALUE_LIMITE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Bit-vector bitblasting solver: Abstraction module value instantiation limit. **</p>
+<p>Specifies the limit on the number of value instantiations per abstaction. If the limit is hit, we fall back to fully bit-blasting the specific term.</p>
+<p>Values:<ul class="simple">
+<li><p>**&gt;0**: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option22ABSTRACTION_VALUE_ONLYE">
+<span id="_CPPv3N8bitwuzla6Option22ABSTRACTION_VALUE_ONLYE"></span><span id="_CPPv2N8bitwuzla6Option22ABSTRACTION_VALUE_ONLYE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca81128ac62cb69b939cd003634938ef97"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_VALUE_ONLY</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option22ABSTRACTION_VALUE_ONLYE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Bit-vector bitblasting solver: Abstraction module value instantiations only. **</p>
+<p>When enabled, only adds value instantiations.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18ABSTRACTION_ASSERTE">
+<span id="_CPPv3N8bitwuzla6Option18ABSTRACTION_ASSERTE"></span><span id="_CPPv2N8bitwuzla6Option18ABSTRACTION_ASSERTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca47d1bca4a219ab748ec25b97d55da550"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_ASSERT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18ABSTRACTION_ASSERTE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Abstract assertions. **</p>
+<p>When enabled, abstracts assertions.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option23ABSTRACTION_ASSERT_REFSE">
+<span id="_CPPv3N8bitwuzla6Option23ABSTRACTION_ASSERT_REFSE"></span><span id="_CPPv2N8bitwuzla6Option23ABSTRACTION_ASSERT_REFSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8420418dc703138dfa3f4ac38b09e4f6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_ASSERT_REFS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option23ABSTRACTION_ASSERT_REFSE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Assertion refinements. **</p>
+<p>Maximum number of assertion refinements added per check.</p>
+<p>Values:<ul class="simple">
+<li><p>An unsigned integer value &gt; 0.</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option26ABSTRACTION_INITIAL_LEMMASE">
+<span id="_CPPv3N8bitwuzla6Option26ABSTRACTION_INITIAL_LEMMASE"></span><span id="_CPPv2N8bitwuzla6Option26ABSTRACTION_INITIAL_LEMMASE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8e56e94b16f4e48c2917f0cbf1d819bb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_INITIAL_LEMMAS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option26ABSTRACTION_INITIAL_LEMMASE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Use initial lemmas only. **</p>
+<p>Initial lemmas are those lemmas not generated through abduction.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option24ABSTRACTION_INC_BITBLASTE">
+<span id="_CPPv3N8bitwuzla6Option24ABSTRACTION_INC_BITBLASTE"></span><span id="_CPPv2N8bitwuzla6Option24ABSTRACTION_INC_BITBLASTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca7b69e4e275ef0a19429bf8da8bf3cbad"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_INC_BITBLAST</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option24ABSTRACTION_INC_BITBLASTE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Incrementally bit-blast bvmul and bvadd terms. **</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18ABSTRACTION_BV_ADDE">
+<span id="_CPPv3N8bitwuzla6Option18ABSTRACTION_BV_ADDE"></span><span id="_CPPv2N8bitwuzla6Option18ABSTRACTION_BV_ADDE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cad5466972ec67af45f4f2653f1976bb8f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_ADD</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18ABSTRACTION_BV_ADDE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Abstract bit-vector addition terms. **</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18ABSTRACTION_BV_MULE">
+<span id="_CPPv3N8bitwuzla6Option18ABSTRACTION_BV_MULE"></span><span id="_CPPv2N8bitwuzla6Option18ABSTRACTION_BV_MULE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cabc43da1b6b416036b04e6e526d586193"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_MUL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18ABSTRACTION_BV_MULE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Abstract bit-vector multiplication terms. **</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_UDIVE">
+<span id="_CPPv3N8bitwuzla6Option19ABSTRACTION_BV_UDIVE"></span><span id="_CPPv2N8bitwuzla6Option19ABSTRACTION_BV_UDIVE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cac83009f0d37366f258376f3b8117d785"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_UDIV</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_UDIVE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Abstract bit-vector unsigned division terms. **</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_UREME">
+<span id="_CPPv3N8bitwuzla6Option19ABSTRACTION_BV_UREME"></span><span id="_CPPv2N8bitwuzla6Option19ABSTRACTION_BV_UREME"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca21cfd2a9a07f7f81bd39768ac6c8880f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_UREM</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_UREME" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Abstract bit-vector unsigned remainder terms. **</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>0</strong>: disable</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option17ABSTRACTION_EQUALE">
+<span id="_CPPv3N8bitwuzla6Option17ABSTRACTION_EQUALE"></span><span id="_CPPv2N8bitwuzla6Option17ABSTRACTION_EQUALE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caba40dafb6d76476cc671a11ba87016a9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_EQUAL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option17ABSTRACTION_EQUALE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Abstract equality terms. **</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15ABSTRACTION_ITEE">
+<span id="_CPPv3N8bitwuzla6Option15ABSTRACTION_ITEE"></span><span id="_CPPv2N8bitwuzla6Option15ABSTRACTION_ITEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caba8fd7c57c6cac04f364aee1bc2a7350"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_ITE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15ABSTRACTION_ITEE" title="Link to this definition"></a><br /></dt>
+<dd><p>**Abstraction module: Abstract ITE terms. **</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure the prop solver engine. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option10PREPROCESSE">
 <span id="_CPPv3N8bitwuzla6Option10PREPROCESSE"></span><span id="_CPPv2N8bitwuzla6Option10PREPROCESSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cad36ca94e75c11d2653c1e71bcb93710b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PREPROCESS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option10PREPROCESSE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Preprocessing</strong></p>
@@ -427,6 +710,18 @@ instance.</p>
 </dd></dl>
 
 <dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15PP_ELIM_BV_UDIVE">
+<span id="_CPPv3N8bitwuzla6Option15PP_ELIM_BV_UDIVE"></span><span id="_CPPv2N8bitwuzla6Option15PP_ELIM_BV_UDIVE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca870b01ea497972259f019d025cff414e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_ELIM_BV_UDIV</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15PP_ELIM_BV_UDIVE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Preprocessing: Eliminate bit-vector operators bvudiv and bvurem</strong></p>
+<p>When enabled, eliminates bit-vector unsigned division and remainder operation in terms of multiplication.</p>
+<p>Values:<ul class="simple">
+<li><p><strong>1</strong>: enable</p></li>
+<li><p><strong>0</strong>: disable [<strong>default</strong>] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18PP_EMBEDDED_CONSTRE">
 <span id="_CPPv3N8bitwuzla6Option18PP_EMBEDDED_CONSTRE"></span><span id="_CPPv2N8bitwuzla6Option18PP_EMBEDDED_CONSTRE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca37991ae5aee10bd7e0fa016150cf6a64"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_EMBEDDED_CONSTR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18PP_EMBEDDED_CONSTRE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Preprocessing: Embedded constraint substitution</strong></p>
@@ -453,18 +748,6 @@ instance.</p>
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option12PP_NORMALIZEE">
 <span id="_CPPv3N8bitwuzla6Option12PP_NORMALIZEE"></span><span id="_CPPv2N8bitwuzla6Option12PP_NORMALIZEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca84a8ad14719834487fd8fbee802215eb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_NORMALIZE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option12PP_NORMALIZEE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Preprocessing: Normalization</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
-</ul>
-</p>
-</dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option24PP_NORMALIZE_SHARE_AWAREE">
-<span id="_CPPv3N8bitwuzla6Option24PP_NORMALIZE_SHARE_AWAREE"></span><span id="_CPPv2N8bitwuzla6Option24PP_NORMALIZE_SHARE_AWAREE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca7d0099ba97cb317010098d251b0baf3a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_NORMALIZE_SHARE_AWARE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option24PP_NORMALIZE_SHARE_AWAREE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Normalization: Enable share awareness normlization</strong></p>
-<p>When enabled, this disables normalizations that may yield blow-up on the bit-level.</p>
 <p>Values:<ul class="simple">
 <li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
 <li><p><strong>0</strong>: disable </p></li>
@@ -577,7 +860,10 @@ instance.</p>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="kind.html" class="btn btn-neutral float-left" title="Kind" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../classes/options.html" class="btn btn-neutral float-right" title="Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

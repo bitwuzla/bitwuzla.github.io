@@ -5,23 +5,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C++ Interface &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
-    <script src="../static/js/html5shiv.min.js"></script>
+    <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../static/jquery.js?v=5d32c60e"></script>
-        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../static/doctools.js?v=888ff710"></script>
-        <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../static/js/theme.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Options" href="options.html" />
+    <link rel="next" title="Bitwuzla" href="classes/bitwuzla.html" />
     <link rel="prev" title="C++ API Documentation" href="api.html" /> 
 </head>
 
@@ -37,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.4.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -53,6 +54,20 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="api.html">C++ API Documentation</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">C++ Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classes/bitwuzla.html">Bitwuzla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/exception.html">Exception</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/kind.html">Kind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/option.html">Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/options.html">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/optioninfo.html">OptionInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/parser.html">Parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/result.html">Result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/sort.html">Sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/term.html">Term</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/termmanager.html">TermManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classes/terminator.html">Terminator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_info.html">Library Info</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#enums">Enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
@@ -100,6 +115,15 @@
              
   <section id="c-interface">
 <h1>C++ Interface<a class="headerlink" href="#c-interface" title="Link to this heading"></a></h1>
+<p>This section provides a detailed description of the <a class="reference internal" href="api.html"><span class="doc">C++ API</span></a>,
+the primary API of Bitwuzla.
+For an introduction on how to use the C++ API, refer to the
+<a class="reference internal" href="api.html#quickstart"><span class="std std-ref">quickstart</span></a> guide. A comprehensive set of
+<a class="reference internal" href="api.html#examples"><span class="std std-ref">examples</span></a> covers basic and common use cases.</p>
+<div class="hide-toctree docutils container">
+<div class="toctree-wrapper compound">
+</div>
+</div>
 <p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
@@ -138,7 +162,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="api.html" class="btn btn-neutral float-left" title="C++ API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="options.html" class="btn btn-neutral float-right" title="Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classes/bitwuzla.html" class="btn btn-neutral float-right" title="Bitwuzla" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

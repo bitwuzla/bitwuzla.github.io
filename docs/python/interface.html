@@ -5,20 +5,20 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Python Interface &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
-    <script src="../static/js/html5shiv.min.js"></script>
+    <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../static/jquery.js?v=5d32c60e"></script>
-        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../static/doctools.js?v=888ff710"></script>
-        <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../static/js/theme.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="References" href="../references.html" />
@@ -37,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.4.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -1001,6 +1001,27 @@ RoundingMode values.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="bitwuzla.Bitwuzla.print_unsat_core">
+<span class="sig-name descname"><span class="pre">print_unsat_core</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'smt2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#bitwuzla.Bitwuzla.print_unsat_core" title="Link to this definition"></a></dt>
+<dd><p>Get the current unsat core as benchmark as a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fmt</strong> – The output format for printing the formula. Currently,
+only <cite>“smt2”</cite> for the SMT-LIB v2 format is supported.</p></li>
+<li><p><strong>base</strong> – The base of the string representation of bit-vector
+values; <code class="docutils literal notranslate"><span class="pre">2</span></code> for binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and
+<code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal. Always ignored for Boolean and
+RoundingMode values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The current input formula as a string in the given format.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Bitwuzla.push">
 <span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nlevels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Bitwuzla.push" title="Link to this definition"></a></dt>
 <dd><p>Push new assertion levels.</p>
@@ -1687,6 +1708,57 @@ and RoundingMode values.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="bitwuzla.Parser.configure_auto_print_model">
+<span class="sig-name descname"><span class="pre">configure_auto_print_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Parser.configure_auto_print_model" title="Link to this definition"></a></dt>
+<dd><p>Enable or disable the automatic printing of the model after each
+satisfiable query.</p>
+<p>Enable to automatically print the model after every sat query.
+Must be enabled to automatically print models for BTOR2 input (does
+not provide a command to print the model like <cite>(get-model)</cite> in
+SMT-LIB2). False (default) configures the standard behavior for
+SMT-LIB2 input (print model only after a <cite>(get-model)</cite> command).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Note<span class="colon">:</span></dt>
+<dd class="field-odd"><p>By default, auto printing of the model is disabled.</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>value</strong> – True to enable auto printing of the model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bitwuzla.Parser.get_declared_funs">
+<span class="sig-name descname"><span class="pre">get_declared_funs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#bitwuzla.Term" title="bitwuzla.Term"><span class="pre">Term</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#bitwuzla.Parser.get_declared_funs" title="Link to this definition"></a></dt>
+<dd><p>Get the current set of (user-)declared function symbols.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Note<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Corresponds to the function symbols declared via SMT-LIB
+commands <code class="docutils literal notranslate"><span class="pre">declare-const</span></code> and <code class="docutils literal notranslate"><span class="pre">declare-fun</span></code>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The declared function symbols.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bitwuzla.Parser.get_declared_sorts">
+<span class="sig-name descname"><span class="pre">get_declared_sorts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#bitwuzla.Sort" title="bitwuzla.Sort"><span class="pre">Sort</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#bitwuzla.Parser.get_declared_sorts" title="Link to this definition"></a></dt>
+<dd><p>Get the current set of (user-)declared sort symbols.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Note<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Corresponds to the sorts declared via SMT-LIB command
+<code class="docutils literal notranslate"><span class="pre">declare-sort</span></code>. Will always return an empty list for BTOR2
+input.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The declared sorts.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="bitwuzla.Parser.parse">
 <span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iinput</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_only</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#bitwuzla.Parser.parse" title="Link to this definition"></a></dt>
 <dd><p>Parse input, either from a file or from a string.</p>
@@ -1829,32 +1901,107 @@ supporting “commands” as in SMT2).</p>
 <h3>Option<a class="headerlink" href="#option" title="Link to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Option">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Option" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Option" title="Link to this definition"></a></dt>
 <dd><p>Configuration options supported by Bitwuzla. For more information on
 options see <a class="reference internal" href="../cpp/options.html#cpp-options"><span class="std std-ref">Options</span></a>.</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION">
+<span class="sig-name descname"><span class="pre">ABSTRACTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">22</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_ASSERT">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_ASSERT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">27</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_ASSERT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_ASSERT_REFS">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_ASSERT_REFS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">28</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_ASSERT_REFS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_BV_ADD">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_BV_ADD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">31</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_BV_ADD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_BV_MUL">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_BV_MUL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">32</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_BV_MUL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_BV_SIZE">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_BV_SIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">23</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_BV_SIZE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_BV_UDIV">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_BV_UDIV</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">33</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_BV_UDIV" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_BV_UREM">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_BV_UREM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">34</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_BV_UREM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_EAGER_REFINE">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_EAGER_REFINE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_EAGER_REFINE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_EQUAL">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_EQUAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">35</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_EQUAL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_INC_BITBLAST">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_INC_BITBLAST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_INC_BITBLAST" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_INITIAL_LEMMAS">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_INITIAL_LEMMAS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">29</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_INITIAL_LEMMAS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_ITE">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_ITE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">36</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_ITE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_VALUE_LIMIT">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_VALUE_LIMIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">25</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_VALUE_LIMIT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.ABSTRACTION_VALUE_ONLY">
+<span class="sig-name descname"><span class="pre">ABSTRACTION_VALUE_ONLY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">26</span></em><a class="headerlink" href="#bitwuzla.Option.ABSTRACTION_VALUE_ONLY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.BV_SOLVER">
-<span class="sig-name descname"><span class="pre">BV_SOLVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#bitwuzla.Option.BV_SOLVER" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">BV_SOLVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#bitwuzla.Option.BV_SOLVER" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.DBG_CHECK_MODEL">
-<span class="sig-name descname"><span class="pre">DBG_CHECK_MODEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">35</span></em><a class="headerlink" href="#bitwuzla.Option.DBG_CHECK_MODEL" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DBG_CHECK_MODEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">51</span></em><a class="headerlink" href="#bitwuzla.Option.DBG_CHECK_MODEL" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.DBG_CHECK_UNSAT_CORE">
-<span class="sig-name descname"><span class="pre">DBG_CHECK_UNSAT_CORE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">36</span></em><a class="headerlink" href="#bitwuzla.Option.DBG_CHECK_UNSAT_CORE" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DBG_CHECK_UNSAT_CORE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">52</span></em><a class="headerlink" href="#bitwuzla.Option.DBG_CHECK_UNSAT_CORE" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.DBG_PP_NODE_THRESH">
-<span class="sig-name descname"><span class="pre">DBG_PP_NODE_THRESH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">34</span></em><a class="headerlink" href="#bitwuzla.Option.DBG_PP_NODE_THRESH" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DBG_PP_NODE_THRESH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">50</span></em><a class="headerlink" href="#bitwuzla.Option.DBG_PP_NODE_THRESH" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.DBG_RW_NODE_THRESH">
-<span class="sig-name descname"><span class="pre">DBG_RW_NODE_THRESH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">33</span></em><a class="headerlink" href="#bitwuzla.Option.DBG_RW_NODE_THRESH" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DBG_RW_NODE_THRESH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">49</span></em><a class="headerlink" href="#bitwuzla.Option.DBG_RW_NODE_THRESH" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1869,62 +2016,62 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_CONTRADICTING_ANDS">
-<span class="sig-name descname"><span class="pre">PP_CONTRADICTING_ANDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">22</span></em><a class="headerlink" href="#bitwuzla.Option.PP_CONTRADICTING_ANDS" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_CONTRADICTING_ANDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">38</span></em><a class="headerlink" href="#bitwuzla.Option.PP_CONTRADICTING_ANDS" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_ELIM_BV_EXTRACTS">
-<span class="sig-name descname"><span class="pre">PP_ELIM_BV_EXTRACTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">23</span></em><a class="headerlink" href="#bitwuzla.Option.PP_ELIM_BV_EXTRACTS" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_ELIM_BV_EXTRACTS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">39</span></em><a class="headerlink" href="#bitwuzla.Option.PP_ELIM_BV_EXTRACTS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.PP_ELIM_BV_UDIV">
+<span class="sig-name descname"><span class="pre">PP_ELIM_BV_UDIV</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">40</span></em><a class="headerlink" href="#bitwuzla.Option.PP_ELIM_BV_UDIV" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_EMBEDDED_CONSTR">
-<span class="sig-name descname"><span class="pre">PP_EMBEDDED_CONSTR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24</span></em><a class="headerlink" href="#bitwuzla.Option.PP_EMBEDDED_CONSTR" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_EMBEDDED_CONSTR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">41</span></em><a class="headerlink" href="#bitwuzla.Option.PP_EMBEDDED_CONSTR" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_FLATTEN_AND">
-<span class="sig-name descname"><span class="pre">PP_FLATTEN_AND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">25</span></em><a class="headerlink" href="#bitwuzla.Option.PP_FLATTEN_AND" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_FLATTEN_AND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">42</span></em><a class="headerlink" href="#bitwuzla.Option.PP_FLATTEN_AND" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_NORMALIZE">
-<span class="sig-name descname"><span class="pre">PP_NORMALIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">26</span></em><a class="headerlink" href="#bitwuzla.Option.PP_NORMALIZE" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="bitwuzla.Option.PP_NORMALIZE_SHARE_AWARE">
-<span class="sig-name descname"><span class="pre">PP_NORMALIZE_SHARE_AWARE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">27</span></em><a class="headerlink" href="#bitwuzla.Option.PP_NORMALIZE_SHARE_AWARE" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_NORMALIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">43</span></em><a class="headerlink" href="#bitwuzla.Option.PP_NORMALIZE" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_SKELETON_PREPROC">
-<span class="sig-name descname"><span class="pre">PP_SKELETON_PREPROC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">28</span></em><a class="headerlink" href="#bitwuzla.Option.PP_SKELETON_PREPROC" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_SKELETON_PREPROC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">44</span></em><a class="headerlink" href="#bitwuzla.Option.PP_SKELETON_PREPROC" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_VARIABLE_SUBST">
-<span class="sig-name descname"><span class="pre">PP_VARIABLE_SUBST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">29</span></em><a class="headerlink" href="#bitwuzla.Option.PP_VARIABLE_SUBST" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_VARIABLE_SUBST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">45</span></em><a class="headerlink" href="#bitwuzla.Option.PP_VARIABLE_SUBST" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_VARIABLE_SUBST_NORM_BV_INEQ">
-<span class="sig-name descname"><span class="pre">PP_VARIABLE_SUBST_NORM_BV_INEQ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">32</span></em><a class="headerlink" href="#bitwuzla.Option.PP_VARIABLE_SUBST_NORM_BV_INEQ" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_VARIABLE_SUBST_NORM_BV_INEQ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">48</span></em><a class="headerlink" href="#bitwuzla.Option.PP_VARIABLE_SUBST_NORM_BV_INEQ" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_VARIABLE_SUBST_NORM_DISEQ">
-<span class="sig-name descname"><span class="pre">PP_VARIABLE_SUBST_NORM_DISEQ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">31</span></em><a class="headerlink" href="#bitwuzla.Option.PP_VARIABLE_SUBST_NORM_DISEQ" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_VARIABLE_SUBST_NORM_DISEQ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">47</span></em><a class="headerlink" href="#bitwuzla.Option.PP_VARIABLE_SUBST_NORM_DISEQ" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PP_VARIABLE_SUBST_NORM_EQ">
-<span class="sig-name descname"><span class="pre">PP_VARIABLE_SUBST_NORM_EQ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">30</span></em><a class="headerlink" href="#bitwuzla.Option.PP_VARIABLE_SUBST_NORM_EQ" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PP_VARIABLE_SUBST_NORM_EQ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">46</span></em><a class="headerlink" href="#bitwuzla.Option.PP_VARIABLE_SUBST_NORM_EQ" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PREPROCESS">
-<span class="sig-name descname"><span class="pre">PREPROCESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">21</span></em><a class="headerlink" href="#bitwuzla.Option.PREPROCESS" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PREPROCESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">37</span></em><a class="headerlink" href="#bitwuzla.Option.PREPROCESS" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -1944,62 +2091,67 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_CONST_BITS">
-<span class="sig-name descname"><span class="pre">PROP_CONST_BITS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_CONST_BITS" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_CONST_BITS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_CONST_BITS" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_INFER_INEQ_BOUNDS">
-<span class="sig-name descname"><span class="pre">PROP_INFER_INEQ_BOUNDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_INFER_INEQ_BOUNDS" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_INFER_INEQ_BOUNDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_INFER_INEQ_BOUNDS" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_NORMALIZE">
-<span class="sig-name descname"><span class="pre">PROP_NORMALIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_NORMALIZE" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_NORMALIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">21</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_NORMALIZE" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_NPROPS">
-<span class="sig-name descname"><span class="pre">PROP_NPROPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_NPROPS" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_NPROPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_NPROPS" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_NUPDATES">
-<span class="sig-name descname"><span class="pre">PROP_NUPDATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_NUPDATES" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_NUPDATES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_NUPDATES" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_OPT_LT_CONCAT_SEXT">
-<span class="sig-name descname"><span class="pre">PROP_OPT_LT_CONCAT_SEXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_OPT_LT_CONCAT_SEXT" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_OPT_LT_CONCAT_SEXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_OPT_LT_CONCAT_SEXT" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_PATH_SEL">
-<span class="sig-name descname"><span class="pre">PROP_PATH_SEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_PATH_SEL" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_PATH_SEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_PATH_SEL" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_PROB_RANDOM_INPUT">
-<span class="sig-name descname"><span class="pre">PROP_PROB_RANDOM_INPUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_PROB_RANDOM_INPUT" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_PROB_RANDOM_INPUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_PROB_RANDOM_INPUT" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_PROB_USE_INV_VALUE">
-<span class="sig-name descname"><span class="pre">PROP_PROB_USE_INV_VALUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_PROB_USE_INV_VALUE" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_PROB_USE_INV_VALUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">19</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_PROB_USE_INV_VALUE" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.PROP_SEXT">
-<span class="sig-name descname"><span class="pre">PROP_SEXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">19</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_SEXT" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">PROP_SEXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#bitwuzla.Option.PROP_SEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitwuzla.Option.RELEVANT_TERMS">
+<span class="sig-name descname"><span class="pre">RELEVANT_TERMS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#bitwuzla.Option.RELEVANT_TERMS" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.REWRITE_LEVEL">
-<span class="sig-name descname"><span class="pre">REWRITE_LEVEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#bitwuzla.Option.REWRITE_LEVEL" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">REWRITE_LEVEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#bitwuzla.Option.REWRITE_LEVEL" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Option.SAT_SOLVER">
-<span class="sig-name descname"><span class="pre">SAT_SOLVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#bitwuzla.Option.SAT_SOLVER" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">SAT_SOLVER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#bitwuzla.Option.SAT_SOLVER" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -2024,7 +2176,7 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 <h3>OptionInfoKind<a class="headerlink" href="#optioninfokind" title="Link to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.OptionInfoKind">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">OptionInfoKind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.OptionInfoKind" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">OptionInfoKind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.OptionInfoKind" title="Link to this definition"></a></dt>
 <dd><p>The kind of an OptionInfo.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.OptionInfoKind.BOOL">
@@ -2048,7 +2200,7 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 <h3>Kind<a class="headerlink" href="#kind" title="Link to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Kind">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Kind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Kind" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Kind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Kind" title="Link to this definition"></a></dt>
 <dd><p>BitwuzlaTerm kinds. For more information on term kinds see <a class="reference internal" href="../cpp/enums/kind.html#_CPPv4N8bitwuzla4KindE" title="bitwuzla::Kind"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::Kind</span></code></a>.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Kind.AND">
@@ -2557,7 +2709,7 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 <h3>Result<a class="headerlink" href="#result" title="Link to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.Result">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Result" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">Result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.Result" title="Link to this definition"></a></dt>
 <dd><p>Satisfiability result.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.Result.SAT">
@@ -2581,7 +2733,7 @@ options see <a class="reference internal" href="../cpp/options.html#cpp-options"
 <h3>RoundingMode<a class="headerlink" href="#roundingmode" title="Link to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="bitwuzla.RoundingMode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">RoundingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.RoundingMode" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitwuzla.</span></span><span class="sig-name descname"><span class="pre">RoundingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bitwuzla.RoundingMode" title="Link to this definition"></a></dt>
 <dd><p>Floating-point rounding mode.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitwuzla.RoundingMode.RNA">

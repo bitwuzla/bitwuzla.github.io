@@ -5,23 +5,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C Interface &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
-    <script src="../static/js/html5shiv.min.js"></script>
+    <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../static/jquery.js?v=5d32c60e"></script>
-        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../static/doctools.js?v=888ff710"></script>
-        <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../static/js/theme.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Options" href="options.html" />
+    <link rel="next" title="Bitwuzla" href="types/bitwuzla.html" />
     <link rel="prev" title="C API Documentation" href="api.html" /> 
 </head>
 
@@ -37,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.4.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -54,6 +55,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../cpp/api.html">C++ API Documentation</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="api.html">C API Documentation</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">C Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/bitwuzla.html">Bitwuzla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/bitwuzlakind.html">BitwuzlaKind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/bitwuzlaoption.html">BitwuzlaOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structs/bitwuzlaoptioninfo.html">BitwuzlaOptionInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/bitwuzlaoptions.html">BitwuzlaOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/bitwuzlaparser.html">BitwuzlaParser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/bitwuzlaresult.html">BitwuzlaResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/bitwuzlaroundingmode.html">BitwuzlaRoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/bitwuzlasort.html">BitwuzlaSort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/bitwuzlaterm.html">BitwuzlaTerm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/bitwuzlatermmanager.html">BitwuzlaTermManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_info.html">Library Info</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#types">Types</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#structs">Structs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#enums">Enums</a></li>
@@ -62,6 +75,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="options.html">Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enums/bitwuzlakind.html">Term Kinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/bitwuzlaparser.html">Parser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#quickstart">Quickstart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api.html#examples">Examples</a></li>
 </ul>
@@ -101,13 +115,74 @@
              
   <section id="c-interface">
 <h1>C Interface<a class="headerlink" href="#c-interface" title="Link to this heading"></a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="#types"><span class="std std-ref">Types</span></a></p></li>
-<li><p><a class="reference internal" href="#structs"><span class="std std-ref">Structs</span></a></p></li>
-<li><p><a class="reference internal" href="#enums"><span class="std std-ref">Enums</span></a></p></li>
-<li><p><a class="reference internal" href="#functions"><span class="std std-ref">Functions</span></a></p></li>
-</ul>
-<hr class="docutils" />
+<p>This section provides a detailed description of the <a class="reference internal" href="api.html"><span class="doc">C API</span></a> of Bitwuzla.
+For an introduction on how to use the C API, refer to the
+<a class="reference internal" href="api.html#quickstart"><span class="std std-ref">quickstart</span></a> guide. A comprehensive set of
+<a class="reference internal" href="api.html#examples"><span class="std std-ref">examples</span></a> covers basic and common use cases.</p>
+<p>One of the key differences between the C and the C++ APIs is the way <strong>how
+memory is managed</strong>. While users of the C++ API can rely on memory being
+efficiently managed automatically, on the C level, management to maintain a low
+overhead needs <strong>more manual intervention</strong>.</p>
+<p>The C API offers <strong>two modes</strong> of memory management:</p>
+<ol class="arabic simple">
+<li><p>Let Bitwuzla handle memory management without manual intervention. All
+memory allocated by the C API via a term manager
+(<a class="reference internal" href="types/bitwuzlatermmanager.html#_CPPv419BitwuzlaTermManager" title="BitwuzlaTermManager"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">BitwuzlaTermManager</span></code></a>) or solver (<a class="reference internal" href="types/bitwuzla.html#_CPPv48Bitwuzla" title="Bitwuzla"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">Bitwuzla</span></code></a>) instance
+will only be released when these instances are
+deleted via <a class="reference internal" href="types/bitwuzla.html#_CPPv415bitwuzla_deleteP8Bitwuzla" title="bitwuzla_delete"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_delete()</span></code></a> and
+<a class="reference internal" href="types/bitwuzlatermmanager.html#_CPPv428bitwuzla_term_manager_deleteP19BitwuzlaTermManager" title="bitwuzla_term_manager_delete"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_term_manager_delete()</span></code></a>.
+For example:</p></li>
+</ol>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">BitwuzlaOptions</span><span class="w"> </span><span class="o">*</span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_options_new</span><span class="p">();</span>
+<span class="n">BitwuzlaTermManager</span><span class="w"> </span><span class="o">*</span><span class="n">tm</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_term_manager_new</span><span class="p">();</span>
+<span class="n">Bitwuzla</span><span class="w"> </span><span class="o">*</span><span class="n">bitwuzla</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_new</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">a</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">bitwuzla_mk_bool_sort</span><span class="p">(</span><span class="n">tm</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">);</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">btrue</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_mk_true</span><span class="p">(</span><span class="n">tm</span><span class="p">);</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">args1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">btrue</span><span class="p">};</span>
+<span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">,</span>
+<span class="w">                </span><span class="n">bitwuzla_mk_term</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">args1</span><span class="p">));</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">b</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">bitwuzla_mk_bool_sort</span><span class="p">(</span><span class="n">tm</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">);</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">args2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">btrue</span><span class="p">};</span>
+<span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">,</span>
+<span class="w">                </span><span class="n">bitwuzla_mk_term</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_KIND_DISTINCT</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">args2</span><span class="p">));</span>
+<span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">);</span>
+<span class="n">bitwuzla_delete</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">);</span>
+<span class="n">bitwuzla_term_manager_delete</span><span class="p">(</span><span class="n">tm</span><span class="p">);</span>
+<span class="n">bitwuzla_options_delete</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Introduce a more fine-grained, user-level memory management for objects
+created via a term manager or solver via the corresponding
+<code class="docutils literal notranslate"><span class="pre">bitwuzla_*_copy()</span></code> and <code class="docutils literal notranslate"><span class="pre">bitwuzla_*_release()</span></code> functions. The copy
+functions increment the reference counter of an object, the release
+functions decrement the reference counter and free its allocated memory when
+the counter reaches 0. For example:</p></li>
+</ol>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">BitwuzlaOptions</span><span class="w"> </span><span class="o">*</span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_options_new</span><span class="p">();</span>
+<span class="n">BitwuzlaTermManager</span><span class="w"> </span><span class="o">*</span><span class="n">tm</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_term_manager_new</span><span class="p">();</span>
+<span class="n">Bitwuzla</span><span class="w"> </span><span class="o">*</span><span class="n">bitwuzla</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_new</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">a</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">bitwuzla_mk_bool_sort</span><span class="p">(</span><span class="n">tm</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">);</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">btrue</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_mk_true</span><span class="p">(</span><span class="n">tm</span><span class="p">);</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">args1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">btrue</span><span class="p">};</span>
+<span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">,</span>
+<span class="w">                </span><span class="n">bitwuzla_mk_term</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_KIND_EQUAL</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">args1</span><span class="p">));</span>
+<span class="c1">// we can release &#39;a&#39; here, not needed anymore</span>
+<span class="n">bitwuzla_term_release</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">b</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">bitwuzla_mk_const</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">bitwuzla_mk_bool_sort</span><span class="p">(</span><span class="n">tm</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="p">);</span>
+<span class="n">BitwuzlaTerm</span><span class="w"> </span><span class="n">args2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">btrue</span><span class="p">};</span>
+<span class="n">bitwuzla_assert</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">,</span>
+<span class="w">                </span><span class="n">bitwuzla_mk_term</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span><span class="w"> </span><span class="n">BITWUZLA_KIND_DISTINCT</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">args2</span><span class="p">));</span>
+<span class="n">bitwuzla_check_sat</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">);</span>
+<span class="n">bitwuzla_delete</span><span class="p">(</span><span class="n">bitwuzla</span><span class="p">);</span>
+<span class="n">bitwuzla_term_manager_delete</span><span class="p">(</span><span class="n">tm</span><span class="p">);</span>
+<span class="n">bitwuzla_options_delete</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="hide-toctree docutils container">
+<div class="toctree-wrapper compound">
+</div>
+</div>
 <section id="types">
 <h2>Types<a class="headerlink" href="#types" title="Link to this heading"></a></h2>
 <ul class="simple">
@@ -147,7 +222,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="api.html" class="btn btn-neutral float-left" title="C API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="options.html" class="btn btn-neutral float-right" title="Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="types/bitwuzla.html" class="btn btn-neutral float-right" title="Bitwuzla" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

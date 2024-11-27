@@ -7,8 +7,13 @@ Options:
   -V, --version                                  print version and exit 
   -c, --copyright                                print copyright and exit 
   -p, --print-formula                            print formula in smt2 format 
+  --print-unsat-core                             print unsat core in smt2 format 
+  --print-model                                  print model in smt2 format 
+  --print-no-letify                              do not letify expressions when 
+                                                 printing 
   -P, --parse-only                  [false]      only parse input without calling 
                                                  check-sat 
+  --pp-only                         [false]      exit after preprocessing 
   --bv-output-format                [2]          output number format for bit-vector 
                                                  values {2, 10, 16} 
   -t <n>, --time-limit <n>          [0]          time limit in milliseconds 
@@ -22,6 +27,8 @@ Options:
   -T <n>, --time-limit-per <n>      [0]          time limit in milliseconds per 
                                                  satisfiability check 
   -M <n>, --memory-limit <n>        [0]          set maximum memory limit in MB 
+  --relevant-terms                  [false]      consider relevant terms only when 
+                                                 checking 
   --bv-solver <M>                   [bitblast]   bv solver engine {preprop, prop, 
                                                  bitblast} 
   -rwl <n>, --rewrite-level <n>     [2]          rewrite level 
@@ -37,7 +44,7 @@ Options:
   --prop-nupdates <n>               [0]          number of model value updates used as a 
                                                  limit for propagation-based local 
                                                  search engine 
-  --prop-opt-lt-concat-sext         [true]       optimization for inverse value 
+  --prop-opt-lt-concat-sext         [false]      optimization for inverse value 
                                                  computation of inequalities over 
                                                  concat and sign extension operands 
   --prop-path-sel <M>               [essential]  propagation path selection mode for 
@@ -55,18 +62,37 @@ Options:
                                                  engine 
   --prop-normalize                  [false]      enable normalization for local 
                                                  search 
+  --abstraction                     [false]      enable abstraction module 
+  --abstraction-bv-size <n>         [32]         enable abstraction for bit-vector 
+                                                 terms of given minimum size 
+  --abstraction-eager-refine        [false]      add all violated abstraction lemmas 
+                                                 at once 
+  --abstraction-value-limit <n>     [8]          value instantiation limit 
+                                                 bv-size/<n> until adding original 
+                                                 term as refinement 
+  --abstraction-value-only          [false]      only add value instantiations 
+  --abstraction-assert              [false]      assertion abstraction 
+  --abstraction-assert-refs <n>     [100]        number of assertion refinements per 
+                                                 check 
+  --abstraction-initial-lemmas      [false]      use initial lemma refinements only 
+  --abstraction-inc-bitblast        [false]      incrementally bit-blast bvmul and 
+                                                 bvadd 
+  --abstraction-bvadd               [false]      term abstraction for bvadd 
+  --abstraction-bvmul               [true]       term abstraction for bvmul 
+  --abstraction-bvudiv              [true]       term abstraction for bvudiv 
+  --abstraction-bvurem              [true]       term abstraction for bvurem 
+  --abstraction-eq                  [false]      term abstraction for = 
+  --abstraction-ite                 [false]      term abstraction for ite 
   --preprocess                      [true]       enable preprocessing 
   --pp-contr-ands                   [false]      enable contradicting ands 
                                                  preprocessing pass 
   --pp-elim-extracts                [false]      eliminate extract on BV constants 
+  --pp-elim-bvudiv                  [false]      eliminate bvudiv and bvurem 
   --pp-embedded                     [true]       enable embedded constraint 
                                                  preprocessing pass 
   --pp-flatten-and                  [true]       enable AND flattening preprocessing 
                                                  pass 
   --pp-normalize                    [true]       enable normalization pass 
-  --pp-normalize-share-aware        [true]       disable normalizations in 
-                                                 normalization pass that may yield 
-                                                 blow-up on the bit-level 
   --pp-skeleton-preproc             [true]       enable skeleton preprocessing pass 
   --pp-variable-subst               [true]       enable variable substitution 
                                                  preprocessing pass 
@@ -88,6 +114,6 @@ Options:
                                                  total 
   --check-model                     [true]       check model for each satisfiable 
                                                  query 
-  --check-unsat-core                [true]       check unsat core model for each 
+  --check-unsat-core                [true]       check unsat core for each 
                                                  unsatisfiable query 
 

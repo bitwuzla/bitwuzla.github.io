@@ -5,22 +5,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitwuzla &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
-    <script src="../../static/js/html5shiv.min.js"></script>
+    <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../static/jquery.js?v=5d32c60e"></script>
-        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../static/doctools.js?v=888ff710"></script>
-        <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../static/js/theme.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BitwuzlaKind" href="../enums/bitwuzlakind.html" />
+    <link rel="prev" title="C Interface" href="../interface.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.4.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -45,10 +47,41 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../binary.html">Command Line Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../cpp/api.html">C++ API Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html">C API Documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../interface.html">C Interface</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Bitwuzla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/bitwuzlakind.html">BitwuzlaKind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/bitwuzlaoption.html">BitwuzlaOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../structs/bitwuzlaoptioninfo.html">BitwuzlaOptionInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitwuzlaoptions.html">BitwuzlaOptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitwuzlaparser.html">BitwuzlaParser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/bitwuzlaresult.html">BitwuzlaResult</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/bitwuzlaroundingmode.html">BitwuzlaRoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitwuzlasort.html">BitwuzlaSort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitwuzlaterm.html">BitwuzlaTerm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitwuzlatermmanager.html">BitwuzlaTermManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../library_info.html">Library Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#types">Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#structs">Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../options.html">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/bitwuzlakind.html">Term Kinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitwuzlaparser.html">Parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../python/api.html">Python API Documentation</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
@@ -68,6 +101,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../api.html">C API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../interface.html">C Interface</a></li>
       <li class="breadcrumb-item active">Bitwuzla</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -307,8 +343,12 @@ opportunity if the callback function returns a value <code class="code docutils 
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv423bitwuzla_get_assertionsP8BitwuzlaP6size_t">
-<span id="_CPPv323bitwuzla_get_assertionsP8BitwuzlaP6size_t"></span><span id="_CPPv223bitwuzla_get_assertionsP8BitwuzlaP6size_t"></span><span id="bitwuzla_get_assertions__BitwuzlaP.sP"></span><span class="target" id="group__c__bitwuzla_1ga42acd0a49fd3d85ed882a34a8733b01b"></span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_assertions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_get_assertionsP8BitwuzlaP6size_t" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv323bitwuzla_get_assertionsP8BitwuzlaP6size_t"></span><span id="_CPPv223bitwuzla_get_assertionsP8BitwuzlaP6size_t"></span><span id="bitwuzla_get_assertions__BitwuzlaP.sP"></span><span class="target" id="group__c__bitwuzla_1gaf0d7178a79db8de4f8c12ee291ae3565"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_assertions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_get_assertionsP8BitwuzlaP6size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the set of currently asserted formulas. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned BitwuzlaTerm array pointer is only valid until the next call to <code class="docutils literal notranslate"><span class="pre">bitwuzla_result_to_string</span></code>. </p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The asserted formulas. </p>
@@ -349,7 +389,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv430bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t">
-<span id="_CPPv330bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t"></span><span id="_CPPv230bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t"></span><span id="bitwuzla_get_unsat_assumptions__BitwuzlaP.sP"></span><span class="target" id="group__c__bitwuzla_1ga4f8606eeb86c44f82d57a8353eb4a889"></span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_unsat_assumptions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv330bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t"></span><span id="_CPPv230bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t"></span><span id="bitwuzla_get_unsat_assumptions__BitwuzlaP.sP"></span><span class="target" id="group__c__bitwuzla_1ga29354e858608d009c246f5729bc05b69"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_unsat_assumptions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the set of unsat assumptions.</p>
 <p>Unsat assumptions are assumptions that force an input formula to become unsatisfiable. Unsat assumptions handling in Bitwuzla is analogous to failed assumptions in MiniSAT.</p>
 <p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae3a04c185b6d00a30c1b08b8d8b17abf"><span class="std std-ref"><span class="pre">BITWUZLA_UNSAT</span></span></a></code>.</p>
@@ -362,6 +402,10 @@ opportunity if the callback function returns a value <code class="code docutils 
 </p>
 </div>
 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned BitwuzlaTerm array pointer is only valid until the next call to <code class="docutils literal notranslate"><span class="pre">bitwuzla_result_to_string</span></code>. </p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -377,7 +421,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv423bitwuzla_get_unsat_coreP8BitwuzlaP6size_t">
-<span id="_CPPv323bitwuzla_get_unsat_coreP8BitwuzlaP6size_t"></span><span id="_CPPv223bitwuzla_get_unsat_coreP8BitwuzlaP6size_t"></span><span id="bitwuzla_get_unsat_core__BitwuzlaP.sP"></span><span class="target" id="group__c__bitwuzla_1ga3be61c745504ece6f8061d325779e075"></span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_unsat_core</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_get_unsat_coreP8BitwuzlaP6size_t" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv323bitwuzla_get_unsat_coreP8BitwuzlaP6size_t"></span><span id="_CPPv223bitwuzla_get_unsat_coreP8BitwuzlaP6size_t"></span><span id="bitwuzla_get_unsat_core__BitwuzlaP.sP"></span><span class="target" id="group__c__bitwuzla_1gaf6b814e52420907e10cd33ed6ba53bce"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_unsat_core</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_get_unsat_coreP8BitwuzlaP6size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the unsat core (unsat assertions).</p>
 <p>The unsat core consists of the set of assertions that force an input formula to become unsatisfiable.</p>
 <p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae3a04c185b6d00a30c1b08b8d8b17abf"><span class="std std-ref"><span class="pre">BITWUZLA_UNSAT</span></span></a></code>.</p>
@@ -390,6 +434,10 @@ opportunity if the callback function returns a value <code class="code docutils 
 </p>
 </div>
 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned BitwuzlaTerm array pointer is only valid until the next call to <code class="docutils literal notranslate"><span class="pre">bitwuzla_result_to_string</span></code>. </p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -532,6 +580,26 @@ opportunity if the callback function returns a value <code class="code docutils 
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425bitwuzla_print_unsat_coreP8BitwuzlaPKcP4FILE7uint8_t">
+<span id="_CPPv325bitwuzla_print_unsat_coreP8BitwuzlaPKcP4FILE7uint8_t"></span><span id="_CPPv225bitwuzla_print_unsat_coreP8BitwuzlaPKcP4FILE7uint8_t"></span><span id="bitwuzla_print_unsat_core__BitwuzlaP.cCP.FILEP.uint8_t"></span><span class="target" id="group__c__bitwuzla_1ga87670c60f20e2c951629e9968193f50d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_print_unsat_core</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">format</span></span>, <span class="n"><span class="pre">FILE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">file</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">base</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425bitwuzla_print_unsat_coreP8BitwuzlaPKcP4FILE7uint8_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Print the current unsat core as benchmark.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Floating-point values are printed in terms of operator <code class="docutils literal notranslate"><span class="pre">fp</span></code>. Their component bit-vector values can only be printed in binary or decimal format. If base <code class="docutils literal notranslate"><span class="pre">16</span></code> is configured, the format for floating-point component bit-vector values defaults to binary format. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bitwuzla</strong> – The Bitwuzla instance. </p></li>
+<li><p><strong>format</strong> – The output format for printing the formula. Currently, only <code class="docutils literal notranslate"><span class="pre">&quot;smt2&quot;</span></code> for the SMT-LIB v2 format is supported. </p></li>
+<li><p><strong>file</strong> – The file to print the formula to. </p></li>
+<li><p><strong>base</strong> – The base of the string representation of bit-vector values; <code class="docutils literal notranslate"><span class="pre">2</span></code> for binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and <code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv423bitwuzla_get_statisticsP8BitwuzlaPPPKcPPPKcP6size_t">
 <span id="_CPPv323bitwuzla_get_statisticsP8BitwuzlaPPPKcPPPKcP6size_t"></span><span id="_CPPv223bitwuzla_get_statisticsP8BitwuzlaPPPKcPPPKcP6size_t"></span><span id="bitwuzla_get_statistics__BitwuzlaP.cCPPP.cCPPP.sP"></span><span class="target" id="group__c__bitwuzla_1ga9f3132743854aef12cd983272d483e54"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_statistics</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">keys</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">values</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_get_statisticsP8BitwuzlaPPPKcPPPKcP6size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Get current statistics.</p>
@@ -571,7 +639,10 @@ opportunity if the callback function returns a value <code class="code docutils 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../interface.html" class="btn btn-neutral float-left" title="C Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../enums/bitwuzlakind.html" class="btn btn-neutral float-right" title="BitwuzlaKind" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

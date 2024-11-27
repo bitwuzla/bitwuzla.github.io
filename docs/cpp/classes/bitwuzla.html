@@ -5,22 +5,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bitwuzla &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
-    <script src="../../static/js/html5shiv.min.js"></script>
+    <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../static/jquery.js?v=5d32c60e"></script>
-        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../static/doctools.js?v=888ff710"></script>
-        <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../static/js/theme.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exception" href="exception.html" />
+    <link rel="prev" title="C++ Interface" href="../interface.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,7 +37,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.4.0
+                0.6.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -45,10 +47,41 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../binary.html">Command Line Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html">C++ API Documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../interface.html">C++ Interface</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Bitwuzla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception.html">Exception</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/kind.html">Kind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/option.html">Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optioninfo.html">OptionInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/result.html">Result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sort.html">Sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="term.html">Term</a></li>
+<li class="toctree-l4"><a class="reference internal" href="termmanager.html">TermManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="terminator.html">Terminator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../library_info.html">Library Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../options.html">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/kind.html">Term Kinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../c/api.html">C API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../python/api.html">Python API Documentation</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
@@ -68,6 +101,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../api.html">C++ API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../interface.html">C++ Interface</a></li>
       <li class="breadcrumb-item active">Bitwuzla</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -388,6 +424,21 @@ opportunity if the callback function returns <code class="code docutils literal 
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla8Bitwuzla16print_unsat_coreERNSt7ostreamERKNSt6stringE">
+<span id="_CPPv3NK8bitwuzla8Bitwuzla16print_unsat_coreERNSt7ostreamERKNSt6stringE"></span><span id="_CPPv2NK8bitwuzla8Bitwuzla16print_unsat_coreERNSt7ostreamERKNSt6stringE"></span><span id="bitwuzla::Bitwuzla::print_unsat_core__osR.ssCRC"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a604fdd55bd85996a21876d14498b125d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_unsat_core</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">format</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;smt2&quot;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla8Bitwuzla16print_unsat_coreERNSt7ostreamERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Print the current unsat core as benchmark to the given output stream.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1Bitwuzla_1ad431abeb9f20944a08be8f94b14f81e8"><span class="std std-ref"><span class="pre">check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/result.html#namespacebitwuzla_1a018bfacb13e4ee2c0d26e1804a404afaa58516af515d5eb19e854c0a1b580c421"><span class="std std-ref"><span class="pre">Result::UNSAT</span></span></a></code> and unsat cores are enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>out</strong> – The output stream. </p></li>
+<li><p><strong>format</strong> – The output format for printing the formula. Currently, only <code class="docutils literal notranslate"><span class="pre">&quot;smt2&quot;</span></code> for the SMT-LIB v2 format is supported. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla8Bitwuzla10statisticsEv">
 <span id="_CPPv3NK8bitwuzla8Bitwuzla10statisticsEv"></span><span id="_CPPv2NK8bitwuzla8Bitwuzla10statisticsEv"></span><span id="bitwuzla::Bitwuzla::statisticsC"></span><span class="target" id="classbitwuzla_1_1Bitwuzla_1a3caa051b55e235599b1dfca0bd999b05"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">statistics</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla8Bitwuzla10statisticsEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get current statistics. </p>
@@ -417,7 +468,10 @@ opportunity if the callback function returns <code class="code docutils literal 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../interface.html" class="btn btn-neutral float-left" title="C++ Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exception.html" class="btn btn-neutral float-right" title="Exception" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
