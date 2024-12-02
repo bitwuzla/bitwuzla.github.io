@@ -1,6 +1,22 @@
 ---
 awards:
 
+- event: SMT-COMP 2024
+  event_url: http://smt-comp.github.io/2024
+  year: 2024
+  solver: Bitwuzla
+  solver_url: https://bitwuzla.github.io
+  entered: 22
+  divisions:
+    total: 82
+    gold: 42
+  competition-wide:
+    total: 30
+    gold: 1
+    silver: 3
+    bronze: 15
+  details: /awards/smt-comp-2024.html
+
 - event: SMT-COMP 2023
   event_url: http://smt-comp.github.io/2023
   year: 2023
