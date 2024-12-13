@@ -5,7 +5,7 @@ event: SMT-COMP 2024
 event_url: https://smt-comp.github.io/2024
 
 version:
-binary: https://www.starexec.org/starexec/secure/details/solver.jsp?id=44978
+binary: https://zenodo.org/records/11754739
 sysdesc-title: Bitwuzla at the SMT-COMP 2024
 sysdesc-url: /data/smtcomp2024/paper.pdf
 
