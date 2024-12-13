@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exception &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../static/custom.css?v=3b6f11eb" />
+
+  
   <!--[if lt IE 9]>
     <script src="../../static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -16,7 +17,7 @@
         <script src="../../static/jquery.js?v=5d32c60e"></script>
         <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../static/doctools.js?v=9a2dae69"></script>
+        <script src="../../static/doctools.js?v=9bcbadda"></script>
         <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -37,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -117,13 +118,29 @@
 <h1>Exception<a class="headerlink" href="#exception" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><p>class <a class="reference internal" href="#_CPPv4N8bitwuzla9ExceptionE" title="bitwuzla::Exception"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Exception</span></code></a></p></li>
+<li><p>class <a class="reference internal" href="#_CPPv4N8bitwuzla6option9ExceptionE" title="bitwuzla::option::Exception"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::option::Exception</span></code></a></p></li>
+<li><p>class <a class="reference internal" href="#_CPPv4N8bitwuzla6parser9ExceptionE" title="bitwuzla::parser::Exception"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::parser::Exception</span></code></a></p></li>
 </ul>
+<hr class="docutils" />
+<p>The C++ API of Bitwuzla communicates errors via exceptions. The base class for
+all exceptions is <a class="reference internal" href="#_CPPv4N8bitwuzla9ExceptionE" title="bitwuzla::Exception"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Exception</span></code></a>.
+Configuration errors that occur while setting up <a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a>
+throw a <a class="reference internal" href="#_CPPv4N8bitwuzla6option9ExceptionE" title="bitwuzla::option::Exception"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::option::Exception</span></code></a>, and errors encountered while
+parsing throw a <a class="reference internal" href="#_CPPv4N8bitwuzla6parser9ExceptionE" title="bitwuzla::parser::Exception"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::parser::Exception</span></code></a>.</p>
+<p>In general, exceptions indicate that the associated object may be in an unsafe
+state and should no longer be used. An exception to this rule are option
+exceptions, which are thrown before the state of the associated option object
+is modified and thus allow recovering from configuration errors. That is,
+if a <a class="reference internal" href="#_CPPv4N8bitwuzla6option9ExceptionE" title="bitwuzla::option::Exception"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::option::Exception</span></code></a> is throw, the associated
+<a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Options</span></code></a> object can still be used.</p>
 <hr class="docutils" />
 <p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9ExceptionE">
 <span id="_CPPv3N8bitwuzla9ExceptionE"></span><span id="_CPPv2N8bitwuzla9ExceptionE"></span><span id="bitwuzla::Exception"></span><span class="target" id="classbitwuzla_1_1Exception"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">exception</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla9ExceptionE" title="Link to this definition"></a><br /></dt>
-<dd><p>Subclassed by bitwuzla::parser::Exception</p>
+<dd><p>The base class for exception thrown via the API.</p>
+<p>The C++ API of <a class="reference internal" href="bitwuzla.html#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> communicates all errors via exceptions. In general, exceptions of this type indicate that the associated object may be in an unsafe state and should no longer be used. An exception are exceptions that indicate configuration option errors (<code class="docutils literal notranslate"><a class="reference internal" href="#classbitwuzla_1_1option_1_1Exception"><span class="std std-ref"><span class="pre">option::Exception</span></span></a></code>), which allow to continue using the associated <code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options"><span class="std std-ref"><span class="pre">Options</span></span></a></code> object. </p>
+<p>Subclassed by <a class="reference internal" href="#classbitwuzla_1_1option_1_1Exception"><span class="std std-ref">bitwuzla::option::Exception</span></a>, <a class="reference internal" href="#classbitwuzla_1_1parser_1_1Exception"><span class="std std-ref">bitwuzla::parser::Exception</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -162,7 +179,81 @@
 </div>
 </dd></dl>
 
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla::option</span> <span class="pre">{</span></code></p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6option9ExceptionE">
+<span id="_CPPv3N8bitwuzla6option9ExceptionE"></span><span id="_CPPv2N8bitwuzla6option9ExceptionE"></span><span id="bitwuzla::option::Exception"></span><span class="target" id="classbitwuzla_1_1option_1_1Exception"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla9ExceptionE" title="bitwuzla::Exception"><span class="n"><span class="pre">Exception</span></span></a><a class="headerlink" href="#_CPPv4N8bitwuzla6option9ExceptionE" title="Link to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="#classbitwuzla_1_1option_1_1Exception"><span class="std std-ref">Exception</span></a> thrown when errors occur while configuring options.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Exceptions of these type allow to continue using the associated <code class="docutils literal notranslate"><a class="reference internal" href="options.html#classbitwuzla_1_1Options"><span class="std std-ref"><span class="pre">Options</span></span></a></code> object after they were thrown. </p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6option9Exception9ExceptionERKNSt6stringE">
+<span id="_CPPv3N8bitwuzla6option9Exception9ExceptionERKNSt6stringE"></span><span id="_CPPv2N8bitwuzla6option9Exception9ExceptionERKNSt6stringE"></span><span id="bitwuzla::option::Exception::Exception__ssCR"></span><span class="target" id="classbitwuzla_1_1option_1_1Exception_1a1c049f6bffb6bf318911c66e0bf529ae"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla6option9Exception9ExceptionERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>msg</strong> – The exception message. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6option9Exception9ExceptionERKNSt12stringstreamE">
+<span id="_CPPv3N8bitwuzla6option9Exception9ExceptionERKNSt12stringstreamE"></span><span id="_CPPv2N8bitwuzla6option9Exception9ExceptionERKNSt12stringstreamE"></span><span id="bitwuzla::option::Exception::Exception__std::stringstreamCR"></span><span class="target" id="classbitwuzla_1_1option_1_1Exception_1af7389d13ed43a8f4c0806cc634bf5de5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">stringstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla6option9Exception9ExceptionERKNSt12stringstreamE" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>stream</strong> – The exception message given as a std::stringstream. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla::parser</span> <span class="pre">{</span></code></p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6parser9ExceptionE">
+<span id="_CPPv3N8bitwuzla6parser9ExceptionE"></span><span id="_CPPv2N8bitwuzla6parser9ExceptionE"></span><span id="bitwuzla::parser::Exception"></span><span class="target" id="classbitwuzla_1_1parser_1_1Exception"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Exception</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla9ExceptionE" title="bitwuzla::Exception"><span class="n"><span class="pre">Exception</span></span></a><a class="headerlink" href="#_CPPv4N8bitwuzla6parser9ExceptionE" title="Link to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="#classbitwuzla_1_1parser_1_1Exception"><span class="std std-ref">Exception</span></a> thrown when errors occur during parsing.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Exceptions of these type are non-recoverable. It is not safe to continue using the associated object after they are thrown. </p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6parser9Exception9ExceptionERKNSt6stringE">
+<span id="_CPPv3N8bitwuzla6parser9Exception9ExceptionERKNSt6stringE"></span><span id="_CPPv2N8bitwuzla6parser9Exception9ExceptionERKNSt6stringE"></span><span id="bitwuzla::parser::Exception::Exception__ssCR"></span><span class="target" id="classbitwuzla_1_1parser_1_1Exception_1af5899f60885bf6e0ea3c4eb32cfe8c3b"></span><span class="sig-name descname"><span class="n"><span class="pre">Exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">msg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla6parser9Exception9ExceptionERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>msg</strong> – The exception message. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6parser9Exception9ExceptionERKNSt12stringstreamE">
+<span id="_CPPv3N8bitwuzla6parser9Exception9ExceptionERKNSt12stringstreamE"></span><span id="_CPPv2N8bitwuzla6parser9Exception9ExceptionERKNSt12stringstreamE"></span><span id="bitwuzla::parser::Exception::Exception__std::stringstreamCR"></span><span class="target" id="classbitwuzla_1_1parser_1_1Exception_1a2a04344fdeb851605424d38b64d243c3"></span><span class="sig-name descname"><span class="n"><span class="pre">Exception</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">stringstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">stream</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla6parser9Exception9ExceptionERKNSt12stringstreamE" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>stream</strong> – The exception message given as a std::stringstream. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code>
+<code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
 </section>
 
 

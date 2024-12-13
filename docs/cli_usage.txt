@@ -22,11 +22,15 @@ Options:
   -m, --produce-models              [false]      model production 
   --produce-unsat-assumptions       [false]      unsat assumptions production 
   --produce-unsat-cores             [false]      unsat core production 
-  -s <n>, --seed <n>                [42]         seed for the random number generator 
+  -s <n>, --seed <n>                [27644437]   seed for the random number generator 
   -v <n>, --verbosity <n>           [0]          verbosity level 
   -T <n>, --time-limit-per <n>      [0]          time limit in milliseconds per 
                                                  satisfiability check 
   -M <n>, --memory-limit <n>        [0]          set maximum memory limit in MB 
+  -j <n>, --nthreads <n>            [1]          set number of threads to utilize in 
+                                                 parallel (currently, this only 
+                                                 configures parallel threads in the 
+                                                 CryptoMiniSat back end) 
   --relevant-terms                  [false]      consider relevant terms only when 
                                                  checking 
   --bv-solver <M>                   [bitblast]   bv solver engine {preprop, prop, 
@@ -112,8 +116,8 @@ Options:
   --dbg-pp-node-thresh <n>          [0]          warn threshold [%] for new nodes 
                                                  created through preprocessing in 
                                                  total 
-  --check-model                     [false]      check model for each satisfiable 
+  --check-model                     [true]       check model for each satisfiable 
                                                  query 
-  --check-unsat-core                [false]      check unsat core for each 
+  --check-unsat-core                [true]       check unsat core for each 
                                                  unsatisfiable query 
 

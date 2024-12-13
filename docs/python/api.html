@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Python API Documentation &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../static/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../static/custom.css?v=3b6f11eb" />
+
+  
   <!--[if lt IE 9]>
     <script src="../static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -16,7 +18,7 @@
         <script src="../static/jquery.js?v=5d32c60e"></script>
         <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../static/doctools.js?v=9a2dae69"></script>
+        <script src="../static/doctools.js?v=9bcbadda"></script>
         <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../static/tabs.js?v=3030b3cb"></script>
     <script src="../static/js/theme.js"></script>
@@ -38,7 +40,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.6.1
+                0.7.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -127,11 +129,11 @@ create sorts and terms later:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">tm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TermManager</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Then, create a <a class="reference internal" href="interface.html#bitwuzla.Options" title="bitwuzla.Options"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Options</span></code></a> instance:</p>
+<p>Then, create a <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Options</span></code> instance:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">options</span> <span class="o">=</span> <span class="n">Options</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This instance can be configured via <a class="reference internal" href="interface.html#bitwuzla.Options.set" title="bitwuzla.Options.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.set()</span></code></a>.
+<p>This instance can be configured via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.set()</span></code>.
 For example, to enable model generation
 (SMT-LIB: <code class="code docutils literal notranslate"><span class="pre">(set-option</span> <span class="pre">:produce-models</span> <span class="pre">true)</span></code>):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">options</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">Option</span><span class="o">.</span><span class="n">PRODUCE_MODELS</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
@@ -145,7 +147,7 @@ default):</p>
 </pre></div>
 </div>
 <p>For more details on available options, see <a class="reference internal" href="options.html"><span class="doc">Options</span></a>.</p>
-<p>Then, create a <a class="reference internal" href="interface.html#bitwuzla.Bitwuzla" title="bitwuzla.Bitwuzla"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla</span></code></a> <strong>solver</strong> instance with a term
+<p>Then, create a <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla</span></code> <strong>solver</strong> instance with a term
 manager and configured options(configuration options are now frozen and cannot
 be changed for this instance):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">bitwuzla</span> <span class="o">=</span> <span class="n">Bitwuzla</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
@@ -240,14 +242,14 @@ these solvers use the same term manager.</p>
 </div>
 <p>Alternatively, you can <strong>parse</strong> an <strong>input file</strong> in BTOR2 format
 <span id="id1">[<a class="reference internal" href="../references.html#id4" title="Aina Niemetz, Mathias Preiner, Clifford Wolf, and Armin Biere. Btor2 , BtorMC and Boolector 3.0. In Hana Chockler and Georg Weissenbacher, editors, Computer Aided Verification - 30th International Conference, CAV 2018, Held as Part of the Federated Logic Conference, FloC 2018, Oxford, UK, July 14-17, 2018, Proceedings, Part I, volume 10981 of Lecture Notes in Computer Science, 587–595. Springer, 2018. doi:10.1007/978-3-319-96145-3\_32.">NPWB18</a>]</span> or SMT-LIB v2 format <span id="id2">[<a class="reference internal" href="../references.html#id5" title="Clark Barrett, Pascal Fontaine, and Cesare Tinelli. The SMT-LIB Standard: Version 2.6. Technical Report, Department of Computer Science, The University of Iowa, 2017. URL: https://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf.">BFT17</a>]</span> by creating a parser
-<a class="reference internal" href="interface.html#bitwuzla.Parser" title="bitwuzla.Parser"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Parser</span></code></a> and then parsing the input file via
-<a class="reference internal" href="interface.html#bitwuzla.Parser.parse" title="bitwuzla.Parser.parse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse()</span></code></a>.</p>
+<code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Parser</span></code> and then parsing the input file via
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse()</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The input parser creates a <a class="reference internal" href="interface.html#bitwuzla.Bitwuzla" title="bitwuzla.Bitwuzla"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla</span></code></a> instance, which can be
-configured via the <a class="reference internal" href="interface.html#bitwuzla.Options" title="bitwuzla.Options"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Options</span></code></a> instance passed into the
+<p>The input parser creates a <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla</span></code> instance, which can be
+configured via the <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Options</span></code> instance passed into the
 parser. This Bitwuzla instance can be retrieved via
-<a class="reference internal" href="interface.html#bitwuzla.Parser.bitwuzla" title="bitwuzla.Parser.bitwuzla"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.bitwuzla()</span></code></a>.</p>
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.bitwuzla()</span></code>.</p>
 </div>
 <p>For example, to parse an example file <code class="docutils literal notranslate"><span class="pre">examples/smt2/quickstart.smt2</span></code> in
 SMT-LIB format:</p>
@@ -264,10 +266,10 @@ SMT-LIB format:</p>
 <p class="admonition-title">Note</p>
 <p>If the input is given in SMT-LIB format, commands like <code class="code docutils literal notranslate"><span class="pre">check-sat</span></code>
 or <code class="code docutils literal notranslate"><span class="pre">get-value</span></code> will be executed while parsing if argument <cite>parse_only</cite>
-is passed into <a class="reference internal" href="interface.html#bitwuzla.Parser.parse" title="bitwuzla.Parser.parse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse()</span></code></a> as <code class="code docutils literal notranslate"><span class="pre">True</span></code>.</p>
+is passed into <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse()</span></code> as <code class="code docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </div>
 <p>After parsing from an input file, the <strong>parsed assertions</strong> can be retrieved
-via <a class="reference internal" href="interface.html#bitwuzla.Bitwuzla.get_assertions" title="bitwuzla.Bitwuzla.get_assertions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.get_assertions()</span></code></a>:</p>
+via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.get_assertions()</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># Now we retrieve the set of asserted formulas and print them.</span>
     <span class="n">assertions</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">bitwuzla</span><span class="p">()</span><span class="o">.</span><span class="n">get_assertions</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Assertions:&#39;</span><span class="p">)</span>
@@ -278,7 +280,7 @@ via <a class="reference internal" href="interface.html#bitwuzla.Bitwuzla.get_ass
 </pre></div>
 </div>
 <p>Alternatively, Bitwuzla also supports <strong>parsing from strings</strong> via
-<a class="reference internal" href="interface.html#bitwuzla.Parser.parse" title="bitwuzla.Parser.parse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse()</span></code></a>. The quickstart input above can be parsed
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse()</span></code>. The quickstart input above can be parsed
 as one huge input string, or any its subsets of commands.</p>
 <p>Bitwuzla also allows to <strong>add onto</strong> input parsed from a file.
 For example, after parsing in <code class="docutils literal notranslate"><span class="pre">examples/smt2/quickstart.smt2</span></code>, which is
@@ -288,15 +290,15 @@ unsatisfiable) via parsing from string as follows:</p>
 </pre></div>
 </div>
 <p>Bitwuzla also supports <strong>parsing terms and sorts from strings</strong> via
-<a class="reference internal" href="interface.html#bitwuzla.Parser.parse_term" title="bitwuzla.Parser.parse_term"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_term()</span></code></a> and
-<a class="reference internal" href="interface.html#bitwuzla.Parser.parse_sort" title="bitwuzla.Parser.parse_sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_sort()</span></code></a>.</p>
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_term()</span></code> and
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_sort()</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Declarations like <code class="code docutils literal notranslate"><span class="pre">declare-const</span></code> are commands (not terms) in the
 SMT-LIB language. Commands must be parsed in via
-<a class="reference internal" href="interface.html#bitwuzla.Parser.parse" title="bitwuzla.Parser.parse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse()</span></code></a>.
-Function <a class="reference internal" href="interface.html#bitwuzla.Parser.parse_term" title="bitwuzla.Parser.parse_term"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_term()</span></code></a> and
-<a class="reference internal" href="interface.html#bitwuzla.Parser.parse_sort" title="bitwuzla.Parser.parse_sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_sort()</span></code></a> only support parsing
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse()</span></code>.
+Function <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_term()</span></code> and
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_sort()</span></code> only support parsing
 SMT-LIB terms and sorts, respectively.</p>
 </div>
 <p>For example, to <strong>parse</strong> a bit-vector <strong>sort</strong> of size 16 from string and show
@@ -315,7 +317,7 @@ constant <code class="code docutils literal notranslate"><span class="pre">b</sp
     <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;(declare-const b (_ BitVec 16))&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>These terms can be retrieved via <a class="reference internal" href="interface.html#bitwuzla.Parser.parse_term" title="bitwuzla.Parser.parse_term"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_term()</span></code></a>:</p>
+<p>These terms can be retrieved via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_term()</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># Retrieve term representing &#39;b&#39;.</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_term</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
     <span class="c1"># Retrieve term representing &#39;c&#39;.</span>
@@ -325,7 +327,7 @@ constant <code class="code docutils literal notranslate"><span class="pre">b</sp
 </pre></div>
 </div>
 <p>Now, to <strong>parse</strong> in <strong>terms</strong> using these constants via
-<a class="reference internal" href="interface.html#bitwuzla.Parser.parse_term" title="bitwuzla.Parser.parse_term"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_term()</span></code></a>:</p>
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Parser.parse_term()</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># Create xor over &#39;c&#39; and &#39;d&#39; and show that it corresponds to term</span>
     <span class="c1"># parsed in from its string representation &#39;(xor c d)&#39;.</span>
     <span class="k">assert</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_term</span><span class="p">(</span><span class="s1">&#39;(xor c d)&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="n">tm</span><span class="o">.</span><span class="n">mk_term</span><span class="p">(</span><span class="n">Kind</span><span class="o">.</span><span class="n">XOR</span><span class="p">,</span> <span class="p">[</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">])</span>
@@ -338,16 +340,16 @@ constant <code class="code docutils literal notranslate"><span class="pre">b</sp
 </pre></div>
 </div>
 <p>After parsing input and asserting formulas, <strong>satisfiability</strong> can be
-determined via <a class="reference internal" href="interface.html#bitwuzla.Bitwuzla.check_sat" title="bitwuzla.Bitwuzla.check_sat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.check_sat()</span></code></a>.</p>
+determined via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.check_sat()</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># (check-sat)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">bitwuzla</span><span class="o">.</span><span class="n">check_sat</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Formulas can also be <strong>assumed</strong> via passing a vector of assumptions into
-<a class="reference internal" href="interface.html#bitwuzla.Bitwuzla.check_sat" title="bitwuzla.Bitwuzla.check_sat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.check_sat()</span></code></a>.</p>
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.check_sat()</span></code>.</p>
 <p>If the formula is satisfiable and <strong>model generation</strong> has been enabled, the
-resulting model can be printed via <a class="reference internal" href="interface.html#bitwuzla.Bitwuzla.get_value" title="bitwuzla.Bitwuzla.get_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.get_value()</span></code></a>
-and <a class="reference internal" href="interface.html#bitwuzla.Term.str" title="bitwuzla.Term.str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.str()</span></code></a>.
+resulting model can be printed via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.get_value()</span></code>
+and <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.str()</span></code>.
 An example implementation illustrating how to print
 the current model via declared symbols (in this case <code class="code docutils literal notranslate"><span class="pre">x</span></code>, <code class="code docutils literal notranslate"><span class="pre">y</span></code>,
 <code class="code docutils literal notranslate"><span class="pre">f</span></code> and <code class="code docutils literal notranslate"><span class="pre">a</span></code>) is below:</p>
@@ -386,13 +388,13 @@ the current model via declared symbols (in this case <code class="code docutils 
 </pre></div>
 </div>
 <p>Alternatively, it is possible to query the value of terms as a term via
-<a class="reference internal" href="interface.html#bitwuzla.Bitwuzla.get_value" title="bitwuzla.Bitwuzla.get_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.get_value()</span></code></a>; or as assignment via
-<a class="reference internal" href="interface.html#bitwuzla.Term.value" title="bitwuzla.Term.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.value()</span></code></a>, which returns the string representation
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla.get_value()</span></code>; or as assignment via
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.value()</span></code>, which returns the string representation
 of bit-vector and floating-point values, the
-<a class="reference internal" href="interface.html#bitwuzla.RoundingMode" title="bitwuzla.RoundingMode"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.RoundingMode</span></code></a> value for RoundingMode values, and a <code class="code docutils literal notranslate"><span class="pre">bool</span></code>
+<code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.RoundingMode</span></code> value for RoundingMode values, and a <code class="code docutils literal notranslate"><span class="pre">bool</span></code>
 value for Boolean values.</p>
 <p>Additionally, for floating-point values,
-<a class="reference internal" href="interface.html#bitwuzla.Term.value" title="bitwuzla.Term.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.value()</span></code></a> allows to retrieve the assignment
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.value()</span></code> allows to retrieve the assignment
 split into assignment strings for the sign bit, the exponent and the
 significand.</p>
 <p>In our case, we can query the assignments of <code class="code docutils literal notranslate"><span class="pre">x</span></code> and <code class="code docutils literal notranslate"><span class="pre">y</span></code>, both
@@ -410,10 +412,10 @@ bit-vector terms, as binary strings:</p>
 </div>
 <p>The value of <code class="code docutils literal notranslate"><span class="pre">f</span></code> (a function term) and <code class="code docutils literal notranslate"><span class="pre">a</span></code> (an array term), on the
 other hand, cannot be represented with a simple type. Thus, function values are
-given as <a class="reference internal" href="interface.html#bitwuzla.Kind.LAMBDA" title="bitwuzla.Kind.LAMBDA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Kind.LAMBDA</span></code></a>, and array values are given as
-<a class="reference internal" href="interface.html#bitwuzla.Kind.ARRAY_STORE" title="bitwuzla.Kind.ARRAY_STORE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Kind.ARRAY_STORE</span></code></a>.
+given as <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Kind.LAMBDA</span></code>, and array values are given as
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Kind.ARRAY_STORE</span></code>.
 We can retrieve an SMT-LIB2 string representation of the values via
-<a class="reference internal" href="interface.html#bitwuzla.Term.str" title="bitwuzla.Term.str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.str()</span></code></a>.</p>
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.str()</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># f and a, on the other hand, are a function and array term, respectively.</span>
     <span class="c1"># The value of these terms is not a value term: for f, it is a lambda term,</span>
     <span class="c1"># and the value of a is represented as a store term. Thus we cannot use</span>
@@ -436,8 +438,8 @@ We can retrieve an SMT-LIB2 string representation of the values via
 <p>Note that the string representation of values representable as simple type
 (bit-vectors, boolean, floating-point, rounding mode) are given as pure
 value string (in the given number format) via
-<a class="reference internal" href="interface.html#bitwuzla.Term.value" title="bitwuzla.Term.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.value()</span></code></a>.
-Their string representation retrieved via <a class="reference internal" href="interface.html#bitwuzla.Term.str" title="bitwuzla.Term.str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.str()</span></code></a>,
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.value()</span></code>.
+Their string representation retrieved via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Term.str()</span></code>,
 however, is given in SMT-LIB2 format. For example,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;str() representation of value of x: </span><span class="si">{</span><span class="n">bitwuzla</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;str() representation of value of y: </span><span class="si">{</span><span class="n">bitwuzla</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
