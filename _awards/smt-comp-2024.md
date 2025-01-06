@@ -121,6 +121,9 @@ tracks:
     - name: QF_ABVFP
       place: 1
       awards: sequential, parallel, sat, 24s
+    - name: QF_BVFP
+      place: 1
+      awards: 24s
     - name: QF_BVFPLRA
       place: 1
       awards: sequential, parallel, sat, 24s
