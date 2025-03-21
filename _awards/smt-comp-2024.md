@@ -143,6 +143,8 @@ overall:
     name: Incremental Track
     place: 1
     awards: parallel
+  - track: incremental
+    name: Incremental Track
     place: 3
     awards: 24s
   - track: unsat-core
@@ -161,18 +163,24 @@ overall:
     name: Incremental Track
     place: 2
     awards: parallel
+  - track: incremental
+    name: Incremental Track
     place: 3
     awards: 24s
   - track: model-validation
     name: Model Validation Track
     place: 2
     awards: 24s
+  - track: model-validation
+    name: Model Validation Track
     place: 3
     awards: sequential, parallel, sat
   - track: unsat-core
     name: Unsat Core Track
     place: 2
     awards: 24s
+  - track: unsat-core
+    name: Unsat Core Track
     place: 3
     awards: sequential, parallel, unsat
   - track: single-query
