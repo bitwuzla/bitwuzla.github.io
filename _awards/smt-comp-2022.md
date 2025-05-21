@@ -14,16 +14,34 @@ entered:
 
 - track: single-query
   name: Single Query Track
-  divisions: BitVec, Equality+MachineArith, FPArith, QF_Bitvec, QF_Equality+Bitvec, QF_FPArith
+  divisions:
+  - division: BitVec
+  - division: Equality+MachineArith
+  - division: FPArith
+  - division: QF_Bitvec
+  - division: QF_Equality+Bitvec
+  - division: QF_FPArith
 - track: incremental
   name: Incremental Track
-  divisions: BitVec, Equality+MachineArith, FPArith, QF_Bitvec, QF_Equality+Bitvec, QF_FPArith
+  divisions:
+  - division: BitVec
+  - division: Equality+MachineArith
+  - division: FPArith
+  - division: QF_Bitvec
+  - division: QF_Equality+Bitvec
+  - division: QF_FPArith
 - track: unsat-core
   name: Unsat Core Track
-  divisions: QF_Bitvec, QF_Equality+Bitvec, QF_FPArith
+  divisions:
+  - division: QF_Bitvec
+  - division: QF_Equality+Bitvec
+  - division: QF_FPArith
 - track: model-validation
   name: Model Validation Track
-  divisions: QF_Bitvec, QF_Equality+Bitvec, QF_FPArith
+  divisions:
+  - division: QF_Bitvec
+  - division: QF_Equality+Bitvec
+  - division: QF_FPArith
 
 tracks:
 
