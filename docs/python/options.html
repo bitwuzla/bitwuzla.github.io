@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Options &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../static/custom.css?v=3b6f11eb" />
 
@@ -15,7 +15,7 @@
   <![endif]-->
   
         <script src="../static/jquery.js?v=5d32c60e"></script>
-        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../static/doctools.js?v=9bcbadda"></script>
         <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
@@ -36,7 +36,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.7.0
+                0.8.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -80,28 +80,28 @@
              
   <section id="options">
 <span id="python-options"></span><h1>Options<a class="headerlink" href="#options" title="Link to this heading"></a></h1>
-<p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla</span></code> instance is created from a configuration
-options <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Options</span></code> instance. This options instance must
+<p>A <a class="reference internal" href="interface.html#bitwuzla.Bitwuzla" title="bitwuzla.Bitwuzla"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Bitwuzla</span></code></a> instance is created from a configuration
+options <a class="reference internal" href="interface.html#bitwuzla.Options" title="bitwuzla.Options"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Options</span></code></a> instance. This options instance must
 be configured before creating the Bitwuzla instance: <strong>after</strong> the Bitwuzla
 instance is created, configuration options are fixed and <strong>cannot</strong> be changed.</p>
 <p><strong>Bitwuzla</strong> supports three kinds of options: Boolean options, numeric options
 and options with option modes.
 The kind of an option can be queried via
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.is_bool()</span></code>,
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.is_numeric()</span></code>, and
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.is_mode()</span></code>.</p>
-<p>All options are configured via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.set()</span></code>.
+<a class="reference internal" href="interface.html#bitwuzla.Options.is_bool" title="bitwuzla.Options.is_bool"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.is_bool()</span></code></a>,
+<a class="reference internal" href="interface.html#bitwuzla.Options.is_numeric" title="bitwuzla.Options.is_numeric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.is_numeric()</span></code></a>, and
+<a class="reference internal" href="interface.html#bitwuzla.Options.is_mode" title="bitwuzla.Options.is_mode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.is_mode()</span></code></a>.</p>
+<p>All options are configured via <a class="reference internal" href="interface.html#bitwuzla.Options.set" title="bitwuzla.Options.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.set()</span></code></a>.
 Additionally, it is also possible to configure options in batch via
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.set_args()</span></code>,
+<a class="reference internal" href="interface.html#bitwuzla.Options.set_args" title="bitwuzla.Options.set_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.set_args()</span></code></a>,
 where the given arguments are each a command line option configuration string,
 e.g., <code class="code docutils literal notranslate"><span class="pre">set_args(&quot;-i&quot;,</span> <span class="pre">&quot;--produce-models=true&quot;,</span> <span class="pre">&quot;--produce-unsat-cores</span> <span class="pre">true&quot;)</span></code>.</p>
-<p>The configured value of options can be queried via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.get()</span></code>.</p>
-<p>The short name of an option can be queried via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.shrt()</span></code>,
-its long name via <code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.lng()</span></code>, its description via
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.description()</span></code>,
+<p>The configured value of options can be queried via <a class="reference internal" href="interface.html#bitwuzla.Options.get" title="bitwuzla.Options.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.get()</span></code></a>.</p>
+<p>The short name of an option can be queried via <a class="reference internal" href="interface.html#bitwuzla.Options.shrt" title="bitwuzla.Options.shrt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.shrt()</span></code></a>,
+its long name via <a class="reference internal" href="interface.html#bitwuzla.Options.lng" title="bitwuzla.Options.lng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.lng()</span></code></a>, its description via
+<a class="reference internal" href="interface.html#bitwuzla.Options.description" title="bitwuzla.Options.description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.description()</span></code></a>,
 and, if given option is an option with modes, its modes can be queried via
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.modes()</span></code>.</p>
-<p>The option kind is defined via <code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Option</span></code>.
+<a class="reference internal" href="interface.html#bitwuzla.Options.modes" title="bitwuzla.Options.modes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bitwuzla.Options.modes()</span></code></a>.</p>
+<p>The option kind is defined via <a class="reference internal" href="interface.html#bitwuzla.Option" title="bitwuzla.Option"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitwuzla.Option</span></code></a>.
 A <strong>comprehensive list</strong> of all configurable options is available
 <a class="reference internal" href="enums/option.html"><span class="doc">here</span></a>.</p>
 <section id="example">
@@ -117,7 +117,7 @@ A <strong>comprehensive list</strong> of all configurable options is available
 <span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="c1">##</span>
 
-<span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
 
@@ -159,7 +159,7 @@ A <strong>comprehensive list</strong> of all configurable options is available
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

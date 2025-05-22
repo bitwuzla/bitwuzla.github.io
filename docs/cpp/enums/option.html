@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Option &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../static/custom.css?v=3b6f11eb" />
 
@@ -15,7 +15,7 @@
   <![endif]-->
   
         <script src="../../static/jquery.js?v=5d32c60e"></script>
-        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../../static/doctools.js?v=9bcbadda"></script>
         <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.7.0
+                0.8.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -141,7 +141,7 @@ instance.</p>
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option8LOGLEVELE">
 <span id="_CPPv3N8bitwuzla6Option8LOGLEVELE"></span><span id="_CPPv2N8bitwuzla6Option8LOGLEVELE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca5048fdbe2a2b837df1853cf489f67c79"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LOGLEVEL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option8LOGLEVELE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Log level.</strong></p>
-<p>Values:<ul class="simple">
+<p><em>Values:</em><ul class="simple">
 <li><p>An unsigned integer value. [<strong>default</strong>: 0] </p></li>
 </ul>
 </p>
@@ -151,25 +151,22 @@ instance.</p>
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option14PRODUCE_MODELSE">
 <span id="_CPPv3N8bitwuzla6Option14PRODUCE_MODELSE"></span><span id="_CPPv2N8bitwuzla6Option14PRODUCE_MODELSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca774ed7dd04f5529097c71c370400f400"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PRODUCE_MODELS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14PRODUCE_MODELSE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Model generation.</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable, generate model for assertions only</p></li>
-<li><p><strong>2</strong>: enable, generate model for all created terms</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<p><em>SMT-LIB:</em> <code class="docutils literal notranslate"><span class="pre">:produce-models</span></code></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
 </ul>
 </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This option cannot be enabled in combination with option <code class="docutils literal notranslate"><span class="pre">EVALUE</span><span class="pre">(PP_UNCONSTRAINED_OPTIMIZATION</span></code>. </p>
-</div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option25PRODUCE_UNSAT_ASSUMPTIONSE">
 <span id="_CPPv3N8bitwuzla6Option25PRODUCE_UNSAT_ASSUMPTIONSE"></span><span id="_CPPv2N8bitwuzla6Option25PRODUCE_UNSAT_ASSUMPTIONSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca927ef50820a381ad5bd51e74e2ec0d56"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PRODUCE_UNSAT_ASSUMPTIONS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option25PRODUCE_UNSAT_ASSUMPTIONSE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Unsat assumptions generation.</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>] </p></li>
+<p><em>SMT-LIB:</em> <code class="docutils literal notranslate"><span class="pre">:produce-unsat-assumptions</span></code></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -178,9 +175,10 @@ instance.</p>
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19PRODUCE_UNSAT_CORESE">
 <span id="_CPPv3N8bitwuzla6Option19PRODUCE_UNSAT_CORESE"></span><span id="_CPPv2N8bitwuzla6Option19PRODUCE_UNSAT_CORESE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca42e86322b1c02730b3d46d3ac7e7b764"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PRODUCE_UNSAT_CORES</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19PRODUCE_UNSAT_CORESE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Unsat core generation.</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>] </p></li>
+<p><em>SMT-LIB:</em> <code class="docutils literal notranslate"><span class="pre">:produce-unsat-core</span></code></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -188,9 +186,11 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option4SEEDE">
 <span id="_CPPv3N8bitwuzla6Option4SEEDE"></span><span id="_CPPv2N8bitwuzla6Option4SEEDE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caace01ee43fda36bd62efc12035e693f6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEED</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option4SEEDE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Seed for random number generator.</strong></p>
-<p>Values:<ul class="simple">
-<li><p>An unsigned integer value. [<strong>default</strong>: 0] </p></li>
+<dd><p><strong>Seed for the random number generator.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>min</strong>: 1</p></li>
+<li><p><strong>max</strong>: UINT32_MAX</p></li>
+<li><p><strong>default</strong>: 27644437 </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -199,7 +199,7 @@ instance.</p>
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option9VERBOSITYE">
 <span id="_CPPv3N8bitwuzla6Option9VERBOSITYE"></span><span id="_CPPv2N8bitwuzla6Option9VERBOSITYE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca47a219833a4b3a09240896c88b2b1969"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VERBOSITY</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option9VERBOSITYE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Verbosity level.</strong></p>
-<p>Values:<ul class="simple">
+<p><em>Values:</em><ul class="simple">
 <li><p>An unsigned integer value &lt;= 4. [<strong>default</strong>: 0] </p></li>
 </ul>
 </p>
@@ -208,9 +208,10 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option14TIME_LIMIT_PERE">
 <span id="_CPPv3N8bitwuzla6Option14TIME_LIMIT_PERE"></span><span id="_CPPv2N8bitwuzla6Option14TIME_LIMIT_PERE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cab99212aae4d4fa968a9feab6506da600"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TIME_LIMIT_PER</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14TIME_LIMIT_PERE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Time limit in milliseconds per satisfiability check.</strong></p>
-<p>Values:<ul class="simple">
-<li><p>An unsigned integer for the time limit in milliseconds. [<strong>default</strong>: 0] </p></li>
+<dd><p><strong>Time limit per satisfiability check in milliseconds.</strong></p>
+<p>A configuration value of 0 disables the time limit (no time limit).</p>
+<p><em>Values:</em><ul class="simple">
+<li><p>An unsigned 64-bit integer. [<strong>default</strong>: 0] </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -218,9 +219,10 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option12MEMORY_LIMITE">
 <span id="_CPPv3N8bitwuzla6Option12MEMORY_LIMITE"></span><span id="_CPPv2N8bitwuzla6Option12MEMORY_LIMITE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cadc296a39ee2e8b388c1cead6b31cfd2d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MEMORY_LIMIT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option12MEMORY_LIMITE" title="Link to this definition"></a><br /></dt>
-<dd><p>** Memory limit in MB.**</p>
-<p>Values:<ul class="simple">
-<li><p>An unsigned integer for the memory limit in MB. [<strong>default</strong>: 0] </p></li>
+<dd><p><strong>Memory limit per satisfiability check in MB.</strong></p>
+<p>A configuration value of 0 disables the memory limit (no memory limit).</p>
+<p><em>Values:</em><ul class="simple">
+<li><p>An unsigned 64-bit integer. [<strong>default</strong>: 0] </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -228,56 +230,42 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option8NTHREADSE">
 <span id="_CPPv3N8bitwuzla6Option8NTHREADSE"></span><span id="_CPPv2N8bitwuzla6Option8NTHREADSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cace4a93da12726b64ca02374a4eb534f4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NTHREADS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option8NTHREADSE" title="Link to this definition"></a><br /></dt>
-<dd><p>** Number of parallel threads.**</p>
-<p>Values:<ul class="simple">
-<li><p>An unsigned integer &gt; 0. [<strong>default</strong>: 1] </p></li>
+<dd><p><strong>Number of parallel threads.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>min</strong>: 1</p></li>
+<li><p><strong>max</strong>: UINT64_MAX</p></li>
+<li><p><strong>default</strong>: 1 </p></li>
 </ul>
 </p>
-</dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option14RELEVANT_TERMSE">
-<span id="_CPPv3N8bitwuzla6Option14RELEVANT_TERMSE"></span><span id="_CPPv2N8bitwuzla6Option14RELEVANT_TERMSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8d18402d6fd5245f0f692b2f5059f948"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RELEVANT_TERMS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14RELEVANT_TERMSE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Check relevant terms only.</strong></p>
-<p>Theory solvers only perform checks on relevant terms.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disabe [<strong>default</strong>]</p></li>
-</ul>
-</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an expert option to configure theory solvers. </p>
-</div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option9BV_SOLVERE">
 <span id="_CPPv3N8bitwuzla6Option9BV_SOLVERE"></span><span id="_CPPv2N8bitwuzla6Option9BV_SOLVERE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BV_SOLVER</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option9BV_SOLVERE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Configure the bit-vector solver engine.</strong></p>
-<p>Values:<ul class="simple">
+<p><em>Values:</em> <p><ul class="simple">
 <li><p><strong>bitblast</strong>: The classical bit-blasting approach. [<strong>default</strong>]</p></li>
-<li><p><strong>prop</strong>: Propagation-based local search (sat only).</p></li>
-<li><p><strong>preprop</strong>: Sequential portfolio combination of bit-blasting and propagation-based local search. </p></li>
+<li><p><strong>prop:</strong> Propagation-based local search, see <span id="id1">[<a class="reference internal" href="../../references.html#id7" title="Aina Niemetz and Mathias Preiner. Ternary propagation-based local search for more bit-precise reasoning. In 2020 Formal Methods in Computer Aided Design, FMCAD 2020, Haifa, Israel, September 21-24, 2020, 214–224. IEEE, 2020. URL: https://doi.org/10.34727/2020/isbn.978-3-85448-042-6\_29, doi:10.34727/2020/ISBN.978-3-85448-042-6\_29.">NP20</a>, <a class="reference internal" href="../../references.html#id8" title="Aina Niemetz, Mathias Preiner, and Armin Biere. Propagation based local search for bit-precise reasoning. Formal Methods Syst. Des., 51(3):608–636, 2017. URL: https://doi.org/10.1007/s10703-017-0295-6, doi:10.1007/S10703-017-0295-6.">NPB17</a>]</span>.</p></li>
+<li><p><strong>preprop</strong>: Sequential portfolio of <code class="docutils literal notranslate"><span class="pre">bitblast</span></code> and <code class="docutils literal notranslate"><span class="pre">prop</span></code>.</p></li>
 </ul>
 </p>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Propagation-based local search is only able to determine satisfiability. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option13REWRITE_LEVELE">
 <span id="_CPPv3N8bitwuzla6Option13REWRITE_LEVELE"></span><span id="_CPPv2N8bitwuzla6Option13REWRITE_LEVELE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca96418388056c40211e08154f7a57b968"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">REWRITE_LEVEL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option13REWRITE_LEVELE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Rewrite level.</strong></p>
-<p>Values:<ul class="simple">
+<p><em>Values:</em><ul class="simple">
 <li><p><strong>0</strong>: no rewriting</p></li>
-<li><p><strong>1</strong>: term level rewriting</p></li>
-<li><p><strong>2</strong>: term level rewriting and basic preprocessing</p></li>
-<li><p><strong>3</strong>: term level rewriting and full preprocessing [<strong>default</strong>]</p></li>
+<li><p><strong>1</strong>: term level rewriting (only “cheap” rewrites)</p></li>
+<li><p><strong>2</strong>: term level rewriting (full) and preprocessing [<strong>default</strong>]</p></li>
 </ul>
 </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Configuring the rewrite level after terms have been created is not allowed.</p>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an expert option to configure rewriting. </p>
@@ -288,43 +276,85 @@ instance.</p>
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option10SAT_SOLVERE">
 <span id="_CPPv3N8bitwuzla6Option10SAT_SOLVERE"></span><span id="_CPPv2N8bitwuzla6Option10SAT_SOLVERE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca515be110f1f5292a65b352304a3830f9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SAT_SOLVER</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option10SAT_SOLVERE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Configure the SAT solver engine.</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>cadical</strong>: <a class="reference external" href="https://github.com/arminbiere/cadical">CaDiCaL</a> [<strong>default</strong>]</p></li>
-<li><p><strong>cms</strong>: <a class="reference external" href="https://github.com/msoos/cryptominisat">CryptoMiniSat</a></p></li>
-<li><p><strong>kissat</strong>: <a class="reference external" href="https://github.com/arminbiere/kissat">Kissat</a></p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>cadical</strong>: Use <a class="reference external" href="https://github.com/arminbiere/cadical">CaDiCaL</a> as the backend SAT solver. [<strong>default</strong>]</p></li>
+<li><p><strong>cms</strong>: Use <a class="reference external" href="https://github.com/msoos/cryptominisat">CryptoMiniSat</a> as the backend SAT solver.</p></li>
+<li><p><strong>kissat</strong>: Use <a class="reference external" href="https://github.com/arminbiere/kissat">Kissat</a> as the backend SAT solver. </p></li>
 </ul>
 </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option11WRITE_AIGERE">
+<span id="_CPPv3N8bitwuzla6Option11WRITE_AIGERE"></span><span id="_CPPv2N8bitwuzla6Option11WRITE_AIGERE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caab442dd4a1b39f398d9876af2dddb072"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WRITE_AIGER</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option11WRITE_AIGERE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Print bit-vector abstraction as AIG in binary or ascii AIGER format.</strong></p>
+<p>Expects a filename (as string) as the configuration value. The filename suffix determines whether binary (.aig) or ascii (.aag) AIGER is used. A configuration value representing the empty string disables the option.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p>A string denoting the filename the AIGER output is written to. [<strong>default:</strong> “”] </p></li>
+</ul>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Incremental queries to the SAT solver will overwrite the file with the latest AIG.</p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option9WRITE_CNFE">
+<span id="_CPPv3N8bitwuzla6Option9WRITE_CNFE"></span><span id="_CPPv2N8bitwuzla6Option9WRITE_CNFE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caacd1fd8ca337376e157d16a15a380017"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WRITE_CNF</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option9WRITE_CNFE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Print bit-vector abstraction as CNF in DIMACS format.</strong></p>
+<p>Expects a filename (as string) as the configuration value. A configuration value representing the empty string disables the option.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p>A string denoting the filename the DIMACS output is written to. [<strong>default:</strong> “”] </p></li>
+</ul>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Incremental queries to the SAT solver will overwrite the file with the latest CNF.</p>
+</div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15PROP_CONST_BITSE">
 <span id="_CPPv3N8bitwuzla6Option15PROP_CONST_BITSE"></span><span id="_CPPv2N8bitwuzla6Option15PROP_CONST_BITSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cabe6a4cc7d4b56805103d31dbefbfcd6e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_CONST_BITS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15PROP_CONST_BITSE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Propagation-based local search solver engine: Constant bits.</strong></p>
-<p>Configure constant bit propagation (requires bit-blasting to AIG).</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable</p></li>
+<p>Enable/disable constant bit propagation in the propagation-based local search engine (requires bit-blasting to AIG).</p>
+<p>Our procedure for augmenting propagation-based local search with constant
+bit information is described in <span id="id2">[<a class="reference internal" href="../../references.html#id7" title="Aina Niemetz and Mathias Preiner. Ternary propagation-based local search for more bit-precise reasoning. In 2020 Formal Methods in Computer Aided Design, FMCAD 2020, Haifa, Israel, September 21-24, 2020, 214–224. IEEE, 2020. URL: https://doi.org/10.34727/2020/isbn.978-3-85448-042-6\_29, doi:10.34727/2020/ISBN.978-3-85448-042-6\_29.">NP20</a>]</span>.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the <code class="docutils literal notranslate"><span class="pre">prop</span></code> bit-vector solver engine. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option22PROP_INFER_INEQ_BOUNDSE">
 <span id="_CPPv3N8bitwuzla6Option22PROP_INFER_INEQ_BOUNDSE"></span><span id="_CPPv2N8bitwuzla6Option22PROP_INFER_INEQ_BOUNDSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caced9db19fa1257dab49a847db2e4cde9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_INFER_INEQ_BOUNDS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option22PROP_INFER_INEQ_BOUNDSE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Propagation-based local search solver engine: Infer bounds for inequalities for value computation.</strong></p>
+<dd><p><strong>Propagation-based local search solver engine: Infer bounds.</strong></p>
 <p>When enabled, infer bounds for value computation for inequalities based on satisfied top level inequalities.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the <code class="docutils literal notranslate"><span class="pre">prop</span></code> bit-vector solver engine. </p>
 </div>
 </dd></dl>
 
@@ -333,13 +363,18 @@ instance.</p>
 <span id="_CPPv3N8bitwuzla6Option11PROP_NPROPSE"></span><span id="_CPPv2N8bitwuzla6Option11PROP_NPROPSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca83063674e672d8e78b083f4dfa408ffb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_NPROPS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option11PROP_NPROPSE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Propagation-based local search solver engine: Number of propagations.</strong></p>
 <p>Configure the number of propagations used as a limit for the propagation-based local search solver engine. No limit if 0.</p>
-<p>Values:<ul class="simple">
+<p><em>Values:</em><ul class="simple">
 <li><p>An unsigned integer value. [<strong>default</strong>: 0]</p></li>
 </ul>
 </p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+</div>
+</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the <code class="docutils literal notranslate"><span class="pre">prop</span></code> bit-vector solver engine. </p>
 </div>
 </dd></dl>
 
@@ -348,29 +383,39 @@ instance.</p>
 <span id="_CPPv3N8bitwuzla6Option13PROP_NUPDATESE"></span><span id="_CPPv2N8bitwuzla6Option13PROP_NUPDATESE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca36b1a60b980f5c533aa8a6dbef09a48c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_NUPDATES</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option13PROP_NUPDATESE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Propagation-based local search solver engine: Number of updates.</strong></p>
 <p>Configure the number of model value updates used as a limit for the propagation-based local search solver engine. No limit if 0.</p>
-<p>Values:<ul class="simple">
+<p><em>Values:</em><ul class="simple">
 <li><p>An unsigned integer value. [<strong>default</strong>: 0]</p></li>
 </ul>
 </p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+</div>
+</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the <code class="docutils literal notranslate"><span class="pre">prop</span></code> bit-vector solver engine. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option23PROP_OPT_LT_CONCAT_SEXTE">
 <span id="_CPPv3N8bitwuzla6Option23PROP_OPT_LT_CONCAT_SEXTE"></span><span id="_CPPv2N8bitwuzla6Option23PROP_OPT_LT_CONCAT_SEXTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa6cb2a069b404f15fc65ffbaa4dcea35"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_OPT_LT_CONCAT_SEXT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option23PROP_OPT_LT_CONCAT_SEXTE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Propagation-based local search solver engine: Optimization for inverse value computation of inequalities over concat and sign extension operands.</strong></p>
-<p>When enabled, use optimized inverse value value computation for inequalities over concats.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<dd><p><strong>Propagation-based local search solver engine: Concat optimization.</strong></p>
+<p>Optimization for inverse value computation of inequalities over concat and sign extension operands. When enabled, use optimized inverse value value computation for inequalities over concats.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the <code class="docutils literal notranslate"><span class="pre">prop</span></code> bit-vector solver engine. </p>
 </div>
 </dd></dl>
 
@@ -379,318 +424,393 @@ instance.</p>
 <span id="_CPPv3N8bitwuzla6Option13PROP_PATH_SELE"></span><span id="_CPPv2N8bitwuzla6Option13PROP_PATH_SELE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca63c7a811c00ff00d9f5a237cabf2543b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_PATH_SEL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option13PROP_PATH_SELE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Propagation-based local search solver engine: Path selection.</strong></p>
 <p>Configure mode for path selection.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>essential</strong>: Select path based on essential inputs. [default]</p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>essential</strong>: Select path based on essential inputs. [<strong>default</strong>]</p></li>
 <li><p><strong>random</strong>: Select path randomly.</p></li>
 </ul>
 </p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+</div>
+</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the <code class="docutils literal notranslate"><span class="pre">prop</span></code> bit-vector solver engine. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option22PROP_PROB_RANDOM_INPUTE">
 <span id="_CPPv3N8bitwuzla6Option22PROP_PROB_RANDOM_INPUTE"></span><span id="_CPPv2N8bitwuzla6Option22PROP_PROB_RANDOM_INPUTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca87c6bdf684cee3eb743a8abfa9ed61a7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_PROB_RANDOM_INPUT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option22PROP_PROB_RANDOM_INPUTE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Propagation-based local search solver engine: Probability for selecting random input.</strong></p>
-<p>Configure the probability with which to select a random input instead of an essential input when selecting the path.</p>
-<p>Values:<ul class="simple">
-<li><p>An unsigned integer value &lt;= 1000 (= 100%). [<strong>default</strong>: 0]</p></li>
+<dd><p><strong>Propagation-based local search solver engine: Input probability.</strong></p>
+<p>Configure the probability for selecting random (over essential) input when selecting the propagation path.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p>An unsigned integer value &lt;= 1000 (= 100%). [<strong>default</strong>: 10 (= 1%)]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the <code class="docutils literal notranslate"><span class="pre">prop</span></code> bit-vector solver engine. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option23PROP_PROB_USE_INV_VALUEE">
 <span id="_CPPv3N8bitwuzla6Option23PROP_PROB_USE_INV_VALUEE"></span><span id="_CPPv2N8bitwuzla6Option23PROP_PROB_USE_INV_VALUEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cabfa15c20c18066f7610cf3d8a51c032f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_PROB_USE_INV_VALUE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option23PROP_PROB_USE_INV_VALUEE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Propagation-based local search solver engine: Probability for inverse values.</strong></p>
-<p>Configure the probability with which to choose an inverse value over a consistent value when aninverse value exists.</p>
-<p>Values:<ul class="simple">
-<li><p>An unsigned integer value &lt;= 1000 (= 100%). [<strong>default</strong>: 990]</p></li>
+<dd><p><strong>Propagation-based local search solver engine: Value probability.</strong></p>
+<p>Configure the probability for selcting an inverse value over a consistent value (if an inverse value exists).</p>
+<p><em>Values:</em><ul class="simple">
+<li><p>An unsigned integer value &lt;= 1000 (= 100%). [<strong>default</strong>: 990 (= 99%)]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the <code class="docutils literal notranslate"><span class="pre">prop</span></code> bit-vector solver engine. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option9PROP_SEXTE">
 <span id="_CPPv3N8bitwuzla6Option9PROP_SEXTE"></span><span id="_CPPv2N8bitwuzla6Option9PROP_SEXTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cac2b947f70328a297b870c138e4ad835f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_SEXT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option9PROP_SEXTE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Propagation-based local search solver engine: Value computation for sign extension.</strong></p>
-<p>When enabled, detect sign extension operations (are rewritten on construction) and use value computation for sign extension.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<dd><p><strong>Propagation-based local search solver engine: Sign extension.</strong></p>
+<p>When enabled, treat concat nodes that represent sign extension natively as sign extension.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
 </p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
 </div>
-</dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option14PROP_NORMALIZEE">
-<span id="_CPPv3N8bitwuzla6Option14PROP_NORMALIZEE"></span><span id="_CPPv2N8bitwuzla6Option14PROP_NORMALIZEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca4bf56e2165830ba1465aed3bdaf72898"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PROP_NORMALIZE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14PROP_NORMALIZEE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Propagation-based local search solver engine: Local search specific normalization.</strong></p>
-<p>When enabled, perform normalizations for local search, on the local search layer (does not affect node layer).</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
-</ul>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the <code class="docutils literal notranslate"><span class="pre">prop</span></code> bit-vector solver engine. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option11ABSTRACTIONE">
 <span id="_CPPv3N8bitwuzla6Option11ABSTRACTIONE"></span><span id="_CPPv2N8bitwuzla6Option11ABSTRACTIONE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option11ABSTRACTIONE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Abstraction module</strong></p>
-<p>Values:<ul class="simple">
+<dd><p><strong>Abstraction module.</strong></p>
+<p>Our bit-vector abstraction procedure is described in <span id="id3">[<a class="reference internal" href="../../references.html#id9" title="Aina Niemetz, Mathias Preiner, and Yoni Zohar. Scalable bit-blasting with abstractions. In Arie Gurfinkel and Vijay Ganesh, editors, Computer Aided Verification - 36th International Conference, CAV 2024, Montreal, QC, Canada, July 24-27, 2024, Proceedings, Part I, volume 14681 of Lecture Notes in Computer Science, 178–200. Springer, 2024. URL: https://doi.org/10.1007/978-3-031-65627-9\_9, doi:10.1007/978-3-031-65627-9\_9.">NPZ24</a>]</span>.</p>
+<p><em>Values:</em><ul class="simple">
 <li><p><strong>1</strong>: enable</p></li>
 <li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_SIZEE">
 <span id="_CPPv3N8bitwuzla6Option19ABSTRACTION_BV_SIZEE"></span><span id="_CPPv2N8bitwuzla6Option19ABSTRACTION_BV_SIZEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca3759905092bd8b8b34f7755929eedbe8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_SIZE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_SIZEE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Minimum bit-vector term size. **</p>
-<p>Specifies at which size supported bit-vector operators should be abstracted.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>&gt;0</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<dd><p><strong>Abstraction module. Minimum bit-vector term size.</strong></p>
+<p>Configure the minimum size for considered bit-vector operations to be abstracted.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>min</strong>: &gt;=3</p></li>
+<li><p><strong>max</strong>: UINT64_MAX</p></li>
+<li><p><strong>default</strong>: 32</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option24ABSTRACTION_EAGER_REFINEE">
 <span id="_CPPv3N8bitwuzla6Option24ABSTRACTION_EAGER_REFINEE"></span><span id="_CPPv2N8bitwuzla6Option24ABSTRACTION_EAGER_REFINEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa501f6f47a73ac3d53a352f526391546"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_EAGER_REFINE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option24ABSTRACTION_EAGER_REFINEE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Bit-vector bitblasting solver: Abstraction module eager mode. **</p>
-<p>When enabled, eagerly adds violated refinement lemmas.</p>
-<p>Values:<ul class="simple">
+<dd><p><strong>Abstraction module: Eager mode.</strong></p>
+<p>When enabled, violated refinement lemmas are added eagerly.</p>
+<p><em>Values:</em><ul class="simple">
 <li><p><strong>1</strong>: enable</p></li>
 <li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
 </p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
+</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option23ABSTRACTION_VALUE_LIMITE">
 <span id="_CPPv3N8bitwuzla6Option23ABSTRACTION_VALUE_LIMITE"></span><span id="_CPPv2N8bitwuzla6Option23ABSTRACTION_VALUE_LIMITE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa0187ce10a585bde0c1cb09b7baf93c4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_VALUE_LIMIT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option23ABSTRACTION_VALUE_LIMITE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Bit-vector bitblasting solver: Abstraction module value instantiation limit. **</p>
-<p>Specifies the limit on the number of value instantiations per abstaction. If the limit is hit, we fall back to fully bit-blasting the specific term.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>&gt;0</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<dd><p><strong>Abstraction module: Value instantiation limit.</strong></p>
+<p>Configure <code class="docutils literal notranslate"><span class="pre">n</span></code> for value instantiation limit <code class="docutils literal notranslate"><span class="pre">bit-width/&lt;n&gt;</span></code>. The value instantiation limit defines the maximum number of value instantiation lemmas to be added for an abstracted term. A configuration value of 0 disables adding value instantiation lemmas.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p>An unsigned 64-bit integer. [<strong>default:</strong> 8]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option22ABSTRACTION_VALUE_ONLYE">
 <span id="_CPPv3N8bitwuzla6Option22ABSTRACTION_VALUE_ONLYE"></span><span id="_CPPv2N8bitwuzla6Option22ABSTRACTION_VALUE_ONLYE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca81128ac62cb69b939cd003634938ef97"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_VALUE_ONLY</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option22ABSTRACTION_VALUE_ONLYE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Bit-vector bitblasting solver: Abstraction module value instantiations only. **</p>
+<dd><p><strong>Abstraction module: Value instantiations only.</strong></p>
 <p>When enabled, only adds value instantiations.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18ABSTRACTION_ASSERTE">
 <span id="_CPPv3N8bitwuzla6Option18ABSTRACTION_ASSERTE"></span><span id="_CPPv2N8bitwuzla6Option18ABSTRACTION_ASSERTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca47d1bca4a219ab748ec25b97d55da550"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_ASSERT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18ABSTRACTION_ASSERTE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Abstract assertions. **</p>
+<dd><p><strong>Abstraction module: Abstract assertions.</strong></p>
 <p>When enabled, abstracts assertions.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option23ABSTRACTION_ASSERT_REFSE">
 <span id="_CPPv3N8bitwuzla6Option23ABSTRACTION_ASSERT_REFSE"></span><span id="_CPPv2N8bitwuzla6Option23ABSTRACTION_ASSERT_REFSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8420418dc703138dfa3f4ac38b09e4f6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_ASSERT_REFS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option23ABSTRACTION_ASSERT_REFSE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Assertion refinements. **</p>
+<dd><p><strong>Abstraction module: Assertion refinements.</strong></p>
 <p>Maximum number of assertion refinements added per check.</p>
-<p>Values:<ul class="simple">
-<li><p>An unsigned integer value &gt; 0.</p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p>An unsigned 64-bit integer value &gt; 0. [<strong>default:</strong> 100]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option26ABSTRACTION_INITIAL_LEMMASE">
 <span id="_CPPv3N8bitwuzla6Option26ABSTRACTION_INITIAL_LEMMASE"></span><span id="_CPPv2N8bitwuzla6Option26ABSTRACTION_INITIAL_LEMMASE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8e56e94b16f4e48c2917f0cbf1d819bb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_INITIAL_LEMMAS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option26ABSTRACTION_INITIAL_LEMMASE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Use initial lemmas only. **</p>
+<dd><p><strong>Abstraction module: Use initial lemmas only.</strong></p>
 <p>Initial lemmas are those lemmas not generated through abduction.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option24ABSTRACTION_INC_BITBLASTE">
 <span id="_CPPv3N8bitwuzla6Option24ABSTRACTION_INC_BITBLASTE"></span><span id="_CPPv2N8bitwuzla6Option24ABSTRACTION_INC_BITBLASTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca7b69e4e275ef0a19429bf8da8bf3cbad"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_INC_BITBLAST</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option24ABSTRACTION_INC_BITBLASTE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Incrementally bit-blast bvmul and bvadd terms. **</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<dd><p><strong>Abstraction module: Incrementally bit-blast bvmul and bvadd terms.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18ABSTRACTION_BV_ADDE">
 <span id="_CPPv3N8bitwuzla6Option18ABSTRACTION_BV_ADDE"></span><span id="_CPPv2N8bitwuzla6Option18ABSTRACTION_BV_ADDE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cad5466972ec67af45f4f2653f1976bb8f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_ADD</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18ABSTRACTION_BV_ADDE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Abstract bit-vector addition terms. **</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<dd><p><strong>Abstraction module: Abstract bit-vector addition terms.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18ABSTRACTION_BV_MULE">
 <span id="_CPPv3N8bitwuzla6Option18ABSTRACTION_BV_MULE"></span><span id="_CPPv2N8bitwuzla6Option18ABSTRACTION_BV_MULE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cabc43da1b6b416036b04e6e526d586193"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_MUL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18ABSTRACTION_BV_MULE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Abstract bit-vector multiplication terms. **</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable</p></li>
+<dd><p><strong>Abstraction module: Abstract bit-vector multiplication terms.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_UDIVE">
 <span id="_CPPv3N8bitwuzla6Option19ABSTRACTION_BV_UDIVE"></span><span id="_CPPv2N8bitwuzla6Option19ABSTRACTION_BV_UDIVE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cac83009f0d37366f258376f3b8117d785"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_UDIV</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_UDIVE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Abstract bit-vector unsigned division terms. **</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable</p></li>
+<dd><p><strong>Abstraction module: Abstract bit-vector unsigned division terms.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_UREME">
 <span id="_CPPv3N8bitwuzla6Option19ABSTRACTION_BV_UREME"></span><span id="_CPPv2N8bitwuzla6Option19ABSTRACTION_BV_UREME"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca21cfd2a9a07f7f81bd39768ac6c8880f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_BV_UREM</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19ABSTRACTION_BV_UREME" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Abstract bit-vector unsigned remainder terms. **</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable</p></li>
+<dd><p><strong>Abstraction module: Abstract bit-vector unsigned remainder terms.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option17ABSTRACTION_EQUALE">
 <span id="_CPPv3N8bitwuzla6Option17ABSTRACTION_EQUALE"></span><span id="_CPPv2N8bitwuzla6Option17ABSTRACTION_EQUALE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caba40dafb6d76476cc671a11ba87016a9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_EQUAL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option17ABSTRACTION_EQUALE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Abstract equality terms. **</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<dd><p><strong>Abstraction module: Abstract equality terms.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15ABSTRACTION_ITEE">
 <span id="_CPPv3N8bitwuzla6Option15ABSTRACTION_ITEE"></span><span id="_CPPv2N8bitwuzla6Option15ABSTRACTION_ITEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caba8fd7c57c6cac04f364aee1bc2a7350"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_ITE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15ABSTRACTION_ITEE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Abstraction module: Abstract ITE terms. **</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<dd><p><strong>Abstraction module: Abstract ITE terms.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+</div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the prop solver engine. </p>
+<p>This is an expert option to configure the abstraction module. </p>
 </div>
 </dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option10PREPROCESSE">
 <span id="_CPPv3N8bitwuzla6Option10PREPROCESSE"></span><span id="_CPPv2N8bitwuzla6Option10PREPROCESSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cad36ca94e75c11d2653c1e71bcb93710b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PREPROCESS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option10PREPROCESSE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing</strong></p>
+<dd><p><strong>Preprocessing.</strong></p>
 <p>When enabled, applies all enabled preprocessing passes.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -698,11 +818,11 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option21PP_CONTRADICTING_ANDSE">
 <span id="_CPPv3N8bitwuzla6Option21PP_CONTRADICTING_ANDSE"></span><span id="_CPPv2N8bitwuzla6Option21PP_CONTRADICTING_ANDSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1c1c4b2437c7952b55e5e2877a75f4fd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_CONTRADICTING_ANDS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option21PP_CONTRADICTING_ANDSE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Find contradicting bit-vector ands</strong></p>
+<dd><p><strong>Preprocessing: Find contradicting bit-vector ands.</strong></p>
 <p>When enabled, substitutes contradicting nodes of kind <a class="reference internal" href="kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca470f951c16d4dfe3fd980f21a2a9a58c"><span class="std std-ref">BV_AND</span></a> with zero.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -710,11 +830,11 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE">
 <span id="_CPPv3N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE"></span><span id="_CPPv2N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1d0d73e16af622f85896f6c07df5bc34"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_ELIM_BV_EXTRACTS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Eliminate bit-vector extracts on bit-vector constants</strong></p>
+<dd><p><strong>Preprocessing: Eliminate bit-vector extracts on bit-vector constants.</strong></p>
 <p>When enabled, eliminates bit-vector extracts on constants.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>] </p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -722,11 +842,11 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15PP_ELIM_BV_UDIVE">
 <span id="_CPPv3N8bitwuzla6Option15PP_ELIM_BV_UDIVE"></span><span id="_CPPv2N8bitwuzla6Option15PP_ELIM_BV_UDIVE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca870b01ea497972259f019d025cff414e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_ELIM_BV_UDIV</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15PP_ELIM_BV_UDIVE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Eliminate bit-vector operators bvudiv and bvurem</strong></p>
+<dd><p><strong>Preprocessing: Eliminate bit-vector operators bvudiv and bvurem.</strong></p>
 <p>When enabled, eliminates bit-vector unsigned division and remainder operation in terms of multiplication.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>] </p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -734,11 +854,11 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18PP_EMBEDDED_CONSTRE">
 <span id="_CPPv3N8bitwuzla6Option18PP_EMBEDDED_CONSTRE"></span><span id="_CPPv2N8bitwuzla6Option18PP_EMBEDDED_CONSTRE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca37991ae5aee10bd7e0fa016150cf6a64"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_EMBEDDED_CONSTR</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18PP_EMBEDDED_CONSTRE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Embedded constraint substitution</strong></p>
+<dd><p><strong>Preprocessing: Embedded constraint substitution.</strong></p>
 <p>When enabled, substitutes assertions that occur as sub-expression in the formula with their respective Boolean value.</p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -746,10 +866,10 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option14PP_FLATTEN_ANDE">
 <span id="_CPPv3N8bitwuzla6Option14PP_FLATTEN_ANDE"></span><span id="_CPPv2N8bitwuzla6Option14PP_FLATTEN_ANDE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cadc7ff13bb74ca1c49e0564abf923e3d2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_FLATTEN_AND</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14PP_FLATTEN_ANDE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: AND flattening</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<dd><p><strong>Preprocessing: AND flattening.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -757,10 +877,10 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option12PP_NORMALIZEE">
 <span id="_CPPv3N8bitwuzla6Option12PP_NORMALIZEE"></span><span id="_CPPv2N8bitwuzla6Option12PP_NORMALIZEE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca84a8ad14719834487fd8fbee802215eb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_NORMALIZE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option12PP_NORMALIZEE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Normalization</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<dd><p><strong>Preprocessing: Normalization.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -768,10 +888,10 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19PP_SKELETON_PREPROCE">
 <span id="_CPPv3N8bitwuzla6Option19PP_SKELETON_PREPROCE"></span><span id="_CPPv2N8bitwuzla6Option19PP_SKELETON_PREPROCE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca0a6cc51a63c36639ea1769670675f969"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_SKELETON_PREPROC</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19PP_SKELETON_PREPROCE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Boolean skeleton preprocessing</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<dd><p><strong>Preprocessing: Boolean skeleton preprocessing.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -779,10 +899,10 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option17PP_VARIABLE_SUBSTE">
 <span id="_CPPv3N8bitwuzla6Option17PP_VARIABLE_SUBSTE"></span><span id="_CPPv2N8bitwuzla6Option17PP_VARIABLE_SUBSTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cac44b65f5b4b5d31b10ca8b5fe954bbc1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option17PP_VARIABLE_SUBSTE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Variable substitution</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<dd><p><strong>Preprocessing: Variable substitution.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -790,10 +910,10 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option25PP_VARIABLE_SUBST_NORM_EQE">
 <span id="_CPPv3N8bitwuzla6Option25PP_VARIABLE_SUBST_NORM_EQE"></span><span id="_CPPv2N8bitwuzla6Option25PP_VARIABLE_SUBST_NORM_EQE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1302e26f0b37334e5c554325a2fad3d1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST_NORM_EQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option25PP_VARIABLE_SUBST_NORM_EQE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Variable substitution: Equality Normalization</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<dd><p><strong>Preprocessing: Variable substitution: Equality normalization.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -801,10 +921,10 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE">
 <span id="_CPPv3N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE"></span><span id="_CPPv2N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10eb86e7de63c768bde672ecfd292c1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST_NORM_DISEQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Variable substitution: Disequality Normalization</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<dd><p><strong>Preprocessing: Variable substitution: Disequality Normalization.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -812,10 +932,10 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE">
 <span id="_CPPv3N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE"></span><span id="_CPPv2N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca2089c6d88dbe832e98a05e815bdf0188"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST_NORM_BV_INEQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Variable substitution: Bit-Vector Inequality Normalization</strong></p>
-<p>Values:<ul class="simple">
-<li><p><strong>1</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>0</strong>: disable </p></li>
+<dd><p><strong>Preprocessing: Variable substitution: Bit-Vector Inequality Normalization.</strong></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -823,8 +943,8 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18DBG_RW_NODE_THRESHE">
 <span id="_CPPv3N8bitwuzla6Option18DBG_RW_NODE_THRESHE"></span><span id="_CPPv2N8bitwuzla6Option18DBG_RW_NODE_THRESHE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8d8b44fad62581c9ffeeaf68ebe62dc3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_RW_NODE_THRESH</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18DBG_RW_NODE_THRESHE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Debug: Threshold for number of new nodes introduced for recursive call of rewrite(). **</p>
-<p>Prints a warning number of newly introduced nodes is above threshold.</p>
+<dd><p><strong>Debug: Recursive rewrite threshold.</strong></p>
+<p>Threshold for number of new nodes introduced for recursive call of rewrite(). Prints a warning when number of newly introduced nodes is above threshold.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an expert debug option. </p>
@@ -834,8 +954,8 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18DBG_PP_NODE_THRESHE">
 <span id="_CPPv3N8bitwuzla6Option18DBG_PP_NODE_THRESHE"></span><span id="_CPPv2N8bitwuzla6Option18DBG_PP_NODE_THRESHE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca10f37c69dfa6cd94b4faac917351a255"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_PP_NODE_THRESH</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18DBG_PP_NODE_THRESHE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Debug: Threshold for formula size increase after preprocessing in percent. **</p>
-<p>Prints a warning if formula size increase is above threshold.</p>
+<dd><p><strong>Debug: Formula size increase threshold.</strong></p>
+<p>Threshold for formula size increase after preprocessing in percent. Prints a warning if formula size increase is above threshold.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an expert debug option. </p>
@@ -845,7 +965,7 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15DBG_CHECK_MODELE">
 <span id="_CPPv3N8bitwuzla6Option15DBG_CHECK_MODELE"></span><span id="_CPPv2N8bitwuzla6Option15DBG_CHECK_MODELE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cab18b82c70b05c19150feec3faa69e579"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_CHECK_MODEL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15DBG_CHECK_MODELE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Debug: Check models for each satisfiable query. **</p>
+<dd><p><strong>Debug: Check models for each satisfiable query.</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an expert debug option. </p>
@@ -855,7 +975,7 @@ instance.</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option20DBG_CHECK_UNSAT_COREE">
 <span id="_CPPv3N8bitwuzla6Option20DBG_CHECK_UNSAT_COREE"></span><span id="_CPPv2N8bitwuzla6Option20DBG_CHECK_UNSAT_COREE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cab981bb691bf2411da3eaf4e90d9789ad"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_CHECK_UNSAT_CORE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option20DBG_CHECK_UNSAT_COREE" title="Link to this definition"></a><br /></dt>
-<dd><p>**Debug: Check unsat core for each unsatisfiable query. **</p>
+<dd><p><strong>Debug: Check unsat core for each unsatisfiable query.</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an expert debug option. </p>
@@ -878,7 +998,7 @@ instance.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

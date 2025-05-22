@@ -26,18 +26,21 @@ Options:
   -v <n>, --verbosity <n>           [0]          verbosity level 
   -T <n>, --time-limit-per <n>      [0]          time limit in milliseconds per 
                                                  satisfiability check 
-  -M <n>, --memory-limit <n>        [0]          set maximum memory limit in MB 
+  -M <n>, --memory-limit <n>        [0]          set maximum memory limit in MB per 
+                                                 satisfiability check 
   -j <n>, --nthreads <n>            [1]          set number of threads to utilize in 
                                                  parallel (currently, this only 
                                                  configures parallel threads in the 
                                                  CryptoMiniSat back end) 
-  --relevant-terms                  [false]      consider relevant terms only when 
-                                                 checking 
   --bv-solver <M>                   [bitblast]   bv solver engine {preprop, prop, 
                                                  bitblast} 
   -rwl <n>, --rewrite-level <n>     [2]          rewrite level 
   -S <M>, --sat-solver <M>          [cadical]    backend SAT solver {kissat, cms, 
                                                  cadical} 
+  --write-aiger <...>               []           write bv abstraction as AIGER to 
+                                                 filename 
+  --write-cnf <...>                 []           write bv abstraction as CNF to 
+                                                 filename 
   --prop-const-bits                 [true]       use constant bits propagation 
   --prop-ineq-bounds                [true]       infer inequality bounds for 
                                                  invertibility conditions and 
@@ -64,10 +67,8 @@ Options:
                                                  that represent sign_extend nodes for 
                                                  propagation-based local search 
                                                  engine 
-  --prop-normalize                  [false]      enable normalization for local 
-                                                 search 
-  --abstraction                     [false]      enable abstraction module 
-  --abstraction-bv-size <n>         [32]         enable abstraction for bit-vector 
+  --abstraction                     [true]       enable abstraction module 
+  --abstraction-bv-size <n>         [33]         enable abstraction for bit-vector 
                                                  terms of given minimum size 
   --abstraction-eager-refine        [false]      add all violated abstraction lemmas 
                                                  at once 

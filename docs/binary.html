@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Command Line Interface &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" type="text/css" href="static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="static/custom.css?v=3b6f11eb" />
 
@@ -15,7 +15,7 @@
   <![endif]-->
   
         <script src="static/jquery.js?v=5d32c60e"></script>
-        <script src="static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="static/documentation_options.js?v=5929fcd5"></script>
         <script src="static/doctools.js?v=9bcbadda"></script>
         <script src="static/sphinx_highlight.js?v=dc90522c"></script>
@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.7.0
+                0.8.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -114,18 +114,21 @@ Options:
   -v &lt;n&gt;, --verbosity &lt;n&gt;           [0]          verbosity level 
   -T &lt;n&gt;, --time-limit-per &lt;n&gt;      [0]          time limit in milliseconds per 
                                                  satisfiability check 
-  -M &lt;n&gt;, --memory-limit &lt;n&gt;        [0]          set maximum memory limit in MB 
+  -M &lt;n&gt;, --memory-limit &lt;n&gt;        [0]          set maximum memory limit in MB per 
+                                                 satisfiability check 
   -j &lt;n&gt;, --nthreads &lt;n&gt;            [1]          set number of threads to utilize in 
                                                  parallel (currently, this only 
                                                  configures parallel threads in the 
                                                  CryptoMiniSat back end) 
-  --relevant-terms                  [false]      consider relevant terms only when 
-                                                 checking 
   --bv-solver &lt;M&gt;                   [bitblast]   bv solver engine {preprop, prop, 
                                                  bitblast} 
   -rwl &lt;n&gt;, --rewrite-level &lt;n&gt;     [2]          rewrite level 
   -S &lt;M&gt;, --sat-solver &lt;M&gt;          [cadical]    backend SAT solver {kissat, cms, 
                                                  cadical} 
+  --write-aiger &lt;...&gt;               []           write bv abstraction as AIGER to 
+                                                 filename 
+  --write-cnf &lt;...&gt;                 []           write bv abstraction as CNF to 
+                                                 filename 
   --prop-const-bits                 [true]       use constant bits propagation 
   --prop-ineq-bounds                [true]       infer inequality bounds for 
                                                  invertibility conditions and 
@@ -152,10 +155,8 @@ Options:
                                                  that represent sign_extend nodes for 
                                                  propagation-based local search 
                                                  engine 
-  --prop-normalize                  [false]      enable normalization for local 
-                                                 search 
-  --abstraction                     [false]      enable abstraction module 
-  --abstraction-bv-size &lt;n&gt;         [32]         enable abstraction for bit-vector 
+  --abstraction                     [true]       enable abstraction module 
+  --abstraction-bv-size &lt;n&gt;         [33]         enable abstraction for bit-vector 
                                                  terms of given minimum size 
   --abstraction-eager-refine        [false]      add all violated abstraction lemmas 
                                                  at once 
@@ -224,7 +225,7 @@ Options:
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

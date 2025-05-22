@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C++ API Documentation &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../static/tabs.css?v=a5c4661c" />
       <link rel="stylesheet" type="text/css" href="../static/custom.css?v=3b6f11eb" />
@@ -16,11 +16,10 @@
   <![endif]-->
   
         <script src="../static/jquery.js?v=5d32c60e"></script>
-        <script src="../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../static/doctools.js?v=9bcbadda"></script>
         <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script src="../static/tabs.js?v=3030b3cb"></script>
     <script src="../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -41,7 +40,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.7.0
+                0.8.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -924,7 +923,7 @@ occur in the input formula:</p>
 <span class="linenos">  8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos">  9</span><span class="c1">##</span>
 <span class="linenos"> 10</span>
-<span class="linenos"> 11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 12</span>
 <span class="linenos"> 13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 <span class="linenos"> 14</span>
@@ -1193,7 +1192,7 @@ occur in the input formula:</p>
 <span class="linenos"> 8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
 <span class="linenos">14</span>
@@ -1295,7 +1294,7 @@ occur in the input formula:</p>
 <span class="linenos">53</span><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  + min:       &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">values</span><span class="p">.</span><span class="n">min</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="linenos">54</span><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  + max:       &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">values</span><span class="p">.</span><span class="n">max</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="linenos">55</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">56</span><span class="w">    </span><span class="k">else</span>
+<span class="linenos">56</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">kind</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">OptionInfo</span><span class="o">::</span><span class="n">Kind</span><span class="o">::</span><span class="n">MODE</span><span class="p">)</span>
 <span class="linenos">57</span><span class="w">    </span><span class="p">{</span>
 <span class="linenos">58</span><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;modes&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="linenos">59</span><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  values:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
@@ -1309,10 +1308,19 @@ occur in the input formula:</p>
 <span class="linenos">67</span><span class="w">      </span><span class="p">}</span>
 <span class="linenos">68</span><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; }&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="linenos">69</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">70</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  description: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">description</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="linenos">71</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="linenos">72</span><span class="w">  </span><span class="p">}</span>
-<span class="linenos">73</span><span class="p">}</span>
+<span class="linenos">70</span><span class="w">    </span><span class="k">else</span>
+<span class="linenos">71</span><span class="w">    </span><span class="p">{</span>
+<span class="linenos">72</span><span class="w">      </span><span class="c1">// info.kind == OptionInfo::Kind::STRING</span>
+<span class="linenos">73</span><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="linenos">74</span><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  values:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="linenos">75</span><span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">OptionInfo</span><span class="o">::</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">values</span><span class="p">);</span>
+<span class="linenos">76</span><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  + current:   &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">values</span><span class="p">.</span><span class="n">cur</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="linenos">77</span><span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  + default:   &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">values</span><span class="p">.</span><span class="n">dflt</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="linenos">78</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">79</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  description: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">description</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="linenos">80</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="linenos">81</span><span class="w">  </span><span class="p">}</span>
+<span class="linenos">82</span><span class="p">}</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-2-2-1" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-1" name="2-1" role="tabpanel" tabindex="0"><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/***</span>
@@ -1357,7 +1365,7 @@ occur in the input formula:</p>
 <span class="linenos">40</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;  + min:       %&quot;</span><span class="w"> </span><span class="n">PRIu64</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">numeric</span><span class="p">.</span><span class="n">min</span><span class="p">);</span>
 <span class="linenos">41</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;  + max:       %&quot;</span><span class="w"> </span><span class="n">PRIu64</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">numeric</span><span class="p">.</span><span class="n">max</span><span class="p">);</span>
 <span class="linenos">42</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">43</span><span class="w">    </span><span class="k">else</span>
+<span class="linenos">43</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">is_mode</span><span class="p">)</span>
 <span class="linenos">44</span><span class="w">    </span><span class="p">{</span>
 <span class="linenos">45</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;modes</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="linenos">46</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;  values:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
@@ -1370,12 +1378,20 @@ occur in the input formula:</p>
 <span class="linenos">53</span><span class="w">      </span><span class="p">}</span>
 <span class="linenos">54</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot; }</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="linenos">55</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">56</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;  description: %s</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">description</span><span class="p">);</span>
-<span class="linenos">57</span><span class="w">  </span><span class="p">}</span>
-<span class="linenos">58</span>
-<span class="linenos">59</span><span class="w">  </span><span class="c1">// Finally, delete options instance.</span>
-<span class="linenos">60</span><span class="w">  </span><span class="n">bitwuzla_options_delete</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
-<span class="linenos">61</span><span class="p">}</span>
+<span class="linenos">56</span><span class="w">    </span><span class="k">else</span>
+<span class="linenos">57</span><span class="w">    </span><span class="p">{</span>
+<span class="linenos">58</span><span class="w">      </span><span class="c1">// info.is_string</span>
+<span class="linenos">59</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;string</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="linenos">60</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;  values:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="linenos">61</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;  + current:   %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">cur</span><span class="p">);</span>
+<span class="linenos">62</span><span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;  + default:   %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">dflt</span><span class="p">);</span>
+<span class="linenos">63</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">64</span><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;  description: %s</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">description</span><span class="p">);</span>
+<span class="linenos">65</span><span class="w">  </span><span class="p">}</span>
+<span class="linenos">66</span>
+<span class="linenos">67</span><span class="w">  </span><span class="c1">// Finally, delete options instance.</span>
+<span class="linenos">68</span><span class="w">  </span><span class="n">bitwuzla_options_delete</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
+<span class="linenos">69</span><span class="p">}</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-2-2-2" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-2" name="2-2" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">###</span>
@@ -1388,7 +1404,7 @@ occur in the input formula:</p>
 <span class="linenos"> 8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
 <span class="linenos">14</span>
@@ -1418,13 +1434,19 @@ occur in the input formula:</p>
 <span class="linenos">38</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  + default:   </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">dflt</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="linenos">39</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  + min:       </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="linenos">40</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  + max:       </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="linenos">41</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">41</span>        <span class="k">elif</span> <span class="n">info</span><span class="o">.</span><span class="n">kind</span><span class="p">()</span> <span class="o">==</span> <span class="n">OptionInfoKind</span><span class="o">.</span><span class="n">MODE</span><span class="p">:</span>
 <span class="linenos">42</span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;modes&#39;</span><span class="p">)</span>
 <span class="linenos">43</span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  values:&#39;</span><span class="p">)</span>
 <span class="linenos">44</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  + current:   </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">cur</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="linenos">45</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  + default:   </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">dflt</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="linenos">46</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  + modes:     </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">modes</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="linenos">47</span>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  description: </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">description</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos">47</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">48</span>            <span class="k">assert</span> <span class="n">info</span><span class="o">.</span><span class="n">kind</span><span class="p">()</span> <span class="o">==</span> <span class="n">OptionInfoKind</span><span class="o">.</span><span class="n">STRING</span>
+<span class="linenos">49</span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
+<span class="linenos">50</span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  values:&#39;</span><span class="p">)</span>
+<span class="linenos">51</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  + current:   </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">cur</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos">52</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  + default:   </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">dflt</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos">53</span>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;  description: </span><span class="si">{</span><span class="n">info</span><span class="o">.</span><span class="n">description</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></div>
@@ -1664,7 +1686,7 @@ occur in the input formula:</p>
 <span class="linenos"> 8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 <span class="linenos">14</span>
@@ -1995,7 +2017,7 @@ occur in the input formula:</p>
 <span class="linenos"> 8</span><span class="c1"># information at https://github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 <span class="linenos">14</span>
@@ -2346,7 +2368,7 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 <span class="linenos"> 8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
 <span class="linenos">14</span>
@@ -2720,7 +2742,7 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 <span class="linenos"> 8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
 <span class="linenos">14</span>
@@ -3033,7 +3055,7 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 <span class="linenos"> 8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
 <span class="linenos">14</span>
@@ -3297,7 +3319,7 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 <span class="linenos"> 8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
 <span class="linenos">14</span>
@@ -3604,9 +3626,9 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 <span class="linenos"> 8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="linenos">11</span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="linenos">12</span>
-<span class="linenos">13</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">13</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">14</span>
 <span class="linenos">15</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
 <span class="linenos">16</span>
@@ -4212,7 +4234,7 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 <span class="linenos">  8</span><span class="c1"># information at https://github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos">  9</span><span class="c1">##</span>
 <span class="linenos"> 10</span>
-<span class="linenos"> 11</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 11</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 12</span>
 <span class="linenos"> 13</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 <span class="linenos"> 14</span>
@@ -4600,16 +4622,16 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
 <span class="linenos"> 8</span><span class="c1"># information at https:#github.com/bitwuzla/bitwuzla/blob/main/COPYING</span>
 <span class="linenos"> 9</span><span class="c1">##</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="kn">import</span> <span class="nn">time</span>
+<span class="linenos">11</span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="linenos">12</span>
-<span class="linenos">13</span><span class="kn">from</span> <span class="nn">bitwuzla</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos">13</span><span class="kn">from</span><span class="w"> </span><span class="nn">bitwuzla</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos">14</span>
-<span class="linenos">15</span><span class="k">class</span> <span class="nc">TestTerminator</span><span class="p">:</span>
-<span class="linenos">16</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_limit</span><span class="p">):</span>
+<span class="linenos">15</span><span class="k">class</span><span class="w"> </span><span class="nc">TestTerminator</span><span class="p">:</span>
+<span class="linenos">16</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_limit</span><span class="p">):</span>
 <span class="linenos">17</span>        <span class="bp">self</span><span class="o">.</span><span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="linenos">18</span>        <span class="bp">self</span><span class="o">.</span><span class="n">time_limit</span> <span class="o">=</span> <span class="n">time_limit</span>
 <span class="linenos">19</span>
-<span class="linenos">20</span>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">20</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">21</span>        <span class="c1"># Terminate after self.time_limit ms passed</span>
 <span class="linenos">22</span>        <span class="k">return</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_limit</span>
 <span class="linenos">23</span>
@@ -4669,7 +4691,7 @@ create lambda terms (<code class="code docutils literal notranslate"><span class
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

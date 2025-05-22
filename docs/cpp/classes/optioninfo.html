@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OptionInfo &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../static/custom.css?v=3b6f11eb" />
 
@@ -15,7 +15,7 @@
   <![endif]-->
   
         <script src="../../static/jquery.js?v=5d32c60e"></script>
-        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../../static/doctools.js?v=9bcbadda"></script>
         <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.7.0
+                0.8.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -160,7 +160,13 @@ This object is created per option and can be queried for</p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4Kind4MODEE">
 <span id="_CPPv3N8bitwuzla10OptionInfo4Kind4MODEE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4Kind4MODEE"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1adb638215de3731cae9deda4f8b5be0ebab742db58b16f1d7de716d5e8a8afabbb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MODE</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4Kind4MODEE" title="Link to this definition"></a><br /></dt>
-<dd><p>Option with configuration modes. </p>
+<dd><p><a class="reference internal" href="../enums/option.html#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186c"><span class="std std-ref">Option</span></a> with configuration modes. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4Kind6STRINGE">
+<span id="_CPPv3N8bitwuzla10OptionInfo4Kind6STRINGE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4Kind6STRINGE"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1adb638215de3731cae9deda4f8b5be0eba63b588d5559f64f89a416e656880b949"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STRING</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4Kind6STRINGE" title="Link to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="../enums/option.html#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186c"><span class="std std-ref">Option</span></a> with string arguments. </p>
 </dd></dl>
 
 </dd></dl>
@@ -242,6 +248,17 @@ This object is created per option and can be queried for</p>
 </dl>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IENK8bitwuzla10OptionInfo5valueEN10OptionInfo6StringEv">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structbitwuzla_1_1OptionInfo_1ad363abb10f2807736a85aa28c43c05fc"></span><a class="reference internal" href="#_CPPv4N8bitwuzla10OptionInfoE" title="bitwuzla::OptionInfo"><span class="n"><span class="pre">OptionInfo</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla10OptionInfo6StringE" title="bitwuzla::OptionInfo::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4IENK8bitwuzla10OptionInfo5valueEN10OptionInfo6StringEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get <a class="reference internal" href="#structbitwuzla_1_1OptionInfo_1_1String"><span class="std std-ref">String</span></a> option info wrapper. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The option info wrapper. </p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
@@ -272,12 +289,12 @@ This object is created per option and can be queried for</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo11descriptionE">
 <span id="_CPPv3N8bitwuzla10OptionInfo11descriptionE"></span><span id="_CPPv2N8bitwuzla10OptionInfo11descriptionE"></span><span id="bitwuzla::OptionInfo::description__cCP"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1a9d12ccc5e752922b36dcf7482dda73af"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">description</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo11descriptionE" title="Link to this definition"></a><br /></dt>
-<dd><p>Option description. </p>
+<dd><p><a class="reference internal" href="../enums/option.html#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186c"><span class="std std-ref">Option</span></a> description. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo6valuesE">
-<span id="_CPPv3N8bitwuzla10OptionInfo6valuesE"></span><span id="_CPPv2N8bitwuzla10OptionInfo6valuesE"></span><span id="bitwuzla::OptionInfo::values__std::variant:Bool.Numeric.Mode:"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1a8439703ab364673fc2107670a7bf54f5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">variant</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla10OptionInfo4BoolE" title="bitwuzla::OptionInfo::Bool"><span class="n"><span class="pre">Bool</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla10OptionInfo7NumericE" title="bitwuzla::OptionInfo::Numeric"><span class="n"><span class="pre">Numeric</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla10OptionInfo4ModeE" title="bitwuzla::OptionInfo::Mode"><span class="n"><span class="pre">Mode</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">values</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo6valuesE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8bitwuzla10OptionInfo6valuesE"></span><span id="_CPPv2N8bitwuzla10OptionInfo6valuesE"></span><span id="bitwuzla::OptionInfo::values__std::variant:Bool.Numeric.Mode.String:"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1a484b0e8321fc0ec73c89a6e619154301"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">variant</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla10OptionInfo4BoolE" title="bitwuzla::OptionInfo::Bool"><span class="n"><span class="pre">Bool</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla10OptionInfo7NumericE" title="bitwuzla::OptionInfo::Numeric"><span class="n"><span class="pre">Numeric</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla10OptionInfo4ModeE" title="bitwuzla::OptionInfo::Mode"><span class="n"><span class="pre">Mode</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla10OptionInfo6StringE" title="bitwuzla::OptionInfo::String"><span class="n"><span class="pre">String</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">values</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo6valuesE" title="Link to this definition"></a><br /></dt>
 <dd><p>The values. </p>
 </dd></dl>
 
@@ -363,6 +380,27 @@ This object is created per option and can be queried for</p>
 </div>
 </dd></dl>
 
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo6StringE">
+<span id="_CPPv3N8bitwuzla10OptionInfo6StringE"></span><span id="_CPPv2N8bitwuzla10OptionInfo6StringE"></span><span id="bitwuzla::OptionInfo::String"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1String"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">String</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo6StringE" title="Link to this definition"></a><br /></dt>
+<dd><p>The option value data of string options. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo6String3curE">
+<span id="_CPPv3N8bitwuzla10OptionInfo6String3curE"></span><span id="_CPPv2N8bitwuzla10OptionInfo6String3curE"></span><span id="bitwuzla::OptionInfo::String::cur__ss"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1String_1a8d7ded3eb6a8d6b87e3cc79e9d415803"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo6String3curE" title="Link to this definition"></a><br /></dt>
+<dd><p>Current <a class="reference internal" href="#structbitwuzla_1_1OptionInfo_1_1String"><span class="std std-ref">String</span></a> option value. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo6String4dfltE">
+<span id="_CPPv3N8bitwuzla10OptionInfo6String4dfltE"></span><span id="_CPPv2N8bitwuzla10OptionInfo6String4dfltE"></span><span id="bitwuzla::OptionInfo::String::dflt__ss"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1String_1acff9b357a207137f97e9ef7f1b38260d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dflt</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo6String4dfltE" title="Link to this definition"></a><br /></dt>
+<dd><p>Default <a class="reference internal" href="#structbitwuzla_1_1OptionInfo_1_1String"><span class="std std-ref">String</span></a> option value. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
@@ -379,7 +417,7 @@ This object is created per option and can be queried for</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

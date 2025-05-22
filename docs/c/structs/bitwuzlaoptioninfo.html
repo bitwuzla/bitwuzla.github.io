@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BitwuzlaOptionInfo &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../static/custom.css?v=3b6f11eb" />
 
@@ -15,7 +15,7 @@
   <![endif]-->
   
         <script src="../../static/jquery.js?v=5d32c60e"></script>
-        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../../static/doctools.js?v=9bcbadda"></script>
         <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.7.0
+                0.8.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -152,7 +152,7 @@ and can be queried for</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo3optE">
 <span id="_CPPv3N18BitwuzlaOptionInfo3optE"></span><span id="_CPPv2N18BitwuzlaOptionInfo3optE"></span><span id="BitwuzlaOptionInfo::opt__BitwuzlaOption"></span><span class="target" id="structBitwuzlaOptionInfo_1a3a58eec6fc27a64028124caa3032af37"></span><a class="reference internal" href="../enums/bitwuzlaoption.html#_CPPv414BitwuzlaOption" title="BitwuzlaOption"><span class="n"><span class="pre">BitwuzlaOption</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">opt</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo3optE" title="Link to this definition"></a><br /></dt>
-<dd><p>The Bitwuzla option. </p>
+<dd><p>The <a class="reference internal" href="../types/bitwuzla.html#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> option. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -176,7 +176,19 @@ and can be queried for</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo10is_numericE">
 <span id="_CPPv3N18BitwuzlaOptionInfo10is_numericE"></span><span id="_CPPv2N18BitwuzlaOptionInfo10is_numericE"></span><span id="BitwuzlaOptionInfo::is_numeric__b"></span><span class="target" id="structBitwuzlaOptionInfo_1a8a86e5b13551115832ab8dd73468a1c8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_numeric</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo10is_numericE" title="Link to this definition"></a><br /></dt>
-<dd><p>Indicates whether values are numeric or strings. </p>
+<dd><p>Indicates whether values are numeric. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo7is_modeE">
+<span id="_CPPv3N18BitwuzlaOptionInfo7is_modeE"></span><span id="_CPPv2N18BitwuzlaOptionInfo7is_modeE"></span><span id="BitwuzlaOptionInfo::is_mode__b"></span><span class="target" id="structBitwuzlaOptionInfo_1a7d8ecc88046158f81e6c1953b0b9d59c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_mode</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo7is_modeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Indicates whether values are modes. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo9is_stringE">
+<span id="_CPPv3N18BitwuzlaOptionInfo9is_stringE"></span><span id="_CPPv2N18BitwuzlaOptionInfo9is_stringE"></span><span id="BitwuzlaOptionInfo::is_string__b"></span><span class="target" id="structBitwuzlaOptionInfo_1aeb906dc94b9131a669c1a0b71145fc24"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_string</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo9is_stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Indicates whether values are strings. </p>
 </dd></dl>
 
 </div>
@@ -244,6 +256,26 @@ and can be queried for</p>
 </div>
 </dd></dl>
 
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo11StringValueE">
+<span id="_CPPv3N18BitwuzlaOptionInfo11StringValueE"></span><span id="_CPPv2N18BitwuzlaOptionInfo11StringValueE"></span><span id="BitwuzlaOptionInfo::StringValue"></span><span class="target" id="structBitwuzlaOptionInfo_1_1StringValue"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StringValue</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo11StringValueE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo11StringValue3curE">
+<span id="_CPPv3N18BitwuzlaOptionInfo11StringValue3curE"></span><span id="_CPPv2N18BitwuzlaOptionInfo11StringValue3curE"></span><span id="BitwuzlaOptionInfo::StringValue::cur__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1_1StringValue_1a84454bef7c43c8272f765d217d684557"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo11StringValue3curE" title="Link to this definition"></a><br /></dt>
+<dd><p>Current string option value. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18BitwuzlaOptionInfo11StringValue4dfltE">
+<span id="_CPPv3N18BitwuzlaOptionInfo11StringValue4dfltE"></span><span id="_CPPv2N18BitwuzlaOptionInfo11StringValue4dfltE"></span><span id="BitwuzlaOptionInfo::StringValue::dflt__cCP"></span><span class="target" id="structBitwuzlaOptionInfo_1_1StringValue_1a13fd2aaf87ff1b01dfe86d5f547b3805"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">dflt</span></span></span><a class="headerlink" href="#_CPPv4N18BitwuzlaOptionInfo11StringValue4dfltE" title="Link to this definition"></a><br /></dt>
+<dd><p>Default string option value. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -259,7 +291,7 @@ and can be queried for</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

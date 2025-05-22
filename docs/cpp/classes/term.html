@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Term &mdash; Bitwuzla  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../static/custom.css?v=3b6f11eb" />
 
@@ -15,7 +15,7 @@
   <![endif]-->
   
         <script src="../../static/jquery.js?v=5d32c60e"></script>
-        <script src="../../static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../../static/doctools.js?v=9bcbadda"></script>
         <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.7.0
+                0.8.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -510,27 +510,42 @@ instances.</p>
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla4Term20fp_value_to_real_strEv">
+<span id="_CPPv3NK8bitwuzla4Term20fp_value_to_real_strEv"></span><span id="_CPPv2NK8bitwuzla4Term20fp_value_to_real_strEv"></span><span id="bitwuzla::Term::fp_value_to_real_strC"></span><span class="target" id="classbitwuzla_1_1Term_1ab641a54b47103eef68dbf34dde82ad5c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fp_value_to_real_str</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla4Term20fp_value_to_real_strEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the SMT-LIB v2 string representation as a Real of this floating-point value term. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The floating-point values for NaN and positive and negative infinity don’t have a representation as a Real and are thus printed as, e.g., <code class="docutils literal notranslate"><span class="pre">(fp.to_real</span> <span class="pre">(_</span> <span class="pre">NaN</span> <span class="pre">5</span> <span class="pre">11))</span></code> (for Float16). </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The string representation. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0ENK8bitwuzla4Term5valueE1T7uint8_t">
 <span id="_CPPv3I0ENK8bitwuzla4Term5valueE7uint8_t"></span><span id="_CPPv2I0ENK8bitwuzla4Term5valueE7uint8_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classbitwuzla_1_1Term_1ab2a1ddd0efa2f2f339573061a931780a"></span><a class="reference internal" href="#_CPPv4I0ENK8bitwuzla4Term5valueE1T7uint8_t" title="bitwuzla::Term::value::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">base</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK8bitwuzla4Term5valueE1T7uint8_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Get value from value term.</p>
 <p>This function is instantiated for types<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code> for Boolean values</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">RoundingMode</span></code> for rounding mode values</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">std::string</span></code> for any value (Boolean, RoundingMode, bit-vector and floating-point)</p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/roundingmode.html#namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e"><span class="std std-ref"><span class="pre">RoundingMode</span></span></a></code> for rounding mode values</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::string</span></code> for any value (Boolean, <a class="reference internal" href="../enums/roundingmode.html#namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e"><span class="std std-ref">RoundingMode</span></a>, bit-vector and floating-point)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">std::tuple&lt;std::string,</span> <span class="pre">std::string,</span> <span class="pre">std::string&gt;</span></code> for floating-point values</p></li>
 </ul>
 </p>
 <p>In case of string representations of values (the <code class="docutils literal notranslate"><span class="pre">std::string</span></code> and <code class="docutils literal notranslate"><span class="pre">std::tuple&lt;std::string,</span> <span class="pre">std::string,</span> <span class="pre">std::string&gt;</span></code> instantions of this function), this returns the raw value string (as opposed to <a class="reference internal" href="#classbitwuzla_1_1Term_1a22ebe34edbe1606501a9741374e81c26"><span class="std std-ref">str()</span></a>, which returns the SMT-LIB v2 representation of a term). For example, this function returns “010” for a bit-vector value 2 of size 3, while <a class="reference internal" href="#classbitwuzla_1_1Term_1a22ebe34edbe1606501a9741374e81c26"><span class="std std-ref">str()</span></a> returns “#b010”.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For the general <code class="docutils literal notranslate"><span class="pre">std::string</span></code> instantiation case, the returned string for floating-point values is always the binary IEEE-754 representation of the value (parameter <code class="docutils literal notranslate"><span class="pre">base</span></code> is ignored). Parameter <code class="docutils literal notranslate"><span class="pre">base</span></code> always configures the numeric base for bit-vector values, and for floating-point values in case of the tuple of strings instantiation. It is always ignored for Boolean and RoundingMode values.</p>
+<p>For the general <code class="docutils literal notranslate"><span class="pre">std::string</span></code> instantiation case, the returned string for floating-point values is always the binary IEEE-754 representation of the value (parameter <code class="docutils literal notranslate"><span class="pre">base</span></code> is ignored). Parameter <code class="docutils literal notranslate"><span class="pre">base</span></code> always configures the numeric base for bit-vector values, and for floating-point values in case of the tuple of strings instantiation. It is always ignored for Boolean and <a class="reference internal" href="../enums/roundingmode.html#namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e"><span class="std std-ref">RoundingMode</span></a> values.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>T</strong> – The type of the value representation. <code class="docutils literal notranslate"><span class="pre">bool</span></code> for Boolean values; <code class="docutils literal notranslate"><span class="pre">RoundingMode</span></code> for rounding mode values; <code class="docutils literal notranslate"><span class="pre">std::tuple&lt;std::string,</span> <span class="pre">std::string,</span> <span class="pre">std::string&gt;</span></code> for floating-point values (IEEE-754 representation as strings for sign bit, exponent and significand); and, generally, <code class="docutils literal notranslate"><span class="pre">std::string</span></code> for any value type. </p>
+<dd class="field-odd"><p><strong>T</strong> – The type of the value representation. <code class="docutils literal notranslate"><span class="pre">bool</span></code> for Boolean values; <code class="docutils literal notranslate"><a class="reference internal" href="../enums/roundingmode.html#namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e"><span class="std std-ref"><span class="pre">RoundingMode</span></span></a></code> for rounding mode values; <code class="docutils literal notranslate"><span class="pre">std::tuple&lt;std::string,</span> <span class="pre">std::string,</span> <span class="pre">std::string&gt;</span></code> for floating-point values (IEEE-754 representation as strings for sign bit, exponent and significand); and, generally, <code class="docutils literal notranslate"><span class="pre">std::string</span></code> for any value type. </p>
 </dd>
 <dt class="field-even">Parameters<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>base</strong> – The numeric base for bit-vector values; <code class="docutils literal notranslate"><span class="pre">2</span></code> for binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and <code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal. Always ignored for Boolean and RoundingMode values. </p>
+<dd class="field-even"><p><strong>base</strong> – The numeric base for bit-vector values; <code class="docutils literal notranslate"><span class="pre">2</span></code> for binary, <code class="docutils literal notranslate"><span class="pre">10</span></code> for decimal, and <code class="docutils literal notranslate"><span class="pre">16</span></code> for hexadecimal. Always ignored for Boolean and <a class="reference internal" href="../enums/roundingmode.html#namespacebitwuzla_1ac6b3ac798df483963364f0302612ed9e"><span class="std std-ref">RoundingMode</span></a> values. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -629,7 +644,7 @@ instances.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
