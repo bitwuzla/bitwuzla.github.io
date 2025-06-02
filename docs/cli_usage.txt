@@ -117,8 +117,8 @@ Options:
   --dbg-pp-node-thresh <n>          [0]          warn threshold [%] for new nodes 
                                                  created through preprocessing in 
                                                  total 
-  --check-model                     [true]       check model for each satisfiable 
+  --check-model                     [false]      check model for each satisfiable 
                                                  query 
-  --check-unsat-core                [true]       check unsat core for each 
+  --check-unsat-core                [false]      check unsat core for each 
                                                  unsatisfiable query 
 
