@@ -19,6 +19,7 @@
         <script src="../../static/documentation_options.js?v=5929fcd5"></script>
         <script src="../../static/doctools.js?v=9bcbadda"></script>
         <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -38,7 +39,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -164,6 +165,8 @@ opportunity if the callback function returns a value <code class="code docutils 
 <li><p><a class="reference internal" href="#_CPPv418bitwuzla_check_satP8Bitwuzla" title="bitwuzla_check_sat"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_check_sat()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv427bitwuzla_check_sat_assumingP8Bitwuzla8uint32_tA_12BitwuzlaTerm" title="bitwuzla_check_sat_assuming"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_check_sat_assuming()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv418bitwuzla_get_valueP8Bitwuzla12BitwuzlaTerm" title="bitwuzla_get_value"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_get_value()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv424bitwuzla_get_interpolantP8Bitwuzla8uint32_tA_12BitwuzlaTerm" title="bitwuzla_get_interpolant"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_get_interpolant()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv425bitwuzla_get_interpolantsP8Bitwuzla8uint32_tP8uint32_tA_P12BitwuzlaTermP6size_t" title="bitwuzla_get_interpolants"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_get_interpolants()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv422bitwuzla_print_formulaP8BitwuzlaPKcP4FILE7uint8_t" title="bitwuzla_print_formula"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_print_formula()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv423bitwuzla_get_statisticsP8BitwuzlaPPPKcPPPKcP6size_t" title="bitwuzla_get_statistics"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla_get_statistics()</span></code></a></p></li>
 </ul>
@@ -349,14 +352,14 @@ opportunity if the callback function returns a value <code class="code docutils 
 <dd><p>Get the set of currently asserted formulas. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The returned <a class="reference internal" href="bitwuzlaterm.html#bitwuzla_8h_1a6b12acdfadbf3264353f5cd41bd4a816"><span class="std std-ref">BitwuzlaTerm</span></a> array pointer is only valid until the next call to <code class="docutils literal notranslate"><span class="pre">bitwuzla_result_to_string</span></code>. </p>
+<p>The returned <a class="reference internal" href="bitwuzlaterm.html#bitwuzla_8h_1a6b12acdfadbf3264353f5cd41bd4a816"><span class="std std-ref">BitwuzlaTerm</span></a> array pointer is only valid until the next call to <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#bitwuzla_8h_1a68fc48d91cbcea858e83b1b7fc18837c"><span class="std std-ref"><span class="pre">bitwuzla_result_to_string</span></span></a></code>. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The asserted formulas. </p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>An array with the set of asserted formulas of size <code class="docutils literal notranslate"><span class="pre">size</span></code>. Only valid until the next <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_assertions</span></code> call. </p>
+<dd class="field-even"><p>An array with the set of asserted formulas of size <code class="docutils literal notranslate"><span class="pre">size</span></code>. Only valid until the next <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gaf0d7178a79db8de4f8c12ee291ae3565"><span class="std std-ref"><span class="pre">bitwuzla_get_assertions</span></span></a></code> call. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -366,7 +369,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <span id="_CPPv328bitwuzla_is_unsat_assumptionP8Bitwuzla12BitwuzlaTerm"></span><span id="_CPPv228bitwuzla_is_unsat_assumptionP8Bitwuzla12BitwuzlaTerm"></span><span id="bitwuzla_is_unsat_assumption__BitwuzlaP.BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzla_1ga301c640bc176890a0a87659eddc46711"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_is_unsat_assumption</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428bitwuzla_is_unsat_assumptionP8Bitwuzla12BitwuzlaTerm" title="Link to this definition"></a><br /></dt>
 <dd><p>Determine if an assumption is an unsat assumption.</p>
 <p>Unsat assumptions are assumptions that force an input formula to become unsatisfiable. Unsat assumptions handling in <a class="reference internal" href="#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> is analogous to failed assumptions in MiniSAT.</p>
-<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae3a04c185b6d00a30c1b08b8d8b17abf"><span class="std std-ref"><span class="pre">BITWUZLA_UNSAT</span></span></a></code>.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_UNSAT</span></code>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
@@ -394,7 +397,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <span id="_CPPv330bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t"></span><span id="_CPPv230bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t"></span><span id="bitwuzla_get_unsat_assumptions__BitwuzlaP.sP"></span><span class="target" id="group__c__bitwuzla_1ga29354e858608d009c246f5729bc05b69"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_unsat_assumptions</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430bitwuzla_get_unsat_assumptionsP8BitwuzlaP6size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the set of unsat assumptions.</p>
 <p>Unsat assumptions are assumptions that force an input formula to become unsatisfiable. Unsat assumptions handling in <a class="reference internal" href="#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> is analogous to failed assumptions in MiniSAT.</p>
-<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae3a04c185b6d00a30c1b08b8d8b17abf"><span class="std std-ref"><span class="pre">BITWUZLA_UNSAT</span></span></a></code>.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_UNSAT</span></code>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
@@ -406,7 +409,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The returned <a class="reference internal" href="bitwuzlaterm.html#bitwuzla_8h_1a6b12acdfadbf3264353f5cd41bd4a816"><span class="std std-ref">BitwuzlaTerm</span></a> array pointer is only valid until the next call to <code class="docutils literal notranslate"><span class="pre">bitwuzla_result_to_string</span></code>. </p>
+<p>The returned <a class="reference internal" href="bitwuzlaterm.html#bitwuzla_8h_1a6b12acdfadbf3264353f5cd41bd4a816"><span class="std std-ref">BitwuzlaTerm</span></a> array pointer is only valid until the next call to <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#bitwuzla_8h_1a68fc48d91cbcea858e83b1b7fc18837c"><span class="std std-ref"><span class="pre">bitwuzla_result_to_string</span></span></a></code>. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -416,7 +419,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>An array with unsat assumptions of size <code class="docutils literal notranslate"><span class="pre">size</span></code>. Only valid until the next <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_unsat_assumptions</span></code> call.</p>
+<dd class="field-even"><p>An array with unsat assumptions of size <code class="docutils literal notranslate"><span class="pre">size</span></code>. Only valid until the next <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga29354e858608d009c246f5729bc05b69"><span class="std std-ref"><span class="pre">bitwuzla_get_unsat_assumptions</span></span></a></code> call.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -426,7 +429,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <span id="_CPPv323bitwuzla_get_unsat_coreP8BitwuzlaP6size_t"></span><span id="_CPPv223bitwuzla_get_unsat_coreP8BitwuzlaP6size_t"></span><span id="bitwuzla_get_unsat_core__BitwuzlaP.sP"></span><span class="target" id="group__c__bitwuzla_1gaf6b814e52420907e10cd33ed6ba53bce"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_unsat_core</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423bitwuzla_get_unsat_coreP8BitwuzlaP6size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the unsat core (unsat assertions).</p>
 <p>The unsat core consists of the set of assertions that force an input formula to become unsatisfiable.</p>
-<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae3a04c185b6d00a30c1b08b8d8b17abf"><span class="std std-ref"><span class="pre">BITWUZLA_UNSAT</span></span></a></code>.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_UNSAT</span></code>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
@@ -438,7 +441,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The returned <a class="reference internal" href="bitwuzlaterm.html#bitwuzla_8h_1a6b12acdfadbf3264353f5cd41bd4a816"><span class="std std-ref">BitwuzlaTerm</span></a> array pointer is only valid until the next call to <code class="docutils literal notranslate"><span class="pre">bitwuzla_result_to_string</span></code>. </p>
+<p>The returned <a class="reference internal" href="bitwuzlaterm.html#bitwuzla_8h_1a6b12acdfadbf3264353f5cd41bd4a816"><span class="std std-ref">BitwuzlaTerm</span></a> array pointer is only valid until the next call to <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#bitwuzla_8h_1a68fc48d91cbcea858e83b1b7fc18837c"><span class="std std-ref"><span class="pre">bitwuzla_result_to_string</span></span></a></code>. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -448,7 +451,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>An array with unsat assertions of size <code class="docutils literal notranslate"><span class="pre">size</span></code>. Only valid until the next <code class="docutils literal notranslate"><span class="pre">bitwuzla_get_unsat_core</span></code> call.</p>
+<dd class="field-even"><p>An array with unsat assertions of size <code class="docutils literal notranslate"><span class="pre">size</span></code>. Only valid until the next <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1gaf6b814e52420907e10cd33ed6ba53bce"><span class="std std-ref"><span class="pre">bitwuzla_get_unsat_core</span></span></a></code> call.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -505,15 +508,15 @@ opportunity if the callback function returns a value <code class="code docutils 
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv418bitwuzla_check_satP8Bitwuzla">
-<span id="_CPPv318bitwuzla_check_satP8Bitwuzla"></span><span id="_CPPv218bitwuzla_check_satP8Bitwuzla"></span><span id="bitwuzla_check_sat__BitwuzlaP"></span><span class="target" id="group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"></span><a class="reference internal" href="../enums/bitwuzlaresult.html#_CPPv414BitwuzlaResult" title="BitwuzlaResult"><span class="n"><span class="pre">BitwuzlaResult</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_check_sat</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418bitwuzla_check_satP8Bitwuzla" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv318bitwuzla_check_satP8Bitwuzla"></span><span id="_CPPv218bitwuzla_check_satP8Bitwuzla"></span><span id="bitwuzla_check_sat__BitwuzlaP"></span><span class="target" id="group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"></span><span class="n"><span class="pre">BitwuzlaResult</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_check_sat</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418bitwuzla_check_satP8Bitwuzla" title="Link to this definition"></a><br /></dt>
 <dd><p>Check satisfiability of current input formula.</p>
-<p>An input formula consists of assertions added via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert()</span></span></a></code>. The search for a solution can by guided by additionally making assumptions (see <code class="docutils literal notranslate"><span class="pre">bitwuzla_check_sat_assuming</span></code>).</p>
+<p>An input formula consists of assertions added via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert()</span></span></a></code>. The search for a solution can by guided by additionally making assumptions (see <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga753f826b5468f6ccbeb3f2a3aebd371e"><span class="std std-ref"><span class="pre">bitwuzla_check_sat_assuming</span></span></a></code>).</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbe"><span class="std std-ref"><span class="pre">BitwuzlaResult</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BitwuzlaResult</span></code></p></li>
 </ul>
 </p>
 </div>
@@ -527,14 +530,14 @@ opportunity if the callback function returns a value <code class="code docutils 
 <dd class="field-odd"><p><strong>bitwuzla</strong> – The <a class="reference internal" href="#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> instance.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbead34a61d3488e1095ab798f3d1a5540ba"><span class="std std-ref"><span class="pre">BITWUZLA_SAT</span></span></a></code> if the input formula is satisfiable and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae3a04c185b6d00a30c1b08b8d8b17abf"><span class="std std-ref"><span class="pre">BITWUZLA_UNSAT</span></span></a></code> if it is unsatisfiable, and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae7db846c2213a0bb55ac7871b31803ff"><span class="std std-ref"><span class="pre">BITWUZLA_UNKNOWN</span></span></a></code> when neither satisfiability nor unsatisfiability was determined. This can happen when <code class="docutils literal notranslate"><span class="pre">bitwuzla</span></code> was terminated via a termination callback.</p>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">::BITWUZLA_SAT</span></code> if the input formula is satisfiable and <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_UNSAT</span></code> if it is unsatisfiable, and <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_UNKNOWN</span></code> when neither satisfiability nor unsatisfiability was determined. This can happen when <code class="docutils literal notranslate"><span class="pre">bitwuzla</span></code> was terminated via a termination callback.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv427bitwuzla_check_sat_assumingP8Bitwuzla8uint32_tA_12BitwuzlaTerm">
-<span id="_CPPv327bitwuzla_check_sat_assumingP8Bitwuzla8uint32_tA_12BitwuzlaTerm"></span><span id="_CPPv227bitwuzla_check_sat_assumingP8Bitwuzla8uint32_tA_12BitwuzlaTerm"></span><span id="bitwuzla_check_sat_assuming__BitwuzlaP.uint32_t.BitwuzlaTermA"></span><span class="target" id="group__c__bitwuzla_1ga753f826b5468f6ccbeb3f2a3aebd371e"></span><a class="reference internal" href="../enums/bitwuzlaresult.html#_CPPv414BitwuzlaResult" title="BitwuzlaResult"><span class="n"><span class="pre">BitwuzlaResult</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_check_sat_assuming</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc</span></span>, <a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427bitwuzla_check_sat_assumingP8Bitwuzla8uint32_tA_12BitwuzlaTerm" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv327bitwuzla_check_sat_assumingP8Bitwuzla8uint32_tA_12BitwuzlaTerm"></span><span id="_CPPv227bitwuzla_check_sat_assumingP8Bitwuzla8uint32_tA_12BitwuzlaTerm"></span><span id="bitwuzla_check_sat_assuming__BitwuzlaP.uint32_t.BitwuzlaTermA"></span><span class="target" id="group__c__bitwuzla_1ga753f826b5468f6ccbeb3f2a3aebd371e"></span><span class="n"><span class="pre">BitwuzlaResult</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_check_sat_assuming</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc</span></span>, <a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427bitwuzla_check_sat_assumingP8Bitwuzla8uint32_tA_12BitwuzlaTerm" title="Link to this definition"></a><br /></dt>
 <dd><p>Check satisfiability of current input formula wrt to the given set of assumptions.</p>
 <p>An input formula consists of assertions added via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert()</span></span></a></code>. The search for a solution can by guided by additionally making assumptions (the given set of assumptions <code class="docutils literal notranslate"><span class="pre">args</span></code>).</p>
 <p><div class="admonition seealso">
@@ -542,7 +545,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <p><ul class="simple">
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga5b277550f06a67481dbc6134165ca297"><span class="std std-ref"><span class="pre">bitwuzla_assert</span></span></a></code></p></li>
 <li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzlaoptions.html#group__c__bitwuzlaoptions_1ga662616299ca3fad47b443ad11222b9ef"><span class="std std-ref"><span class="pre">bitwuzla_set_option</span></span></a></code></p></li>
-<li><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbe"><span class="std std-ref"><span class="pre">BitwuzlaResult</span></span></a></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BitwuzlaResult</span></code></p></li>
 </ul>
 </p>
 </div>
@@ -560,7 +563,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbead34a61d3488e1095ab798f3d1a5540ba"><span class="std std-ref"><span class="pre">BITWUZLA_SAT</span></span></a></code> if the input formula is satisfiable and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae3a04c185b6d00a30c1b08b8d8b17abf"><span class="std std-ref"><span class="pre">BITWUZLA_UNSAT</span></span></a></code> if it is unsatisfiable, and <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbeae7db846c2213a0bb55ac7871b31803ff"><span class="std std-ref"><span class="pre">BITWUZLA_UNKNOWN</span></span></a></code> when neither satisfiability nor unsatisfiability was determined. This can happen when <code class="docutils literal notranslate"><span class="pre">bitwuzla</span></code> was terminated via a termination callback.</p>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">::BITWUZLA_SAT</span></code> if the input formula is satisfiable and <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_UNSAT</span></code> if it is unsatisfiable, and <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_UNKNOWN</span></code> when neither satisfiability nor unsatisfiability was determined. This can happen when <code class="docutils literal notranslate"><span class="pre">bitwuzla</span></code> was terminated via a termination callback.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -569,7 +572,7 @@ opportunity if the callback function returns a value <code class="code docutils 
 <dt class="sig sig-object cpp" id="_CPPv418bitwuzla_get_valueP8Bitwuzla12BitwuzlaTerm">
 <span id="_CPPv318bitwuzla_get_valueP8Bitwuzla12BitwuzlaTerm"></span><span id="_CPPv218bitwuzla_get_valueP8Bitwuzla12BitwuzlaTerm"></span><span id="bitwuzla_get_value__BitwuzlaP.BitwuzlaTerm"></span><span class="target" id="group__c__bitwuzla_1gae609c31695d3b4f95cab6ff9725d5415"></span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_value</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418bitwuzla_get_valueP8Bitwuzla12BitwuzlaTerm" title="Link to this definition"></a><br /></dt>
 <dd><p>Get a term representing the model value of a given term.</p>
-<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><a class="reference internal" href="../enums/bitwuzlaresult.html#enums_8h_1a68f12662f6bc3f5f2887144995090dbead34a61d3488e1095ab798f3d1a5540ba"><span class="std std-ref"><span class="pre">BITWUZLA_SAT</span></span></a></code>.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat()</span></span></a></code> query returned <code class="docutils literal notranslate"><span class="pre">::BITWUZLA_SAT</span></code>.</p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzla_1ga1044f2e98d6b229c1c77641b6afd95d2"><span class="std std-ref"><span class="pre">bitwuzla_check_sat</span></span></a></code></p>
@@ -584,6 +587,96 @@ opportunity if the callback function returns a value <code class="code docutils 
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A term representing the model value of term <code class="docutils literal notranslate"><span class="pre">term</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424bitwuzla_get_interpolantP8Bitwuzla8uint32_tA_12BitwuzlaTerm">
+<span id="_CPPv324bitwuzla_get_interpolantP8Bitwuzla8uint32_tA_12BitwuzlaTerm"></span><span id="_CPPv224bitwuzla_get_interpolantP8Bitwuzla8uint32_tA_12BitwuzlaTerm"></span><span id="bitwuzla_get_interpolant__BitwuzlaP.uint32_t.BitwuzlaTermA"></span><span class="target" id="group__c__bitwuzla_1gadd03ad5f3e4a659aeb5dbedb1d74e025"></span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_interpolant</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc</span></span>, <a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424bitwuzla_get_interpolantP8Bitwuzla8uint32_tA_12BitwuzlaTerm" title="Link to this definition"></a><br /></dt>
+<dd><p>Get a term representing the interpolant I given the current set of assertions, partitioned into partitions A and B such that <code class="docutils literal notranslate"><span class="pre">(and</span> <span class="pre">A</span> <span class="pre">B)</span></code> is unsat and <code class="docutils literal notranslate"><span class="pre">(=&gt;</span> <span class="pre">A</span> <span class="pre">I)</span></code> and <code class="docutils literal notranslate"><span class="pre">(=&gt;</span> <span class="pre">I</span> <span class="pre">(not</span> <span class="pre">B))</span></code>.</p>
+<p>Partition A is the given set of assertions, partition B consists of the remaining assertions that are not in A.</p>
+<p>Requires that the last <code class="docutils literal notranslate"><span class="pre">check_sat()</span></code> query returned <code class="docutils literal notranslate"><span class="pre">Result::UNSAT</span></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="docutils literal notranslate"><span class="pre">check_sat()</span></code></p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assertions in A and B must be currently asserted formulas.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The signature of this function is experimental and may change in future versions. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bitwuzla</strong> – The <a class="reference internal" href="#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> instance. </p></li>
+<li><p><strong>argc</strong> – The number of A formulas in <code class="docutils literal notranslate"><span class="pre">args</span></code>. </p></li>
+<li><p><strong>args</strong> – The set of formulas representing partition A. This must be a strict subset of the set of current assertions. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Interpolant I such that <code class="docutils literal notranslate"><span class="pre">(=&gt;</span> <span class="pre">A</span> <span class="pre">I)</span></code> and <code class="docutils literal notranslate"><span class="pre">(=&gt;</span> <span class="pre">I</span> <span class="pre">(not</span> <span class="pre">B))</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425bitwuzla_get_interpolantsP8Bitwuzla8uint32_tP8uint32_tA_P12BitwuzlaTermP6size_t">
+<span id="_CPPv325bitwuzla_get_interpolantsP8Bitwuzla8uint32_tP8uint32_tA_P12BitwuzlaTermP6size_t"></span><span id="_CPPv225bitwuzla_get_interpolantsP8Bitwuzla8uint32_tP8uint32_tA_P12BitwuzlaTermP6size_t"></span><span id="bitwuzla_get_interpolants__BitwuzlaP.uint32_t.uint32_tP.BitwuzlaTermPA.sP"></span><span class="target" id="group__c__bitwuzla_1ga5ceae3f5858cc3c701edd38fa74da757"></span><a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_get_interpolants</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Bitwuzla" title="Bitwuzla"><span class="n"><span class="pre">Bitwuzla</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">bitwuzla</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Asc</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Ac</span></span>, <a class="reference internal" href="bitwuzlaterm.html#_CPPv412BitwuzlaTerm" title="BitwuzlaTerm"><span class="n"><span class="pre">BitwuzlaTerm</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">As</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425bitwuzla_get_interpolantsP8Bitwuzla8uint32_tP8uint32_tA_P12BitwuzlaTermP6size_t" title="Link to this definition"></a><br /></dt>
+<dd><p><p>Get an inductive sequence of interpolants
+<span class="math notranslate nohighlight">\(\langle I_1, \ldots, I_n \rangle\)</span> given the current
+set of assertions <span class="math notranslate nohighlight">\(F\)</span> and a sequence of partitions.</p>
+<p>The sequence of partitions is given as a list of set increments
+<span class="math notranslate nohighlight">\(\{A_1, \ldots, A_n\}\)</span> of asserted formulas
+<span class="math notranslate nohighlight">\(F = \{F_1, F_2, \ldots, F_n\}\)</span>, which expands into sets of
+partitions</p>
+<div class="math notranslate nohighlight">
+\[\{(A_1, B_1), (A_2, B_2), \ldots, (A_n, B_n)\}\]</div>
+<p>such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A_1 &amp;= F_1 \\
+A_2 &amp;= F_1\,\cup\,F_2 \\
+\ldots &amp; \\
+A_n &amp; = F_1\,\cup\,F_2\,\cup\,\ldots\,\cup\,F_n \\\end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[B_i = F \setminus A_i \text{ with } A_i \wedge B_i \models \bot.\]</div>
+<p>The resulting sequence of interpolants is inductive, i.e., it holds that
+<span class="math notranslate nohighlight">\((I_i \wedge F_{i+1}) \rightarrow I_{i+1}\)</span>.</p>
+<p>Requires that the last <cite>check_sat()</cite> query returned <cite>Result::UNSAT</cite>.</p>
+</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="docutils literal notranslate"><span class="pre">check_sat()</span></code></p>
+</div>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Assertions in <span class="math notranslate nohighlight">\(A_i\)</span> must be currently asserted formulas.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Current SAT state must be unsat.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The signature of this function is experimental and may change in future versions. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Asc</strong> – The number of A increments in <code class="docutils literal notranslate"><span class="pre">As</span></code>. </p></li>
+<li><p><strong>Ac</strong> – The number of formulas for each increment <code class="docutils literal notranslate"><span class="pre">A</span></code> in <code class="docutils literal notranslate"><span class="pre">As</span></code>. </p></li>
+<li><p><strong>As</strong> – The set of A increments. </p></li>
+<li><p><strong>size</strong> – Output parameter, stores the size of the returned array.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The interpolation sequence.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -676,7 +769,7 @@ opportunity if the callback function returns a value <code class="code docutils 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

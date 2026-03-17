@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -63,6 +63,8 @@
 <li class="toctree-l4"><a class="reference internal" href="parser.html">Parser</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/result.html">Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolver.html">SatSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolverfactory.html">SatSolverFactory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sort.html">Sort</a></li>
 <li class="toctree-l4"><a class="reference internal" href="term.html">Term</a></li>
 <li class="toctree-l4"><a class="reference internal" href="termmanager.html">TermManager</a></li>
@@ -322,33 +324,6 @@ This object is created per option and can be queried for</p>
 </dd></dl>
 
 <dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4ModeE">
-<span id="_CPPv3N8bitwuzla10OptionInfo4ModeE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4ModeE"></span><span id="bitwuzla::OptionInfo::Mode"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Mode"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Mode</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4ModeE" title="Link to this definition"></a><br /></dt>
-<dd><p>The option value data of an option with modes. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4Mode3curE">
-<span id="_CPPv3N8bitwuzla10OptionInfo4Mode3curE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4Mode3curE"></span><span id="bitwuzla::OptionInfo::Mode::cur__ss"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Mode_1af8ac49283a43ba356116d8c46f412aab"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4Mode3curE" title="Link to this definition"></a><br /></dt>
-<dd><p>Current mode option value. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4Mode4dfltE">
-<span id="_CPPv3N8bitwuzla10OptionInfo4Mode4dfltE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4Mode4dfltE"></span><span id="bitwuzla::OptionInfo::Mode::dflt__ss"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Mode_1ab3f3f7a7c5408272cd51330bbceb6913"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dflt</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4Mode4dfltE" title="Link to this definition"></a><br /></dt>
-<dd><p>Default mode option value. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4Mode5modesE">
-<span id="_CPPv3N8bitwuzla10OptionInfo4Mode5modesE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4Mode5modesE"></span><span id="bitwuzla::OptionInfo::Mode::modes__std::vector:ss:"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Mode_1ab89f72a86bc53dd4054ef708c4eecde7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">modes</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4Mode5modesE" title="Link to this definition"></a><br /></dt>
-<dd><p>List of available modes. </p>
-</dd></dl>
-
-</div>
-</dd></dl>
-
-<dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo7NumericE">
 <span id="_CPPv3N8bitwuzla10OptionInfo7NumericE"></span><span id="_CPPv2N8bitwuzla10OptionInfo7NumericE"></span><span id="bitwuzla::OptionInfo::Numeric"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Numeric"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Numeric</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo7NumericE" title="Link to this definition"></a><br /></dt>
 <dd><p>The option value data of a numeric option. </p>
@@ -376,6 +351,33 @@ This object is created per option and can be queried for</p>
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo7Numeric3maxE">
 <span id="_CPPv3N8bitwuzla10OptionInfo7Numeric3maxE"></span><span id="_CPPv2N8bitwuzla10OptionInfo7Numeric3maxE"></span><span id="bitwuzla::OptionInfo::Numeric::max__uint64_t"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Numeric_1afe14a9ea7c4d9272f501e95e44257884"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo7Numeric3maxE" title="Link to this definition"></a><br /></dt>
 <dd><p>Maximum numeric option value. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4ModeE">
+<span id="_CPPv3N8bitwuzla10OptionInfo4ModeE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4ModeE"></span><span id="bitwuzla::OptionInfo::Mode"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Mode"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Mode</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4ModeE" title="Link to this definition"></a><br /></dt>
+<dd><p>The option value data of an option with modes. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4Mode3curE">
+<span id="_CPPv3N8bitwuzla10OptionInfo4Mode3curE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4Mode3curE"></span><span id="bitwuzla::OptionInfo::Mode::cur__ss"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Mode_1af8ac49283a43ba356116d8c46f412aab"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4Mode3curE" title="Link to this definition"></a><br /></dt>
+<dd><p>Current mode option value. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4Mode4dfltE">
+<span id="_CPPv3N8bitwuzla10OptionInfo4Mode4dfltE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4Mode4dfltE"></span><span id="bitwuzla::OptionInfo::Mode::dflt__ss"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Mode_1ab3f3f7a7c5408272cd51330bbceb6913"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dflt</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4Mode4dfltE" title="Link to this definition"></a><br /></dt>
+<dd><p>Default mode option value. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla10OptionInfo4Mode5modesE">
+<span id="_CPPv3N8bitwuzla10OptionInfo4Mode5modesE"></span><span id="_CPPv2N8bitwuzla10OptionInfo4Mode5modesE"></span><span id="bitwuzla::OptionInfo::Mode::modes__std::vector:ss:"></span><span class="target" id="structbitwuzla_1_1OptionInfo_1_1Mode_1ab89f72a86bc53dd4054ef708c4eecde7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">modes</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla10OptionInfo4Mode5modesE" title="Link to this definition"></a><br /></dt>
+<dd><p>List of available modes. </p>
 </dd></dl>
 
 </div>
@@ -418,7 +420,7 @@ This object is created per option and can be queried for</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

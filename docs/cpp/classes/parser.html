@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -63,6 +63,8 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Parser</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/result.html">Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolver.html">SatSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolverfactory.html">SatSolverFactory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sort.html">Sort</a></li>
 <li class="toctree-l4"><a class="reference internal" href="term.html">Term</a></li>
 <li class="toctree-l4"><a class="reference internal" href="termmanager.html">TermManager</a></li>
@@ -147,6 +149,31 @@
 <li><p><strong>tm</strong> – The associated term manager instance. </p></li>
 <li><p><strong>options</strong> – The configuration options for the <a class="reference internal" href="bitwuzla.html#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> instance (created by the parser). </p></li>
 <li><p><strong>language</strong> – The format of the input. </p></li>
+<li><p><strong>out</strong> – The output stream (:regular-output-channel in SMT-LIB). </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6parser6Parser6ParserER11TermManagerR16SatSolverFactoryR7OptionsRKNSt6stringEPNSt7ostreamE">
+<span id="_CPPv3N8bitwuzla6parser6Parser6ParserER11TermManagerR16SatSolverFactoryR7OptionsRKNSt6stringEPNSt7ostreamE"></span><span id="_CPPv2N8bitwuzla6parser6Parser6ParserER11TermManagerR16SatSolverFactoryR7OptionsRKNSt6stringEPNSt7ostreamE"></span><span id="bitwuzla::parser::Parser::Parser__TermManagerR.SatSolverFactoryR.OptionsR.ssCR.osP"></span><span class="target" id="classbitwuzla_1_1parser_1_1Parser_1afb6d64e5333f162a86522be2e54c9642"></span><span class="sig-name descname"><span class="n"><span class="pre">Parser</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="termmanager.html#_CPPv4N8bitwuzla11TermManagerE" title="bitwuzla::TermManager"><span class="n"><span class="pre">TermManager</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tm</span></span>, <a class="reference internal" href="satsolverfactory.html#_CPPv4N8bitwuzla16SatSolverFactoryE" title="bitwuzla::SatSolverFactory"><span class="n"><span class="pre">SatSolverFactory</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sat_factory</span></span>, <a class="reference internal" href="options.html#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">options</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">language</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;smt2&quot;</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">out</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">&amp;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla6parser6Parser6ParserER11TermManagerR16SatSolverFactoryR7OptionsRKNSt6stringEPNSt7ostreamE" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The parser creates and owns the associated <a class="reference internal" href="bitwuzla.html#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> instance. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is not safe to reuse a parser instance after a parse error. Subsequent parse queries after a parse error will return with an error. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tm</strong> – The associated term manager instance. </p></li>
+<li><p><strong>sat_factory</strong> – The associated SAT solver factory. </p></li>
+<li><p><strong>options</strong> – The configuration options for the <a class="reference internal" href="bitwuzla.html#classbitwuzla_1_1Bitwuzla"><span class="std std-ref">Bitwuzla</span></a> instance (created by the parser). </p></li>
+<li><p><strong>language</strong> – The format of the input. </p></li>
 <li><p><strong>out</strong> – The output stream. </p></li>
 </ul>
 </dd>
@@ -157,6 +184,21 @@
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6parser6ParserD0Ev">
 <span id="_CPPv3N8bitwuzla6parser6ParserD0Ev"></span><span id="_CPPv2N8bitwuzla6parser6ParserD0Ev"></span><span id="bitwuzla::parser::Parser::~Parser"></span><span class="target" id="classbitwuzla_1_1parser_1_1Parser_1a5c520cd245c68a2895ddf6d5929dddfa"></span><span class="sig-name descname"><span class="n"><span class="pre">~Parser</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla6parser6ParserD0Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6parser6Parser20configure_terminatorEP10Terminator">
+<span id="_CPPv3N8bitwuzla6parser6Parser20configure_terminatorEP10Terminator"></span><span id="_CPPv2N8bitwuzla6parser6Parser20configure_terminatorEP10Terminator"></span><span id="bitwuzla::parser::Parser::configure_terminator__TerminatorP"></span><span class="target" id="classbitwuzla_1_1parser_1_1Parser_1a5fa99204764ab2f81c1165726897b658"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure_terminator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="terminator.html#_CPPv4N8bitwuzla10TerminatorE" title="bitwuzla::Terminator"><span class="n"><span class="pre">Terminator</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">terminator</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla6parser6Parser20configure_terminatorEP10Terminator" title="Link to this definition"></a><br /></dt>
+<dd><p>Connect or disconnect associated termination configuration instance. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only one terminator can be connected at a time. This will disconnect a previously connected terminator before connecting a new one. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>terminator</strong> – The terminator instance. Nullptr disconnects the currently associated terminator. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
@@ -294,6 +336,28 @@
 </dl>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla6parser6Parser24diagnostic_output_streamEv">
+<span id="_CPPv3NK8bitwuzla6parser6Parser24diagnostic_output_streamEv"></span><span id="_CPPv2NK8bitwuzla6parser6Parser24diagnostic_output_streamEv"></span><span id="bitwuzla::parser::Parser::diagnostic_output_streamC"></span><span class="target" id="classbitwuzla_1_1parser_1_1Parser_1ad142724ac0b0240e47e5d84e9dc7d295"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">diagnostic_output_stream</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla6parser6Parser24diagnostic_output_streamEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the diagnostic output stream (:diagnostic-output-channel in SMT-LIB). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The diagnostic output stream. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla6parser6Parser10statisticsEv">
+<span id="_CPPv3NK8bitwuzla6parser6Parser10statisticsEv"></span><span id="_CPPv2NK8bitwuzla6parser6Parser10statisticsEv"></span><span id="bitwuzla::parser::Parser::statisticsC"></span><span class="target" id="classbitwuzla_1_1parser_1_1Parser_1a5a4e5dfca93b15515e8c29245b326c9a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">statistics</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla6parser6Parser10statisticsEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get current parser statistics. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A map of strings of statistics entries, maps statistic name to value. </p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </dd></dl>
 
@@ -327,6 +391,9 @@
 <span class="w">  </span><span class="n">TermManager</span><span class="w"> </span><span class="n">tm</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// Create a Bitwuzla options instance.</span>
 <span class="w">  </span><span class="n">Options</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Default diagnostic output stream is std::cerr.</span>
+<span class="w">  </span><span class="n">options</span><span class="p">.</span><span class="n">set_diagnostic_output_stream</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// We will parse example file `smt2/quickstart.smt2`.</span>
 <span class="w">  </span><span class="c1">// Create parser instance.</span>
@@ -411,7 +478,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

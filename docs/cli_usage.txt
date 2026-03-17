@@ -20,6 +20,7 @@ Options:
   --lang <M>                        [smt2]       input language {smt2, btor2} 
   -l <n>, --log-level <n>           [0]          log level 
   -m, --produce-models              [false]      model production 
+  --produce-interpolants            [false]      interpolants production 
   --produce-unsat-assumptions       [false]      unsat assumptions production 
   --produce-unsat-cores             [false]      unsat core production 
   -s <n>, --seed <n>                [27644437]   seed for the random number generator 
@@ -35,8 +36,8 @@ Options:
   --bv-solver <M>                   [bitblast]   bv solver engine {preprop, prop, 
                                                  bitblast} 
   -rwl <n>, --rewrite-level <n>     [2]          rewrite level 
-  -S <M>, --sat-solver <M>          [cadical]    backend SAT solver {kissat, cms, 
-                                                 cadical} 
+  -S <M>, --sat-solver <M>          [cadical]    backend SAT solver {kissat, 
+                                                 gimsatul, cms, cadical} 
   --write-aiger <...>               []           write bv abstraction as AIGER to 
                                                  filename 
   --write-cnf <...>                 []           write bv abstraction as CNF to 
@@ -86,8 +87,21 @@ Options:
   --abstraction-bvmul               [true]       term abstraction for bvmul 
   --abstraction-bvudiv              [true]       term abstraction for bvudiv 
   --abstraction-bvurem              [true]       term abstraction for bvurem 
-  --abstraction-eq                  [false]      term abstraction for = 
   --abstraction-ite                 [false]      term abstraction for ite 
+  --interpolants-algo <M>           [mcmillan]   algorithm for interpolant 
+                                                 generation {pudlak, mcmillan} 
+  --interpolants-lift               [true]       lift bit-level interpolant as much as 
+                                                 possible to the theory level (if 
+                                                 disabled, generate inerpolant as 1:1 
+                                                 correspondence from bit-level AIG 
+                                                 interpolant) 
+  --interpolants-subst              [false]      compute interpolant by 
+                                                 substitution, if possible 
+  --interpolants-simp               [false]      simplify bit-level interpolant 
+                                                 (post-processing) 
+  --interpolants-stats              [false]      compute interpolant statistics 
+  --interpolants-print-stats        [false]      print interpolant statistics to 
+                                                 stdout 
   --preprocess                      [true]       enable preprocessing 
   --pp-contr-ands                   [false]      enable contradicting ands 
                                                  preprocessing pass 
@@ -117,6 +131,8 @@ Options:
   --dbg-pp-node-thresh <n>          [0]          warn threshold [%] for new nodes 
                                                  created through preprocessing in 
                                                  total 
+  --check-interpolant               [false]      check interpolant for each 
+                                                 get-interpolant query 
   --check-model                     [false]      check model for each satisfiable 
                                                  query 
   --check-unsat-core                [false]      check unsat core for each 

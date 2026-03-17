@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Term" href="term.html" />
-    <link rel="prev" title="RoundingMode" href="../enums/roundingmode.html" /> 
+    <link rel="prev" title="SatSolverFactory" href="satsolverfactory.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -63,6 +63,8 @@
 <li class="toctree-l4"><a class="reference internal" href="parser.html">Parser</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/result.html">Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolver.html">SatSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolverfactory.html">SatSolverFactory</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Sort</a></li>
 <li class="toctree-l4"><a class="reference internal" href="term.html">Term</a></li>
 <li class="toctree-l4"><a class="reference internal" href="termmanager.html">TermManager</a></li>
@@ -131,7 +133,7 @@ instances.</p>
 <hr class="docutils" />
 <ul class="simple">
 <li><p>class <a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Sort</span></code></a></p></li>
-<li><p>struct <a class="reference internal" href="#_CPPv4IENSt4hashIN8bitwuzla4SortEEE" title="std::hash&lt;bitwuzla::Sort&gt;"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">std::hash&lt;bitwuzla::Sort&gt;</span></code></a></p></li>
+<li><p>struct <code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">std::hash&lt;bitwuzla::Sort&gt;</span></code></p></li>
 <li><p><a class="reference internal" href="#_CPPv4N8bitwuzlaeqERK4SortRK4Sort" title="bool bitwuzla::operator==(const Sort &amp;a, const Sort &amp;b)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bool</span> <span class="pre">bitwuzla::operator==(const</span> <span class="pre">Sort&amp;</span> <span class="pre">a,</span> <span class="pre">const</span> <span class="pre">Sort&amp;</span> <span class="pre">b)</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv4N8bitwuzlaneERK4SortRK4Sort" title="bool bitwuzla::operator!=(const Sort &amp;a, const Sort &amp;b)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bool</span> <span class="pre">bitwuzla::operator!=(const</span> <span class="pre">Sort&amp;</span> <span class="pre">a,</span> <span class="pre">const</span> <span class="pre">Sort&amp;</span> <span class="pre">b)</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv4N8bitwuzlalsERNSt7ostreamERK4Sort" title="std::ostream &amp;bitwuzla::operator&lt;&lt;(std::ostream &amp;out, const Sort &amp;term)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">std::ostream&amp;</span> <span class="pre">bitwuzla::operator&lt;&lt;(std::ostream&amp;</span> <span class="pre">out,</span> <span class="pre">const</span> <span class="pre">Sort&amp;</span> <span class="pre">term)</span></code></a></p></li>
@@ -430,13 +432,13 @@ instances.</p>
 <hr class="docutils" />
 <p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">std</span> <span class="pre">{</span></code></p>
 <dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4IENSt4hashIN8bitwuzla4SortEEE">
-<span id="_CPPv3IENSt4hashIN8bitwuzla4SortEEE"></span><span id="_CPPv2IENSt4hashIN8bitwuzla4SortEEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structstd_1_1hash_3_01bitwuzla_1_1Sort_01_4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hash</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><span class="n"><span class="pre">Sort</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4IENSt4hashIN8bitwuzla4SortEEE" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4IENSt4hashE">
+<span id="_CPPv3IENSt4hashE"></span><span id="_CPPv2IENSt4hashE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structstd_1_1hash_3_01bitwuzla_1_1Sort_01_4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hash</span></span></span><a class="headerlink" href="#_CPPv4IENSt4hashE" title="Link to this definition"></a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NKSt4hashIN8bitwuzla4SortEEclERKN8bitwuzla4SortE">
-<span id="_CPPv3NKSt4hashIN8bitwuzla4SortEEclERKN8bitwuzla4SortE"></span><span id="_CPPv2NKSt4hashIN8bitwuzla4SortEEclERKN8bitwuzla4SortE"></span><span id="std::hash:bitwuzla::Sort:::call-operator__bitwuzla::SortCRC"></span><span class="target" id="structstd_1_1hash_3_01bitwuzla_1_1Sort_01_4_1a470e53b4875bf593247cf97e1aa923d0"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><span class="n"><span class="pre">Sort</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NKSt4hashIN8bitwuzla4SortEEclERKN8bitwuzla4SortE" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NKSt4hashclERKN8bitwuzla4SortE">
+<span id="_CPPv3NKSt4hashclERKN8bitwuzla4SortE"></span><span id="_CPPv2NKSt4hashclERKN8bitwuzla4SortE"></span><span id="std::hash::call-operator__bitwuzla::SortCRC"></span><span class="target" id="structstd_1_1hash_3_01bitwuzla_1_1Sort_01_4_1a470e53b4875bf593247cf97e1aa923d0"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla4SortE" title="bitwuzla::Sort"><span class="n"><span class="pre">Sort</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sort</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NKSt4hashclERKN8bitwuzla4SortE" title="Link to this definition"></a><br /></dt>
 <dd><p>Hash function for Sort. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -458,14 +460,14 @@ instances.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../enums/roundingmode.html" class="btn btn-neutral float-left" title="RoundingMode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="satsolverfactory.html" class="btn btn-neutral float-left" title="SatSolverFactory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="term.html" class="btn btn-neutral float-right" title="Term" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

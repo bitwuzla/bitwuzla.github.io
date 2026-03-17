@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -63,6 +63,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../classes/parser.html">Parser</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/satsolver.html">SatSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/satsolverfactory.html">SatSolverFactory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../classes/sort.html">Sort</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../classes/term.html">Term</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../classes/termmanager.html">TermManager</a></li>
@@ -119,6 +121,7 @@
 <h1>Result<a class="headerlink" href="#result" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><p>enum <a class="reference internal" href="#_CPPv4N8bitwuzla6ResultE" title="bitwuzla::Result"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::Result</span></code></a></p></li>
+<li><p><a class="reference internal" href="#_CPPv4N8bitwuzlalsERNSt7ostreamE6Result" title="std::ostream &amp;bitwuzla::operator&lt;&lt;(std::ostream &amp;out, Result result)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">std::ostream&amp;</span> <span class="pre">bitwuzla::operator&lt;&lt;</span> <span class="pre">(std::ostream&amp;</span> <span class="pre">out,</span> <span class="pre">Result</span> <span class="pre">result)</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv4NSt9to_stringEN8bitwuzla6ResultE" title="std::string std::to_string(bitwuzla::Result result)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">std::string</span> <span class="pre">std::to_string(bitwuzla::Result</span> <span class="pre">result)</span></code></a></p></li>
 </ul>
 <hr class="docutils" />
@@ -149,20 +152,18 @@
 </dd></dl>
 
 <hr class="docutils" />
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzlalsERNSt7ostreamE6Result">
+<span id="_CPPv3N8bitwuzlalsERNSt7ostreamE6Result"></span><span id="_CPPv2N8bitwuzlalsERNSt7ostreamE6Result"></span><span id="bitwuzla::lshift-operator__osR.Result"></span><span class="target" id="namespacebitwuzla_1a617df2a84d75069723bcad3df9ee1a50"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span>, <a class="reference internal" href="#_CPPv4N8bitwuzla6ResultE" title="bitwuzla::Result"><span class="n"><span class="pre">Result</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">r</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzlalsERNSt7ostreamE6Result" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+<hr class="docutils" />
 <p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">std</span> <span class="pre">{</span></code></p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NSt9to_stringEN8bitwuzla6ResultE">
 <span id="_CPPv3NSt9to_stringEN8bitwuzla6ResultE"></span><span id="_CPPv2NSt9to_stringEN8bitwuzla6ResultE"></span><span id="std::to_string__bitwuzla::Result"></span><span class="target" id="namespacestd_1a8b5e9b1680d70e3f76f49a42b409afb7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">to_string</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla6ResultE" title="bitwuzla::Result"><span class="n"><span class="pre">Result</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">result</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4NSt9to_stringEN8bitwuzla6ResultE" title="Link to this definition"></a><br /></dt>
-<dd><p>Get string representation of given result. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>result</strong> – The result. </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The string representation. </p>
-</dd>
-</dl>
-</dd></dl>
+<dd></dd></dl>
 
 <p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
 </section>
@@ -178,7 +179,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

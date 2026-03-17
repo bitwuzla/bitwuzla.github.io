@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -79,6 +79,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv414BitwuzlaParser"><code class="docutils literal notranslate"><span class="pre">BitwuzlaParser</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv419bitwuzla_parser_newP19BitwuzlaTermManagerP15BitwuzlaOptionsPKc7uint8_tPKc"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_new()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv422bitwuzla_parser_deleteP14BitwuzlaParser"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_delete()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv440bitwuzla_parser_set_termination_callbackP14BitwuzlaParserPF7int32_tPvEPv"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_set_termination_callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv446bitwuzla_parser_get_termination_callback_stateP14BitwuzlaParser"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_get_termination_callback_state()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv442bitwuzla_parser_configure_auto_print_modelP14BitwuzlaParserb"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_configure_auto_print_model()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv421bitwuzla_parser_parseP14BitwuzlaParserPKcbbPPKc"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_parse()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv426bitwuzla_parser_parse_termP14BitwuzlaParserPKcPPKc"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_parse_term()</span></code></a></li>
@@ -87,6 +89,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv433bitwuzla_parser_get_declared_funsP14BitwuzlaParserP6size_t"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_get_declared_funs()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv429bitwuzla_parser_get_error_msgP14BitwuzlaParser"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_get_error_msg()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv428bitwuzla_parser_get_bitwuzlaP14BitwuzlaParser"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_get_bitwuzla()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv430bitwuzla_parser_get_statisticsP14BitwuzlaParserPPPKcPPPKcP6size_t"><code class="docutils literal notranslate"><span class="pre">bitwuzla_parser_get_statistics()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../api.html#quickstart">Quickstart</a></li>
@@ -199,6 +202,55 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv440bitwuzla_parser_set_termination_callbackP14BitwuzlaParserPF7int32_tPvEPv">
+<span id="_CPPv340bitwuzla_parser_set_termination_callbackP14BitwuzlaParserPF7int32_tPvEPv"></span><span id="_CPPv240bitwuzla_parser_set_termination_callbackP14BitwuzlaParserPF7int32_tPvEPv"></span><span class="target" id="group__c__bitwuzlaparser_1gadfa06151505dfcd3a0f60ccc10eae98f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_set_termination_callback</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span>, <span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fun</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv440bitwuzla_parser_set_termination_callbackP14BitwuzlaParserPF7int32_tPvEPv" title="Link to this definition"></a><br /></dt>
+<dd><p>Configure a termination callback function.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">state</span></code> of the callback can be retrieved via <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1ga9f86f700a2e780585d38ddb58927e982"><span class="std std-ref"><span class="pre">bitwuzla_parser_get_termination_callback_state()</span></span></a></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla_terminate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzla.html#group__c__bitwuzla_1ga02a938405a46c7a6b4dd6ab22dc7659f"><span class="std std-ref"><span class="pre">bitwuzla_get_termination_callback_state</span></span></a></code></p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parser</strong> – The <a class="reference internal" href="bitwuzla.html#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> parser instance. </p></li>
+<li><p><strong>fun</strong> – The callback function, returns a value != 0 if <code class="docutils literal notranslate"><span class="pre">bitwuzla</span></code> should be terminated. </p></li>
+<li><p><strong>state</strong> – The argument to the callback function.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv446bitwuzla_parser_get_termination_callback_stateP14BitwuzlaParser">
+<span id="_CPPv346bitwuzla_parser_get_termination_callback_stateP14BitwuzlaParser"></span><span id="_CPPv246bitwuzla_parser_get_termination_callback_stateP14BitwuzlaParser"></span><span id="bitwuzla_parser_get_termination_callback_state__BitwuzlaParserP"></span><span class="target" id="group__c__bitwuzlaparser_1ga9f86f700a2e780585d38ddb58927e982"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_get_termination_callback_state</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv446bitwuzla_parser_get_termination_callback_stateP14BitwuzlaParser" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the state of the termination callback function.</p>
+<p>The returned object representing the state of the callback corresponds to the <code class="docutils literal notranslate"><span class="pre">state</span></code> configured as argument to the callback function via <code class="docutils literal notranslate"><a class="reference internal" href="bitwuzla.html#group__c__bitwuzla_1gae849b4da4cf424b7f23f53f5455fe8ce"><span class="std std-ref"><span class="pre">bitwuzla_set_termination_callback()</span></span></a></code>.</p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bitwuzla_terminate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><a class="reference internal" href="bitwuzla.html#group__c__bitwuzla_1gae849b4da4cf424b7f23f53f5455fe8ce"><span class="std std-ref"><span class="pre">bitwuzla_set_termination_callback</span></span></a></code></p></li>
+</ul>
+</p>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>parser</strong> – The <a class="reference internal" href="bitwuzla.html#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> parser instance.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The object passed as argument <code class="docutils literal notranslate"><span class="pre">state</span></code> to the callback function.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv442bitwuzla_parser_configure_auto_print_modelP14BitwuzlaParserb">
 <span id="_CPPv342bitwuzla_parser_configure_auto_print_modelP14BitwuzlaParserb"></span><span id="_CPPv242bitwuzla_parser_configure_auto_print_modelP14BitwuzlaParserb"></span><span id="bitwuzla_parser_configure_auto_print_model__BitwuzlaParserP.b"></span><span class="target" id="group__c__bitwuzlaparser_1ga18659d6314af992c08e267a7e40d7924"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_configure_auto_print_model</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv442bitwuzla_parser_configure_auto_print_modelP14BitwuzlaParserb" title="Link to this definition"></a><br /></dt>
 <dd><p>Enable or disable the automatic printing of the model after each satisfiable query.</p>
@@ -284,7 +336,10 @@
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>size</strong> – The size of the returned sort array. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parser</strong> – The <a class="reference internal" href="bitwuzla.html#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> parser instance. </p></li>
+<li><p><strong>size</strong> – The size of the returned sort array. </p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The declared sorts, NULL if empty. </p>
@@ -302,7 +357,10 @@
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>size</strong> – The size of the returned sort array. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parser</strong> – The <a class="reference internal" href="bitwuzla.html#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> parser instance. </p></li>
+<li><p><strong>size</strong> – The size of the returned sort array. </p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The declared function symbols, NULL if empty. </p>
@@ -335,6 +393,27 @@
 </dl>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430bitwuzla_parser_get_statisticsP14BitwuzlaParserPPPKcPPPKcP6size_t">
+<span id="_CPPv330bitwuzla_parser_get_statisticsP14BitwuzlaParserPPPKcPPPKcP6size_t"></span><span id="_CPPv230bitwuzla_parser_get_statisticsP14BitwuzlaParserPPPKcPPPKcP6size_t"></span><span id="bitwuzla_parser_get_statistics__BitwuzlaParserP.cCPPP.cCPPP.sP"></span><span class="target" id="group__c__bitwuzlaparser_1ga6ebb3adc9284f27e4507ea40e453b145"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitwuzla_parser_get_statistics</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv414BitwuzlaParser" title="BitwuzlaParser"><span class="n"><span class="pre">BitwuzlaParser</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parser</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">keys</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">values</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430bitwuzla_parser_get_statisticsP14BitwuzlaParserPPPKcPPPKcP6size_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Get current parser statistics.</p>
+<p>The statistics are retrieved as a mapping from statistic name (<code class="docutils literal notranslate"><span class="pre">keys</span></code>) to statistic value (<code class="docutils literal notranslate"><span class="pre">values</span></code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Output parameters <code class="docutils literal notranslate"><span class="pre">keys</span></code> and <code class="docutils literal notranslate"><span class="pre">values</span></code> are only valid until the next call to <code class="docutils literal notranslate"><a class="reference internal" href="#group__c__bitwuzlaparser_1ga6ebb3adc9284f27e4507ea40e453b145"><span class="std std-ref"><span class="pre">bitwuzla_parser_get_statistics()</span></span></a></code>. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parser</strong> – The <a class="reference internal" href="bitwuzla.html#bitwuzla_8h_1a567278f1aae009d69e2b0c7f940eb087"><span class="std std-ref">Bitwuzla</span></a> parser instance. </p></li>
+<li><p><strong>keys</strong> – The resulting set of statistic names. </p></li>
+<li><p><strong>values</strong> – The resulting set of statistic values. </p></li>
+<li><p><strong>size</strong> – The resulting size of <code class="docutils literal notranslate"><span class="pre">keys</span></code> and <code class="docutils literal notranslate"><span class="pre">values</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 
@@ -348,7 +427,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

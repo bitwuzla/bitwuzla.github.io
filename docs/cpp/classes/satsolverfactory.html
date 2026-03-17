@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SatSolverFactory &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../static/custom.css?v=3b6f11eb" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../static/doctools.js?v=9bcbadda"></script>
+        <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Sort" href="sort.html" />
+    <link rel="prev" title="SatSolver" href="satsolver.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.9.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html">C++ API Documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../interface.html">C++ Interface</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="bitwuzla.html">Bitwuzla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception.html">Exception</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/kind.html">Kind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/option.html">Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optioninfo.html">OptionInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/result.html">Result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolver.html">SatSolver</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">SatSolverFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sort.html">Sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="term.html">Term</a></li>
+<li class="toctree-l4"><a class="reference internal" href="termmanager.html">TermManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="terminator.html">Terminator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../library_info.html">Library Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../options.html">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/kind.html">Term Kinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../c/api.html">C API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../python/api.html">Python API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocaml/api.html">OCaml API Documentation</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../api.html">C++ API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../interface.html">C++ Interface</a></li>
+      <li class="breadcrumb-item active">SatSolverFactory</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="satsolverfactory">
+<h1>SatSolverFactory<a class="headerlink" href="#satsolverfactory" title="Link to this heading"></a></h1>
+<p>The SAT solver factory of a Bitwuzla instance.</p>
+<p>By default, Bitwuzla maintains an internal SAT solver factory to create SAT
+solver instances and no user intervention is required.</p>
+<p>However, optionally, Bitwuzla also supports configuring an external,
+user-provided SAT solver factory via class
+<a class="reference internal" href="#_CPPv4N8bitwuzla16SatSolverFactoryE" title="bitwuzla::SatSolverFactory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::SatSolverFactory</span></code></a>.
+If configured, this factory generates new <a class="reference internal" href="satsolver.html#_CPPv4N8bitwuzla9SatSolverE" title="bitwuzla::SatSolver"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::SatSolver</span></code></a>
+instances.</p>
+<p>An external SAT solver factory is configured via constructor
+<a class="reference internal" href="bitwuzla.html#_CPPv4N8bitwuzla8Bitwuzla8BitwuzlaER11TermManagerR16SatSolverFactoryRK7Options" title="bitwuzla::Bitwuzla bitwuzla::Bitwuzla::Bitwuzla(TermManager&amp;, SatSolverFactory&amp;, const Options&amp;)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::Bitwuzla</span> <span class="pre">bitwuzla::Bitwuzla::Bitwuzla(TermManager&amp;,</span> <span class="pre">SatSolverFactory&amp;,</span> <span class="pre">const</span> <span class="pre">Options&amp;)</span></code></a>.</p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>class <a class="reference internal" href="#_CPPv4N8bitwuzla16SatSolverFactoryE" title="bitwuzla::SatSolverFactory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::SatSolverFactory</span></code></a></p></li>
+</ul>
+<hr class="docutils" />
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla16SatSolverFactoryE">
+<span id="_CPPv3N8bitwuzla16SatSolverFactoryE"></span><span id="_CPPv2N8bitwuzla16SatSolverFactoryE"></span><span id="bitwuzla::SatSolverFactory"></span><span class="target" id="classbitwuzla_1_1SatSolverFactory"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SatSolverFactory</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla16SatSolverFactoryE" title="Link to this definition"></a><br /></dt>
+<dd><p>The interface for an external (user-provided) SAT solver factory. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This interface is experimental and may change in future versions. </p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla16SatSolverFactory16SatSolverFactoryEv">
+<span id="_CPPv3N8bitwuzla16SatSolverFactory16SatSolverFactoryEv"></span><span id="_CPPv2N8bitwuzla16SatSolverFactory16SatSolverFactoryEv"></span><span id="bitwuzla::SatSolverFactory::SatSolverFactory"></span><span class="target" id="classbitwuzla_1_1SatSolverFactory_1ad100804b67f91fd2f1b2c98e2415feec"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SatSolverFactory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla16SatSolverFactory16SatSolverFactoryEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla16SatSolverFactory14new_sat_solverEv">
+<span id="_CPPv3N8bitwuzla16SatSolverFactory14new_sat_solverEv"></span><span id="_CPPv2N8bitwuzla16SatSolverFactory14new_sat_solverEv"></span><span id="bitwuzla::SatSolverFactory::new_sat_solver"></span><span class="target" id="classbitwuzla_1_1SatSolverFactory_1a70913e674dbaa2ca5cf4ddd401bed5a3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="satsolver.html#_CPPv4N8bitwuzla9SatSolverE" title="bitwuzla::SatSolver"><span class="n"><span class="pre">SatSolver</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_sat_solver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla16SatSolverFactory14new_sat_solverEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Create new (external) SAT solver instance. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The SAT solver instance. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla16SatSolverFactory22has_terminator_supportEv">
+<span id="_CPPv3N8bitwuzla16SatSolverFactory22has_terminator_supportEv"></span><span id="_CPPv2N8bitwuzla16SatSolverFactory22has_terminator_supportEv"></span><span id="bitwuzla::SatSolverFactory::has_terminator_support"></span><span class="target" id="classbitwuzla_1_1SatSolverFactory_1ad70353d5d72dcdf2d3eb221c6eced041"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">has_terminator_support</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla16SatSolverFactory22has_terminator_supportEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Determine if configured SAT solver has terminator support. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="satsolver.html" class="btn btn-neutral float-left" title="SatSolver" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sort.html" class="btn btn-neutral float-right" title="Sort" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

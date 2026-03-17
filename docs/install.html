@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -50,12 +50,12 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation and Build Instructions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#building-bitwuzla">Building Bitwuzla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-bitwuzla-on-linux-and-macos">Building Bitwuzla on Linux and macOS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python-bindings">Python Bindings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#building-without-pip">Building without pip</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#cross-compiling-for-windows">Cross Compiling for Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-bitwuzla-for-windows">Building Bitwuzla for Windows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#api-documentation">API Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#code-coverage-reports">Code Coverage Reports</a></li>
 </ul>
@@ -92,8 +92,8 @@
              
   <section id="installation-and-build-instructions">
 <h1>Installation and Build Instructions<a class="headerlink" href="#installation-and-build-instructions" title="Link to this heading"></a></h1>
-<section id="building-bitwuzla">
-<h2>Building Bitwuzla<a class="headerlink" href="#building-bitwuzla" title="Link to this heading"></a></h2>
+<section id="building-bitwuzla-on-linux-and-macos">
+<h2>Building Bitwuzla on Linux and macOS<a class="headerlink" href="#building-bitwuzla-on-linux-and-macos" title="Link to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone Bitwuzla repository</span>
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bitwuzla/bitwuzla
 <span class="nb">cd</span><span class="w"> </span>bitwuzla
@@ -116,7 +116,8 @@ and the library in <code class="docutils literal notranslate"><span class="pre">
 <li><p><a class="reference external" href="https://www.python.org">Python &gt;= 3.7</a></p></li>
 <li><p><a class="reference external" href="https://mesonbuild.com">Meson &gt;= 0.64</a></p></li>
 <li><p><a class="reference external" href="https://ninja-build.org">Ninja</a></p></li>
-<li><p><a class="reference external" href="https://gmplib.org">GMP &gt;= v6.1 (GNU Multi-Precision arithmetic library)</a></p></li>
+<li><p><a class="reference external" href="https://gmplib.org">GMP &gt;= v6.3 (GNU Multi-Precision arithmetic library)</a></p></li>
+<li><p><a class="reference external" href="https://www.mpfr.org">MPFR &gt;= v4.2.1 (GNU Multiple Precision Floating-Point Reliable Library)</a></p></li>
 <li><p><a class="reference external" href="https://github.com/arminbiere/cadical">CaDiCaL &gt;= 1.5.0</a></p></li>
 <li><p><a class="reference external" href="https://github.com/martin-cs/symfpu">SymFPU</a></p></li>
 </ul>
@@ -171,9 +172,30 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bitwu
 </div>
 </section>
 </section>
-<section id="cross-compiling-for-windows">
-<h2>Cross Compiling for Windows<a class="headerlink" href="#cross-compiling-for-windows" title="Link to this heading"></a></h2>
-<p>Cross compiling Bitwuzla with Mingw-w64 can be done as follows:</p>
+<section id="building-bitwuzla-for-windows">
+<h2>Building Bitwuzla for Windows<a class="headerlink" href="#building-bitwuzla-for-windows" title="Link to this heading"></a></h2>
+<p>Bitwulzla can be either cross-compiled via Mingw-w64 or MSYS2.</p>
+<ul class="simple">
+<li><p><strong>Required Dependencies</strong></p></li>
+</ul>
+<p>The following <cite>mingw</cite> packages are required to compile Bitwuzla for Windows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>mingw-w64-x86_64-gcc</cite></p></li>
+<li><p><cite>mingw-w64-x86_64-gmp</cite></p></li>
+<li><p><cite>mingw-w64-x86_64-meson</cite></p></li>
+<li><p><cite>mingw-w64-x86_64-mpfr</cite></p></li>
+<li><p><cite>mingw-w64-x86_64-ninja</cite></p></li>
+<li><p><cite>mingw-w64-x86_64-python3</cite></p></li>
+<li><p><cite>mingw-w64-x86_64-cython</cite> (optional for Python bindings)</p></li>
+<li><p><cite>mingw-w64-x86_64-gtest</cite> (optional for debug builds)</p></li>
+<li><p><cite>mingw-w64-x86_64-python-pytest</cite> (optional for debug builds)</p></li>
+</ul>
+</div></blockquote>
+<p>On <strong>arm64</strong> machines, replace <cite>x86_64</cite> with <cite>aarch64</cite> for the packages above.
+After setting up the MSYS2 environment, follow the Linux/macOS building
+instructions.
+For cross-compilation add flag <cite>–win64</cite> to the configure line.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone Bitwuzla repository</span>
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bitwuzla/bitwuzla
 <span class="nb">cd</span><span class="w"> </span>bitwuzla
@@ -185,13 +207,6 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bitwu
 <span class="nb">cd</span><span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ninja
 </pre></div>
 </div>
-<ul class="simple">
-<li><p><strong>Required Dependencies</strong></p>
-<ul>
-<li><p><a class="reference external" href="https://www.mingw-w64.org/">mingw-w64</a></p></li>
-</ul>
-</li>
-</ul>
 </section>
 <section id="api-documentation">
 <h2>API Documentation<a class="headerlink" href="#api-documentation" title="Link to this heading"></a></h2>
@@ -210,6 +225,8 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bitwu
 <li><p><a class="reference external" href="https://www.doxygen.nl">Doxygen</a></p></li>
 <li><p><a class="reference external" href="https://www.sphinx-doc.org">Sphinx &gt;= 1.2</a></p></li>
 <li><p><a class="reference external" href="https://sphinxcontrib-bibtex.readthedocs.io">sphinxcontrib-bibtex</a></p></li>
+<li><p><a class="reference external" href="https://sphinx-tabs.readthedocs.io">sphinx-tabs</a></p></li>
+<li><p><a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io">sphinx-rtd-theme</a></p></li>
 <li><p><a class="reference external" href="https://breathe.readthedocs.io">Breathe</a></p></li>
 </ul>
 </li>
@@ -246,7 +263,7 @@ bindings.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

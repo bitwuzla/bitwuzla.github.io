@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -63,6 +63,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../classes/parser.html">Parser</a></li>
 <li class="toctree-l4"><a class="reference internal" href="result.html">Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/satsolver.html">SatSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../classes/satsolverfactory.html">SatSolverFactory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../classes/sort.html">Sort</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../classes/term.html">Term</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../classes/termmanager.html">TermManager</a></li>
@@ -153,6 +155,18 @@ instance.</p>
 <span id="_CPPv3N8bitwuzla6Option14PRODUCE_MODELSE"></span><span id="_CPPv2N8bitwuzla6Option14PRODUCE_MODELSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca774ed7dd04f5529097c71c370400f400"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PRODUCE_MODELS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option14PRODUCE_MODELSE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Model generation.</strong></p>
 <p><em>SMT-LIB:</em> <code class="docutils literal notranslate"><span class="pre">:produce-models</span></code></p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
+</ul>
+</p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option20PRODUCE_INTERPOLANTSE">
+<span id="_CPPv3N8bitwuzla6Option20PRODUCE_INTERPOLANTSE"></span><span id="_CPPv2N8bitwuzla6Option20PRODUCE_INTERPOLANTSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca6751c7d1f4e64dfbb8bc891df1288f60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PRODUCE_INTERPOLANTS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option20PRODUCE_INTERPOLANTSE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Interpolant generation.</strong></p>
+<p><em>SMT-LIB:</em> <code class="docutils literal notranslate"><span class="pre">:produce-interpolants</span></code></p>
 <p><em>Values:</em><ul class="simple">
 <li><p><strong>true</strong>: enable</p></li>
 <li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
@@ -329,7 +343,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">Option::BV_SOLVER</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -350,7 +364,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">Option::BV_SOLVER</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -370,7 +384,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">Option::BV_SOLVER</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -390,7 +404,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">Option::BV_SOLVER</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -411,7 +425,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">Option::BV_SOLVER</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -432,7 +446,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">Option::BV_SOLVER</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -452,7 +466,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">Option::BV_SOLVER</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -472,7 +486,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">Option::BV_SOLVER</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -493,7 +507,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">BV_SOLVER</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10a53425daf124d689a61c6c89725bd"><span class="std std-ref">Option::BV_SOLVER</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -531,7 +545,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -552,7 +566,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -572,7 +586,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -593,7 +607,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -614,7 +628,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -634,7 +648,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -655,7 +669,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -675,7 +689,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -695,7 +709,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -715,7 +729,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -735,7 +749,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -755,27 +769,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
-</div>
-</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is an expert option to configure the abstraction module. </p>
-</div>
-</dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option17ABSTRACTION_EQUALE">
-<span id="_CPPv3N8bitwuzla6Option17ABSTRACTION_EQUALE"></span><span id="_CPPv2N8bitwuzla6Option17ABSTRACTION_EQUALE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caba40dafb6d76476cc671a11ba87016a9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION_EQUAL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option17ABSTRACTION_EQUALE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Abstraction module: Abstract equality terms.</strong></p>
-<p><em>Values:</em><ul class="simple">
-<li><p><strong>true</strong>: enable</p></li>
-<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
-</ul>
-</p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
@@ -795,12 +789,113 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">ABSTRACTION</span></a></p>
+<p><a class="reference internal" href="#namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"><span class="std std-ref">Option::ABSTRACTION</span></a></p>
 </div>
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is an expert option to configure the abstraction module. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option17INTERPOLANTS_ALGOE">
+<span id="_CPPv3N8bitwuzla6Option17INTERPOLANTS_ALGOE"></span><span id="_CPPv2N8bitwuzla6Option17INTERPOLANTS_ALGOE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca186a777e6c65ebad4859c33ec7c2f493"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INTERPOLANTS_ALGO</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option17INTERPOLANTS_ALGOE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Interpolant generation.</strong></p>
+<p>The bit-level algorithm used for interpolant generation.</p>
+<p><em>Values:</em> <p><ul class="simple">
+<li><p><strong>mcmillan</strong>:
+Use the <em>asymmetric</em> interpolant generation via McMillan’s algorithm
+<span id="id4">[<a class="reference internal" href="../../references.html#id10" title="Kenneth L. McMillan. Interpolation and sat-based model checking. In Warren A. Hunt Jr. and Fabio Somenzi, editors, Computer Aided Verification, 15th International Conference, CAV 2003, Boulder, CO, USA, July 8-12, 2003, Proceedings, volume 2725 of Lecture Notes in Computer Science, 1–13. Springer, 2003. URL: https://doi.org/10.1007/978-3-540-45069-6\_1, doi:10.1007/978-3-540-45069-6\_1.">McM03</a>]</span>. [<strong>default</strong>]</p></li>
+<li><p><strong>pudlak</strong>:
+Use the <em>symmetric</em> interpolant generation via Pudlak’s algorithm
+<span id="id5">[<a class="reference internal" href="../../references.html#id11" title="Pavel Pudlák. Lower bounds for resolution and cutting plane proofs and monotone computations. J. Symb. Log., 62(3):981–998, 1997. URL: https://doi.org/10.2307/2275583, doi:10.2307/2275583.">Pudlak97</a>]</span>.</p></li>
+</ul>
+</p>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure interpolant generation. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option17INTERPOLANTS_LIFTE">
+<span id="_CPPv3N8bitwuzla6Option17INTERPOLANTS_LIFTE"></span><span id="_CPPv2N8bitwuzla6Option17INTERPOLANTS_LIFTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca2dfbe73131f1fdf373d7b35f8fc346c8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INTERPOLANTS_LIFT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option17INTERPOLANTS_LIFTE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Interpolant generation.</strong></p>
+<p>When enabled, the generated interpolant is lifted as much as possible to the theory level. Else, the resulting interpolant exactly corresponds to the bit-level AIG interpolant.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure interpolant generation. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18INTERPOLANTS_SUBSTE">
+<span id="_CPPv3N8bitwuzla6Option18INTERPOLANTS_SUBSTE"></span><span id="_CPPv2N8bitwuzla6Option18INTERPOLANTS_SUBSTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca8abde2e1a710ac908de6de16acde7e56"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INTERPOLANTS_SUBST</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18INTERPOLANTS_SUBSTE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Interpolant generation.</strong></p>
+<p>When enabled, the generated interpolant is computed via substituitions. If all A-local symbols are eliminated via substitution, the resulting A is an interpolant. If all B-local symbols are eliminated via substitution, ~B is an interpolant.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure interpolant generation. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option17INTERPOLANTS_SIMPE">
+<span id="_CPPv3N8bitwuzla6Option17INTERPOLANTS_SIMPE"></span><span id="_CPPv2N8bitwuzla6Option17INTERPOLANTS_SIMPE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca3ce53bd805d2bf38fff8dd595a1b0106"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INTERPOLANTS_SIMP</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option17INTERPOLANTS_SIMPE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Interpolant generation.</strong></p>
+<p>When enabled, the generated bit-level interpolant is simplified by applying several post-processing steps that try to recover more word-level structure.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure interpolant generation. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option18INTERPOLANTS_STATSE">
+<span id="_CPPv3N8bitwuzla6Option18INTERPOLANTS_STATSE"></span><span id="_CPPv2N8bitwuzla6Option18INTERPOLANTS_STATSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca491698e892f38a8473832bfe45b745d8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INTERPOLANTS_STATS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option18INTERPOLANTS_STATSE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Interpolant generation.</strong></p>
+<p>When enabled, compute statistics about generated interpolant.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure interpolant generation. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option24INTERPOLANTS_PRINT_STATSE">
+<span id="_CPPv3N8bitwuzla6Option24INTERPOLANTS_PRINT_STATSE"></span><span id="_CPPv2N8bitwuzla6Option24INTERPOLANTS_PRINT_STATSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cadede91ebaa92f2b6af5f9e49faedee44"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INTERPOLANTS_PRINT_STATS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option24INTERPOLANTS_PRINT_STATSE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Interpolant generation.</strong></p>
+<p>When enabled, prints statistics to stdout.</p>
+<p><em>Values:</em><ul class="simple">
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
+</ul>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert option to configure interpolant generation. </p>
 </div>
 </dd></dl>
 
@@ -820,7 +915,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option21PP_CONTRADICTING_ANDSE">
 <span id="_CPPv3N8bitwuzla6Option21PP_CONTRADICTING_ANDSE"></span><span id="_CPPv2N8bitwuzla6Option21PP_CONTRADICTING_ANDSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1c1c4b2437c7952b55e5e2877a75f4fd"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_CONTRADICTING_ANDS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option21PP_CONTRADICTING_ANDSE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Preprocessing: Find contradicting bit-vector ands.</strong></p>
-<p>When enabled, substitutes contradicting nodes of kind <a class="reference internal" href="kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca470f951c16d4dfe3fd980f21a2a9a58c"><span class="std std-ref">BV_AND</span></a> with zero.</p>
+<p>When enabled, substitutes contradicting nodes of kind <a class="reference internal" href="kind.html#namespacebitwuzla_1aacab907529465556d9a6035fc7c62f4ca470f951c16d4dfe3fd980f21a2a9a58c"><span class="std std-ref">Kind::BV_AND</span></a> with zero.</p>
 <p><em>Values:</em><ul class="simple">
 <li><p><strong>true</strong>: enable</p></li>
 <li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
@@ -964,6 +1059,16 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 </dd></dl>
 
 <dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option21DBG_CHECK_INTERPOLANTE">
+<span id="_CPPv3N8bitwuzla6Option21DBG_CHECK_INTERPOLANTE"></span><span id="_CPPv2N8bitwuzla6Option21DBG_CHECK_INTERPOLANTE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca06949b043eb510c7b21df08e722b843b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_CHECK_INTERPOLANT</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option21DBG_CHECK_INTERPOLANTE" title="Link to this definition"></a><br /></dt>
+<dd><p><strong>Debug: Check interpolants for each get-interpolant query.</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an expert debug option. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15DBG_CHECK_MODELE">
 <span id="_CPPv3N8bitwuzla6Option15DBG_CHECK_MODELE"></span><span id="_CPPv2N8bitwuzla6Option15DBG_CHECK_MODELE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186cab18b82c70b05c19150feec3faa69e579"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DBG_CHECK_MODEL</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15DBG_CHECK_MODELE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Debug: Check models for each satisfiable query.</strong></p>
@@ -999,7 +1104,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

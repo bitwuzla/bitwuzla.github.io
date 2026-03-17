@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SatSolver &mdash; Bitwuzla  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../static/custom.css?v=3b6f11eb" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../static/jquery.js?v=5d32c60e"></script>
+        <script src="../../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../static/doctools.js?v=9bcbadda"></script>
+        <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SatSolverFactory" href="satsolverfactory.html" />
+    <link rel="prev" title="RoundingMode" href="../enums/roundingmode.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Bitwuzla
+          </a>
+              <div class="version">
+                0.9.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../binary.html">Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html">C++ API Documentation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../interface.html">C++ Interface</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="bitwuzla.html">Bitwuzla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exception.html">Exception</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/kind.html">Kind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/option.html">Option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="options.html">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optioninfo.html">OptionInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/result.html">Result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../enums/roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">SatSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolverfactory.html">SatSolverFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sort.html">Sort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="term.html">Term</a></li>
+<li class="toctree-l4"><a class="reference internal" href="termmanager.html">TermManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="terminator.html">Terminator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../library_info.html">Library Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../interface.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../options.html">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/kind.html">Term Kinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../c/api.html">C API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../python/api.html">Python API Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ocaml/api.html">OCaml API Documentation</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Bitwuzla</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../api.html">C++ API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../interface.html">C++ Interface</a></li>
+      <li class="breadcrumb-item active">SatSolver</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="satsolver">
+<h1>SatSolver<a class="headerlink" href="#satsolver" title="Link to this heading"></a></h1>
+<p>The SAT solver instance of a Bitwuzla instance.</p>
+<p>By default, Bitwuzla creates <a class="reference internal" href="#_CPPv4N8bitwuzla9SatSolverE" title="bitwuzla::SatSolver"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::SatSolver</span></code></a> instances
+internally and no user intervention is required.</p>
+<p>However, optionally, also Bitwuzla supports configuring an external,
+user-provided SAT solver factory via class
+<a class="reference internal" href="satsolverfactory.html#_CPPv4N8bitwuzla16SatSolverFactoryE" title="bitwuzla::SatSolverFactory"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::SatSolverFactory</span></code></a>, which generates new
+<a class="reference internal" href="#_CPPv4N8bitwuzla9SatSolverE" title="bitwuzla::SatSolver"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::SatSolver</span></code></a> instances.</p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>class <a class="reference internal" href="#_CPPv4N8bitwuzla9SatSolverE" title="bitwuzla::SatSolver"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::SatSolver</span></code></a></p></li>
+</ul>
+<hr class="docutils" />
+<p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">bitwuzla</span> <span class="pre">{</span></code></p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolverE">
+<span id="_CPPv3N8bitwuzla9SatSolverE"></span><span id="_CPPv2N8bitwuzla9SatSolverE"></span><span id="bitwuzla::SatSolver"></span><span class="target" id="classbitwuzla_1_1SatSolver"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SatSolver</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolverE" title="Link to this definition"></a><br /></dt>
+<dd><p>The SAT solver interface. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This interface is experimental and may change in future versions. </p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolver9SatSolverEv">
+<span id="_CPPv3N8bitwuzla9SatSolver9SatSolverEv"></span><span id="_CPPv2N8bitwuzla9SatSolver9SatSolverEv"></span><span id="bitwuzla::SatSolver::SatSolver"></span><span class="target" id="classbitwuzla_1_1SatSolver_1ad35e5cfcaf2b3914a73f9335360f298c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SatSolver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolver9SatSolverEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolverD0Ev">
+<span id="_CPPv3N8bitwuzla9SatSolverD0Ev"></span><span id="_CPPv2N8bitwuzla9SatSolverD0Ev"></span><span id="bitwuzla::SatSolver::~SatSolver"></span><span class="target" id="classbitwuzla_1_1SatSolver_1aa07ff1d979ca3a0b1fe10a3eaea309b0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~SatSolver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolverD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolver3addE7int32_t7int64_t">
+<span id="_CPPv3N8bitwuzla9SatSolver3addE7int32_t7int64_t"></span><span id="_CPPv2N8bitwuzla9SatSolver3addE7int32_t7int64_t"></span><span id="bitwuzla::SatSolver::add__int32_t.int64_t"></span><span class="target" id="classbitwuzla_1_1SatSolver_1a798d89c60444c449424f48c6e7096bab"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lit</span></span>, <span class="n"><span class="pre">int64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cgroup_id</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolver3addE7int32_t7int64_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Add valid literal to current clause. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lit</strong> – The literal to add, 0 to terminate clause.. </p></li>
+<li><p><strong>cgroup_id</strong> – The “clause group” id, associates a clause with a clause group. This is only relevant for interpolation where this labeling allows for mapping back clauses to the corresponding nodes in the bit-level circuit. It can be left at its default value, otherwise. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolver6assumeE7int32_t">
+<span id="_CPPv3N8bitwuzla9SatSolver6assumeE7int32_t"></span><span id="_CPPv2N8bitwuzla9SatSolver6assumeE7int32_t"></span><span id="bitwuzla::SatSolver::assume__int32_t"></span><span class="target" id="classbitwuzla_1_1SatSolver_1ad86c24e75b61ea25e5d5d957749584f5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assume</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lit</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolver6assumeE7int32_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Assume valid (non-zero) literal for next call to ‘check_sat’. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lit</strong> – The literal to assume. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolver5valueE7int32_t">
+<span id="_CPPv3N8bitwuzla9SatSolver5valueE7int32_t"></span><span id="_CPPv2N8bitwuzla9SatSolver5valueE7int32_t"></span><span id="bitwuzla::SatSolver::value__int32_t"></span><span class="target" id="classbitwuzla_1_1SatSolver_1a5d41733a8a9e5e2b5d5549856f7a73d9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lit</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolver5valueE7int32_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Get value of valid non-zero literal. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lit</strong> – The literal to query. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value of the literal (-1 = false, 1 = true, 0 = unknown). </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolver6failedE7int32_t">
+<span id="_CPPv3N8bitwuzla9SatSolver6failedE7int32_t"></span><span id="_CPPv2N8bitwuzla9SatSolver6failedE7int32_t"></span><span id="bitwuzla::SatSolver::failed__int32_t"></span><span class="target" id="classbitwuzla_1_1SatSolver_1ac693d648ab0a65a365461594d3b063d5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">failed</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lit</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolver6failedE7int32_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Determine if the valid non-zero literal is in the unsat core. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lit</strong> – The literal to query. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the literal is in the core, and false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolver5fixedE7int32_t">
+<span id="_CPPv3N8bitwuzla9SatSolver5fixedE7int32_t"></span><span id="_CPPv2N8bitwuzla9SatSolver5fixedE7int32_t"></span><span id="bitwuzla::SatSolver::fixed__int32_t"></span><span class="target" id="classbitwuzla_1_1SatSolver_1a8d889848c8916be4e55ad55f6fe5f341"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fixed</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lit</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolver5fixedE7int32_t" title="Link to this definition"></a><br /></dt>
+<dd><p>Determine if the given literal is implied by the formula. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1 if it is implied, -1 if it is not implied and 0 if unknown. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolver5solveEv">
+<span id="_CPPv3N8bitwuzla9SatSolver5solveEv"></span><span id="_CPPv2N8bitwuzla9SatSolver5solveEv"></span><span id="bitwuzla::SatSolver::solve"></span><span class="target" id="classbitwuzla_1_1SatSolver_1aba7c79f391148a065c03451c1e565d94"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="../enums/result.html#_CPPv4N8bitwuzla6ResultE" title="bitwuzla::Result"><span class="n"><span class="pre">Result</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">solve</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolver5solveEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Check satisfiability of current formula. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The result of the satisfiability check. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla9SatSolver20configure_terminatorEP10Terminator">
+<span id="_CPPv3N8bitwuzla9SatSolver20configure_terminatorEP10Terminator"></span><span id="_CPPv2N8bitwuzla9SatSolver20configure_terminatorEP10Terminator"></span><span id="bitwuzla::SatSolver::configure_terminator__TerminatorP"></span><span class="target" id="classbitwuzla_1_1SatSolver_1a6d8e3d46812209528c227695bd0e21ea"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure_terminator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="terminator.html#_CPPv4N8bitwuzla10TerminatorE" title="bitwuzla::Terminator"><span class="n"><span class="pre">Terminator</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">terminator</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8bitwuzla9SatSolver20configure_terminatorEP10Terminator" title="Link to this definition"></a><br /></dt>
+<dd><p>Configure a termination callback function via a terminator. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>terminator</strong> – The terminator. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla9SatSolver8get_nameEv">
+<span id="_CPPv3NK8bitwuzla9SatSolver8get_nameEv"></span><span id="_CPPv2NK8bitwuzla9SatSolver8get_nameEv"></span><span id="bitwuzla::SatSolver::get_nameC"></span><span class="target" id="classbitwuzla_1_1SatSolver_1a4fd30e65cd19be41f53fd45b901f45d3"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla9SatSolver8get_nameEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the name of this SAT solver. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of this SAT solver. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8bitwuzla9SatSolver11get_versionEv">
+<span id="_CPPv3NK8bitwuzla9SatSolver11get_versionEv"></span><span id="_CPPv2NK8bitwuzla9SatSolver11get_versionEv"></span><span id="bitwuzla::SatSolver::get_versionC"></span><span class="target" id="classbitwuzla_1_1SatSolver_1a94bf52e9c06e31c1e68e70bc05e418de"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_version</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8bitwuzla9SatSolver11get_versionEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the version of this SAT solver. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The version of the underly ing SAT solver. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<p><code class="code docutils literal notranslate"><span class="pre">}</span></code></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../enums/roundingmode.html" class="btn btn-neutral float-left" title="RoundingMode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="satsolverfactory.html" class="btn btn-neutral float-right" title="SatSolverFactory" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

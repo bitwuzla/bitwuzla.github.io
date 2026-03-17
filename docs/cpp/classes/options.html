@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -63,6 +63,8 @@
 <li class="toctree-l4"><a class="reference internal" href="parser.html">Parser</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/result.html">Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolver.html">SatSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolverfactory.html">SatSolverFactory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sort.html">Sort</a></li>
 <li class="toctree-l4"><a class="reference internal" href="term.html">Term</a></li>
 <li class="toctree-l4"><a class="reference internal" href="termmanager.html">TermManager</a></li>
@@ -133,7 +135,7 @@ options with modes are configured via
 <a class="reference internal" href="#_CPPv4N8bitwuzla7Options3setE6OptionRKNSt6stringE" title="void bitwuzla::Options::set(Option option, const std::string &amp;value)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">void</span> <span class="pre">bitwuzla::Options::set(Option</span> <span class="pre">option,</span> <span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">value)</span></code></a>.
 The option kind is defined via <a class="reference internal" href="../enums/option.html#_CPPv4N8bitwuzla6OptionE" title="bitwuzla::Option"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::Option</span></code></a>.
 A <strong>comprehensive list</strong> of all configurable options is available
-<span class="xref std std-doc">here</span>.</p>
+<a class="reference internal" href="../enums/option.html"><span class="doc">here</span></a>.</p>
 <p>More information on and an example for how to configure and query configuration
 options is <a class="reference internal" href="../options.html"><span class="doc">here</span></a>.</p>
 <div class="admonition note">
@@ -173,6 +175,21 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla7OptionsaSERK7Options">
 <span id="_CPPv3N8bitwuzla7OptionsaSERK7Options"></span><span id="_CPPv2N8bitwuzla7OptionsaSERK7Options"></span><span id="bitwuzla::Options::assign-operator__OptionsCR"></span><span class="target" id="classbitwuzla_1_1Options_1a2a37ec984ea0d700986f211d41410a32"></span><a class="reference internal" href="#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8bitwuzla7OptionsE" title="bitwuzla::Options"><span class="n"><span class="pre">Options</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">options</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla7OptionsaSERK7Options" title="Link to this definition"></a><br /></dt>
 <dd><p>Copy assignment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla7Options28set_diagnostic_output_streamERNSt7ostreamE">
+<span id="_CPPv3N8bitwuzla7Options28set_diagnostic_output_streamERNSt7ostreamE"></span><span id="_CPPv2N8bitwuzla7Options28set_diagnostic_output_streamERNSt7ostreamE"></span><span id="bitwuzla::Options::set_diagnostic_output_stream__osR"></span><span class="target" id="classbitwuzla_1_1Options_1a8eb31ebf73e48a60cd3d51a63b8347c8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_diagnostic_output_stream</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla7Options28set_diagnostic_output_streamERNSt7ostreamE" title="Link to this definition"></a><br /></dt>
+<dd><p>Set diagnostic output stream for logging purposes. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Default stream is std::cerr. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>out</strong> – Output stream. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
@@ -356,7 +373,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
 <span id="_CPPv3N8bitwuzla7Options3setERKNSt6vectorINSt6stringEEE"></span><span id="_CPPv2N8bitwuzla7Options3setERKNSt6vectorINSt6stringEEE"></span><span id="bitwuzla::Options::set__std::vector:ss:CR"></span><span class="target" id="classbitwuzla_1_1Options_1a2e329072edd196df44c838a5a4781a34"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8bitwuzla7Options3setERKNSt6vectorINSt6stringEEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Set options via command line arguments.</p>
 <p>Supports the following command line option format: Short option names: -short … {“-short”} -short=val … {“-short=val”} -short val … {“-short”, “val”}</p>
-<p>Long option names: &amp;#8212;long … {”–long”} &amp;#8212;long=val … {”–long=val”} &amp;#8212;long val … {”–long”, “val”}</p>
+<p>Long option names: –long … {”–long”} –long=val … {”–long=val”} –long val … {”–long”, “val”}</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>args</strong> – List of command line options. </p>
@@ -423,7 +440,7 @@ options is <a class="reference internal" href="../options.html"><span class="doc
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

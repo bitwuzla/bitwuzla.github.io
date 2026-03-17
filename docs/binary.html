@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -108,6 +108,7 @@ Options:
   --lang &lt;M&gt;                        [smt2]       input language {smt2, btor2} 
   -l &lt;n&gt;, --log-level &lt;n&gt;           [0]          log level 
   -m, --produce-models              [false]      model production 
+  --produce-interpolants            [false]      interpolants production 
   --produce-unsat-assumptions       [false]      unsat assumptions production 
   --produce-unsat-cores             [false]      unsat core production 
   -s &lt;n&gt;, --seed &lt;n&gt;                [27644437]   seed for the random number generator 
@@ -123,8 +124,8 @@ Options:
   --bv-solver &lt;M&gt;                   [bitblast]   bv solver engine {preprop, prop, 
                                                  bitblast} 
   -rwl &lt;n&gt;, --rewrite-level &lt;n&gt;     [2]          rewrite level 
-  -S &lt;M&gt;, --sat-solver &lt;M&gt;          [cadical]    backend SAT solver {kissat, cms, 
-                                                 cadical} 
+  -S &lt;M&gt;, --sat-solver &lt;M&gt;          [cadical]    backend SAT solver {kissat, 
+                                                 gimsatul, cms, cadical} 
   --write-aiger &lt;...&gt;               []           write bv abstraction as AIGER to 
                                                  filename 
   --write-cnf &lt;...&gt;                 []           write bv abstraction as CNF to 
@@ -174,8 +175,21 @@ Options:
   --abstraction-bvmul               [true]       term abstraction for bvmul 
   --abstraction-bvudiv              [true]       term abstraction for bvudiv 
   --abstraction-bvurem              [true]       term abstraction for bvurem 
-  --abstraction-eq                  [false]      term abstraction for = 
   --abstraction-ite                 [false]      term abstraction for ite 
+  --interpolants-algo &lt;M&gt;           [mcmillan]   algorithm for interpolant 
+                                                 generation {pudlak, mcmillan} 
+  --interpolants-lift               [true]       lift bit-level interpolant as much as 
+                                                 possible to the theory level (if 
+                                                 disabled, generate inerpolant as 1:1 
+                                                 correspondence from bit-level AIG 
+                                                 interpolant) 
+  --interpolants-subst              [false]      compute interpolant by 
+                                                 substitution, if possible 
+  --interpolants-simp               [false]      simplify bit-level interpolant 
+                                                 (post-processing) 
+  --interpolants-stats              [false]      compute interpolant statistics 
+  --interpolants-print-stats        [false]      print interpolant statistics to 
+                                                 stdout 
   --preprocess                      [true]       enable preprocessing 
   --pp-contr-ands                   [false]      enable contradicting ands 
                                                  preprocessing pass 
@@ -205,6 +219,8 @@ Options:
   --dbg-pp-node-thresh &lt;n&gt;          [0]          warn threshold [%] for new nodes 
                                                  created through preprocessing in 
                                                  total 
+  --check-interpolant               [false]      check interpolant for each 
+                                                 get-interpolant query 
   --check-model                     [false]      check model for each satisfiable 
                                                  query 
   --check-unsat-core                [false]      check unsat core for each 
@@ -225,7 +241,7 @@ Options:
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

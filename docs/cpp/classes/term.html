@@ -38,7 +38,7 @@
             Bitwuzla
           </a>
               <div class="version">
-                0.8.1
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -63,6 +63,8 @@
 <li class="toctree-l4"><a class="reference internal" href="parser.html">Parser</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/result.html">Result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../enums/roundingmode.html">RoundingMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolver.html">SatSolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="satsolverfactory.html">SatSolverFactory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sort.html">Sort</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Term</a></li>
 <li class="toctree-l4"><a class="reference internal" href="termmanager.html">TermManager</a></li>
@@ -119,7 +121,7 @@
 <h1>Term<a class="headerlink" href="#term" title="Link to this heading"></a></h1>
 <p>Terms of a given <a class="reference internal" href="../enums/kind.html#_CPPv4N8bitwuzla4KindE" title="bitwuzla::Kind"><code class="xref cpp cpp-enum docutils literal notranslate"><span class="pre">bitwuzla::Kind</span></code></a> are created via
 <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bitwuzla::mk_term()</span></code>. A comprehensive documentation of supported
-term kinds can be found <span class="xref std std-doc">here</span>.
+term kinds can be found <a class="reference internal" href="../enums/kind.html"><span class="doc">here</span></a>.
 For creating terms that represent general and special values of a given sort,
 Bitwuzla provides additional functions, see below.</p>
 <div class="admonition note">
@@ -130,7 +132,7 @@ instances.</p>
 <hr class="docutils" />
 <ul class="simple">
 <li><p>class <a class="reference internal" href="#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">bitwuzla::Term</span></code></a></p></li>
-<li><p>struct <a class="reference internal" href="#_CPPv4IENSt4hashIN8bitwuzla4TermEEE" title="std::hash&lt;bitwuzla::Term&gt;"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">std::hash&lt;bitwuzla::Term&gt;</span></code></a></p></li>
+<li><p>struct <code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">std::hash&lt;bitwuzla::Term&gt;</span></code></p></li>
 <li><p><a class="reference internal" href="#_CPPv4N8bitwuzlaeqERK4TermRK4Term" title="bool bitwuzla::operator==(const Term &amp;a, const Term &amp;b)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bool</span> <span class="pre">bitwuzla::operator==(const</span> <span class="pre">Term&amp;</span> <span class="pre">a,</span> <span class="pre">const</span> <span class="pre">Term&amp;</span> <span class="pre">b)</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv4N8bitwuzlaneERK4TermRK4Term" title="bool bitwuzla::operator!=(const Term &amp;a, const Term &amp;b)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">bool</span> <span class="pre">bitwuzla::operator!=(const</span> <span class="pre">Term&amp;</span> <span class="pre">a,</span> <span class="pre">const</span> <span class="pre">Term&amp;</span> <span class="pre">b)</span></code></a></p></li>
 <li><p><a class="reference internal" href="#_CPPv4N8bitwuzlalsERNSt7ostreamERK4Term" title="std::ostream &amp;bitwuzla::operator&lt;&lt;(std::ostream &amp;out, const Term &amp;term)"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">std::ostream&amp;</span> <span class="pre">bitwuzla::operator&lt;&lt;(std::ostream&amp;</span> <span class="pre">out,</span> <span class="pre">const</span> <span class="pre">Term&amp;</span> <span class="pre">term)</span></code></a></p></li>
@@ -610,13 +612,13 @@ instances.</p>
 <hr class="docutils" />
 <p><code class="code docutils literal notranslate"><span class="pre">namespace</span> <span class="pre">std</span> <span class="pre">{</span></code></p>
 <dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4IENSt4hashIN8bitwuzla4TermEEE">
-<span id="_CPPv3IENSt4hashIN8bitwuzla4TermEEE"></span><span id="_CPPv2IENSt4hashIN8bitwuzla4TermEEE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structstd_1_1hash_3_01bitwuzla_1_1Term_01_4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hash</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4IENSt4hashIN8bitwuzla4TermEEE" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4IENSt4hashE">
+<span id="_CPPv3IENSt4hashE"></span><span id="_CPPv2IENSt4hashE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structstd_1_1hash_3_01bitwuzla_1_1Term_01_4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hash</span></span></span><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NKSt4hashIN8bitwuzla4TermEEclERKN8bitwuzla4TermE">
-<span id="_CPPv3NKSt4hashIN8bitwuzla4TermEEclERKN8bitwuzla4TermE"></span><span id="_CPPv2NKSt4hashIN8bitwuzla4TermEEclERKN8bitwuzla4TermE"></span><span id="std::hash:bitwuzla::Term:::call-operator__bitwuzla::TermCRC"></span><span class="target" id="structstd_1_1hash_3_01bitwuzla_1_1Term_01_4_1a798c1622c68e4ecfd8d9ae0ede064a33"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NKSt4hashIN8bitwuzla4TermEEclERKN8bitwuzla4TermE" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NKSt4hashclERKN8bitwuzla4TermE">
+<span id="_CPPv3NKSt4hashclERKN8bitwuzla4TermE"></span><span id="_CPPv2NKSt4hashclERKN8bitwuzla4TermE"></span><span id="std::hash::call-operator__bitwuzla::TermCRC"></span><span class="target" id="structstd_1_1hash_3_01bitwuzla_1_1Term_01_4_1a798c1622c68e4ecfd8d9ae0ede064a33"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">bitwuzla</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8bitwuzla4TermE" title="bitwuzla::Term"><span class="n"><span class="pre">Term</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NKSt4hashclERKN8bitwuzla4TermE" title="Link to this definition"></a><br /></dt>
 <dd><p>Hash function for Term. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -645,7 +647,7 @@ instances.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, the authors of Bitwuzla.</p>
+    <p>&#169; Copyright 2026, the authors of Bitwuzla.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
