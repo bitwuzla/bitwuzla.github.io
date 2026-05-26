@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,19 +9,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Command Line Interface &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" type="text/css" href="static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="static/custom.css?v=3b6f11eb" />
+      <link rel="stylesheet" type="text/css" href="static/css/theme.css?v=7ab3649f" />
+      <link rel="stylesheet" type="text/css" href="static/custom.css?v=d0e17490" />
 
   
-  <!--[if lt IE 9]>
-    <script src="static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="static/jquery.js?v=5d32c60e"></script>
-        <script src="static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="static/documentation_options.js?v=5929fcd5"></script>
-        <script src="static/doctools.js?v=9bcbadda"></script>
-        <script src="static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="static/jquery.js?v=5d32c60e"></script>
+      <script src="static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="static/documentation_options.js?v=5929fcd5"></script>
+      <script src="static/doctools.js?v=fd6eb6e6"></script>
+      <script src="static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -31,15 +30,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-
-          
-          
-          <a href="index.html" class="icon icon-home">
-            Bitwuzla
-          </a>
-              <div class="version">
-                0.9.0
-              </div>
+  <a href="index.html" class="icon icon-home">
+    Bitwuzla
+  </a>
+  <div class="version">0.9.1</div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -47,6 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
+
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation and Build Instructions</a></li>
@@ -83,7 +78,7 @@
   <section id="command-line-interface">
 <h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Link to this heading"></a></h1>
 <p>Bitwuzla provides a command line interface that supports parsing of SMT-LIBv2
-<span id="id1">[<a class="reference internal" href="references.html#id5" title="Clark Barrett, Pascal Fontaine, and Cesare Tinelli. The SMT-LIB Standard: Version 2.6. Technical Report, Department of Computer Science, The University of Iowa, 2017. URL: https://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf.">BFT17</a>]</span> and non-sequential BTOR2 <span id="id2">[<a class="reference internal" href="references.html#id4" title="Aina Niemetz, Mathias Preiner, Clifford Wolf, and Armin Biere. Btor2 , BtorMC and Boolector 3.0. In Hana Chockler and Georg Weissenbacher, editors, Computer Aided Verification - 30th International Conference, CAV 2018, Held as Part of the Federated Logic Conference, FloC 2018, Oxford, UK, July 14-17, 2018, Proceedings, Part I, volume 10981 of Lecture Notes in Computer Science, 587–595. Springer, 2018. doi:10.1007/978-3-319-96145-3\_32.">NPWB18</a>]</span> input files (i.e. no
+<span class="bibtex-citation" id="id1">[<a class="reference internal" href="references.html#id5" title="Clark Barrett, Pascal Fontaine, and Cesare Tinelli. The SMT-LIB Standard: Version 2.6. Technical Report, Department of Computer Science, The University of Iowa, 2017. URL: https://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf.">BFT17</a>]</span> and non-sequential BTOR2 <span class="bibtex-citation" id="id2">[<a class="reference internal" href="references.html#id4" title="Aina Niemetz, Mathias Preiner, Clifford Wolf, and Armin Biere. Btor2 , BtorMC and Boolector 3.0. In Hana Chockler and Georg Weissenbacher, editors, Computer Aided Verification - 30th International Conference, CAV 2018, Held as Part of the Federated Logic Conference, FloC 2018, Oxford, UK, July 14-17, 2018, Proceedings, Part I, volume 10981 of Lecture Notes in Computer Science, 587–595. Springer, 2018. doi:10.1007/978-3-319-96145-3\_32.">NPWB18</a>]</span> input files (i.e. no
 model-checking features supported).</p>
 <p>The command line usage of Bitwuzla is as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Usage:
@@ -193,7 +188,6 @@ Options:
   --preprocess                      [true]       enable preprocessing 
   --pp-contr-ands                   [false]      enable contradicting ands 
                                                  preprocessing pass 
-  --pp-elim-extracts                [false]      eliminate extract on BV constants 
   --pp-elim-bvudiv                  [false]      eliminate bvudiv and bvurem 
   --pp-embedded                     [true]       enable embedded constraint 
                                                  preprocessing pass 

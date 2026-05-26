@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,19 +9,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Installation and Build Instructions &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" type="text/css" href="static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="static/custom.css?v=3b6f11eb" />
+      <link rel="stylesheet" type="text/css" href="static/css/theme.css?v=7ab3649f" />
+      <link rel="stylesheet" type="text/css" href="static/custom.css?v=d0e17490" />
 
   
-  <!--[if lt IE 9]>
-    <script src="static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="static/jquery.js?v=5d32c60e"></script>
-        <script src="static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="static/documentation_options.js?v=5929fcd5"></script>
-        <script src="static/doctools.js?v=9bcbadda"></script>
-        <script src="static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="static/jquery.js?v=5d32c60e"></script>
+      <script src="static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="static/documentation_options.js?v=5929fcd5"></script>
+      <script src="static/doctools.js?v=fd6eb6e6"></script>
+      <script src="static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -31,15 +30,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-
-          
-          
-          <a href="index.html" class="icon icon-home">
-            Bitwuzla
-          </a>
-              <div class="version">
-                0.9.0
-              </div>
+  <a href="index.html" class="icon icon-home">
+    Bitwuzla
+  </a>
+  <div class="version">0.9.1</div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -47,11 +41,14 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
+
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation and Build Instructions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#building-bitwuzla-on-linux-and-macos">Building Bitwuzla on Linux and macOS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python-bindings">Python Bindings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-latest-version-from-pypi">Install latest version from PyPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-latest-version-from-source-with-pip">Install latest version from source with pip</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-without-pip">Building without pip</a></li>
 </ul>
 </li>
@@ -116,10 +113,12 @@ and the library in <code class="docutils literal notranslate"><span class="pre">
 <li><p><a class="reference external" href="https://www.python.org">Python &gt;= 3.7</a></p></li>
 <li><p><a class="reference external" href="https://mesonbuild.com">Meson &gt;= 0.64</a></p></li>
 <li><p><a class="reference external" href="https://ninja-build.org">Ninja</a></p></li>
+<li><p><a class="reference external" href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a></p></li>
 <li><p><a class="reference external" href="https://gmplib.org">GMP &gt;= v6.3 (GNU Multi-Precision arithmetic library)</a></p></li>
 <li><p><a class="reference external" href="https://www.mpfr.org">MPFR &gt;= v4.2.1 (GNU Multiple Precision Floating-Point Reliable Library)</a></p></li>
 <li><p><a class="reference external" href="https://github.com/arminbiere/cadical">CaDiCaL &gt;= 1.5.0</a></p></li>
 <li><p><a class="reference external" href="https://github.com/martin-cs/symfpu">SymFPU</a></p></li>
+<li><p><a class="reference external" href="https://github.com/google/googletest">googletest</a> (debug, testing)</p></li>
 </ul>
 </li>
 <li><p><strong>Optional Dependencies</strong></p>
@@ -137,6 +136,14 @@ downloading and building a suitable version itself.</p>
 </section>
 <section id="python-bindings">
 <h2>Python Bindings<a class="headerlink" href="#python-bindings" title="Link to this heading"></a></h2>
+<section id="install-latest-version-from-pypi">
+<h3>Install latest version from PyPi<a class="headerlink" href="#install-latest-version-from-pypi" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>bitwuzla
+</pre></div>
+</div>
+</section>
+<section id="install-latest-version-from-source-with-pip">
+<h3>Install latest version from source with pip<a class="headerlink" href="#install-latest-version-from-source-with-pip" title="Link to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone Bitwuzla repository</span>
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bitwuzla/bitwuzla
 <span class="nb">cd</span><span class="w"> </span>bitwuzla
@@ -154,6 +161,7 @@ pip<span class="w"> </span>install<span class="w"> </span>.
 </ul>
 </li>
 </ul>
+</section>
 <section id="building-without-pip">
 <h3>Building without pip<a class="headerlink" href="#building-without-pip" title="Link to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone Bitwuzla repository</span>

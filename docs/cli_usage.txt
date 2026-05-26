@@ -105,7 +105,6 @@ Options:
   --preprocess                      [true]       enable preprocessing 
   --pp-contr-ands                   [false]      enable contradicting ands 
                                                  preprocessing pass 
-  --pp-elim-extracts                [false]      eliminate extract on BV constants 
   --pp-elim-bvudiv                  [false]      eliminate bvudiv and bvurem 
   --pp-embedded                     [true]       enable embedded constraint 
                                                  preprocessing pass 

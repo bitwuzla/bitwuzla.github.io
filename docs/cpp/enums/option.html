@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
@@ -6,19 +9,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Option &mdash; Bitwuzla  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../../static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../static/custom.css?v=3b6f11eb" />
+      <link rel="stylesheet" type="text/css" href="../../static/css/theme.css?v=7ab3649f" />
+      <link rel="stylesheet" type="text/css" href="../../static/custom.css?v=d0e17490" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../static/jquery.js?v=5d32c60e"></script>
-        <script src="../../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../static/doctools.js?v=9bcbadda"></script>
-        <script src="../../static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../static/jquery.js?v=5d32c60e"></script>
+      <script src="../../static/sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -31,15 +30,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-
-          
-          
-          <a href="../../index.html" class="icon icon-home">
-            Bitwuzla
-          </a>
-              <div class="version">
-                0.9.0
-              </div>
+  <a href="../../index.html" class="icon icon-home">
+    Bitwuzla
+  </a>
+  <div class="version">0.9.1</div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -47,6 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
+
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation and Build Instructions</a></li>
@@ -83,7 +78,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../c/api.html">C API Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../python/api.html">Python API Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../https://ocaml.org/p/bitwuzla-cxx/latest/doc/index.html">OCaml API Documentation</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://ocaml.org/p/bitwuzla-cxx/latest/doc/index.html">OCaml API Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -203,7 +198,7 @@ instance.</p>
 <span id="_CPPv3N8bitwuzla6Option4SEEDE"></span><span id="_CPPv2N8bitwuzla6Option4SEEDE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caace01ee43fda36bd62efc12035e693f6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SEED</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option4SEEDE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Seed for the random number generator.</strong></p>
 <p><em>Values:</em><ul class="simple">
-<li><p><strong>min</strong>: 1</p></li>
+<li><p><strong>min</strong>: 0</p></li>
 <li><p><strong>max</strong>: UINT32_MAX</p></li>
 <li><p><strong>default</strong>: 27644437 </p></li>
 </ul>
@@ -260,7 +255,7 @@ instance.</p>
 <dd><p><strong>Configure the bit-vector solver engine.</strong></p>
 <p><em>Values:</em> <p><ul class="simple">
 <li><p><strong>bitblast</strong>: The classical bit-blasting approach. [<strong>default</strong>]</p></li>
-<li><p><strong>prop:</strong> Propagation-based local search, see <span id="id1">[<a class="reference internal" href="../../references.html#id7" title="Aina Niemetz and Mathias Preiner. Ternary propagation-based local search for more bit-precise reasoning. In 2020 Formal Methods in Computer Aided Design, FMCAD 2020, Haifa, Israel, September 21-24, 2020, 214–224. IEEE, 2020. URL: https://doi.org/10.34727/2020/isbn.978-3-85448-042-6\_29, doi:10.34727/2020/ISBN.978-3-85448-042-6\_29.">NP20</a>, <a class="reference internal" href="../../references.html#id8" title="Aina Niemetz, Mathias Preiner, and Armin Biere. Propagation based local search for bit-precise reasoning. Formal Methods Syst. Des., 51(3):608–636, 2017. URL: https://doi.org/10.1007/s10703-017-0295-6, doi:10.1007/S10703-017-0295-6.">NPB17</a>]</span>.</p></li>
+<li><p><strong>prop:</strong> Propagation-based local search, see <span class="bibtex-citation" id="id1">[<a class="reference internal" href="../../references.html#id7" title="Aina Niemetz and Mathias Preiner. Ternary propagation-based local search for more bit-precise reasoning. In 2020 Formal Methods in Computer Aided Design, FMCAD 2020, Haifa, Israel, September 21-24, 2020, 214–224. IEEE, 2020. URL: https://doi.org/10.34727/2020/isbn.978-3-85448-042-6\_29, doi:10.34727/2020/ISBN.978-3-85448-042-6\_29.">NP20</a>, <a class="reference internal" href="../../references.html#id8" title="Aina Niemetz, Mathias Preiner, and Armin Biere. Propagation based local search for bit-precise reasoning. Formal Methods Syst. Des., 51(3):608–636, 2017. URL: https://doi.org/10.1007/s10703-017-0295-6, doi:10.1007/S10703-017-0295-6.">NPB17</a>]</span>.</p></li>
 <li><p><strong>preprop</strong>: Sequential portfolio of <code class="docutils literal notranslate"><span class="pre">bitblast</span></code> and <code class="docutils literal notranslate"><span class="pre">prop</span></code>.</p></li>
 </ul>
 </p>
@@ -335,7 +330,7 @@ instance.</p>
 <dd><p><strong>Propagation-based local search solver engine: Constant bits.</strong></p>
 <p>Enable/disable constant bit propagation in the propagation-based local search engine (requires bit-blasting to AIG).</p>
 <p>Our procedure for augmenting propagation-based local search with constant
-bit information is described in <span id="id2">[<a class="reference internal" href="../../references.html#id7" title="Aina Niemetz and Mathias Preiner. Ternary propagation-based local search for more bit-precise reasoning. In 2020 Formal Methods in Computer Aided Design, FMCAD 2020, Haifa, Israel, September 21-24, 2020, 214–224. IEEE, 2020. URL: https://doi.org/10.34727/2020/isbn.978-3-85448-042-6\_29, doi:10.34727/2020/ISBN.978-3-85448-042-6\_29.">NP20</a>]</span>.</p>
+bit information is described in <span class="bibtex-citation" id="id2">[<a class="reference internal" href="../../references.html#id7" title="Aina Niemetz and Mathias Preiner. Ternary propagation-based local search for more bit-precise reasoning. In 2020 Formal Methods in Computer Aided Design, FMCAD 2020, Haifa, Israel, September 21-24, 2020, 214–224. IEEE, 2020. URL: https://doi.org/10.34727/2020/isbn.978-3-85448-042-6\_29, doi:10.34727/2020/ISBN.978-3-85448-042-6\_29.">NP20</a>]</span>.</p>
 <p><em>Values:</em><ul class="simple">
 <li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
 <li><p><strong>false</strong>: disable</p></li>
@@ -358,8 +353,8 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 <dd><p><strong>Propagation-based local search solver engine: Infer bounds.</strong></p>
 <p>When enabled, infer bounds for value computation for inequalities based on satisfied top level inequalities.</p>
 <p><em>Values:</em><ul class="simple">
-<li><p><strong>true</strong>: enable</p></li>
-<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable</p></li>
 </ul>
 </p>
 <p><div class="admonition seealso">
@@ -501,8 +496,8 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 <dd><p><strong>Propagation-based local search solver engine: Sign extension.</strong></p>
 <p>When enabled, treat concat nodes that represent sign extension natively as sign extension.</p>
 <p><em>Values:</em><ul class="simple">
-<li><p><strong>true</strong>: enable</p></li>
-<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable</p></li>
 </ul>
 </p>
 <p><div class="admonition seealso">
@@ -520,10 +515,10 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option11ABSTRACTIONE">
 <span id="_CPPv3N8bitwuzla6Option11ABSTRACTIONE"></span><span id="_CPPv2N8bitwuzla6Option11ABSTRACTIONE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa750624912a91234c4927c101e475401"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ABSTRACTION</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option11ABSTRACTIONE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Abstraction module.</strong></p>
-<p>Our bit-vector abstraction procedure is described in <span id="id3">[<a class="reference internal" href="../../references.html#id9" title="Aina Niemetz, Mathias Preiner, and Yoni Zohar. Scalable bit-blasting with abstractions. In Arie Gurfinkel and Vijay Ganesh, editors, Computer Aided Verification - 36th International Conference, CAV 2024, Montreal, QC, Canada, July 24-27, 2024, Proceedings, Part I, volume 14681 of Lecture Notes in Computer Science, 178–200. Springer, 2024. URL: https://doi.org/10.1007/978-3-031-65627-9\_9, doi:10.1007/978-3-031-65627-9\_9.">NPZ24</a>]</span>.</p>
+<p>Our bit-vector abstraction procedure is described in <span class="bibtex-citation" id="id3">[<a class="reference internal" href="../../references.html#id9" title="Aina Niemetz, Mathias Preiner, and Yoni Zohar. Scalable bit-blasting with abstractions. In Arie Gurfinkel and Vijay Ganesh, editors, Computer Aided Verification - 36th International Conference, CAV 2024, Montreal, QC, Canada, July 24-27, 2024, Proceedings, Part I, volume 14681 of Lecture Notes in Computer Science, 178–200. Springer, 2024. URL: https://doi.org/10.1007/978-3-031-65627-9\_9, doi:10.1007/978-3-031-65627-9\_9.">NPZ24</a>]</span>.</p>
 <p><em>Values:</em><ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable</p></li>
 </ul>
 </p>
 <div class="admonition warning">
@@ -540,7 +535,7 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 <p><em>Values:</em><ul class="simple">
 <li><p><strong>min</strong>: &gt;=3</p></li>
 <li><p><strong>max</strong>: UINT64_MAX</p></li>
-<li><p><strong>default</strong>: 32</p></li>
+<li><p><strong>default</strong>: 33</p></li>
 </ul>
 </p>
 <p><div class="admonition seealso">
@@ -560,8 +555,8 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 <dd><p><strong>Abstraction module: Eager mode.</strong></p>
 <p>When enabled, violated refinement lemmas are added eagerly.</p>
 <p><em>Values:</em><ul class="simple">
-<li><p><strong>1</strong>: enable</p></li>
-<li><p><strong>0</strong>: disable [<strong>default</strong>]</p></li>
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
 </ul>
 </p>
 <p><div class="admonition seealso">
@@ -806,10 +801,10 @@ bit information is described in <span id="id2">[<a class="reference internal" hr
 <p><em>Values:</em> <p><ul class="simple">
 <li><p><strong>mcmillan</strong>:
 Use the <em>asymmetric</em> interpolant generation via McMillan’s algorithm
-<span id="id4">[<a class="reference internal" href="../../references.html#id10" title="Kenneth L. McMillan. Interpolation and sat-based model checking. In Warren A. Hunt Jr. and Fabio Somenzi, editors, Computer Aided Verification, 15th International Conference, CAV 2003, Boulder, CO, USA, July 8-12, 2003, Proceedings, volume 2725 of Lecture Notes in Computer Science, 1–13. Springer, 2003. URL: https://doi.org/10.1007/978-3-540-45069-6\_1, doi:10.1007/978-3-540-45069-6\_1.">McM03</a>]</span>. [<strong>default</strong>]</p></li>
+<span class="bibtex-citation" id="id4">[<a class="reference internal" href="../../references.html#id10" title="Kenneth L. McMillan. Interpolation and sat-based model checking. In Warren A. Hunt Jr. and Fabio Somenzi, editors, Computer Aided Verification, 15th International Conference, CAV 2003, Boulder, CO, USA, July 8-12, 2003, Proceedings, volume 2725 of Lecture Notes in Computer Science, 1–13. Springer, 2003. URL: https://doi.org/10.1007/978-3-540-45069-6\_1, doi:10.1007/978-3-540-45069-6\_1.">McM03</a>]</span>. [<strong>default</strong>]</p></li>
 <li><p><strong>pudlak</strong>:
 Use the <em>symmetric</em> interpolant generation via Pudlak’s algorithm
-<span id="id5">[<a class="reference internal" href="../../references.html#id11" title="Pavel Pudlák. Lower bounds for resolution and cutting plane proofs and monotone computations. J. Symb. Log., 62(3):981–998, 1997. URL: https://doi.org/10.2307/2275583, doi:10.2307/2275583.">Pudlak97</a>]</span>.</p></li>
+<span class="bibtex-citation" id="id5">[<a class="reference internal" href="../../references.html#id11" title="Pavel Pudlák. Lower bounds for resolution and cutting plane proofs and monotone computations. J. Symb. Log., 62(3):981–998, 1997. URL: https://doi.org/10.2307/2275583, doi:10.2307/2275583.">Pudlak97</a>]</span>.</p></li>
 </ul>
 </p>
 </p>
@@ -825,8 +820,8 @@ Use the <em>symmetric</em> interpolant generation via Pudlak’s algorithm
 <dd><p><strong>Interpolant generation.</strong></p>
 <p>When enabled, the generated interpolant is lifted as much as possible to the theory level. Else, the resulting interpolant exactly corresponds to the bit-level AIG interpolant.</p>
 <p><em>Values:</em><ul class="simple">
-<li><p><strong>true</strong>: enable</p></li>
-<li><p><strong>false</strong>: disable [<strong>default</strong>]</p></li>
+<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
+<li><p><strong>false</strong>: disable</p></li>
 </ul>
 </p>
 <div class="admonition warning">
@@ -924,18 +919,6 @@ Use the <em>symmetric</em> interpolant generation via Pudlak’s algorithm
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE">
-<span id="_CPPv3N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE"></span><span id="_CPPv2N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca1d0d73e16af622f85896f6c07df5bc34"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_ELIM_BV_EXTRACTS</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option19PP_ELIM_BV_EXTRACTSE" title="Link to this definition"></a><br /></dt>
-<dd><p><strong>Preprocessing: Eliminate bit-vector extracts on bit-vector constants.</strong></p>
-<p>When enabled, eliminates bit-vector extracts on constants.</p>
-<p><em>Values:</em><ul class="simple">
-<li><p><strong>true</strong>: enable</p></li>
-<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
-</ul>
-</p>
-</dd></dl>
-
-<dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N8bitwuzla6Option15PP_ELIM_BV_UDIVE">
 <span id="_CPPv3N8bitwuzla6Option15PP_ELIM_BV_UDIVE"></span><span id="_CPPv2N8bitwuzla6Option15PP_ELIM_BV_UDIVE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca870b01ea497972259f019d025cff414e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_ELIM_BV_UDIV</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option15PP_ELIM_BV_UDIVE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Preprocessing: Eliminate bit-vector operators bvudiv and bvurem.</strong></p>
@@ -1019,8 +1002,8 @@ Use the <em>symmetric</em> interpolant generation via Pudlak’s algorithm
 <span id="_CPPv3N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE"></span><span id="_CPPv2N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186caa10eb86e7de63c768bde672ecfd292c1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST_NORM_DISEQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option28PP_VARIABLE_SUBST_NORM_DISEQE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Preprocessing: Variable substitution: Disequality Normalization.</strong></p>
 <p><em>Values:</em><ul class="simple">
-<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>false</strong>: disable </p></li>
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
 </ul>
 </p>
 </dd></dl>
@@ -1030,8 +1013,8 @@ Use the <em>symmetric</em> interpolant generation via Pudlak’s algorithm
 <span id="_CPPv3N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE"></span><span id="_CPPv2N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE"></span><span class="target" id="namespacebitwuzla_1a886dae78d57a9d8eca547b783873186ca2089c6d88dbe832e98a05e815bdf0188"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PP_VARIABLE_SUBST_NORM_BV_INEQ</span></span></span><a class="headerlink" href="#_CPPv4N8bitwuzla6Option30PP_VARIABLE_SUBST_NORM_BV_INEQE" title="Link to this definition"></a><br /></dt>
 <dd><p><strong>Preprocessing: Variable substitution: Bit-Vector Inequality Normalization.</strong></p>
 <p><em>Values:</em><ul class="simple">
-<li><p><strong>true</strong>: enable [<strong>default</strong>]</p></li>
-<li><p><strong>false</strong>: disable </p></li>
+<li><p><strong>true</strong>: enable</p></li>
+<li><p><strong>false</strong>: disable [<strong>default</strong>] </p></li>
 </ul>
 </p>
 </dd></dl>
