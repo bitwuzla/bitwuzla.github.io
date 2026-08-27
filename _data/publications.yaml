@@ -38,6 +38,9 @@
    bibtex: https://dblp.org/rec/conf/cav/PreinerNB26.html?view=bibtex
    artifact: https://zenodo.org/records/19713261
    talk:
+   awards:
+     awards:
+     - CAV Distinguished Paper Award
 
  - title: "Bit-Precise Interpolation in Bitwuzla"
    id: tacas26-interpolation
@@ -98,6 +101,11 @@
    bibtex: https://dblp.org/rec/conf/tacas/SchreiberNP26.html?view=bibtex
    artifact: https://zenodo.org/records/17478481
    talk:
+   awards:
+     awards:
+     - TACAS Distinguished Paper Award
+     - TACAS Distinguished Artifact Award
+     - ETAPS Best Tool Paper Award
 
  - title: "Scalable Bit-Blasting with Abstractions"
    id: cav24
