@@ -1,6 +1,104 @@
 ---
  papers:
 
+ - title: "Satisfiability Modulo Extensional Constant Arrays"
+   id: cav26
+   author:
+   - Mathias Preiner
+   - Aina Niemetz
+   - Clark Barrett
+   issued:
+   year: 2026
+   publication-title: CAV
+   volume:
+   issue:
+   pages: 27-49
+   abstract: "Reasoning about array data structures is a key requirement for many
+     applications in hardware and software verification, especially in
+     combination with machine integers. The Satisfiability Modulo Theories
+     (SMT) theory of extensional arrays provides array read and write
+     operators and allows extensionality over arrays. This is sufficient to
+     express many aspects of computer-aided verification, but lacks
+     succinctness to efficiently deal with arrays that are initialized with
+     a default value. Existing procedures for extending the SMT-LIB theory
+     of arrays with support for constant arrays are limited to arrays with
+     infinite index domains, and existing implementations in SMT solvers
+     only support a fragment of the theory for finite index domains. In
+     this paper, we present a novel decision procedure for the theory of
+     arrays with constant arrays that supports arbitrary index domains and
+     is not limited to the infinite case. We present our procedure as an
+     abstract calculus and show its refutational and satisfiability
+     soundness. We implement a decision procedure based on our calculus in
+     the state-of-the-art SMT solver Bitwuzla and evaluate its performance
+     on a diverse collection of benchmarks and use cases."
+   pdf: https://link.springer.com/content/pdf/10.1007/978-3-032-32526-6_2
+   doi: 10.1007/978-3-032-32526-6_2
+   preprint:
+   extended: https://arxiv.org/abs/2605.16820
+   bibtex: https://dblp.org/rec/conf/cav/PreinerNB26.html?view=bibtex
+   artifact: https://zenodo.org/records/19713261
+   talk:
+
+ - title: "Bit-Precise Interpolation in Bitwuzla"
+   id: tacas26-interpolation
+   author:
+   - Aina Niemetz
+   - Mathias Preiner
+   issued:
+   year: 2026
+   publication-title: TACAS
+   volume:
+   issue:
+   pages: 66-88
+   abstract: "Bitwuzla is a state-of-the-art SMT solver specialized in theories
+     relevant to bit-precise reasoning. The main bit-vector solving
+     procedure of Bitwuzla is based on bit-blasting, a reduction of
+     bit-vector constraints to propositional logic (SAT). Until now,
+     Bitwuzla did not support interpolant generation, which is a key
+     requirement for many verification applications that rely on
+     bit-precise reasoning. We present an extension of Bitwuzla with the
+     capability to produce interpolants and interpolation sequences for
+     quantifier-free bit-vector formulas. Our interpolation workflow
+     extracts bit-level interpolants from proofs produced by the back-end
+     SAT solver, which are lifted to the word-level and post-processed to
+     recover and simplify word-level structure. We evaluate our new
+     bit-vector interpolation engine in the context of various
+     interpolation-based algorithms for symbolic model checking."
+   pdf: https://link.springer.com/content/pdf/10.1007/978-3-032-22752-2_4.pdf
+   doi: 10.1007/978-3-032-22752-2_4
+   preprint:
+   bibtex: https://dblp.org/rec/conf/tacas/NiemetzP26.html?view=bibtex
+   artifact: https://zenodo.org/records/18331207
+   talk:
+
+ - title: "Massively Parallel Bit-Precise Verification with Bitwuzla and Mallob"
+   id: tacas26-mallob
+   author:
+   - Dominik Schreiber
+   - Aina Niemetz
+   - Mathias Preiner
+   issued:
+   year: 2026
+   publication-title: TACAS
+   volume:
+   issue:
+   pages: 170-191
+   abstract: "We present a distributed platform for massively parallel SMT solving
+     that supports various theories for bit-precise reasoning, with and
+     without quantifiers and push-pop incrementality. Our system is based
+     on an integration of the state-of-the-art SMT solver Bitwuzla into the
+     distributed job scheduling and automated reasoning platform Mallob,
+     which allows Bitwuzla to make heavy use of Mallob's distributed
+     incremental SAT solving engine. Our experimental evaluation shows that
+     this approach outperforms prior SMT parallelization approaches and
+     achieves unprecedented speedups at up to 768 cores."
+   pdf: https://link.springer.com/content/pdf/10.1007/978-3-032-22752-2_9.pdf
+   doi: 10.1007/978-3-032-22752-2_9
+   preprint:
+   bibtex: https://dblp.org/rec/conf/tacas/SchreiberNP26.html?view=bibtex
+   artifact: https://zenodo.org/records/17478481
+   talk:
+
  - title: "Scalable Bit-Blasting with Abstractions"
    id: cav24
    author:
